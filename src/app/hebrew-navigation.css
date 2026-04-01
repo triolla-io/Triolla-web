@@ -203,17 +203,19 @@
 }
 
 .header_book a {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   border: 1px solid #000000;
   background: #006BFF;
-  text-align: center;
   border-radius: 50px;
   -mborder-radius: 50px;
   -webkit-border-radius: 50px;
   font-family: 'Almoni ML v5 AAA';
   font-weight: normal;
   font-size: 16px;
-  line-height: 48px;
+  height: 48px;
   letter-spacing: normal;
   color: #FFF;
   padding: 0px 23px;
@@ -226,8 +228,9 @@
 .header_book a svg {
   display: inline-block;
   vertical-align: middle;
-  margin-left: 10px;
-  margin-top: 0px;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
 }
 
 .header_book a svg * {
