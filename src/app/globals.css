@@ -719,26 +719,24 @@ body {
 }
 @media (max-width: 1023px) {
   .menutoggle {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     color: #000;
-  }
-  /* Ensure hamburger stays visible in both EN header and Hebrew nav
-     even when broad snapshot styles hide `.menutoggle` globally. */
-  .site-header .menutoggle,
-  .hebrew-navigation .menutoggle {
-    display: inline-flex !important;
-    visibility: visible !important;
-    align-items: center;
-    justify-content: center;
     width: 44px;
     height: 44px;
     padding: 0;
     margin: 0;
-    color: #000 !important;
     background: transparent;
     border: 0;
+    cursor: pointer;
+  }
+  /* Snapshot CSS can hide this globally; force visibility on mobile only. */
+  .site-header .menutoggle,
+  .hebrew-navigation .menutoggle {
+    display: inline-flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
   }
   .site-header .menutoggle svg,
   .hebrew-navigation .menutoggle svg {
@@ -782,11 +780,11 @@ body {
     width: 100%;
     max-width: 100%;
   }
-  /* Keep nav below ticker on mobile in all header states */
-  .site-header,
-  .site-header.ticker-visible,
+  /* Match WP behavior: only ticker-visible header gets the vertical offset. */
+  .site-header { top: 0; }
+  .site-header.ticker-visible { top: 46px; }
+  .site-header.is-sticky { top: 0; width: 100%; }
   .site-header.ticker-visible.is-sticky { top: 46px; }
-  .site-header.is-sticky { width: 100%; }
   /* Contact Us: yellow pill + dark outline (readable on yellow header bar) */
   .header_contact a {
     background: #fed125;

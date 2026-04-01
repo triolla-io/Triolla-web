@@ -65,10 +65,19 @@ export function HomeClient() {
             console.error(`Failed to load CSS: ${file}`, err);
           }
         }
+        // Load local overrides after snapshot CSS so mobile header rules win.
+        await loadStylesheet("/home-header-overrides.css");
 
         const res = await fetch(fragmentUrl);
         if (!res.ok) throw new Error("fragment fetch failed");
-        const html = await res.text();
+        let html = await res.text();
+        // Some snapshots reference non-existent /assets/home[-he]/hamburger*.svg.
+        // Normalize to stable shared image paths so mobile icon always renders.
+        html = html
+          .replaceAll('/assets/home-he/hamburger.svg', '/images/hamburger.svg')
+          .replaceAll('/assets/home-he/hamburger_white.svg', '/images/hamburger_white.svg')
+          .replaceAll('/assets/home/hamburger.svg', '/images/hamburger.svg')
+          .replaceAll('/assets/home/hamburger_white.svg', '/images/hamburger_white.svg');
         if (cancelled) return;
 
         const el = rootRef.current;

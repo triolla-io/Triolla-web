@@ -318,7 +318,7 @@
   line-height: 25px;
   color: #fff;
   text-align: center;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
@@ -667,7 +667,7 @@
   }
 
   .sticky .headerticker {
-    position: fixed;
+    position: absolute;
     top: 0;
   }
 
@@ -850,30 +850,6 @@
     color: #fff;
     text-align: center;
     display: block !important;
-  }
-
-  .sticky .headerticker {
-    position: fixed;
-    top: 0;
-  }
-
-  .site-header {
-    background: #FED125;
-    border: 0;
-    border-radius: 0;
-    padding: 10px 16px;
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .site-header,
-  .site-header.ticker-visible,
-  .site-header.ticker-visible.is-sticky {
-    top: 0;
-  }
-
-  .site-header.is-sticky {
-    width: 100%;
   }
 
   .header_contact a {
