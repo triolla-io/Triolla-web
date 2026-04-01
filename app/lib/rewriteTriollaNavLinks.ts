@@ -288,8 +288,32 @@ function rewriteFooterWpmlLanguageLinks(root: HTMLElement): void {
   const pathname = window.location?.pathname ?? "/";
   const { en: pathEn, he: pathHe } = alternateLocalePath(pathname);
 
-  const enLink = root.querySelector<HTMLAnchorElement>(".footer .wpml-ls-item-en a[href]");
-  const heLink = root.querySelector<HTMLAnchorElement>(".footer .wpml-ls-item-he a[href]");
-  if (enLink) enLink.setAttribute("href", pathEn);
-  if (heLink) heLink.setAttribute("href", pathHe);
+  const links: Array<{ selector: string; href: string }> = [
+    { selector: ".footer .wpml-ls-item-en a[href]", href: pathEn },
+    { selector: ".footer .wpml-ls-item-he a[href]", href: pathHe },
+  ];
+
+  const forceRouteSwitch = (a: HTMLAnchorElement, href: string) => {
+    a.setAttribute("href", href);
+    if (a.dataset.triollaLangSwitchBound === "1") return;
+    a.dataset.triollaLangSwitchBound = "1";
+    a.addEventListener(
+      "click",
+      (e) => {
+        if (e.defaultPrevented) return;
+        const mouse = e as MouseEvent;
+        if (mouse.metaKey || mouse.ctrlKey || mouse.shiftKey || mouse.altKey) return;
+        e.preventDefault();
+        e.stopPropagation();
+        window.location.assign(href);
+      },
+      { capture: true },
+    );
+  };
+
+  links.forEach(({ selector, href }) => {
+    root.querySelectorAll<HTMLAnchorElement>(selector).forEach((a) => {
+      forceRouteSwitch(a, href);
+    });
+  });
 }

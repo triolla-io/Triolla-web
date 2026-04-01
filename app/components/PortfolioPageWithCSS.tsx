@@ -1,11 +1,13 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { initTriollaOwlCarousels } from "../about-us/initTriollaCarousels";
 import { mountTriollaHeaderPill } from "../about-us/mountTriollaHeaderPill";
 import { initTriollaConveyorTicker } from "../lib/initTriollaConveyorTicker";
 import { mountTriollaFaqAccordion } from "../lib/mountTriollaFaqAccordion";
+import { mountTriollaFooterAccordion } from "../lib/mountTriollaFooterAccordion";
 import { rewriteTriollaNavLinks } from "../lib/rewriteTriollaNavLinks";
+import { mountTriollaMobileMenu } from "../lib/mountTriollaMobileMenu";
 import {
   injectSharedFaq,
   injectSharedFooter,
@@ -31,17 +33,28 @@ interface Deps {
   assetBase: string;
 }
 
-/**
- * WordPress/triolla theme scripts expect inline globals. Portfolio React pages
- * have no wp_head output — define safe defaults before external bundles run.
- *
- * Reuse `installSnapshotPluginStubs` so GDPR `main.js` gets `moove_frontend_gdpr_scripts`
- * with `scripts_defined` (strict/thirdparty shapes); `{}` caused `.strict` crashes.
- */
+function normalizeAssetBase(assetBase: string): string {
+  const trimmed = assetBase.replace(/\/$/, "");
+  return trimmed.replace(/^\/_assets\//, "/assets/");
+}
+
+function normalizeInjectedHeaderAssetUrls(html: string): string {
+  return html
+    .replaceAll(
+      "https://triolla.io/wp-content/themes/triolla/images/hamburger.svg",
+      "/images/hamburger.svg",
+    )
+    .replaceAll(
+      "https://triolla.io/wp-content/themes/triolla/images/hamburger_white.svg",
+      "/images/hamburger_white.svg",
+    )
+    .replace(/\/assets\/[^"'\s]+\/hamburger\.svg/gi, "/images/hamburger.svg")
+    .replace(/\/assets\/[^"'\s]+\/hamburger_white\.svg/gi, "/images/hamburger_white.svg");
+}
+
 function installTriollaPortfolioWindowStubs(): void {
   installSnapshotPluginStubs();
   const w = globalThis as typeof globalThis & Record<string, unknown>;
-  /** Portfolio snapshots relied on Bodhi processing nested SVGs more than blog pages. */
   w.svgSettings = { skipNested: false };
   const origin =
     typeof window !== "undefined" ? window.location.origin : "";
@@ -81,11 +94,15 @@ export function PortfolioPageWithCSS({
   const mainContainerRef = useRef<HTMLDivElement | null>(null);
   const disposePillRef = useRef<(() => void) | null>(null);
   const disposeFaqRef = useRef<(() => void) | null>(null);
+  const disposeFooterAccordionRef = useRef<(() => void) | null>(null);
+  const disposeMobileMenuRef = useRef<(() => void) | null>(null);
+  const [phase, setPhase] = useState<"loading" | "ready" | "error">("loading");
 
   useEffect(() => {
     let cancelled = false;
     const injectedLinks: HTMLLinkElement[] = [];
     const injectedScripts: HTMLScriptElement[] = [];
+    setPhase("loading");
 
     const loadAssets = async () => {
       installTriollaPortfolioWindowStubs();
@@ -94,7 +111,7 @@ export function PortfolioPageWithCSS({
         const deps: Deps = await response.json();
         if (cancelled) return;
 
-        const assetBaseNorm = deps.assetBase.replace(/\/$/, "");
+        const assetBaseNorm = normalizeAssetBase(deps.assetBase);
 
         for (const cssFile of deps.css) {
           const link = document.createElement("link");
@@ -120,6 +137,7 @@ export function PortfolioPageWithCSS({
             chromeHtml = chromeHtml
               .split("%%ASSET_BASE%%")
               .join(assetBaseNorm);
+            chromeHtml = normalizeInjectedHeaderAssetUrls(chromeHtml);
             chromeHtml = `<div data-triolla-portfolio-chrome="1" style="display:contents">${chromeHtml.trim()}</div>`;
             const holder = document.createElement("div");
             holder.innerHTML = chromeHtml;
@@ -132,7 +150,7 @@ export function PortfolioPageWithCSS({
         if (cancelled) return;
 
         await injectSharedFaq(root, lang);
-        await injectSharedFooter(root);
+        await injectSharedFooter(root, lang);
         rewriteTriollaNavLinks(root);
         if (lang === "he") {
           localizeContactStripForHebrew(root);
@@ -145,7 +163,6 @@ export function PortfolioPageWithCSS({
         disposeFaqRef.current?.();
         disposeFaqRef.current = mountTriollaFaqAccordion(root);
 
-        // Load legacy theme JS after primary content/chrome is ready.
         for (const jsFile of deps.js) {
           if (cancelled) return;
           const src = `${assetBaseNorm}/${jsFile}`;
@@ -171,8 +188,16 @@ export function PortfolioPageWithCSS({
 
         initTriollaConveyorTicker(root);
         initTriollaOwlCarousels(root);
+
+        disposeMobileMenuRef.current?.();
+        disposeMobileMenuRef.current = mountTriollaMobileMenu(root);
+        disposeFooterAccordionRef.current?.();
+        disposeFooterAccordionRef.current = mountTriollaFooterAccordion(root);
+
+        setPhase("ready");
       } catch (error) {
         console.error("Failed to load assets:", error);
+        if (!cancelled) setPhase("error");
       }
     };
 
@@ -184,6 +209,10 @@ export function PortfolioPageWithCSS({
       disposePillRef.current = null;
       disposeFaqRef.current?.();
       disposeFaqRef.current = null;
+      disposeFooterAccordionRef.current?.();
+      disposeFooterAccordionRef.current = null;
+      disposeMobileMenuRef.current?.();
+      disposeMobileMenuRef.current = null;
       injectedLinks.forEach((el) => el.remove());
       injectedScripts.forEach((el) => el.remove());
     };
@@ -191,7 +220,37 @@ export function PortfolioPageWithCSS({
 
   return (
     <>
-      <PortfolioPageTemplate ref={mainContainerRef} data={data} />
+      {phase === "loading" && (
+        <div
+          style={{
+            position: "fixed",
+            inset: 0,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            background: "#fafafa",
+            color: "#666",
+            fontFamily: "system-ui, sans-serif",
+            zIndex: 9999,
+          }}
+        >
+          Loading…
+        </div>
+      )}
+      {phase === "error" && (
+        <div
+          style={{
+            padding: "2rem",
+            color: "#b91c1c",
+            fontFamily: "system-ui, sans-serif",
+          }}
+        >
+          Could not load page assets.
+        </div>
+      )}
+      <div style={{ visibility: phase === "ready" ? "visible" : "hidden", minHeight: "100vh" }}>
+        <PortfolioPageTemplate ref={mainContainerRef} data={data} />
+      </div>
     </>
   );
 }

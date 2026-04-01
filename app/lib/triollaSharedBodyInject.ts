@@ -104,13 +104,44 @@ export function localizeContactStripForHebrew(root: HTMLElement): void {
     });
 }
 
-export async function injectSharedFooter(root: HTMLElement): Promise<void> {
+export async function injectSharedFooter(
+  root: HTMLElement,
+  lang: "en" | "he",
+): Promise<void> {
   try {
-    const footerRes = await fetch("/fragments/_shared-footer.html");
-    if (!footerRes.ok) return;
-    const footerHtml = await footerRes.text();
+    const existingFooter = root.querySelector(".footer");
 
-    const oldFooter = root.querySelector(".footer");
+    if (lang === "he" && existingFooter) return;
+
+    const footerSources =
+      lang === "he"
+        ? ["/fragments/_shared-footer-he.html", "/fragments/about-us-he-body.html"]
+        : ["/fragments/_shared-footer.html"];
+    let footerHtml: string | null = null;
+
+    for (const footerUrl of footerSources) {
+      const footerRes = await fetch(footerUrl);
+      if (!footerRes.ok) continue;
+      const rawHtml = await footerRes.text();
+
+      if (footerUrl.endsWith("about-us-he-body.html")) {
+        const parsed = document.createElement("div");
+        parsed.innerHTML = rawHtml;
+        const extracted = parsed.querySelector(".footer");
+        if (extracted) {
+          footerHtml = extracted.outerHTML;
+          break;
+        }
+        continue;
+      }
+
+      footerHtml = rawHtml;
+      break;
+    }
+
+    if (!footerHtml) return;
+
+    const oldFooter = existingFooter;
     if (oldFooter) oldFooter.remove();
 
     root.insertAdjacentHTML("beforeend", footerHtml);

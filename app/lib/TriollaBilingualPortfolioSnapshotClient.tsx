@@ -3,6 +3,7 @@
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { initTriollaConveyorTicker } from "./initTriollaConveyorTicker";
 import { mountTriollaFaqAccordion } from "./mountTriollaFaqAccordion";
+import { mountTriollaFooterAccordion } from "./mountTriollaFooterAccordion";
 import { rewriteTriollaNavLinks } from "./rewriteTriollaNavLinks";
 import {
   injectSharedFaq,
@@ -19,6 +20,7 @@ import type { TriollaSnapshotRevealPreset } from "./mountTriollaSnapshotRevealSt
 import type { TriollaPortfolioSnapshotDeps } from "./TriollaPortfolioSnapshotClient";
 import { initTriollaLottie } from "./initTriollaLottie";
 import { useSnapshotHistoryRestoreKey } from "./useSnapshotHistoryRestoreKey";
+import { mountTriollaMobileMenu } from "./mountTriollaMobileMenu";
 
 /**
  * Rewrite asset paths in HTML:
@@ -110,6 +112,8 @@ export function TriollaBilingualPortfolioSnapshotClient({
   const disposeRevealRef = useRef<(() => void) | null>(null);
   const disposeHeaderPillRef = useRef<(() => void) | null>(null);
   const disposeFaqRef = useRef<(() => void) | null>(null);
+  const disposeFooterAccordionRef = useRef<(() => void) | null>(null);
+  const disposeMobileMenuRef = useRef<(() => void) | null>(null);
   const [phase, setPhase] = useState<"loading" | "ready" | "error">("loading");
   const { bodyClass, dataRsssl } = depsForLang(lang, depsEn, depsHe);
   const historyRestoreKey = useSnapshotHistoryRestoreKey();
@@ -181,7 +185,7 @@ export function TriollaBilingualPortfolioSnapshotClient({
         el.setAttribute("dir", lang === "he" ? "rtl" : "ltr");
 
         await injectSharedFaq(el, lang);
-        await injectSharedFooter(el);
+        await injectSharedFooter(el, lang);
 
         rewriteAssetPaths(el, consolidateStaticAssets);
         rewriteTriollaNavLinks(el);
@@ -233,6 +237,10 @@ export function TriollaBilingualPortfolioSnapshotClient({
       disposeHeaderPillRef.current = null;
       disposeFaqRef.current?.();
       disposeFaqRef.current = null;
+      disposeFooterAccordionRef.current?.();
+      disposeFooterAccordionRef.current = null;
+      disposeMobileMenuRef.current?.();
+      disposeMobileMenuRef.current = null;
     };
   }, [lang, depsEnKey, depsHeKey, fragmentUrlEn, fragmentUrlHe, revealPreset, historyRestoreKey]);
 
