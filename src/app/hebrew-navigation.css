@@ -181,6 +181,12 @@
   transform-origin: left;
 }
 
+/* Desktop: hide hamburger menu */
+.menutoggle {
+  display: none !important;
+  visibility: hidden !important;
+}
+
 .header_whatsapp {
   float: left;
   margin-left: 12px;
@@ -425,11 +431,21 @@
 }
 
 .hmenumobclose button {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background: none;
   border: none;
   cursor: pointer;
   padding: 8px;
+  width: 40px;
+  height: 40px;
+}
+
+.hmenumobclose button svg {
+  width: 24px;
+  height: 24px;
+  display: block;
 }
 
 .hmenumobdiv {
@@ -697,6 +713,7 @@
     padding: 0;
     display: flex;
     gap: 8px;
+    flex: 0 0 auto;
   }
 
   .header_contact a {
@@ -717,36 +734,42 @@
   }
 
   .menutoggle {
-    display: flex;
+    display: flex !important;
+    visibility: visible !important;
     align-items: center;
     justify-content: center;
     color: #000;
     cursor: pointer;
-    width: 44px;
-    height: 44px;
+    width: 44px !important;
+    height: 44px !important;
     padding: 0;
     margin: 0;
     z-index: 101;
-    position: absolute;
-    right: 8px;
-    top: 50%;
-    transform: translateY(-50%);
+    position: relative;
+    order: 2;
+    flex: 0 0 auto;
   }
 
   .menutoggle button {
-    display: inline-flex;
+    display: inline-flex !important;
     align-items: center;
     justify-content: center;
     width: 44px;
     height: 44px;
     padding: 0;
     margin: 0;
-    border: 0;
-    background: transparent url("/images/hamburger.svg") no-repeat center center !important;
-    background-size: 24px 24px !important;
+    border: 0 !important;
+    background: transparent !important;
     appearance: none;
     -webkit-appearance: none;
-    box-shadow: none;
+    box-shadow: none !important;
+    cursor: pointer;
+  }
+
+  .menutoggle button svg {
+    width: 24px;
+    height: 24px;
+    display: block;
   }
 
   .menutoggle img {
@@ -772,6 +795,8 @@
 
   .logo {
     padding-right: 8px;
+    flex: 0 0 auto;
+    order: 1;
   }
 
   .logoimg {
@@ -787,6 +812,10 @@
   .logo a {
     font-size: 0 !important;
     line-height: 0 !important;
+  }
+
+  .header_right {
+    order: 3;
   }
 
   /* Force black hamburger icon on mobile */
