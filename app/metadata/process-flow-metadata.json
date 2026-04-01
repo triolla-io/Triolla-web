@@ -135,9 +135,9 @@
   },
   "consolidationMetadata": {
     "componentName": "ProcessFlow",
-    "componentPath": "web/app/components/ProcessFlow.tsx",
-    "templatePath": "web/public/assets/_shared/process-flow-template.html",
-    "metadataPath": "web/app/metadata/process-flow-metadata.json",
+    "componentPath": "app/components/ProcessFlow.tsx",
+    "templatePath": "public/assets/_shared/process-flow-template.html",
+    "metadataPath": "app/metadata/process-flow-metadata.json",
     "duplicateClassName": "unique_design",
     "totalOccurrences": 30,
     "filesAffected": 30,
