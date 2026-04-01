@@ -104,15 +104,6 @@ export function PortfolioPageWithCSS({
           injectedLinks.push(link);
         }
 
-        for (const jsFile of deps.js) {
-          if (cancelled) return;
-          const src = `${assetBaseNorm}/${jsFile}`;
-          const scriptEl = await loadScriptSequential(src);
-          injectedScripts.push(scriptEl);
-        }
-
-        if (cancelled) return;
-
         const root = mainContainerRef.current;
         if (!root) return;
 
@@ -147,6 +138,27 @@ export function PortfolioPageWithCSS({
           localizeContactStripForHebrew(root);
         }
 
+        if (cancelled) return;
+
+        disposePillRef.current?.();
+        disposePillRef.current = mountTriollaHeaderPill(root);
+        disposeFaqRef.current?.();
+        disposeFaqRef.current = mountTriollaFaqAccordion(root);
+
+        // Load legacy theme JS after primary content/chrome is ready.
+        for (const jsFile of deps.js) {
+          if (cancelled) return;
+          const src = `${assetBaseNorm}/${jsFile}`;
+          try {
+            const scriptEl = await loadScriptSequential(src);
+            injectedScripts.push(scriptEl);
+          } catch (scriptError) {
+            console.warn("Skipping failed script:", src, scriptError);
+          }
+        }
+
+        if (cancelled) return;
+
         const $ = (
           window as unknown as {
             jQuery?: (sel: Window) => { trigger: (ev: string) => void };
@@ -157,14 +169,8 @@ export function PortfolioPageWithCSS({
         window.dispatchEvent(new Event("load"));
         $?.(window).trigger("load");
 
-        if (cancelled) return;
-
-        disposePillRef.current?.();
-        disposePillRef.current = mountTriollaHeaderPill(root);
         initTriollaConveyorTicker(root);
         initTriollaOwlCarousels(root);
-        disposeFaqRef.current?.();
-        disposeFaqRef.current = mountTriollaFaqAccordion(root);
       } catch (error) {
         console.error("Failed to load assets:", error);
       }
