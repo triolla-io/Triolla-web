@@ -106,10 +106,12 @@ export const PortfolioPageTemplate = forwardRef<
     return () => window.clearInterval(intervalId);
   }, [data.companyTicker]);
 
+  const isRtl = (data.dir ?? "ltr") === "rtl";
+
   return (
     <div
       ref={setMainContainerRef}
-      className="main_container"
+      className={isRtl ? "main_container rtl" : "main_container"}
       dir={data.dir ?? "ltr"}
     >
       <style type="text/css">{`
