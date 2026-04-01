@@ -7,6 +7,7 @@
   },
   "scripts": {
     "dev": "next dev",
+    "postinstall": "node app/scripts/materialize-consolidated-symlinks.js",
     "build": "node app/scripts/materialize-consolidated-symlinks.js && next build",
     "build:clean": "rm -rf .next && next build",
     "start": "next start",

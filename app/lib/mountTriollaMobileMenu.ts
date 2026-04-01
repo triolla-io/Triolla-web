@@ -6,13 +6,43 @@
  */
 export function mountTriollaMobileMenu(root: HTMLElement): () => void {
   const body = document.body;
+  const isHebrew = root.getAttribute("dir") === "rtl";
+  const mobileMenu = root.querySelector<HTMLElement>(".hmenumob");
+  const menuToggles = Array.from(root.querySelectorAll<HTMLElement>(".menutoggle"));
+
+  const syncHebrewMenuState = () => {
+    if (!isHebrew || !mobileMenu) return;
+    mobileMenu.style.left = "auto";
+    mobileMenu.style.right = "0";
+    mobileMenu.style.transform = body.classList.contains("mbodyact")
+      ? "translateX(0)"
+      : "translateX(100%)";
+    mobileMenu.style.transition = "transform 0.4s ease";
+  };
+
+  if (isHebrew) {
+    menuToggles.forEach((toggle) => {
+      toggle.classList.add("is-he");
+      const blackIcon = toggle.querySelector<HTMLElement>("img.one");
+      const whiteIcon = toggle.querySelector<HTMLElement>("img.two");
+      if (blackIcon) blackIcon.style.display = "block";
+      if (whiteIcon) whiteIcon.style.display = "none";
+    });
+    if (mobileMenu) {
+      mobileMenu.classList.add("is-he");
+    }
+    syncHebrewMenuState();
+  }
+
   const onOpen = (e: Event) => {
     e.preventDefault();
     body.classList.add("mbodyact");
+    syncHebrewMenuState();
   };
   const onClose = (e: Event) => {
     e.preventDefault();
     body.classList.remove("mbodyact");
+    syncHebrewMenuState();
   };
 
   const openLinks = Array.from(
@@ -43,6 +73,7 @@ export function mountTriollaMobileMenu(root: HTMLElement): () => void {
 
   return () => {
     body.classList.remove("mbodyact");
+    syncHebrewMenuState();
     openLinks.forEach((a) => a.removeEventListener("click", onOpen));
     closeLinks.forEach((a) => a.removeEventListener("click", onClose));
     arrowHandlers.forEach(({ el, fn }) => el.removeEventListener("click", fn));
