@@ -724,6 +724,28 @@ body {
     justify-content: center;
     color: #000;
   }
+  /* Ensure hamburger stays visible in both EN header and Hebrew nav
+     even when broad snapshot styles hide `.menutoggle` globally. */
+  .site-header .menutoggle,
+  .hebrew-navigation .menutoggle {
+    display: inline-flex !important;
+    visibility: visible !important;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    margin: 0;
+    color: #000 !important;
+    background: transparent;
+    border: 0;
+  }
+  .site-header .menutoggle svg,
+  .hebrew-navigation .menutoggle svg {
+    display: block !important;
+    width: 24px;
+    height: 24px;
+  }
   /* Snapshot header logo (`img.logoimg`) should stay black on mobile even if theme CSS overrides filters. */
   .logo img.logoimg,
   img.logoimg,
