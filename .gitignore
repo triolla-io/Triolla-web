@@ -1,0 +1,7 @@
+/landing-page/
+/.claude/
+/.cursor/
+/.pipeline-logs/
+
+# macOS
+.DS_Store
