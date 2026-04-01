@@ -20,6 +20,19 @@ import type { TriollaPortfolioSnapshotDeps } from "./TriollaPortfolioSnapshotCli
 import { initTriollaLottie } from "./initTriollaLottie";
 import { useSnapshotHistoryRestoreKey } from "./useSnapshotHistoryRestoreKey";
 
+const NON_CRITICAL_SCRIPT_MARKERS = [
+  "gtm.js",
+  "fbevents.js",
+  "insight.min.js",
+  "analytics.js",
+  "5905093.js",
+  "hs-banner.com",
+] as const;
+
+function isNonCriticalScript(file: string): boolean {
+  return NON_CRITICAL_SCRIPT_MARKERS.some((marker) => file.includes(marker));
+}
+
 /**
  * Rewrite asset paths in HTML:
  * 1. Remove triolla.io font links (CORS blocked)
@@ -188,9 +201,12 @@ export function TriollaBilingualPortfolioSnapshotClient({
         if (lang === "he") {
           localizeContactStripForHebrew(el);
         }
-        await waitForSnapshotFonts();
+        await waitForSnapshotFonts(1500);
 
-        for (const file of js) {
+        const criticalScripts = js.filter((file) => !isNonCriticalScript(file));
+        const deferredScripts = js.filter((file) => isNonCriticalScript(file));
+
+        for (const file of criticalScripts) {
           if (cancelled) return;
           await loadScript(hrefFor(file));
           if (file.endsWith(".js") && (file.includes("lottie") || file.includes("bodymovin"))) {
@@ -208,8 +224,6 @@ export function TriollaBilingualPortfolioSnapshotClient({
         window.dispatchEvent(new Event("load"));
         $?.(window).trigger("load");
 
-        if (cancelled) return;
-
         disposeRevealRef.current?.();
         disposeRevealRef.current = mountTriollaSnapshotRevealStack(el, revealPreset);
         disposeHeaderPillRef.current?.();
@@ -217,6 +231,25 @@ export function TriollaBilingualPortfolioSnapshotClient({
         disposeFaqRef.current?.();
         disposeFaqRef.current = mountTriollaFaqAccordion(el);
         setPhase("ready");
+
+        const runDeferred = async () => {
+          for (const file of deferredScripts) {
+            if (cancelled) return;
+            await loadScript(hrefFor(file));
+          }
+        };
+
+        if (deferredScripts.length > 0) {
+          if ("requestIdleCallback" in window) {
+            window.requestIdleCallback(() => {
+              void runDeferred();
+            });
+          } else {
+            setTimeout(() => {
+              void runDeferred();
+            }, 0);
+          }
+        }
       } catch (e) {
         if (cancelled) return;
         if (e instanceof DOMException && e.name === "AbortError") return;

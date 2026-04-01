@@ -13,6 +13,19 @@ import { mountTriollaSnapshotRevealStack } from "./mountTriollaSnapshotRevealSta
 import { initTriollaLottie } from "./initTriollaLottie";
 import { useSnapshotHistoryRestoreKey } from "./useSnapshotHistoryRestoreKey";
 
+const NON_CRITICAL_SCRIPT_MARKERS = [
+  "gtm.js",
+  "fbevents.js",
+  "insight.min.js",
+  "analytics.js",
+  "5905093.js",
+  "hs-banner.com",
+] as const;
+
+function isNonCriticalScript(file: string): boolean {
+  return NON_CRITICAL_SCRIPT_MARKERS.some((marker) => file.includes(marker));
+}
+
 export type TriollaPortfolioSnapshotDeps = {
   assetBase: string;
   bodyClass: string;
@@ -100,9 +113,12 @@ export function TriollaPortfolioSnapshotClient({
         el.innerHTML = html;
         ensurePortfolioFaqWrapShown(el);
         rewriteTriollaNavLinks(el);
-        await waitForSnapshotFonts();
+        await waitForSnapshotFonts(1500);
 
-        for (const file of js) {
+        const criticalScripts = js.filter((file) => !isNonCriticalScript(file));
+        const deferredScripts = js.filter((file) => isNonCriticalScript(file));
+
+        for (const file of criticalScripts) {
           if (cancelled) return;
           const src = hrefFor(file);
           await loadScript(src);
@@ -123,7 +139,6 @@ export function TriollaPortfolioSnapshotClient({
         window.dispatchEvent(new Event("DOMContentLoaded"));
         window.dispatchEvent(new Event("load"));
 
-        if (cancelled) return;
         disposeAfterScriptsRef.current?.();
         disposeAfterScriptsRef.current = null;
         if (afterScripts) {
@@ -138,6 +153,25 @@ export function TriollaPortfolioSnapshotClient({
         disposeFaqRef.current?.();
         disposeFaqRef.current = mountTriollaFaqAccordion(el);
         setPhase("ready");
+
+        const runDeferred = async () => {
+          for (const file of deferredScripts) {
+            if (cancelled) return;
+            await loadScript(hrefFor(file));
+          }
+        };
+
+        if (deferredScripts.length > 0) {
+          if ("requestIdleCallback" in window) {
+            window.requestIdleCallback(() => {
+              void runDeferred();
+            });
+          } else {
+            setTimeout(() => {
+              void runDeferred();
+            }, 0);
+          }
+        }
       } catch (e) {
         if (cancelled) return;
         if (e instanceof DOMException && e.name === "AbortError") return;
