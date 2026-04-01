@@ -1,1 +1,0 @@
-../_shared/metaview.js

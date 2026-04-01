@@ -1,1 +1,0 @@
-/Users/ariell/html-to-react/web/public/assets/_shared/1ebe9d436a30fedc7a3da0dd4d0c7ddf_svgs-inline-min.js

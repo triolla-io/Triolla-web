@@ -1,1 +1,0 @@
-../_shared/language-cookie.js
