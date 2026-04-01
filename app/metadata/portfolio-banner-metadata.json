@@ -1,0 +1,76 @@
+{
+  "slug": "portfolio-banner",
+  "title_en": "Portfolio Banner",
+  "title_he": "בנר תיק עבודות",
+  "description_en": "Dynamic portfolio banner with animated jumping elements and feature images",
+  "description_he": "בנר תיק עבודות דינמי עם אלמנטים קופצים מונפשים ותמונות בולטות",
+  "og_type": "website",
+  "section": "main",
+  "pages": {
+    "services-ai-automation": {
+      "title_en": "AI & Automation",
+      "assetPath": "/assets/services-ai-automation",
+      "customTitle_he": "AI ואוטומציה"
+    },
+    "services-product-ux-ui-design": {
+      "title_en": "Product UX/UI Design",
+      "assetPath": "/assets/services-product-ux-ui-design"
+    },
+    "services-motion-design": {
+      "title_en": "Motion Design",
+      "assetPath": "/assets/services-motion-design"
+    },
+    "services-motion-design-old": {
+      "title_en": "Motion Design",
+      "assetPath": "/assets/services-motion-design-old"
+    },
+    "services-ui-design": {
+      "title_en": "UI Design",
+      "assetPath": "/assets/services-ui-design"
+    },
+    "services-wireframing": {
+      "title_en": "Wireframing",
+      "assetPath": "/assets/services-wireframing"
+    },
+    "services-prototyping": {
+      "title_en": "Prototyping",
+      "assetPath": "/assets/services-prototyping"
+    },
+    "services-user-testing": {
+      "title_en": "User Testing",
+      "assetPath": "/assets/services-user-testing"
+    },
+    "services-ux-research": {
+      "title_en": "UX Research",
+      "assetPath": "/assets/services-ux-research"
+    },
+    "services-logo-design": {
+      "title_en": "Logo Design",
+      "assetPath": "/assets/services-logo-design"
+    },
+    "services-back-end-dev": {
+      "title_en": "Back-End Development",
+      "assetPath": "/assets/services-back-end-dev"
+    },
+    "services-front-end-dev": {
+      "title_en": "Front-End Development",
+      "assetPath": "/assets/services-front-end-dev"
+    },
+    "services-design-system-creation": {
+      "title_en": "Design System Creation",
+      "assetPath": "/assets/services-design-system-creation"
+    },
+    "services-presentations": {
+      "title_en": "Presentations",
+      "assetPath": "/assets/services-presentations"
+    },
+    "services-character-design": {
+      "title_en": "Character Design",
+      "assetPath": "/assets/services-character-design"
+    },
+    "services-creative-concept": {
+      "title_en": "Creative Concept",
+      "assetPath": "/assets/services-creative-concept"
+    }
+  }
+}

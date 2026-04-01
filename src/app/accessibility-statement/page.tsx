@@ -1,0 +1,23 @@
+export default function Page() {
+  return (
+    <div className="max-w-[900px] mx-auto px-5 sm:px-10 py-[120px]">
+      <h1 className="font-bold text-[48px] md:text-[64px] leading-[1.1] text-black mb-12">Accessibility Statement</h1>
+        <p className="text-[16px] md:text-[18px] leading-[1.7] text-black/70 mb-5">Introduction</p>
+        <p className="text-[16px] md:text-[18px] leading-[1.7] text-black/70 mb-5">Triolla Software Development Ltd is committed to promoting accessibility to allow people with disabilities and special needs convenient access to and use of the services we offer. We strive to ensure convenient access for all our customers at service and sales points, on the website, and through our telephone service centers.</p>
+        <p className="text-[16px] md:text-[18px] leading-[1.7] text-black/70 mb-5">Approximately fifteen percent of the population in Israel encounters internet accessibility difficulties, including those with visual impairments, hearing impairments, people with motor disabilities, the elderly, and more.</p>
+        <p className="text-[16px] md:text-[18px] leading-[1.7] text-black/70 mb-5">To ensure professional and tailored service for everyone, we have made the necessary adjustments to our website, implementing accessibility rules in accordance with the principles of the Israeli Accessibility Standard and the Equal Rights for Persons with Disabilities Regulations (Accessibility Adjustments for Service), 5773-2013 (Chapter C: Internet Services). Our website complies with the requirements of Accessibility Standard 5568 at AA level, according to WCAG 2.1 guidelines. The website’s accessibility is adapted for popular browsers: Chrome, Firefox, and Internet Explorer 9 and above.</p>
+        <p className="text-[16px] md:text-[18px] leading-[1.7] text-black/70 mb-5">Accessibility Arrangements in the Organization</p>
+        <p className="text-[16px] md:text-[18px] leading-[1.7] text-black/70 mb-5">Information about building accessibility and access routes to our offices:</p>
+        <p className="text-[16px] md:text-[18px] leading-[1.7] text-black/70 mb-5">Accessibility adaptations implemented as part of the website’s accessibility enhancements:</p>
+        <p className="text-[16px] md:text-[18px] leading-[1.7] text-black/70 mb-5">We have invested significant resources to ensure that your site is easier to use and more accessible to people with disabilities, driven by our strong conviction that everyone has the right to live with dignity, equality, comfort, and independence.</p>
+        <p className="text-[16px] md:text-[18px] leading-[1.7] text-black/70 mb-5">We provide you with an advanced accessibility widget from NagishExpress Web Accessibility, powered by a dedicated accessibility server. This software enables your site to improve its compliance with the Web Content Accessibility Guidelines (WCAG 2.1).</p>
+        <p className="text-[16px] md:text-[18px] leading-[1.7] text-black/70 mb-5">You can activate the NagishExpress accessibility menu by clicking the accessibility menu icon shown in the corner of the page. The accessibility menu and the technology running on the site offer many options, such as:</p>
+        <p className="text-[16px] md:text-[18px] leading-[1.7] text-black/70 mb-5">The accessibility plugin supports screen-reader software such as JAWS, NVDA, and others.</p>
+        <p className="text-[16px] md:text-[18px] leading-[1.7] text-black/70 mb-5">Ways to contact us with requests and suggestions for accessibility improvements</p>
+        <p className="text-[16px] md:text-[18px] leading-[1.7] text-black/70 mb-5">We continue our efforts to improve the site’s accessibility as part of our commitment to make it usable for everyone, including people with disabilities and special needs. Please note that despite our efforts to make all pages accessible, you may encounter sections that have not yet been fully optimized. If you discover or experience any difficulties while browsing the site—whether related to accessibility or otherwise—we welcome your inquiries for information and/or suggestions for improvement, or an email reporting the issue to our Accessibility Coordinator at:</p>
+        <p className="text-[16px] md:text-[18px] leading-[1.7] text-black/70 mb-5">Accessibility Coordinator Contact Details</p>
+        <p className="text-[16px] md:text-[18px] leading-[1.7] text-black/70 mb-5">Publication of the accessibility statement</p>
+        <p className="text-[16px] md:text-[18px] leading-[1.7] text-black/70 mb-5">The accessibility statement was updated on: July 29, 2025</p>
+    </div>
+  );
+}

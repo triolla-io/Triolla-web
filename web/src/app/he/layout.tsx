@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { HebrewNavigation } from "@/components/HebrewNavigation";
+import "@/app/hebrew-navigation.css";
 
 export const metadata: Metadata = {
   alternates: {
@@ -14,5 +16,10 @@ export default function HebrewLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return <section dir="rtl">{children}</section>;
+  return (
+    <section dir="rtl">
+      <HebrewNavigation />
+      {children}
+    </section>
+  );
 }

@@ -1,0 +1,1 @@
+../_shared/gdpr-localize.js

@@ -1,0 +1,33 @@
+{
+  "assetBase": "/assets/fintech-finance",
+  "bodyClass": "wp-singular page-template page-template-page-portfolio page-template-page-portfolio-php page page-id-1081 wp-theme-triolla",
+  "dataRsssl": "1",
+  "css": [
+    "style.min.css_edabec9e.css",
+    "style.min.css_68b3cde9.css",
+    "style.css_2af44128.css",
+    "style-new.css_2af44128.css",
+    "responsive.css_2af44128.css",
+    "fonts.css_2af44128.css",
+    "animate.css_2af44128.css",
+    "animation.css_2af44128.css",
+    "jquery.jConveyorTicker.min.css_edabec9e.css",
+    "owl.carousel.css_2af44128.css",
+    "mlstyle.css_2af44128.css",
+    "ml-responsive.css_2af44128.css"
+  ],
+  "js": [
+    "jquery-3.6.0.min.js_edabec9e.js",
+    "jquery.jConveyorTicker.min.js_edabec9e.js",
+    "owl.carousel.js_2af44128.js",
+    "jquery.bez.min.js_edabec9e.js",
+    "TweenMax.min.js_edabec9e.js",
+    "ScrollMagic.min.js_edabec9e.js",
+    "lottie.min.js_2af44128.js",
+    "gsap.min.js_a1459148.js",
+    "ScrollTrigger.min.js_a1459148.js",
+    "wow.js_a1459148.js",
+    "metaview.js_2af44128.js",
+    "all.js_a1459148.js"
+  ]
+}

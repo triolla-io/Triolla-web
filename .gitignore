@@ -4,26 +4,48 @@
 /.pipeline-logs/
 /.team/
 /pipeline/
+/.git_web_backup/
 
-# Planning / internal docs at repo root; keep markdown under web/
+# Planning docs
 *.md
-!web/**/*.md
 
 # Generated or local-only artifacts
 /DUPLICATE_REPORT.json
 /triolla_urls.json
 /_extracted_*.html
 
-# Internal tooling / notes (Next app lives under web/)
+# Internal tooling / notes
 /scripts/
 /*.py
 /DELIVERABLES.txt
 /QUICK_START.sh
 
-# Stray duplicate paths at repo root (real app is web/app, web/public)
-/app/
-/public/
-/.git_web_backup/
+# Dependencies and build artifacts
+/node_modules
+/.next/
+/out/
+/build/
+/coverage/
+*.tsbuildinfo
+next-env.d.ts
 
-# macOS
+# Package manager and debug logs
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Local env and deployment
+.env*
+.vercel
+
+# macOS and keys
 .DS_Store
+*.pem
