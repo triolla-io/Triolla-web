@@ -93,17 +93,23 @@ export function generatePageMetadata({
       site: "@triollastudio",
       creator: "@triollastudio",
     },
-    robots: {
-      index: true,
-      follow: true,
-      googleBot: {
-        index: true,
-        follow: true,
-        "max-video-preview": -1,
-        "max-image-preview": "large",
-        "max-snippet": -1,
-      },
-    },
+    robots:
+      process.env.VERCEL_ENV === "production"
+        ? {
+            index: true,
+            follow: true,
+            googleBot: {
+              index: true,
+              follow: true,
+              "max-video-preview": -1,
+              "max-image-preview": "large",
+              "max-snippet": -1,
+            },
+          }
+        : {
+            index: false,
+            follow: false,
+          },
     verification: {
       google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
     },
