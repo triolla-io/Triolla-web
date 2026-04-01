@@ -168,7 +168,7 @@ body {
   line-height: 25px;
   color: #fff;
   text-align: center;
-  position: fixed;
+  position: absolute;
   top: 0; left: 0; right: 0;
   width: 100%;
   max-width: 100%;
@@ -239,7 +239,7 @@ body {
 /* Sticky — pill shrinks; tuck under top when scrolled (ticker is hidden via .headerticker.is-hidden) */
 .site-header.is-sticky {
   width: min(550px, calc(100% - 30px));
-  top: 12px;
+  top: 0;
 }
 /* Ticker visible — header floats below it (class removed while sticky so top offset matches hidden ticker) */
 .site-header.ticker-visible { top: 87px; }
@@ -765,8 +765,14 @@ body {
   }
 }
 @media (max-width: 767px) {
-  /* Ticker hidden on mobile — header flush to top (reverted) */
-  .headerticker { display: none; }
+  /* Keep the blue ticker pinned to document top as absolute. */
+  .headerticker {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
   /* Header: full-width yellow bar, flush to top */
   .site-header {
     background: #FED125;
@@ -776,10 +782,10 @@ body {
     width: 100%;
     max-width: 100%;
   }
-  /* Override all top-state classes — always 0 on mobile */
+  /* Keep nav below ticker on mobile in all header states */
   .site-header,
   .site-header.ticker-visible,
-  .site-header.ticker-visible.is-sticky { top: 0; }
+  .site-header.ticker-visible.is-sticky { top: 46px; }
   .site-header.is-sticky { width: 100%; }
   /* Contact Us: yellow pill + dark outline (readable on yellow header bar) */
   .header_contact a {
