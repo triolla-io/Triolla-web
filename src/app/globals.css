@@ -875,6 +875,8 @@ body {
 }
 .pill-btn:hover .hover-text { opacity: 1; visibility: visible; }
 .pill-btn:hover .btn-overlay { transform: scaleX(1); transform-origin: left; }
+/* RTL: flip transform-origin for Hebrew */
+[dir="rtl"] .pill-btn:hover .btn-overlay { transform-origin: right; }
 
 /* ============================================================
    HERO IMAGES  (.hometopimage1–9)
