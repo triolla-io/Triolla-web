@@ -23,6 +23,7 @@ export function HeBlogClient() {
       landingSlug="triolla-io-blog"
       assetDir="blog"
       lang="he"
+      chromeUrl="/fragments/blog-chrome-he.html"
       afterScripts={afterScripts}
     />
   );

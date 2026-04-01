@@ -51,6 +51,7 @@ export default async function HeBlogPostPage({
         landingSlug={`triolla-io-he-blog-${slug}`}
         assetDir={`he-blog-${slug}-he`}
         lang="he"
+        chromeUrl="/fragments/blog-chrome-he.html"
       />
     );
   }

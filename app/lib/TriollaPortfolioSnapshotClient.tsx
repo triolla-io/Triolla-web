@@ -36,6 +36,8 @@ export type TriollaPortfolioSnapshotClientProps = {
   assetDir: string;
   /** If set, injects snapshot chrome header (en or he) before rendering content */
   lang?: "en" | "he";
+  /** Optional custom chrome URL; if not provided and lang is set, uses _portfolio-site-chrome-{lang}.html */
+  chromeUrl?: string;
   /**
    * Runs after snapshot CSS/JS are loaded and synthetic `DOMContentLoaded` / `load` fire.
    * Return a disposer to run on unmount / before the next load (e.g. kill GSAP context).
@@ -50,6 +52,7 @@ export function TriollaPortfolioSnapshotClient({
   landingSlug,
   assetDir,
   lang,
+  chromeUrl,
   afterScripts,
 }: TriollaPortfolioSnapshotClientProps) {
   const rootRef = useRef<HTMLDivElement>(null);
@@ -112,12 +115,13 @@ export function TriollaPortfolioSnapshotClient({
             el.querySelector(".header.headnewact")?.remove();
           }
           if (!el.querySelector(".header.headnewact")) {
-            const chromeUrl =
-              lang === "he"
+            const effectiveChromeUrl =
+              chromeUrl ||
+              (lang === "he"
                 ? "/fragments/_portfolio-site-chrome-he.html"
-                : "/fragments/_portfolio-site-chrome-en.html";
+                : "/fragments/_portfolio-site-chrome-en.html");
             try {
-              const chromeRes = await fetch(chromeUrl, { signal: ac.signal });
+              const chromeRes = await fetch(effectiveChromeUrl, { signal: ac.signal });
               if (chromeRes.ok) {
                 let chromeHtml = await chromeRes.text();
                 chromeHtml = chromeHtml
@@ -211,6 +215,7 @@ export function TriollaPortfolioSnapshotClient({
     pathEncoding,
     fragmentUrl,
     lang,
+    chromeUrl,
     historyRestoreKey,
   ]);
 
