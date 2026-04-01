@@ -16,6 +16,8 @@ export function BlogPostClient({ slug, deps }: BlogPostClientProps) {
       pageLabel={slug}
       landingSlug={`triolla-io-blog-${slug}`}
       assetDir={`blog-${slug}`}
+      lang="en"
+      chromeUrl="/fragments/blog-chrome-en.html"
     />
   );
 }

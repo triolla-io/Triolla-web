@@ -16,6 +16,8 @@ export function BlogClient() {
       pageLabel="Blog"
       landingSlug="triolla-io-blog"
       assetDir="blog"
+      lang="en"
+      chromeUrl="/fragments/blog-chrome-en.html"
       afterScripts={afterScripts}
     />
   );
