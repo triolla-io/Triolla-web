@@ -1,0 +1,20 @@
+/* ============================================================
+   HEBREW/RTL HEADER & NAVIGATION FIXES
+   ============================================================ */
+
+/* Mobile header: RTL layout correction */
+@media (max-width: 1023px) {
+  /*
+   * RTL: flex places the first item on the inline-start (right). Triolla mobile HE keeps the same
+   * visual order as EN (logo left, contact + hamburger right); mirror snapshot `.header_in` rule.
+   */
+  [dir="rtl"] .site-header .header_in {
+    flex-direction: row-reverse;
+  }
+}
+
+/* Pill navigation: RTL hover animation */
+[dir="rtl"] .pill-btn:hover .btn-overlay {
+  /* RTL: flip transform-origin for Hebrew - sweep from right to left */
+  transform-origin: right;
+}
