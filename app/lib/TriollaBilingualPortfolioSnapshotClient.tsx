@@ -10,7 +10,12 @@ import {
   localizeContactStripForHebrew,
 } from "./triollaSharedBodyInject";
 import { installSnapshotPluginStubs } from "./snapshotPluginStubs";
-import { loadScript, loadStylesheet, waitForSnapshotFonts } from "./snapshotLoader";
+import {
+  loadScript,
+  loadStylesheet,
+  loadStylesheetsParallel,
+  waitForSnapshotFonts,
+} from "./snapshotLoader";
 import { snapshotAssetUrl } from "./snapshotAssetUrl";
 import { initTriollaOwlCarousels } from "../about-us/initTriollaCarousels";
 import { mountTriollaHeaderPill } from "../about-us/mountTriollaHeaderPill";
@@ -152,14 +157,8 @@ export function TriollaBilingualPortfolioSnapshotClient({
           await loadStylesheet("/assets/_consolidated/fonts.css");
         }
 
-        for (const file of css) {
-          if (cancelled) return;
-          try {
-            await loadStylesheet(hrefFor(file));
-          } catch (err) {
-            console.error(`Failed to load CSS: ${file}`, err);
-          }
-        }
+        await loadStylesheetsParallel(css.map((file) => hrefFor(file)));
+        if (cancelled) return;
 
         const res = await fetch(fragmentUrl, { signal: ac.signal });
         if (!res.ok) throw new Error("fragment fetch failed");

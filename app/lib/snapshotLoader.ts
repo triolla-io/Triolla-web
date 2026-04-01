@@ -41,6 +41,19 @@ export function loadStylesheet(href: string): Promise<void> {
   });
 }
 
+export async function loadStylesheetsParallel(hrefs: string[]): Promise<void> {
+  const unique = Array.from(new Set(hrefs));
+  await Promise.all(
+    unique.map(async (href) => {
+      try {
+        await loadStylesheet(href);
+      } catch (error) {
+        console.error(`Failed to load stylesheet: ${href}`, error);
+      }
+    }),
+  );
+}
+
 const scriptPromises = new Map<string, Promise<void>>();
 
 export function loadScript(src: string): Promise<void> {
