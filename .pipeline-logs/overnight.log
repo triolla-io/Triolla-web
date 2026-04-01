@@ -1,0 +1,30 @@
+=== START Sun Mar 29 02:25:22 IDT 2026 ===
+started download worker 1/6 pid=36448 log=/Users/ariell/html-to-react/.pipeline-logs/download-1.log
+started download worker 2/6 pid=36449 log=/Users/ariell/html-to-react/.pipeline-logs/download-2.log
+started download worker 3/6 pid=36450 log=/Users/ariell/html-to-react/.pipeline-logs/download-3.log
+started download worker 4/6 pid=36451 log=/Users/ariell/html-to-react/.pipeline-logs/download-4.log
+started download worker 5/6 pid=36452 log=/Users/ariell/html-to-react/.pipeline-logs/download-5.log
+started download worker 6/6 pid=36453 log=/Users/ariell/html-to-react/.pipeline-logs/download-6.log
+Waiting until all workers finish (nothing left to claim)…
+started convert worker 1/4 pid=36455 log=/Users/ariell/html-to-react/.pipeline-logs/convert-1.log
+started convert worker 2/4 pid=36456 log=/Users/ariell/html-to-react/.pipeline-logs/convert-2.log
+started convert worker 3/4 pid=36457 log=/Users/ariell/html-to-react/.pipeline-logs/convert-3.log
+started convert worker 4/4 pid=36458 log=/Users/ariell/html-to-react/.pipeline-logs/convert-4.log
+Waiting until all workers finish (nothing left to claim)…
+=== DONE Sun Mar 29 02:25:22 IDT 2026 ===
+{'converted': 281, 'downloading': 12}
+=== START Sun Mar 29 02:25:33 IDT 2026 ===
+started download worker 1/6 pid=37148 log=/Users/ariell/html-to-react/.pipeline-logs/download-1.log
+started download worker 2/6 pid=37149 log=/Users/ariell/html-to-react/.pipeline-logs/download-2.log
+started download worker 3/6 pid=37150 log=/Users/ariell/html-to-react/.pipeline-logs/download-3.log
+started download worker 4/6 pid=37151 log=/Users/ariell/html-to-react/.pipeline-logs/download-4.log
+started download worker 5/6 pid=37152 log=/Users/ariell/html-to-react/.pipeline-logs/download-5.log
+started download worker 6/6 pid=37153 log=/Users/ariell/html-to-react/.pipeline-logs/download-6.log
+Waiting until all workers finish (nothing left to claim)…
+started convert worker 1/4 pid=37155 log=/Users/ariell/html-to-react/.pipeline-logs/convert-1.log
+started convert worker 2/4 pid=37156 log=/Users/ariell/html-to-react/.pipeline-logs/convert-2.log
+started convert worker 3/4 pid=37157 log=/Users/ariell/html-to-react/.pipeline-logs/convert-3.log
+started convert worker 4/4 pid=37158 log=/Users/ariell/html-to-react/.pipeline-logs/convert-4.log
+Waiting until all workers finish (nothing left to claim)…
+=== DONE Sun Mar 29 02:25:33 IDT 2026 ===
+{'converted': 281, 'downloading': 12}

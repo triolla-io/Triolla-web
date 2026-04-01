@@ -1,0 +1,370 @@
+{
+  "domain": "triolla.io",
+  "scrapedAt": "2026-03-31T17:59:09.632136Z",
+  "source": "sitemap",
+  "totalPages": 51,
+  "urls": [
+    {
+      "url": "https://triolla.io/",
+      "slug": "triolla-io-home",
+      "path": "/",
+      "title": "Home",
+      "status": "pending"
+    },
+    {
+      "url": "https://triolla.io/about-us/",
+      "slug": "triolla-io-about-us",
+      "path": "/about-us/",
+      "title": "About Us",
+      "status": "pending"
+    },
+    {
+      "url": "https://triolla.io/accessibility-statement/",
+      "slug": "triolla-io-accessibility-statement",
+      "path": "/accessibility-statement/",
+      "title": "Accessibility Statement",
+      "status": "pending"
+    },
+    {
+      "url": "https://triolla.io/agritech/",
+      "slug": "triolla-io-agritech",
+      "path": "/agritech/",
+      "title": "Agritech",
+      "status": "pending"
+    },
+    {
+      "url": "https://triolla.io/b2b/",
+      "slug": "triolla-io-b2b",
+      "path": "/b2b/",
+      "title": "B2B",
+      "status": "pending"
+    },
+    {
+      "url": "https://triolla.io/b2c/",
+      "slug": "triolla-io-b2c",
+      "path": "/b2c/",
+      "title": "B2C",
+      "status": "pending"
+    },
+    {
+      "url": "https://triolla.io/branding-studio/",
+      "slug": "triolla-io-branding-studio",
+      "path": "/branding-studio/",
+      "title": "Branding Studio",
+      "status": "pending"
+    },
+    {
+      "url": "https://triolla.io/careers/",
+      "slug": "triolla-io-careers",
+      "path": "/careers/",
+      "title": "Careers",
+      "status": "pending"
+    },
+    {
+      "url": "https://triolla.io/contact-us/",
+      "slug": "triolla-io-contact-us",
+      "path": "/contact-us/",
+      "title": "Contact Us",
+      "status": "pending"
+    },
+    {
+      "url": "https://triolla.io/cyber-security/",
+      "slug": "triolla-io-cyber-security",
+      "path": "/cyber-security/",
+      "title": "Cyber Security",
+      "status": "pending"
+    },
+    {
+      "url": "https://triolla.io/dashboard-design/",
+      "slug": "triolla-io-dashboard-design",
+      "path": "/dashboard-design/",
+      "title": "Dashboard Design",
+      "status": "pending"
+    },
+    {
+      "url": "https://triolla.io/dev/",
+      "slug": "triolla-io-dev",
+      "path": "/dev/",
+      "title": "Dev",
+      "status": "pending"
+    },
+    {
+      "url": "https://triolla.io/device-iot/",
+      "slug": "triolla-io-device-iot",
+      "path": "/device-iot/",
+      "title": "Device Iot",
+      "status": "pending"
+    },
+    {
+      "url": "https://triolla.io/fintech-finance/",
+      "slug": "triolla-io-fintech-finance",
+      "path": "/fintech-finance/",
+      "title": "Fintech Finance",
+      "status": "pending"
+    },
+    {
+      "url": "https://triolla.io/gaming/",
+      "slug": "triolla-io-gaming",
+      "path": "/gaming/",
+      "title": "Gaming",
+      "status": "pending"
+    },
+    {
+      "url": "https://triolla.io/he/%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa%d7%99%d7%9d-%d7%a9%d7%9c%d7%a0%d7%95/%d7%95%d7%95%d7%99%d7%a8%d7%a4%d7%a8%d7%99%d7%99%d7%9d/",
+      "slug": "triolla-io-he-%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa%d7%99%d7%9d-%d7%a9%d7%9c%d7%a0%d7%95-%d7%95%d7%95%d7%99%d7%a8%d7%a4%d7%a8%d7%99%d7%99%d7%9d",
+      "path": "/he/%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa%d7%99%d7%9d-%d7%a9%d7%9c%d7%a0%d7%95/%d7%95%d7%95%d7%99%d7%a8%d7%a4%d7%a8%d7%99%d7%99%d7%9d/",
+      "title": "%D7%95%D7%95%D7%99%D7%A8%D7%A4%D7%A8%D7%99%D7%99%D7%9D",
+      "status": "pending"
+    },
+    {
+      "url": "https://triolla.io/he/%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa%d7%99%d7%9d-%d7%a9%d7%9c%d7%a0%d7%95/%d7%99%d7%a6%d7%99%d7%a8%d7%aa-%d7%93%d7%99%d7%96%d7%99%d7%99%d7%9f-%d7%a1%d7%99%d7%a1%d7%98%d7%9d/",
+      "slug": "triolla-io-he-%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa%d7%99%d7%9d-%d7%a9%d7%9c%d7%a0%d7%95-%d7%99%d7%a6%d7%99%d7%a8%d7%aa-%d7%93%d7%99%d7%96%d7%99%d7%99%d7%9f-%d7%a1%d7%99%d7%a1%d7%98%d7%9d",
+      "path": "/he/%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa%d7%99%d7%9d-%d7%a9%d7%9c%d7%a0%d7%95/%d7%99%d7%a6%d7%99%d7%a8%d7%aa-%d7%93%d7%99%d7%96%d7%99%d7%99%d7%9f-%d7%a1%d7%99%d7%a1%d7%98%d7%9d/",
+      "title": "%D7%99%D7%A6%D7%99%D7%A8%D7%Aa %D7%93%D7%99%D7%96%D7%99%D7%99%D7%9F %D7%A1%D7%99%D7%A1%D7%98%D7%9D",
+      "status": "pending"
+    },
+    {
+      "url": "https://triolla.io/he/%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa%d7%99%d7%9d-%d7%a9%d7%9c%d7%a0%d7%95/%d7%9e%d7%a6%d7%92%d7%95%d7%aa/",
+      "slug": "triolla-io-he-%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa%d7%99%d7%9d-%d7%a9%d7%9c%d7%a0%d7%95-%d7%9e%d7%a6%d7%92%d7%95%d7%aa",
+      "path": "/he/%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa%d7%99%d7%9d-%d7%a9%d7%9c%d7%a0%d7%95/%d7%9e%d7%a6%d7%92%d7%95%d7%aa/",
+      "title": "%D7%9E%D7%A6%D7%92%D7%95%D7%Aa",
+      "status": "pending"
+    },
+    {
+      "url": "https://triolla.io/he/%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa%d7%99%d7%9d-%d7%a9%d7%9c%d7%a0%d7%95/%d7%a2%d7%99%d7%a6%d7%95%d7%91-%d7%9e%d7%95%d7%a9%d7%9f/",
+      "slug": "triolla-io-he-%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa%d7%99%d7%9d-%d7%a9%d7%9c%d7%a0%d7%95-%d7%a2%d7%99%d7%a6%d7%95%d7%91-%d7%9e%d7%95%d7%a9%d7%9f",
+      "path": "/he/%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa%d7%99%d7%9d-%d7%a9%d7%9c%d7%a0%d7%95/%d7%a2%d7%99%d7%a6%d7%95%d7%91-%d7%9e%d7%95%d7%a9%d7%9f/",
+      "title": "%D7%A2%D7%99%D7%A6%D7%95%D7%91 %D7%9E%D7%95%D7%A9%D7%9F",
+      "status": "pending"
+    },
+    {
+      "url": "https://triolla.io/he/%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa%d7%99%d7%9d-%d7%a9%d7%9c%d7%a0%d7%95/%d7%a2%d7%99%d7%a6%d7%95%d7%91-ui/",
+      "slug": "triolla-io-he-%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa%d7%99%d7%9d-%d7%a9%d7%9c%d7%a0%d7%95-%d7%a2%d7%99%d7%a6%d7%95%d7%91-ui",
+      "path": "/he/%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa%d7%99%d7%9d-%d7%a9%d7%9c%d7%a0%d7%95/%d7%a2%d7%99%d7%a6%d7%95%d7%91-ui/",
+      "title": "%D7%A2%D7%99%D7%A6%D7%95%D7%91 Ui",
+      "status": "pending"
+    },
+    {
+      "url": "https://triolla.io/he/%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa%d7%99%d7%9d-%d7%a9%d7%9c%d7%a0%d7%95/%d7%a4%d7%99%d7%aa%d7%95%d7%97-front-end/",
+      "slug": "triolla-io-he-%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa%d7%99%d7%9d-%d7%a9%d7%9c%d7%a0%d7%95-%d7%a4%d7%99%d7%aa%d7%95%d7%97-front-end",
+      "path": "/he/%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa%d7%99%d7%9d-%d7%a9%d7%9c%d7%a0%d7%95/%d7%a4%d7%99%d7%aa%d7%95%d7%97-front-end/",
+      "title": "%D7%A4%D7%99%D7%Aa%D7%95%D7%97 Front End",
+      "status": "pending"
+    },
+    {
+      "url": "https://triolla.io/he/%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa%d7%99%d7%9d-%d7%a9%d7%9c%d7%a0%d7%95/%d7%a4%d7%a8%d7%95%d7%98%d7%95%d7%98%d7%99%d7%99%d7%a4/",
+      "slug": "triolla-io-he-%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa%d7%99%d7%9d-%d7%a9%d7%9c%d7%a0%d7%95-%d7%a4%d7%a8%d7%95%d7%98%d7%95%d7%98%d7%99%d7%99%d7%a4",
+      "path": "/he/%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa%d7%99%d7%9d-%d7%a9%d7%9c%d7%a0%d7%95/%d7%a4%d7%a8%d7%95%d7%98%d7%95%d7%98%d7%99%d7%99%d7%a4/",
+      "title": "%D7%A4%D7%A8%D7%95%D7%98%D7%95%D7%98%D7%99%D7%99%D7%A4",
+      "status": "pending"
+    },
+    {
+      "url": "https://triolla.io/he/%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa%d7%99%d7%9d-%d7%a9%d7%9c%d7%a0%d7%95/motion-design2/",
+      "slug": "triolla-io-he-%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa%d7%99%d7%9d-%d7%a9%d7%9c%d7%a0%d7%95-motion-design2",
+      "path": "/he/%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa%d7%99%d7%9d-%d7%a9%d7%9c%d7%a0%d7%95/motion-design2/",
+      "title": "Motion Design2",
+      "status": "pending"
+    },
+    {
+      "url": "https://triolla.io/he/%d7%aa%d7%a0%d7%90%d7%99-%d7%a9%d7%99%d7%9e%d7%95%d7%a9/",
+      "slug": "triolla-io-he-%d7%aa%d7%a0%d7%90%d7%99-%d7%a9%d7%99%d7%9e%d7%95%d7%a9",
+      "path": "/he/%d7%aa%d7%a0%d7%90%d7%99-%d7%a9%d7%99%d7%9e%d7%95%d7%a9/",
+      "title": "%D7%Aa%D7%A0%D7%90%D7%99 %D7%A9%D7%99%D7%9E%D7%95%D7%A9",
+      "status": "pending"
+    },
+    {
+      "url": "https://triolla.io/medical-healthcare/",
+      "slug": "triolla-io-medical-healthcare",
+      "path": "/medical-healthcare/",
+      "title": "Medical Healthcare",
+      "status": "pending"
+    },
+    {
+      "url": "https://triolla.io/mobile-apps/",
+      "slug": "triolla-io-mobile-apps",
+      "path": "/mobile-apps/",
+      "title": "Mobile Apps",
+      "status": "pending"
+    },
+    {
+      "url": "https://triolla.io/portfolio-page/",
+      "slug": "triolla-io-portfolio-page",
+      "path": "/portfolio-page/",
+      "title": "Portfolio Page",
+      "status": "pending"
+    },
+    {
+      "url": "https://triolla.io/privacy-policy/",
+      "slug": "triolla-io-privacy-policy",
+      "path": "/privacy-policy/",
+      "title": "Privacy Policy",
+      "status": "pending"
+    },
+    {
+      "url": "https://triolla.io/saas-platforms/",
+      "slug": "triolla-io-saas-platforms",
+      "path": "/saas-platforms/",
+      "title": "Saas Platforms",
+      "status": "pending"
+    },
+    {
+      "url": "https://triolla.io/service-detail/",
+      "slug": "triolla-io-service-detail",
+      "path": "/service-detail/",
+      "title": "Service Detail",
+      "status": "pending"
+    },
+    {
+      "url": "https://triolla.io/services/",
+      "slug": "triolla-io-services",
+      "path": "/services/",
+      "title": "Services",
+      "status": "pending"
+    },
+    {
+      "url": "https://triolla.io/services/ai-automation/",
+      "slug": "triolla-io-services-ai-automation",
+      "path": "/services/ai-automation/",
+      "title": "Ai Automation",
+      "status": "pending"
+    },
+    {
+      "url": "https://triolla.io/services/back-end-dev/",
+      "slug": "triolla-io-services-back-end-dev",
+      "path": "/services/back-end-dev/",
+      "title": "Back End Dev",
+      "status": "pending"
+    },
+    {
+      "url": "https://triolla.io/services/character-design/",
+      "slug": "triolla-io-services-character-design",
+      "path": "/services/character-design/",
+      "title": "Character Design",
+      "status": "pending"
+    },
+    {
+      "url": "https://triolla.io/services/creative-concept/",
+      "slug": "triolla-io-services-creative-concept",
+      "path": "/services/creative-concept/",
+      "title": "Creative Concept",
+      "status": "pending"
+    },
+    {
+      "url": "https://triolla.io/services/design-system-creation/",
+      "slug": "triolla-io-services-design-system-creation",
+      "path": "/services/design-system-creation/",
+      "title": "Design System Creation",
+      "status": "pending"
+    },
+    {
+      "url": "https://triolla.io/services/front-end-dev/",
+      "slug": "triolla-io-services-front-end-dev",
+      "path": "/services/front-end-dev/",
+      "title": "Front End Dev",
+      "status": "pending"
+    },
+    {
+      "url": "https://triolla.io/services/logo-design/",
+      "slug": "triolla-io-services-logo-design",
+      "path": "/services/logo-design/",
+      "title": "Logo Design",
+      "status": "pending"
+    },
+    {
+      "url": "https://triolla.io/services/motion-design-old/",
+      "slug": "triolla-io-services-motion-design-old",
+      "path": "/services/motion-design-old/",
+      "title": "Motion Design Old",
+      "status": "pending"
+    },
+    {
+      "url": "https://triolla.io/services/motion-design/",
+      "slug": "triolla-io-services-motion-design",
+      "path": "/services/motion-design/",
+      "title": "Motion Design",
+      "status": "pending"
+    },
+    {
+      "url": "https://triolla.io/services/presentations/",
+      "slug": "triolla-io-services-presentations",
+      "path": "/services/presentations/",
+      "title": "Presentations",
+      "status": "pending"
+    },
+    {
+      "url": "https://triolla.io/services/product-stars/",
+      "slug": "triolla-io-services-product-stars",
+      "path": "/services/product-stars/",
+      "title": "Product Stars",
+      "status": "pending"
+    },
+    {
+      "url": "https://triolla.io/services/product-ux-ui-design/",
+      "slug": "triolla-io-services-product-ux-ui-design",
+      "path": "/services/product-ux-ui-design/",
+      "title": "Product Ux Ui Design",
+      "status": "pending"
+    },
+    {
+      "url": "https://triolla.io/services/prototyping/",
+      "slug": "triolla-io-services-prototyping",
+      "path": "/services/prototyping/",
+      "title": "Prototyping",
+      "status": "pending"
+    },
+    {
+      "url": "https://triolla.io/services/ui-design/",
+      "slug": "triolla-io-services-ui-design",
+      "path": "/services/ui-design/",
+      "title": "Ui Design",
+      "status": "pending"
+    },
+    {
+      "url": "https://triolla.io/services/user-testing/",
+      "slug": "triolla-io-services-user-testing",
+      "path": "/services/user-testing/",
+      "title": "User Testing",
+      "status": "pending"
+    },
+    {
+      "url": "https://triolla.io/services/ux-research/",
+      "slug": "triolla-io-services-ux-research",
+      "path": "/services/ux-research/",
+      "title": "Ux Research",
+      "status": "pending"
+    },
+    {
+      "url": "https://triolla.io/services/wireframing/",
+      "slug": "triolla-io-services-wireframing",
+      "path": "/services/wireframing/",
+      "title": "Wireframing",
+      "status": "pending"
+    },
+    {
+      "url": "https://triolla.io/startups-tech/",
+      "slug": "triolla-io-startups-tech",
+      "path": "/startups-tech/",
+      "title": "Startups Tech",
+      "status": "pending"
+    },
+    {
+      "url": "https://triolla.io/technology/",
+      "slug": "triolla-io-technology",
+      "path": "/technology/",
+      "title": "Technology",
+      "status": "pending"
+    },
+    {
+      "url": "https://triolla.io/terms-of-use/",
+      "slug": "triolla-io-terms-of-use",
+      "path": "/terms-of-use/",
+      "title": "Terms Of Use",
+      "status": "pending"
+    }
+  ],
+  "metadata": {
+    "filtered": true,
+    "excludedBlogs": 103,
+    "includedPages": 51
+  }
+}

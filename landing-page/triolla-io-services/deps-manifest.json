@@ -1,0 +1,30 @@
+{
+  "assetBase": "/assets/triolla-io-services",
+  "bodyClass": "main_container",
+  "css": [
+    "fonts.css",
+    "style.css",
+    "style-new.css",
+    "responsive.css",
+    "animate.css",
+    "animation.css",
+    "jquery.jConveyorTicker.min.css",
+    "owl.carousel.css",
+    "mlstyle.css",
+    "ml-responsive.css"
+  ],
+  "js": [
+    "jquery-3.6.0.min.js",
+    "jquery.jConveyorTicker.min.js",
+    "owl.carousel.js",
+    "jquery.bez.min.js",
+    "TweenMax.min.js",
+    "ScrollMagic.min.js",
+    "lottie.min.js",
+    "gsap.min.js",
+    "ScrollTrigger.min.js",
+    "wow.js",
+    "metaview.js",
+    "all.js"
+  ]
+}

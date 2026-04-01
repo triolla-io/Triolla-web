@@ -1,0 +1,12 @@
+{
+  "root": "/Users/ariell/html-to-react/web/public/assets",
+  "scope": "css_only",
+  "note": "Real files only; identical CSS in page dirs is stored as symlinks to _shared/.",
+  "scanned_real_css_files": 24,
+  "css_symlinks_elsewhere": 2732,
+  "unique_content_hashes": 24,
+  "duplicate_groups_among_real_files": 0,
+  "total_wasted_bytes": 0,
+  "total_wasted_mb": 0,
+  "groups": []
+}
