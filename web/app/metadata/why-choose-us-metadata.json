@@ -1,0 +1,297 @@
+{
+  "slug": "why-choose-us",
+  "title_en": "Why Choose Us",
+  "title_he": "למה לבחור בנו",
+  "description_en": "Dynamic 'Why Choose Us' section with customizable content and rectangle sizes",
+  "description_he": "סעיף דינמי 'למה לבחור בנו' עם תוכן ניתן להתאמה וגדלי מלבנים",
+  "og_type": "website",
+  "section": "main",
+  "pages": {
+    "agritech": {
+      "heading_en": "Why Do Agritech Companies Choose Us?",
+      "heading_he": "למה חברות אגריטק בוחרות בנו?",
+      "items_en": [
+        {
+          "title": "We speak your language",
+          "description": "Fluent in the terms, flows, and mindset of agritech users"
+        },
+        {
+          "title": "Battle-tested experience",
+          "description": "Over 50 Apps & SaaS platforms designed for top-tier agritech companies"
+        },
+        {
+          "title": "Up to speed from day one",
+          "description": "We get your world, so we get to work—fast."
+        },
+        {
+          "title": "Security-first thinking",
+          "description": "Our UX is built with your users, risks, and compliance in mind."
+        }
+      ]
+    },
+    "cyber-security": {
+      "heading_en": "Why Do Cybersecurity Companies Choose Us?",
+      "heading_he": "למה חברות אבטחת סייבר בוחרות בנו?",
+      "items_en": [
+        {
+          "title": "We speak your language",
+          "description": "Fluent in the terms, flows, and mindset of cybersecurity professionals"
+        },
+        {
+          "title": "Battle-tested experience",
+          "description": "50+ cybersecurity platforms & SaaS solutions designed for enterprise"
+        },
+        {
+          "title": "Up to speed from day one",
+          "description": "We understand your threat landscape—we get to work immediately."
+        },
+        {
+          "title": "Security-first thinking",
+          "description": "Our UX is built with compliance, risk management, and user safety in mind."
+        }
+      ]
+    },
+    "fintech-finance": {
+      "heading_en": "Why Do Fintech Companies Choose Us?",
+      "heading_he": "למה חברות פינטק בוחרות בנו?",
+      "items_en": [
+        {
+          "title": "We speak your language",
+          "description": "Fluent in financial systems, regulations, and user behavior in fintech"
+        },
+        {
+          "title": "Battle-tested experience",
+          "description": "Designed 50+ fintech and banking solutions with regulatory compliance"
+        },
+        {
+          "title": "Up to speed from day one",
+          "description": "We understand your market—quick deployment, zero learning curve."
+        },
+        {
+          "title": "Security-first thinking",
+          "description": "Enterprise-grade UX with compliance, fraud prevention, and trust built-in."
+        }
+      ]
+    },
+    "b2b": {
+      "heading_en": "Why Do B2B Companies Choose Us?",
+      "heading_he": "למה חברות B2B בוחרות בנו?",
+      "items_en": [
+        {
+          "title": "We speak your language",
+          "description": "Deep understanding of B2B workflows, enterprise needs, and user expectations"
+        },
+        {
+          "title": "Battle-tested experience",
+          "description": "50+ B2B platforms designed for Fortune 500 and emerging companies"
+        },
+        {
+          "title": "Up to speed from day one",
+          "description": "We get your business model—accelerated discovery and delivery."
+        },
+        {
+          "title": "Security-first thinking",
+          "description": "Enterprise-ready UX with data security, compliance, and scalability."
+        }
+      ]
+    },
+    "b2c": {
+      "heading_en": "Why Do B2C Companies Choose Us?",
+      "heading_he": "למה חברות B2C בוחרות בנו?",
+      "items_en": [
+        {
+          "title": "We speak your language",
+          "description": "Expertise in consumer behavior, engagement, and conversion optimization"
+        },
+        {
+          "title": "Battle-tested experience",
+          "description": "50+ B2C platforms with millions of active users worldwide"
+        },
+        {
+          "title": "Up to speed from day one",
+          "description": "We understand your customer—faster to market, faster to growth."
+        },
+        {
+          "title": "Security-first thinking",
+          "description": "Consumer trust and data privacy built into every interaction."
+        }
+      ]
+    },
+    "mobile-apps": {
+      "heading_en": "Why Do App Companies Choose Us?",
+      "heading_he": "למה חברות אפליקציות בוחרות בנו?",
+      "items_en": [
+        {
+          "title": "We speak your language",
+          "description": "Mobile-first design expertise with deep iOS and Android knowledge"
+        },
+        {
+          "title": "Battle-tested experience",
+          "description": "50+ mobile apps with millions of downloads and 4.5+ star ratings"
+        },
+        {
+          "title": "Up to speed from day one",
+          "description": "We build for mobile—faster iterations, better app store results."
+        },
+        {
+          "title": "Security-first thinking",
+          "description": "Platform-native security, privacy compliance, and user trust."
+        }
+      ]
+    },
+    "device-iot": {
+      "heading_en": "Why Do IoT Companies Choose Us?",
+      "heading_he": "למה חברות IoT בוחרות בנו?",
+      "items_en": [
+        {
+          "title": "We speak your language",
+          "description": "Fluent in IoT ecosystems, connected devices, and real-time data flows"
+        },
+        {
+          "title": "Battle-tested experience",
+          "description": "50+ IoT platforms controlling millions of connected devices globally"
+        },
+        {
+          "title": "Up to speed from day one",
+          "description": "We understand device constraints—optimized, lightweight, fast."
+        },
+        {
+          "title": "Security-first thinking",
+          "description": "Hardware security, encryption, and secure device communication built-in."
+        }
+      ]
+    },
+    "saas-platforms": {
+      "heading_en": "Why Do SaaS Companies Choose Us?",
+      "heading_he": "למה חברות SaaS בוחרות בנו?",
+      "items_en": [
+        {
+          "title": "We speak your language",
+          "description": "Expert in SaaS models, user onboarding, and retention optimization"
+        },
+        {
+          "title": "Battle-tested experience",
+          "description": "50+ SaaS platforms with 99.9% uptime and enterprise adoption"
+        },
+        {
+          "title": "Up to speed from day one",
+          "description": "We know SaaS—user activation, expansion revenue, lower churn."
+        },
+        {
+          "title": "Security-first thinking",
+          "description": "Enterprise SSO, role-based access, audit logs, and compliance ready."
+        }
+      ]
+    },
+    "startups-tech": {
+      "heading_en": "Why Do Tech Startups Choose Us?",
+      "heading_he": "למה סטארטאפים טק בוחרים בנו?",
+      "items_en": [
+        {
+          "title": "We speak your language",
+          "description": "Understands startup velocity, MVP validation, and rapid pivots"
+        },
+        {
+          "title": "Battle-tested experience",
+          "description": "Worked with 50+ startups from seed stage to Series C and beyond"
+        },
+        {
+          "title": "Up to speed from day one",
+          "description": "Agile process, flexible scope, product thinking aligned with you."
+        },
+        {
+          "title": "Security-first thinking",
+          "description": "Future-proof architecture, user trust, and investor confidence."
+        }
+      ]
+    },
+    "gaming": {
+      "heading_en": "Why Do Game Studios Choose Us?",
+      "heading_he": "למה סטודיוי משחקים בוחרים בנו?",
+      "items_en": [
+        {
+          "title": "We speak your language",
+          "description": "Deep expertise in game UX, player psychology, and engagement loops"
+        },
+        {
+          "title": "Battle-tested experience",
+          "description": "50+ games and gaming platforms with millions of daily active players"
+        },
+        {
+          "title": "Up to speed from day one",
+          "description": "We understand game design—faster iterations, better metrics."
+        },
+        {
+          "title": "Security-first thinking",
+          "description": "Anti-cheat systems, account security, and player data protection."
+        }
+      ]
+    },
+    "medical-healthcare": {
+      "heading_en": "Why Do Healthcare Companies Choose Us?",
+      "heading_he": "למה חברות בריאות בוחרות בנו?",
+      "items_en": [
+        {
+          "title": "We speak your language",
+          "description": "Fluent in healthcare compliance, patient privacy, and medical workflows"
+        },
+        {
+          "title": "Battle-tested experience",
+          "description": "50+ healthcare platforms HIPAA-compliant and serving millions of patients"
+        },
+        {
+          "title": "Up to speed from day one",
+          "description": "We understand healthcare—regulatory expertise, zero shortcuts."
+        },
+        {
+          "title": "Security-first thinking",
+          "description": "HIPAA, data encryption, audit logs, and patient trust guaranteed."
+        }
+      ]
+    },
+    "dev": {
+      "heading_en": "Why Do Dev Companies Choose Us?",
+      "heading_he": "למה חברות פיתוח בוחרות בנו?",
+      "items_en": [
+        {
+          "title": "We speak your language",
+          "description": "Expert in developer tools, APIs, and technical product design"
+        },
+        {
+          "title": "Battle-tested experience",
+          "description": "50+ developer platforms used by 100K+ engineers worldwide"
+        },
+        {
+          "title": "Up to speed from day one",
+          "description": "We build for developers—documentation, DX, and API-first design."
+        },
+        {
+          "title": "Security-first thinking",
+          "description": "Authentication, authorization, secret management, and security audits."
+        }
+      ]
+    },
+    "portfolio-page": {
+      "heading_en": "Why Choose Triolla?",
+      "heading_he": "למה לבחור בטריולה?",
+      "items_en": [
+        {
+          "title": "We speak your language",
+          "description": "Deep industry expertise across 12+ sectors"
+        },
+        {
+          "title": "Battle-tested experience",
+          "description": "50+ successfully delivered projects with measurable impact"
+        },
+        {
+          "title": "Up to speed from day one",
+          "description": "Your challenges are our expertise—fast discovery to deployment."
+        },
+        {
+          "title": "Security-first thinking",
+          "description": "Every product is built with users, compliance, and trust in mind."
+        }
+      ]
+    }
+  }
+}

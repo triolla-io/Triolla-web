@@ -1,0 +1,16 @@
+{
+  "assetBase": "/assets/blog-enhancing-customer-satisfaction-through-positive-user-experience-and-user-delight",
+  "bodyClass": "wp-singular post-template-default single single-post postid-791 single-format-standard wp-theme-triolla",
+  "dataRsssl": "1",
+  "css": [
+    "cms-navigation-base.css_7976b2e5.css"
+  ],
+  "js": [
+    "jquery-3.6.0.min.js_edabec9e.js",
+    "jquery.jConveyorTicker.min.js_edabec9e.js",
+    "TweenMax.min.js_edabec9e.js",
+    "metaview.js_edabec9e.js",
+    "wow.js_edabec9e.js",
+    "hooks.min.js_4fddbd9c.js"
+  ]
+}

@@ -23,6 +23,7 @@
 # Stray duplicate paths at repo root (real app is web/app, web/public)
 /app/
 /public/
+/.git_web_backup/
 
 # macOS
 .DS_Store
