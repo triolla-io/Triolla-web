@@ -13,8 +13,32 @@
   }
 }
 
-/* Pill navigation: RTL hover animation */
-[dir="rtl"] .pill-btn:hover .btn-overlay {
-  /* RTL: flip transform-origin for Hebrew - sweep from right to left */
+/* Pill navigation buttons: Individual hover animations for EN and HE */
+
+/* Primary Contact pill button — RTL hover animation correction */
+.site-header .header_contact a:hover .btn-overlay {
+  transform-origin: left;
+}
+
+[dir="rtl"] .site-header .header_contact a:hover .btn-overlay {
   transform-origin: right;
 }
+
+/* Book/CTA pill button — RTL hover animation correction */
+.site-header .header_book a:hover .btn-overlay {
+  transform-origin: left;
+}
+
+[dir="rtl"] .site-header .header_book a:hover .btn-overlay {
+  transform-origin: right;
+}
+
+/* Generic pill button fallback */
+.pill-btn:hover .btn-overlay {
+  transform-origin: left;
+}
+
+[dir="rtl"] .pill-btn:hover .btn-overlay {
+  transform-origin: right;
+}
+
