@@ -1,1 +1,6 @@
-../_shared/f3606e4db5e156a1b086bcfeb3b2d9b4_language-cookie.js_7ad8765f.js
+document.addEventListener('DOMContentLoaded', function() {
+	for(var cookieName in wpml_cookies) {
+		var cookieData = wpml_cookies[cookieName];
+		document.cookie = cookieName + '=' + cookieData.value + ';expires=' + cookieData.expires + '; path=' + cookieData.path + '; SameSite=Lax';
+	}
+});
