@@ -4,6 +4,8 @@ import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { initTriollaConveyorTicker } from "./initTriollaConveyorTicker";
 import { ensurePortfolioFaqWrapShown, mountTriollaFaqAccordion } from "./mountTriollaFaqAccordion";
 import { rewriteTriollaNavLinks } from "./rewriteTriollaNavLinks";
+import { mountTriollaMobileMenu } from "./mountTriollaMobileMenu";
+import { normalizeHeaderAssetUrls } from "./normalizeHeaderAssetUrls";
 import { installSnapshotPluginStubs } from "./snapshotPluginStubs";
 import { loadScript, loadStylesheet, waitForSnapshotFonts } from "./snapshotLoader";
 import { snapshotAssetUrl } from "./snapshotAssetUrl";
@@ -32,6 +34,8 @@ export type TriollaPortfolioSnapshotClientProps = {
   landingSlug: string;
   /** public/assets/<dir> */
   assetDir: string;
+  /** If set, injects snapshot chrome header (en or he) before rendering content */
+  lang?: "en" | "he";
   /**
    * Runs after snapshot CSS/JS are loaded and synthetic `DOMContentLoaded` / `load` fire.
    * Return a disposer to run on unmount / before the next load (e.g. kill GSAP context).
@@ -45,6 +49,7 @@ export function TriollaPortfolioSnapshotClient({
   pageLabel,
   landingSlug,
   assetDir,
+  lang,
   afterScripts,
 }: TriollaPortfolioSnapshotClientProps) {
   const rootRef = useRef<HTMLDivElement>(null);
@@ -98,6 +103,40 @@ export function TriollaPortfolioSnapshotClient({
         }
         if (!el) throw new Error("snapshot root not mounted");
         el.innerHTML = html;
+
+        if (lang) {
+          el.querySelector("[data-triolla-portfolio-chrome]")?.remove();
+          const isHeNav = !!el.querySelector(".menu-header-menu-he-container");
+          if (!isHeNav) {
+            el.querySelector(".headerticker")?.remove();
+            el.querySelector(".header.headnewact")?.remove();
+          }
+          if (!el.querySelector(".header.headnewact")) {
+            const chromeUrl =
+              lang === "he"
+                ? "/fragments/_portfolio-site-chrome-he.html"
+                : "/fragments/_portfolio-site-chrome-en.html";
+            try {
+              const chromeRes = await fetch(chromeUrl, { signal: ac.signal });
+              if (chromeRes.ok) {
+                let chromeHtml = await chromeRes.text();
+                chromeHtml = chromeHtml
+                  .split("%%ASSET_BASE%%")
+                  .join(assetBase.replace(/\/$/, ""));
+                chromeHtml = normalizeHeaderAssetUrls(chromeHtml);
+                chromeHtml = `<div data-triolla-portfolio-chrome="1" style="display:contents">${chromeHtml.trim()}</div>`;
+                const holder = document.createElement("div");
+                holder.innerHTML = chromeHtml;
+                while (holder.firstChild) {
+                  el.insertBefore(holder.firstChild, el.firstChild);
+                }
+              }
+            } catch (err) {
+              console.warn(`Failed to inject chrome for lang=${lang}`, err);
+            }
+          }
+        }
+
         ensurePortfolioFaqWrapShown(el);
         rewriteTriollaNavLinks(el);
         await waitForSnapshotFonts();
@@ -137,6 +176,11 @@ export function TriollaPortfolioSnapshotClient({
         disposeHeaderPillRef.current = mountTriollaHeaderPill(el);
         disposeFaqRef.current?.();
         disposeFaqRef.current = mountTriollaFaqAccordion(el);
+
+        if (lang) {
+          mountTriollaMobileMenu(el);
+        }
+
         setPhase("ready");
       } catch (e) {
         if (cancelled) return;
@@ -166,6 +210,7 @@ export function TriollaPortfolioSnapshotClient({
     jsKey,
     pathEncoding,
     fragmentUrl,
+    lang,
     historyRestoreKey,
   ]);
 

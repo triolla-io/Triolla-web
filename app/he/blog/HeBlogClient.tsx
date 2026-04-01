@@ -1,7 +1,6 @@
 "use client";
 
 import { useCallback } from "react";
-import { HebrewNavigation } from "@/components/HebrewNavigation";
 import { TriollaPortfolioSnapshotClient } from "../../lib/TriollaPortfolioSnapshotClient";
 import type { TriollaPortfolioSnapshotDeps } from "../../lib/TriollaPortfolioSnapshotClient";
 import { mountTriollaBlogLoadMore } from "../../lib/mountTriollaBlogLoadMore";
@@ -17,16 +16,14 @@ export function HeBlogClient() {
   const afterScripts = useCallback((root: HTMLElement) => mountTriollaBlogLoadMore(root), []);
 
   return (
-    <>
-      <HebrewNavigation />
-      <TriollaPortfolioSnapshotClient
-        fragmentUrl="/fragments/blog-body.html"
-        deps={heBlogFallbackDeps}
-        pageLabel="בלוג"
-        landingSlug="triolla-io-blog"
-        assetDir="blog"
-        afterScripts={afterScripts}
-      />
-    </>
+    <TriollaPortfolioSnapshotClient
+      fragmentUrl="/fragments/blog-body.html"
+      deps={heBlogFallbackDeps}
+      pageLabel="בלוג"
+      landingSlug="triolla-io-blog"
+      assetDir="blog"
+      lang="he"
+      afterScripts={afterScripts}
+    />
   );
 }

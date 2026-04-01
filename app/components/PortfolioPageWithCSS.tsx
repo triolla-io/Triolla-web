@@ -8,6 +8,7 @@ import { mountTriollaFaqAccordion } from "../lib/mountTriollaFaqAccordion";
 import { mountTriollaFooterAccordion } from "../lib/mountTriollaFooterAccordion";
 import { rewriteTriollaNavLinks } from "../lib/rewriteTriollaNavLinks";
 import { mountTriollaMobileMenu } from "../lib/mountTriollaMobileMenu";
+import { normalizeHeaderAssetUrls } from "../lib/normalizeHeaderAssetUrls";
 import {
   injectSharedFaq,
   injectSharedFooter,
@@ -36,20 +37,6 @@ interface Deps {
 function normalizeAssetBase(assetBase: string): string {
   const trimmed = assetBase.replace(/\/$/, "");
   return trimmed.replace(/^\/_assets\//, "/assets/");
-}
-
-function normalizeInjectedHeaderAssetUrls(html: string): string {
-  return html
-    .replaceAll(
-      "https://triolla.io/wp-content/themes/triolla/images/hamburger.svg",
-      "/images/hamburger.svg",
-    )
-    .replaceAll(
-      "https://triolla.io/wp-content/themes/triolla/images/hamburger_white.svg",
-      "/images/hamburger_white.svg",
-    )
-    .replace(/\/assets\/[^"'\s]+\/hamburger\.svg/gi, "/images/hamburger.svg")
-    .replace(/\/assets\/[^"'\s]+\/hamburger_white\.svg/gi, "/images/hamburger_white.svg");
 }
 
 function installTriollaPortfolioWindowStubs(): void {
@@ -137,7 +124,7 @@ export function PortfolioPageWithCSS({
             chromeHtml = chromeHtml
               .split("%%ASSET_BASE%%")
               .join(assetBaseNorm);
-            chromeHtml = normalizeInjectedHeaderAssetUrls(chromeHtml);
+            chromeHtml = normalizeHeaderAssetUrls(chromeHtml);
             chromeHtml = `<div data-triolla-portfolio-chrome="1" style="display:contents">${chromeHtml.trim()}</div>`;
             const holder = document.createElement("div");
             holder.innerHTML = chromeHtml;

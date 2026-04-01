@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { HebrewNavigation } from "@/components/HebrewNavigation";
 import { BlogPostClient } from "../../../lib/BlogPostClient";
 import {
   BLOG_SLUG_SEGMENT,
@@ -45,16 +44,14 @@ export default async function HeBlogPostPage({
   const heDeps = loadHeBlogDeps(slug);
   if (heDeps && hebrewBlogFragmentExists(slug)) {
     return (
-      <>
-        <HebrewNavigation />
-        <TriollaPortfolioSnapshotClient
-          fragmentUrl={`/fragments/he-blog-${slug}-he-body.html`}
-          deps={heDeps}
-          pageLabel={slug}
-          landingSlug={`triolla-io-he-blog-${slug}`}
-          assetDir={`he-blog-${slug}-he`}
-        />
-      </>
+      <TriollaPortfolioSnapshotClient
+        fragmentUrl={`/fragments/he-blog-${slug}-he-body.html`}
+        deps={heDeps}
+        pageLabel={slug}
+        landingSlug={`triolla-io-he-blog-${slug}`}
+        assetDir={`he-blog-${slug}-he`}
+        lang="he"
+      />
     );
   }
 
