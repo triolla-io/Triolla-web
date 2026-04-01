@@ -65,8 +65,6 @@ export function HomeClient() {
             console.error(`Failed to load CSS: ${file}`, err);
           }
         }
-        // Load local overrides after snapshot CSS so mobile header rules win.
-        await loadStylesheet("/home-header-overrides.css");
 
         const res = await fetch(fragmentUrl);
         if (!res.ok) throw new Error("fragment fetch failed");

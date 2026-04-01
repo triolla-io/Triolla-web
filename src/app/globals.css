@@ -420,9 +420,7 @@ body {
 
 /* Book a Call */
 .header_book {
-  max-width: 180px;
-  overflow: hidden;
-  transition: max-width 0.5s ease, opacity 0.5s ease;
+  transition: opacity 0.5s ease;
 }
 .header_book a {
   display: flex;
@@ -443,7 +441,6 @@ body {
 }
 .header_book a:hover { background: #005ee0; border-color: #006BFF; }
 .is-sticky .header_book {
-  max-width: 0;
   opacity: 0;
 }
 
@@ -718,7 +715,7 @@ body {
   }
 }
 @media (max-width: 1023px) {
-  .menutoggle {
+  .site-header .menutoggle {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -745,18 +742,16 @@ body {
     height: 24px;
   }
   /* Snapshot header logo (`img.logoimg`) should stay black on mobile even if theme CSS overrides filters. */
-  .logo img.logoimg,
-  img.logoimg,
-  img.logoimg[src*="logo_new.png"] {
+  .site-header .logo img.logoimg,
+  .site-header img.logoimg,
+  .site-header img.logoimg[src*="logo_new.png"] {
     -webkit-filter: invert(1) brightness(0) !important;
     filter: invert(1) brightness(0) !important;
     content: url("/images/logo-black.svg") !important;
   }
-  .menutoggle.is-he { color: #000; }
-  .header_menu { display: none; }
-  .header_right .header_whatsapp,
-  .header_right .header_book { display: none; }
-  .header_contact a {
+  .site-header .menutoggle.is-he { color: #000; }
+  .site-header .header_menu { display: none; }
+  .site-header .header_contact a {
     padding: 0 12px;
     font-size: 15px;
     height: 42px;
@@ -786,16 +781,16 @@ body {
   .site-header.is-sticky { top: 0; width: 100%; }
   .site-header.ticker-visible.is-sticky { top: 46px; }
   /* Contact Us: yellow pill + dark outline (readable on yellow header bar) */
-  .header_contact a {
+  .site-header .header_contact a {
     background: #fed125;
     border: 1px solid #000;
     height: 38px;
     font-size: 14px;
     padding: 0 12px;
   }
-  .header_contact a .header-contact-base { color: #000; }
+  .site-header .header_contact a .header-contact-base { color: #000; }
   /* Hamburger: dark icon on yellow background */
-  .menutoggle { color: #000; }
+  .site-header .menutoggle { color: #000; }
   /* Technology page — transparent header on mobile so hero bg shows through */
   .page-technology .site-header {
     background: transparent;
@@ -814,8 +809,8 @@ body {
   }
   .page-technology .header_contact a .header-contact-base { color: #fff; }
   /* Hebrew mobile pages keep Triolla hamburger icon black across templates. */
-  [dir="rtl"] .menutoggle,
-  .menutoggle.is-he { color: #000; }
+  [dir="rtl"] .site-header .menutoggle,
+  .site-header .menutoggle.is-he { color: #000; }
 }
 
 /* ============================================================
