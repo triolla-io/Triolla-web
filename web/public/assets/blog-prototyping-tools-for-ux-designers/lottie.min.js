@@ -1,1 +1,0 @@
-/Users/ariell/html-to-react/web/public/assets/_shared/55bf86203909151984bef8cbe4739d64_lottie.min.js

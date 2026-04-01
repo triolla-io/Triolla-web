@@ -4,6 +4,7 @@
 /.pipeline-logs/
 /.team/
 /pipeline/
+/web/
 /.git_web_backup/
 
 # Planning docs

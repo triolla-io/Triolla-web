@@ -1,1 +1,0 @@
-/Users/ariell/html-to-react/web/public/assets/_shared/9f0592f8748a65b0c765a9dc16e8965f_ScrollTrigger.min.js
