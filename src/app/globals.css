@@ -739,6 +739,13 @@ body {
   }
 }
 @media (max-width: 1023px) {
+  /*
+   * RTL: flex places the first item on the inline-start (right). Triolla mobile HE keeps the same
+   * visual order as EN (logo left, contact + hamburger right); mirror snapshot `.header_in` rule.
+   */
+  [dir="rtl"] .site-header .header_in {
+    flex-direction: row-reverse;
+  }
   .site-header .menutoggle {
     display: inline-flex;
     align-items: center;
