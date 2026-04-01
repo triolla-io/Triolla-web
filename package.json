@@ -7,7 +7,7 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "node app/scripts/materialize-consolidated-symlinks.js && next build",
     "build:clean": "rm -rf .next && next build",
     "start": "next start",
     "lint": "eslint",
