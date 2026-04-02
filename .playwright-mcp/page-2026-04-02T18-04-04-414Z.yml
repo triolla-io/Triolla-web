@@ -1,0 +1,459 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e13]:
+    - generic [ref=e14]:
+      - generic [ref=e15]:
+        - link [ref=e16] [cursor=pointer]:
+          - /url: javascript:void(0);
+        - list [ref=e17]:
+          - listitem [ref=e18]:
+            - text: Pitangoux is now Triolla –
+            - text: We’ve rebranded! Hello and welcome!
+      - generic [ref=e21]:
+        - link "Triolla Formally Pitangoux" [ref=e23] [cursor=pointer]:
+          - /url: /
+          - img "Triolla" [ref=e24]
+          - text: Formally Pitangoux
+        - list [ref=e27]:
+          - listitem [ref=e28]:
+            - link "Portfolio" [ref=e29] [cursor=pointer]:
+              - /url: /portfolio-page
+            - list:
+              - listitem:
+                - list:
+                  - listitem:
+                    - link "Cybersecurity":
+                      - /url: /cyber-security
+                  - listitem:
+                    - link "Digital Health":
+                      - /url: /medical-healthcare
+                  - listitem:
+                    - link "Fintech & Finance":
+                      - /url: /fintech-finance
+                  - listitem:
+                    - link "Gaming":
+                      - /url: /gaming
+                  - listitem:
+                    - link "Agritech":
+                      - /url: /agritech
+                  - listitem:
+                    - link "B2C":
+                      - /url: /b2c
+              - listitem:
+                - list:
+                  - listitem:
+                    - link "Devices & IoT":
+                      - /url: /device-iot
+                  - listitem:
+                    - link "Startups & Tech":
+                      - /url: /startups-tech
+                  - listitem:
+                    - link "Mobile Apps":
+                      - /url: /mobile-apps
+                  - listitem:
+                    - link "SaaS Platforms":
+                      - /url: /saas-platforms
+                  - listitem:
+                    - link "B2B":
+                      - /url: /b2b
+                  - listitem:
+                    - link "Dev":
+                      - /url: /dev
+          - listitem [ref=e30]:
+            - link "Services" [ref=e31] [cursor=pointer]:
+              - /url: /services
+          - listitem [ref=e32]:
+            - link "Technology" [ref=e33] [cursor=pointer]:
+              - /url: /technology
+          - listitem [ref=e34]:
+            - link "The Company" [ref=e35] [cursor=pointer]:
+              - /url: /about-us
+        - generic [ref=e36]:
+          - link "Contact Us" [ref=e38] [cursor=pointer]:
+            - /url: /contact-us
+            - generic [ref=e39]: Contact Us
+          - link [ref=e41] [cursor=pointer]:
+            - /url: https://api.whatsapp.com/send/?phone=+972525956644&text=שלום, הייתי רוצה לשמוע עוד פרטים... &app_absent=0
+            - img [ref=e42]
+          - link "Book a Call" [ref=e47] [cursor=pointer]:
+            - /url: https://calendly.com/triolla/pitangoux-introductory-meeting-clone
+            - generic [ref=e48]:
+              - img [ref=e49]
+              - text: Book a Call
+      - generic [ref=e51]:
+        - generic [ref=e56]:
+          - heading "Creative Design Attracts People. Smart UX Makes Them Stay" [level=1] [ref=e57]
+          - heading "Product Design for Tech, Gaming, Medical, Cyber, IoT, Agritech, Mobile, SaaS Platforms & Startups" [level=2] [ref=e58]
+        - generic [ref=e80]:
+          - generic [ref=e81]:
+            - heading "Why startups and global high-tech partner with us..." [level=3] [ref=e82]:
+              - text: Why startups
+              - text: and global high-tech partner with us...
+            - paragraph [ref=e83]: "Thanks to our exceptionally talented & experienced product designers, we provide customized UX/UI and product design services to most industries: Fintech, Cyber, Medical, Agro & Gaming."
+          - list [ref=e85]:
+            - listitem [ref=e86]:
+              - generic [ref=e91]:
+                - heading "Design a new product" [level=5] [ref=e92]:
+                  - text: Design a
+                  - text: new product
+                - paragraph [ref=e93]:
+                  - text: Design and develop an
+                  - text: industry-leading product
+            - listitem [ref=e94]:
+              - generic [ref=e99]:
+                - heading "Improve an existing product" [level=5] [ref=e100]
+                - paragraph [ref=e101]: Upgrade and redesign your product to become a category leader
+            - listitem [ref=e102]:
+              - generic [ref=e107]:
+                - heading "First Steps for Start-ups" [level=5] [ref=e108]
+                - paragraph [ref=e109]:
+                  - text: Take your vision from
+                  - text: concept to launch
+            - listitem [ref=e110]:
+              - generic [ref=e115]:
+                - heading "Product consulting" [level=5] [ref=e116]
+                - paragraph [ref=e117]:
+                  - text: Accelerate your strategic
+                  - text: planning process
+          - link "Partner with us" [ref=e119] [cursor=pointer]:
+            - /url: /contact-us
+            - generic [ref=e120]: Partner with us
+        - generic [ref=e122]:
+          - heading "Global winners in Product UX/UI Design 2025" [level=3] [ref=e123]
+          - generic [ref=e124]: Triolla has stood out among the industry’s biggest players
+          - generic [ref=e125]:
+            - generic [ref=e126]:
+              - img [ref=e128]
+              - generic [ref=e129]:
+                - text: "#1"
+                - text: Health &
+                - text: Medical UX/UI
+            - generic [ref=e130]:
+              - img [ref=e132]
+              - generic [ref=e133]:
+                - text: "#1"
+                - text: Cyber Security
+                - text: UX/UI
+            - generic [ref=e134]:
+              - img [ref=e136]
+              - generic [ref=e137]:
+                - text: "#2"
+                - text: Fintech
+                - text: UX/UI
+        - generic [ref=e165]:
+          - heading "Our Clients" [level=2] [ref=e166]
+          - heading "From small to global, we have partnered with some great companies" [level=3] [ref=e167]
+          - link "Let's Talk" [ref=e169] [cursor=pointer]:
+            - /url: "#contactus"
+            - generic [ref=e170]: Let's Talk
+        - generic [ref=e172]:
+          - generic [ref=e173]:
+            - heading "Our unique Design Process" [level=3] [ref=e174]:
+              - text: Our unique
+              - text: Design Process
+            - paragraph [ref=e175]: Our unique design process blends deep user insight with creative strategy to craft digital experiences that truly stand out.
+          - list [ref=e178]:
+            - listitem [ref=e179]:
+              - paragraph [ref=e181]:
+                - text: Kickoff
+                - text: Meeting
+            - listitem [ref=e182]:
+              - paragraph [ref=e184]:
+                - text: Research &
+                - text: Competitive
+                - text: analysis
+            - listitem [ref=e185]:
+              - paragraph [ref=e187]:
+                - text: User
+                - text: interviews
+            - listitem [ref=e188]:
+              - paragraph [ref=e190]:
+                - text: Brainstorming
+                - text: Ideate phase
+                - text: Build use case
+                - text: + Flow
+            - listitem [ref=e191]:
+              - paragraph [ref=e193]:
+                - text: Detailed
+                - text: Wireframes
+            - listitem [ref=e194]:
+              - paragraph [ref=e196]:
+                - text: User
+                - text: Testing
+            - listitem [ref=e197]:
+              - paragraph [ref=e199]:
+                - text: Concepts
+                - text: Design
+            - listitem [ref=e200]:
+              - paragraph [ref=e202]:
+                - text: Detailed
+                - text: Design
+        - generic [ref=e205]:
+          - heading "People Asked us" [level=3] [ref=e206]
+          - paragraph [ref=e207]: We’ve gathered some common Q&A to make things easier and save you time
+        - generic [ref=e219]:
+          - generic [ref=e220]:
+            - heading "Wanna Chat? Get In Touch" [level=3] [ref=e221]
+            - generic [ref=e222]:
+              - heading "Give us a call:" [level=4] [ref=e223]
+              - paragraph [ref=e224]:
+                - text: TLV
+                - link "+972-73-744-3322" [ref=e225] [cursor=pointer]:
+                  - /url: tel:+972-73-744-3322
+              - paragraph [ref=e226]:
+                - text: NY & SF
+                - link "+1408-627-7350" [ref=e227] [cursor=pointer]:
+                  - /url: tel:+1408-627-7350
+            - generic [ref=e228]:
+              - heading "Mail:" [level=4] [ref=e229]
+              - paragraph [ref=e230]:
+                - link "[email protected]" [ref=e231] [cursor=pointer]:
+                  - /url: /cdn-cgi/l/email-protection#793f0c17390d0b1016151518571016
+              - paragraph [ref=e232]:
+                - strong [ref=e233]: "HQ Address:"
+                - text: Zarchin St. 2, Ranana
+            - generic [ref=e234]:
+              - heading "Trusted by 1000+ companies:" [level=5] [ref=e235]
+              - list [ref=e236]:
+                - listitem [ref=e237]
+                - listitem [ref=e240]
+                - listitem [ref=e243]
+                - listitem [ref=e246]
+          - generic [ref=e249]:
+            - heading "Schedule a Free Consultation" [level=4] [ref=e250]:
+              - text: Schedule a
+              - text: Free Consultation
+            - generic [ref=e252]:
+              - generic:
+                - paragraph
+              - generic [ref=e253]:
+                - generic [ref=e255]:
+                  - textbox "Full Name(Required)" [ref=e258]:
+                    - /placeholder: Full Name
+                  - textbox "Phone(Required)" [ref=e261]:
+                    - /placeholder: Phone
+                  - textbox "Email(Required)" [ref=e264]:
+                    - /placeholder: Email
+                - button "Let's Go!" [ref=e267]
+    - generic [ref=e270]:
+      - generic [ref=e271]:
+        - generic [ref=e272]: "Mentions:"
+        - list [ref=e274]:
+          - listitem [ref=e275]:
+            - link [ref=e276] [cursor=pointer]:
+              - /url: https://13tv.co.il/item/special/recommended/economy/k2fy3-902776824/
+          - listitem [ref=e278]:
+            - link [ref=e279] [cursor=pointer]:
+              - /url: https://www.bizportal.co.il/BizTech/news/article/20015580
+          - listitem [ref=e281]:
+            - link [ref=e282] [cursor=pointer]:
+              - /url: https://www.themarker.com/labels/2021-04-05/ty-article-labels/0000017f-f88a-d044-adff-fbfb48ad0000
+          - listitem [ref=e284]:
+            - link [ref=e285] [cursor=pointer]:
+              - /url: https://www.globes.co.il/news/article.aspx?did=1001450720
+          - listitem [ref=e287]:
+            - link [ref=e288] [cursor=pointer]:
+              - /url: https://www.pc.co.il/featured/420350/
+          - listitem [ref=e290]:
+            - link [ref=e291] [cursor=pointer]:
+              - /url: https://www.mako.co.il/special-articles/Article-c2a83bbe7224d71026.htm
+      - generic [ref=e294]:
+        - generic [ref=e295]:
+          - generic [ref=e296]:
+            - heading "Product Design" [level=3] [ref=e297]
+            - list [ref=e300]:
+              - listitem [ref=e301]:
+                - link "Product UX & UI Design" [ref=e302] [cursor=pointer]:
+                  - /url: /services/product-ux-ui-design
+              - listitem [ref=e303]:
+                - link "UX Research" [ref=e304] [cursor=pointer]:
+                  - /url: /services/ux-research
+              - listitem [ref=e305]:
+                - link "Prototype" [ref=e306] [cursor=pointer]:
+                  - /url: /services/prototyping
+              - listitem [ref=e307]:
+                - link "Digital Branding" [ref=e308] [cursor=pointer]:
+                  - /url: /branding-studio
+              - listitem [ref=e309]:
+                - link "Front End Development" [ref=e310] [cursor=pointer]:
+                  - /url: /services/front-end-dev
+          - generic [ref=e311]:
+            - heading "Case studies" [level=3] [ref=e312]
+            - list [ref=e315]:
+              - listitem [ref=e316]:
+                - link "Mobile Apps" [ref=e317] [cursor=pointer]:
+                  - /url: /mobile-apps
+              - listitem [ref=e318]:
+                - link "Fintech & Finance" [ref=e319] [cursor=pointer]:
+                  - /url: /fintech-finance
+              - listitem [ref=e320]:
+                - link "IOT & Devices" [ref=e321] [cursor=pointer]:
+                  - /url: /device-iot
+              - listitem [ref=e322]:
+                - link "SaaS" [ref=e323] [cursor=pointer]:
+                  - /url: /saas-platforms
+              - listitem [ref=e324]:
+                - link "Gaming" [ref=e325] [cursor=pointer]:
+                  - /url: /gaming
+              - listitem [ref=e326]:
+                - link "Medical" [ref=e327] [cursor=pointer]:
+                  - /url: /medical-healthcare
+              - listitem [ref=e328]:
+                - link "Agritech" [ref=e329] [cursor=pointer]:
+                  - /url: /agritech
+          - generic [ref=e330]:
+            - heading "Technology" [level=3] [ref=e331]
+            - list [ref=e334]:
+              - listitem [ref=e335]:
+                - link "Dev & Technology" [ref=e336] [cursor=pointer]:
+                  - /url: /technology
+              - listitem [ref=e337]:
+                - link "Front End" [ref=e338] [cursor=pointer]:
+                  - /url: /services/front-end-dev
+              - listitem [ref=e339]:
+                - link "React.js" [ref=e340] [cursor=pointer]:
+                  - /url: /services/front-end-dev
+              - listitem [ref=e341]:
+                - link "Vue.js" [ref=e342] [cursor=pointer]:
+                  - /url: /services/front-end-dev
+              - listitem [ref=e343]:
+                - link "Back End" [ref=e344] [cursor=pointer]:
+                  - /url: /services/back-end-dev
+              - listitem [ref=e345]:
+                - link "Node. Js" [ref=e346] [cursor=pointer]:
+                  - /url: /services/back-end-dev
+          - generic [ref=e347]:
+            - heading "About" [level=3] [ref=e348]
+            - list [ref=e351]:
+              - listitem [ref=e352]:
+                - link "About us" [ref=e353] [cursor=pointer]:
+                  - /url: /about-us
+              - listitem [ref=e354]:
+                - link "Careers" [ref=e355] [cursor=pointer]:
+                  - /url: /careers
+              - listitem [ref=e356]:
+                - link "Our Services" [ref=e357] [cursor=pointer]:
+                  - /url: /services
+              - listitem [ref=e358]:
+                - link "Talk to us" [ref=e359] [cursor=pointer]:
+                  - /url: /contact-us
+              - listitem [ref=e360]:
+                - link "Press" [ref=e361] [cursor=pointer]:
+                  - /url: https://www.themarker.com/labels/2021-04-05/ty-article-labels/0000017f-f88a-d044-adff-fbfb48ad0000
+              - listitem [ref=e362]:
+                - link "Accessibility Statement" [ref=e363] [cursor=pointer]:
+                  - /url: /accessibility-statement
+          - generic [ref=e364]:
+            - heading "Our Blog" [level=3] [ref=e365]
+            - list [ref=e368]:
+              - listitem [ref=e369]:
+                - link "All Blogs" [ref=e370] [cursor=pointer]:
+                  - /url: /blog
+              - listitem [ref=e371]:
+                - link "Fintech & Finance" [ref=e372] [cursor=pointer]:
+                  - /url: /blog/the-fintech-ux-playbook
+              - listitem [ref=e373]:
+                - link "IOT & Devices" [ref=e374] [cursor=pointer]:
+                  - /url: /blog/designing-intuitive-and-secure-iot-products-for-the-future
+              - listitem [ref=e375]:
+                - link "SaaS" [ref=e376] [cursor=pointer]:
+                  - /url: /blog/the-3-most-common-pain-points-when-hiring-ui-ux-agency-for-a-saas-product
+              - listitem [ref=e377]:
+                - link "Gaming" [ref=e378] [cursor=pointer]:
+                  - /url: /blog/level-up-your-gaming-app-with-triollas-expert-ux-tips-boost-user-engagement-and-retention
+              - listitem [ref=e379]:
+                - link "Medical" [ref=e380] [cursor=pointer]:
+                  - /url: /blog/ux-in-medtech-when-trust-is-a-matter-of-life-and-death
+              - listitem [ref=e381]:
+                - link "Agritech" [ref=e382] [cursor=pointer]:
+                  - /url: /blog/designing-an-engaging-and-effective-agritech-app
+        - generic [ref=e383]:
+          - heading "Social" [level=3] [ref=e384]
+          - list [ref=e385]:
+            - listitem [ref=e386]:
+              - link "Facebook" [ref=e387] [cursor=pointer]:
+                - /url: https://www.facebook.com/triollaofficial
+            - listitem [ref=e388]:
+              - link "Linkedin" [ref=e389] [cursor=pointer]:
+                - /url: https://www.linkedin.com/company/triolla-official/
+            - listitem [ref=e390]:
+              - link "Instargram" [ref=e391] [cursor=pointer]:
+                - /url: https://www.instagram.com/triollaofficial/
+            - listitem [ref=e392]:
+              - link "Tiktok" [ref=e393] [cursor=pointer]:
+                - /url: https://www.tiktok.com/@triolla.io
+            - listitem [ref=e394]:
+              - link "Driblle" [ref=e395] [cursor=pointer]:
+                - /url: https://dribbble.com/Triolla
+            - listitem [ref=e396]:
+              - link "BeHnace" [ref=e397] [cursor=pointer]:
+                - /url: https://www.behance.net/asaf8ac9
+        - generic [ref=e398]:
+          - heading "Talk to us" [level=3] [ref=e399]
+          - generic [ref=e400]:
+            - generic [ref=e401]:
+              - text: "Mail:"
+              - link "[email protected]" [ref=e402] [cursor=pointer]:
+                - /url: /cdn-cgi/l/email-protection#bef8cbd0fecaccd7d1d2d2df90d7d1
+            - generic [ref=e403]:
+              - text: "TLV Offices:"
+              - link "+972-73-744-3322" [ref=e404] [cursor=pointer]:
+                - /url: tel:+972-73-744-3322
+            - generic [ref=e405]:
+              - text: "NY Offices:"
+              - link "+1408-627-7350" [ref=e406] [cursor=pointer]:
+                - /url: tel:+1408-627-7350
+            - link "Book a Call Book a Call" [ref=e408] [cursor=pointer]:
+              - /url: https://calendly.com/triolla/pitangoux-introductory-meeting-clone
+              - generic [ref=e409]:
+                - img [ref=e410]
+                - text: Book a Call
+              - generic [ref=e412]:
+                - img [ref=e413]
+                - text: Book a Call
+      - generic [ref=e415]:
+        - link [ref=e417] [cursor=pointer]:
+          - /url: /
+        - paragraph [ref=e419]:
+          - text: All rights reserved to Triolla LTD |
+          - link "Privacy Policy" [ref=e420] [cursor=pointer]:
+            - /url: /privacy-policy
+          - text: "|"
+          - link "Terms Of Use" [ref=e421] [cursor=pointer]:
+            - /url: /terms-of-use
+        - generic [ref=e422]:
+          - generic [ref=e423]:
+            - img [ref=e424]
+            - list [ref=e427]:
+              - listitem [ref=e428]:
+                - menuitem "Eng" [ref=e429] [cursor=pointer]
+              - listitem [ref=e430]:
+                - menuitem "Switch to Heb" [ref=e431] [cursor=pointer]: Heb
+          - link "Part of" [ref=e433] [cursor=pointer]:
+            - /url: https://www.sqlink.com/
+          - list [ref=e434]:
+            - listitem [ref=e435]:
+              - link [ref=e436] [cursor=pointer]:
+                - /url: https://www.linkedin.com/company/triolla-official/
+                - img [ref=e437]
+            - listitem [ref=e444]:
+              - link [ref=e445] [cursor=pointer]:
+                - /url: https://www.tiktok.com/@triolla.io
+                - img [ref=e446]
+            - listitem [ref=e450]:
+              - link [ref=e451] [cursor=pointer]:
+                - /url: https://www.instagram.com/triollaofficial/
+            - listitem [ref=e452]:
+              - link [ref=e453] [cursor=pointer]:
+                - /url: https://www.facebook.com/triollaofficial
+                - img [ref=e454]
+    - generic [ref=e458]:
+      - text: This site is registered on
+      - link "wpml.org" [ref=e460] [cursor=pointer]:
+        - /url: https://wpml.org
+      - text: as a development site. Switch to a production site key to
+      - link "remove this banner" [ref=e461] [cursor=pointer]:
+        - /url: https://wpml.org/faq/how-to-remove-the-this-site-is-registered-on-wpml-org-as-a-development-site-notice/?utm_source=plugin&utm_medium=gui&utm_campaign=wpml-core&utm_term=footer-notice
+      - text: .
+  - button "Open Next.js Dev Tools" [ref=e8] [cursor=pointer]:
+    - img [ref=e9]
+  - alert [ref=e12]
