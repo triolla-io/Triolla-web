@@ -18,7 +18,8 @@
     "jquery.jConveyorTicker.min.css_edabec9e.css",
     "owl.carousel.css_2af44128.css",
     "mlstyle.css_2af44128.css",
-    "ml-responsive.css_2af44128.css"
+    "ml-responsive.css_2af44128.css",
+    "home-fixes.css"
   ],
   "js": [
     "jquery-3.6.0.min.js_edabec9e.js",

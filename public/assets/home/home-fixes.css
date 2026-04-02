@@ -1,0 +1,19 @@
+/* Fix missing fonts for hero and section titles */
+.homemaintopone h1,
+.homemaintopone h2 {
+  font-family: 'SFProText' !important;
+}
+
+.global_con h3,
+.winners-title {
+  font-family: 'SFProText' !important;
+}
+
+/* Fix broken SVG paths in FAQ section */
+.faqtitle a:after {
+  background-image: url(/assets/home/faq_plus.svg) !important;
+}
+
+.active .faqtitle a:after {
+  background-image: url(/assets/home/faq_minus.svg) !important;
+}
