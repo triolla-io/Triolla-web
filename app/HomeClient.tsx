@@ -96,6 +96,15 @@ export function HomeClient() {
           }
         }
 
+        // Register GSAP ScrollTrigger plugin for parallax effects
+        const gsapWin = window as unknown as {
+          gsap?: { registerPlugin?: (plugin: unknown) => void; to?: (target: unknown, vars: unknown) => void };
+          ScrollTrigger?: unknown;
+        };
+        if (gsapWin.gsap?.registerPlugin && gsapWin.ScrollTrigger) {
+          gsapWin.gsap.registerPlugin(gsapWin.ScrollTrigger);
+        }
+
         initTriollaConveyorTicker(el);
         initTriollaOwlCarousels(el);
         const $ = (window as unknown as { jQuery?: (sel: Window) => { trigger: (ev: string) => void } })
@@ -104,6 +113,11 @@ export function HomeClient() {
 
         window.dispatchEvent(new Event("DOMContentLoaded"));
         window.dispatchEvent(new Event("load"));
+
+        // Add .loaded class to body after delay, matching theme behavior
+        setTimeout(() => {
+          document.body.classList.add("loaded");
+        }, 800);
 
         if (cancelled) return;
         disposeRevealRef.current?.();

@@ -3,12 +3,16 @@
   "bodyClass": "home wp-singular page-template page-template-page-home2 page-template-page-home2-php page page-id-4640 wp-theme-triolla",
   "dataRsssl": "1",
   "css": [
-    "fonts.css_edabec9e.css",
     "style.min.css_edabec9e.css",
+    "svgs-attachment.css_2af44128.css",
+    "home-grid-base.css",
     "style.min.css_68b3cde9.css",
+    "cms-navigation-base.css_2af44128.css",
+    "cms-navigation.css_2af44128.css",
     "style.css_2af44128.css",
     "style-new.css_2af44128.css",
     "responsive.css_2af44128.css",
+    "fonts.css_2af44128.css",
     "animate.css_2af44128.css",
     "animation.css_2af44128.css",
     "jquery.jConveyorTicker.min.css_edabec9e.css",
@@ -24,10 +28,11 @@
     "TweenMax.min.js_edabec9e.js",
     "ScrollMagic.min.js_edabec9e.js",
     "lottie.min.js_2af44128.js",
+    "metaview.js_2af44128.js",
+    "wow.js_a1459148.js",
     "gsap.min.js_a1459148.js",
     "ScrollTrigger.min.js_a1459148.js",
-    "wow.js_a1459148.js",
-    "metaview.js_2af44128.js",
-    "all.js_a1459148.js"
+    "all.js_a1459148.js",
+    "v8c78df7c7c0f484497ecbca7046644da1771523124516.js"
   ]
 }

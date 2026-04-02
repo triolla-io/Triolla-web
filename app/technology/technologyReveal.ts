@@ -24,6 +24,7 @@ const SHOW_SELECTORS = [
   ".arbutnew",
   ".portfolio_why",
   ".why_wrap",
+  ".global_logos",
   ".global_con",
   ".portfolio_faq_wrap",
   /** Contact strip + footer: theme `all.js` toggles these on scroll; we skip `all.js` on consolidated pages. */
