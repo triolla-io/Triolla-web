@@ -1,0 +1,10 @@
+/* Minimal grid base styles to allow floats to work */
+.grid {
+  display: block;
+  width: 100%;
+}
+
+.grid__item {
+  margin: 0;
+  padding: 0;
+}
