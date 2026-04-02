@@ -1,58 +1,58 @@
-/* COMPREHENSIVE FONT FIXES FOR HOME PAGE */
+/* COMPREHENSIVE FONT FIXES FOR HEBREW HOME PAGE */
 
-/* 1. Hero section headings */
+/* 1. Hero section headings - Use Almoni for Hebrew */
 .homemaintopone h1,
 .homemaintopone h2 {
-  font-family: 'SFProText' !important;
+  font-family: 'Almoni ML v5 AAA' !important;
   font-weight: 700 !important;
 }
 
-/* 2. Unique design section - MISSING FONT ON P TAG */
+/* 2. Unique design section - Use Almoni */
 .top_design_text p {
-  font-family: 'SFProText' !important;
+  font-family: 'Almoni ML v5 AAA' !important;
   font-weight: 400 !important;
 }
 
-/* 3. Global/Our Clients section */
+/* 3. Global/Our Clients section - Use Almoni */
 .global_con h2,
 .global_con h3 {
-  font-family: 'SFProText' !important;
+  font-family: 'Almoni ML v5 AAA' !important;
   font-weight: 700 !important;
 }
 
-/* 4. Winners section */
+/* 4. Winners section - Use Almoni */
 .winners-title,
 .winners-subtitle {
-  font-family: 'SFProText' !important;
+  font-family: 'Almoni ML v5 AAA' !important;
   font-weight: 700 !important;
 }
 
-/* 5. Global h2 override for "Our Clients" */
+/* 5. Global h2 override - Use Almoni */
 h2 {
-  font-family: 'SFProText' !important;
+  font-family: 'Almoni ML v5 AAA' !important;
   font-weight: 700 !important;
 }
 
-/* 6. FAQ section text */
+/* 6. FAQ section text - Use Almoni */
 .faq_quest {
-  font-family: 'SFProText' !important;
+  font-family: 'Almoni ML v5 AAA' !important;
   font-weight: 400 !important;
 }
 
 .faqdetail,
 .faqdetail p {
-  font-family: 'SFProText' !important;
+  font-family: 'Almoni ML v5 AAA' !important;
   font-weight: 400 !important;
 }
 
-/* 7. Black pill button text - CRITICAL FIX */
+/* 7. Black pill button text - Use Almoni */
 .header_contact a,
 .header_contact a span,
 .header_book a,
 .header_book a span,
 .header_whatsapp a,
 .header_whatsapp a span {
-  font-family: 'SFProText' !important;
+  font-family: 'Almoni ML v5 AAA' !important;
   font-weight: 500 !important;
 }
 
@@ -71,13 +71,13 @@ h2 {
   background-size: contain !important;
 }
 
-/* 9. Ensure SFProText font is available as fallback */
+/* 9. Global fallback for Hebrew text - Use Almoni */
 body,
 body * {
-  font-family: 'SFProText', 'SF Pro', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-family: 'Almoni ML v5 AAA', 'Almoni DL AAA', -apple-system, BlinkMacSystemFont, sans-serif !important;
 }
 
-/* BUT preserve specific font overrides for themed elements */
+/* Preserve specific font overrides for special elements */
 .technmtxt,
 .techthretop p,
 .techthretop h4 {
@@ -85,5 +85,5 @@ body * {
 }
 
 .circletxt {
-  font-family: 'SFProText' !important;
+  font-family: 'Almoni ML v5 AAA' !important;
 }
