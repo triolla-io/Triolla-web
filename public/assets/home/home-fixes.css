@@ -1,19 +1,89 @@
-/* Fix missing fonts for hero and section titles */
+/* COMPREHENSIVE FONT FIXES FOR HOME PAGE */
+
+/* 1. Hero section headings */
 .homemaintopone h1,
 .homemaintopone h2 {
   font-family: 'SFProText' !important;
+  font-weight: 700 !important;
 }
 
-.global_con h3,
-.winners-title {
+/* 2. Unique design section - MISSING FONT ON P TAG */
+.top_design_text p {
   font-family: 'SFProText' !important;
+  font-weight: 400 !important;
 }
 
-/* Fix broken SVG paths in FAQ section */
-.faqtitle a:after {
-  background-image: url(/assets/home/faq_plus.svg) !important;
+/* 3. Global/Our Clients section */
+.global_con h2,
+.global_con h3 {
+  font-family: 'SFProText' !important;
+  font-weight: 700 !important;
 }
 
-.active .faqtitle a:after {
-  background-image: url(/assets/home/faq_minus.svg) !important;
+/* 4. Winners section */
+.winners-title,
+.winners-subtitle {
+  font-family: 'SFProText' !important;
+  font-weight: 700 !important;
+}
+
+/* 5. Global h2 override for "Our Clients" */
+h2 {
+  font-family: 'SFProText' !important;
+  font-weight: 700 !important;
+}
+
+/* 6. FAQ section text */
+.faq_quest {
+  font-family: 'SFProText' !important;
+  font-weight: 400 !important;
+}
+
+.faqdetail,
+.faqdetail p {
+  font-family: 'SFProText' !important;
+  font-weight: 400 !important;
+}
+
+/* 7. Black pill button text - CRITICAL FIX */
+.header_contact a,
+.header_contact a span,
+.header_book a,
+.header_book a span,
+.header_whatsapp a,
+.header_whatsapp a span {
+  font-family: 'SFProText' !important;
+  font-weight: 500 !important;
+}
+
+/* 8. FAQ SVG plus/minus icons - FIX BROKEN PATHS */
+.faqtitle a::after {
+  background-image: url(/images/faq_plus.svg) !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  background-size: contain !important;
+}
+
+.active .faqtitle a::after {
+  background-image: url(/images/faq_minus.svg) !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  background-size: contain !important;
+}
+
+/* 9. Ensure SFProText font is available as fallback */
+body,
+body * {
+  font-family: 'SFProText', 'SF Pro', -apple-system, BlinkMacSystemFont, sans-serif !important;
+}
+
+/* BUT preserve specific font overrides for themed elements */
+.technmtxt,
+.techthretop p,
+.techthretop h4 {
+  font-family: 'SF Compact Display' !important;
+}
+
+.circletxt {
+  font-family: 'SFProText' !important;
 }
