@@ -28,10 +28,8 @@ export function mountTriollaHeaderPill(root: HTMLElement): () => void {
     return () => {};
   }
 
-  /** Theme `all.js` uses `> 1200`, which skips 1024–1200 entirely; CSS shrink only applies ≤1199px. Match desktop nav (`>= 1023` in `all.js`) so the pill actually animates. */
-  if (window.innerWidth <= 1023) {
-    return () => {};
-  }
+  /** Enable header pill animation on ALL viewport sizes (desktop, tablet, mobile) */
+  // Removed viewport check - should work everywhere
 
   const transition = "0.7s ease";
   /** Theme `all.js` (scroll down). */
