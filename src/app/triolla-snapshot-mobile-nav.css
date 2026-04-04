@@ -1,6 +1,6 @@
 /* =============================================================================
    Triolla HTML snapshots — mobile / tablet (≤1023px)
-   Uses float layout matching original WordPress theme
+   CORRECT layout: header_right with margin-left auto, menutoggle absolutely positioned
    ============================================================================= */
 
 @media (max-width: 1023px) {
@@ -40,10 +40,10 @@
     left: auto !important;
   }
 
-  /* 3. Header container: clearfix float layout */
+  /* 3. Header container - position relative for absolutely positioned hamburger */
   [data-triolla-snapshot] .header_in {
-    display: block !important;
     position: relative !important;
+    display: block !important;
     width: 100% !important;
     padding: 0 !important;
     margin: 0 !important;
@@ -53,15 +53,19 @@
     min-width: unset !important;
   }
 
-  [data-triolla-snapshot] .header_in::after {
-    content: "" !important;
-    display: table !important;
-    clear: both !important;
+  /* 4. Header wrap - ensure it's a proper container */
+  [data-triolla-snapshot] .header_wrap {
+    position: relative !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
 
-  /* 4. Logo - float left */
+  /* 5. Logo */
   [data-triolla-snapshot] .logo {
-    float: left !important;
+    display: inline-block !important;
+    float: none !important;
     margin: 0 !important;
     padding: 0 !important;
     width: auto !important;
@@ -71,30 +75,34 @@
     top: 0 !important;
   }
 
-  /* 5. Hide desktop menu */
+  /* 6. Hide desktop menu */
   [data-triolla-snapshot] .header_menu {
     display: none !important;
   }
 
-  /* 6. Header right container - float right */
+  /* 7. Header right - push to right side with margin-left auto */
   [data-triolla-snapshot] .header_right {
-    float: right !important;
-    display: block !important;
-    width: auto !important;
+    display: inline-block !important;
+    float: none !important;
+    margin-left: auto !important;
+    margin-right: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
     padding: 0 !important;
-    margin: 0 !important;
     gap: 0 !important;
     flex-shrink: 0 !important;
     align-items: unset !important;
+    width: auto !important;
   }
 
-  /* 7. Contact button - inline-block, no float (within float right container) */
+  /* 8. Contact button */
   [data-triolla-snapshot] .header_contact {
     display: inline-block !important;
     float: none !important;
     text-align: center !important;
-    margin: 0 !important;
-    padding: 0 8px !important;
+    margin: 0 20px 0 0 !important;
+    padding: 0 !important;
+    width: auto !important;
   }
 
   [data-triolla-snapshot] .header_contact a {
@@ -170,25 +178,29 @@
     transform-origin: left !important;
   }
 
-  /* 8. Hide whatsapp and book on mobile */
+  /* 9. Hide whatsapp and book on mobile */
   [data-triolla-snapshot] .header_right .header_whatsapp,
   [data-triolla-snapshot] .header_right .header_book {
     display: none !important;
   }
 
-  /* 9. Hamburger - float right (as direct child of header_in) */
-  [data-triolla-snapshot] .header_in > .menutoggle {
+  /* 10. Hamburger - ABSOLUTELY POSITIONED, NOT floating */
+  [data-triolla-snapshot] .menutoggle {
     display: block !important;
-    float: right !important;
+    position: absolute !important;
+    right: 15px !important;
+    left: auto !important;
+    top: auto !important;
+    bottom: auto !important;
     width: auto !important;
     height: auto !important;
     margin: 0 !important;
     padding: 0 !important;
     visibility: visible !important;
-    min-width: 44px !important;
-    min-height: 44px !important;
     color: #fff !important;
     flex-shrink: 0 !important;
+    float: none !important;
+    order: unset !important;
   }
 
   [data-triolla-snapshot] .menutoggle a {
@@ -197,29 +209,31 @@
     justify-content: center !important;
   }
 
-  /* 10. RTL (Hebrew) */
+  /* 11. RTL (Hebrew) */
   [dir="rtl"] [data-triolla-snapshot] .logo,
   [data-triolla-snapshot][dir="rtl"] .logo,
   [data-triolla-snapshot].rtl .logo {
-    float: right !important;
+    direction: rtl !important;
   }
 
   [dir="rtl"] [data-triolla-snapshot] .header_right,
   [data-triolla-snapshot][dir="rtl"] .header_right,
   [data-triolla-snapshot].rtl .header_right {
-    float: left !important;
+    margin-left: 23px !important;
+    margin-right: auto !important;
   }
 
   [dir="rtl"] [data-triolla-snapshot] .header_contact,
   [data-triolla-snapshot][dir="rtl"] .header_contact,
   [data-triolla-snapshot].rtl .header_contact {
-    padding: 0 8px !important;
+    margin: 0 0 0 20px !important;
   }
 
-  [dir="rtl"] [data-triolla-snapshot] .header_in > .menutoggle,
-  [data-triolla-snapshot][dir="rtl"] .header_in > .menutoggle,
-  [data-triolla-snapshot].rtl .header_in > .menutoggle {
-    float: left !important;
+  [dir="rtl"] [data-triolla-snapshot] .menutoggle,
+  [data-triolla-snapshot][dir="rtl"] .menutoggle,
+  [data-triolla-snapshot].rtl .menutoggle {
+    right: auto !important;
+    left: 15px !important;
   }
 
   [dir="rtl"] [data-triolla-snapshot] .hmenumob,
