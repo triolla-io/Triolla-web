@@ -325,6 +325,30 @@ body {
   gap: 0;
 }
 
+/*
+ * Hebrew portfolio “Why us” (.portfolio_why): theme sets text-transform:capitalize on h3/h4,
+ * which is meant for English titles and reads wrong on RTL Hebrew. responsive-he also carries
+ * a typo (`font-family:34px` on h4). Force natural casing + Almoni for snapshot RTL pages.
+ */
+[data-triolla-snapshot][dir="rtl"] .portfolio_why h3,
+[data-triolla-snapshot][dir="rtl"] .portfolio_why ul li h4 {
+  text-transform: none !important;
+  font-family: "Almoni ML v5 AAA", system-ui, sans-serif !important;
+}
+
+[data-triolla-snapshot][dir="rtl"] .portfolio_why h3 {
+  line-height: 1.12 !important;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 1023px) {
+  [data-triolla-snapshot][dir="rtl"] .portfolio_why h3 {
+    hyphens: manual;
+  }
+}
+
 /* Contact Us — React Header only (.site-header). Snapshots use Triolla theme (.default-text / .hover-text / .button-overlay). */
 .site-header .header_contact a {
   display: flex;

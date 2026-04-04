@@ -274,7 +274,7 @@ export function TriollaPortfolioSnapshotClient({
         <div
           ref={rootRef}
           data-triolla-snapshot="1"
-          dir="ltr"
+          dir={lang === "he" ? "rtl" : "ltr"}
           className={bodyClass}
           {...(dataRsssl != null ? { "data-rsssl": dataRsssl } : {})}
           suppressHydrationWarning

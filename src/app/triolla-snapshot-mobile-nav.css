@@ -18,6 +18,102 @@
     pointer-events: auto !important;
   }
 
+  /*
+   * Theme only styles `.headerticker a.tickclose` (absolute); chrome uses <button class="tickclose">.
+   * Without this the X stays in-flow and sits on the announcement text.
+   */
+  [data-triolla-snapshot] .headerticker button.tickclose {
+    position: absolute !important;
+    top: max(10px, env(safe-area-inset-top, 0px)) !important;
+    inset-inline-end: 10px !important;
+    inset-inline-start: auto !important;
+    display: inline-block !important;
+    z-index: 2 !important;
+  }
+
+  /*
+   * Hebrew mobile: hebrew-navigation pins `.headnewact.header` with `top: 46px` while the
+   * blue ticker’s real height is often smaller (padding + 1–2 lines) → body #E7EBF0 shows
+   * as a grey gap. Stack ticker + header in normal flow until theme sticky mode (body.sticky).
+   */
+  body:not(.sticky) [data-triolla-snapshot][dir="rtl"] .headerticker,
+  body:not(.sticky) [data-triolla-snapshot].rtl .headerticker,
+  body:not(.sticky)
+    [data-triolla-snapshot]:has(.menu-header-menu-he-container)
+    .headerticker {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    width: 100% !important;
+  }
+
+  body:not(.sticky) [data-triolla-snapshot][dir="rtl"] .header,
+  body:not(.sticky) [data-triolla-snapshot].rtl .header,
+  body:not(.sticky)
+    [data-triolla-snapshot]:has(.menu-header-menu-he-container)
+    .header {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+  }
+
+  [data-triolla-snapshot][dir="rtl"] .main_container,
+  [data-triolla-snapshot].rtl.main_container,
+  [data-triolla-snapshot].main_container.rtl,
+  [data-triolla-snapshot]:has(.menu-header-menu-he-container) .main_container {
+    padding-top: 0 !important;
+  }
+
+  [data-triolla-snapshot][dir="rtl"] .portfolio_main,
+  [data-triolla-snapshot].rtl .portfolio_main,
+  [data-triolla-snapshot]:has(.menu-header-menu-he-container) .portfolio_main {
+    padding-top: 0 !important;
+  }
+
+  /*
+   * Ticker dismissed (X): with header still `position:relative` + `padding-top:0`, the hero
+   * (`main` / `.portfolio_banner`) can paint over the yellow bar and hide the hamburger. Match
+   * English snapshots: absolutely position the header at the top of `.main_container` and keep
+   * a 56px top padding band for in-flow content (same as LTR `.triolla-ticker-dismissed`).
+   */
+  body:not(.sticky)
+    [data-triolla-snapshot][dir="rtl"].main_container.triolla-ticker-dismissed
+    .header,
+  body:not(.sticky)
+    [data-triolla-snapshot].rtl.main_container.triolla-ticker-dismissed
+    .header,
+  body:not(.sticky)
+    [data-triolla-snapshot]:has(.menu-header-menu-he-container)
+    .main_container.triolla-ticker-dismissed
+    .header,
+  /* Home-he: `data-triolla-snapshot` on outer root, `.main_container` inside */
+  body:not(.sticky)
+    [data-triolla-snapshot][dir="rtl"]
+    .main_container.triolla-ticker-dismissed
+    .header {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  [data-triolla-snapshot][dir="rtl"].main_container.triolla-ticker-dismissed,
+  [data-triolla-snapshot].rtl.main_container.triolla-ticker-dismissed,
+  [data-triolla-snapshot]:has(.menu-header-menu-he-container)
+    .main_container.triolla-ticker-dismissed,
+  [data-triolla-snapshot][dir="rtl"] .main_container.triolla-ticker-dismissed,
+  [data-triolla-snapshot][dir="rtl"] .portfolio_main.triolla-ticker-dismissed,
+  [data-triolla-snapshot].rtl .portfolio_main.triolla-ticker-dismissed,
+  [data-triolla-snapshot]:has(.menu-header-menu-he-container)
+    .portfolio_main.triolla-ticker-dismissed {
+    padding-top: 56px !important;
+  }
+
   [data-triolla-snapshot] .header_in {
     display: flex !important;
     flex-direction: row !important;
@@ -141,6 +237,9 @@
     visibility: visible !important;
     position: fixed !important;
     top: 0 !important;
+    /* responsive-he uses physical `left`; clear it so logical inset controls the slide. */
+    left: auto !important;
+    right: auto !important;
     /* Slide in from inline-end (right in LTR, left in RTL). */
     inset-inline-end: -100% !important;
     inset-inline-start: auto !important;
@@ -192,7 +291,7 @@
    * Later siblings can still stack above position:fixed drawer hits — neutralize all main_container
    * direct children, then opt the drawer subtree back in (same pattern as header when open).
    */
-  body.mbodyact [data-triolla-snapshot].main_container > * {
+  body.mbodyact [data-triolla-snapshot] .main_container > * {
     pointer-events: none !important;
   }
   body.mbodyact [data-triolla-snapshot] .hmenumob,
@@ -224,8 +323,25 @@
     pointer-events: auto !important;
   }
 
-  [data-triolla-snapshot] .hmenumob .hmenumobclose a {
+  [data-triolla-snapshot] .hmenumob .hmenumobclose a,
+  [data-triolla-snapshot] .hmenumob .hmenumobclose button {
     pointer-events: auto !important;
+  }
+
+  /* Keep drawer links from running under the fixed corner X (RTL long lines hit inline-end). */
+  [data-triolla-snapshot] .hmenumob .hmenumobdiv {
+    padding-inline-end: 52px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* RTL: LTR-style X glyph without changing layout (avoids bidi on the wrapper). */
+  [dir="rtl"] [data-triolla-snapshot] .hmenumob .hmenumobclose img,
+  [data-triolla-snapshot][dir="rtl"] .hmenumob .hmenumobclose img,
+  [data-triolla-snapshot].rtl .hmenumob .hmenumobclose img,
+  [dir="rtl"] [data-triolla-snapshot] .headerticker button.tickclose img,
+  [data-triolla-snapshot][dir="rtl"] .headerticker button.tickclose img,
+  [data-triolla-snapshot].rtl .headerticker button.tickclose img {
+    transform: scaleX(-1) !important;
   }
 
   /*
@@ -405,6 +521,8 @@
   display: block !important;
   position: fixed !important;
   top: 0 !important;
+  left: auto !important;
+  right: auto !important;
   inset-inline-end: -100% !important;
   inset-inline-start: auto !important;
   width: 100% !important;
@@ -433,8 +551,14 @@ body.mbodyact [data-triolla-snapshot].temp-mobile-nav-qa .hmenumob {
   pointer-events: auto !important;
 }
 
-[data-triolla-snapshot].temp-mobile-nav-qa .hmenumob .hmenumobclose a {
+[data-triolla-snapshot].temp-mobile-nav-qa .hmenumob .hmenumobclose a,
+[data-triolla-snapshot].temp-mobile-nav-qa .hmenumob .hmenumobclose button {
   pointer-events: auto !important;
+}
+
+[data-triolla-snapshot].temp-mobile-nav-qa .hmenumob .hmenumobdiv {
+  padding-inline-end: 52px !important;
+  box-sizing: border-box !important;
 }
 
 [data-triolla-snapshot].temp-mobile-nav-qa .hmenumob .marrow {

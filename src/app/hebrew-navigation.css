@@ -682,6 +682,12 @@
     padding-top: calc(56px + 46px);
   }
 
+  /* mountTriollaMobileMenu removes `.headerticker` — drop the ticker slice of top padding */
+  .main_container.triolla-ticker-dismissed,
+  .portfolio_main.triolla-ticker-dismissed {
+    padding-top: 56px;
+  }
+
   [dir="rtl"] .header,
   .rtl .header {
     right: 0;

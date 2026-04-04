@@ -35,7 +35,8 @@ export const DEPS_EN: TriollaPortfolioSnapshotDeps = {
 
 export const DEPS_HE: TriollaPortfolioSnapshotDeps = {
   assetBase: "/assets/_consolidated/",
-  bodyClass: "port_page_mod",
+  /** Match WP Hebrew body (`rtl`); theme rules often scope under `.rtl`. */
+  bodyClass: "port_page_mod rtl",
   dataRsssl: null,
   css: [
     "style.css",
@@ -50,6 +51,7 @@ export const DEPS_HE: TriollaPortfolioSnapshotDeps = {
     "animation.css_edabec9e.css",
     "/assets/_shared/jquery.jConveyorTicker.min.css_edabec9e.css",
     "mlstyle.css_edabec9e.css",
+    "rtl.css_edabec9e.css",
     "ml-responsive.css_edabec9e.css",
     "fonts.css",
   ],

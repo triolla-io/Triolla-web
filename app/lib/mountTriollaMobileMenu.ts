@@ -22,6 +22,31 @@ function eventTargetElement(target: EventTarget | null): Element | null {
   return target instanceof Element ? target : null;
 }
 
+/** Blue announcement strip: WP used jQuery `.tickclose` — snapshots use `<button>` with no handler. */
+function mainContainerForTickerPadding(root: HTMLElement): HTMLElement {
+  if (root.classList.contains("main_container")) return root;
+  return root.querySelector(".main_container") ?? root;
+}
+
+function dismissHeaderticker(root: HTMLElement): void {
+  root.querySelectorAll(".headerticker").forEach((t) => t.remove());
+  root.querySelectorAll(".header.headnewact").forEach((h) => {
+    h.classList.remove("headnewact");
+  });
+  mainContainerForTickerPadding(root).classList.add("triolla-ticker-dismissed");
+}
+
+function tryDismissHeaderticker(root: HTMLElement, e: Event): boolean {
+  const target = eventTargetElement(e.target);
+  if (!target || !root.contains(target)) return false;
+  const tick = target.closest(".tickclose");
+  if (!tick || !root.contains(tick)) return false;
+  const ticker = tick.closest(".headerticker");
+  if (!ticker || !root.contains(ticker)) return false;
+  dismissHeaderticker(root);
+  return true;
+}
+
 /** Expand/collapse a `.menu-item-has-children` row inside `.hmenumob` (Portfolio + columns). */
 function tryToggleHmenumobSubmenu(root: HTMLElement, e: Event): boolean {
   const target = eventTargetElement(e.target);
@@ -82,6 +107,12 @@ export function mountTriollaMobileMenu(root: HTMLElement): () => void {
   }
 
   const onClickCapture = (e: MouseEvent) => {
+    if (tryDismissHeaderticker(root, e)) {
+      e.preventDefault();
+      e.stopPropagation();
+      return;
+    }
+
     const target = eventTargetElement(e.target);
     if (!target || !root.contains(target)) return;
 
@@ -116,6 +147,10 @@ export function mountTriollaMobileMenu(root: HTMLElement): () => void {
 
   const onTouchEndCapture = (e: TouchEvent) => {
     if (e.touches.length > 0) return;
+    if (tryDismissHeaderticker(root, e)) {
+      e.preventDefault();
+      return;
+    }
     if (!tryToggleHmenumobSubmenu(root, e)) return;
     ignoreSubmenuClickUntil = Date.now() + 400;
     e.preventDefault();

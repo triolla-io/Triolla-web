@@ -138,7 +138,7 @@ export const AGRITECH_PAGE_DATA_EN: PortfolioPageData = {
   },
   portfolioItems: AGRITECH_ITEMS_EN,
   why: {
-    mainTitle: "Why Do agritech companies choose us?",
+    mainTitle: "Why do agritech companies choose us?",
     items: [
       {
         title: "Agricultural Domain Knowledge",
@@ -185,7 +185,7 @@ export const AGRITECH_PAGE_DATA_HE: PortfolioPageData = {
   },
   portfolioItems: AGRITECH_ITEMS_HE,
   why: {
-    mainTitle: "למה חברות אגריטק בוחרות בנו?",
+    mainTitle: "למה חברות במגזר האגריטק בוחרות בנו?",
     items: [
       {
         title: "היכרות עם תחום החקלאות",
