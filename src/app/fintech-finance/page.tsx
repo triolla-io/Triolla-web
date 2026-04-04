@@ -1,7 +1,5 @@
 "use client";
 
-import Image from "next/image";
-import { motion } from "framer-motion";
 import ScrollReveal from "@/components/ScrollReveal";
 import IndustryHero from "@/components/IndustryHero";
 import CompanyTicker from "@/components/CompanyTicker";
@@ -130,12 +128,8 @@ export default function FintechFinancePage() {
       <IndustryHero
         title={
           <>
-            <span className="block w-screen relative left-1/2 -translate-x-1/2 text-center lg:hidden">
-              Finance
-            </span>
-            <span className="block w-screen relative left-1/2 -translate-x-1/2 text-center lg:hidden">
-              &amp; Tech
-            </span>
+            <span className="block text-center lg:hidden">Finance</span>
+            <span className="block text-center lg:hidden">&amp; Tech</span>
             <span className="hidden lg:inline">Finance &amp; Tech</span>
           </>
         }
@@ -166,21 +160,29 @@ export default function FintechFinancePage() {
       />
 
       {/* ── S2: COMPANY TICKER ──────────────────────────────── */}
-      <CompanyTicker names={companies} />
+      <CompanyTicker names={companies} className="ticker-wrap" />
 
-      {/* ── S3: PORTFOLIO ITEMS ──────────────────────────────── */}
-      <section className="pt-10 lg:pt-[260px] pb-0">
-        <ul className="m-0 p-0 list-none">
+      {/* ── S3: PORTFOLIO — mobile stack + spacing (parity with cyber-security; RTL-safe) ─ */}
+      <section className="bg-[#e7eaef] pb-0 pt-16 sm:pt-24 md:pt-32 lg:pt-40 xl:pt-[260px]">
+        <ul className="m-0 list-none p-0">
           {portfolioItems.map((item, i) => (
-            <ScrollReveal key={i} as="li" direction="up" delay={0.1} className="mb-12 lg:mb-[144px] last:mb-0">
+            <ScrollReveal
+              key={i}
+              as="li"
+              direction="up"
+              delay={0.1}
+              className="mb-12 max-[767px]:border-b max-[767px]:border-black/10 max-[767px]:pb-12 last:mb-0 last:max-[767px]:border-b-0 sm:mb-16 sm:max-[767px]:pb-16 md:mb-24 md:max-[767px]:pb-20 lg:mb-[120px] xl:mb-[144px]"
+            >
               <PortfolioItem {...item} />
             </ScrollReveal>
           ))}
         </ul>
 
-        {/* Partners CTA */}
-        <ScrollReveal direction="up" className="text-center pt-10 lg:pt-[80px] px-[50px] pb-16 lg:pb-[151px]">
-          <p className="text-[24px] leading-[30px] text-black m-0 mb-6">
+        <ScrollReveal
+          direction="up"
+          className="text-center px-4 pb-16 pt-10 sm:px-4 sm:pb-8 sm:pt-6 md:px-12 md:pb-28 lg:px-[50px] lg:pb-[151px] lg:pt-[80px]"
+        >
+          <p className="m-0 mb-5 leading-snug text-black sm:mb-6 sm:text-sm md:text-2xl lg:text-[24px] lg:leading-[30px]">
             50+ fintech-finance platforms and counting
           </p>
           <PartnerBtn />

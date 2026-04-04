@@ -11,14 +11,61 @@ export function stripJQueryMenutoggleClickHandlers(root: HTMLElement): void {
     jQuery?: (sel: string | Element) => { off: (type: string) => unknown };
   }).jQuery;
   if (!jq) return;
-  root.querySelectorAll(".menutoggle a").forEach((a) => {
-    jq(a).off("click");
+  root.querySelectorAll(".menutoggle a, .menutoggle button").forEach((el) => {
+    jq(el).off("click");
   });
+}
+
+function eventTargetElement(target: EventTarget | null): Element | null {
+  if (!target || !(target instanceof Node)) return null;
+  if (target.nodeType === Node.TEXT_NODE) return target.parentElement;
+  return target instanceof Element ? target : null;
+}
+
+/** Expand/collapse a `.menu-item-has-children` row inside `.hmenumob` (Portfolio + columns). */
+function tryToggleHmenumobSubmenu(root: HTMLElement, e: Event): boolean {
+  const target = eventTargetElement(e.target);
+  if (!target || !root.contains(target)) return false;
+  if (!target.closest(".hmenumob")) return false;
+
+  const liHasChildren = target.closest(".hmenumob li.menu-item-has-children");
+  if (!liHasChildren || !root.contains(liHasChildren)) return false;
+
+  const subUl = liHasChildren.querySelector<HTMLElement>(":scope > ul");
+
+  /* Let real links inside this row's submenu navigate (Cybersecurity, etc.). */
+  if (subUl && subUl.contains(target)) {
+    const link = target.closest("a[href]");
+    if (link && subUl.contains(link)) {
+      const href = (link.getAttribute("href") || "").trim();
+      if (
+        href &&
+        href !== "#" &&
+        !/^javascript:/i.test(href)
+      ) {
+        return false;
+      }
+    }
+  }
+
+  const directA = liHasChildren.querySelector<HTMLElement>(":scope > a");
+  const marrow = liHasChildren.querySelector<HTMLElement>(":scope > .marrow");
+  const hitRow =
+    target === liHasChildren ||
+    (!!directA && (target === directA || directA.contains(target))) ||
+    (!!marrow && (target === marrow || marrow.contains(target)));
+
+  if (!hitRow) return false;
+
+  liHasChildren.classList.toggle("active");
+  return true;
 }
 
 export function mountTriollaMobileMenu(root: HTMLElement): () => void {
   const body = document.body;
   const isHebrew = root.getAttribute("dir") === "rtl";
+  /** Skip the follow-up synthetic `click` after we handled `touchend` (iOS/WebKit). */
+  let ignoreSubmenuClickUntil = 0;
 
   const menuToggles = Array.from(root.querySelectorAll<HTMLElement>(".menutoggle"));
   const mobileMenu = root.querySelector<HTMLElement>(".hmenumob");
@@ -35,8 +82,8 @@ export function mountTriollaMobileMenu(root: HTMLElement): () => void {
   }
 
   const onClickCapture = (e: MouseEvent) => {
-    const target = e.target;
-    if (!(target instanceof Element) || !root.contains(target)) return;
+    const target = eventTargetElement(e.target);
+    if (!target || !root.contains(target)) return;
 
     const inDrawer = target.closest(".hmenumob");
 
@@ -57,51 +104,21 @@ export function mountTriollaMobileMenu(root: HTMLElement): () => void {
     }
 
     /* Theme chevron is on `a:after`; `.marrow` is often zero-size — taps hit the `a`. */
-    if (inDrawer) {
-      const liHasChildren = target.closest(".hmenumob li.menu-item-has-children");
-      if (liHasChildren && root.contains(liHasChildren)) {
-        const directA = liHasChildren.querySelector<HTMLElement>(":scope > a");
-        const marrow = liHasChildren.querySelector<HTMLElement>(":scope > .marrow");
-        const hitA =
-          !!directA && (target === directA || directA.contains(target));
-        const hitMarrow =
-          !!marrow && (target === marrow || marrow.contains(target));
-        if (hitA || hitMarrow) {
-          // #region agent log
-          fetch(
-            "http://127.0.0.1:7442/ingest/16494b4c-3094-42cb-81b5-aad92874073c",
-            {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-                "X-Debug-Session-Id": "143802",
-              },
-              body: JSON.stringify({
-                sessionId: "143802",
-                location: "mountTriollaMobileMenu.ts:submenu-toggle",
-                message: "mobile submenu toggle",
-                data: {
-                  hitA,
-                  hitMarrow,
-                  tag: target instanceof Element ? target.tagName : null,
-                },
-                timestamp: Date.now(),
-                hypothesisId: "A",
-              }),
-            },
-          ).catch(() => {});
-          // #endregion
-          e.preventDefault();
-          e.stopPropagation();
-          liHasChildren.classList.toggle("active");
-          const sub = liHasChildren.querySelector<HTMLElement>(":scope > ul");
-          if (sub) {
-            sub.style.display =
-              sub.style.display === "block" ? "none" : "block";
-          }
-        }
-      }
+    if (
+      inDrawer &&
+      Date.now() >= ignoreSubmenuClickUntil &&
+      tryToggleHmenumobSubmenu(root, e)
+    ) {
+      e.preventDefault();
+      e.stopPropagation();
     }
+  };
+
+  const onTouchEndCapture = (e: TouchEvent) => {
+    if (e.touches.length > 0) return;
+    if (!tryToggleHmenumobSubmenu(root, e)) return;
+    ignoreSubmenuClickUntil = Date.now() + 400;
+    e.preventDefault();
   };
 
   const onKeyDown = (e: KeyboardEvent) => {
@@ -111,12 +128,17 @@ export function mountTriollaMobileMenu(root: HTMLElement): () => void {
   };
 
   root.addEventListener("click", onClickCapture, true);
+  root.addEventListener("touchend", onTouchEndCapture, {
+    capture: true,
+    passive: false,
+  });
   document.addEventListener("keydown", onKeyDown);
   stripJQueryMenutoggleClickHandlers(root);
 
   return () => {
     body.classList.remove("mbodyact");
     root.removeEventListener("click", onClickCapture, true);
+    root.removeEventListener("touchend", onTouchEndCapture, true);
     document.removeEventListener("keydown", onKeyDown);
   };
 }

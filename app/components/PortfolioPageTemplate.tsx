@@ -131,7 +131,32 @@ export const PortfolioPageTemplate = forwardRef<
         />
       ) : null}
       <style type="text/css">{`
-        .portfolio_banner { background-color: ${data.bannerColor}; }
+        /* Snapshot chrome: <button> replacements for crawlability / Lighthouse */
+        .menutoggle button.triolla-menutoggle-btn,
+        button.tickclose,
+        .hmenumobclose button.triolla-drawer-close-btn {
+          background: none;
+          border: none;
+          padding: 0;
+          margin: 0;
+          cursor: pointer;
+          color: inherit;
+          font: inherit;
+          display: inline-block;
+        }
+        .portfolio_banner .ban_toggle_down,
+        .portfolio_banner .ban_toggle_up {
+          background: none;
+          border: none;
+          padding: 0;
+          margin: 0;
+          cursor: pointer;
+          display: inline;
+          vertical-align: middle;
+          font: inherit;
+          color: inherit;
+        }
+                .portfolio_banner { background-color: ${data.bannerColor}; }
         .portfoli_lists ul li .protfolio_con { margin-top: 0 !important; }
         .portfoli_lists ul li { margin-top: 0 !important; }
         .portfoli_lists ul li .protfolio_img { bottom: -100px !important; opacity: 0 !important; }
@@ -159,18 +184,20 @@ export const PortfolioPageTemplate = forwardRef<
         }
       `}</style>
 
-      <PortfolioHeader {...data.header} />
-      {data.companyTicker?.length ? (
-        <PortfolioCompanyTicker names={data.companyTicker} />
-      ) : null}
-      <PortfolioList
-        items={data.portfolioItems}
-        buttonText={data.header.buttonText}
-        buttonLink={data.header.buttonLink}
-        partnerCount={data.partnerCount}
-      />
-      <PortfolioWhy {...data.why} />
-      <PortfolioGlobal {...data.global} />
+      <main id="triolla-main-content">
+        <PortfolioHeader {...data.header} />
+        {data.companyTicker?.length ? (
+          <PortfolioCompanyTicker names={data.companyTicker} />
+        ) : null}
+        <PortfolioList
+          items={data.portfolioItems}
+          buttonText={data.header.buttonText}
+          buttonLink={data.header.buttonLink}
+          partnerCount={data.partnerCount}
+        />
+        <PortfolioWhy {...data.why} />
+        <PortfolioGlobal {...data.global} />
+      </main>
     </div>
   );
 });

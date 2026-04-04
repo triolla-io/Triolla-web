@@ -90,13 +90,27 @@
     pointer-events: auto !important;
   }
 
-  [data-triolla-snapshot] .menutoggle a {
+  [data-triolla-snapshot] .menutoggle a,
+  [data-triolla-snapshot] .menutoggle button.triolla-menutoggle-btn {
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
     width: 100% !important;
     height: 100% !important;
     pointer-events: auto !important;
+  }
+
+  /*
+   * Theme: `.menutoggle a img.two { display:none }` (style.css). Lighthouse chrome uses <button>;
+   * without matching rules both hamburger PNGs stack and look like two icons.
+   */
+  [data-triolla-snapshot] .header .menutoggle a img.two,
+  [data-triolla-snapshot] .header .menutoggle button img.two {
+    display: none !important;
+  }
+  [data-triolla-snapshot] .header .menutoggle a img.one,
+  [data-triolla-snapshot] .header .menutoggle button img.one {
+    display: block !important;
   }
 
   /* Drawer */
@@ -112,7 +126,8 @@
     max-width: 100vw !important;
     height: 100% !important;
     min-height: 100dvh !important;
-    z-index: 700 !important;
+    /* Above .portfolio_banner / theme layers so taps hit the menu, not the page behind */
+    z-index: 10000 !important;
     background: #fed125 !important;
     background-image: none !important;
     padding: max(120px, calc(env(safe-area-inset-top, 0px) + 88px)) 0
@@ -139,6 +154,46 @@
     pointer-events: none !important;
   }
 
+  /*
+   * Hero decorative layers (.banner_grid + banner_grid.svg, .banner_grid_layer + portolio_layer)
+   * are absolutely positioned; stacking can paint them above the fixed drawer so taps hit the
+   * IMG instead of menu links.
+   */
+  body.mbodyact [data-triolla-snapshot] .banner_grid,
+  body.mbodyact [data-triolla-snapshot] .banner_grid img,
+  body.mbodyact [data-triolla-snapshot] .banner_grid_layer,
+  body.mbodyact [data-triolla-snapshot] .banner_grid_layer img {
+    pointer-events: none !important;
+  }
+
+  /*
+   * Portfolio template: .hmenumob lives inside chrome; React banner/lists are following siblings.
+   * Later siblings can still stack above position:fixed drawer hits — neutralize all main_container
+   * direct children, then opt the drawer subtree back in (same pattern as header when open).
+   */
+  body.mbodyact [data-triolla-snapshot].main_container > * {
+    pointer-events: none !important;
+  }
+  body.mbodyact [data-triolla-snapshot] .hmenumob,
+  body.mbodyact [data-triolla-snapshot] .hmenumob * {
+    pointer-events: auto !important;
+  }
+
+  /* Top-level drawer row (e.g. Portfolio): theme `a` can be a small hit target beside ::after. */
+  [data-triolla-snapshot] .hmenumobdiv > .menu-header-menu-container > ul > li.menu-item-has-children > a,
+  [data-triolla-snapshot]
+    .hmenumobdiv
+    > .menu-header-menu-he-container
+    > ul
+    > li.menu-item-has-children
+    > a {
+    display: inline-block !important;
+    min-height: 44px !important;
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+    box-sizing: border-box !important;
+  }
+
   [data-triolla-snapshot] .hmenumob .hmenumobclose {
     position: absolute !important;
     top: max(16px, env(safe-area-inset-top, 0px)) !important;
@@ -150,6 +205,82 @@
 
   [data-triolla-snapshot] .hmenumob .hmenumobclose a {
     pointer-events: auto !important;
+  }
+
+  /*
+   * globals.css styles `.hmenumobdiv .marrow` with mobmenuicon.svg; Triolla responsive.css
+   * already draws the same chevron on `a:after` — two icons + extra hit layer “behind” the row.
+   */
+  [data-triolla-snapshot] .hmenumob .marrow {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: none !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+  }
+
+  [data-triolla-snapshot] .hmenumobdiv {
+    position: relative !important;
+    z-index: 2 !important;
+  }
+
+  [data-triolla-snapshot] .hmenumobdiv .menu-header-menu-container,
+  [data-triolla-snapshot] .hmenumobdiv .menu-header-menu-he-container {
+    position: relative !important;
+    z-index: 1 !important;
+  }
+
+  /*
+   * Portfolio mega menu: responsive.css hides 2nd-level column titles (> a) on mobile
+   * (.hmenumobdiv ul li ul li > a { display:none }). Those are the tap targets to open
+   * each column’s industry links — restore them only for rows that still have a submenu.
+   */
+  [data-triolla-snapshot] .hmenumobdiv ul li ul li.menu-item-has-children > a {
+    display: inline-block !important;
+    position: relative !important;
+    width: auto !important;
+    min-height: 44px !important;
+    line-height: 30px !important;
+    padding: 8px 28px 8px 0 !important;
+    box-sizing: border-box !important;
+    pointer-events: auto !important;
+  }
+
+  [dir="rtl"] [data-triolla-snapshot] .hmenumobdiv ul li ul li.menu-item-has-children > a,
+  [data-triolla-snapshot][dir="rtl"] .hmenumobdiv ul li ul li.menu-item-has-children > a,
+  [data-triolla-snapshot].rtl .hmenumobdiv ul li ul li.menu-item-has-children > a {
+    padding: 8px 0 8px 28px !important;
+  }
+
+  /* Theme hides all nested `a:after`; show chevron for expandable column headers only. */
+  [data-triolla-snapshot] .hmenumobdiv ul li ul li.menu-item-has-children > a:after {
+    display: block !important;
+  }
+
+  /*
+   * Submenus rely on :hover in the theme; touch devices never get hover. JS toggles `.active`
+   * on `li.menu-item-has-children` — force the direct submenu `ul` visible with !important so
+   * it wins over `.hmenumobdiv ul li ul { display: none }` without fragile inline styles.
+   */
+  [data-triolla-snapshot] .hmenumob li.menu-item-has-children.active > ul.sub-menu,
+  [data-triolla-snapshot] .hmenumob li.menu-item-has-children.active > ul {
+    display: block !important;
+  }
+
+  /*
+   * Flat Portfolio list (no Industries/Platforms column li): theme sets
+   * `.hmenumobdiv ul li ul li > a { display:none }` for old column titles; real links were in a 3rd-level ul.
+   * Leaf rows are now `li:not(.menu-item-has-children) > a` — show them.
+   */
+  [data-triolla-snapshot] .hmenumobdiv ul li.bigmenu > ul.sub-menu > li:not(.menu-item-has-children) > a {
+    display: inline-block !important;
+    font-size: 20px !important;
+    line-height: 30px !important;
+    padding: 0 !important;
+    color: #000 !important;
   }
 
   /* RTL */
@@ -186,6 +317,39 @@
   [data-triolla-snapshot].rtl .hmenumob .hmenumobclose {
     right: auto !important;
     left: 18px !important;
+  }
+}
+
+/*
+ * Desktop mega-menu: same flattening — theme hides `.bigmenu ul > li > a` (column headers).
+ */
+@media (min-width: 1024px) {
+  [data-triolla-snapshot] .header_menu ul.menu li.bigmenu > ul.sub-menu > li:not(.menu-item-has-children) > a {
+    display: block !important;
+    font-size: 20px !important;
+    line-height: 41px !important;
+    padding: 0 !important;
+    color: #000 !important;
+    font-family: 'SFProText', system-ui, sans-serif !important;
+    font-weight: 510 !important;
+  }
+
+  [data-triolla-snapshot] .header_menu ul.menu li.bigmenu > ul.sub-menu > li:not(.menu-item-has-children) > a:hover,
+  [data-triolla-snapshot]
+    .header_menu
+    ul.menu
+    li.bigmenu
+    > ul.sub-menu
+    > li:not(.menu-item-has-children).current-menu-item
+    > a {
+    color: #3088ef !important;
+  }
+
+  [data-triolla-snapshot][dir="rtl"] .header_menu ul.menu li.bigmenu > ul.sub-menu > li:not(.menu-item-has-children) > a,
+  [data-triolla-snapshot].rtl .header_menu ul.menu li.bigmenu > ul.sub-menu > li:not(.menu-item-has-children) > a {
+    font-family: 'Almoni ML v5 AAA', system-ui, sans-serif !important;
+    font-weight: normal !important;
+    text-align: right !important;
   }
 }
 
@@ -255,7 +419,7 @@
   max-width: 100vw !important;
   height: 100% !important;
   min-height: 100dvh !important;
-  z-index: 700 !important;
+  z-index: 10000 !important;
   background: #fed125 !important;
   padding: max(120px, calc(env(safe-area-inset-top, 0px) + 88px)) 0
     max(41px, env(safe-area-inset-bottom, 0px)) !important;
@@ -280,6 +444,46 @@ body.mbodyact [data-triolla-snapshot].temp-mobile-nav-qa .hmenumob {
 
 [data-triolla-snapshot].temp-mobile-nav-qa .hmenumob .hmenumobclose a {
   pointer-events: auto !important;
+}
+
+[data-triolla-snapshot].temp-mobile-nav-qa .hmenumob .marrow {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+[data-triolla-snapshot].temp-mobile-nav-qa .hmenumobdiv {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+[data-triolla-snapshot].temp-mobile-nav-qa .hmenumobdiv ul li ul li.menu-item-has-children > a {
+  display: inline-block !important;
+  position: relative !important;
+  width: auto !important;
+  min-height: 44px !important;
+  line-height: 30px !important;
+  padding: 8px 28px 8px 0 !important;
+  box-sizing: border-box !important;
+  pointer-events: auto !important;
+}
+
+[data-triolla-snapshot].temp-mobile-nav-qa[dir="rtl"] .hmenumobdiv ul li ul li.menu-item-has-children > a {
+  padding: 8px 0 8px 28px !important;
+}
+
+[data-triolla-snapshot].temp-mobile-nav-qa .hmenumobdiv ul li ul li.menu-item-has-children > a:after {
+  display: block !important;
+}
+
+[data-triolla-snapshot].temp-mobile-nav-qa .hmenumob li.menu-item-has-children.active > ul.sub-menu,
+[data-triolla-snapshot].temp-mobile-nav-qa .hmenumob li.menu-item-has-children.active > ul {
+  display: block !important;
 }
 
 /*

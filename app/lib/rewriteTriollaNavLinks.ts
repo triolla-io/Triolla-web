@@ -14,6 +14,16 @@ import { alternateLocalePath } from "@/lib/i18n";
 const TRIOLLA_HOST = /^(?:https?:)?\/\/(www\.)?triolla\.io/i;
 
 /**
+ * Portfolio chrome fragments sometimes ship `href="https://triolla.io/..."`. Same-origin relative
+ * paths work on localhost and production without waiting for `rewriteTriollaNavLinks` after paint.
+ */
+export function stripTriollaMarketingOriginFromHtmlHrefs(html: string): string {
+  return html
+    .replace(/href="https:\/\/(?:www\.)?triolla\.io\//gi, 'href="/')
+    .replace(/href="https:\/\/(?:www\.)?triolla\.io"/gi, 'href="/"');
+}
+
+/**
  * Map decoded Hebrew text slugs to English route names.
  * Triolla uses Hebrew labels in URLs on the WordPress site; we map to English routes.
  */

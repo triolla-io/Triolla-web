@@ -181,6 +181,73 @@ export function generateArticleMetadata({
 }
 
 /**
+ * Hebrew blog post under `/he/blog/*` with canonical `/he/blog/...` and hreflang to the English twin.
+ */
+export function generateHebrewBlogPostMetadata({
+  title,
+  description,
+  path,
+  image = "/og-image.png",
+  author = "Triolla",
+}: {
+  title: string;
+  description: string;
+  /** English content path, e.g. `/blog/my-slug` */
+  path: string;
+  image?: string;
+  author?: string;
+}): Metadata {
+  const canonicalPath = `/he${path}`;
+  const canonicalUrl = `${BASE_URL}${canonicalPath}`;
+  const fullImageUrl = image.startsWith("http") ? image : `${BASE_URL}${image}`;
+  const enUrl = `${BASE_URL}${path}`;
+
+  return {
+    title,
+    description,
+    keywords: [...SEO_KEYWORDS.he.blog],
+    authors: [{ name: author }],
+    creator: "Triolla",
+    publisher: "Triolla",
+    formatDetection: { email: false, telephone: false, address: false },
+    metadataBase: new URL(BASE_URL),
+    alternates: {
+      canonical: canonicalUrl,
+      languages: {
+        "en-US": enUrl,
+        he: canonicalUrl,
+        "x-default": enUrl,
+      },
+    },
+    openGraph: {
+      type: "article",
+      url: canonicalUrl,
+      title,
+      description,
+      siteName: "Triolla",
+      images: [
+        { url: fullImageUrl, width: 1200, height: 630, alt: title, type: "image/png" },
+        { url: fullImageUrl, width: 800, height: 600, alt: title, type: "image/png" },
+      ],
+      locale: "he_IL",
+      alternateLocale: ["en_US"],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [fullImageUrl],
+      site: "@triollastudio",
+      creator: "@triollastudio",
+    },
+    robots: { index: false, follow: false },
+    verification: {
+      google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
+    },
+  };
+}
+
+/**
  * Predefined descriptions for common pages
  */
 export const PAGE_DESCRIPTIONS = {

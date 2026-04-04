@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { HeBlogClient } from "./HeBlogClient";
 import { generatePageMetadata } from "../../lib/metadata";
 
@@ -12,5 +13,16 @@ export const metadata: Metadata = generatePageMetadata({
 });
 
 export default function HeBlogPage() {
-  return <HeBlogClient />;
+  return (
+    <>
+      <Breadcrumbs
+        ariaLabel="אזור ניווט פירורי לחם"
+        items={[
+          { name: "בית", href: "/he" },
+          { name: "בלוג", href: "/he/blog" },
+        ]}
+      />
+      <HeBlogClient />
+    </>
+  );
 }

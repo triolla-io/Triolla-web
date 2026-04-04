@@ -125,7 +125,7 @@ function logosWithBase(base: string): PortfolioPageData["global"]["logos"] {
 
 export const FINTECH_PAGE_DATA_EN: PortfolioPageData = {
   dir: "ltr",
-  bannerColor: "#0052CC",
+  bannerColor: "#fed125",
   partnerCount: "50+ Fintech platforms and counting",
   header: {
     eyebrow: "Product design for",

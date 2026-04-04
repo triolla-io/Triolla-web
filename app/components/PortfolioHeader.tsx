@@ -52,7 +52,7 @@ export function PortfolioHeader({
   return (
     <div className="portfolio_banner">
       <div className="banner_grid">
-        <img alt="Triolla" src={bannerGridImg} />
+        <img alt="Triolla" src={bannerGridImg} fetchPriority="high" decoding="async" />
       </div>
       <div className="banner_grid_layer">
         <img alt="" src={bannerLayerImg} />
@@ -76,10 +76,10 @@ export function PortfolioHeader({
             <p>
               {description}
               <span className="dotshave">...</span>
-              <a
+              <button
+                type="button"
                 className="ban_toggle_down"
-                href="#"
-                onClick={(e) => e.preventDefault()}
+                aria-label="Show more description"
               >
                 <svg
                   width="16"
@@ -93,15 +93,15 @@ export function PortfolioHeader({
                     fill="black"
                   />
                 </svg>
-              </a>
+              </button>
             </p>
             <div className="more_ban_txt" style={{ display: "none" }}>
               <p>
                 {expandedText}
-                <a
+                <button
+                  type="button"
                   className="ban_toggle_up"
-                  href="#"
-                  onClick={(e) => e.preventDefault()}
+                  aria-label="Show less description"
                 >
                   <svg
                     width="16"
@@ -115,7 +115,7 @@ export function PortfolioHeader({
                       fill="black"
                     />
                   </svg>
-                </a>
+                </button>
               </p>
             </div>
           </div>

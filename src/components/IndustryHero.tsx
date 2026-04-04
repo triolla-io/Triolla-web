@@ -54,7 +54,7 @@ export default function IndustryHero({
         <img
           src="/images/portolio_layer.svg"
           alt=""
-          className="absolute top-0 h-full w-auto max-w-full max-md:right-0 max-md:max-h-[85%] max-md:opacity-40 sm:right-0 sm:max-h-none sm:opacity-100 min-[1024px]:left-0 min-[1024px]:right-auto min-[1024px]:top-[50px] min-[1024px]:h-[115%] min-[1024px]:max-h-none min-[1024px]:max-w-none min-[1024px]:origin-left"
+          className="absolute top-0 h-full w-auto max-w-full max-md:end-0 max-md:max-h-[85%] max-md:opacity-40 sm:end-0 sm:max-h-none sm:opacity-100 min-[1024px]:start-0 min-[1024px]:end-auto min-[1024px]:top-[50px] min-[1024px]:h-[115%] min-[1024px]:max-h-none min-[1024px]:max-w-none min-[1024px]:origin-inline-start"
         />
       </div>
 

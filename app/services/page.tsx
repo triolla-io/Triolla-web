@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { generatePageMetadata } from "../lib/metadata";
 import { LANG_REDIRECT_PAGE_COPY } from "../lib/langRedirectPageCopy";
+import { Breadcrumbs } from "../components/Breadcrumbs";
 import { ServicesClient } from "./ServicesClient";
 
 const copy = LANG_REDIRECT_PAGE_COPY["/services"];
@@ -14,5 +15,16 @@ export const metadata: Metadata = generatePageMetadata({
 });
 
 export default function ServicesPage() {
-  return <ServicesClient />;
+  return (
+    <>
+      <Breadcrumbs
+        ariaLabel="Breadcrumb"
+        items={[
+          { name: "Home", href: "/" },
+          { name: "Services", href: "/services" },
+        ]}
+      />
+      <ServicesClient />
+    </>
+  );
 }

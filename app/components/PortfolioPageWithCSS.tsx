@@ -6,7 +6,10 @@ import { mountTriollaHeaderPill } from "../about-us/mountTriollaHeaderPill";
 import { initTriollaConveyorTicker } from "../lib/initTriollaConveyorTicker";
 import { mountTriollaFaqAccordion } from "../lib/mountTriollaFaqAccordion";
 import { mountTriollaFooterAccordion } from "../lib/mountTriollaFooterAccordion";
-import { rewriteTriollaNavLinks } from "../lib/rewriteTriollaNavLinks";
+import {
+  rewriteTriollaNavLinks,
+  stripTriollaMarketingOriginFromHtmlHrefs,
+} from "../lib/rewriteTriollaNavLinks";
 import {
   mountTriollaMobileMenu,
   stripJQueryMenutoggleClickHandlers,
@@ -195,11 +198,12 @@ export function PortfolioPageWithCSS({
           lang === "he"
             ? "/fragments/_portfolio-site-chrome-he.html"
             : "/fragments/_portfolio-site-chrome-en.html";
-        const chromeRes = await fetch(chromeUrl);
+        const chromeRes = await fetch(chromeUrl, { cache: "no-store" });
         if (chromeRes.ok) {
           let chromeHtml = await chromeRes.text();
           chromeHtml = chromeHtml.split("%%ASSET_BASE%%").join(assetBaseNorm);
           chromeHtml = normalizeHeaderAssetUrls(chromeHtml);
+          chromeHtml = stripTriollaMarketingOriginFromHtmlHrefs(chromeHtml);
           chromeInner = chromeHtml.trim();
         }
 
@@ -321,23 +325,32 @@ export function PortfolioPageWithCSS({
 
   return (
     <>
+      {/*
+        Do not hide page content with opacity:0 while loading — that delays LCP until
+        "ready" (fonts + menu) and Lighthouse can report very poor LCP. Keep content paintable;
+        use a slim top bar instead of a full-screen opaque overlay.
+      */}
       {phase === "loading" && (
         <div
+          aria-hidden="true"
           style={{
             position: "fixed",
-            inset: 0,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            background: "#fafafa",
-            color: "#666",
-            fontFamily: "system-ui, sans-serif",
+            top: 0,
+            left: 0,
+            right: 0,
+            height: 3,
             zIndex: 9999,
+            background:
+              "linear-gradient(90deg, #e5e5e5 0%, #111 45%, #e5e5e5 90%)",
+            backgroundSize: "200% 100%",
+            animation: "triolla-portfolio-loading-bar 1.1s ease-in-out infinite",
           }}
-        >
-          Loading…
-        </div>
+        />
       )}
+      <style>{`@keyframes triolla-portfolio-loading-bar {
+        0% { background-position: 100% 0; }
+        100% { background-position: -100% 0; }
+      }`}</style>
       {phase === "error" && (
         <div
           style={{
@@ -349,7 +362,7 @@ export function PortfolioPageWithCSS({
           Could not load page assets.
         </div>
       )}
-      <div style={{ opacity: phase === "ready" ? 1 : 0, pointerEvents: phase === "ready" ? "auto" : "none", minHeight: "100vh" }}>
+      <div style={{ minHeight: "100vh" }} aria-busy={phase === "loading"}>
         <PortfolioPageTemplate
           ref={mainContainerRef}
           data={data}

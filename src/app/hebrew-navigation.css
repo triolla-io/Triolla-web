@@ -779,11 +779,15 @@
    * Do not hide them globally — theme + mountTriollaMobileMenu rely on img.one for the black icon.
    */
   [dir="rtl"] .main_container .header .menutoggle a img.two,
-  .main_container.rtl .header .menutoggle a img.two {
+  .main_container.rtl .header .menutoggle a img.two,
+  [dir="rtl"] .main_container .header .menutoggle button img.two,
+  .main_container.rtl .header .menutoggle button img.two {
     display: none !important;
   }
   [dir="rtl"] .main_container .header .menutoggle a img.one,
-  .main_container.rtl .header .menutoggle a img.one {
+  .main_container.rtl .header .menutoggle a img.one,
+  [dir="rtl"] .main_container .header .menutoggle button img.one,
+  .main_container.rtl .header .menutoggle button img.one {
     display: block !important;
     visibility: visible !important;
     width: auto !important;

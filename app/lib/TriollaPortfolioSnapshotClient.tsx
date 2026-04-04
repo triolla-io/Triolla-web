@@ -3,7 +3,10 @@
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { initTriollaConveyorTicker } from "./initTriollaConveyorTicker";
 import { ensurePortfolioFaqWrapShown, mountTriollaFaqAccordion } from "./mountTriollaFaqAccordion";
-import { rewriteTriollaNavLinks } from "./rewriteTriollaNavLinks";
+import {
+  rewriteTriollaNavLinks,
+  stripTriollaMarketingOriginFromHtmlHrefs,
+} from "./rewriteTriollaNavLinks";
 import {
   mountTriollaMobileMenu,
   stripJQueryMenutoggleClickHandlers,
@@ -123,13 +126,17 @@ export function TriollaPortfolioSnapshotClient({
                 ? "/fragments/_portfolio-site-chrome-he.html"
                 : "/fragments/_portfolio-site-chrome-en.html");
             try {
-              const chromeRes = await fetch(effectiveChromeUrl, { signal: ac.signal });
+              const chromeRes = await fetch(effectiveChromeUrl, {
+                cache: "no-store",
+                signal: ac.signal,
+              });
               if (chromeRes.ok) {
                 let chromeHtml = await chromeRes.text();
                 chromeHtml = chromeHtml
                   .split("%%ASSET_BASE%%")
                   .join(assetBase.replace(/\/$/, ""));
                 chromeHtml = normalizeHeaderAssetUrls(chromeHtml);
+                chromeHtml = stripTriollaMarketingOriginFromHtmlHrefs(chromeHtml);
                 chromeHtml = `<div data-triolla-portfolio-chrome="1" style="display:contents">${chromeHtml.trim()}</div>`;
                 const holder = document.createElement("div");
                 holder.innerHTML = chromeHtml;

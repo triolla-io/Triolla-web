@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Breadcrumbs } from "../components/Breadcrumbs";
 import { BlogClient } from "./BlogClient";
 import { generatePageMetadata } from "../lib/metadata";
 
@@ -12,5 +13,16 @@ export const metadata: Metadata = generatePageMetadata({
 });
 
 export default function BlogPage() {
-  return <BlogClient />;
+  return (
+    <>
+      <Breadcrumbs
+        ariaLabel="Breadcrumb"
+        items={[
+          { name: "Home", href: "/" },
+          { name: "Blog", href: "/blog" },
+        ]}
+      />
+      <BlogClient />
+    </>
+  );
 }
