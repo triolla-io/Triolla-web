@@ -66,6 +66,7 @@ export default function PortfolioItem({
                 height={mobileH}
                 className="h-auto w-full max-h-[min(240px,42vh)] object-contain object-center"
                 sizes="(max-width: 1199px) calc(100vw - 2rem), 1px"
+                loading="lazy"
               />
             </div>
             <div className="hidden w-full min-[1200px]:block">
@@ -76,6 +77,7 @@ export default function PortfolioItem({
                 height={imageHeight}
                 className="h-auto w-full object-contain"
                 sizes="(max-width: 1199px) 1px, 60vw"
+                loading="lazy"
               />
             </div>
           </>
@@ -87,6 +89,7 @@ export default function PortfolioItem({
             height={imageHeight}
             className="h-auto w-full max-h-[min(240px,42vh)] object-contain object-center max-[1199px]:max-w-full min-[1200px]:max-h-none"
             sizes="(max-width: 1199px) calc(100vw - 2rem), 60vw"
+            loading="lazy"
           />
         )}
       </div>
@@ -102,6 +105,7 @@ export default function PortfolioItem({
             width={logoWidth}
             height={logoHeight}
             className="h-auto max-h-12 w-auto max-w-[min(200px,85vw)] object-contain sm:max-h-16 lg:max-h-16"
+            loading="lazy"
           />
         </div>
 

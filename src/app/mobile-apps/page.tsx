@@ -9,11 +9,13 @@ import ExpandableHeroText from "@/components/ExpandableHeroText";
 import PartnerBtn from "@/components/PartnerBtn";
 import PortfolioItem from "@/components/PortfolioItem";
 import { portfolioMobileFor } from "@/lib/portfolioMobileImages";
-import ClientLogosSection from "@/components/ClientLogosSection";
-import WhyChooseUsSection from "@/components/WhyChooseUsSection";
-import DesignProcessSection from "@/components/DesignProcessSection";
-import FaqSection from "@/components/FaqSection";
-import PageBottomSection from "@/components/PageBottomSection";
+import {
+  LazyClientLogosSection as ClientLogosSection,
+  LazyDesignProcessSection as DesignProcessSection,
+  LazyFaqSection as FaqSection,
+  LazyPageBottomSection as PageBottomSection,
+  LazyWhyChooseUsSection as WhyChooseUsSection,
+} from "@/components/LazyBelowFoldMarketing";
 
 const companies = ["Tadiran", "Swetch", "Melingo", "PassportCard", "Hot", "CBS Survivor", "Overwolf", "Playtika"];
 

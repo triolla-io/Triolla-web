@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { flushSync } from "react-dom";
 import { initTriollaOwlCarousels } from "../about-us/initTriollaCarousels";
 import { mountTriollaHeaderPill } from "../about-us/mountTriollaHeaderPill";
 import { initTriollaConveyorTicker } from "../lib/initTriollaConveyorTicker";
@@ -80,6 +79,81 @@ function loadScriptSequential(src: string): Promise<HTMLScriptElement> {
   });
 }
 
+/** Basename for dependency matching (handles `/shared/foo.js` paths). */
+function scriptBasename(path: string): string {
+  const seg = path.split("/").pop() ?? path;
+  return seg.toLowerCase();
+}
+
+/**
+ * Load snapshot JS with safe parallelism: metaview overlaps following chain;
+ * independent scripts between ScrollTrigger and all.js load in parallel.
+ */
+async function loadPortfolioSnapshotScripts(
+  jsFiles: string[],
+  assetBaseNorm: string,
+  cancelled: () => boolean,
+  injectedScripts: HTMLScriptElement[],
+): Promise<void> {
+  const metaIndex = jsFiles.findIndex((f) => /metaview/i.test(scriptBasename(f)));
+  const allIndex = jsFiles.findIndex((f) => /(^|[^a-z])all\.js/i.test(scriptBasename(f)));
+  const stIndex = jsFiles.findIndex((f) =>
+    /scrolltrigger\.min\.js/i.test(scriptBasename(f)),
+  );
+
+  let metaviewPromise: Promise<unknown> = Promise.resolve();
+
+  const pushLoaded = async (src: string): Promise<void> => {
+    try {
+      const el = await loadScriptSequential(src);
+      injectedScripts.push(el);
+    } catch (e) {
+      console.warn("Skipping failed script:", src, e);
+    }
+  };
+
+  for (let i = 0; i < jsFiles.length; i++) {
+    if (cancelled()) return;
+
+    if (i === metaIndex) {
+      continue;
+    }
+
+    // Between ScrollTrigger and all.js: parallelize (single Promise.all still OK for one file).
+    if (
+      stIndex >= 0 &&
+      allIndex > stIndex + 1 &&
+      i === stIndex + 1
+    ) {
+      const middle = jsFiles.slice(stIndex + 1, allIndex);
+      await Promise.allSettled(
+        middle.map((f) => pushLoaded(snapshotAssetUrl(assetBaseNorm, f))),
+      );
+      i = allIndex - 1;
+      continue;
+    }
+
+    if (stIndex >= 0 && allIndex >= 0 && i > stIndex && i < allIndex) {
+      continue;
+    }
+
+    const src = snapshotAssetUrl(assetBaseNorm, jsFiles[i]);
+    await pushLoaded(src);
+
+    if (
+      metaIndex > 0 &&
+      i === metaIndex - 1 &&
+      !cancelled()
+    ) {
+      const metaSrc = snapshotAssetUrl(assetBaseNorm, jsFiles[metaIndex]);
+      metaviewPromise = pushLoaded(metaSrc);
+    }
+  }
+
+  if (cancelled()) return;
+  await metaviewPromise;
+}
+
 export function PortfolioPageWithCSS({
   data,
   depsPath,
@@ -98,9 +172,7 @@ export function PortfolioPageWithCSS({
     let cancelled = false;
     const injectedLinks: HTMLLinkElement[] = [];
     const injectedScripts: HTMLScriptElement[] = [];
-    flushSync(() => {
-      setTriollaChromeHtml("");
-    });
+    setTriollaChromeHtml("");
     setPhase("loading");
 
     const loadAssets = async () => {
@@ -131,11 +203,12 @@ export function PortfolioPageWithCSS({
           chromeInner = chromeHtml.trim();
         }
 
-        flushSync(() => {
-          setTriollaChromeHtml(chromeInner);
-        });
+        setTriollaChromeHtml(chromeInner);
 
-        await new Promise<void>((r) => requestAnimationFrame(() => r()));
+        // Two RAFs: React needs a full commit cycle to render dangerouslySetInnerHTML
+        await new Promise<void>((r) =>
+          requestAnimationFrame(() => requestAnimationFrame(() => r())),
+        );
 
         const root = mainContainerRef.current;
         if (!root) return;
@@ -165,16 +238,12 @@ export function PortfolioPageWithCSS({
         setPhase("ready");
 
         try {
-          for (const jsFile of deps.js) {
-            if (cancelled) return;
-            const src = snapshotAssetUrl(assetBaseNorm, jsFile);
-            try {
-              const scriptEl = await loadScriptSequential(src);
-              injectedScripts.push(scriptEl);
-            } catch (scriptError) {
-              console.warn("Skipping failed script:", src, scriptError);
-            }
-          }
+          await loadPortfolioSnapshotScripts(
+            deps.js,
+            assetBaseNorm,
+            () => cancelled,
+            injectedScripts,
+          );
 
           if (cancelled) return;
 
@@ -271,7 +340,7 @@ export function PortfolioPageWithCSS({
           Could not load page assets.
         </div>
       )}
-      <div style={{ visibility: phase === "ready" ? "visible" : "hidden", minHeight: "100vh" }}>
+      <div style={{ opacity: phase === "ready" ? 1 : 0, pointerEvents: phase === "ready" ? "auto" : "none", minHeight: "100vh" }}>
         <PortfolioPageTemplate
           ref={mainContainerRef}
           data={data}

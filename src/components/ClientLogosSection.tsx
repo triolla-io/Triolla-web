@@ -69,6 +69,7 @@ export default function ClientLogosSection({ className }: { className?: string }
               height={logo.h}
               className="block h-auto w-full max-w-full"
               sizes="(max-width: 767px) 120px, 240px"
+              loading="lazy"
             />
           </div>
         ))}

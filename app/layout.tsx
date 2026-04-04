@@ -31,6 +31,23 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
+      <head>
+        {/* Hebrew UI fonts (globals.css @font-face); Latin UI uses next/font Geist above. */}
+        <link
+          rel="preload"
+          href="/assets/_fonts/AlmoniMLv5AAA-Regular.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="/assets/_fonts/AlmoniMLv5AAA-Bold.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+      </head>
       <body>{children}</body>
     </html>
   );

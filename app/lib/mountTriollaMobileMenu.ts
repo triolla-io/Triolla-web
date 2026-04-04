@@ -76,15 +76,18 @@ export function mountTriollaMobileMenu(root: HTMLElement): () => void {
           overflow: cs.overflow,
           transform: cs.transform,
         });
-        // Check if any ancestor blocks fixed positioning
-        let el: HTMLElement | null = drawerEl;
-        while (el) {
-          const s = window.getComputedStyle(el);
-          if (s.transform !== 'none' || s.filter !== 'none' || s.willChange === 'transform') {
-            console.warn("[triolla-menu] ⚠ ancestor with transform/filter found:", el.tagName, el.className, { transform: s.transform, filter: s.filter, willChange: s.willChange });
-          }
-          el = el.parentElement;
+      // Walk ancestor chain — log visibility and any transforms
+      let el: HTMLElement | null = drawerEl.parentElement;
+      while (el) {
+        const s = window.getComputedStyle(el);
+        if (s.visibility !== 'visible') {
+          console.warn("[triolla-menu] ⚠ ancestor visibility!=visible:", el.tagName, el.className.slice(0, 80), "→", s.visibility, "| inline:", el.style.visibility);
         }
+        if (s.transform !== 'none' || s.filter !== 'none' || s.willChange === 'transform') {
+          console.warn("[triolla-menu] ⚠ ancestor with transform/filter:", el.tagName, el.className.slice(0, 80));
+        }
+        el = el.parentElement;
+      }
       } else {
         console.warn("[triolla-menu] .hmenumob NOT FOUND inside root!");
       }

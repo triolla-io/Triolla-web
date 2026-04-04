@@ -1,6 +1,7 @@
 import type { PortfolioPageData } from "../components/PortfolioPageWithCSS";
 
-const B = "/assets/b2c";
+/** Portfolio imagery lives in `public/images/` (per-slug `public/assets/b2c/` is not shipped). */
+const B = "/images";
 
 const B2C_ASSETS = {
   bannerGridImg: `${B}/banner_grid.svg`,

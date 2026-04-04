@@ -1,8 +1,6 @@
 import type { PortfolioPageData } from "../components/PortfolioPageWithCSS";
 
-/** Case-study screenshots committed under `public/assets/startups-tech/`. */
-const STG = "/assets/startups-tech";
-/** Shared theme / logos mirrored in `public/images/` (same as other portfolio pages). */
+/** Portfolio case-study assets live in `public/images/` (same as other industry pages). */
 const IMG = "/images";
 
 const STARTUPS_TECH_ASSETS = {
@@ -24,9 +22,9 @@ const STARTUPS_COMPANY_TICKER = [
 
 const ITEMS_EN: PortfolioPageData["portfolioItems"] = [
   {
-    logo: `${STG}/natural.png`,
+    logo: `${IMG}/natural.png`,
     desktopImg: `${IMG}/Natiral-Intelligence-Desktop.png`,
-    mobileImg: `${STG}/Natiral-Intelligence-Mobile.png`,
+    mobileImg: `${IMG}/Natiral-Intelligence-Mobile.png`,
     title:
       "Enhancing flows and user experience in Natural Intelligence platforms. Refining and improving the ux and ui across their products.",
     description:
@@ -34,9 +32,9 @@ const ITEMS_EN: PortfolioPageData["portfolioItems"] = [
     tags: ["StartupProduct", "ProductResearch", "Platforms"],
   },
   {
-    logo: `${STG}/ironsource-min.png`,
-    desktopImg: `${STG}/Iron-Source-Desktop.png`,
-    mobileImg: `${STG}/Iron-Source-Mobile.png`,
+    logo: `${IMG}/ironsource-min.png`,
+    desktopImg: `${IMG}/Iron-Source-Desktop.png`,
+    mobileImg: `${IMG}/Iron-Source-Mobile.png`,
     title:
       "ironSource partnered with us to elevate the UX of their monetization platform and align multiple products under one cohesive design system.",
     description:
@@ -45,8 +43,8 @@ const ITEMS_EN: PortfolioPageData["portfolioItems"] = [
   },
   {
     logo: `${IMG}/jfrog-min.png`,
-    desktopImg: `${STG}/Jfrog-desktop-1.png`,
-    mobileImg: `${STG}/Jfrog-mobile-1.png`,
+    desktopImg: `${IMG}/Jfrog-desktop-1.png`,
+    mobileImg: `${IMG}/Jfrog-mobile-1.png`,
     title: "Creating a CEO dashboard for quick, clear insights—enabling smarter, faster decisions.",
     description:
       "We designed a streamlined CEO dashboard focused on high-level performance insights, giving executives a clear, real-time view of key business metrics. With smart data visualizations, customizable reports, and intuitive navigation, the dashboard supports quick, informed decision-making at a glance.",
@@ -54,8 +52,8 @@ const ITEMS_EN: PortfolioPageData["portfolioItems"] = [
   },
   {
     logo: `${IMG}/taboola-min.png`,
-    desktopImg: `${STG}/Taboola-desktop-2.png`,
-    mobileImg: `${STG}/Taboola-mobile-2.png`,
+    desktopImg: `${IMG}/Taboola-desktop-2.png`,
+    mobileImg: `${IMG}/Taboola-mobile-2.png`,
     title:
       "A collaboration with Taboola  to redesign key parts of their publisher and advertiser platforms, improving clarity and control at scale.",
     description:
@@ -63,9 +61,9 @@ const ITEMS_EN: PortfolioPageData["portfolioItems"] = [
     tags: ["DataIntereface", "DesignTool", "UserJourney"],
   },
   {
-    logo: `${STG}/electreon-min.png`,
-    desktopImg: `${STG}/Electreon-Desktop.png`,
-    mobileImg: `${STG}/Electreon-Mobile.png`,
+    logo: `${IMG}/electreon-min.png`,
+    desktopImg: `${IMG}/Electreon-Desktop.png`,
+    mobileImg: `${IMG}/Electreon-Mobile.png`,
     title:
       "Electreon chose us to revamp their wireless charging platform with a unified, scalable design.",
     description:
@@ -73,9 +71,9 @@ const ITEMS_EN: PortfolioPageData["portfolioItems"] = [
     tags: ["ProductTeam", "DesignSystem", "TechProduct"],
   },
   {
-    logo: `${STG}/walkme-min.png`,
-    desktopImg: `${STG}/WalkMe-Deskop.png`,
-    mobileImg: `${STG}/WalkMe-Mobile.png`,
+    logo: `${IMG}/walkme-min.png`,
+    desktopImg: `${IMG}/WalkMe-Deskop.png`,
+    mobileImg: `${IMG}/WalkMe-Mobile.png`,
     title:
       "Enhancing the builder experience, we worked with WalkMe to make creating in-app guidance more intuitive and efficient for teams.",
     description:

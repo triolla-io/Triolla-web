@@ -69,6 +69,7 @@ export default function ContactSection() {
                         width={80}
                         height={40}
                         className="max-h-[40px] w-auto object-contain"
+                        loading="lazy"
                       />
                     </div>
                   </li>

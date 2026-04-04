@@ -48,6 +48,7 @@ export default function BlogCard({
               aspectRatio: large ? "16/10" : "3/2",
               objectFit: "cover",
             }}
+            loading="lazy"
           />
         </div>
 

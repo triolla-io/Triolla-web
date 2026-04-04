@@ -133,7 +133,7 @@ export default function LearnExploreGrowSection() {
               {[...learningItems, ...learningItems].map((item, i) => (
                 <div key={i} className="learslider-item">
                   <div className="ablealistimg">
-                    <Image src={item.img} alt="" width={387} height={709} style={{ width: "100%", height: "auto", display: "block" }} />
+                    <Image src={item.img} alt="" width={387} height={709} style={{ width: "100%", height: "auto", display: "block" }} loading="lazy" />
                   </div>
                   <div className="ablealisttxt"><p>{item.txt}</p></div>
                 </div>

@@ -50,7 +50,7 @@ export default function PageBottomSectionService() {
                   <li key={i}>
                     <div className="trustedimg">
                       <span>
-                        <Image src={logo.src} alt="" width={logo.w} height={logo.h} />
+                        <Image src={logo.src} alt="" width={logo.w} height={logo.h} loading="lazy" />
                       </span>
                     </div>
                   </li>
@@ -90,7 +90,7 @@ export default function PageBottomSectionService() {
                   <li key={i}>
                     <div className="trustedimg">
                       <span>
-                        <Image src={logo.src} alt="" width={logo.w} height={logo.h} />
+                        <Image src={logo.src} alt="" width={logo.w} height={logo.h} loading="lazy" />
                       </span>
                     </div>
                   </li>

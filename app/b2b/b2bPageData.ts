@@ -1,14 +1,17 @@
 import type { PortfolioPageData } from "../components/PortfolioPageWithCSS";
 
+/** Portfolio imagery lives in `public/images/` (per-slug `public/assets/b2b/` is not shipped). */
+const IMG = "/images";
+
 const ASSETS = {
-  bannerGridImg: "/assets/b2b/banner_grid.svg",
-  bannerLayerImg: "/assets/b2b/portolio_layer.svg",
-  jumpImg1: "/assets/b2b/jumping_1-1.svg",
-  jumpImg2: "/assets/b2b/jumping_2-1.svg",
-  jumpImg3: "/assets/b2b/jumping_3-1.svg",
+  bannerGridImg: `${IMG}/banner_grid.svg`,
+  bannerLayerImg: `${IMG}/portolio_layer.svg`,
+  jumpImg1: `${IMG}/jumping_1-1.svg`,
+  jumpImg2: `${IMG}/jumping_2-1.svg`,
+  jumpImg3: `${IMG}/jumping_3-1.svg`,
 } as const;
 
-const B = "/assets/b2b";
+const B = IMG;
 
 /** Mirrors `triolla-io-b2b-body.html` `.company_triker`. */
 const B2B_COMPANY_TICKER = [
@@ -111,18 +114,18 @@ const ITEMS_HE: PortfolioPageData["portfolioItems"] = [
 ];
 
 const LOGOS: PortfolioPageData["global"]["logos"] = [
-  { img: "/assets/b2b/microsoft_global.svg", alt: "Microsoft" },
-  { img: "/assets/b2b/american_express_global.svg", alt: "American Express" },
-  { img: "/assets/b2b/n_gloabl.svg", alt: "N" },
-  { img: "/assets/b2b/human_global.svg", alt: "Human" },
-  { img: "/assets/b2b/passport_cart_global.svg", alt: "Passport" },
-  { img: "/assets/b2b/jfrog_global.svg", alt: "JFrog" },
-  { img: "/assets/b2b/alam_global.svg", alt: "Alam" },
-  { img: "/assets/b2b/taboola_global.svg", alt: "Taboola" },
-  { img: "/assets/b2b/is_global.svg", alt: "IS" },
-  { img: "/assets/b2b/star_global.svg", alt: "Star" },
-  { img: "/assets/b2b/playtika_global.svg", alt: "Playtika" },
-  { img: "/assets/b2b/finaro_global.svg", alt: "Finaro" },
+  { img: `${IMG}/microsoft_global.svg`, alt: "Microsoft" },
+  { img: `${IMG}/american_express_global.svg`, alt: "American Express" },
+  { img: `${IMG}/n_gloabl.svg`, alt: "N" },
+  { img: `${IMG}/human_global.svg`, alt: "Human" },
+  { img: `${IMG}/passport_cart_global.svg`, alt: "Passport" },
+  { img: `${IMG}/jfrog_global.svg`, alt: "JFrog" },
+  { img: `${IMG}/alam_global.svg`, alt: "Alam" },
+  { img: `${IMG}/taboola_global.svg`, alt: "Taboola" },
+  { img: `${IMG}/is_global.svg`, alt: "IS" },
+  { img: `${IMG}/star_global.svg`, alt: "Star" },
+  { img: `${IMG}/playtika_global.svg`, alt: "Playtika" },
+  { img: `${IMG}/finaro_global.svg`, alt: "Finaro" },
 ];
 
 export const B2B_PAGE_DATA_EN: PortfolioPageData = {

@@ -1,9 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import FaqSection from "@/components/FaqSection";
-import ClientLogosSection from "@/components/ClientLogosSection";
-import PageBottomSection from "@/components/PageBottomSection";
 import ScrollReveal from "@/components/ScrollReveal";
 import PartnerCtaButton from "@/components/PartnerCtaButton";
 import DesignProcessSection from "@/components/DesignProcessSection";
@@ -13,6 +10,11 @@ import { useRef, useState, useCallback, useEffect } from "react";
 import { useLocale } from "@/components/LocaleProvider";
 import { withLocalePrefix } from "@/lib/i18n";
 import { home } from "@/messages/home";
+import {
+  LazyClientLogosSection as ClientLogosSection,
+  LazyFaqSection as FaqSection,
+  LazyPageBottomSection as PageBottomSection,
+} from "@/components/LazyBelowFoldMarketing";
 
 const whyUsImgs = ["Triola_anim_-44444.svg", "Triola_anim_-111111.svg", "Triola_anim_-33333.svg", "Triola_anim_-2222.svg"];
 
@@ -65,10 +67,10 @@ export default function HomePage() {
     <>
       <section className="pt-[130px] sm:pt-[140px] lg:pt-[262px]" style={{ background: "#FED125", position: "relative", overflow: "hidden", zIndex: 0 }}>
         <div style={{ position: "absolute", top: "12%", right: 0, maxWidth: 1785, pointerEvents: "none", zIndex: 0 }}>
-          <Image src="/images/homeecla1.svg" alt="" width={1785} height={2118} className="w-full" />
+          <Image src="/images/homeecla1.svg" alt="" width={1785} height={2118} className="w-full" loading="lazy" />
         </div>
         <div style={{ position: "absolute", bottom: "3%", left: "-4%", maxWidth: 1807, pointerEvents: "none", zIndex: 0 }}>
-          <Image src="/images/homeecla2.svg" alt="" width={1807} height={2302} className="w-full" />
+          <Image src="/images/homeecla2.svg" alt="" width={1807} height={2302} className="w-full" loading="lazy" />
         </div>
 
         <motion.div
@@ -127,7 +129,7 @@ export default function HomePage() {
                   <div className="flex flex-col h-full rounded-[24px] border border-[#D5D5D5]">
                     <div className="flex flex-col flex-1 px-4 pt-[18px] pb-[24px]">
                       <div className="flex items-center justify-center w-full mb-[14px] h-[100px]">
-                        <Image src={`/images/${whyUsImgs[i % m.whyCards.length]}`} alt={card.title} width={100} height={100} style={{ maxHeight: 100, width: "auto" }} />
+                        <Image src={`/images/${whyUsImgs[i % m.whyCards.length]}`} alt={card.title} width={100} height={100} style={{ maxHeight: 100, width: "auto" }} loading="lazy" />
                       </div>
                       <div className="text-center">
                         <h5 className="text-[20px] leading-[1.2] text-[#E7EBF0] font-bold mb-[6px] capitalize">{card.title}</h5>
@@ -147,7 +149,7 @@ export default function HomePage() {
                   <div className="flex flex-col h-full rounded-[49px] border border-[#D5D5D5]">
                     <div className="flex flex-col flex-1 px-5 pt-[26px] pb-[37px]">
                       <div className="flex items-center justify-center w-full mb-[22px] h-[154px]">
-                        <Image src={`/images/${whyUsImgs[i]}`} alt={card.title} width={130} height={130} style={{ maxHeight: 154, width: "auto" }} />
+                        <Image src={`/images/${whyUsImgs[i]}`} alt={card.title} width={130} height={130} style={{ maxHeight: 154, width: "auto" }} loading="lazy" />
                       </div>
                       <div className="text-center">
                         <h5 className="text-[30px] leading-[1.2] lg:text-[38px] lg:leading-[42px] text-[#E7EBF0] font-bold mb-[8px] capitalize">{card.title}</h5>
@@ -184,7 +186,7 @@ export default function HomePage() {
             {winnerImgs.map((box, i) => (
               <ScrollReveal key={i} delay={i * 0.15} className="wbox-item">
                 <div className="wbox-img">
-                  <Image src={`/images/${box.img}`} alt={m.winnerBoxes[i].title} width={box.w} height={box.h} />
+                  <Image src={`/images/${box.img}`} alt={m.winnerBoxes[i].title} width={box.w} height={box.h} loading="lazy" />
                 </div>
                 <div className="wbox-title">{m.winnerBoxes[i].title}</div>
               </ScrollReveal>

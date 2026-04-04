@@ -6,9 +6,11 @@ import { motion } from "framer-motion";
 import ScrollReveal from "@/components/ScrollReveal";
 import HeroJumpSvgs from "@/components/HeroJumpSvgs";
 import GradientBtn from "@/components/GradientBtn";
-import ClientLogosSection from "@/components/ClientLogosSection";
-import FaqSection from "@/components/FaqSection";
-import PageBottomSection from "@/components/PageBottomSection";
+import {
+  LazyClientLogosSection as ClientLogosSection,
+  LazyFaqSection as FaqSection,
+  LazyPageBottomSection as PageBottomSection,
+} from "@/components/LazyBelowFoldMarketing";
 
 /* ── data ─────────────────────────────────────────────────── */
 

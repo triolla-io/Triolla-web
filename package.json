@@ -10,6 +10,7 @@
     "postinstall": "node app/scripts/materialize-consolidated-symlinks.js",
     "build": "node app/scripts/materialize-consolidated-symlinks.js && next build",
     "build:clean": "rm -rf .next && next build",
+    "analyze": "ANALYZE=true npm run build",
     "start": "next start",
     "lint": "eslint",
     "dedupe:css": "node scripts/dedupe-public-css.js",
@@ -23,6 +24,7 @@
     "react-dom": "19.2.4"
   },
   "devDependencies": {
+    "@next/bundle-analyzer": "^16.2.2",
     "@tailwindcss/postcss": "^4.2.2",
     "@types/node": "^20",
     "@types/react": "^19",

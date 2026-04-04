@@ -1,70 +1,91 @@
 import type { PortfolioPageData } from "../components/PortfolioPageWithCSS";
 
-const AGRITECH_ASSETS = {
-  bannerGridImg: "/assets/agritech/banner_grid.svg",
-  bannerLayerImg: "/assets/agritech/portolio_layer.svg",
-  jumpImg1: "/assets/agritech/jumping_1-1.svg",
-  jumpImg2: "/assets/agritech/jumping_2-1.svg",
-  jumpImg3: "/assets/agritech/jumping_3-1.svg",
+/** Portfolio imagery in `public/images/` (placeholder `/assets/agritech/*` files are not shipped). */
+const IMG = "/images";
+
+const ASSETS = {
+  bannerGridImg: `${IMG}/banner_grid.svg`,
+  bannerLayerImg: `${IMG}/portolio_layer.svg`,
+  jumpImg1: `${IMG}/jumping_1-1.svg`,
+  jumpImg2: `${IMG}/jumping_2-1.svg`,
+  jumpImg3: `${IMG}/jumping_3-1.svg`,
 } as const;
 
+/**
+ * Case studies use on-disk mocks (irrigation, field IoT, climate, remote monitoring).
+ * Order: Bermad, Ayyeka, Tadiran, Essence — aligned with agritech-adjacent work.
+ */
 const AGRITECH_ITEMS_EN: PortfolioPageData["portfolioItems"] = [
   {
-    logo: "/assets/agritech/logo-1.png",
-    desktopImg: "/assets/agritech/item-1-desktop.png",
-    mobileImg: "/assets/agritech/item-1-mobile.png",
-    title: "Farm Management System",
+    logo: `${IMG}/bermad-min.png`,
+    desktopImg: `${IMG}/Frame-2147224067-2.png`,
+    mobileImg: `${IMG}/Bermad-mobile.png`,
+    title:
+      "Empowering smarter irrigation, we designed Bermad’s platform —making it easy for users to monitor, manage, & optimize water systems efficiently.",
     description:
-      "Mobile and web application for crop planning, monitoring, and harvest management.",
-    tags: ["FarmTech", "MobileFirst", "Agriculture"],
+      "We partnered with Bermad to design a user-friendly interface for their advanced irrigation platform. Our work focused on simplifying complex water management tasks through intuitive layouts, real-time data visualization, and streamlined controls—empowering users to easily monitor, adjust, and optimize their irrigation systems for greater efficiency and control.",
+    tags: ["ProductUI", "ProductResearch", "ProductInterface"],
   },
   {
-    logo: "/assets/agritech/logo-2.png",
-    desktopImg: "/assets/agritech/item-2-desktop.png",
-    mobileImg: "/assets/agritech/item-2-mobile.png",
-    title: "IoT Sensor Dashboard",
-    description: "Real-time monitoring of soil, weather, and crop health metrics.",
-    tags: ["IoT", "DataDriven", "FarmMonitoring"],
+    logo: `${IMG}/ayyeka-min.png`,
+    desktopImg: `${IMG}/Ayyeka-desktop.png`,
+    mobileImg: `${IMG}/Ayyeka-mobile.png`,
+    title:
+      "Ayyeka partnered with us to revamp their IIoT platform, enhancing accessibility and usability of remote infrastructure data.",
+    description:
+      "We worked closely with Ayyeka to redesign their IIoT platform, focusing on making complex remote infrastructure data easy to access and act on. Our process involved user research, simplifying workflows, and creating clear data visualizations—ensuring operators can monitor assets efficiently and make informed decisions quickly.",
+    tags: ["Platform", "Design", "IoT"],
   },
   {
-    logo: "/assets/agritech/logo-3.png",
-    desktopImg: "/assets/agritech/item-3-desktop.png",
-    mobileImg: "/assets/agritech/item-3-mobile.png",
-    title: "Marketplace Platform",
-    description: "Connecting farmers with buyers and agricultural resources.",
-    tags: ["Marketplace", "Agriculture", "Supply Chain"],
+    logo: `${IMG}/Tadiran-1.png`,
+    desktopImg: `${IMG}/Tadiran.png`,
+    mobileImg: `${IMG}/Tadiran-mobile.png`,
+    title:
+      "Reimagining climate control—Tadiran’s app lets users manage their indoor environment effortlessly, anytime, anywhere.",
+    description:
+      "We redesigned the smart climate control app to turn complex functionality into a clean, intuitive, and accessible experience—focusing on clear interactions and seamless connectivity.",
+    tags: ["AppDesign", "AppExperience", "UserExperience"],
   },
   {
-    logo: "/assets/agritech/logo-4.png",
-    desktopImg: "/assets/agritech/item-4-desktop.png",
-    mobileImg: "/assets/agritech/item-4-mobile.png",
-    title: "Sustainability Analytics",
-    description: "Tracking environmental impact and sustainable farming practices.",
-    tags: ["Sustainability", "Analytics", "Reporting"],
+    logo: `${IMG}/Esences.png`,
+    desktopImg: `${IMG}/Essence-desktop.png`,
+    mobileImg: `${IMG}/Essence-mobile.png`,
+    title:
+      "Designing an intuitive platform for Essence Group, helping providers monitor patients and respond quickly through a clear, user-friendly interface.",
+    description:
+      "We worked with Essence Group to design a user-friendly healthcare platform for providers, simplifying patient monitoring, alerts, and real-time response. Our UI/UX made complex telecare tools more accessible, supporting faster, more effective care.",
+    tags: ["ProductUX", "ProductResearch", "UIDesign", "UserInterview"],
   },
 ];
 
 const AGRITECH_ITEMS_HE: PortfolioPageData["portfolioItems"] = [
   {
     ...AGRITECH_ITEMS_EN[0],
-    title: "מערכת ניהול חווה",
+    title:
+      "העצמה של השקיה חכמה — עיצבנו לברמד פלטפורמה שמקלה על משתמשים לנטר, לנהל ולייעל מערכות מים ביעילות.",
     description:
-      "אפליקציית מובייל ואתר לתכנון גידולים, ניטור וניהול קציר.",
+      "שותפנו לברמד לעיצוב ממשק ידידותי לפלטפורמת ההשקיה המתקדמת. התמקדנו בפישוט ניהול מים מורכב באמצעות פריסות אינטואיטיביות, ויזואליזציה בזמן אמת ובקרות זורמות — כדי לאפשר ניטור והתאמה קלה ושליטה יעילה יותר.",
   },
   {
     ...AGRITECH_ITEMS_EN[1],
-    title: "לוח בקרת חיישני IoT",
-    description: "ניטור בזמן אמת של קרקע, מזג אוויר ומצב הגידולים.",
+    title:
+      "שיפור פלטפורמת ה־IIoT של אייקה — נגישות ושימושיות טובות יותר בנתוני תשתית מרחוק.",
+    description:
+      "שכננו מחדש את הפלטפורמה כך שנתוני תשתית מרוחקת יהיו קלים יותר לצפייה ולפעולה, עם מחקר משתמשים, פישוט זרימות עבודה וויזואליזציה ברורה לניטור נכסים והחלטות מהירות.",
   },
   {
     ...AGRITECH_ITEMS_EN[2],
-    title: "פלטפורמת מרקטפלייס",
-    description: "מחברת חקלאים לקונים ולמשאבים חקלאיים.",
+    title:
+      "חידוש בקרת האקלים — לאפליקציה של תדיראן ניהול הסביבה הפנימית בקלות, בכל זמן ומכל מקום.",
+    description:
+      "עיצבנו מחדש אפליקציית בקרת אקלים חכמה — מתפקוד מורכב לחוויה נקייה, אינטואיטיבית ונגישה, עם דגש על אינטראקציות ברורות וחיבוריות חלקה.",
   },
   {
     ...AGRITECH_ITEMS_EN[3],
-    title: "אנליטיקה לקיימות",
-    description: "מעקב אחר השפעה סביבתית ופרקטיקות חקלאות בת־קיימא.",
+    title:
+      "פלטפורמה אינטואיטיבית לקבוצת אסנס — מסייעת לספקים לנטר חולים ולהגיב במהירות דרך ממשק ברור ונוח.",
+    description:
+      "עבדנו עם אסנס על פלטפורמת טלטיפול ידידותית לספקים, עם פישוט ניטור, התראות ותגובה בזמן אמת. ה־UI/UX הפך כלים מורכבים לנגישים יותר ותומך בטיפול מהיר ויעיל יותר.",
   },
 ];
 
@@ -84,18 +105,18 @@ const AGRITECH_COMPANY_TICKER: string[] = [
 ];
 
 const AGRITECH_GLOBAL_LOGOS: PortfolioPageData["global"]["logos"] = [
-  { img: "/assets/agritech/microsoft_global.svg", alt: "Microsoft" },
-  { img: "/assets/agritech/american_express_global.svg", alt: "American Express" },
-  { img: "/assets/agritech/n_gloabl.svg", alt: "N" },
-  { img: "/assets/agritech/human_global.svg", alt: "Human" },
-  { img: "/assets/agritech/passport_cart_global.svg", alt: "Passport" },
-  { img: "/assets/agritech/jfrog_global.svg", alt: "JFrog" },
-  { img: "/assets/agritech/alam_global.svg", alt: "Alam" },
-  { img: "/assets/agritech/taboola_global.svg", alt: "Taboola" },
-  { img: "/assets/agritech/is_global.svg", alt: "IS" },
-  { img: "/assets/agritech/star_global.svg", alt: "Star" },
-  { img: "/assets/agritech/playtika_global.svg", alt: "Playtika" },
-  { img: "/assets/agritech/finaro_global.svg", alt: "Finaro" },
+  { img: `${IMG}/microsoft_global.svg`, alt: "Microsoft" },
+  { img: `${IMG}/american_express_global.svg`, alt: "American Express" },
+  { img: `${IMG}/n_gloabl.svg`, alt: "N" },
+  { img: `${IMG}/human_global.svg`, alt: "Human" },
+  { img: `${IMG}/passport_cart_global.svg`, alt: "Passport" },
+  { img: `${IMG}/jfrog_global.svg`, alt: "JFrog" },
+  { img: `${IMG}/alam_global.svg`, alt: "Alam" },
+  { img: `${IMG}/taboola_global.svg`, alt: "Taboola" },
+  { img: `${IMG}/is_global.svg`, alt: "IS" },
+  { img: `${IMG}/star_global.svg`, alt: "Star" },
+  { img: `${IMG}/playtika_global.svg`, alt: "Playtika" },
+  { img: `${IMG}/finaro_global.svg`, alt: "Finaro" },
 ];
 
 export const AGRITECH_PAGE_DATA_EN: PortfolioPageData = {
@@ -113,7 +134,7 @@ export const AGRITECH_PAGE_DATA_EN: PortfolioPageData = {
       "In agritech, users range from small-scale farmers to large agricultural enterprises. Our UX design translates complex agricultural data into actionable insights, creates intuitive mobile-first interfaces for field use, and supports sustainable farming practices. We understand the unique challenges of agricultural technology and design accordingly.",
     buttonText: "Partner with us",
     buttonLink: "#contactus",
-    ...AGRITECH_ASSETS,
+    ...ASSETS,
   },
   portfolioItems: AGRITECH_ITEMS_EN,
   why: {
@@ -160,7 +181,7 @@ export const AGRITECH_PAGE_DATA_HE: PortfolioPageData = {
       "באגריטק, קהל המשתמשים נע בין חקלאים בשטח קטן ועד ארגונים חקלאיים גדולים. עיצוב ה־UX שלנו הופך נתונים חקלאיים מורכבים לתובנות ברות מעש, מייצר ממשקים אינטואיטיביים המותאמים לעבודה בשטח ותומך בפרקטיקות קיימות. אנו מכירים את האתגרים הייחודיים של טכנולוגיה חקלאית ומתאימים את העיצוב בהתאם.",
     buttonText: "שותפו איתנו",
     buttonLink: "#contactus",
-    ...AGRITECH_ASSETS,
+    ...ASSETS,
   },
   portfolioItems: AGRITECH_ITEMS_HE,
   why: {

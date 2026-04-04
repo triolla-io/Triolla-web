@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Banner from "@/components/Banner";
 import ContactSection from "@/components/ContactSection";
-import WhyChooseUsSection from "@/components/WhyChooseUsSection";
+import { LazyWhyChooseUsSection as WhyChooseUsSection } from "@/components/LazyBelowFoldMarketing";
 import { companyTicker, whyChooseUs } from "@/lib/pages";
 
 interface PortfolioEntry {

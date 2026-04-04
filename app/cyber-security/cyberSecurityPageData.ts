@@ -1,29 +1,29 @@
 import type { PortfolioPageData } from "../components/PortfolioPageWithCSS";
 
-const BASE_EN = "/assets/cyber-security";
-const BASE_HE = "/assets/cyber-security-he";
+/** EN/HE case studies and hero art live in `public/images/` (slug asset dirs are empty). */
+const IMG = "/images";
 
 const ASSETS_EN = {
-  bannerGridImg: `${BASE_EN}/banner_grid.svg`,
-  bannerLayerImg: `${BASE_EN}/portolio_layer.svg`,
-  jumpImg1: `${BASE_EN}/jumping_1-1.svg`,
-  jumpImg2: `${BASE_EN}/jumping_2-1.svg`,
-  jumpImg3: `${BASE_EN}/jumping_3-1.svg`,
+  bannerGridImg: `${IMG}/banner_grid.svg`,
+  bannerLayerImg: `${IMG}/portolio_layer.svg`,
+  jumpImg1: `${IMG}/jumping_1-1.svg`,
+  jumpImg2: `${IMG}/jumping_2-1.svg`,
+  jumpImg3: `${IMG}/jumping_3-1.svg`,
 } as const;
 
 const ASSETS_HE = {
-  bannerGridImg: `${BASE_HE}/banner_grid.svg`,
-  bannerLayerImg: `${BASE_HE}/portolio_layer.svg`,
-  jumpImg1: `${BASE_HE}/jumping_1-1.svg`,
-  jumpImg2: `${BASE_HE}/jumping_2-1.svg`,
-  jumpImg3: `${BASE_HE}/jumping_3-1.svg`,
+  bannerGridImg: `${IMG}/banner_grid.svg`,
+  bannerLayerImg: `${IMG}/portolio_layer.svg`,
+  jumpImg1: `${IMG}/jumping_1-1.svg`,
+  jumpImg2: `${IMG}/jumping_2-1.svg`,
+  jumpImg3: `${IMG}/jumping_3-1.svg`,
 } as const;
 
 const ITEMS_EN: PortfolioPageData["portfolioItems"] = [
   {
-    logo: `${BASE_EN}/armis-min.png`,
-    desktopImg: `${BASE_EN}/Armis-desktop.png`,
-    mobileImg: `${BASE_EN}/Armis-mobile.png`,
+    logo: `${IMG}/armis-min.png`,
+    desktopImg: `${IMG}/Armis-desktop.png`,
+    mobileImg: `${IMG}/Armis-mobile.png`,
     title:
       "Redefining game intelligence by enhancing user engagement and performance through management and analytics platforms.",
     description:
@@ -31,26 +31,26 @@ const ITEMS_EN: PortfolioPageData["portfolioItems"] = [
     tags: ["ProductUX", "ProductUI", "DesignSystem", "UserExperience"],
   },
   {
-    logo: `${BASE_EN}/suridata_logo.svg`,
-    desktopImg: `${BASE_EN}/Suridata-desktop.png`,
-    mobileImg: `${BASE_EN}/Suridata-mobile.png`,
+    logo: `${IMG}/suridata_logo.svg`,
+    desktopImg: `${IMG}/Suridata-desktop.png`,
+    mobileImg: `${IMG}/Suridata-mobile.png`,
     title: "Expansion of security capabilities through strategic UX design.",
     description:
       "Suridata partnership focused on security product design and user experience enhancement.",
     tags: ["SecurityDesign", "ProductStrategy", "UserTrust"],
   },
   {
-    logo: `${BASE_EN}/safebridge-min.png`,
-    desktopImg: `${BASE_EN}/Safebridge-desktop.png`,
-    mobileImg: `${BASE_EN}/Safebridge-mobile.png`,
+    logo: `${IMG}/safebridge-min.png`,
+    desktopImg: `${IMG}/Safebridge-desktop.png`,
+    mobileImg: `${IMG}/Safebridge-mobile.png`,
     title: "Advanced threat detection and response interface design.",
     description: "Creating intuitive dashboards for security operations and threat management.",
     tags: ["ThreatDetection", "Dashboard", "SecurityOps"],
   },
   {
-    logo: `${BASE_EN}/cyngular_logo.svg`,
-    desktopImg: `${BASE_EN}/Cyngular-desktop.png`,
-    mobileImg: `${BASE_EN}/Cyngular-mobile.png`,
+    logo: `${IMG}/cyngular_logo.svg`,
+    desktopImg: `${IMG}/Cyngular-desktop.png`,
+    mobileImg: `${IMG}/Cyngular-mobile.png`,
     title: "Network security platform user interface optimization.",
     description: "Designing clear, accessible security interfaces for network management.",
     tags: ["NetworkSecurity", "UXDesign", "AccessibleUI"],
@@ -59,34 +59,34 @@ const ITEMS_EN: PortfolioPageData["portfolioItems"] = [
 
 const ITEMS_HE: PortfolioPageData["portfolioItems"] = [
   {
-    logo: `${BASE_HE}/armis-min.png`,
-    desktopImg: `${BASE_HE}/Armis-desktop.png`,
-    mobileImg: `${BASE_HE}/Armis-mobile.png`,
+    logo: `${IMG}/armis-min.png`,
+    desktopImg: `${IMG}/Armis-desktop.png`,
+    mobileImg: `${IMG}/Armis-mobile.png`,
     title: "חיזוק מעורבות וביצועים באמצעות פלטפורמות ניהול ואנליטיקה.",
     description:
       "שיתוף פעולה ארוך ומוצלח עם דגש על ניתוח, אבטחה, שביעות רצון משתמשים, נתונים ועוד.",
     tags: ITEMS_EN[0].tags,
   },
   {
-    logo: `${BASE_HE}/suridata_logo.svg`,
-    desktopImg: `${BASE_HE}/Suridata-desktop.png`,
-    mobileImg: `${BASE_HE}/Suridata-mobile.png`,
+    logo: `${IMG}/suridata_logo.svg`,
+    desktopImg: `${IMG}/Suridata-desktop.png`,
+    mobileImg: `${IMG}/Suridata-mobile.png`,
     title: "הרחבת יכולות אבטחה באמצעות אסטרטגיית UX.",
     description: "שותפות Suridata — עיצוב מוצרי אבטחה וחיזוק חוויית המשתמש.",
     tags: ITEMS_EN[1].tags,
   },
   {
-    logo: `${BASE_HE}/saf_breach_logo.svg`,
-    desktopImg: `${BASE_HE}/Safebridge-desktop.png`,
-    mobileImg: `${BASE_HE}/Safebridge-mobile.png`,
+    logo: `${IMG}/saf_breach_logo.svg`,
+    desktopImg: `${IMG}/Safebridge-desktop.png`,
+    mobileImg: `${IMG}/Safebridge-mobile.png`,
     title: "עיצוב ממשק לזיהוי איומים ותגובה מתקדמת.",
     description: "דשבורדים אינטואיטיביים לפעולות אבטחה וניהול איומים.",
     tags: ITEMS_EN[2].tags,
   },
   {
-    logo: `${BASE_HE}/cyngular_logo.svg`,
-    desktopImg: `${BASE_HE}/Cyngular-desktop.png`,
-    mobileImg: `${BASE_HE}/Cyngular-mobile.png`,
+    logo: `${IMG}/cyngular_logo.svg`,
+    desktopImg: `${IMG}/Cyngular-desktop.png`,
+    mobileImg: `${IMG}/Cyngular-mobile.png`,
     title: "אופטימיזציה של ממשק לפלטפורמת אבטחת רשת.",
     description: "ממשקי אבטחה ברורים ונגישים לניהול רשת.",
     tags: ITEMS_EN[3].tags,
@@ -167,7 +167,7 @@ export const CYBER_SECURITY_PAGE_DATA_EN: PortfolioPageData = {
   global: {
     title: "Our Clients",
     subtitle: "From small to global, we have partnered with some great companies",
-    logos: logosWithBase(BASE_EN),
+    logos: logosWithBase(IMG),
     buttonText: "Let's Talk",
     buttonLink: "#contactus",
   },
@@ -216,7 +216,7 @@ export const CYBER_SECURITY_PAGE_DATA_HE: PortfolioPageData = {
   global: {
     title: "הלקוחות שלנו",
     subtitle: "מקומי ועד גלובלי — התקדמנו עם חברות מעולות",
-    logos: logosWithBase(BASE_HE),
+    logos: logosWithBase(IMG),
     buttonText: "בואו נדבר",
     buttonLink: "#contactus",
   },

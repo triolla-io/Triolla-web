@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import ScrollReveal from "@/components/ScrollReveal";
 import HeroJumpSvgs from "@/components/HeroJumpSvgs";
 import PartnerBtn from "@/components/PartnerBtn";
-import PageBottomSection from "@/components/PageBottomSection";
+import { LazyPageBottomSection as PageBottomSection } from "@/components/LazyBelowFoldMarketing";
 
 export default function BrandingStudioPage() {
   return (

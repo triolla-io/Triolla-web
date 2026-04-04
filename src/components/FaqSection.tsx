@@ -52,6 +52,7 @@ export default function FaqSection({ questions }: { questions?: FaqItem[] }) {
                     width={50}
                     height={50}
                     className="w-[36px] h-[36px] sm:w-[50px] sm:h-[50px] object-cover rounded-full"
+                    loading="lazy"
                   />
                 </span>
                 {/* Question text */}
@@ -65,6 +66,7 @@ export default function FaqSection({ questions }: { questions?: FaqItem[] }) {
                   width={openIndex === i ? 20 : 22}
                   height={openIndex === i ? 3 : 22}
                   className="absolute end-0 top-[50%] -translate-y-1/2 sm:top-[44px] sm:translate-y-0"
+                  loading="lazy"
                 />
               </button>
 

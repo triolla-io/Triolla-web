@@ -5,7 +5,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import ScrollReveal from "@/components/ScrollReveal";
 import HeroJumpSvgs from "@/components/HeroJumpSvgs";
-import PageBottomSection from "@/components/PageBottomSection";
+import { LazyPageBottomSection as PageBottomSection } from "@/components/LazyBelowFoldMarketing";
 import CareersImageCollage from "@/components/sections/CareersImageCollage";
 import "./careers-page.css";
 

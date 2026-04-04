@@ -201,7 +201,8 @@ export function HomeClient() {
         {...(dataRsssl != null ? { "data-rsssl": dataRsssl } : {})}
         suppressHydrationWarning
         style={{
-          visibility: phase === "ready" ? "visible" : "hidden",
+          opacity: phase === "ready" ? 1 : 0,
+          pointerEvents: phase === "ready" ? "auto" : "none",
           minHeight: "100vh",
         }}
       />

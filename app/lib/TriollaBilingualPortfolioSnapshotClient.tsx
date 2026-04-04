@@ -343,7 +343,7 @@ export function TriollaBilingualPortfolioSnapshotClient({
         {...(dataRsssl != null ? { "data-rsssl": dataRsssl } : {})}
         suppressHydrationWarning
         style={{
-          visibility: ready ? "visible" : "hidden",
+          opacity: ready ? 1 : 0,
           pointerEvents: ready ? "auto" : "none",
           minHeight: "100vh",
         }}

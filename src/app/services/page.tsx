@@ -5,9 +5,11 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import ScrollReveal from "@/components/ScrollReveal";
 import HeroJumpSvgs from "@/components/HeroJumpSvgs";
-import FaqSection from "@/components/FaqSection";
-import ClientLogosSection from "@/components/ClientLogosSection";
-import PageBottomSection from "@/components/PageBottomSection";
+import {
+  LazyClientLogosSection as ClientLogosSection,
+  LazyFaqSection as FaqSection,
+  LazyPageBottomSection as PageBottomSection,
+} from "@/components/LazyBelowFoldMarketing";
 
 const productDesignLinks = [
   { href: "/services/product-ux-ui-design/", label: "Product UX/UI Design" },

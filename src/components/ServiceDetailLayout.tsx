@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import HeroJumpSvgs from "@/components/HeroJumpSvgs";
-import PageBottomSectionService from "@/components/PageBottomSectionService";
+import { LazyPageBottomSectionService as PageBottomSectionService } from "@/components/LazyBelowFoldMarketing";
 
 /** Mobile-first: smaller title below `sm` (768px) to match triolla.io service pages (~34px). */
 const H1_DEFAULT =
@@ -84,6 +84,7 @@ export default function ServiceDetailLayout({
               alt={heroImageAlt}
               width={heroImageWidth}
               height={heroImageHeight}
+              priority
               className="relative z-30 h-auto w-full rounded-[24px] object-cover shadow-[0_24px_48px_-12px_rgba(0,0,0,0.22)]"
             />
           </div>

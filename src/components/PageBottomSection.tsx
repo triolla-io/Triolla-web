@@ -32,7 +32,7 @@ export default function PageBottomSection() {
                   <div className="grid__item-img">
                     <div ref={gridRef}>
                       <motion.div style={{ y: gridY }}>
-                        <Image src="/images/grid_all.png" alt="" width={1920} height={800} className="w-full h-auto" />
+                        <Image src="/images/grid_all.png" alt="" width={1920} height={800} className="w-full h-auto" loading="lazy" />
                       </motion.div>
                     </div>
                   </div>
@@ -73,7 +73,7 @@ export default function PageBottomSection() {
               <ul>
                 {trustedLogos.map((logo, i) => (
                   <li key={i}>
-                    <div className="trustedimg"><span><Image src={logo.src} alt="" width={logo.w} height={logo.h} /></span></div>
+                    <div className="trustedimg"><span><Image src={logo.src} alt="" width={logo.w} height={logo.h} loading="lazy" /></span></div>
                   </li>
                 ))}
               </ul>
@@ -112,7 +112,7 @@ export default function PageBottomSection() {
               <ul>
                 {trustedLogos.map((logo, i) => (
                   <li key={i}>
-                    <div className="trustedimg"><span><Image src={logo.src} alt="" width={logo.w} height={logo.h} /></span></div>
+                    <div className="trustedimg"><span><Image src={logo.src} alt="" width={logo.w} height={logo.h} loading="lazy" /></span></div>
                   </li>
                 ))}
               </ul>

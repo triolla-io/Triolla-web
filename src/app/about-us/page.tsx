@@ -7,11 +7,13 @@ import { motion } from "framer-motion";
 import HeroJumpSvgs from "@/components/HeroJumpSvgs";
 import OurServicesSection from "@/components/OurServicesSection";
 import ScrollReveal from "@/components/ScrollReveal";
-import DesignProcessSection from "@/components/DesignProcessSection";
 import LearnExploreGrowSection from "@/components/LearnExploreGrowSection";
-import FaqSection from "@/components/FaqSection";
-import ClientLogosSection from "@/components/ClientLogosSection";
-import PageBottomSection from "@/components/PageBottomSection";
+import {
+  LazyClientLogosSection as ClientLogosSection,
+  LazyDesignProcessSection as DesignProcessSection,
+  LazyFaqSection as FaqSection,
+  LazyPageBottomSection as PageBottomSection,
+} from "@/components/LazyBelowFoldMarketing";
 
 const whyUsItems = [
   {
