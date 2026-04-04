@@ -1,13 +1,11 @@
 /* =============================================================================
    Triolla HTML snapshots — mobile / tablet (≤1023px)
-   Matches original WordPress theme: body.mbodyact controls menu slide
-   Properly positions: Logo | Contact | Hamburger (left to right on EN)
+   Uses float layout matching original WordPress theme
    ============================================================================= */
 
 @media (max-width: 1023px) {
-  /* 1. Menu drawer: fixed position, slides in/out via right/left properties */
+  /* 1. Menu drawer: fixed position, slides in/out via right/left */
   [data-triolla-snapshot] .hmenumob {
-    transform: none !important;
     display: block !important;
     position: fixed !important;
     top: 0 !important;
@@ -26,6 +24,7 @@
     overflow-y: auto !important;
     overflow-x: hidden !important;
     overscroll-behavior: contain !important;
+    transform: none !important;
   }
 
   body.mbodyact [data-triolla-snapshot] .hmenumob {
@@ -33,7 +32,7 @@
     left: auto !important;
   }
 
-  /* 2. Close button in menu drawer */
+  /* 2. Close button */
   [data-triolla-snapshot] .hmenumob .hmenumobclose {
     position: absolute !important;
     top: max(16px, env(safe-area-inset-top, 0px)) !important;
@@ -41,62 +40,76 @@
     left: auto !important;
   }
 
-  /* 3. Header bar layout (logo | contact | hamburger) */
+  /* 3. Header container: clearfix float layout */
   [data-triolla-snapshot] .header_in {
-    display: flex !important;
-    flex-direction: row !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-    padding: 0 12px !important;
-    gap: 8px !important;
+    display: block !important;
+    position: relative !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    align-items: unset !important;
+    justify-content: unset !important;
+    gap: 0 !important;
+    min-width: unset !important;
   }
 
-  [data-triolla-snapshot] .header_in .logo {
+  [data-triolla-snapshot] .header_in::after {
+    content: "" !important;
+    display: table !important;
+    clear: both !important;
+  }
+
+  /* 4. Logo - float left */
+  [data-triolla-snapshot] .logo {
+    float: left !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: auto !important;
     flex-shrink: 0 !important;
-    order: 1 !important;
+    margin-right: 0 !important;
+    position: relative !important;
+    top: 0 !important;
   }
 
-  [data-triolla-snapshot] .header_in .header_menu {
+  /* 5. Hide desktop menu */
+  [data-triolla-snapshot] .header_menu {
     display: none !important;
   }
 
-  /* 4. Right section: Contact button and hamburger */
-  [data-triolla-snapshot] .header_in > .header_right {
-    flex-shrink: 0 !important;
-    order: 2 !important;
-    display: flex !important;
-    align-items: center !important;
-    gap: 8px !important;
-    margin: 0 !important;
+  /* 6. Header right container - float right */
+  [data-triolla-snapshot] .header_right {
+    float: right !important;
+    display: block !important;
+    width: auto !important;
     padding: 0 !important;
-  }
-
-  [data-triolla-snapshot] .header_in > .menutoggle {
-    flex-shrink: 0 !important;
-    order: 3 !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    width: 44px !important;
-    height: 44px !important;
     margin: 0 !important;
-    visibility: visible !important;
-  }
-
-  [data-triolla-snapshot] .header_in .menutoggle a {
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-  }
-
-  /* 5. Contact button - show only this in header_right */
-  [data-triolla-snapshot] .header_contact {
+    gap: 0 !important;
     flex-shrink: 0 !important;
+    align-items: unset !important;
+  }
+
+  /* 7. Contact button - inline-block, no float (within float right container) */
+  [data-triolla-snapshot] .header_contact {
+    display: inline-block !important;
+    float: none !important;
+    text-align: center !important;
+    margin: 0 !important;
+    padding: 0 8px !important;
   }
 
   [data-triolla-snapshot] .header_contact a {
     display: inline-block !important;
+    border: 1px solid #000 !important;
+    border-radius: 50px !important;
+    font-family: 'SFProText', sans-serif !important;
+    font-weight: 500 !important;
+    font-size: 11px !important;
+    line-height: 31px !important;
+    letter-spacing: normal !important;
+    color: #000 !important;
+    padding: 7px 11px !important;
     position: relative !important;
+    transition: 0.3s !important;
     overflow: hidden !important;
   }
 
@@ -104,43 +117,52 @@
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
+    border-radius: 50px !important;
+    color: #000 !important;
+    text-align: center !important;
+    font-weight: 500 !important;
+    font-size: 11px !important;
     line-height: 31px !important;
+    letter-spacing: normal !important;
+    position: relative !important;
+    transition: transform 0.3s ease, opacity 0.3s ease !important;
+    width: 100% !important;
     height: 31px !important;
-    overflow: hidden !important;
+    min-width: 100px !important;
   }
 
   [data-triolla-snapshot] .header_contact a > span.default-text {
-    position: relative !important;
+    color: #000 !important;
     z-index: 2 !important;
   }
 
   [data-triolla-snapshot] .header_contact a > span.hover-text {
+    color: #fff !important;
     position: absolute !important;
-    top: 0 !important;
+    bottom: 0 !important;
     left: 0 !important;
     right: 0 !important;
-    bottom: 0 !important;
+    top: 0 !important;
     opacity: 0 !important;
     visibility: hidden !important;
-    transition: opacity 0.3s ease, visibility 0.3s ease !important;
   }
 
   [data-triolla-snapshot] .header_contact a > span.button-overlay {
+    background: #000 !important;
+    color: #fff !important;
     position: absolute !important;
-    top: 0 !important;
+    bottom: 0 !important;
     left: 0 !important;
     right: 0 !important;
-    bottom: 0 !important;
-    background: #000 !important;
+    top: 0 !important;
     transform: scaleX(0) !important;
     transform-origin: right !important;
-    transition: transform 0.3s ease !important;
-    z-index: 1 !important;
   }
 
   [data-triolla-snapshot] .header_contact a:hover > span.hover-text {
     opacity: 1 !important;
     visibility: visible !important;
+    z-index: 1 !important;
   }
 
   [data-triolla-snapshot] .header_contact a:hover > span.button-overlay {
@@ -148,18 +170,56 @@
     transform-origin: left !important;
   }
 
-  /* 6. Hide whatsapp and book buttons on mobile */
+  /* 8. Hide whatsapp and book on mobile */
   [data-triolla-snapshot] .header_right .header_whatsapp,
   [data-triolla-snapshot] .header_right .header_book {
     display: none !important;
   }
 
-  /* 7. RTL (Hebrew) layout: Mirror the flex order */
-  [dir="rtl"] [data-triolla-snapshot] .header_in,
-  [data-triolla-snapshot][dir="rtl"] .header_in,
-  [data-triolla-snapshot].rtl .header_in {
-    flex-direction: row-reverse !important;
-    padding: 0 12px 0 0 !important;
+  /* 9. Hamburger - float right (as direct child of header_in) */
+  [data-triolla-snapshot] .header_in > .menutoggle {
+    display: block !important;
+    float: right !important;
+    width: auto !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    visibility: visible !important;
+    min-width: 44px !important;
+    min-height: 44px !important;
+    color: #fff !important;
+    flex-shrink: 0 !important;
+  }
+
+  [data-triolla-snapshot] .menutoggle a {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  /* 10. RTL (Hebrew) */
+  [dir="rtl"] [data-triolla-snapshot] .logo,
+  [data-triolla-snapshot][dir="rtl"] .logo,
+  [data-triolla-snapshot].rtl .logo {
+    float: right !important;
+  }
+
+  [dir="rtl"] [data-triolla-snapshot] .header_right,
+  [data-triolla-snapshot][dir="rtl"] .header_right,
+  [data-triolla-snapshot].rtl .header_right {
+    float: left !important;
+  }
+
+  [dir="rtl"] [data-triolla-snapshot] .header_contact,
+  [data-triolla-snapshot][dir="rtl"] .header_contact,
+  [data-triolla-snapshot].rtl .header_contact {
+    padding: 0 8px !important;
+  }
+
+  [dir="rtl"] [data-triolla-snapshot] .header_in > .menutoggle,
+  [data-triolla-snapshot][dir="rtl"] .header_in > .menutoggle,
+  [data-triolla-snapshot].rtl .header_in > .menutoggle {
+    float: left !important;
   }
 
   [dir="rtl"] [data-triolla-snapshot] .hmenumob,
@@ -182,15 +242,10 @@
     right: auto !important;
     left: 18px !important;
   }
+}
 
-  /* Reduced motion support */
-  @media (prefers-reduced-motion: reduce) {
-    [data-triolla-snapshot] .hmenumob {
-      transition: none !important;
-    }
-    [data-triolla-snapshot] .header_contact a > span.hover-text,
-    [data-triolla-snapshot] .header_contact a > span.button-overlay {
-      transition: none !important;
-    }
+@media (max-width: 1023px) and (prefers-reduced-motion: reduce) {
+  [data-triolla-snapshot] .hmenumob {
+    transition: none !important;
   }
 }

@@ -244,8 +244,8 @@
 .carjtop {padding:50px 15px 43px 15px;}
 .carjlft {float:right; width:/*690px*/calc(100% - 197px);}
 .carjlft a {display:block; position:relative; padding:0 78px 0 0;}
-.carjlft a:after {position:absolute; content:''; right:0px ;top:50%; background:url(carplus.svg) no-repeat center center; background-size:cover; width:27px; height:27px; margin-top:-13px;}
-.active .carjlft a:after {background:url(carminus.svg) no-repeat center center; background-size:contain;}
+.carjlft a:after {position:absolute; content:''; right:0px ;top:50%; background:url(/assets/_fonts/carplus.svg) no-repeat center center; background-size:cover; width:27px; height:27px; margin-top:-13px;}
+.active .carjlft a:after {background:url(/assets/_fonts/carminus.svg) no-repeat center center; background-size:contain;}
 .carjlft h4 { font-size:32px; line-height:100%; color:#000; font-family: 'Almoni ML v5 AAA';font-weight:bold; margin:0 0 13px 0;}
 .carjlft p { font-size:24px; line-height:100%; color:#000;}
 .carjrgt {float:left; width:197px;}

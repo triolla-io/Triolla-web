@@ -318,6 +318,12 @@ body {
   flex-shrink: 0;
 }
 
+/* Exclude snapshot pages from React header CSS */
+[data-triolla-snapshot] .header_right {
+  display: block;
+  gap: 0;
+}
+
 /* Contact Us — yellow pill on black header; hover: black sweep, text → white */
 .header_contact a {
   display: flex;
