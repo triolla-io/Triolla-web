@@ -190,8 +190,8 @@
 .carjtop {padding:50px 15px 43px 15px;}
 .carjlft {float:left; width:/*690px*/calc(100% - 165px);}
 .carjlft a {display:block; position:relative; padding:0 0 0 78px;}
-.carjlft a:after {position:absolute; content:''; left:0px ;top:50%; background:url(/assets/_fonts/carplus.svg) no-repeat center center; background-size:cover; width:27px; height:27px; margin-top:-13px;}
-.active .carjlft a:after {background:url(/assets/_fonts/carminus.svg) no-repeat center center; background-size:contain;}
+.carjlft a:after {position:absolute; content:''; left:0px ;top:50%; background:url(/assets/_shared/carplus.svg) no-repeat center center; background-size:cover; width:27px; height:27px; margin-top:-13px;}
+.active .carjlft a:after {background:url(/assets/_shared/carminus.svg) no-repeat center center; background-size:contain;}
 .carjlft h4 { font-size:32px; line-height:100%; color:#000; font-family: 'SFProText'; font-weight:bold; margin:0 0 13px 0;}
 .carjlft p { font-size:24px; line-height:100%; color:#000;}
 .carjrgt {float:right; width:165px;}
@@ -240,7 +240,7 @@
 .sermidbotright ul li {display:block; margin:0px 0 10px 0; padding:0px;} 
 .sermidbotright ul li a {display:inline-block; padding:0 0 0 27px; position:relative; font-size:32px; color:#fff; letter-spacing:-0.96px;}
 .sermidbotright ul li a:after {position:absolute; content:''; width:6px; height:6px; border-radius:50%; -webkit-border-radius:50%; background:#fff; left:0px; top:16px;}
-.servbranding { padding:115px 20px 198px 20px; background:#e7eaef url(service_braning.png) top left;} 
+.servbranding { padding:115px 20px 198px 20px; background:#e7eaef url('/assets/_shared/service_braning.png') top left;} 
 .servbrandingtop { text-align:center; margin:0 0 100px 0;}
 .servbrandingtop h3 { font-size:120px; line-height:100px; color:#000; font-family: 'SFProText'; font-weight:bold; margin:0 0 28px 0;}
 .servbrandingtop h3 a {color:#000;}
@@ -265,7 +265,7 @@
 .serbrandbotright ul li {display:block; margin:0px 0 14px 0; padding:0px;}
 .serbrandbotright ul li a {display:inline-block; padding:0 0 0 28px; position:relative; font-size:32px; letter-spacing:-0.96px; color:#000; line-height:1;}
 .serbrandbotright ul li a:after {position:absolute; content:''; width:6px; height:6px; border-radius:50%; -webkit-border-radius:50%; background:#000; left:0px; top:12px;}
-.servdevlop {background:#000 url(development_bg.png) no-repeat center center; background-size:contain; padding:134px 20px 234px 20px;}
+.servdevlop {background:#000 url('/assets/_shared/development_bg.png') no-repeat center center; background-size:contain; padding:134px 20px 234px 20px;}
 .servdevloptop { max-width:1394px; margin:0 auto; padding:0 0 120px 0; text-align:center;}
 .servdevloptop h3 { font-size:120px; line-height:100px; letter-spacing:-0.96px; color:#fff; font-family: 'SFProText'; font-weight:bold; margin:0 0 50px 0;}
 .servdevloptop h3 a {color:#fff;}

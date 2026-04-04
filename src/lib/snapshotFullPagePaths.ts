@@ -6,7 +6,17 @@ function normalizePath(p: string): string {
   return t || "/";
 }
 
+/** Paths where <main> is a full Triolla HTML snapshot with its own header + mobile drawer. */
+const HIDE_SITE_CHROME = new Set<string>([
+  "/he/services",
+  "/he/blog",
+  /** PortfolioPageWithCSS + injected chrome; React fixed header (z-index 50) otherwise covers theme header (z-index 9). */
+  "/he/mobile-apps",
+  /** Triolla hamburger + drawer QA — `app/triolla-mobile-menu-qa/page.tsx`. */
+  "/triolla-mobile-menu-qa",
+]);
+
 export function shouldHideSiteChromeForPath(pathname: string): boolean {
   const p = normalizePath(pathname);
-  return p === "/he/services" || p === "/he/blog";
+  return HIDE_SITE_CHROME.has(p);
 }

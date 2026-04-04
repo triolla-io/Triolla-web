@@ -1,7 +1,5 @@
 import type { TriollaPortfolioSnapshotDeps } from "./TriollaPortfolioSnapshotClient";
 import type { TriollaSnapshotRevealPreset } from "./mountTriollaSnapshotRevealStack";
-import careersDepsEn from "../careers/careers-deps.json";
-import careersDepsHe from "../careers/careers-he-deps.json";
 import contactUsDepsEn from "../contact-us/contact-us-deps.json";
 import contactUsDepsHe from "../contact-us/contact-us-he-deps.json";
 import portfolioPageDeps from "../portfolio-page/portfolio-page-deps.json";
@@ -9,6 +7,8 @@ import dashboardDesignDeps from "../dashboard-design/dashboard-design-deps.json"
 import serviceDetailDeps from "../service-detail/service-detail-deps.json";
 import devDepsEn from "../dev/dev-deps.json";
 import devDepsHe from "../dev/dev-he-deps.json";
+import careersDepsEn from "../careers/careers-deps.json";
+import careersDepsHe from "../careers/careers-he-deps.json";
 import { DEPS_EN, DEPS_HE } from "./snapshotDeps";
 
 export type BilingualSnapshotRegistryEntry = {
@@ -49,6 +49,30 @@ function entry(
   return revealPreset ? { ...base, revealPreset } : base;
 }
 
+/** Careers needs WordPress body classes + full theme CSS chain (incl. `rtl.css` for HE), not generic portfolio deps. */
+function careerPageDepsConsolidated(
+  pack: { bodyClass: string; dataRsssl: string; css: string[] },
+  js: string[],
+): TriollaPortfolioSnapshotDeps {
+  return {
+    assetBase: "/assets/_consolidated/",
+    bodyClass: pack.bodyClass,
+    dataRsssl: pack.dataRsssl,
+    css: pack.css.filter((href) => !href.includes("gdpr-main-nf")),
+    js,
+    pathEncoding: undefined,
+  };
+}
+
+const careersSnapshotDepsEn = careerPageDepsConsolidated(
+  careersDepsEn as { bodyClass: string; dataRsssl: string; css: string[] },
+  DEPS_EN.js,
+);
+const careersSnapshotDepsHe = careerPageDepsConsolidated(
+  careersDepsHe as { bodyClass: string; dataRsssl: string; css: string[] },
+  DEPS_HE.js,
+);
+
 /** Single source of truth: consolidated snapshot deps + explicit EN/HE fragment URLs. */
 export const bilingualSnapshotRegistry = {
   "accessibility-statement": entry(
@@ -80,10 +104,8 @@ export const bilingualSnapshotRegistry = {
       "triolla-io-careers",
       "triolla-io-he-careers",
     ),
-    depsEn: careersDepsEn as TriollaPortfolioSnapshotDeps,
-    depsHe: careersDepsHe as TriollaPortfolioSnapshotDeps,
-    assetDirEn: "careers",
-    assetDirHe: "careers-he",
+    depsEn: careersSnapshotDepsEn,
+    depsHe: careersSnapshotDepsHe,
   },
   "device-iot": entry(
     "Devices & IoT",

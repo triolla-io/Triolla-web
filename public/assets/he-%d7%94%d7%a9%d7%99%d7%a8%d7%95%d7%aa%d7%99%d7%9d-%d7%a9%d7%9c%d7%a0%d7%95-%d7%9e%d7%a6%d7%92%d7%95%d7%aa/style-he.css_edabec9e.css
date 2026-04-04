@@ -365,7 +365,7 @@ to {transform: translate(0);}
 .portfolio_why ul li:hover .port_cyber_con_new{ background:#FED125;border: 0.88px solid #000;}
 .portfolio_why .show h3{ bottom:0px;opacity:1;}
 
-.portfolio_global{background: #FFD729 url(/assets/_fonts/global_layer.svg) no-repeat center center; height:1498px; position:relative; display:table;width:100%;}
+.portfolio_global{background: #FFD729 url(/assets/_shared/global_layer.svg) no-repeat center center; height:1498px; position:relative; display:table;width:100%;}
 .global_logos .g_logo{ position:absolute;}
 .global_logos img.g_finaro, .global_logos .g_logo12 {right: 10.7%;bottom: 40.7%;}
 .global_logos img.g_playtika, .global_logos .g_logo11 {right: 6%;bottom: 14.8%;}
@@ -427,8 +427,8 @@ to {transform: translate(0);}
 
 .port_faq_box:last-child{border-bottom: 1px solid #404040;}
 .faqtitle a{font-size: 36px;line-height: 100%;letter-spacing: 0px;text-align: right;vertical-align: middle; color:#FFF; padding:32px 0px 34px 40px; display:block; position: relative;}
-.faqtitle a:after {position: absolute;content: '';top: 44px;left: 0px;background: url(/assets/_fonts/faq_plus.svg) no-repeat center center;background-size: cover;width: 32px;height:32px;transition: 0.3s;-webkit-transition: 0.3s;z-index: 1;}
-.active .faqtitle a:after {position: absolute;content: '';top: 44px;left: 0px;background: url(/assets/_fonts/faq_minus.svg) no-repeat center center;background-size: cover;width: 28px;height:4px;transition: 0.3s;-webkit-transition: 0.3s;z-index: 1;}
+.faqtitle a:after {position: absolute;content: '';top: 44px;left: 0px;background: url(/assets/_shared/faq_plus.svg) no-repeat center center;background-size: cover;width: 32px;height:32px;transition: 0.3s;-webkit-transition: 0.3s;z-index: 1;}
+.active .faqtitle a:after {position: absolute;content: '';top: 44px;left: 0px;background: url(/assets/_shared/faq_minus.svg) no-repeat center center;background-size: cover;width: 28px;height:4px;transition: 0.3s;-webkit-transition: 0.3s;z-index: 1;}
 .faqtitle a span.faq_quest{float:right; width:calc(100% - 50px); display:block; padding-right:61px; padding-top:7px;}
 .faqtitle a span.faq_img{ width:50px; float:right; display:block;}
 .faqtitle a span.faq_img img{width:50px; height:50px; object-fit:cover; border-radius:50%; -moz-border-radius:50%; -webkit-border-radius:50%;}
@@ -562,7 +562,7 @@ body.active{ overflow:hidden;}
 .otgs-development-site-front-end {display:none !important;}
 
 .page-template-page-technology .header_menu ul.menu li a { color:#FFFFFF;}
-/*.page-template-page-technology .header_menu ul.menu li a:after { background:url(/assets/_fonts/menuarowdeskwhite.svg) no-repeat center center;}*/
+/*.page-template-page-technology .header_menu ul.menu li a:after { background:url(/assets/_shared/menuarowdeskwhite.svg) no-repeat center center;}*/
 .page-template-page-technology .header_contact a {background: linear-gradient(90deg, #E7604D 0%, #5843DA 100%); color:#fff; border:0px;}
 .page-template-page-technology .header_contact a>span.default-text {color:#fff;}
 .page-template-page-technology .header_contact a>span.button-overlay {background: linear-gradient(90deg, #5843DA 0%, #E7604D 100%);}
@@ -614,7 +614,7 @@ body.active{ overflow:hidden;}
 .techmidtwotitle h4 {background: linear-gradient(94.64deg, #49C0B3 -0.94%, #8164E3 26.69%, #D1628E 48.87%, #FFA802 75.32%);  -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-size:160px; line-height:130px; /*font-family:'SFProText'; font-weight:bold;*/ padding:0 0 56px 0; opacity:0; transition:0.5s; -webkit-transition:0.5s; bottom:-30px; position:relative;}
 .techmidtwotitle p { font-size:22px; line-height:150%; color:#fff; /*font-family:'SFProText';*/ font-weight:300; opacity:0; transition:0.5s; -webkit-transition:0.5s; bottom:-30px; position:relative;}
 .techmidtwotitle p strong {font-family:'Almoni DL AAA'; font-weight:bold;}
-.techmidtwobot {max-width:1025px; min-height:1025px; margin:0 auto; background:url(/assets/_fonts/oursteakblue.svg) no-repeat center center; background-size:cover; opacity:0; transition:0.5s; -webkit-transition:0.5s; bottom:-30px; position:relative;}
+.techmidtwobot {max-width:1025px; min-height:1025px; margin:0 auto; background:url(/assets/_shared/oursteakblue.svg) no-repeat center center; background-size:cover; opacity:0; transition:0.5s; -webkit-transition:0.5s; bottom:-30px; position:relative;}
 .techmidtwobotcircle {max-width:706px; margin:0 auto; position:relative;}
 .circleimg img {width:100%}
 .circletxt {text-align:center; position:absolute; top:50%; transform:translateY(-50%); font-size:72px; line-height:110%; color:#fff; font-family:'Almoni DL AAA'; font-weight:bold; left:0px; width:100%;}
@@ -650,7 +650,7 @@ body.active{ overflow:hidden;}
 .techthremidtwo {opacity:0; bottom:-30px; transition:0.5s; -webkit-transition:0.5s; position:relative;}
 .show .techthretop h4, .show .techthretop p, .show .techthremid ul, .show .techthremidtwo {opacity:1; bottom:0px;} 
 .techthremid ul li {display:inline-block; vertical-align:top; width:20%; padding:0 10px;}
-.technumber {float:right; width:43.89px; height:38.25px; background:url(/assets/_fonts/bigribbon.svg) no-repeat center center; background-size:cover; text-align:center; color:#fff; font-size:24px; color:#fff; font-family:'Almoni DL AAA'; font-weight:bold; padding:4px 0 0 0;}
+.technumber {float:right; width:43.89px; height:38.25px; background:url(/assets/_shared/bigribbon.svg) no-repeat center center; background-size:cover; text-align:center; color:#fff; font-size:24px; color:#fff; font-family:'Almoni DL AAA'; font-weight:bold; padding:4px 0 0 0;}
 .technmtxt {float:right; width:calc(100% - 44px); padding:0 20px 0 0; font-size:24px; line-height:100%; color:#fff; /*font-family: 'SF Compact Display'; font-weight:normal;*/}
 .techthremid {padding:140px 0 46px 0;}
 .techstrip { border-radius:20px; -webkit-border-radius:20px; background:linear-gradient(90deg, #AD29FE 82.9%, rgba(173, 41, 254, 0) 94.69%); margin: 0 0 23px 0; padding:0 25px; line-height:42px; color:#fff; font-size:24px; font-weight:500;}

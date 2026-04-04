@@ -4,6 +4,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { initTriollaConveyorTicker } from "./lib/initTriollaConveyorTicker";
 import { mountTriollaFaqAccordion } from "./lib/mountTriollaFaqAccordion";
+import { mountTriollaMobileMenu } from "./lib/mountTriollaMobileMenu";
 import { rewriteTriollaNavLinks } from "./lib/rewriteTriollaNavLinks";
 import { installSnapshotPluginStubs } from "./lib/snapshotPluginStubs";
 import {
@@ -47,6 +48,7 @@ export function HomeClient() {
   const disposeRevealRef = useRef<(() => void) | null>(null);
   const disposeHeaderPillRef = useRef<(() => void) | null>(null);
   const disposeFaqRef = useRef<(() => void) | null>(null);
+  const disposeMobileMenuRef = useRef<(() => void) | null>(null);
   const [phase, setPhase] = useState<"loading" | "ready" | "error">("loading");
   const { assetBase, bodyClass, dataRsssl, css, js, pathEncoding } = deps;
 
@@ -69,10 +71,10 @@ export function HomeClient() {
         // Some snapshots reference non-existent /assets/home[-he]/hamburger*.svg.
         // Normalize to stable shared image paths so mobile icon always renders.
         html = html
-          .replaceAll('/assets/home-he/hamburger.svg', '/images/hamburger.svg')
-          .replaceAll('/assets/home-he/hamburger_white.svg', '/images/hamburger_white.svg')
-          .replaceAll('/assets/home/hamburger.svg', '/images/hamburger.svg')
-          .replaceAll('/assets/home/hamburger_white.svg', '/images/hamburger_white.svg');
+          .replaceAll('/assets/_shared/hamburger.svg', '/images/hamburger.svg')
+          .replaceAll('/assets/_shared/hamburger_white.svg', '/images/hamburger_white.svg')
+          .replaceAll('/assets/_shared/hamburger.svg', '/images/hamburger.svg')
+          .replaceAll('/assets/_shared/hamburger_white.svg', '/images/hamburger_white.svg');
         if (cancelled) return;
 
         const el = rootRef.current;
@@ -129,6 +131,8 @@ export function HomeClient() {
           disposeHeaderPillRef.current = mountTriollaHeaderPill(el);
           disposeFaqRef.current?.();
           disposeFaqRef.current = mountTriollaFaqAccordion(el);
+          disposeMobileMenuRef.current?.();
+          disposeMobileMenuRef.current = mountTriollaMobileMenu(el);
         } catch (deferredErr) {
           console.error("[snapshot] home deferred scripts/init failed:", deferredErr);
         }
@@ -145,8 +149,10 @@ export function HomeClient() {
       disposeHeaderPillRef.current = null;
       disposeFaqRef.current?.();
       disposeFaqRef.current = null;
+      disposeMobileMenuRef.current?.();
+      disposeMobileMenuRef.current = null;
     };
-  }, [assetBase, css, js, pathEncoding, fragmentUrl, historyRestoreKey]);
+  }, [assetBase, css, js, pathEncoding, fragmentUrl, historyRestoreKey, isHebrewHome]);
 
   return (
     <>

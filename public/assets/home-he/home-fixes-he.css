@@ -58,14 +58,14 @@ h2 {
 
 /* 8. FAQ SVG plus/minus icons - FIX BROKEN PATHS */
 .faqtitle a::after {
-  background-image: url(/assets/_fonts/faq_plus.svg) !important;
+  background-image: url(/assets/_shared/faq_plus.svg) !important;
   background-repeat: no-repeat !important;
   background-position: center center !important;
   background-size: contain !important;
 }
 
 .active .faqtitle a::after {
-  background-image: url(/assets/_fonts/faq_minus.svg) !important;
+  background-image: url(/assets/_shared/faq_minus.svg) !important;
   background-repeat: no-repeat !important;
   background-position: center center !important;
   background-size: contain !important;

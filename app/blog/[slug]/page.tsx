@@ -43,5 +43,5 @@ export default async function BlogPostPage({
     notFound();
   }
 
-  return <BlogPostClient slug={slug} deps={deps} />;
+  return <BlogPostClient slug={slug} deps={deps} snapshotLang="en" />;
 }

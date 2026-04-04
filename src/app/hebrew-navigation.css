@@ -1,4 +1,10 @@
-/* Global Hebrew Navigation Styles — production CSS from triolla.io home page */
+/*
+ * Triolla.io Hebrew header look — copied from production CSS.
+ *
+ * Do NOT add a global `.menutoggle { display: none !important }` here. Snapshots reuse
+ * WordPress class names under [data-triolla-snapshot]; that pattern hijacks the real
+ * Triolla header. React hamburger hiding lives in globals.css under `.site-header` only.
+ */
 
 /* Header styles for Hebrew navigation */
 .header {
@@ -179,12 +185,6 @@
 .header_contact a:hover .button-overlay {
   transform: scaleX(1);
   transform-origin: left;
-}
-
-/* Desktop: hide hamburger menu */
-.menutoggle {
-  display: none !important;
-  visibility: hidden !important;
 }
 
 .header_whatsapp {
@@ -830,19 +830,11 @@
     order: 3;
   }
 
-  /* Force black hamburger icon on mobile */
-  .header_contact a > span.hover-text,
-  .header_contact a > span.button-overlay {
-    display: none !important;
-    visibility: hidden !important;
-    opacity: 0 !important;
-  }
-
-  .header_contact a > span.default-text {
-    position: static !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-  }
+  /*
+   * Do NOT hide .header_contact .hover-text / .button-overlay here — that broke Triolla
+   * snapshot “Contact us” hover (black fill) on ≤1023px. React Header uses
+   * .header-contact-base + globals.css ::before, not these spans.
+   */
 }
 
 @media (max-width: 767px) {

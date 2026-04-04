@@ -61,5 +61,5 @@ export default async function HeBlogPostPage({
     notFound();
   }
 
-  return <BlogPostClient slug={slug} deps={enDeps} />;
+  return <BlogPostClient slug={slug} deps={enDeps} snapshotLang="he" />;
 }

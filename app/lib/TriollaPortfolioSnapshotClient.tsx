@@ -64,6 +64,7 @@ export function TriollaPortfolioSnapshotClient({
   const disposeAfterScriptsRef = useRef<(() => void) | null>(null);
   const disposeHeaderPillRef = useRef<(() => void) | null>(null);
   const disposeFaqRef = useRef<(() => void) | null>(null);
+  const disposeMobileMenuRef = useRef<(() => void) | null>(null);
   const [phase, setPhase] = useState<"loading" | "ready" | "error">("loading");
   const { assetBase, bodyClass, dataRsssl, css, js, pathEncoding } = deps;
   const historyRestoreKey = useSnapshotHistoryRestoreKey();
@@ -185,10 +186,8 @@ export function TriollaPortfolioSnapshotClient({
           disposeHeaderPillRef.current = mountTriollaHeaderPill(el);
           disposeFaqRef.current?.();
           disposeFaqRef.current = mountTriollaFaqAccordion(el);
-
-          if (lang) {
-            mountTriollaMobileMenu(el);
-          }
+          disposeMobileMenuRef.current?.();
+          disposeMobileMenuRef.current = mountTriollaMobileMenu(el);
         } catch (deferredErr) {
           console.error("[snapshot] portfolio snapshot deferred scripts/init failed:", deferredErr);
         }
@@ -210,6 +209,8 @@ export function TriollaPortfolioSnapshotClient({
       disposeHeaderPillRef.current = null;
       disposeFaqRef.current?.();
       disposeFaqRef.current = null;
+      disposeMobileMenuRef.current?.();
+      disposeMobileMenuRef.current = null;
     };
   }, [
     afterScripts,

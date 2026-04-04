@@ -26,7 +26,10 @@ import type { TriollaPortfolioSnapshotDeps } from "./TriollaPortfolioSnapshotCli
 import { initTriollaLottie } from "./initTriollaLottie";
 import { useSnapshotHistoryRestoreKey } from "./useSnapshotHistoryRestoreKey";
 import { normalizeHeaderAssetUrls } from "./normalizeHeaderAssetUrls";
-import { mountTriollaMobileMenu } from "./mountTriollaMobileMenu";
+import {
+  mountTriollaMobileMenu,
+  stripJQueryMenutoggleClickHandlers,
+} from "./mountTriollaMobileMenu";
 
 /**
  * Rewrite asset paths in HTML:
@@ -36,7 +39,7 @@ import { mountTriollaMobileMenu } from "./mountTriollaMobileMenu";
  * Full-theme pages (e.g. careers) use per-folder mirrors (`/assets/careers-he/...`); those
  * URLs must stay intact so CSS url() and <img> resolve next to the snapshot stylesheets.
  *
- * Also keep `/assets/<pageMirror>/...` (e.g. `/assets/technology/techtop1.svg`) intact — only
+ * Also keep `/assets/<pageMirror>/...` (e.g. `/assets/_shared/techtop1.svg`) intact — only
  * flatten paths that are not already under a named snapshot folder (other than `_consolidated`).
  */
 function isUnderNonConsolidatedAssetDir(pathname: string): boolean {
@@ -237,6 +240,11 @@ export function TriollaBilingualPortfolioSnapshotClient({
         );
 
         if (cancelled) return;
+
+        disposeMobileMenuRef.current?.();
+        disposeMobileMenuRef.current = mountTriollaMobileMenu(el);
+
+        if (cancelled) return;
         setPhase("ready");
 
         try {
@@ -266,8 +274,7 @@ export function TriollaBilingualPortfolioSnapshotClient({
           disposeHeaderPillRef.current = mountTriollaHeaderPill(el);
           disposeFaqRef.current?.();
           disposeFaqRef.current = mountTriollaFaqAccordion(el);
-          disposeMobileMenuRef.current?.();
-          disposeMobileMenuRef.current = mountTriollaMobileMenu(el);
+          stripJQueryMenutoggleClickHandlers(el);
         } catch (deferredErr) {
           console.error("[snapshot] bilingual portfolio deferred scripts/init failed:", deferredErr);
         }

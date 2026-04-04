@@ -96,7 +96,7 @@
 .header_menu ul.menu li:hover ul {display:block; pointer-events: all; opacity:1;}
 .header_menu ul.menu > li {padding-bottom:20px !important;}
 .header_menu ul.menu li > a {position:relative;}
-.header_menu ul.menu li > a:after {position:absolute; content:''; top:10px; right:-5px; width:14.1px; height:8.1px; background:url(/assets/_fonts/menuarowdesk.svg) no-repeat center center; background-size:cover; display:none; transition:0.3s; -webkit-transition:0.3s;}
+.header_menu ul.menu li > a:after {position:absolute; content:''; top:10px; right:-5px; width:14.1px; height:8.1px; background:url(/assets/_shared/menuarowdesk.svg) no-repeat center center; background-size:cover; display:none; transition:0.3s; -webkit-transition:0.3s;}
 .header_menu ul.menu li:hover > a:after { transform:rotate(180deg); -webkit-transform:rotate(180deg);}
 .header_menu ul.menu li ul li a:after {display:none !important;}
 .header_menu ul.menu li.menu-item-has-children a:after {display:block;}
@@ -420,7 +420,7 @@
 .header_wrap {padding:0px;}
 .header_right { padding:0px; margin:0 23px 0 0;}
 .header_contact a>span {line-height:31px;}
-.hmenumob {display: block; position:fixed; top:0px; right:-100%; width:100%; z-index:600; background:url(menutogbg.png) no-repeat center center; background-size:cover; padding:155px 0px 41px 0px; transition:0.4s; -webkit-transition:0.4s; z-index:99; height:100%; overflow:auto;}
+.hmenumob {display: block; position:fixed; top:0px; right:-100%; width:100%; z-index:600; background:url('/assets/_shared/menutogbg.png') no-repeat center center; background-size:cover; padding:155px 0px 41px 0px; transition:0.4s; -webkit-transition:0.4s; z-index:99; height:100%; overflow:auto;}
 .hmenumobclose {position:absolute; top:16px; right:18px;}
 .hmenumobclose a {display:inline-block;}
 .mbodyact .hmenumob {right:0px;}
@@ -428,7 +428,7 @@
 .hmenumobdiv ul {display:block; margin:0px; padding:0px;}
 .hmenumobdiv ul li {display:block; margin:0px 0 16px 0; padding:0px;}
 .hmenumobdiv ul li a { font-size:50px; line-height:1; color:#000; font-family: 'SFProText'; font-weight:bold; display:inline-block; padding:0 22px 0 0; position:relative;}
-.hmenumobdiv ul li a:after {position:absolute; content:''; background:url(/assets/_fonts/mobmenuicon.svg) no-repeat center center; background-size:cover; width:14px; height:8px; top:50%; right:0px; margin-top:-1px; display:none; transition:0.3s; -webkit-transition:0.3s;}
+.hmenumobdiv ul li a:after {position:absolute; content:''; background:url(/assets/_shared/mobmenuicon.svg) no-repeat center center; background-size:cover; width:14px; height:8px; top:50%; right:0px; margin-top:-1px; display:none; transition:0.3s; -webkit-transition:0.3s;}
 .hmenumobdiv ul li:hover a:after { transform:rotate(180deg); -webkit-transform:rotate(180deg);}
 .hmenumobdiv ul li.menu-item-has-children > a:after {display:block;}
 .hmenumobdiv ul li ul {margin:0px; padding:10px 20px 0 20px; display:none;}
@@ -555,7 +555,7 @@
 .footer_menu_col h3 + div {display:none; padding:10px 0 0 0;}
 .footer_all_menus h3 {display:block; width:100%; max-width:100%; position:relative; font-size:14px; line-height:1; min-height:inherit; cursor:pointer; padding:0 27px 0 0; margin:0px; pointer-events: auto;}
 .footer_all_menus h3 span {display:block;}
-.footer_all_menus h3:after {position:absolute; content:''; right:7px; top:3px; width:11.16px; height:6.56px; background:url(/assets/_fonts/footmearow.svg) no-repeat center center; background-size:cover; transition:0.4s; -webkit-transition:0.4s;}
+.footer_all_menus h3:after {position:absolute; content:''; right:7px; top:3px; width:11.16px; height:6.56px; background:url(/assets/_shared/footmearow.svg) no-repeat center center; background-size:cover; transition:0.4s; -webkit-transition:0.4s;}
 .footer_all_menus .active h3:after { transform:rotate(180deg); -webkit-transform:rotate(180deg);}
 .footer_menu_col.footer_menu_4 h3 {max-width:100%;}
 .footer_menu_col ul li, .footer_socail ul li { margin:0 0 12px 0; padding:0px;}
@@ -766,7 +766,7 @@
 .footer_menu_col h3 + div {display:none; padding:10px 0 0 0;}
 .footer_all_menus h3 {display:block; width:100%; max-width:100%; position:relative; font-size:14px; line-height:1; min-height:inherit; cursor:pointer; padding:0 27px 0 0; margin:0px;}
 .footer_all_menus h3 span {display:block;}
-.footer_all_menus h3:after {position:absolute; content:''; right:7px; top:3px; width:11.16px; height:6.56px; background:url(/assets/_fonts/footmearow.svg) no-repeat center center; background-size:cover; transition:0.4s; -webkit-transition:0.4s;}
+.footer_all_menus h3:after {position:absolute; content:''; right:7px; top:3px; width:11.16px; height:6.56px; background:url(/assets/_shared/footmearow.svg) no-repeat center center; background-size:cover; transition:0.4s; -webkit-transition:0.4s;}
 .footer_all_menus .active h3:after { transform:rotate(180deg); -webkit-transform:rotate(180deg);}
 .footer_menu_col.footer_menu_4 h3 {max-width:100%;}
 .footer_menu_col ul li, .footer_socail ul li { margin:0 0 12px 0; padding:0px;}
@@ -849,7 +849,7 @@
 .sebrand6top {margin:0px; position:absolute; top:169px; right:-42px;}
 .sebrand6top span { width:37px; height:37px; border-radius:9px; -webkit-border-radius:9px;}
 .sebrand6bot {float:none; width:160px; margin:0px; bottom:-50px; right:-50px; position:absolute;}
-.servdevlop {position:relative; z-index:1; padding:38px 0 0 0;background:#000 url(development_bg_mob.png) no-repeat bottom center;}
+.servdevlop {position:relative; z-index:1; padding:38px 0 0 0;background:#000 url('/assets/_shared/development_bg_mob.png') no-repeat bottom center;}
 .servdevloptop { padding:0 32px 28px 32px;}
 .servdevloptop h3 { font-size:46px; line-height:48px; margin:0 0 28px 0;}
 .servdevloptop p {font-size:16px; line-height:20px;}

@@ -15,6 +15,7 @@ import {
   localizeContactStripForHebrew,
 } from "../lib/triollaSharedBodyInject";
 import { installSnapshotPluginStubs } from "../lib/snapshotPluginStubs";
+import { mountTriollaSnapshotRevealStack } from "../lib/mountTriollaSnapshotRevealStack";
 import { loadStylesheetsParallelOrdered, waitForSnapshotFonts } from "../lib/snapshotLoader";
 import { snapshotAssetUrl } from "../lib/snapshotAssetUrl";
 import {
@@ -85,6 +86,7 @@ export function PortfolioPageWithCSS({
   const disposeFaqRef = useRef<(() => void) | null>(null);
   const disposeFooterAccordionRef = useRef<(() => void) | null>(null);
   const disposeMobileMenuRef = useRef<(() => void) | null>(null);
+  const disposeRevealRef = useRef<(() => void) | null>(null);
   const [phase, setPhase] = useState<"loading" | "ready" | "error">("loading");
 
   useEffect(() => {
@@ -180,6 +182,12 @@ export function PortfolioPageWithCSS({
           initTriollaConveyorTicker(root);
           initTriollaOwlCarousels(root);
 
+          disposeRevealRef.current?.();
+          disposeRevealRef.current = mountTriollaSnapshotRevealStack(
+            root,
+            "technology",
+          );
+
           disposePillRef.current?.();
           disposePillRef.current = mountTriollaHeaderPill(root);
           disposeFaqRef.current?.();
@@ -202,6 +210,8 @@ export function PortfolioPageWithCSS({
 
     return () => {
       cancelled = true;
+      disposeRevealRef.current?.();
+      disposeRevealRef.current = null;
       disposePillRef.current?.();
       disposePillRef.current = null;
       disposeFaqRef.current?.();

@@ -111,11 +111,14 @@ export async function injectSharedFooter(
   try {
     const existingFooter = root.querySelector(".footer");
 
-    if (lang === "he" && existingFooter) return;
-
+    /**
+     * Hebrew portfolio snapshots often embed an English `.footer` (EN mirror). Always normalize
+     * by replacing with the canonical Hebrew footer. `_shared-footer-he.html` must stay Hebrew;
+     * prefer extracting from `about-us-he-body.html` first so we never fall back to a stale file.
+     */
     const footerSources =
       lang === "he"
-        ? ["/fragments/_shared-footer-he.html", "/fragments/about-us-he-body.html"]
+        ? ["/fragments/about-us-he-body.html", "/fragments/_shared-footer-he.html"]
         : ["/fragments/_shared-footer.html"];
     let footerHtml: string | null = null;
 

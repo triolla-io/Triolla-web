@@ -313,7 +313,7 @@ padding-left: 30px;
     left: -25px;
     width: 14px;
     height: 37px;
-    background: url('images/bracket.png') no-repeat center center;
+    background: url('/assets/_shared/bracket.png') no-repeat center center;
 }
 .sec-fancy-title span:after {
     content: '';
@@ -322,7 +322,7 @@ padding-left: 30px;
     right: -25px;
     width: 14px;
     height: 37px;
-    background: url('images/bracket-r.png') no-repeat center center;
+    background: url('/assets/_shared/bracket-r.png') no-repeat center center;
 }
 
 .sec-bold-title {
@@ -491,7 +491,7 @@ padding-left: 30px;
 
 #plan-section {
     position: relative;
-    background: url(images/plan_bg.png) no-repeat center top;
+    background: url('/assets/_shared/plan_bg.png') no-repeat center top;
     background-size: cover;
 }
 

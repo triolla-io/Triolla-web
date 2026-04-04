@@ -106,7 +106,7 @@
         url(/assets/_fonts/Helvetica.woff2) format('woff2'),
         url(/assets/_fonts/Helvetica.woff) format('woff'),
         url(/assets/_fonts/Helvetica.ttf) format('truetype'),
-        url('/assets/_consolidated/Helvetica.svg#Helvetica') format('svg');
+        url('/assets/_shared/Helvetica.svg#Helvetica') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
