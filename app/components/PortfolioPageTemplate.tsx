@@ -65,6 +65,12 @@ export interface PortfolioPageData {
 
 interface PortfolioPageTemplateProps {
   data: PortfolioPageData;
+  /**
+   * Triolla site chrome (ticker, `.header`, `.menutoggle`, `.hmenumob`, …).
+   * Must be React-rendered (e.g. dangerouslySetInnerHTML); imperative insertBefore
+   * into this container is cleared on the next re-render when phase becomes "ready".
+   */
+  triollaPortfolioChromeHtml?: string;
 }
 
 function assignRef<T>(r: Ref<T> | undefined, el: T | null): void {
@@ -76,7 +82,7 @@ function assignRef<T>(r: Ref<T> | undefined, el: T | null): void {
 export const PortfolioPageTemplate = forwardRef<
   HTMLDivElement,
   PortfolioPageTemplateProps
->(function PortfolioPageTemplate({ data }, ref) {
+>(function PortfolioPageTemplate({ data, triollaPortfolioChromeHtml = "" }, ref) {
   const localRef = useRef<HTMLDivElement | null>(null);
 
   const setMainContainerRef = (el: HTMLDivElement | null) => {
@@ -115,6 +121,15 @@ export const PortfolioPageTemplate = forwardRef<
       className={isRtl ? "main_container rtl" : "main_container"}
       dir={data.dir ?? "ltr"}
     >
+      {triollaPortfolioChromeHtml ? (
+        <div
+          className="triolla-portfolio-chrome-root"
+          data-triolla-portfolio-chrome="1"
+          style={{ display: "contents" }}
+          suppressHydrationWarning
+          dangerouslySetInnerHTML={{ __html: triollaPortfolioChromeHtml }}
+        />
+      ) : null}
       <style type="text/css">{`
         .portfolio_banner { background-color: ${data.bannerColor}; }
         .portfoli_lists ul li .protfolio_con { margin-top: 0 !important; }

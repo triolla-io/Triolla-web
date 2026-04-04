@@ -1,5 +1,9 @@
 export function normalizeHeaderAssetUrls(html: string): string {
   return html
+    .replace(
+      /\/assets\/[^"'\s]+\/logo_new\.png/gi,
+      "/images/logo_triolla.svg",
+    )
     .replaceAll(
       "https://triolla.io/wp-content/themes/triolla/images/hamburger.svg",
       "/images/hamburger.svg",

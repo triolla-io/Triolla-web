@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { flushSync } from "react-dom";
 import { initTriollaOwlCarousels } from "../about-us/initTriollaCarousels";
 import { mountTriollaHeaderPill } from "../about-us/mountTriollaHeaderPill";
 import { initTriollaConveyorTicker } from "../lib/initTriollaConveyorTicker";
@@ -91,11 +92,15 @@ export function PortfolioPageWithCSS({
   const disposeMobileMenuRef = useRef<(() => void) | null>(null);
   const disposeRevealRef = useRef<(() => void) | null>(null);
   const [phase, setPhase] = useState<"loading" | "ready" | "error">("loading");
+  const [triollaChromeHtml, setTriollaChromeHtml] = useState("");
 
   useEffect(() => {
     let cancelled = false;
     const injectedLinks: HTMLLinkElement[] = [];
     const injectedScripts: HTMLScriptElement[] = [];
+    flushSync(() => {
+      setTriollaChromeHtml("");
+    });
     setPhase("loading");
 
     const loadAssets = async () => {
@@ -113,31 +118,27 @@ export function PortfolioPageWithCSS({
         const newCssLinks = await loadStylesheetsParallelOrdered(cssHrefs);
         injectedLinks.push(...newCssLinks);
 
+        let chromeInner = "";
+        const chromeUrl =
+          lang === "he"
+            ? "/fragments/_portfolio-site-chrome-he.html"
+            : "/fragments/_portfolio-site-chrome-en.html";
+        const chromeRes = await fetch(chromeUrl);
+        if (chromeRes.ok) {
+          let chromeHtml = await chromeRes.text();
+          chromeHtml = chromeHtml.split("%%ASSET_BASE%%").join(assetBaseNorm);
+          chromeHtml = normalizeHeaderAssetUrls(chromeHtml);
+          chromeInner = chromeHtml.trim();
+        }
+
+        flushSync(() => {
+          setTriollaChromeHtml(chromeInner);
+        });
+
+        await new Promise<void>((r) => requestAnimationFrame(() => r()));
+
         const root = mainContainerRef.current;
         if (!root) return;
-
-        root.querySelector("[data-triolla-portfolio-chrome]")?.remove();
-
-        if (!root.querySelector(".header.headnewact")) {
-          const chromeUrl =
-            lang === "he"
-              ? "/fragments/_portfolio-site-chrome-he.html"
-              : "/fragments/_portfolio-site-chrome-en.html";
-          const chromeRes = await fetch(chromeUrl);
-          if (chromeRes.ok) {
-            let chromeHtml = await chromeRes.text();
-            chromeHtml = chromeHtml
-              .split("%%ASSET_BASE%%")
-              .join(assetBaseNorm);
-            chromeHtml = normalizeHeaderAssetUrls(chromeHtml);
-            chromeHtml = `<div data-triolla-portfolio-chrome="1" style="display:contents">${chromeHtml.trim()}</div>`;
-            const holder = document.createElement("div");
-            holder.innerHTML = chromeHtml;
-            while (holder.firstChild) {
-              root.insertBefore(holder.firstChild, root.firstChild);
-            }
-          }
-        }
 
         if (cancelled) return;
 
@@ -176,6 +177,14 @@ export function PortfolioPageWithCSS({
           }
 
           if (cancelled) return;
+
+          const gsapWin = window as unknown as {
+            gsap?: { registerPlugin?: (plugin: unknown) => void };
+            ScrollTrigger?: unknown;
+          };
+          if (gsapWin.gsap?.registerPlugin && gsapWin.ScrollTrigger) {
+            gsapWin.gsap.registerPlugin(gsapWin.ScrollTrigger);
+          }
 
           const $ = (
             window as unknown as {
@@ -263,7 +272,11 @@ export function PortfolioPageWithCSS({
         </div>
       )}
       <div style={{ visibility: phase === "ready" ? "visible" : "hidden", minHeight: "100vh" }}>
-        <PortfolioPageTemplate ref={mainContainerRef} data={data} />
+        <PortfolioPageTemplate
+          ref={mainContainerRef}
+          data={data}
+          triollaPortfolioChromeHtml={triollaChromeHtml}
+        />
       </div>
     </>
   );

@@ -23,6 +23,13 @@ export function mountTriollaMobileMenu(root: HTMLElement): () => void {
   const menuToggles = Array.from(root.querySelectorAll<HTMLElement>(".menutoggle"));
   const mobileMenu = root.querySelector<HTMLElement>(".hmenumob");
 
+  console.log("[triolla-menu] mountTriollaMobileMenu", {
+    rootId: root.id || root.className,
+    isHebrew,
+    togglesFound: menuToggles.length,
+    mobileMenuFound: !!mobileMenu,
+  });
+
   if (isHebrew) {
     menuToggles.forEach((toggle) => {
       toggle.classList.add("is-he");
@@ -50,9 +57,38 @@ export function mountTriollaMobileMenu(root: HTMLElement): () => void {
 
     const toggle = target.closest(".menutoggle");
     if (toggle && root.contains(toggle) && !inDrawer) {
+      console.log("[triolla-menu] toggle clicked → toggling mbodyact (was:", body.classList.contains("mbodyact"), ")");
       e.preventDefault();
       e.stopPropagation();
       body.classList.toggle("mbodyact");
+      const drawerEl = root.querySelector<HTMLElement>(".hmenumob");
+      if (drawerEl) {
+        const cs = window.getComputedStyle(drawerEl);
+        console.log("[triolla-menu] .hmenumob computed style after toggle:", {
+          display: cs.display,
+          visibility: cs.visibility,
+          left: cs.left,
+          top: cs.top,
+          position: cs.position,
+          zIndex: cs.zIndex,
+          width: cs.width,
+          height: cs.height,
+          overflow: cs.overflow,
+          transform: cs.transform,
+        });
+        // Check if any ancestor blocks fixed positioning
+        let el: HTMLElement | null = drawerEl;
+        while (el) {
+          const s = window.getComputedStyle(el);
+          if (s.transform !== 'none' || s.filter !== 'none' || s.willChange === 'transform') {
+            console.warn("[triolla-menu] ⚠ ancestor with transform/filter found:", el.tagName, el.className, { transform: s.transform, filter: s.filter, willChange: s.willChange });
+          }
+          el = el.parentElement;
+        }
+      } else {
+        console.warn("[triolla-menu] .hmenumob NOT FOUND inside root!");
+      }
+      console.log("[triolla-menu] mbodyact after toggle:", body.classList.contains("mbodyact"));
       return;
     }
 
