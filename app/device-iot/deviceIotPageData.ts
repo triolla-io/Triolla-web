@@ -1,88 +1,46 @@
 import type { PortfolioPageData } from "../components/PortfolioPageWithCSS";
 
-const EN = "/assets/device-iot";
-const HE = "/assets/device-iot-he";
+/** Canonical portfolio imagery (mirrors `public/images/`; slug asset dirs are not shipped). */
+const IMG = "/images";
 
-const ASSETS_EN = {
-  bannerGridImg: `${EN}/banner_grid.svg`,
-  bannerLayerImg: `${EN}/portolio_layer.svg`,
-  jumpImg1: `${EN}/jumping_1-1.svg`,
-  jumpImg2: `${EN}/jumping_2-1.svg`,
-  jumpImg3: `${EN}/jumping_3-1.svg`,
+const ASSETS = {
+  bannerGridImg: `${IMG}/banner_grid.svg`,
+  bannerLayerImg: `${IMG}/portolio_layer.svg`,
+  jumpImg1: `${IMG}/jumping_1-1.svg`,
+  jumpImg2: `${IMG}/jumping_2-1.svg`,
+  jumpImg3: `${IMG}/jumping_3-1.svg`,
 } as const;
 
-const ASSETS_HE = {
-  bannerGridImg: `${HE}/banner_grid.svg`,
-  bannerLayerImg: `${HE}/portolio_layer.svg`,
-  jumpImg1: `${HE}/jumping_1-1.svg`,
-  jumpImg2: `${HE}/jumping_2-1.svg`,
-  jumpImg3: `${HE}/jumping_3-1.svg`,
-} as const;
-
-/** Image paths per row; HE mirror uses some different filenames (see `public/assets/device-iot-he`). */
-const ITEM_PATHS_EN = [
+const ITEM_PATHS = [
   {
-    logo: `${EN}/bermad-min.png`,
-    desktopImg: `${EN}/Frame-2147224067-2.png`,
-    mobileImg: `${EN}/Bermad-mobile.png`,
+    logo: `${IMG}/bermad-min.png`,
+    desktopImg: `${IMG}/Frame-2147224067-2.png`,
+    mobileImg: `${IMG}/Bermad-mobile.png`,
   },
   {
-    logo: `${EN}/Esences.png`,
-    desktopImg: `${EN}/Essence-desktop.png`,
-    mobileImg: `${EN}/Essence-mobile.png`,
+    logo: `${IMG}/Esences.png`,
+    desktopImg: `${IMG}/Essence-desktop.png`,
+    mobileImg: `${IMG}/Essence-mobile.png`,
   },
   {
-    logo: `${EN}/Tadiran-1.png`,
-    desktopImg: `${EN}/Tadiran.png`,
-    mobileImg: `${EN}/Tadiran-mobile.png`,
+    logo: `${IMG}/Tadiran-1.png`,
+    desktopImg: `${IMG}/Tadiran.png`,
+    mobileImg: `${IMG}/Tadiran-mobile.png`,
   },
   {
-    logo: `${EN}/noveto-min.png`,
-    desktopImg: `${EN}/Novetto-desktop.png`,
-    mobileImg: `${EN}/Novetto-mobile.png`,
+    logo: `${IMG}/noveto-min.png`,
+    desktopImg: `${IMG}/Novetto-desktop.png`,
+    mobileImg: `${IMG}/Novetto-mobile.png`,
   },
   {
-    logo: `${EN}/ayyeka-min.png`,
-    desktopImg: `${EN}/Ayyeka-desktop.png`,
-    mobileImg: `${EN}/Ayyeka-mobile.png`,
+    logo: `${IMG}/ayyeka-min.png`,
+    desktopImg: `${IMG}/Ayyeka-desktop.png`,
+    mobileImg: `${IMG}/Ayyeka-mobile.png`,
   },
   {
-    logo: `${EN}/arkit-min.png`,
-    desktopImg: `${EN}/Arkit-desktop.png`,
-    mobileImg: `${EN}/Arkit-mobile.png`,
-  },
-] as const;
-
-const ITEM_PATHS_HE = [
-  {
-    logo: `${HE}/bermad-min.png`,
-    desktopImg: `${HE}/Frame-2147224067-2.png`,
-    mobileImg: `${EN}/Bermad-mobile.png`,
-  },
-  {
-    logo: `${HE}/Esences.png`,
-    desktopImg: `${HE}/Essence-desktop-1.png`,
-    mobileImg: `${HE}/Essence-mobile.png`,
-  },
-  {
-    logo: `${HE}/Tadiran-1.png`,
-    desktopImg: `${HE}/Tadiran.png`,
-    mobileImg: `${HE}/Tadiran-mobile-1-1.png`,
-  },
-  {
-    logo: `${HE}/noveto-min.png`,
-    desktopImg: `${HE}/Novetto-desktop-1.png`,
-    mobileImg: `${HE}/Novetto-mobile.png`,
-  },
-  {
-    logo: `${HE}/ayyeka-min.png`,
-    desktopImg: `${HE}/Ayyeka-desktop-1.png`,
-    mobileImg: `${HE}/Ayyeka-mobile.png`,
-  },
-  {
-    logo: `${HE}/arkit-min.png`,
-    desktopImg: `${HE}/Arkit-desktop-1.png`,
-    mobileImg: `${HE}/Arkit-mobile-1.png`,
+    logo: `${IMG}/arkit-min.png`,
+    desktopImg: `${IMG}/Arkit-desktop.png`,
+    mobileImg: `${IMG}/Arkit-mobile.png`,
   },
 ] as const;
 
@@ -192,7 +150,7 @@ const ITEM_COPY_HE: PortfolioItemCopy[] = [
 ];
 
 function buildItems(
-  paths: typeof ITEM_PATHS_EN | typeof ITEM_PATHS_HE,
+  paths: typeof ITEM_PATHS,
   copy: PortfolioItemCopy[],
 ): PortfolioPageData["portfolioItems"] {
   return paths.map((p, i) => ({
@@ -234,9 +192,9 @@ export const DEVICE_IOT_PAGE_DATA_EN: PortfolioPageData = {
       "IoT products require careful consideration of hardware constraints, connectivity challenges, and cross-platform experiences. Our UX design simplifies device setup and management, creates intuitive interfaces for real-time monitoring and control, and enables seamless communication between physical and digital worlds.",
     buttonText: "Partner with us",
     buttonLink: "#contactus",
-    ...ASSETS_EN,
+    ...ASSETS,
   },
-  portfolioItems: buildItems(ITEM_PATHS_EN, ITEM_COPY_EN),
+  portfolioItems: buildItems(ITEM_PATHS, ITEM_COPY_EN),
   why: {
     mainTitle: "Why Do IoT companies choose us?",
     items: [
@@ -261,7 +219,7 @@ export const DEVICE_IOT_PAGE_DATA_EN: PortfolioPageData = {
   global: {
     title: "Our Clients",
     subtitle: "Trusted by leading IoT innovators",
-    logos: logosUnder(EN),
+    logos: logosUnder(IMG),
     buttonText: "Let's Talk",
     buttonLink: "#contactus",
   },
@@ -281,9 +239,9 @@ export const DEVICE_IOT_PAGE_DATA_HE: PortfolioPageData = {
       "מוצרי IoT דורשים התחשבות במגבלות חומרה, אתגרי קישוריות וחוויות חוצות פלטפורמות. עיצוב ה־UX שלנו מפשט הקמה וניהול מכשירים, יוצר ממשקים לניטור ובקרה בזמן אמת ומאפשר תקשורת חלקה בין הפיזי לדיגיטלי.",
     buttonText: "שותפו איתנו",
     buttonLink: "#contactus",
-    ...ASSETS_HE,
+    ...ASSETS,
   },
-  portfolioItems: buildItems(ITEM_PATHS_HE, ITEM_COPY_HE),
+  portfolioItems: buildItems(ITEM_PATHS, ITEM_COPY_HE),
   why: {
     mainTitle: "למה חברות IoT בוחרות בנו?",
     items: [
@@ -309,7 +267,7 @@ export const DEVICE_IOT_PAGE_DATA_HE: PortfolioPageData = {
     title: "הלקוחות שלנו",
     subtitle:
       "מחברות קטנות ועד גלובליות, שיתפנו פעולה עם כמה חברות מדהימות",
-    logos: logosUnder(HE),
+    logos: logosUnder(IMG),
     buttonText: "בואו נדבר",
     buttonLink: "#contactus",
   },

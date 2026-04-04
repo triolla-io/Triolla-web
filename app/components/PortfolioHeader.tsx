@@ -76,7 +76,11 @@ export function PortfolioHeader({
             <p>
               {description}
               <span className="dotshave">...</span>
-              <a className="ban_toggle_down" href="javascript:void(0);">
+              <a
+                className="ban_toggle_down"
+                href="#"
+                onClick={(e) => e.preventDefault()}
+              >
                 <svg
                   width="16"
                   height="9"
@@ -94,7 +98,11 @@ export function PortfolioHeader({
             <div className="more_ban_txt" style={{ display: "none" }}>
               <p>
                 {expandedText}
-                <a className="ban_toggle_up" href="javascript:void(0);">
+                <a
+                  className="ban_toggle_up"
+                  href="#"
+                  onClick={(e) => e.preventDefault()}
+                >
                   <svg
                     width="16"
                     height="9"

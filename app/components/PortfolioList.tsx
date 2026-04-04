@@ -51,7 +51,11 @@ export function PortfolioList({
                 </div>
                 <div className="protolio_tags">
                   {item.tags.map((tag, tagIdx) => (
-                    <a key={tagIdx} href="javascript:void(0);">
+                    <a
+                      key={tagIdx}
+                      href="#"
+                      onClick={(e) => e.preventDefault()}
+                    >
                       #{tag}
                     </a>
                   ))}
