@@ -375,6 +375,79 @@ body {
   }
 }
 
+/* React pill CTAs: Banner, Portfolio, ContactForm, ModernContactClient (.default-text / .hover-text / .btn-overlay) */
+a.pill-btn,
+button.pill-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 50px;
+  text-decoration: none;
+  border-style: solid;
+  border-width: 1px;
+  cursor: pointer;
+  font: inherit;
+  box-sizing: border-box;
+}
+button.pill-btn:disabled,
+a.pill-btn[aria-disabled="true"] {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+.pill-btn > .default-text {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  transition: opacity 0.3s ease;
+}
+.pill-btn > .hover-text {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.pill-btn > .btn-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: inherit;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.35s ease;
+}
+.pill-btn:hover:not(:disabled) > .hover-text,
+.pill-btn:focus-visible:not(:disabled) > .hover-text {
+  opacity: 1;
+  visibility: visible;
+}
+.pill-btn:hover:not(:disabled) > .btn-overlay,
+.pill-btn:focus-visible:not(:disabled) > .btn-overlay {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+[dir="rtl"] .pill-btn > .btn-overlay {
+  transform-origin: left;
+}
+[dir="rtl"] .pill-btn:hover:not(:disabled) > .btn-overlay,
+[dir="rtl"] .pill-btn:focus-visible:not(:disabled) > .btn-overlay {
+  transform-origin: right;
+}
+@media (prefers-reduced-motion: reduce) {
+  .pill-btn > .btn-overlay {
+    transition: none;
+  }
+}
+
 /* Technology page — Contact Us matches gradient button */
 .page-technology .header_contact a {
   background: linear-gradient(to right, #E7604D, #5843DA);
@@ -472,10 +545,11 @@ body {
 .menutoggle { display: none; color: #fff; flex-shrink: 0; }
 
 /* ============================================================
-   MOBILE MENU  (.hmenumob)
+   MOBILE MENU  (.hmenumob) — React shell ONLY (Header.tsx)
+   Snapshots use Triolla theme CSS + body.mbodyact (see triolla-snapshot-mobile-nav.css).
    ============================================================ */
-/* Full-screen mobile drawer — solid brand yellow (design mockup) */
-.hmenumob {
+/* Adjacent sibling: <header class="site-header">…</header><div class="hmenumob"> */
+header.site-header + .hmenumob {
   display: block;
   position: fixed;
   top: 0;
@@ -495,43 +569,43 @@ body {
   transform: translateX(100%);
   will-change: transform;
 }
-.hmenumob.open {
+header.site-header + .hmenumob.open {
   transform: translateX(0);
 }
-[dir="rtl"] .hmenumob {
+[dir="rtl"] header.site-header + .hmenumob {
   right: 0;
   left: auto;
   transform: translateX(100%);
 }
-[dir="rtl"] .hmenumob.is-he {
+[dir="rtl"] header.site-header + .hmenumob.is-he {
   right: 0;
   left: auto;
   transform: translateX(100%);
 }
-[dir="rtl"] .hmenumob.open {
+[dir="rtl"] header.site-header + .hmenumob.open {
   transform: translateX(0);
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hmenumob {
+  header.site-header + .hmenumob {
     transition: none;
   }
 }
 
-.hmenumobclose {
+header.site-header + .hmenumob .hmenumobclose {
   position: absolute;
   top: max(16px, env(safe-area-inset-top, 0px));
   right: 18px;
 }
-[dir="rtl"] .hmenumobclose {
+[dir="rtl"] header.site-header + .hmenumob .hmenumobclose {
   right: 18px;
   left: auto;
 }
-[dir="rtl"] .hmenumob.is-he .hmenumobclose {
+[dir="rtl"] header.site-header + .hmenumob.is-he .hmenumobclose {
   right: 18px;
   left: auto;
 }
-.hmenumobclose button {
+header.site-header + .hmenumob .hmenumobclose button {
   display: inline-block;
   background: none;
   border: none;

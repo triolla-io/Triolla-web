@@ -7,8 +7,6 @@ import contactUsDepsHe from "../contact-us/contact-us-he-deps.json";
 import portfolioPageDeps from "../portfolio-page/portfolio-page-deps.json";
 import dashboardDesignDeps from "../dashboard-design/dashboard-design-deps.json";
 import serviceDetailDeps from "../service-detail/service-detail-deps.json";
-import technologyDepsEn from "../technology/technology-deps.json";
-import technologyDepsHe from "../technology/technology-he-deps.json";
 import devDepsEn from "../dev/dev-deps.json";
 import devDepsHe from "../dev/dev-he-deps.json";
 import { DEPS_EN, DEPS_HE } from "./snapshotDeps";
@@ -281,8 +279,9 @@ export const bilingualSnapshotRegistry = {
       "triolla-io-technology",
       "triolla-io-technology-he",
     ),
-    depsEn: technologyDepsEn as TriollaPortfolioSnapshotDeps,
-    depsHe: technologyDepsHe as TriollaPortfolioSnapshotDeps,
+    /** Theme CSS/JS from consolidated mirror; page images live under `/assets/technology` (+ `-he`). */
+    depsEn: DEPS_EN,
+    depsHe: DEPS_HE,
     assetDirEn: "technology",
     assetDirHe: "technology-he",
   },

@@ -1,8 +1,9 @@
 {
-  "assetBase": "/assets/blog-he",
+  "assetBase": "/assets/_consolidated",
   "bodyClass": "rtl wp-singular page-template page-template-page-blog page-template-page-blog-php page page-id-1946 wp-theme-triolla",
   "dataRsssl": "1",
   "css": [
+    "style-rtl.min.css_edabec9e.css",
     "svgs-attachment.css",
     "style.min.css_68b3cde9.css",
     "cms-navigation-base.css_7976b2e5.css",

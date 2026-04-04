@@ -15,6 +15,7 @@ import {
   localizeContactStripForHebrew,
 } from "../lib/triollaSharedBodyInject";
 import { installSnapshotPluginStubs } from "../lib/snapshotPluginStubs";
+import { snapshotAssetUrl } from "../lib/snapshotAssetUrl";
 import {
   PortfolioPageTemplate,
   type PortfolioPageData,
@@ -103,7 +104,7 @@ export function PortfolioPageWithCSS({
         for (const cssFile of deps.css) {
           const link = document.createElement("link");
           link.rel = "stylesheet";
-          link.href = `${assetBaseNorm}/${cssFile}`;
+          link.href = snapshotAssetUrl(assetBaseNorm, cssFile);
           document.head.appendChild(link);
           injectedLinks.push(link);
         }
@@ -152,7 +153,7 @@ export function PortfolioPageWithCSS({
 
         for (const jsFile of deps.js) {
           if (cancelled) return;
-          const src = `${assetBaseNorm}/${jsFile}`;
+          const src = snapshotAssetUrl(assetBaseNorm, jsFile);
           try {
             const scriptEl = await loadScriptSequential(src);
             injectedScripts.push(scriptEl);

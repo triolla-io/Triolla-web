@@ -7,6 +7,7 @@ import { useState } from "react";
 import ScrollReveal from "@/components/ScrollReveal";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { localeFromPathname, withLocalePrefix } from "@/lib/i18n";
+import { shouldHideSiteChromeForPath } from "@/lib/snapshotFullPagePaths";
 import { common, footerHrefMap } from "@/messages/common";
 
 /** Press logos — single row on mobile (`lg:hidden` block); LTR order matches assets */
@@ -78,6 +79,9 @@ function AccordionChevron({ open }: { open: boolean }) {
 
 export default function Footer() {
   const pathname = usePathname() ?? "/";
+  if (shouldHideSiteChromeForPath(pathname)) {
+    return null;
+  }
   const locale = localeFromPathname(pathname);
   const t = common[locale];
   const p = (path: string) => withLocalePrefix(path, locale);

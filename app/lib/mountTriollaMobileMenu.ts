@@ -5,20 +5,35 @@
  * Theme CSS opens the panel when <body> has `mbodyact`.
  */
 export function mountTriollaMobileMenu(root: HTMLElement): () => void {
+  // #region agent log: verify menutoggle is found and clickable
+  const menutoggle = root.querySelector<HTMLElement>(".menutoggle");
+  if (menutoggle) {
+    fetch('http://127.0.0.1:7442/ingest/16494b4c-3094-42cb-81b5-aad92874073c', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'X-Debug-Session-Id': '143802' },
+      body: JSON.stringify({
+        sessionId: '143802',
+        location: 'mountTriollaMobileMenu.ts:8',
+        message: 'Menutoggle element found',
+        data: {
+          menutoggleDisplay: window.getComputedStyle(menutoggle).display,
+          menutogglePointerEvents: window.getComputedStyle(menutoggle).pointerEvents,
+          menutoggleCursor: window.getComputedStyle(menutoggle).cursor,
+          hasAnchor: !!menutoggle.querySelector('a'),
+          hasButton: !!menutoggle.querySelector('button')
+        },
+        timestamp: Date.now(),
+        runId: 'debug-menutoggle',
+        hypothesisId: 'H4-H5'
+      })
+    }).catch(() => {});
+  }
+  // #endregion
+
   const body = document.body;
   const isHebrew = root.getAttribute("dir") === "rtl";
   const mobileMenu = root.querySelector<HTMLElement>(".hmenumob");
   const menuToggles = Array.from(root.querySelectorAll<HTMLElement>(".menutoggle"));
-
-  const syncHebrewMenuState = () => {
-    if (!isHebrew || !mobileMenu) return;
-    mobileMenu.style.left = "auto";
-    mobileMenu.style.right = "0";
-    mobileMenu.style.transform = body.classList.contains("mbodyact")
-      ? "translateX(0)"
-      : "translateX(100%)";
-    mobileMenu.style.transition = "transform 0.4s ease";
-  };
 
   if (isHebrew) {
     menuToggles.forEach((toggle) => {
@@ -31,29 +46,61 @@ export function mountTriollaMobileMenu(root: HTMLElement): () => void {
     if (mobileMenu) {
       mobileMenu.classList.add("is-he");
     }
-    syncHebrewMenuState();
   }
 
+  // #region agent log: click handlers
   const onOpen = (e: Event) => {
+    fetch('http://127.0.0.1:7442/ingest/16494b4c-3094-42cb-81b5-aad92874073c', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'X-Debug-Session-Id': '143802' },
+      body: JSON.stringify({
+        sessionId: '143802',
+        location: 'mountTriollaMobileMenu.ts:onOpen',
+        message: 'Menu open clicked',
+        data: { isHebrew: isHebrew },
+        timestamp: Date.now(),
+        runId: 'debug-clicks',
+        hypothesisId: 'H2'
+      })
+    }).catch(() => {});
     e.preventDefault();
     body.classList.add("mbodyact");
-    syncHebrewMenuState();
   };
+  
   const onClose = (e: Event) => {
+    fetch('http://127.0.0.1:7442/ingest/16494b4c-3094-42cb-81b5-aad92874073c', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'X-Debug-Session-Id': '143802' },
+      body: JSON.stringify({
+        sessionId: '143802',
+        location: 'mountTriollaMobileMenu.ts:onClose',
+        message: 'Menu close clicked',
+        data: { isHebrew: isHebrew },
+        timestamp: Date.now(),
+        runId: 'debug-clicks',
+        hypothesisId: 'H2'
+      })
+    }).catch(() => {});
     e.preventDefault();
     body.classList.remove("mbodyact");
-    syncHebrewMenuState();
   };
+  // #endregion
 
-  const openLinks = Array.from(
-    root.querySelectorAll<HTMLAnchorElement>(".menutoggle a"),
-  );
-  const closeLinks = Array.from(
-    root.querySelectorAll<HTMLAnchorElement>(".hmenumobclose a"),
-  );
+  const openHandlers: Array<{ el: HTMLElement; fn: (e: Event) => void }> = [];
+  menuToggles.forEach((toggle) => {
+    const interactive = toggle.querySelector<HTMLElement>("a, button");
+    const el = interactive ?? toggle;
+    el.addEventListener("click", onOpen);
+    openHandlers.push({ el, fn: onOpen });
+  });
 
-  openLinks.forEach((a) => a.addEventListener("click", onOpen));
-  closeLinks.forEach((a) => a.addEventListener("click", onClose));
+  const closeHandlers: Array<{ el: HTMLElement; fn: (e: Event) => void }> = [];
+  root.querySelectorAll<HTMLElement>(".hmenumobclose").forEach((wrap) => {
+    const interactive = wrap.querySelector<HTMLElement>("a, button");
+    const el = interactive ?? wrap;
+    el.addEventListener("click", onClose);
+    closeHandlers.push({ el, fn: onClose });
+  });
 
   const arrowHandlers: Array<{ el: HTMLElement; fn: (e: Event) => void }> = [];
   root.querySelectorAll<HTMLElement>(".hmenumob .marrow").forEach((arrow) => {
@@ -73,9 +120,8 @@ export function mountTriollaMobileMenu(root: HTMLElement): () => void {
 
   return () => {
     body.classList.remove("mbodyact");
-    syncHebrewMenuState();
-    openLinks.forEach((a) => a.removeEventListener("click", onOpen));
-    closeLinks.forEach((a) => a.removeEventListener("click", onClose));
+    openHandlers.forEach(({ el, fn }) => el.removeEventListener("click", fn));
+    closeHandlers.forEach(({ el, fn }) => el.removeEventListener("click", fn));
     arrowHandlers.forEach(({ el, fn }) => el.removeEventListener("click", fn));
   };
 }

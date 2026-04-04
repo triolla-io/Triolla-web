@@ -111,6 +111,7 @@ export const PortfolioPageTemplate = forwardRef<
   return (
     <div
       ref={setMainContainerRef}
+      data-triolla-snapshot="1"
       className={isRtl ? "main_container rtl" : "main_container"}
       dir={data.dir ?? "ltr"}
     >

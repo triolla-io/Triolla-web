@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { localeFromPathname, withLocalePrefix, alternateLocalePath } from "@/lib/i18n";
+import { shouldHideSiteChromeForPath } from "@/lib/snapshotFullPagePaths";
 import { common, portfolioCol1Keys, portfolioCol2Keys } from "@/messages/common";
 
 /** Normalize for comparison (Next pathname usually has no trailing slash). */
@@ -29,6 +30,9 @@ function pathMatchesSection(pathname: string, href: string): boolean {
 
 export default function Header() {
   const pathname = usePathname() ?? "/";
+  if (shouldHideSiteChromeForPath(pathname)) {
+    return null;
+  }
   const locale = localeFromPathname(pathname);
   const isHebrew = locale === "he";
   const t = common[locale];

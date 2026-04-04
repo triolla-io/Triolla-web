@@ -153,6 +153,7 @@ export function AboutUsClient({ lang }: { lang: string }) {
       )}
       <div
         ref={rootRef}
+        data-triolla-snapshot="1"
         className={bodyClass}
         {...(dataRsssl != null ? { "data-rsssl": dataRsssl } : {})}
         suppressHydrationWarning

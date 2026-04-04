@@ -1,6 +1,7 @@
 import type { PortfolioPageData } from "../components/PortfolioPageWithCSS";
 
-const M = "/assets/mobile-apps";
+/** Portfolio imagery lives under `public/images/` (not empty `public/assets/mobile-apps/`). */
+const M = "/images";
 
 const MOBILE_COMPANY_TICKER = [
   "Tadiran",
@@ -113,18 +114,18 @@ const ITEMS_HE: PortfolioPageData["portfolioItems"] = [
 ];
 
 const LOGOS: PortfolioPageData["global"]["logos"] = [
-  { img: "/assets/mobile-apps/microsoft_global.svg", alt: "Microsoft" },
-  { img: "/assets/mobile-apps/american_express_global.svg", alt: "American Express" },
-  { img: "/assets/mobile-apps/n_gloabl.svg", alt: "N" },
-  { img: "/assets/mobile-apps/human_global.svg", alt: "Human" },
-  { img: "/assets/mobile-apps/passport_cart_global.svg", alt: "Passport" },
-  { img: "/assets/mobile-apps/jfrog_global.svg", alt: "JFrog" },
-  { img: "/assets/mobile-apps/alam_global.svg", alt: "Alam" },
-  { img: "/assets/mobile-apps/taboola_global.svg", alt: "Taboola" },
-  { img: "/assets/mobile-apps/is_global.svg", alt: "IS" },
-  { img: "/assets/mobile-apps/star_global.svg", alt: "Star" },
-  { img: "/assets/mobile-apps/playtika_global.svg", alt: "Playtika" },
-  { img: "/assets/mobile-apps/finaro_global.svg", alt: "Finaro" },
+  { img: `${M}/microsoft_global.svg`, alt: "Microsoft" },
+  { img: `${M}/american_express_global.svg`, alt: "American Express" },
+  { img: `${M}/n_gloabl.svg`, alt: "N" },
+  { img: `${M}/human_global.svg`, alt: "Human" },
+  { img: `${M}/passport_cart_global.svg`, alt: "Passport" },
+  { img: `${M}/jfrog_global.svg`, alt: "JFrog" },
+  { img: `${M}/alam_global.svg`, alt: "Alam" },
+  { img: `${M}/taboola_global.svg`, alt: "Taboola" },
+  { img: `${M}/is_global.svg`, alt: "IS" },
+  { img: `${M}/star_global.svg`, alt: "Star" },
+  { img: `${M}/playtika_global.svg`, alt: "Playtika" },
+  { img: `${M}/finaro_global.svg`, alt: "Finaro" },
 ];
 
 export const MOBILE_APPS_PAGE_DATA_EN: PortfolioPageData = {

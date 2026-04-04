@@ -207,6 +207,25 @@ function wpmlTargetLocaleForAnchor(a: HTMLAnchorElement): "en" | "he" | undefine
 }
 
 /**
+ * Bad snapshot extracts sometimes prefix marketing URLs with `/assets/home/` or `/assets/home-he/`.
+ */
+function rewriteSnapshotHomeAssetPrefixHref(pathname: string, pathLocale: "en" | "he"): string | null {
+  const m = pathname.match(/^\/assets\/(?:home-he|home)\/?(.*)$/i);
+  if (!m) return null;
+  const rest = m[1] || "";
+  const pathPart = rest.split(/[?#]/)[0];
+  if (!pathPart || pathPart === "/") {
+    return triollaPathnameToAppPath("/", pathLocale);
+  }
+  let p = pathPart.startsWith("/") ? pathPart : `/${pathPart}`;
+  if (/\.[a-z0-9]{2,5}$/i.test(p)) return null;
+  const first = p.split("/").filter(Boolean)[0];
+  if (first === "wp-content") return null;
+  p = p.replace(/\/+$/, "") || "/";
+  return triollaPathnameToAppPath(p, pathLocale);
+}
+
+/**
  * @param _localePrefix — deprecated; triolla path alone selects /he vs English. Kept for call-site compatibility.
  */
 export function rewriteTriollaNavLinks(root: HTMLElement, _localePrefix?: string): void {
@@ -240,6 +259,20 @@ export function rewriteTriollaNavLinks(root: HTMLElement, _localePrefix?: string
         }
       } catch {
         /* ignore invalid href */
+      }
+      return;
+    }
+
+    /** `/assets/home/...` and `/assets/home-he/...` nav mistakes → real app routes. */
+    if (href.startsWith("/assets/home/") || href.startsWith("/assets/home-he/") || href === "/assets/home" || href === "/assets/home-he") {
+      try {
+        const u = new URL(href, "https://triolla.io");
+        const nextPath = rewriteSnapshotHomeAssetPrefixHref(u.pathname, pathLocale);
+        if (nextPath != null) {
+          a.setAttribute("href", `${nextPath}${u.search}${u.hash}`);
+        }
+      } catch {
+        /* ignore */
       }
       return;
     }

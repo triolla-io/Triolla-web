@@ -145,7 +145,12 @@ export const SERVICE_DETAILS = {
       title: "Product UX/UI Design Services | Triolla",
       description: "End-to-end product UX and UI design for digital products.",
     },
-    hasHebrew: false,
+    metaHe: {
+      title: "עיצוב מוצר UX/UI | טריולה",
+      description: "עיצוב חוויית משתמש וממשק למוצרים דיגיטליים.",
+    },
+    /** Hebrew route serves English snapshot until a dedicated HE fragment exists in the registry. */
+    hasHebrew: true,
     Client: ServicesProductUxUiDesignClient,
   },
   prototyping: {

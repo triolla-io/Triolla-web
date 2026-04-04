@@ -4,26 +4,28 @@ import { useCallback } from "react";
 import { TriollaPortfolioSnapshotClient } from "../../lib/TriollaPortfolioSnapshotClient";
 import type { TriollaPortfolioSnapshotDeps } from "../../lib/TriollaPortfolioSnapshotClient";
 import { mountTriollaBlogLoadMore } from "../../lib/mountTriollaBlogLoadMore";
-import blogDeps from "../../blog/blog-deps.json";
-
-const heBlogFallbackDeps: TriollaPortfolioSnapshotDeps = {
-  ...(blogDeps as TriollaPortfolioSnapshotDeps),
-  // Keep the working English fallback assets, but preserve Hebrew/RTL layout semantics.
-  bodyClass: `rtl ${(blogDeps as TriollaPortfolioSnapshotDeps).bodyClass}`,
-};
+import deps from "./blog-he-deps.json";
 
 export function HeBlogClient() {
-  const afterScripts = useCallback((root: HTMLElement) => mountTriollaBlogLoadMore(root), []);
+  const afterScripts = useCallback((root: HTMLElement) => {
+    const gsapWin = window as unknown as {
+      gsap?: { registerPlugin?: (plugin: unknown) => void };
+      ScrollTrigger?: unknown;
+    };
+    if (gsapWin.gsap?.registerPlugin && gsapWin.ScrollTrigger) {
+      gsapWin.gsap.registerPlugin(gsapWin.ScrollTrigger);
+    }
+    return mountTriollaBlogLoadMore(root);
+  }, []);
 
   return (
     <TriollaPortfolioSnapshotClient
-      fragmentUrl="/fragments/blog-body.html"
-      deps={heBlogFallbackDeps}
-      pageLabel="בלוג"
-      landingSlug="triolla-io-blog"
-      assetDir="blog"
+      fragmentUrl="/fragments/blog-he-body.html"
+      deps={deps as TriollaPortfolioSnapshotDeps}
+      pageLabel="Hebrew Blog"
+      landingSlug="triolla-io-he-blog"
+      assetDir="_consolidated"
       lang="he"
-      chromeUrl="/fragments/blog-chrome-he.html"
       afterScripts={afterScripts}
     />
   );

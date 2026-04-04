@@ -210,7 +210,13 @@ function applyPostLocale(post: BlogPost, locale: Locale): BlogPost {
   if (locale === "en") return post;
   const he = postsHe[post.slug];
   if (!he) return post;
-  return { ...post, title: he.title, excerpt: he.excerpt, content: he.content };
+  return {
+    ...post,
+    title: he.title,
+    excerpt: he.excerpt,
+    content: he.content,
+    ...(he.category != null ? { category: he.category } : {}),
+  };
 }
 
 export function getPostBySlug(slug: string, locale: Locale = "en"): BlogPost | undefined {

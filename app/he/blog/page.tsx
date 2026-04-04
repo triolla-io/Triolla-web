@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { generatePageMetadata } from "../../lib/metadata";
 import { HeBlogClient } from "./HeBlogClient";
+import { generatePageMetadata } from "../../lib/metadata";
 
 export const metadata: Metadata = generatePageMetadata({
   title: "בלוג | Triolla UX/UI Design",

@@ -50,11 +50,18 @@ export function loadScript(src: string): Promise<void> {
 
   const promise = new Promise<void>((resolve) => {
     let settled = false;
+    let safetyId: number | undefined;
     const settle = () => {
       if (settled) return;
       settled = true;
+      if (safetyId !== undefined) window.clearTimeout(safetyId);
       resolve();
     };
+
+    safetyId = window.setTimeout(() => {
+      console.warn("[snapshot] loadScript safety timeout (continuing):", src);
+      settle();
+    }, 15000);
 
     for (const node of document.querySelectorAll("script[src]")) {
       const el = node as HTMLScriptElement;

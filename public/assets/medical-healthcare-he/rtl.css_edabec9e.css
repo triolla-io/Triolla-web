@@ -1,0 +1,84 @@
+.motion-content .artoptext h1 {
+    font-weight: 900;
+    line-height: 0.8;
+    font-family:'almoni-dl';
+}
+
+
+.motion-content .portfolio_jump_1 {
+    left: -150px;
+    right: auto;
+   
+}
+
+.sec-med-title,
+.sec-fancy-title,
+.motion-content .contact-line .contact-text,
+.motion-content .contact-link a {
+    font-family: 'Almoni DL AAA';
+
+}
+
+.sec-bold-title {
+      font-family:'almoni-dl';
+      line-height: 0.8;
+}
+
+.motion-content .contact-line .line {
+    font-family: 'Almoni DL AAA';
+    font-weight: 700;
+}
+.motion-content .contact-line .txt {
+    font-family: 'Almoni ML v5 AAA';
+    font-weight: 400;
+}
+
+#yellow-section .left-panel {
+    padding-right: 0;
+    padding-left: 30px;
+    font-size: 67px;
+    
+}
+
+#yellow-section .right-panel {
+    padding-left: 0;
+    padding-right: 40px;
+    
+
+}
+
+#yellow-section .left-panel p {
+    line-height: 0.9;
+}
+
+.plan-details .stamp {
+    left: 30px;
+    right: auto;
+}
+
+.sec-fancy-title {
+    padding-right: 30px;
+    padding-left: 0;
+}
+
+#item-43 {
+    left: 0;
+    right: auto;
+}
+
+.blogmtrusted ul li {
+   margin: 0 0px 0 30px;
+}
+.gform-footer input,
+.gform-footer input[type=submit],
+.gfield input {
+	 font-family: 'Almoni ML v5 AAA';
+}
+
+.contact_main_right_in .gfield input {
+	font-family: 'Almoni ML v5 AAA';
+}
+
+.menutoggle a {
+    transform: rotate(180deg);
+}

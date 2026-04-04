@@ -1,13 +1,16 @@
 import type { PortfolioPageData } from "../components/PortfolioPageWithCSS";
 
+/** Case-study screenshots committed under `public/assets/startups-tech/`. */
 const STG = "/assets/startups-tech";
+/** Shared theme / logos mirrored in `public/images/` (same as other portfolio pages). */
+const IMG = "/images";
 
 const STARTUPS_TECH_ASSETS = {
-  bannerGridImg: `${STG}/banner_grid.svg`,
-  bannerLayerImg: `${STG}/portolio_layer.svg`,
-  jumpImg1: `${STG}/jumping_1-1.svg`,
-  jumpImg2: `${STG}/jumping_2-1.svg`,
-  jumpImg3: `${STG}/jumping_3-1.svg`,
+  bannerGridImg: `${IMG}/banner_grid.svg`,
+  bannerLayerImg: `${IMG}/portolio_layer.svg`,
+  jumpImg1: `${IMG}/jumping_1-1.svg`,
+  jumpImg2: `${IMG}/jumping_2-1.svg`,
+  jumpImg3: `${IMG}/jumping_3-1.svg`,
 } as const;
 
 const STARTUPS_COMPANY_TICKER = [
@@ -22,7 +25,7 @@ const STARTUPS_COMPANY_TICKER = [
 const ITEMS_EN: PortfolioPageData["portfolioItems"] = [
   {
     logo: `${STG}/natural.png`,
-    desktopImg: `${STG}/Natiral-Intelligence-Desktop.png`,
+    desktopImg: `${IMG}/Natiral-Intelligence-Desktop.png`,
     mobileImg: `${STG}/Natiral-Intelligence-Mobile.png`,
     title:
       "Enhancing flows and user experience in Natural Intelligence platforms. Refining and improving the ux and ui across their products.",
@@ -41,7 +44,7 @@ const ITEMS_EN: PortfolioPageData["portfolioItems"] = [
     tags: ["Ecosystem", "Workflow", "UserDesign"],
   },
   {
-    logo: `${STG}/jfrog-min.png`,
+    logo: `${IMG}/jfrog-min.png`,
     desktopImg: `${STG}/Jfrog-desktop-1.png`,
     mobileImg: `${STG}/Jfrog-mobile-1.png`,
     title: "Creating a CEO dashboard for quick, clear insights—enabling smarter, faster decisions.",
@@ -50,7 +53,7 @@ const ITEMS_EN: PortfolioPageData["portfolioItems"] = [
     tags: ["CEODashboard", "DataAnlytics", "PerformanceInshights"],
   },
   {
-    logo: `${STG}/taboola-min.png`,
+    logo: `${IMG}/taboola-min.png`,
     desktopImg: `${STG}/Taboola-desktop-2.png`,
     mobileImg: `${STG}/Taboola-mobile-2.png`,
     title:
@@ -127,18 +130,18 @@ const ITEMS_HE: PortfolioPageData["portfolioItems"] = [
 ];
 
 const GLOBAL_LOGOS: PortfolioPageData["global"]["logos"] = [
-  { img: "/assets/startups-tech/microsoft_global.svg", alt: "Microsoft" },
-  { img: "/assets/startups-tech/american_express_global.svg", alt: "American Express" },
-  { img: "/assets/startups-tech/n_gloabl.svg", alt: "N" },
-  { img: "/assets/startups-tech/human_global.svg", alt: "Human" },
-  { img: "/assets/startups-tech/passport_cart_global.svg", alt: "Passport" },
-  { img: "/assets/startups-tech/jfrog_global.svg", alt: "JFrog" },
-  { img: "/assets/startups-tech/alam_global.svg", alt: "Alam" },
-  { img: "/assets/startups-tech/taboola_global.svg", alt: "Taboola" },
-  { img: "/assets/startups-tech/is_global.svg", alt: "IS" },
-  { img: "/assets/startups-tech/star_global.svg", alt: "Star" },
-  { img: "/assets/startups-tech/playtika_global.svg", alt: "Playtika" },
-  { img: "/assets/startups-tech/finaro_global.svg", alt: "Finaro" },
+  { img: `${IMG}/microsoft_global.svg`, alt: "Microsoft" },
+  { img: `${IMG}/american_express_global.svg`, alt: "American Express" },
+  { img: `${IMG}/n_gloabl.svg`, alt: "N" },
+  { img: `${IMG}/human_global.svg`, alt: "Human" },
+  { img: `${IMG}/passport_cart_global.svg`, alt: "Passport" },
+  { img: `${IMG}/jfrog_global.svg`, alt: "JFrog" },
+  { img: `${IMG}/alam_global.svg`, alt: "Alam" },
+  { img: `${IMG}/taboola_global.svg`, alt: "Taboola" },
+  { img: `${IMG}/is_global.svg`, alt: "IS" },
+  { img: `${IMG}/star_global.svg`, alt: "Star" },
+  { img: `${IMG}/playtika_global.svg`, alt: "Playtika" },
+  { img: `${IMG}/finaro_global.svg`, alt: "Finaro" },
 ];
 
 export const STARTUPS_TECH_PAGE_DATA_EN: PortfolioPageData = {

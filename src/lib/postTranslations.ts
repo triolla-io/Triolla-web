@@ -1,6 +1,10 @@
 /** Hebrew blog body copy (HTML). Keys match `slug` in `blogPosts`. */
-export const postsHe: Record<string, { title: string; excerpt: string; content: string }> = {
+export const postsHe: Record<
+  string,
+  { title: string; excerpt: string; content: string; category?: string }
+> = {
   "the-essential-guide-to-designing-a-top-performing-cyber-app": {
+    category: "אבטחת סייבר",
     title: "המדריך החיוני לעיצוב אפליקציית סייבר מובילה",
     excerpt:
       "הנה מדריך מקיף לעיצוב אפליקציות סייבר שמאזנות בין אבטחה קפדנית לשימושיות.",
@@ -19,6 +23,7 @@ export const postsHe: Record<string, { title: string; excerpt: string; content: 
     `,
   },
   "7-emerging-ui-ux-design-trends-every-development-team-should-be-aware-of": {
+    category: "מגמות עיצוב",
     title: "7 מגמות UI/UX שכל צוות פיתוח צריך להכיר",
     excerpt: "הטכנולוגיה מתקדמת — וכך גם ארגז הכלים של מעצבי UX. הנה מגמות מרכזיות ל־2025.",
     content: `
@@ -30,6 +35,7 @@ export const postsHe: Record<string, { title: string; excerpt: string; content: 
     `,
   },
   "navigating-the-future-of-ux-design": {
+    category: "פודקאסט",
     title: "רדיו באטן — פרק 122: מפרילאנס לעסק מצליח",
     excerpt: "עיצוב תמיד ריתק אותו, אבל הדרך מפרילאנס לסטודיו מובילה לא הייתה קו ישר.",
     content: `
@@ -39,6 +45,7 @@ export const postsHe: Record<string, { title: string; excerpt: string; content: 
     `,
   },
   "a-comprehensive-guide-to-mastering-mobile-app-design-for-israeli-startups-corporates": {
+    category: "אפליקציות מובייל",
     title: "מדריך מקיף לעיצוב אפליקציות מובייל לסטארטאפים וארגונים בישראל",
     excerpt: "סטארטאפים ישראלים נעים מהר — אבל בלי בסיס UX איכותי, מגיעים לרידיזיין יקר.",
     content: `
@@ -50,6 +57,7 @@ export const postsHe: Record<string, { title: string; excerpt: string; content: 
     `,
   },
   "triolla-an-industry-leader-is-actually-a-boutique-ux-studio": {
+    category: "החברה",
     title: "טריולה: מובילת תעשייה שבאמת סטודיו בוטיק",
     excerpt: "איך סטודיו בוטיק זוכה שוב ושוב מול סוכנויות גדולות? התמחות, כישרון בכיר ותרבות מלאכה.",
     content: `
@@ -59,6 +67,7 @@ export const postsHe: Record<string, { title: string; excerpt: string; content: 
     `,
   },
   "ux-is-life-design-it-for-humans": {
+    category: "עיצוב UX",
     title: "UX זה חיים — עצבו לאנשים",
     excerpt: "חוויית משתמש מצוינת היא לא רק יתרון עסקי — היא מחויבות מוסרית.",
     content: `
@@ -68,6 +77,7 @@ export const postsHe: Record<string, { title: string; excerpt: string; content: 
     `,
   },
   "f35-ux-vertigo": {
+    category: "חשיבה עיצובית",
     title: "F35 וורטיגו ב־UX",
     excerpt: "מה מלמדת תא הטייס של מטוס קרב על עיצוב ממשקים? הרבה יותר ממה שחושבים.",
     content: `
@@ -77,6 +87,7 @@ export const postsHe: Record<string, { title: string; excerpt: string; content: 
     `,
   },
   "ux-in-medtech-when-trust-is-a-matter-of-life-and-death": {
+    category: "רפואה ובריאות",
     title: "UX ברפואה: כשאמון הוא עניין של חיים ומוות",
     excerpt: "במכשור רפואי כשל UX עלול לגרום נזק אמיתי — הסטנדרט גבוה יותר.",
     content: `
@@ -86,6 +97,7 @@ export const postsHe: Record<string, { title: string; excerpt: string; content: 
     `,
   },
   "the-fintech-ux-playbook": {
+    category: "פינטק ופיננסים",
     title: "מדריך ה־UX לפינטק",
     excerpt: "פינטק הוא נקודת המפגש של UX, רגולציה ואמון.",
     content: `
@@ -95,6 +107,7 @@ export const postsHe: Record<string, { title: string; excerpt: string; content: 
     `,
   },
   "level-up-your-gaming-app-with-expert-ux-tips": {
+    category: "גיימינג",
     title: "לשדרג את אפליקציית הגיימינג: טיפי UX למעורבות ושימור",
     excerpt: "שחקנים מתוחכמים — ציפיות גבוהות. ההבדל בין משחק דביק לנטוש לעיתים קרובות טמון בממשק.",
     content: `

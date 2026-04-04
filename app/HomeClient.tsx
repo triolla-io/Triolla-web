@@ -81,6 +81,7 @@ export function HomeClient() {
         const el = rootRef.current;
         if (!el) return;
         el.innerHTML = html;
+        el.setAttribute("dir", isHebrewHome ? "rtl" : "ltr");
         rewriteTriollaNavLinks(el);
         await waitForSnapshotFonts();
 
@@ -177,6 +178,8 @@ export function HomeClient() {
       )}
       <div
         ref={rootRef}
+        data-triolla-snapshot="1"
+        dir={isHebrewHome ? "rtl" : "ltr"}
         className={bodyClass}
         {...(dataRsssl != null ? { "data-rsssl": dataRsssl } : {})}
         suppressHydrationWarning

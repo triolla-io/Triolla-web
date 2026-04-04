@@ -94,8 +94,9 @@ export function TriollaPortfolioSnapshotClient({
 
         const res = await fetch(fragmentUrl, { signal: ac.signal });
         if (!res.ok) throw new Error("fragment fetch failed");
-        const html = await res.text();
+        let html = await res.text();
         if (cancelled) return;
+        html = normalizeHeaderAssetUrls(html);
 
         let el = rootRef.current;
         if (!el) {
@@ -219,24 +220,10 @@ export function TriollaPortfolioSnapshotClient({
     historyRestoreKey,
   ]);
 
+  const ready = phase === "ready";
+
   return (
     <>
-      {phase === "loading" && (
-        <div
-          style={{
-            position: "fixed",
-            inset: 0,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            background: "#fafafa",
-            color: "#666",
-            fontFamily: "system-ui, sans-serif",
-          }}
-        >
-          Loading…
-        </div>
-      )}
       {phase === "error" && (
         <div
           style={{
@@ -251,15 +238,44 @@ export function TriollaPortfolioSnapshotClient({
         </div>
       )}
       <div
-        ref={rootRef}
-        className={bodyClass}
-        {...(dataRsssl != null ? { "data-rsssl": dataRsssl } : {})}
-        suppressHydrationWarning
         style={{
-          visibility: phase === "ready" ? "visible" : "hidden",
+          position: "relative",
           minHeight: "100vh",
         }}
-      />
+      >
+        <div
+          ref={rootRef}
+          data-triolla-snapshot="1"
+          dir="ltr"
+          className={bodyClass}
+          {...(dataRsssl != null ? { "data-rsssl": dataRsssl } : {})}
+          suppressHydrationWarning
+          style={{
+            visibility: ready ? "visible" : "hidden",
+            pointerEvents: ready ? "auto" : "none",
+            minHeight: "100vh",
+          }}
+        />
+        {phase === "loading" && (
+          <div
+            aria-busy="true"
+            aria-live="polite"
+            style={{
+              position: "absolute",
+              inset: 0,
+              zIndex: 2,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              background: "#fafafa",
+              color: "#666",
+              fontFamily: "system-ui, sans-serif",
+            }}
+          >
+            Loading…
+          </div>
+        )}
+      </div>
     </>
   );
 }

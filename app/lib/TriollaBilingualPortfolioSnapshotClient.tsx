@@ -20,6 +20,7 @@ import type { TriollaSnapshotRevealPreset } from "./mountTriollaSnapshotRevealSt
 import type { TriollaPortfolioSnapshotDeps } from "./TriollaPortfolioSnapshotClient";
 import { initTriollaLottie } from "./initTriollaLottie";
 import { useSnapshotHistoryRestoreKey } from "./useSnapshotHistoryRestoreKey";
+import { normalizeHeaderAssetUrls } from "./normalizeHeaderAssetUrls";
 import { mountTriollaMobileMenu } from "./mountTriollaMobileMenu";
 
 /**
@@ -29,7 +30,14 @@ import { mountTriollaMobileMenu } from "./mountTriollaMobileMenu";
  *
  * Full-theme pages (e.g. careers) use per-folder mirrors (`/assets/careers-he/...`); those
  * URLs must stay intact so CSS url() and <img> resolve next to the snapshot stylesheets.
+ *
+ * Also keep `/assets/<pageMirror>/...` (e.g. `/assets/technology/techtop1.svg`) intact — only
+ * flatten paths that are not already under a named snapshot folder (other than `_consolidated`).
  */
+function isUnderNonConsolidatedAssetDir(pathname: string): boolean {
+  return /^\/assets\/(?!_consolidated)[^/]+\//.test(pathname);
+}
+
 function rewriteAssetPaths(root: HTMLElement, consolidateStaticAssets: boolean): void {
   // Remove triolla.io font links - they cause CORS errors
   root.querySelectorAll("link[href*='triolla.io'][href*='fonts']").forEach((el) => {
@@ -49,25 +57,57 @@ function rewriteAssetPaths(root: HTMLElement, consolidateStaticAssets: boolean):
   root.querySelectorAll("[src], [srcset], [href]").forEach((el) => {
     const src = el.getAttribute("src");
     if (src && src.includes("/assets/")) {
-      const filename = src.split('/').pop()?.replace(/(_[a-f0-9]{8})+(\.[a-z0-9]+)?(?=[?#]|$)/gi, '$2') || '';
-      const rewritten = `/assets/_consolidated/${filename}`;
-      if (rewritten !== src) el.setAttribute("src", rewritten);
+      try {
+        if (isUnderNonConsolidatedAssetDir(new URL(src, window.location.origin).pathname)) {
+          /* keep /assets/technology/*, /assets/about-us/*, etc. */
+        } else {
+          const filename = src.split('/').pop()?.replace(/(_[a-f0-9]{8})+(\.[a-z0-9]+)?(?=[?#]|$)/gi, '$2') || '';
+          const rewritten = `/assets/_consolidated/${filename}`;
+          if (rewritten !== src) el.setAttribute("src", rewritten);
+        }
+      } catch {
+        /* ignore invalid src */
+      }
     }
 
     const srcset = el.getAttribute("srcset");
     if (srcset && srcset.includes("/assets/")) {
-      const rewritten = srcset.replace(/\/assets\/[^\/]+\/([^\s,]+)/g, (_match, filename) => {
-        const clean = filename.replace(/(_[a-f0-9]{8})+(\.[a-z0-9]+)?(?=[?#\s,]|$)/gi, '$2');
-        return `/assets/_consolidated/${clean}`;
+      const parts = srcset.split(",").map((p) => p.trim()).filter(Boolean);
+      const rewrittenParts = parts.map((part) => {
+        const spaceIdx = part.search(/\s/);
+        const urlPart = spaceIdx === -1 ? part : part.slice(0, spaceIdx);
+        const desc = spaceIdx === -1 ? "" : part.slice(spaceIdx);
+        if (!urlPart.includes("/assets/")) return part;
+        try {
+          if (isUnderNonConsolidatedAssetDir(new URL(urlPart, window.location.origin).pathname)) {
+            return part;
+          }
+        } catch {
+          return part;
+        }
+        const filename =
+          urlPart.split('/').pop()?.replace(/(_[a-f0-9]{8})+(\.[a-z0-9]+)?(?=[?#]|$)/gi, '$2') || '';
+        return `/assets/_consolidated/${filename}${desc}`;
       });
+      const rewritten = rewrittenParts.join(", ");
       if (rewritten !== srcset) el.setAttribute("srcset", rewritten);
     }
 
     const href = el.getAttribute("href");
-    if (href && href.includes("/assets/")) {
-      const filename = href.split('/').pop()?.replace(/(_[a-f0-9]{8})+(\.[a-z0-9]+)?(?=[?#]|$)/gi, '$2') || '';
-      const rewritten = `/assets/_consolidated/${filename}`;
-      if (rewritten !== href) el.setAttribute("href", rewritten);
+    const isStylesheetLink =
+      el.tagName === "LINK" && /\bstylesheet\b/i.test((el as HTMLLinkElement).rel || "");
+    if (href && href.includes("/assets/") && isStylesheetLink) {
+      try {
+        if (isUnderNonConsolidatedAssetDir(new URL(href, window.location.origin).pathname)) {
+          /* keep */
+        } else {
+          const filename = href.split('/').pop()?.replace(/(_[a-f0-9]{8})+(\.[a-z0-9]+)?(?=[?#]|$)/gi, '$2') || '';
+          const rewritten = `/assets/_consolidated/${filename}`;
+          if (rewritten !== href) el.setAttribute("href", rewritten);
+        }
+      } catch {
+        /* ignore */
+      }
     }
   });
 }
@@ -172,6 +212,7 @@ export function TriollaBilingualPortfolioSnapshotClient({
 
         // Pre-process HTML: strip triolla.io font links BEFORE injection
         html = html.replace(/<link[^>]*href=['"]https?:\/\/[^'"]*triolla\.io[^'"]*fonts[^'"]*['"][^>]*>/gi, '');
+        html = normalizeHeaderAssetUrls(html);
 
         let el = rootRef.current;
         if (!el) {
@@ -220,6 +261,8 @@ export function TriollaBilingualPortfolioSnapshotClient({
         disposeHeaderPillRef.current = mountTriollaHeaderPill(el);
         disposeFaqRef.current?.();
         disposeFaqRef.current = mountTriollaFaqAccordion(el);
+        disposeMobileMenuRef.current?.();
+        disposeMobileMenuRef.current = mountTriollaMobileMenu(el);
         setPhase("ready");
       } catch (e) {
         if (cancelled) return;
@@ -247,24 +290,50 @@ export function TriollaBilingualPortfolioSnapshotClient({
   const landingSlug = lang === "he" ? landingSlugHe : landingSlugEn;
   const assetDir = lang === "he" ? assetDirHe : assetDirEn;
 
+  const ready = phase === "ready";
+
+  useEffect(() => {
+    // #region agent log: verify snapshot data attribute and header layout
+    const timer = setTimeout(() => {
+      const root = rootRef.current;
+      if (root) {
+        const hasAttr = root.hasAttribute('data-triolla-snapshot');
+        const headerIn = root.querySelector('.header_in');
+        const menutoggle = root.querySelector('.menutoggle');
+        const headerRight = root.querySelector('.header_right');
+        
+        fetch('http://127.0.0.1:7442/ingest/16494b4c-3094-42cb-81b5-aad92874073c', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'X-Debug-Session-Id': '143802' },
+          body: JSON.stringify({
+            sessionId: '143802',
+            location: 'TriollaBilingualPortfolioSnapshotClient.tsx:150',
+            message: 'Snapshot layout DEBUG',
+            data: {
+              hasDataTriollaSnapshot: hasAttr,
+              headerInDisplay: headerIn ? window.getComputedStyle(headerIn).display : 'NOT_FOUND',
+              headerInFloat: headerIn ? window.getComputedStyle(headerIn).float : 'NOT_FOUND',
+              menutoggleDisplay: menutoggle ? window.getComputedStyle(menutoggle).display : 'NOT_FOUND',
+              menutoggleVisibility: menutoggle ? window.getComputedStyle(menutoggle).visibility : 'NOT_FOUND',
+              menutoggleFloat: menutoggle ? window.getComputedStyle(menutoggle).float : 'NOT_FOUND',
+              headerRightDisplay: headerRight ? window.getComputedStyle(headerRight).display : 'NOT_FOUND',
+              headerRightFloat: headerRight ? window.getComputedStyle(headerRight).float : 'NOT_FOUND',
+              windowWidth: window.innerWidth,
+              phase: phase
+            },
+            timestamp: Date.now(),
+            runId: 'debug-header-layout',
+            hypothesisId: 'H1-H5'
+          })
+        }).catch(() => {});
+      }
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, [phase]);
+  // #endregion
+
   return (
     <>
-      {phase === "loading" && (
-        <div
-          style={{
-            position: "fixed",
-            inset: 0,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            background: "#fafafa",
-            color: "#666",
-            fontFamily: "system-ui, sans-serif",
-          }}
-        >
-          Loading…
-        </div>
-      )}
       {phase === "error" && (
         <div
           style={{
@@ -279,15 +348,45 @@ export function TriollaBilingualPortfolioSnapshotClient({
         </div>
       )}
       <div
+        style={{
+          position: "relative",
+          minHeight: "100vh",
+        }}
+      >
+      <div
         ref={rootRef}
+        data-triolla-snapshot="1"
+        dir={lang === "he" ? "rtl" : "ltr"}
         className={bodyClass}
         {...(dataRsssl != null ? { "data-rsssl": dataRsssl } : {})}
         suppressHydrationWarning
         style={{
-          visibility: phase === "ready" ? "visible" : "hidden",
+          // #region agent log: check if inline styles interfere
+          visibility: ready ? "visible" : "hidden",
+          pointerEvents: ready ? "auto" : "none",
           minHeight: "100vh",
         }}
       />
+        {phase === "loading" && (
+          <div
+            aria-busy="true"
+            aria-live="polite"
+            style={{
+              position: "absolute",
+              inset: 0,
+              zIndex: 2,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              background: "#fafafa",
+              color: "#666",
+              fontFamily: "system-ui, sans-serif",
+            }}
+          >
+            Loading…
+          </div>
+        )}
+      </div>
     </>
   );
 }

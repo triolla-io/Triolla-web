@@ -774,11 +774,21 @@
     display: block;
   }
 
-  .menutoggle img {
+  /*
+   * Portfolio / snapshot headers use <img class="one|two"> inside .menutoggle (not SVG buttons).
+   * Do not hide them globally — theme + mountTriollaMobileMenu rely on img.one for the black icon.
+   */
+  [dir="rtl"] .main_container .header .menutoggle a img.two,
+  .main_container.rtl .header .menutoggle a img.two {
     display: none !important;
-    visibility: hidden !important;
-    width: 0 !important;
-    height: 0 !important;
+  }
+  [dir="rtl"] .main_container .header .menutoggle a img.one,
+  .main_container.rtl .header .menutoggle a img.one {
+    display: block !important;
+    visibility: visible !important;
+    width: auto !important;
+    height: auto !important;
+    max-height: 44px;
   }
 
   /* Remove noisy arrows from leaf links in mobile nav */

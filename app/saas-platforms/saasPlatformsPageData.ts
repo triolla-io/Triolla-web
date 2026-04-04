@@ -1,14 +1,15 @@
 import type { PortfolioPageData } from "../components/PortfolioPageWithCSS";
 
-const ASSETS = {
-  bannerGridImg: "/assets/saas-platforms/banner_grid.svg",
-  bannerLayerImg: "/assets/saas-platforms/portolio_layer.svg",
-  jumpImg1: "/assets/saas-platforms/jumping_1-1.svg",
-  jumpImg2: "/assets/saas-platforms/jumping_2-1.svg",
-  jumpImg3: "/assets/saas-platforms/jumping_3-1.svg",
-} as const;
+/** Canonical imagery under `public/images/` (per-slug asset dirs are not shipped). */
+const IMG = "/images";
 
-const S = "/assets/saas-platforms";
+const ASSETS = {
+  bannerGridImg: `${IMG}/banner_grid.svg`,
+  bannerLayerImg: `${IMG}/portolio_layer.svg`,
+  jumpImg1: `${IMG}/jumping_1-1.svg`,
+  jumpImg2: `${IMG}/jumping_2-1.svg`,
+  jumpImg3: `${IMG}/jumping_3-1.svg`,
+} as const;
 
 const SAAS_COMPANY_TICKER = [
   "Jfrog",
@@ -22,9 +23,9 @@ const SAAS_COMPANY_TICKER = [
 
 const ITEMS_EN: PortfolioPageData["portfolioItems"] = [
   {
-    logo: `${S}/jfrog-min.png`,
-    desktopImg: `${S}/Jfrog-desktop.png`,
-    mobileImg: `${S}/Jfrog-mobile.png`,
+    logo: `${IMG}/jfrog-min.png`,
+    desktopImg: `${IMG}/Jfrog-desktop.png`,
+    mobileImg: `${IMG}/Jfrog-mobile.png`,
     title:
       "Creating a CEO dashboard for quick, clear insights—enabling smarter, faster decisions.",
     description:
@@ -32,9 +33,9 @@ const ITEMS_EN: PortfolioPageData["portfolioItems"] = [
     tags: ["ProductUI", "Research", "Interview"],
   },
   {
-    logo: `${S}/playtika-min.png`,
-    desktopImg: `${S}/Playtika-desktop-2.png`,
-    mobileImg: `${S}/Playtika-mobile-2.png`,
+    logo: `${IMG}/playtika-min.png`,
+    desktopImg: `${IMG}/Playtika-desktop-2.png`,
+    mobileImg: `${IMG}/Playtika-mobile-2.png`,
     title:
       "Redefining game intelligence by enhancing user engagement and performance through Playtika’s management and analytics platforms.",
     description:
@@ -42,9 +43,9 @@ const ITEMS_EN: PortfolioPageData["portfolioItems"] = [
     tags: ["ProductUX", "ProductResearch", "UserInterview"],
   },
   {
-    logo: `${S}/taboola-min.png`,
-    desktopImg: `${S}/Taboola-desktop.png`,
-    mobileImg: `${S}/Taboola-mobile.png`,
+    logo: `${IMG}/taboola-min.png`,
+    desktopImg: `${IMG}/Taboola-desktop.png`,
+    mobileImg: `${IMG}/Taboola-mobile.png`,
     title:
       "A collaboration with Taboola to redesign key parts of their publisher and advertiser platforms, improving clarity and control at scale.",
     description:
@@ -52,9 +53,9 @@ const ITEMS_EN: PortfolioPageData["portfolioItems"] = [
     tags: ["Product", "UserPlatform", "DataInterfaces"],
   },
   {
-    logo: `${S}/Juxta.png`,
-    desktopImg: `${S}/Juxta-desktop.png`,
-    mobileImg: `${S}/Juxta-mobile.png`,
+    logo: `${IMG}/Juxta.png`,
+    desktopImg: `${IMG}/Juxta-desktop.png`,
+    mobileImg: `${IMG}/Juxta-mobile.png`,
     title:
       "We teamed up with Juxta to design a clear, efficient platform for store management—simplifying inventory, malfunction reports, and daily operations.",
     description:
@@ -62,9 +63,9 @@ const ITEMS_EN: PortfolioPageData["portfolioItems"] = [
     tags: ["ProductDesign", "ProductUI", "UXUI"],
   },
   {
-    logo: `${S}/layerx-min.png`,
-    desktopImg: `${S}/Layer-x-desktop.png`,
-    mobileImg: `${S}/Layer-x-mobile.png`,
+    logo: `${IMG}/layerx-min.png`,
+    desktopImg: `${IMG}/Layer-x-desktop.png`,
+    mobileImg: `${IMG}/Layer-x-mobile.png`,
     title:
       "working with Layer X to simplify their security platform, designing clear dashboards and workflows, making threat data more accessible and actionable.",
     description:
@@ -72,9 +73,9 @@ const ITEMS_EN: PortfolioPageData["portfolioItems"] = [
     tags: ["UXUI", "IntuitivDesign", "DashboardDesign"],
   },
   {
-    logo: `${S}/melingo-min.png`,
-    desktopImg: `${S}/melingo-desktop-1-1.png`,
-    mobileImg: `${S}/melingo-mobile-1-1.png`,
+    logo: `${IMG}/melingo-min.png`,
+    desktopImg: `${IMG}/melingo-desktop-1-1.png`,
+    mobileImg: `${IMG}/melingo-mobile-1-1.png`,
     title:
       "Partnering with Melingo and Britannica to design user-friendly language learning experience —blending conversational AI with intuitive, engaging UI.",
     description:
@@ -82,9 +83,9 @@ const ITEMS_EN: PortfolioPageData["portfolioItems"] = [
     tags: ["SystemDesign", "UserExperience", "DigitalDesign"],
   },
   {
-    logo: `${S}/plainid-min.png`,
-    desktopImg: `${S}/plain-id-desktop.png`,
-    mobileImg: `${S}/plain-id-mobile.png`,
+    logo: `${IMG}/plainid-min.png`,
+    desktopImg: `${IMG}/plain-id-desktop.png`,
+    mobileImg: `${IMG}/plain-id-mobile.png`,
     title: "We partnered with PlainID, elevating their platform user experience and design approach.",
     description:
       "Designing PlainID new system—from dashboards to inner screens—creating a seamless, intuitive UX that simplifies complex authorization workflows for security teams.",
@@ -145,18 +146,18 @@ const ITEMS_HE: PortfolioPageData["portfolioItems"] = [
 ];
 
 const LOGOS: PortfolioPageData["global"]["logos"] = [
-  { img: "/assets/saas-platforms/microsoft_global.svg", alt: "Microsoft" },
-  { img: "/assets/saas-platforms/american_express_global.svg", alt: "American Express" },
-  { img: "/assets/saas-platforms/n_gloabl.svg", alt: "N" },
-  { img: "/assets/saas-platforms/human_global.svg", alt: "Human" },
-  { img: "/assets/saas-platforms/passport_cart_global.svg", alt: "Passport" },
-  { img: "/assets/saas-platforms/jfrog_global.svg", alt: "JFrog" },
-  { img: "/assets/saas-platforms/alam_global.svg", alt: "Alam" },
-  { img: "/assets/saas-platforms/taboola_global.svg", alt: "Taboola" },
-  { img: "/assets/saas-platforms/is_global.svg", alt: "IS" },
-  { img: "/assets/saas-platforms/star_global.svg", alt: "Star" },
-  { img: "/assets/saas-platforms/playtika_global.svg", alt: "Playtika" },
-  { img: "/assets/saas-platforms/finaro_global.svg", alt: "Finaro" },
+  { img: `${IMG}/microsoft_global.svg`, alt: "Microsoft" },
+  { img: `${IMG}/american_express_global.svg`, alt: "American Express" },
+  { img: `${IMG}/n_gloabl.svg`, alt: "N" },
+  { img: `${IMG}/human_global.svg`, alt: "Human" },
+  { img: `${IMG}/passport_cart_global.svg`, alt: "Passport" },
+  { img: `${IMG}/jfrog_global.svg`, alt: "JFrog" },
+  { img: `${IMG}/alam_global.svg`, alt: "Alam" },
+  { img: `${IMG}/taboola_global.svg`, alt: "Taboola" },
+  { img: `${IMG}/is_global.svg`, alt: "IS" },
+  { img: `${IMG}/star_global.svg`, alt: "Star" },
+  { img: `${IMG}/playtika_global.svg`, alt: "Playtika" },
+  { img: `${IMG}/finaro_global.svg`, alt: "Finaro" },
 ];
 
 export const SAAS_PLATFORMS_PAGE_DATA_EN: PortfolioPageData = {

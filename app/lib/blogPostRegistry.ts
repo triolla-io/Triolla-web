@@ -49,6 +49,10 @@ export const BLOG_TITLES: Partial<Record<string, string>> = {
     "Revolutionizing Healthcare with UX Design",
   "ux-in-medtech-when-trust-is-a-matter-of-life-and-death":
     "UX in MedTech: When Trust Is a Matter of Life and Death",
+  "level-up-your-gaming-app-with-triollas-expert-ux-tips-boost-user-engagement-and-retention":
+    "Level Up Your Gaming App: Expert UX Tips for Engagement",
+  "designing-an-engaging-and-effective-agritech-app":
+    "Designing an Engaging and Effective Agritech App",
 };
 
 export function loadBlogDeps(slug: string): TriollaPortfolioSnapshotDeps | null {
