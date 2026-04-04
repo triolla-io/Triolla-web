@@ -256,6 +256,14 @@ export function TriollaBilingualPortfolioSnapshotClient({
             }
           }
 
+          const gsapWin = window as unknown as {
+            gsap?: { registerPlugin?: (plugin: unknown) => void };
+            ScrollTrigger?: unknown;
+          };
+          if (gsapWin.gsap?.registerPlugin && gsapWin.ScrollTrigger) {
+            gsapWin.gsap.registerPlugin(gsapWin.ScrollTrigger);
+          }
+
           initTriollaConveyorTicker(el);
           initTriollaOwlCarousels(el);
           const $ = (window as unknown as { jQuery?: (sel: Window) => { trigger: (ev: string) => void } })

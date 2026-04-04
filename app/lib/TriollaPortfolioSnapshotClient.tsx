@@ -4,7 +4,10 @@ import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { initTriollaConveyorTicker } from "./initTriollaConveyorTicker";
 import { ensurePortfolioFaqWrapShown, mountTriollaFaqAccordion } from "./mountTriollaFaqAccordion";
 import { rewriteTriollaNavLinks } from "./rewriteTriollaNavLinks";
-import { mountTriollaMobileMenu } from "./mountTriollaMobileMenu";
+import {
+  mountTriollaMobileMenu,
+  stripJQueryMenutoggleClickHandlers,
+} from "./mountTriollaMobileMenu";
 import { normalizeHeaderAssetUrls } from "./normalizeHeaderAssetUrls";
 import { installSnapshotPluginStubs } from "./snapshotPluginStubs";
 import {
@@ -148,6 +151,11 @@ export function TriollaPortfolioSnapshotClient({
         );
 
         if (cancelled) return;
+
+        disposeMobileMenuRef.current?.();
+        disposeMobileMenuRef.current = mountTriollaMobileMenu(el);
+
+        if (cancelled) return;
         setPhase("ready");
 
         try {
@@ -186,8 +194,7 @@ export function TriollaPortfolioSnapshotClient({
           disposeHeaderPillRef.current = mountTriollaHeaderPill(el);
           disposeFaqRef.current?.();
           disposeFaqRef.current = mountTriollaFaqAccordion(el);
-          disposeMobileMenuRef.current?.();
-          disposeMobileMenuRef.current = mountTriollaMobileMenu(el);
+          stripJQueryMenutoggleClickHandlers(el);
         } catch (deferredErr) {
           console.error("[snapshot] portfolio snapshot deferred scripts/init failed:", deferredErr);
         }

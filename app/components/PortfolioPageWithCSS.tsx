@@ -7,7 +7,10 @@ import { initTriollaConveyorTicker } from "../lib/initTriollaConveyorTicker";
 import { mountTriollaFaqAccordion } from "../lib/mountTriollaFaqAccordion";
 import { mountTriollaFooterAccordion } from "../lib/mountTriollaFooterAccordion";
 import { rewriteTriollaNavLinks } from "../lib/rewriteTriollaNavLinks";
-import { mountTriollaMobileMenu } from "../lib/mountTriollaMobileMenu";
+import {
+  mountTriollaMobileMenu,
+  stripJQueryMenutoggleClickHandlers,
+} from "../lib/mountTriollaMobileMenu";
 import { normalizeHeaderAssetUrls } from "../lib/normalizeHeaderAssetUrls";
 import {
   injectSharedFaq,
@@ -153,6 +156,11 @@ export function PortfolioPageWithCSS({
         );
 
         if (cancelled) return;
+
+        disposeMobileMenuRef.current?.();
+        disposeMobileMenuRef.current = mountTriollaMobileMenu(root);
+
+        if (cancelled) return;
         setPhase("ready");
 
         try {
@@ -193,8 +201,7 @@ export function PortfolioPageWithCSS({
           disposeFaqRef.current?.();
           disposeFaqRef.current = mountTriollaFaqAccordion(root);
 
-          disposeMobileMenuRef.current?.();
-          disposeMobileMenuRef.current = mountTriollaMobileMenu(root);
+          stripJQueryMenutoggleClickHandlers(root);
           disposeFooterAccordionRef.current?.();
           disposeFooterAccordionRef.current = mountTriollaFooterAccordion(root);
         } catch (deferredErr) {

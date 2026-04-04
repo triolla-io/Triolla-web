@@ -4,7 +4,10 @@ import { usePathname } from "next/navigation";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { initTriollaConveyorTicker } from "./lib/initTriollaConveyorTicker";
 import { mountTriollaFaqAccordion } from "./lib/mountTriollaFaqAccordion";
-import { mountTriollaMobileMenu } from "./lib/mountTriollaMobileMenu";
+import {
+  mountTriollaMobileMenu,
+  stripJQueryMenutoggleClickHandlers,
+} from "./lib/mountTriollaMobileMenu";
 import { rewriteTriollaNavLinks } from "./lib/rewriteTriollaNavLinks";
 import { installSnapshotPluginStubs } from "./lib/snapshotPluginStubs";
 import {
@@ -88,6 +91,11 @@ export function HomeClient() {
         );
 
         if (cancelled) return;
+
+        disposeMobileMenuRef.current?.();
+        disposeMobileMenuRef.current = mountTriollaMobileMenu(el);
+
+        if (cancelled) return;
         setPhase("ready");
 
         try {
@@ -131,8 +139,7 @@ export function HomeClient() {
           disposeHeaderPillRef.current = mountTriollaHeaderPill(el);
           disposeFaqRef.current?.();
           disposeFaqRef.current = mountTriollaFaqAccordion(el);
-          disposeMobileMenuRef.current?.();
-          disposeMobileMenuRef.current = mountTriollaMobileMenu(el);
+          stripJQueryMenutoggleClickHandlers(el);
         } catch (deferredErr) {
           console.error("[snapshot] home deferred scripts/init failed:", deferredErr);
         }

@@ -13,7 +13,10 @@ import { initTriollaOwlCarousels } from "./initTriollaCarousels";
 import { mountTriollaSnapshotRevealStack } from "../lib/mountTriollaSnapshotRevealStack";
 import { mountTriollaHeaderPill } from "./mountTriollaHeaderPill";
 import { initTriollaLottie } from "../lib/initTriollaLottie";
-import { mountTriollaMobileMenu } from "../lib/mountTriollaMobileMenu";
+import {
+  mountTriollaMobileMenu,
+  stripJQueryMenutoggleClickHandlers,
+} from "../lib/mountTriollaMobileMenu";
 
 const FRAGMENT_URL = "/fragments/about-us-body.html";
 
@@ -48,6 +51,11 @@ export function AboutUsClient() {
         );
 
         if (cancelled) return;
+
+        disposeMobileMenuRef.current?.();
+        disposeMobileMenuRef.current = mountTriollaMobileMenu(el);
+
+        if (cancelled) return;
         setPhase("ready");
 
         try {
@@ -73,8 +81,7 @@ export function AboutUsClient() {
           disposeRevealRef.current = mountTriollaSnapshotRevealStack(el, "about");
           disposeHeaderPillRef.current?.();
           disposeHeaderPillRef.current = mountTriollaHeaderPill(el);
-          disposeMobileMenuRef.current?.();
-          disposeMobileMenuRef.current = mountTriollaMobileMenu(el);
+          stripJQueryMenutoggleClickHandlers(el);
         } catch (deferredErr) {
           console.error("[snapshot] about-us deferred scripts/init failed:", deferredErr);
         }

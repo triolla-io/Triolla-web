@@ -49,28 +49,53 @@ function entry(
   return revealPreset ? { ...base, revealPreset } : base;
 }
 
+/** Same neutral rules as home: avoid CSS grid breaking theme float layout for `.careerimgs` under `.grid`. */
+const CAREERS_GRID_BASE_CSS = "/assets/home/home-grid-base.css";
+
+/**
+ * Careers `all.js` expects TweenMax, ScrollMagic, and jquery.bez before it (see `careers-deps.json` order).
+ * Generic `DEPS_*` omit those and break parallax / interactions vs triolla.io.
+ */
+const CAREERS_SNAPSHOT_JS: string[] = [
+  "jquery-3.6.0.min.js_edabec9e.js",
+  "/assets/_shared/eb5e45d752068adfb4185f39ea2978f6_jquery.jConveyorTicker.min.js_edabec9e.js",
+  "TweenMax.min.js_edabec9e.js",
+  "ScrollMagic.min.js_edabec9e.js",
+  "metaview.js_edabec9e.js",
+  "wow.js_edabec9e.js",
+  "gsap.min.js",
+  "ScrollTrigger.min.js",
+  "jquery.bez.min.js_edabec9e.js",
+  "all.js_edabec9e.js",
+];
+
+function careersCssWithGridBase(css: string[]): string[] {
+  const filtered = css.filter((href) => !href.includes("gdpr-main-nf"));
+  if (filtered.includes(CAREERS_GRID_BASE_CSS)) return filtered;
+  const svgs = filtered.findIndex((f) => f.endsWith("svgs-attachment.css"));
+  const insertAt = svgs >= 0 ? svgs + 1 : 0;
+  return [...filtered.slice(0, insertAt), CAREERS_GRID_BASE_CSS, ...filtered.slice(insertAt)];
+}
+
 /** Careers needs WordPress body classes + full theme CSS chain (incl. `rtl.css` for HE), not generic portfolio deps. */
 function careerPageDepsConsolidated(
   pack: { bodyClass: string; dataRsssl: string; css: string[] },
-  js: string[],
 ): TriollaPortfolioSnapshotDeps {
   return {
     assetBase: "/assets/_consolidated/",
     bodyClass: pack.bodyClass,
     dataRsssl: pack.dataRsssl,
-    css: pack.css.filter((href) => !href.includes("gdpr-main-nf")),
-    js,
+    css: careersCssWithGridBase(pack.css),
+    js: CAREERS_SNAPSHOT_JS,
     pathEncoding: undefined,
   };
 }
 
 const careersSnapshotDepsEn = careerPageDepsConsolidated(
   careersDepsEn as { bodyClass: string; dataRsssl: string; css: string[] },
-  DEPS_EN.js,
 );
 const careersSnapshotDepsHe = careerPageDepsConsolidated(
   careersDepsHe as { bodyClass: string; dataRsssl: string; css: string[] },
-  DEPS_HE.js,
 );
 
 /** Single source of truth: consolidated snapshot deps + explicit EN/HE fragment URLs. */

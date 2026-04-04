@@ -15,6 +15,8 @@ import { runTriollaEqualheightInRoot } from "../lib/runTriollaEqualheight";
 
 const SHOW_SELECTORS = [
   ".portfolio_text",
+  /** Careers (`page-career`): `.carlisttop` heading stays opacity:0 until `.show` (style-new[-he].css). */
+  ".carlisttop",
   ".company_triker",
   ".design_wrap",
   ".design_bullets ul",
