@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { initTriollaOwlCarousels } from "../about-us/initTriollaCarousels";
 import { mountTriollaHeaderPill } from "../about-us/mountTriollaHeaderPill";
 import { initTriollaConveyorTicker } from "../lib/initTriollaConveyorTicker";
@@ -178,7 +178,7 @@ export function PortfolioPageWithCSS({
     const loadAssets = async () => {
       installTriollaPortfolioWindowStubs();
       try {
-        const response = await fetch(depsPath);
+        const response = await fetch(depsPath, { cache: "no-store" });
         const deps: Deps = await response.json();
         if (cancelled) return;
 
@@ -280,6 +280,7 @@ export function PortfolioPageWithCSS({
           disposeFaqRef.current = mountTriollaFaqAccordion(root);
 
           stripJQueryMenutoggleClickHandlers(root);
+          rewriteTriollaNavLinks(root);
           disposeFooterAccordionRef.current?.();
           disposeFooterAccordionRef.current = mountTriollaFooterAccordion(root);
         } catch (deferredErr) {
@@ -309,6 +310,14 @@ export function PortfolioPageWithCSS({
       injectedScripts.forEach((el) => el.remove());
     };
   }, [depsPath, lang]);
+
+  /** React may re-commit chrome when `phase` becomes ready; theme `all.js` runs after — re-apply local hrefs. */
+  useLayoutEffect(() => {
+    if (phase !== "ready") return;
+    const root = mainContainerRef.current;
+    if (!root) return;
+    rewriteTriollaNavLinks(root);
+  }, [phase, lang]);
 
   return (
     <>

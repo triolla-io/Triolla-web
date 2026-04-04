@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { rewriteTriollaNavLinks } from "../../lib/rewriteTriollaNavLinks";
 import { installSnapshotPluginStubs } from "../../lib/snapshotPluginStubs";
 import {
@@ -110,6 +110,7 @@ export function AboutUsClient({ lang }: { lang: string }) {
           disposeHeaderPillRef.current?.();
           disposeHeaderPillRef.current = mountTriollaHeaderPill(el);
           stripJQueryMenutoggleClickHandlers(el);
+          rewriteTriollaNavLinks(el);
         } catch (deferredErr) {
           console.error("[snapshot] about-us (lang) deferred scripts/init failed:", deferredErr);
         }
@@ -128,6 +129,13 @@ export function AboutUsClient({ lang }: { lang: string }) {
       disposeMobileMenuRef.current = null;
     };
   }, [lang]);
+
+  useLayoutEffect(() => {
+    if (phase !== "ready") return;
+    const el = rootRef.current;
+    if (!el) return;
+    rewriteTriollaNavLinks(el);
+  }, [phase, lang]);
 
   return (
     <>

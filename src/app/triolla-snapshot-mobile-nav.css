@@ -102,6 +102,8 @@
   /* Drawer */
   [data-triolla-snapshot] .hmenumob {
     display: block !important;
+    /* Theme / embeds can leave an ancestor or subtree with visibility:hidden; fixed drawer must opt back in. */
+    visibility: visible !important;
     position: fixed !important;
     top: 0 !important;
     right: -100% !important;
@@ -128,12 +130,26 @@
     left: auto !important;
   }
 
+  /*
+   * Drawer open: theme header + hamburger share the top-right with .hmenumobclose. Same stacking
+   * corner can leave the absolutely positioned header row receiving hits instead of the drawer.
+   */
+  body.mbodyact [data-triolla-snapshot] .header,
+  body.mbodyact [data-triolla-snapshot] .headerticker {
+    pointer-events: none !important;
+  }
+
   [data-triolla-snapshot] .hmenumob .hmenumobclose {
     position: absolute !important;
     top: max(16px, env(safe-area-inset-top, 0px)) !important;
     right: 18px !important;
     left: auto !important;
-    z-index: 2 !important;
+    z-index: 50 !important;
+    pointer-events: auto !important;
+  }
+
+  [data-triolla-snapshot] .hmenumob .hmenumobclose a {
+    pointer-events: auto !important;
   }
 
   /* RTL */
@@ -258,7 +274,12 @@ body.mbodyact [data-triolla-snapshot].temp-mobile-nav-qa .hmenumob {
   top: max(16px, env(safe-area-inset-top, 0px)) !important;
   left: 18px !important;
   right: auto !important;
-  z-index: 2 !important;
+  z-index: 50 !important;
+  pointer-events: auto !important;
+}
+
+[data-triolla-snapshot].temp-mobile-nav-qa .hmenumob .hmenumobclose a {
+  pointer-events: auto !important;
 }
 
 /*
@@ -332,4 +353,28 @@ body.mbodyact [data-triolla-snapshot].temp-mobile-nav-qa .hmenumob {
 [data-triolla-snapshot].temp-mobile-nav-qa .header_contact a:hover .button-overlay {
   transform: scaleX(1);
   transform-origin: left;
+}
+
+/* -----------------------------------------------------------------------------
+   Service detail snapshots without `.portfolio_banner` (e.g. /services/prototyping).
+   Theme only adds padding-top for `.servdetail_content .portfolio_banner`; a bare
+   direct `.portfolio_wrap` starts at y=0 under absolute/fixed `.headerticker` +
+   `.header`, so the hero sits under the nav. Mirror banner offsets from
+   style-new.css / responsive.css_edabec9e.css.
+   ----------------------------------------------------------------------------- */
+[data-triolla-snapshot] .inner_content.servdetail_content > .portfolio_wrap:first-child {
+  padding-top: 190px;
+  box-sizing: border-box;
+}
+
+@media only screen and (max-width: 1199px) {
+  [data-triolla-snapshot] .inner_content.servdetail_content > .portfolio_wrap:first-child {
+    padding-top: 140px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  [data-triolla-snapshot] .inner_content.servdetail_content > .portfolio_wrap:first-child {
+    padding-top: 135px;
+  }
 }

@@ -1,0 +1,2521 @@
+{
+  "sources": [
+    "http://localhost:3000",
+    "http://localhost:3000/fragments/home-body.html",
+    "http://localhost:3000/fragments/home-he-body.html"
+  ],
+  "total_links": 161,
+  "valid_links": 131,
+  "broken_links": 30,
+  "by_status": {
+    "0": 23,
+    "200": 131,
+    "404": 5,
+    "405": 2
+  },
+  "details": {
+    "working": [
+      {
+        "text": "Formally Pitangoux",
+        "href": "https://triolla.io",
+        "normalized": "https://triolla.io/",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "Cybersecurity",
+        "href": "https://triolla.io/cyber-security/",
+        "normalized": "https://triolla.io/cyber-security",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "Digital Health",
+        "href": "https://triolla.io/medical-healthcare/",
+        "normalized": "https://triolla.io/medical-healthcare",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "Fintech & Finance",
+        "href": "https://triolla.io/fintech-finance/",
+        "normalized": "https://triolla.io/fintech-finance",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "Gaming",
+        "href": "https://triolla.io/gaming/",
+        "normalized": "https://triolla.io/gaming",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "Agritech",
+        "href": "https://triolla.io/agritech/",
+        "normalized": "https://triolla.io/agritech",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "B2C",
+        "href": "https://triolla.io/b2c/",
+        "normalized": "https://triolla.io/b2c",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "Devices & IoT",
+        "href": "https://triolla.io/device-iot/",
+        "normalized": "https://triolla.io/device-iot",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "Startups & Tech",
+        "href": "https://triolla.io/startups-tech/",
+        "normalized": "https://triolla.io/startups-tech",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "Mobile Apps",
+        "href": "https://triolla.io/mobile-apps/",
+        "normalized": "https://triolla.io/mobile-apps",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "SaaS Platforms",
+        "href": "https://triolla.io/saas-platforms/",
+        "normalized": "https://triolla.io/saas-platforms",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "B2B",
+        "href": "https://triolla.io/b2b/",
+        "normalized": "https://triolla.io/b2b",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "Dev",
+        "href": "https://triolla.io/dev/",
+        "normalized": "https://triolla.io/dev",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "Services",
+        "href": "https://triolla.io/services/",
+        "normalized": "https://triolla.io/services",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "Technology",
+        "href": "https://triolla.io/technology/",
+        "normalized": "https://triolla.io/technology",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "The Company",
+        "href": "https://triolla.io/about-us/",
+        "normalized": "https://triolla.io/about-us",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "Contact UsContact Us",
+        "href": "https://triolla.io/contact-us/",
+        "normalized": "https://triolla.io/contact-us",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "",
+        "href": "https://api.whatsapp.com/send/?phone=+972525956644&text=\u05e9\u05dc\u05d5\u05dd, \u05d4\u05d9\u05d9\u05ea\u05d9 \u05e8\u05d5\u05e6\u05d4 \u05dc\u05e9\u05de\u05d5\u05e2 \u05e2\u05d5\u05d3 \u05e4\u05e8\u05d8\u05d9\u05dd... &app_absent=0",
+        "normalized": "https://api.whatsapp.com/send",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "Book a CallBook a Call",
+        "href": "https://calendly.com/triolla/pitangoux-introductory-meeting-clone",
+        "normalized": "https://calendly.com/triolla/pitangoux-introductory-meeting-clone",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "Heb",
+        "href": "https://triolla.io/he/",
+        "normalized": "https://triolla.io/he",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "Blog",
+        "href": "https://triolla.io/blog/",
+        "normalized": "https://triolla.io/blog",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "Career",
+        "href": "https://triolla.io/careers/",
+        "normalized": "https://triolla.io/careers",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "Book a Call",
+        "href": "https://calendly.com/triolla/pitangoux-introductory-meeting-clone",
+        "normalized": "https://calendly.com/triolla/pitangoux-introductory-meeting-clone",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "",
+        "href": "https://wa.me/+972525956644?text=\u05e9\u05dc\u05d5\u05dd, \u05d4\u05d9\u05d9\u05ea\u05d9 \u05e8\u05d5\u05e6\u05d4 \u05dc\u05e9\u05de\u05d5\u05e2 \u05e2\u05d5\u05d3 \u05e4\u05e8\u05d8\u05d9\u05dd... ",
+        "normalized": "https://wa.me/+972525956644",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "Partner with usPartner with us",
+        "href": "https://triolla.io/contact-us/",
+        "normalized": "https://triolla.io/contact-us",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "Contact Us",
+        "href": "https://triolla.io/contact-us/",
+        "normalized": "https://triolla.io/contact-us",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "",
+        "href": "https://13tv.co.il/item/special/recommended/economy/k2fy3-902776824/",
+        "normalized": "https://13tv.co.il/item/special/recommended/economy/k2fy3-902776824",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "",
+        "href": "https://www.bizportal.co.il/BizTech/news/article/20015580",
+        "normalized": "https://www.bizportal.co.il/BizTech/news/article/20015580",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "",
+        "href": "https://www.globes.co.il/news/article.aspx?did=1001450720",
+        "normalized": "https://www.globes.co.il/news/article.aspx",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "",
+        "href": "https://www.pc.co.il/featured/420350/",
+        "normalized": "https://www.pc.co.il/featured/420350",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "",
+        "href": "https://www.mako.co.il/special-articles/Article-c2a83bbe7224d71026.htm",
+        "normalized": "https://www.mako.co.il/special-articles/Article-c2a83bbe7224d71026.htm",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "Product UX & UI Design",
+        "href": "https://triolla.io/services/product-ux-ui-design/",
+        "normalized": "https://triolla.io/services/product-ux-ui-design",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "UX Research",
+        "href": "https://triolla.io/services/ux-research/",
+        "normalized": "https://triolla.io/services/ux-research",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "Prototype",
+        "href": "https://triolla.io/services/prototyping/",
+        "normalized": "https://triolla.io/services/prototyping",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "Digital Branding",
+        "href": "https://triolla.io/branding-studio/",
+        "normalized": "https://triolla.io/branding-studio",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "Front End Development",
+        "href": "https://triolla.io/services/front-end-dev/",
+        "normalized": "https://triolla.io/services/front-end-dev",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "IOT & Devices",
+        "href": "https://triolla.io/device-iot/",
+        "normalized": "https://triolla.io/device-iot",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "SaaS",
+        "href": "https://triolla.io/saas-platforms/",
+        "normalized": "https://triolla.io/saas-platforms",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "Medical",
+        "href": "https://triolla.io/medical-healthcare/",
+        "normalized": "https://triolla.io/medical-healthcare",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "Dev & Technology",
+        "href": "https://triolla.io/technology/",
+        "normalized": "https://triolla.io/technology",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "Front End",
+        "href": "https://triolla.io/services/front-end-dev/",
+        "normalized": "https://triolla.io/services/front-end-dev",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "React.js",
+        "href": "https://triolla.io/services/front-end-dev/",
+        "normalized": "https://triolla.io/services/front-end-dev",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "Vue.js",
+        "href": "https://triolla.io/services/front-end-dev/",
+        "normalized": "https://triolla.io/services/front-end-dev",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "Back End",
+        "href": "https://triolla.io/services/back-end-dev/",
+        "normalized": "https://triolla.io/services/back-end-dev",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "Node. Js",
+        "href": "https://triolla.io/services/back-end-dev/",
+        "normalized": "https://triolla.io/services/back-end-dev",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "About us",
+        "href": "https://triolla.io/about-us/",
+        "normalized": "https://triolla.io/about-us",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "Careers",
+        "href": "https://triolla.io/careers/",
+        "normalized": "https://triolla.io/careers",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "Our Services",
+        "href": "https://triolla.io/services/",
+        "normalized": "https://triolla.io/services",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "Talk to us",
+        "href": "https://triolla.io/contact-us/",
+        "normalized": "https://triolla.io/contact-us",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "Accessibility Statement",
+        "href": "https://triolla.io/accessibility-statement/",
+        "normalized": "https://triolla.io/accessibility-statement",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "All Blogs",
+        "href": "https://triolla.io/blog",
+        "normalized": "https://triolla.io/blog",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "Fintech & Finance",
+        "href": "https://triolla.io/blog/the-fintech-ux-playbook/",
+        "normalized": "https://triolla.io/blog/the-fintech-ux-playbook",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "IOT & Devices",
+        "href": "https://triolla.io/blog/designing-intuitive-and-secure-iot-products-for-the-future/",
+        "normalized": "https://triolla.io/blog/designing-intuitive-and-secure-iot-products-for-the-future",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "SaaS",
+        "href": "https://triolla.io/blog/the-3-most-common-pain-points-when-hiring-ui-ux-agency-for-a-saas-product/",
+        "normalized": "https://triolla.io/blog/the-3-most-common-pain-points-when-hiring-ui-ux-agency-for-a-saas-product",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "Gaming",
+        "href": "https://triolla.io/blog/level-up-your-gaming-app-with-triollas-expert-ux-tips-boost-user-engagement-and-retention/",
+        "normalized": "https://triolla.io/blog/level-up-your-gaming-app-with-triollas-expert-ux-tips-boost-user-engagement-and-retention",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "Medical",
+        "href": "https://triolla.io/blog/ux-in-medtech-when-trust-is-a-matter-of-life-and-death/",
+        "normalized": "https://triolla.io/blog/ux-in-medtech-when-trust-is-a-matter-of-life-and-death",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "Agritech",
+        "href": "https://triolla.io/blog/designing-an-engaging-and-effective-agritech-app/",
+        "normalized": "https://triolla.io/blog/designing-an-engaging-and-effective-agritech-app",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "Facebook",
+        "href": "https://www.facebook.com/triollaofficial",
+        "normalized": "https://www.facebook.com/triollaofficial",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "Linkedin",
+        "href": "https://www.linkedin.com/company/triolla-official/",
+        "normalized": "https://www.linkedin.com/company/triolla-official",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "Instargram",
+        "href": "https://www.instagram.com/triollaofficial/",
+        "normalized": "https://www.instagram.com/triollaofficial",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "Tiktok",
+        "href": "https://www.tiktok.com/@triolla.io",
+        "normalized": "https://www.tiktok.com/@triolla.io",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "Driblle",
+        "href": "https://dribbble.com/Triolla",
+        "normalized": "https://dribbble.com/Triolla",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "BeHnace",
+        "href": "https://www.behance.net/asaf8ac9",
+        "normalized": "https://www.behance.net/asaf8ac9",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "",
+        "href": "https://triolla.io",
+        "normalized": "https://triolla.io/",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "Privacy Policy",
+        "href": "https://triolla.io/privacy-policy/",
+        "normalized": "https://triolla.io/privacy-policy",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "Terms Of Use",
+        "href": "https://triolla.io/terms-of-use/",
+        "normalized": "https://triolla.io/terms-of-use",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "",
+        "href": "https://www.tiktok.com/@triolla.io",
+        "normalized": "https://www.tiktok.com/@triolla.io",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "",
+        "href": "https://www.instagram.com/triollaofficial/",
+        "normalized": "https://www.instagram.com/triollaofficial",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "",
+        "href": "https://www.facebook.com/triollaofficial",
+        "normalized": "https://www.facebook.com/triollaofficial",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "Eng",
+        "href": "https://triolla.io/",
+        "normalized": "https://triolla.io/",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "Part of",
+        "href": "https://www.sqlink.com/",
+        "normalized": "https://www.sqlink.com/",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "",
+        "href": "https://www.linkedin.com/company/triolla-official/",
+        "normalized": "https://www.linkedin.com/company/triolla-official",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "privacy policy",
+        "href": "https://triolla.io/privacy-policy/",
+        "normalized": "https://triolla.io/privacy-policy",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "Powered byGDPR Cookie Compliance",
+        "href": "https://wordpress.org/plugins/gdpr-cookie-compliance/",
+        "normalized": "https://wordpress.org/plugins/gdpr-cookie-compliance",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "wpml.org",
+        "href": "https://wpml.org",
+        "normalized": "https://wpml.org/",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "remove this banner",
+        "href": "https://wpml.org/faq/how-to-remove-the-this-site-is-registered-on-wpml-org-as-a-development-site-notice/?utm_source=plugin&utm_medium=gui&utm_campaign=wpml-core&utm_term=footer-notice",
+        "normalized": "https://wpml.org/faq/how-to-remove-the-this-site-is-registered-on-wpml-org-as-a-development-site-notice",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "Formally Pitangoux",
+        "href": "https://triolla.io/he/",
+        "normalized": "https://triolla.io/he",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "\u05d0\u05d1\u05d8\u05d7\u05ea \u05e1\u05d9\u05d9\u05d1\u05e8",
+        "href": "https://triolla.io/he/%d7%a1%d7%99%d7%99%d7%91%d7%a8/",
+        "normalized": "https://triolla.io/he/%d7%a1%d7%99%d7%99%d7%91%d7%a8",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "\u05e8\u05e4\u05d5\u05d0\u05d4 \u05d5\u05d1\u05e8\u05d9\u05d0\u05d5\u05ea",
+        "href": "https://triolla.io/he/%d7%91%d7%a8%d7%99%d7%90%d7%95%d7%aa-%d7%95%d7%a8%d7%a4%d7%95%d7%90%d7%94/",
+        "normalized": "https://triolla.io/he/%d7%91%d7%a8%d7%99%d7%90%d7%95%d7%aa-%d7%95%d7%a8%d7%a4%d7%95%d7%90%d7%94",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "\u05e4\u05d9\u05e0\u05d8\u05e7 \u05d5\u05e4\u05d9\u05e0\u05e0\u05e1\u05d9\u05dd",
+        "href": "https://triolla.io/he/%d7%a4%d7%99%d7%a0%d7%98%d7%a7-%d7%95%d7%a4%d7%99%d7%a0%d7%a0%d7%a1%d7%99%d7%9d/",
+        "normalized": "https://triolla.io/he/%d7%a4%d7%99%d7%a0%d7%98%d7%a7-%d7%95%d7%a4%d7%99%d7%a0%d7%a0%d7%a1%d7%99%d7%9d",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "\u05d2\u05d9\u05d9\u05de\u05d9\u05e0\u05d2",
+        "href": "https://triolla.io/he/%d7%92%d7%99%d7%99%d7%9e%d7%99%d7%a0%d7%92/",
+        "normalized": "https://triolla.io/he/%d7%92%d7%99%d7%99%d7%9e%d7%99%d7%a0%d7%92",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "\u05d0\u05d2\u05e8\u05d9\u05d8\u05e7",
+        "href": "https://triolla.io/he/%d7%90%d7%92%d7%a8%d7%99%d7%98%d7%a7/",
+        "normalized": "https://triolla.io/he/%d7%90%d7%92%d7%a8%d7%99%d7%98%d7%a7",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "B2C",
+        "href": "https://triolla.io/he/b2c/",
+        "normalized": "https://triolla.io/he/b2c",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "\u05de\u05db\u05e9\u05d9\u05e8\u05d9\u05dd \u05d5-IoT",
+        "href": "https://triolla.io/he/%d7%9e%d7%9b%d7%a9%d7%99%d7%a8%d7%99%d7%9d-iot-new/",
+        "normalized": "https://triolla.io/he/%d7%9e%d7%9b%d7%a9%d7%99%d7%a8%d7%99%d7%9d-iot-new",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "\u05e1\u05d8\u05d0\u05e8\u05d8-\u05d0\u05e4\u05d9\u05dd \u05d5\u05d8\u05db\u05e0\u05d5\u05dc\u05d5\u05d2\u05d9\u05d4",
+        "href": "https://triolla.io/he/startups-tech/",
+        "normalized": "https://triolla.io/he/startups-tech",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "\u05d0\u05e4\u05dc\u05d9\u05e7\u05e6\u05d9\u05d5\u05ea \u05de\u05d5\u05d1\u05d9\u05d9\u05dc",
+        "href": "https://triolla.io/he/%d7%90%d7%a4%d7%9c%d7%99%d7%a7%d7%a6%d7%99%d7%95%d7%aa-%d7%9e%d7%95%d7%91%d7%99%d7%99%d7%9c/",
+        "normalized": "https://triolla.io/he/%d7%90%d7%a4%d7%9c%d7%99%d7%a7%d7%a6%d7%99%d7%95%d7%aa-%d7%9e%d7%95%d7%91%d7%99%d7%99%d7%9c",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "SaaS",
+        "href": "https://triolla.io/he/saas-platforms/",
+        "normalized": "https://triolla.io/he/saas-platforms",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "B2B",
+        "href": "https://triolla.io/he/b2b/",
+        "normalized": "https://triolla.io/he/b2b",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "\u05e4\u05d9\u05ea\u05d5\u05d7 \u05de\u05e2\u05e8\u05db\u05d5\u05ea",
+        "href": "https://triolla.io/he/technology/",
+        "normalized": "https://triolla.io/he/technology",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "\u05e9\u05d9\u05e8\u05d5\u05ea\u05d9\u05dd",
+        "href": "https://triolla.io/he/%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa%d7%99%d7%9d-%d7%a9%d7%9c%d7%a0%d7%95/",
+        "normalized": "https://triolla.io/he/%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa%d7%99%d7%9d-%d7%a9%d7%9c%d7%a0%d7%95",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "\u05d8\u05db\u05e0\u05d5\u05dc\u05d5\u05d2\u05d9\u05d4",
+        "href": "https://triolla.io/he/technology/",
+        "normalized": "https://triolla.io/he/technology",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "\u05d0\u05d5\u05d3\u05d5\u05ea\u05d9\u05e0\u05d5",
+        "href": "https://triolla.io/he/about/",
+        "normalized": "https://triolla.io/he/about",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "\u05e6\u05d5\u05e8 \u05e7\u05e9\u05e8\u05e6\u05d5\u05e8 \u05e7\u05e9\u05e8",
+        "href": "https://triolla.io/he/contact-us/",
+        "normalized": "https://triolla.io/he/contact-us",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "",
+        "href": "https://api.whatsapp.com/send/?phone=+972525956644&text=&app_absent=0",
+        "normalized": "https://api.whatsapp.com/send",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "\u05e7\u05d1\u05e2\u05d5 \u05e9\u05d9\u05d7\u05d4\u05e7\u05d1\u05e2\u05d5 \u05e9\u05d9\u05d7\u05d4",
+        "href": "https://calendly.com/triolla/pitangoux-introductory-meeting-clone",
+        "normalized": "https://calendly.com/triolla/pitangoux-introductory-meeting-clone",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "\u05d0\u05e0\u05d2\u05dc\u05d9\u05ea",
+        "href": "https://triolla.io/",
+        "normalized": "https://triolla.io/",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "\u05d1\u05dc\u05d5\u05d2",
+        "href": "https://triolla.io/he/%d7%91%d7%9c%d7%95%d7%92/",
+        "normalized": "https://triolla.io/he/%d7%91%d7%9c%d7%95%d7%92",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "\u05e7\u05e8\u05d9\u05d9\u05e8\u05d4",
+        "href": "https://triolla.io/he/%d7%a7%d7%a8%d7%99%d7%99%d7%a8%d7%94/",
+        "normalized": "https://triolla.io/he/%d7%a7%d7%a8%d7%99%d7%99%d7%a8%d7%94",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "\u05e7\u05d1\u05e2\u05d5 \u05e9\u05d9\u05d7\u05d4",
+        "href": "https://calendly.com/triolla/pitangoux-introductory-meeting-clone",
+        "normalized": "https://calendly.com/triolla/pitangoux-introductory-meeting-clone",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "",
+        "href": "https://wa.me/+972525956644?text=",
+        "normalized": "https://wa.me/+972525956644",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "\u05d1\u05d5\u05d0\u05d5 \u05e0\u05d1\u05e0\u05d4 \u05d9\u05d7\u05d3\u05d1\u05d5\u05d0\u05d5 \u05e0\u05d1\u05e0\u05d4 \u05d9\u05d7\u05d3",
+        "href": "https://triolla.io/he/%d7%a6%d7%95%d7%a8-%d7%a7%d7%a9%d7%a8/",
+        "normalized": "https://triolla.io/he/%d7%a6%d7%95%d7%a8-%d7%a7%d7%a9%d7%a8",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "\u05e6\u05d5\u05e8 \u05e7\u05e9\u05e8",
+        "href": "https://triolla.io/he/contact-us/",
+        "normalized": "https://triolla.io/he/contact-us",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "\u05e2\u05d9\u05e6\u05d5\u05d1 \u05de\u05d5\u05e6\u05e8 \u05d5\u05d7\u05d5\u05d5\u05d9\u05ea \u05de\u05e9\u05ea\u05de\u05e9",
+        "href": "http://localhost:3000/he/%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa%d7%99%d7%9d-%d7%a9%d7%9c%d7%a0%d7%95/product-ux-ui-design/",
+        "normalized": "http://localhost:3000/he/%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa%d7%99%d7%9d-%d7%a9%d7%9c%d7%a0%d7%95/product-ux-ui-design",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "\u05d0\u05d1-\u05d8\u05d9\u05e4\u05d5\u05e1",
+        "href": "http://localhost:3000/he/\u05d4\u05e9\u05d9\u05e8\u05d5\u05ea\u05d9\u05dd-\u05e9\u05dc\u05e0\u05d5/prototyping/",
+        "normalized": "http://localhost:3000/he/\u05d4\u05e9\u05d9\u05e8\u05d5\u05ea\u05d9\u05dd-\u05e9\u05dc\u05e0\u05d5/prototyping",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "\u05e4\u05d9\u05ea\u05d5\u05d7 \u05ea\u05d5\u05db\u05e0\u05d4",
+        "href": "http://localhost:3000/he/\u05d4\u05e9\u05d9\u05e8\u05d5\u05ea\u05d9\u05dd-\u05e9\u05dc\u05e0\u05d5/front-end-dev/",
+        "normalized": "http://localhost:3000/he/\u05d4\u05e9\u05d9\u05e8\u05d5\u05ea\u05d9\u05dd-\u05e9\u05dc\u05e0\u05d5/front-end-dev",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "\u05e4\u05d9\u05e0\u05d8\u05e7 & \u05e4\u05d9\u05e0\u05e0\u05e1\u05d9\u05dd",
+        "href": "https://triolla.io/he/%d7%a4%d7%99%d7%a0%d7%98%d7%a7-%d7%95%d7%a4%d7%99%d7%a0%d7%a0%d7%a1%d7%99%d7%9d/",
+        "normalized": "https://triolla.io/he/%d7%a4%d7%99%d7%a0%d7%98%d7%a7-%d7%95%d7%a4%d7%99%d7%a0%d7%a0%d7%a1%d7%99%d7%9d",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "\u05de\u05db\u05e9\u05d9\u05e8\u05d9\u05dd & IoT",
+        "href": "https://triolla.io/he/%d7%9e%d7%9b%d7%a9%d7%99%d7%a8%d7%99%d7%9d-iot-new/",
+        "normalized": "https://triolla.io/he/%d7%9e%d7%9b%d7%a9%d7%99%d7%a8%d7%99%d7%9d-iot-new",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "\u05de\u05e2\u05e8\u05db\u05d5\u05ea SaaS",
+        "href": "https://triolla.io/he/saas-platforms/",
+        "normalized": "https://triolla.io/he/saas-platforms",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "\u05d1\u05e8\u05d9\u05d0\u05d5\u05ea \u05d5\u05e8\u05e4\u05d5\u05d0\u05d4",
+        "href": "https://triolla.io/he/%d7%91%d7%a8%d7%99%d7%90%d7%95%d7%aa-%d7%95%d7%a8%d7%a4%d7%95%d7%90%d7%94/",
+        "normalized": "https://triolla.io/he/%d7%91%d7%a8%d7%99%d7%90%d7%95%d7%aa-%d7%95%d7%a8%d7%a4%d7%95%d7%90%d7%94",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "\u05e4\u05d9\u05ea\u05d5\u05d7 \u05d5\u05d8\u05db\u05e0\u05d5\u05dc\u05d5\u05d2\u05d9\u05d5\u05ea",
+        "href": "https://triolla.io/technology/",
+        "normalized": "https://triolla.io/technology",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "Front End",
+        "href": "https://triolla.io/he/%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa%d7%99%d7%9d-%d7%a9%d7%9c%d7%a0%d7%95/front-end-dev/",
+        "normalized": "https://triolla.io/he/%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa%d7%99%d7%9d-%d7%a9%d7%9c%d7%a0%d7%95/front-end-dev",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "React.js",
+        "href": "https://triolla.io/he/%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa%d7%99%d7%9d-%d7%a9%d7%9c%d7%a0%d7%95/front-end-dev/",
+        "normalized": "https://triolla.io/he/%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa%d7%99%d7%9d-%d7%a9%d7%9c%d7%a0%d7%95/front-end-dev",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "Vue.js",
+        "href": "https://triolla.io/he/%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa%d7%99%d7%9d-%d7%a9%d7%9c%d7%a0%d7%95/front-end-dev/",
+        "normalized": "https://triolla.io/he/%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa%d7%99%d7%9d-%d7%a9%d7%9c%d7%a0%d7%95/front-end-dev",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "Back End",
+        "href": "https://triolla.io/he/%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa%d7%99%d7%9d-%d7%a9%d7%9c%d7%a0%d7%95/back-end-dev/",
+        "normalized": "https://triolla.io/he/%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa%d7%99%d7%9d-%d7%a9%d7%9c%d7%a0%d7%95/back-end-dev",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "Node. Js",
+        "href": "https://triolla.io/he/%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa%d7%99%d7%9d-%d7%a9%d7%9c%d7%a0%d7%95/back-end-dev/",
+        "normalized": "https://triolla.io/he/%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa%d7%99%d7%9d-%d7%a9%d7%9c%d7%a0%d7%95/back-end-dev",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "\u05e2\u05dc\u05d9\u05e0\u05d5",
+        "href": "https://triolla.io/he/about/",
+        "normalized": "https://triolla.io/he/about",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "\u05d4\u05e9\u05d9\u05e8\u05d5\u05ea\u05d9\u05dd \u05e9\u05dc\u05e0\u05d5",
+        "href": "https://triolla.io/he/%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa%d7%99%d7%9d-%d7%a9%d7%9c%d7%a0%d7%95/",
+        "normalized": "https://triolla.io/he/%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa%d7%99%d7%9d-%d7%a9%d7%9c%d7%a0%d7%95",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "\u05e6\u05e8\u05d5 \u05e7\u05e9\u05e8",
+        "href": "https://triolla.io/he/%d7%a6%d7%95%d7%a8-%d7%a7%d7%a9%d7%a8/",
+        "normalized": "https://triolla.io/he/%d7%a6%d7%95%d7%a8-%d7%a7%d7%a9%d7%a8",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "\u05e0\u05d2\u05d9\u05e9\u05d5\u05ea",
+        "href": "https://triolla.io/he/%d7%94%d7%a6%d7%94%d7%a8%d7%aa-%d7%a0%d7%92%d7%99%d7%a9%d7%95%d7%aa/",
+        "normalized": "https://triolla.io/he/%d7%94%d7%a6%d7%94%d7%a8%d7%aa-%d7%a0%d7%92%d7%99%d7%a9%d7%95%d7%aa",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "\u05db\u05dc \u05d4\u05d1\u05dc\u05d5\u05d2\u05d9\u05dd",
+        "href": "https://triolla.io/he/%d7%91%d7%9c%d7%95%d7%92/",
+        "normalized": "https://triolla.io/he/%d7%91%d7%9c%d7%95%d7%92",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "\u05e4\u05d9\u05e0\u05d8\u05e7 & \u05e4\u05d9\u05e0\u05e0\u05e1\u05d9\u05dd",
+        "href": "https://triolla.io/he/blog/the-fintech-ux-playbook/",
+        "normalized": "https://triolla.io/he/blog/the-fintech-ux-playbook",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "\u05de\u05db\u05e9\u05d9\u05e8\u05d9\u05dd & IoT",
+        "href": "https://triolla.io/he/blog/designing-intuitive-and-secure-iot-products-for-the-future/",
+        "normalized": "https://triolla.io/he/blog/designing-intuitive-and-secure-iot-products-for-the-future",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "SaaS",
+        "href": "https://triolla.io/he/blog/the-3-most-common-pain-points-when-hiring-ui-ux-agency-for-a-saas-product/",
+        "normalized": "https://triolla.io/he/blog/the-3-most-common-pain-points-when-hiring-ui-ux-agency-for-a-saas-product",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "\u05d2\u05d9\u05d9\u05de\u05d9\u05e0\u05d2",
+        "href": "https://triolla.io/he/blog/level-up-your-gaming-app-with-triollas-expert-ux-tips-boost-user-engagement-and-retention/",
+        "normalized": "https://triolla.io/he/blog/level-up-your-gaming-app-with-triollas-expert-ux-tips-boost-user-engagement-and-retention",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "\u05de\u05d3\u05d9\u05e7\u05dc",
+        "href": "https://triolla.io/he/blog/ux-in-medtech-when-trust-is-a-matter-of-life-and-death/",
+        "normalized": "https://triolla.io/he/blog/ux-in-medtech-when-trust-is-a-matter-of-life-and-death",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "\u05d0\u05d2\u05e8\u05d9\u05d8\u05e7",
+        "href": "https://triolla.io/he/blog/designing-an-engaging-and-effective-agritech-app/",
+        "normalized": "https://triolla.io/he/blog/designing-an-engaging-and-effective-agritech-app",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "Instergram",
+        "href": "https://www.instagram.com/triollaofficial/",
+        "normalized": "https://www.instagram.com/triollaofficial",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "",
+        "href": "https://triolla.io/he/",
+        "normalized": "https://triolla.io/he",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "\u05de\u05d3\u05d9\u05e0\u05d9\u05d5\u05ea \u05e4\u05e8\u05d8\u05d9\u05d5\u05ea",
+        "href": "https://triolla.io/he/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%a4%d7%a8%d7%98%d7%99%d7%95%d7%aa/",
+        "normalized": "https://triolla.io/he/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%a4%d7%a8%d7%98%d7%99%d7%95%d7%aa",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "\u05ea\u05e0\u05d0\u05d9 \u05e9\u05d9\u05de\u05d5\u05e9",
+        "href": "https://triolla.io/he/%d7%aa%d7%a0%d7%90%d7%99-%d7%a9%d7%99%d7%9e%d7%95%d7%a9/",
+        "normalized": "https://triolla.io/he/%d7%aa%d7%a0%d7%90%d7%99-%d7%a9%d7%99%d7%9e%d7%95%d7%a9",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "\u05e2\u05d1\u05e8\u05d9\u05ea",
+        "href": "https://triolla.io/he/",
+        "normalized": "https://triolla.io/he",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "broken": [
+      {
+        "text": "",
+        "href": "javascript:void(0);",
+        "normalized": "javascript://void(0);",
+        "status": 0,
+        "message": "Error: No connection adapters were found for 'javascript:void(0);'"
+      },
+      {
+        "text": "",
+        "href": "tel:+972-73-744-3322",
+        "normalized": "tel://+972-73-744-3322",
+        "status": 0,
+        "message": "Error: No connection adapters were found for 'tel:+972-73-744-3322'"
+      },
+      {
+        "text": "How much does UX/UI design cost?",
+        "href": "javascript:void(0);",
+        "normalized": "javascript://void(0);",
+        "status": 0,
+        "message": "Error: No connection adapters were found for 'javascript:void(0);'"
+      },
+      {
+        "text": "How long does the UX/UI design process take?",
+        "href": "javascript:void(0);",
+        "normalized": "javascript://void(0);",
+        "status": 0,
+        "message": "Error: No connection adapters were found for 'javascript:void(0);'"
+      },
+      {
+        "text": "What does the workflow with a UX/UI studio include?",
+        "href": "javascript:void(0);",
+        "normalized": "javascript://void(0);",
+        "status": 0,
+        "message": "Error: No connection adapters were found for 'javascript:void(0);'"
+      },
+      {
+        "text": "What\u2019s the difference between UX design and UI design?",
+        "href": "javascript:void(0);",
+        "normalized": "javascript://void(0);",
+        "status": 0,
+        "message": "Error: No connection adapters were found for 'javascript:void(0);'"
+      },
+      {
+        "text": "What are the main stages in a UX/UI design project?",
+        "href": "javascript:void(0);",
+        "normalized": "javascript://void(0);",
+        "status": 0,
+        "message": "Error: No connection adapters were found for 'javascript:void(0);'"
+      },
+      {
+        "text": "What does the user research process look like in a UX project?",
+        "href": "javascript:void(0);",
+        "normalized": "javascript://void(0);",
+        "status": 0,
+        "message": "Error: No connection adapters were found for 'javascript:void(0);'"
+      },
+      {
+        "text": "Do you work with startups, large companies, and small businesses?",
+        "href": "javascript:void(0);",
+        "normalized": "javascript://void(0);",
+        "status": 0,
+        "message": "Error: No connection adapters were found for 'javascript:void(0);'"
+      },
+      {
+        "text": "Can I see examples of your previous projects?",
+        "href": "javascript:void(0);",
+        "normalized": "javascript://void(0);",
+        "status": 0,
+        "message": "Error: No connection adapters were found for 'javascript:void(0);'"
+      },
+      {
+        "text": "Do you support the development process or only the design?",
+        "href": "javascript:void(0);",
+        "normalized": "javascript://void(0);",
+        "status": 0,
+        "message": "Error: No connection adapters were found for 'javascript:void(0);'"
+      },
+      {
+        "text": "Nod.Js",
+        "href": "https://nod.js",
+        "normalized": "https://nod.js/",
+        "status": 0,
+        "message": "Connection error"
+      },
+      {
+        "text": "+972-73-744-3322",
+        "href": "tel:+972-73-744-3322",
+        "normalized": "tel://+972-73-744-3322",
+        "status": 0,
+        "message": "Error: No connection adapters were found for 'tel:+972-73-744-3322'"
+      },
+      {
+        "text": "+1408-627-7350",
+        "href": "tel:+1408-627-7350",
+        "normalized": "tel://+1408-627-7350",
+        "status": 0,
+        "message": "Error: No connection adapters were found for 'tel:+1408-627-7350'"
+      },
+      {
+        "text": "[email\u00a0protected]",
+        "href": "http://localhost:3000/cdn-cgi/l/email-protection#793f0c17390d0b1016151518571016",
+        "normalized": "http://localhost:3000/cdn-cgi/l/email-protection",
+        "status": 404,
+        "message": "OK"
+      },
+      {
+        "text": "",
+        "href": "https://www.themarker.com/labels/2021-04-05/ty-article-labels/0000017f-f88a-d044-adff-fbfb48ad0000",
+        "normalized": "https://www.themarker.com/labels/2021-04-05/ty-article-labels/0000017f-f88a-d044-adff-fbfb48ad0000",
+        "status": 405,
+        "message": "OK"
+      },
+      {
+        "text": "Press",
+        "href": "https://www.themarker.com/labels/2021-04-05/ty-article-labels/0000017f-f88a-d044-adff-fbfb48ad0000",
+        "normalized": "https://www.themarker.com/labels/2021-04-05/ty-article-labels/0000017f-f88a-d044-adff-fbfb48ad0000",
+        "status": 405,
+        "message": "OK"
+      },
+      {
+        "text": "[email\u00a0protected]",
+        "href": "http://localhost:3000/cdn-cgi/l/email-protection#bef8cbd0fecaccd7d1d2d2df90d7d1",
+        "normalized": "http://localhost:3000/cdn-cgi/l/email-protection",
+        "status": 404,
+        "message": "OK"
+      },
+      {
+        "text": "\u05d4\u05d0\u05dd \u05ea\u05d5\u05db\u05dc \u05dc\u05e2\u05d6\u05d5\u05e8 \u05d2\u05dd \u05d1\u05e2\u05d9\u05e6\u05d5\u05d1 UX \u05d5\u05d2\u05dd \u05d1\u05e2\u05d9\u05e6\u05d5\u05d1 UI?",
+        "href": "javascript:void(0);",
+        "normalized": "javascript://void(0);",
+        "status": 0,
+        "message": "Error: No connection adapters were found for 'javascript:void(0);'"
+      },
+      {
+        "text": "\u05d0\u05d9\u05da \u05d0\u05ea\u05dd \u05de\u05d5\u05d5\u05d3\u05d0\u05d9\u05dd \u05e9\u05d4\u05e2\u05d9\u05e6\u05d5\u05d1\u05d9\u05dd \u05e9\u05dc\u05db\u05dd \u05de\u05ea\u05d0\u05d9\u05de\u05d9\u05dd \u05dc\u05de\u05d5\u05ea\u05d2 \u05e9\u05dc\u05d9?",
+        "href": "javascript:void(0);",
+        "normalized": "javascript://void(0);",
+        "status": 0,
+        "message": "Error: No connection adapters were found for 'javascript:void(0);'"
+      },
+      {
+        "text": "\u05d4\u05d0\u05dd \u05e0\u05d9\u05ea\u05df \u05dc\u05e2\u05e6\u05d1 \u05de\u05d7\u05d3\u05e9 \u05de\u05d5\u05e6\u05e8 \u05e7\u05d9\u05d9\u05dd?",
+        "href": "javascript:void(0);",
+        "normalized": "javascript://void(0);",
+        "status": 0,
+        "message": "Error: No connection adapters were found for 'javascript:void(0);'"
+      },
+      {
+        "text": "\u05d4\u05d0\u05dd \u05d0\u05ea\u05dd \u05e2\u05d5\u05e8\u05db\u05d9\u05dd \u05de\u05d7\u05e7\u05e8\u05d9 \u05de\u05e9\u05ea\u05de\u05e9\u05d9\u05dd \u05db\u05d7\u05dc\u05e7 \u05de\u05d4\u05e9\u05d9\u05e8\u05d5\u05ea\u05d9\u05dd \u05e9\u05dc\u05db\u05dd?",
+        "href": "javascript:void(0);",
+        "normalized": "javascript://void(0);",
+        "status": 0,
+        "message": "Error: No connection adapters were found for 'javascript:void(0);'"
+      },
+      {
+        "text": "\u05db\u05de\u05d4 \u05d6\u05de\u05df \u05dc\u05d5\u05e7\u05d7 \u05d1\u05d3\u05e8\u05da \u05db\u05dc\u05dc \u05ea\u05d4\u05dc\u05d9\u05da \u05e2\u05d9\u05e6\u05d5\u05d1 \u05de\u05d5\u05e6\u05e8?",
+        "href": "javascript:void(0);",
+        "normalized": "javascript://void(0);",
+        "status": 0,
+        "message": "Error: No connection adapters were found for 'javascript:void(0);'"
+      },
+      {
+        "text": "\u05e2\u05dd \u05d0\u05d9\u05dc\u05d5 \u05ea\u05e2\u05e9\u05d9\u05d5\u05ea \u05e2\u05d1\u05d3\u05ea?",
+        "href": "javascript:void(0);",
+        "normalized": "javascript://void(0);",
+        "status": 0,
+        "message": "Error: No connection adapters were found for 'javascript:void(0);'"
+      },
+      {
+        "text": "\u05de\u05d4 \u05e2\u05dc\u05d5\u05ea \u05d4\u05e2\u05d1\u05d5\u05d3\u05d4 \u05e2\u05dd \u05d8\u05e8\u05d9\u05d0\u05d5\u05dc\u05d4?",
+        "href": "javascript:void(0);",
+        "normalized": "javascript://void(0);",
+        "status": 0,
+        "message": "Error: No connection adapters were found for 'javascript:void(0);'"
+      },
+      {
+        "text": "[email\u00a0protected]",
+        "href": "http://localhost:3000/cdn-cgi/l/email-protection#365043587642445f595a5a57185f59",
+        "normalized": "http://localhost:3000/cdn-cgi/l/email-protection",
+        "status": 404,
+        "message": "OK"
+      },
+      {
+        "text": "\u05de\u05d7\u05e7\u05e8 \u05d7\u05d5\u05d5\u05d9\u05ea \u05de\u05e9\u05ea\u05de\u05e9",
+        "href": "http://localhost:3000/he/%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa%d7%99%d7%9d-%d7%a9%d7%9c%d7%a0%d7%95/%d7%9e%d7%97%d7%a7%d7%a8-ux/",
+        "normalized": "http://localhost:3000/he/%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa%d7%99%d7%9d-%d7%a9%d7%9c%d7%a0%d7%95/%d7%9e%d7%97%d7%a7%d7%a8-ux",
+        "status": 404,
+        "message": "OK"
+      },
+      {
+        "text": "\u05de\u05d9\u05ea\u05d5\u05d2 \u05d3\u05d9\u05d2\u05d9\u05d8\u05dc\u05d9",
+        "href": "http://localhost:3000/he/\u05de\u05d9\u05ea\u05d5\u05d2-\u05d5\u05e1\u05d8\u05d5\u05d3\u05d9\u05d5/",
+        "normalized": "http://localhost:3000/he/\u05de\u05d9\u05ea\u05d5\u05d2-\u05d5\u05e1\u05d8\u05d5\u05d3\u05d9\u05d5",
+        "status": 0,
+        "message": "Error: Exceeded 30 redirects."
+      },
+      {
+        "text": "[email\u00a0protected]",
+        "href": "http://localhost:3000/cdn-cgi/l/email-protection#f6908398b682849f999a9a97d89f99",
+        "normalized": "http://localhost:3000/cdn-cgi/l/email-protection",
+        "status": 404,
+        "message": "OK"
+      },
+      {
+        "text": "+1-408-627-7350",
+        "href": "tel:+1-408-627-7350",
+        "normalized": "tel://+1-408-627-7350",
+        "status": 0,
+        "message": "Error: No connection adapters were found for 'tel:+1-408-627-7350'"
+      }
+    ],
+    "redirects": []
+  },
+  "links_by_text": {
+    "": [
+      {
+        "text": "",
+        "href": "javascript:void(0);",
+        "normalized": "javascript://void(0);",
+        "status": 0,
+        "message": "Error: No connection adapters were found for 'javascript:void(0);'"
+      },
+      {
+        "text": "",
+        "href": "https://api.whatsapp.com/send/?phone=+972525956644&text=\u05e9\u05dc\u05d5\u05dd, \u05d4\u05d9\u05d9\u05ea\u05d9 \u05e8\u05d5\u05e6\u05d4 \u05dc\u05e9\u05de\u05d5\u05e2 \u05e2\u05d5\u05d3 \u05e4\u05e8\u05d8\u05d9\u05dd... &app_absent=0",
+        "normalized": "https://api.whatsapp.com/send",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "",
+        "href": "tel:+972-73-744-3322",
+        "normalized": "tel://+972-73-744-3322",
+        "status": 0,
+        "message": "Error: No connection adapters were found for 'tel:+972-73-744-3322'"
+      },
+      {
+        "text": "",
+        "href": "https://wa.me/+972525956644?text=\u05e9\u05dc\u05d5\u05dd, \u05d4\u05d9\u05d9\u05ea\u05d9 \u05e8\u05d5\u05e6\u05d4 \u05dc\u05e9\u05de\u05d5\u05e2 \u05e2\u05d5\u05d3 \u05e4\u05e8\u05d8\u05d9\u05dd... ",
+        "normalized": "https://wa.me/+972525956644",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "",
+        "href": "https://13tv.co.il/item/special/recommended/economy/k2fy3-902776824/",
+        "normalized": "https://13tv.co.il/item/special/recommended/economy/k2fy3-902776824",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "",
+        "href": "https://www.bizportal.co.il/BizTech/news/article/20015580",
+        "normalized": "https://www.bizportal.co.il/BizTech/news/article/20015580",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "",
+        "href": "https://www.themarker.com/labels/2021-04-05/ty-article-labels/0000017f-f88a-d044-adff-fbfb48ad0000",
+        "normalized": "https://www.themarker.com/labels/2021-04-05/ty-article-labels/0000017f-f88a-d044-adff-fbfb48ad0000",
+        "status": 405,
+        "message": "OK"
+      },
+      {
+        "text": "",
+        "href": "https://www.globes.co.il/news/article.aspx?did=1001450720",
+        "normalized": "https://www.globes.co.il/news/article.aspx",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "",
+        "href": "https://www.pc.co.il/featured/420350/",
+        "normalized": "https://www.pc.co.il/featured/420350",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "",
+        "href": "https://www.mako.co.il/special-articles/Article-c2a83bbe7224d71026.htm",
+        "normalized": "https://www.mako.co.il/special-articles/Article-c2a83bbe7224d71026.htm",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "",
+        "href": "https://triolla.io",
+        "normalized": "https://triolla.io/",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "",
+        "href": "https://www.tiktok.com/@triolla.io",
+        "normalized": "https://www.tiktok.com/@triolla.io",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "",
+        "href": "https://www.instagram.com/triollaofficial/",
+        "normalized": "https://www.instagram.com/triollaofficial",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "",
+        "href": "https://www.facebook.com/triollaofficial",
+        "normalized": "https://www.facebook.com/triollaofficial",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "",
+        "href": "https://www.linkedin.com/company/triolla-official/",
+        "normalized": "https://www.linkedin.com/company/triolla-official",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "",
+        "href": "https://api.whatsapp.com/send/?phone=+972525956644&text=&app_absent=0",
+        "normalized": "https://api.whatsapp.com/send",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "",
+        "href": "https://wa.me/+972525956644?text=",
+        "normalized": "https://wa.me/+972525956644",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "",
+        "href": "https://triolla.io/he/",
+        "normalized": "https://triolla.io/he",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "Formally Pitangoux": [
+      {
+        "text": "Formally Pitangoux",
+        "href": "https://triolla.io",
+        "normalized": "https://triolla.io/",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "Formally Pitangoux",
+        "href": "https://triolla.io/he/",
+        "normalized": "https://triolla.io/he",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "Cybersecurity": [
+      {
+        "text": "Cybersecurity",
+        "href": "https://triolla.io/cyber-security/",
+        "normalized": "https://triolla.io/cyber-security",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "Digital Health": [
+      {
+        "text": "Digital Health",
+        "href": "https://triolla.io/medical-healthcare/",
+        "normalized": "https://triolla.io/medical-healthcare",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "Fintech & Finance": [
+      {
+        "text": "Fintech & Finance",
+        "href": "https://triolla.io/fintech-finance/",
+        "normalized": "https://triolla.io/fintech-finance",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "Fintech & Finance",
+        "href": "https://triolla.io/blog/the-fintech-ux-playbook/",
+        "normalized": "https://triolla.io/blog/the-fintech-ux-playbook",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "Gaming": [
+      {
+        "text": "Gaming",
+        "href": "https://triolla.io/gaming/",
+        "normalized": "https://triolla.io/gaming",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "Gaming",
+        "href": "https://triolla.io/blog/level-up-your-gaming-app-with-triollas-expert-ux-tips-boost-user-engagement-and-retention/",
+        "normalized": "https://triolla.io/blog/level-up-your-gaming-app-with-triollas-expert-ux-tips-boost-user-engagement-and-retention",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "Agritech": [
+      {
+        "text": "Agritech",
+        "href": "https://triolla.io/agritech/",
+        "normalized": "https://triolla.io/agritech",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "Agritech",
+        "href": "https://triolla.io/blog/designing-an-engaging-and-effective-agritech-app/",
+        "normalized": "https://triolla.io/blog/designing-an-engaging-and-effective-agritech-app",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "B2C": [
+      {
+        "text": "B2C",
+        "href": "https://triolla.io/b2c/",
+        "normalized": "https://triolla.io/b2c",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "B2C",
+        "href": "https://triolla.io/he/b2c/",
+        "normalized": "https://triolla.io/he/b2c",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "Devices & IoT": [
+      {
+        "text": "Devices & IoT",
+        "href": "https://triolla.io/device-iot/",
+        "normalized": "https://triolla.io/device-iot",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "Startups & Tech": [
+      {
+        "text": "Startups & Tech",
+        "href": "https://triolla.io/startups-tech/",
+        "normalized": "https://triolla.io/startups-tech",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "Mobile Apps": [
+      {
+        "text": "Mobile Apps",
+        "href": "https://triolla.io/mobile-apps/",
+        "normalized": "https://triolla.io/mobile-apps",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "SaaS Platforms": [
+      {
+        "text": "SaaS Platforms",
+        "href": "https://triolla.io/saas-platforms/",
+        "normalized": "https://triolla.io/saas-platforms",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "B2B": [
+      {
+        "text": "B2B",
+        "href": "https://triolla.io/b2b/",
+        "normalized": "https://triolla.io/b2b",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "B2B",
+        "href": "https://triolla.io/he/b2b/",
+        "normalized": "https://triolla.io/he/b2b",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "Dev": [
+      {
+        "text": "Dev",
+        "href": "https://triolla.io/dev/",
+        "normalized": "https://triolla.io/dev",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "Services": [
+      {
+        "text": "Services",
+        "href": "https://triolla.io/services/",
+        "normalized": "https://triolla.io/services",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "Technology": [
+      {
+        "text": "Technology",
+        "href": "https://triolla.io/technology/",
+        "normalized": "https://triolla.io/technology",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "The Company": [
+      {
+        "text": "The Company",
+        "href": "https://triolla.io/about-us/",
+        "normalized": "https://triolla.io/about-us",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "Contact UsContact Us": [
+      {
+        "text": "Contact UsContact Us",
+        "href": "https://triolla.io/contact-us/",
+        "normalized": "https://triolla.io/contact-us",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "Book a CallBook a Call": [
+      {
+        "text": "Book a CallBook a Call",
+        "href": "https://calendly.com/triolla/pitangoux-introductory-meeting-clone",
+        "normalized": "https://calendly.com/triolla/pitangoux-introductory-meeting-clone",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "Heb": [
+      {
+        "text": "Heb",
+        "href": "https://triolla.io/he/",
+        "normalized": "https://triolla.io/he",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "Blog": [
+      {
+        "text": "Blog",
+        "href": "https://triolla.io/blog/",
+        "normalized": "https://triolla.io/blog",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "Career": [
+      {
+        "text": "Career",
+        "href": "https://triolla.io/careers/",
+        "normalized": "https://triolla.io/careers",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "Book a Call": [
+      {
+        "text": "Book a Call",
+        "href": "https://calendly.com/triolla/pitangoux-introductory-meeting-clone",
+        "normalized": "https://calendly.com/triolla/pitangoux-introductory-meeting-clone",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "Partner with usPartner with us": [
+      {
+        "text": "Partner with usPartner with us",
+        "href": "https://triolla.io/contact-us/",
+        "normalized": "https://triolla.io/contact-us",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "How much does UX/UI design cost?": [
+      {
+        "text": "How much does UX/UI design cost?",
+        "href": "javascript:void(0);",
+        "normalized": "javascript://void(0);",
+        "status": 0,
+        "message": "Error: No connection adapters were found for 'javascript:void(0);'"
+      }
+    ],
+    "How long does the UX/UI design process take?": [
+      {
+        "text": "How long does the UX/UI design process take?",
+        "href": "javascript:void(0);",
+        "normalized": "javascript://void(0);",
+        "status": 0,
+        "message": "Error: No connection adapters were found for 'javascript:void(0);'"
+      }
+    ],
+    "What does the workflow with a UX/UI studio include?": [
+      {
+        "text": "What does the workflow with a UX/UI studio include?",
+        "href": "javascript:void(0);",
+        "normalized": "javascript://void(0);",
+        "status": 0,
+        "message": "Error: No connection adapters were found for 'javascript:void(0);'"
+      }
+    ],
+    "What\u2019s the difference between UX design and UI design?": [
+      {
+        "text": "What\u2019s the difference between UX design and UI design?",
+        "href": "javascript:void(0);",
+        "normalized": "javascript://void(0);",
+        "status": 0,
+        "message": "Error: No connection adapters were found for 'javascript:void(0);'"
+      }
+    ],
+    "What are the main stages in a UX/UI design project?": [
+      {
+        "text": "What are the main stages in a UX/UI design project?",
+        "href": "javascript:void(0);",
+        "normalized": "javascript://void(0);",
+        "status": 0,
+        "message": "Error: No connection adapters were found for 'javascript:void(0);'"
+      }
+    ],
+    "What does the user research process look like in a UX project?": [
+      {
+        "text": "What does the user research process look like in a UX project?",
+        "href": "javascript:void(0);",
+        "normalized": "javascript://void(0);",
+        "status": 0,
+        "message": "Error: No connection adapters were found for 'javascript:void(0);'"
+      }
+    ],
+    "Do you work with startups, large companies, and small businesses?": [
+      {
+        "text": "Do you work with startups, large companies, and small businesses?",
+        "href": "javascript:void(0);",
+        "normalized": "javascript://void(0);",
+        "status": 0,
+        "message": "Error: No connection adapters were found for 'javascript:void(0);'"
+      }
+    ],
+    "Can I see examples of your previous projects?": [
+      {
+        "text": "Can I see examples of your previous projects?",
+        "href": "javascript:void(0);",
+        "normalized": "javascript://void(0);",
+        "status": 0,
+        "message": "Error: No connection adapters were found for 'javascript:void(0);'"
+      }
+    ],
+    "Do you support the development process or only the design?": [
+      {
+        "text": "Do you support the development process or only the design?",
+        "href": "javascript:void(0);",
+        "normalized": "javascript://void(0);",
+        "status": 0,
+        "message": "Error: No connection adapters were found for 'javascript:void(0);'"
+      }
+    ],
+    "Nod.Js": [
+      {
+        "text": "Nod.Js",
+        "href": "https://nod.js",
+        "normalized": "https://nod.js/",
+        "status": 0,
+        "message": "Connection error"
+      }
+    ],
+    "+972-73-744-3322": [
+      {
+        "text": "+972-73-744-3322",
+        "href": "tel:+972-73-744-3322",
+        "normalized": "tel://+972-73-744-3322",
+        "status": 0,
+        "message": "Error: No connection adapters were found for 'tel:+972-73-744-3322'"
+      }
+    ],
+    "+1408-627-7350": [
+      {
+        "text": "+1408-627-7350",
+        "href": "tel:+1408-627-7350",
+        "normalized": "tel://+1408-627-7350",
+        "status": 0,
+        "message": "Error: No connection adapters were found for 'tel:+1408-627-7350'"
+      }
+    ],
+    "[email\u00a0protected]": [
+      {
+        "text": "[email\u00a0protected]",
+        "href": "http://localhost:3000/cdn-cgi/l/email-protection#793f0c17390d0b1016151518571016",
+        "normalized": "http://localhost:3000/cdn-cgi/l/email-protection",
+        "status": 404,
+        "message": "OK"
+      },
+      {
+        "text": "[email\u00a0protected]",
+        "href": "http://localhost:3000/cdn-cgi/l/email-protection#bef8cbd0fecaccd7d1d2d2df90d7d1",
+        "normalized": "http://localhost:3000/cdn-cgi/l/email-protection",
+        "status": 404,
+        "message": "OK"
+      },
+      {
+        "text": "[email\u00a0protected]",
+        "href": "http://localhost:3000/cdn-cgi/l/email-protection#365043587642445f595a5a57185f59",
+        "normalized": "http://localhost:3000/cdn-cgi/l/email-protection",
+        "status": 404,
+        "message": "OK"
+      },
+      {
+        "text": "[email\u00a0protected]",
+        "href": "http://localhost:3000/cdn-cgi/l/email-protection#f6908398b682849f999a9a97d89f99",
+        "normalized": "http://localhost:3000/cdn-cgi/l/email-protection",
+        "status": 404,
+        "message": "OK"
+      }
+    ],
+    "Contact Us": [
+      {
+        "text": "Contact Us",
+        "href": "https://triolla.io/contact-us/",
+        "normalized": "https://triolla.io/contact-us",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "Product UX & UI Design": [
+      {
+        "text": "Product UX & UI Design",
+        "href": "https://triolla.io/services/product-ux-ui-design/",
+        "normalized": "https://triolla.io/services/product-ux-ui-design",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "UX Research": [
+      {
+        "text": "UX Research",
+        "href": "https://triolla.io/services/ux-research/",
+        "normalized": "https://triolla.io/services/ux-research",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "Prototype": [
+      {
+        "text": "Prototype",
+        "href": "https://triolla.io/services/prototyping/",
+        "normalized": "https://triolla.io/services/prototyping",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "Digital Branding": [
+      {
+        "text": "Digital Branding",
+        "href": "https://triolla.io/branding-studio/",
+        "normalized": "https://triolla.io/branding-studio",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "Front End Development": [
+      {
+        "text": "Front End Development",
+        "href": "https://triolla.io/services/front-end-dev/",
+        "normalized": "https://triolla.io/services/front-end-dev",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "IOT & Devices": [
+      {
+        "text": "IOT & Devices",
+        "href": "https://triolla.io/device-iot/",
+        "normalized": "https://triolla.io/device-iot",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "IOT & Devices",
+        "href": "https://triolla.io/blog/designing-intuitive-and-secure-iot-products-for-the-future/",
+        "normalized": "https://triolla.io/blog/designing-intuitive-and-secure-iot-products-for-the-future",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "SaaS": [
+      {
+        "text": "SaaS",
+        "href": "https://triolla.io/saas-platforms/",
+        "normalized": "https://triolla.io/saas-platforms",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "SaaS",
+        "href": "https://triolla.io/blog/the-3-most-common-pain-points-when-hiring-ui-ux-agency-for-a-saas-product/",
+        "normalized": "https://triolla.io/blog/the-3-most-common-pain-points-when-hiring-ui-ux-agency-for-a-saas-product",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "SaaS",
+        "href": "https://triolla.io/he/saas-platforms/",
+        "normalized": "https://triolla.io/he/saas-platforms",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "SaaS",
+        "href": "https://triolla.io/he/blog/the-3-most-common-pain-points-when-hiring-ui-ux-agency-for-a-saas-product/",
+        "normalized": "https://triolla.io/he/blog/the-3-most-common-pain-points-when-hiring-ui-ux-agency-for-a-saas-product",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "Medical": [
+      {
+        "text": "Medical",
+        "href": "https://triolla.io/medical-healthcare/",
+        "normalized": "https://triolla.io/medical-healthcare",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "Medical",
+        "href": "https://triolla.io/blog/ux-in-medtech-when-trust-is-a-matter-of-life-and-death/",
+        "normalized": "https://triolla.io/blog/ux-in-medtech-when-trust-is-a-matter-of-life-and-death",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "Dev & Technology": [
+      {
+        "text": "Dev & Technology",
+        "href": "https://triolla.io/technology/",
+        "normalized": "https://triolla.io/technology",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "Front End": [
+      {
+        "text": "Front End",
+        "href": "https://triolla.io/services/front-end-dev/",
+        "normalized": "https://triolla.io/services/front-end-dev",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "Front End",
+        "href": "https://triolla.io/he/%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa%d7%99%d7%9d-%d7%a9%d7%9c%d7%a0%d7%95/front-end-dev/",
+        "normalized": "https://triolla.io/he/%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa%d7%99%d7%9d-%d7%a9%d7%9c%d7%a0%d7%95/front-end-dev",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "React.js": [
+      {
+        "text": "React.js",
+        "href": "https://triolla.io/services/front-end-dev/",
+        "normalized": "https://triolla.io/services/front-end-dev",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "React.js",
+        "href": "https://triolla.io/he/%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa%d7%99%d7%9d-%d7%a9%d7%9c%d7%a0%d7%95/front-end-dev/",
+        "normalized": "https://triolla.io/he/%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa%d7%99%d7%9d-%d7%a9%d7%9c%d7%a0%d7%95/front-end-dev",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "Vue.js": [
+      {
+        "text": "Vue.js",
+        "href": "https://triolla.io/services/front-end-dev/",
+        "normalized": "https://triolla.io/services/front-end-dev",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "Vue.js",
+        "href": "https://triolla.io/he/%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa%d7%99%d7%9d-%d7%a9%d7%9c%d7%a0%d7%95/front-end-dev/",
+        "normalized": "https://triolla.io/he/%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa%d7%99%d7%9d-%d7%a9%d7%9c%d7%a0%d7%95/front-end-dev",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "Back End": [
+      {
+        "text": "Back End",
+        "href": "https://triolla.io/services/back-end-dev/",
+        "normalized": "https://triolla.io/services/back-end-dev",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "Back End",
+        "href": "https://triolla.io/he/%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa%d7%99%d7%9d-%d7%a9%d7%9c%d7%a0%d7%95/back-end-dev/",
+        "normalized": "https://triolla.io/he/%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa%d7%99%d7%9d-%d7%a9%d7%9c%d7%a0%d7%95/back-end-dev",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "Node. Js": [
+      {
+        "text": "Node. Js",
+        "href": "https://triolla.io/services/back-end-dev/",
+        "normalized": "https://triolla.io/services/back-end-dev",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "Node. Js",
+        "href": "https://triolla.io/he/%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa%d7%99%d7%9d-%d7%a9%d7%9c%d7%a0%d7%95/back-end-dev/",
+        "normalized": "https://triolla.io/he/%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa%d7%99%d7%9d-%d7%a9%d7%9c%d7%a0%d7%95/back-end-dev",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "About us": [
+      {
+        "text": "About us",
+        "href": "https://triolla.io/about-us/",
+        "normalized": "https://triolla.io/about-us",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "Careers": [
+      {
+        "text": "Careers",
+        "href": "https://triolla.io/careers/",
+        "normalized": "https://triolla.io/careers",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "Our Services": [
+      {
+        "text": "Our Services",
+        "href": "https://triolla.io/services/",
+        "normalized": "https://triolla.io/services",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "Talk to us": [
+      {
+        "text": "Talk to us",
+        "href": "https://triolla.io/contact-us/",
+        "normalized": "https://triolla.io/contact-us",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "Press": [
+      {
+        "text": "Press",
+        "href": "https://www.themarker.com/labels/2021-04-05/ty-article-labels/0000017f-f88a-d044-adff-fbfb48ad0000",
+        "normalized": "https://www.themarker.com/labels/2021-04-05/ty-article-labels/0000017f-f88a-d044-adff-fbfb48ad0000",
+        "status": 405,
+        "message": "OK"
+      }
+    ],
+    "Accessibility Statement": [
+      {
+        "text": "Accessibility Statement",
+        "href": "https://triolla.io/accessibility-statement/",
+        "normalized": "https://triolla.io/accessibility-statement",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "All Blogs": [
+      {
+        "text": "All Blogs",
+        "href": "https://triolla.io/blog",
+        "normalized": "https://triolla.io/blog",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "Facebook": [
+      {
+        "text": "Facebook",
+        "href": "https://www.facebook.com/triollaofficial",
+        "normalized": "https://www.facebook.com/triollaofficial",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "Linkedin": [
+      {
+        "text": "Linkedin",
+        "href": "https://www.linkedin.com/company/triolla-official/",
+        "normalized": "https://www.linkedin.com/company/triolla-official",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "Instargram": [
+      {
+        "text": "Instargram",
+        "href": "https://www.instagram.com/triollaofficial/",
+        "normalized": "https://www.instagram.com/triollaofficial",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "Tiktok": [
+      {
+        "text": "Tiktok",
+        "href": "https://www.tiktok.com/@triolla.io",
+        "normalized": "https://www.tiktok.com/@triolla.io",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "Driblle": [
+      {
+        "text": "Driblle",
+        "href": "https://dribbble.com/Triolla",
+        "normalized": "https://dribbble.com/Triolla",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "BeHnace": [
+      {
+        "text": "BeHnace",
+        "href": "https://www.behance.net/asaf8ac9",
+        "normalized": "https://www.behance.net/asaf8ac9",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "Privacy Policy": [
+      {
+        "text": "Privacy Policy",
+        "href": "https://triolla.io/privacy-policy/",
+        "normalized": "https://triolla.io/privacy-policy",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "Terms Of Use": [
+      {
+        "text": "Terms Of Use",
+        "href": "https://triolla.io/terms-of-use/",
+        "normalized": "https://triolla.io/terms-of-use",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "Eng": [
+      {
+        "text": "Eng",
+        "href": "https://triolla.io/",
+        "normalized": "https://triolla.io/",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "Part of": [
+      {
+        "text": "Part of",
+        "href": "https://www.sqlink.com/",
+        "normalized": "https://www.sqlink.com/",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "privacy policy": [
+      {
+        "text": "privacy policy",
+        "href": "https://triolla.io/privacy-policy/",
+        "normalized": "https://triolla.io/privacy-policy",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "Powered byGDPR Cookie Compliance": [
+      {
+        "text": "Powered byGDPR Cookie Compliance",
+        "href": "https://wordpress.org/plugins/gdpr-cookie-compliance/",
+        "normalized": "https://wordpress.org/plugins/gdpr-cookie-compliance",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "wpml.org": [
+      {
+        "text": "wpml.org",
+        "href": "https://wpml.org",
+        "normalized": "https://wpml.org/",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "remove this banner": [
+      {
+        "text": "remove this banner",
+        "href": "https://wpml.org/faq/how-to-remove-the-this-site-is-registered-on-wpml-org-as-a-development-site-notice/?utm_source=plugin&utm_medium=gui&utm_campaign=wpml-core&utm_term=footer-notice",
+        "normalized": "https://wpml.org/faq/how-to-remove-the-this-site-is-registered-on-wpml-org-as-a-development-site-notice",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "\u05d0\u05d1\u05d8\u05d7\u05ea \u05e1\u05d9\u05d9\u05d1\u05e8": [
+      {
+        "text": "\u05d0\u05d1\u05d8\u05d7\u05ea \u05e1\u05d9\u05d9\u05d1\u05e8",
+        "href": "https://triolla.io/he/%d7%a1%d7%99%d7%99%d7%91%d7%a8/",
+        "normalized": "https://triolla.io/he/%d7%a1%d7%99%d7%99%d7%91%d7%a8",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "\u05e8\u05e4\u05d5\u05d0\u05d4 \u05d5\u05d1\u05e8\u05d9\u05d0\u05d5\u05ea": [
+      {
+        "text": "\u05e8\u05e4\u05d5\u05d0\u05d4 \u05d5\u05d1\u05e8\u05d9\u05d0\u05d5\u05ea",
+        "href": "https://triolla.io/he/%d7%91%d7%a8%d7%99%d7%90%d7%95%d7%aa-%d7%95%d7%a8%d7%a4%d7%95%d7%90%d7%94/",
+        "normalized": "https://triolla.io/he/%d7%91%d7%a8%d7%99%d7%90%d7%95%d7%aa-%d7%95%d7%a8%d7%a4%d7%95%d7%90%d7%94",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "\u05e4\u05d9\u05e0\u05d8\u05e7 \u05d5\u05e4\u05d9\u05e0\u05e0\u05e1\u05d9\u05dd": [
+      {
+        "text": "\u05e4\u05d9\u05e0\u05d8\u05e7 \u05d5\u05e4\u05d9\u05e0\u05e0\u05e1\u05d9\u05dd",
+        "href": "https://triolla.io/he/%d7%a4%d7%99%d7%a0%d7%98%d7%a7-%d7%95%d7%a4%d7%99%d7%a0%d7%a0%d7%a1%d7%99%d7%9d/",
+        "normalized": "https://triolla.io/he/%d7%a4%d7%99%d7%a0%d7%98%d7%a7-%d7%95%d7%a4%d7%99%d7%a0%d7%a0%d7%a1%d7%99%d7%9d",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "\u05d2\u05d9\u05d9\u05de\u05d9\u05e0\u05d2": [
+      {
+        "text": "\u05d2\u05d9\u05d9\u05de\u05d9\u05e0\u05d2",
+        "href": "https://triolla.io/he/%d7%92%d7%99%d7%99%d7%9e%d7%99%d7%a0%d7%92/",
+        "normalized": "https://triolla.io/he/%d7%92%d7%99%d7%99%d7%9e%d7%99%d7%a0%d7%92",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "\u05d2\u05d9\u05d9\u05de\u05d9\u05e0\u05d2",
+        "href": "https://triolla.io/he/blog/level-up-your-gaming-app-with-triollas-expert-ux-tips-boost-user-engagement-and-retention/",
+        "normalized": "https://triolla.io/he/blog/level-up-your-gaming-app-with-triollas-expert-ux-tips-boost-user-engagement-and-retention",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "\u05d0\u05d2\u05e8\u05d9\u05d8\u05e7": [
+      {
+        "text": "\u05d0\u05d2\u05e8\u05d9\u05d8\u05e7",
+        "href": "https://triolla.io/he/%d7%90%d7%92%d7%a8%d7%99%d7%98%d7%a7/",
+        "normalized": "https://triolla.io/he/%d7%90%d7%92%d7%a8%d7%99%d7%98%d7%a7",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "\u05d0\u05d2\u05e8\u05d9\u05d8\u05e7",
+        "href": "https://triolla.io/he/blog/designing-an-engaging-and-effective-agritech-app/",
+        "normalized": "https://triolla.io/he/blog/designing-an-engaging-and-effective-agritech-app",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "\u05de\u05db\u05e9\u05d9\u05e8\u05d9\u05dd \u05d5-IoT": [
+      {
+        "text": "\u05de\u05db\u05e9\u05d9\u05e8\u05d9\u05dd \u05d5-IoT",
+        "href": "https://triolla.io/he/%d7%9e%d7%9b%d7%a9%d7%99%d7%a8%d7%99%d7%9d-iot-new/",
+        "normalized": "https://triolla.io/he/%d7%9e%d7%9b%d7%a9%d7%99%d7%a8%d7%99%d7%9d-iot-new",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "\u05e1\u05d8\u05d0\u05e8\u05d8-\u05d0\u05e4\u05d9\u05dd \u05d5\u05d8\u05db\u05e0\u05d5\u05dc\u05d5\u05d2\u05d9\u05d4": [
+      {
+        "text": "\u05e1\u05d8\u05d0\u05e8\u05d8-\u05d0\u05e4\u05d9\u05dd \u05d5\u05d8\u05db\u05e0\u05d5\u05dc\u05d5\u05d2\u05d9\u05d4",
+        "href": "https://triolla.io/he/startups-tech/",
+        "normalized": "https://triolla.io/he/startups-tech",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "\u05d0\u05e4\u05dc\u05d9\u05e7\u05e6\u05d9\u05d5\u05ea \u05de\u05d5\u05d1\u05d9\u05d9\u05dc": [
+      {
+        "text": "\u05d0\u05e4\u05dc\u05d9\u05e7\u05e6\u05d9\u05d5\u05ea \u05de\u05d5\u05d1\u05d9\u05d9\u05dc",
+        "href": "https://triolla.io/he/%d7%90%d7%a4%d7%9c%d7%99%d7%a7%d7%a6%d7%99%d7%95%d7%aa-%d7%9e%d7%95%d7%91%d7%99%d7%99%d7%9c/",
+        "normalized": "https://triolla.io/he/%d7%90%d7%a4%d7%9c%d7%99%d7%a7%d7%a6%d7%99%d7%95%d7%aa-%d7%9e%d7%95%d7%91%d7%99%d7%99%d7%9c",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "\u05e4\u05d9\u05ea\u05d5\u05d7 \u05de\u05e2\u05e8\u05db\u05d5\u05ea": [
+      {
+        "text": "\u05e4\u05d9\u05ea\u05d5\u05d7 \u05de\u05e2\u05e8\u05db\u05d5\u05ea",
+        "href": "https://triolla.io/he/technology/",
+        "normalized": "https://triolla.io/he/technology",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "\u05e9\u05d9\u05e8\u05d5\u05ea\u05d9\u05dd": [
+      {
+        "text": "\u05e9\u05d9\u05e8\u05d5\u05ea\u05d9\u05dd",
+        "href": "https://triolla.io/he/%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa%d7%99%d7%9d-%d7%a9%d7%9c%d7%a0%d7%95/",
+        "normalized": "https://triolla.io/he/%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa%d7%99%d7%9d-%d7%a9%d7%9c%d7%a0%d7%95",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "\u05d8\u05db\u05e0\u05d5\u05dc\u05d5\u05d2\u05d9\u05d4": [
+      {
+        "text": "\u05d8\u05db\u05e0\u05d5\u05dc\u05d5\u05d2\u05d9\u05d4",
+        "href": "https://triolla.io/he/technology/",
+        "normalized": "https://triolla.io/he/technology",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "\u05d0\u05d5\u05d3\u05d5\u05ea\u05d9\u05e0\u05d5": [
+      {
+        "text": "\u05d0\u05d5\u05d3\u05d5\u05ea\u05d9\u05e0\u05d5",
+        "href": "https://triolla.io/he/about/",
+        "normalized": "https://triolla.io/he/about",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "\u05e6\u05d5\u05e8 \u05e7\u05e9\u05e8\u05e6\u05d5\u05e8 \u05e7\u05e9\u05e8": [
+      {
+        "text": "\u05e6\u05d5\u05e8 \u05e7\u05e9\u05e8\u05e6\u05d5\u05e8 \u05e7\u05e9\u05e8",
+        "href": "https://triolla.io/he/contact-us/",
+        "normalized": "https://triolla.io/he/contact-us",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "\u05e7\u05d1\u05e2\u05d5 \u05e9\u05d9\u05d7\u05d4\u05e7\u05d1\u05e2\u05d5 \u05e9\u05d9\u05d7\u05d4": [
+      {
+        "text": "\u05e7\u05d1\u05e2\u05d5 \u05e9\u05d9\u05d7\u05d4\u05e7\u05d1\u05e2\u05d5 \u05e9\u05d9\u05d7\u05d4",
+        "href": "https://calendly.com/triolla/pitangoux-introductory-meeting-clone",
+        "normalized": "https://calendly.com/triolla/pitangoux-introductory-meeting-clone",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "\u05d0\u05e0\u05d2\u05dc\u05d9\u05ea": [
+      {
+        "text": "\u05d0\u05e0\u05d2\u05dc\u05d9\u05ea",
+        "href": "https://triolla.io/",
+        "normalized": "https://triolla.io/",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "\u05d1\u05dc\u05d5\u05d2": [
+      {
+        "text": "\u05d1\u05dc\u05d5\u05d2",
+        "href": "https://triolla.io/he/%d7%91%d7%9c%d7%95%d7%92/",
+        "normalized": "https://triolla.io/he/%d7%91%d7%9c%d7%95%d7%92",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "\u05e7\u05e8\u05d9\u05d9\u05e8\u05d4": [
+      {
+        "text": "\u05e7\u05e8\u05d9\u05d9\u05e8\u05d4",
+        "href": "https://triolla.io/he/%d7%a7%d7%a8%d7%99%d7%99%d7%a8%d7%94/",
+        "normalized": "https://triolla.io/he/%d7%a7%d7%a8%d7%99%d7%99%d7%a8%d7%94",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "\u05e7\u05d1\u05e2\u05d5 \u05e9\u05d9\u05d7\u05d4": [
+      {
+        "text": "\u05e7\u05d1\u05e2\u05d5 \u05e9\u05d9\u05d7\u05d4",
+        "href": "https://calendly.com/triolla/pitangoux-introductory-meeting-clone",
+        "normalized": "https://calendly.com/triolla/pitangoux-introductory-meeting-clone",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "\u05d1\u05d5\u05d0\u05d5 \u05e0\u05d1\u05e0\u05d4 \u05d9\u05d7\u05d3\u05d1\u05d5\u05d0\u05d5 \u05e0\u05d1\u05e0\u05d4 \u05d9\u05d7\u05d3": [
+      {
+        "text": "\u05d1\u05d5\u05d0\u05d5 \u05e0\u05d1\u05e0\u05d4 \u05d9\u05d7\u05d3\u05d1\u05d5\u05d0\u05d5 \u05e0\u05d1\u05e0\u05d4 \u05d9\u05d7\u05d3",
+        "href": "https://triolla.io/he/%d7%a6%d7%95%d7%a8-%d7%a7%d7%a9%d7%a8/",
+        "normalized": "https://triolla.io/he/%d7%a6%d7%95%d7%a8-%d7%a7%d7%a9%d7%a8",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "\u05d4\u05d0\u05dd \u05ea\u05d5\u05db\u05dc \u05dc\u05e2\u05d6\u05d5\u05e8 \u05d2\u05dd \u05d1\u05e2\u05d9\u05e6\u05d5\u05d1 UX \u05d5\u05d2\u05dd \u05d1\u05e2\u05d9\u05e6\u05d5\u05d1 UI?": [
+      {
+        "text": "\u05d4\u05d0\u05dd \u05ea\u05d5\u05db\u05dc \u05dc\u05e2\u05d6\u05d5\u05e8 \u05d2\u05dd \u05d1\u05e2\u05d9\u05e6\u05d5\u05d1 UX \u05d5\u05d2\u05dd \u05d1\u05e2\u05d9\u05e6\u05d5\u05d1 UI?",
+        "href": "javascript:void(0);",
+        "normalized": "javascript://void(0);",
+        "status": 0,
+        "message": "Error: No connection adapters were found for 'javascript:void(0);'"
+      }
+    ],
+    "\u05d0\u05d9\u05da \u05d0\u05ea\u05dd \u05de\u05d5\u05d5\u05d3\u05d0\u05d9\u05dd \u05e9\u05d4\u05e2\u05d9\u05e6\u05d5\u05d1\u05d9\u05dd \u05e9\u05dc\u05db\u05dd \u05de\u05ea\u05d0\u05d9\u05de\u05d9\u05dd \u05dc\u05de\u05d5\u05ea\u05d2 \u05e9\u05dc\u05d9?": [
+      {
+        "text": "\u05d0\u05d9\u05da \u05d0\u05ea\u05dd \u05de\u05d5\u05d5\u05d3\u05d0\u05d9\u05dd \u05e9\u05d4\u05e2\u05d9\u05e6\u05d5\u05d1\u05d9\u05dd \u05e9\u05dc\u05db\u05dd \u05de\u05ea\u05d0\u05d9\u05de\u05d9\u05dd \u05dc\u05de\u05d5\u05ea\u05d2 \u05e9\u05dc\u05d9?",
+        "href": "javascript:void(0);",
+        "normalized": "javascript://void(0);",
+        "status": 0,
+        "message": "Error: No connection adapters were found for 'javascript:void(0);'"
+      }
+    ],
+    "\u05d4\u05d0\u05dd \u05e0\u05d9\u05ea\u05df \u05dc\u05e2\u05e6\u05d1 \u05de\u05d7\u05d3\u05e9 \u05de\u05d5\u05e6\u05e8 \u05e7\u05d9\u05d9\u05dd?": [
+      {
+        "text": "\u05d4\u05d0\u05dd \u05e0\u05d9\u05ea\u05df \u05dc\u05e2\u05e6\u05d1 \u05de\u05d7\u05d3\u05e9 \u05de\u05d5\u05e6\u05e8 \u05e7\u05d9\u05d9\u05dd?",
+        "href": "javascript:void(0);",
+        "normalized": "javascript://void(0);",
+        "status": 0,
+        "message": "Error: No connection adapters were found for 'javascript:void(0);'"
+      }
+    ],
+    "\u05d4\u05d0\u05dd \u05d0\u05ea\u05dd \u05e2\u05d5\u05e8\u05db\u05d9\u05dd \u05de\u05d7\u05e7\u05e8\u05d9 \u05de\u05e9\u05ea\u05de\u05e9\u05d9\u05dd \u05db\u05d7\u05dc\u05e7 \u05de\u05d4\u05e9\u05d9\u05e8\u05d5\u05ea\u05d9\u05dd \u05e9\u05dc\u05db\u05dd?": [
+      {
+        "text": "\u05d4\u05d0\u05dd \u05d0\u05ea\u05dd \u05e2\u05d5\u05e8\u05db\u05d9\u05dd \u05de\u05d7\u05e7\u05e8\u05d9 \u05de\u05e9\u05ea\u05de\u05e9\u05d9\u05dd \u05db\u05d7\u05dc\u05e7 \u05de\u05d4\u05e9\u05d9\u05e8\u05d5\u05ea\u05d9\u05dd \u05e9\u05dc\u05db\u05dd?",
+        "href": "javascript:void(0);",
+        "normalized": "javascript://void(0);",
+        "status": 0,
+        "message": "Error: No connection adapters were found for 'javascript:void(0);'"
+      }
+    ],
+    "\u05db\u05de\u05d4 \u05d6\u05de\u05df \u05dc\u05d5\u05e7\u05d7 \u05d1\u05d3\u05e8\u05da \u05db\u05dc\u05dc \u05ea\u05d4\u05dc\u05d9\u05da \u05e2\u05d9\u05e6\u05d5\u05d1 \u05de\u05d5\u05e6\u05e8?": [
+      {
+        "text": "\u05db\u05de\u05d4 \u05d6\u05de\u05df \u05dc\u05d5\u05e7\u05d7 \u05d1\u05d3\u05e8\u05da \u05db\u05dc\u05dc \u05ea\u05d4\u05dc\u05d9\u05da \u05e2\u05d9\u05e6\u05d5\u05d1 \u05de\u05d5\u05e6\u05e8?",
+        "href": "javascript:void(0);",
+        "normalized": "javascript://void(0);",
+        "status": 0,
+        "message": "Error: No connection adapters were found for 'javascript:void(0);'"
+      }
+    ],
+    "\u05e2\u05dd \u05d0\u05d9\u05dc\u05d5 \u05ea\u05e2\u05e9\u05d9\u05d5\u05ea \u05e2\u05d1\u05d3\u05ea?": [
+      {
+        "text": "\u05e2\u05dd \u05d0\u05d9\u05dc\u05d5 \u05ea\u05e2\u05e9\u05d9\u05d5\u05ea \u05e2\u05d1\u05d3\u05ea?",
+        "href": "javascript:void(0);",
+        "normalized": "javascript://void(0);",
+        "status": 0,
+        "message": "Error: No connection adapters were found for 'javascript:void(0);'"
+      }
+    ],
+    "\u05de\u05d4 \u05e2\u05dc\u05d5\u05ea \u05d4\u05e2\u05d1\u05d5\u05d3\u05d4 \u05e2\u05dd \u05d8\u05e8\u05d9\u05d0\u05d5\u05dc\u05d4?": [
+      {
+        "text": "\u05de\u05d4 \u05e2\u05dc\u05d5\u05ea \u05d4\u05e2\u05d1\u05d5\u05d3\u05d4 \u05e2\u05dd \u05d8\u05e8\u05d9\u05d0\u05d5\u05dc\u05d4?",
+        "href": "javascript:void(0);",
+        "normalized": "javascript://void(0);",
+        "status": 0,
+        "message": "Error: No connection adapters were found for 'javascript:void(0);'"
+      }
+    ],
+    "\u05e6\u05d5\u05e8 \u05e7\u05e9\u05e8": [
+      {
+        "text": "\u05e6\u05d5\u05e8 \u05e7\u05e9\u05e8",
+        "href": "https://triolla.io/he/contact-us/",
+        "normalized": "https://triolla.io/he/contact-us",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "\u05e2\u05d9\u05e6\u05d5\u05d1 \u05de\u05d5\u05e6\u05e8 \u05d5\u05d7\u05d5\u05d5\u05d9\u05ea \u05de\u05e9\u05ea\u05de\u05e9": [
+      {
+        "text": "\u05e2\u05d9\u05e6\u05d5\u05d1 \u05de\u05d5\u05e6\u05e8 \u05d5\u05d7\u05d5\u05d5\u05d9\u05ea \u05de\u05e9\u05ea\u05de\u05e9",
+        "href": "http://localhost:3000/he/%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa%d7%99%d7%9d-%d7%a9%d7%9c%d7%a0%d7%95/product-ux-ui-design/",
+        "normalized": "http://localhost:3000/he/%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa%d7%99%d7%9d-%d7%a9%d7%9c%d7%a0%d7%95/product-ux-ui-design",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "\u05de\u05d7\u05e7\u05e8 \u05d7\u05d5\u05d5\u05d9\u05ea \u05de\u05e9\u05ea\u05de\u05e9": [
+      {
+        "text": "\u05de\u05d7\u05e7\u05e8 \u05d7\u05d5\u05d5\u05d9\u05ea \u05de\u05e9\u05ea\u05de\u05e9",
+        "href": "http://localhost:3000/he/%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa%d7%99%d7%9d-%d7%a9%d7%9c%d7%a0%d7%95/%d7%9e%d7%97%d7%a7%d7%a8-ux/",
+        "normalized": "http://localhost:3000/he/%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa%d7%99%d7%9d-%d7%a9%d7%9c%d7%a0%d7%95/%d7%9e%d7%97%d7%a7%d7%a8-ux",
+        "status": 404,
+        "message": "OK"
+      }
+    ],
+    "\u05d0\u05d1-\u05d8\u05d9\u05e4\u05d5\u05e1": [
+      {
+        "text": "\u05d0\u05d1-\u05d8\u05d9\u05e4\u05d5\u05e1",
+        "href": "http://localhost:3000/he/\u05d4\u05e9\u05d9\u05e8\u05d5\u05ea\u05d9\u05dd-\u05e9\u05dc\u05e0\u05d5/prototyping/",
+        "normalized": "http://localhost:3000/he/\u05d4\u05e9\u05d9\u05e8\u05d5\u05ea\u05d9\u05dd-\u05e9\u05dc\u05e0\u05d5/prototyping",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "\u05de\u05d9\u05ea\u05d5\u05d2 \u05d3\u05d9\u05d2\u05d9\u05d8\u05dc\u05d9": [
+      {
+        "text": "\u05de\u05d9\u05ea\u05d5\u05d2 \u05d3\u05d9\u05d2\u05d9\u05d8\u05dc\u05d9",
+        "href": "http://localhost:3000/he/\u05de\u05d9\u05ea\u05d5\u05d2-\u05d5\u05e1\u05d8\u05d5\u05d3\u05d9\u05d5/",
+        "normalized": "http://localhost:3000/he/\u05de\u05d9\u05ea\u05d5\u05d2-\u05d5\u05e1\u05d8\u05d5\u05d3\u05d9\u05d5",
+        "status": 0,
+        "message": "Error: Exceeded 30 redirects."
+      }
+    ],
+    "\u05e4\u05d9\u05ea\u05d5\u05d7 \u05ea\u05d5\u05db\u05e0\u05d4": [
+      {
+        "text": "\u05e4\u05d9\u05ea\u05d5\u05d7 \u05ea\u05d5\u05db\u05e0\u05d4",
+        "href": "http://localhost:3000/he/\u05d4\u05e9\u05d9\u05e8\u05d5\u05ea\u05d9\u05dd-\u05e9\u05dc\u05e0\u05d5/front-end-dev/",
+        "normalized": "http://localhost:3000/he/\u05d4\u05e9\u05d9\u05e8\u05d5\u05ea\u05d9\u05dd-\u05e9\u05dc\u05e0\u05d5/front-end-dev",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "\u05e4\u05d9\u05e0\u05d8\u05e7 & \u05e4\u05d9\u05e0\u05e0\u05e1\u05d9\u05dd": [
+      {
+        "text": "\u05e4\u05d9\u05e0\u05d8\u05e7 & \u05e4\u05d9\u05e0\u05e0\u05e1\u05d9\u05dd",
+        "href": "https://triolla.io/he/%d7%a4%d7%99%d7%a0%d7%98%d7%a7-%d7%95%d7%a4%d7%99%d7%a0%d7%a0%d7%a1%d7%99%d7%9d/",
+        "normalized": "https://triolla.io/he/%d7%a4%d7%99%d7%a0%d7%98%d7%a7-%d7%95%d7%a4%d7%99%d7%a0%d7%a0%d7%a1%d7%99%d7%9d",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "\u05e4\u05d9\u05e0\u05d8\u05e7 & \u05e4\u05d9\u05e0\u05e0\u05e1\u05d9\u05dd",
+        "href": "https://triolla.io/he/blog/the-fintech-ux-playbook/",
+        "normalized": "https://triolla.io/he/blog/the-fintech-ux-playbook",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "\u05de\u05db\u05e9\u05d9\u05e8\u05d9\u05dd & IoT": [
+      {
+        "text": "\u05de\u05db\u05e9\u05d9\u05e8\u05d9\u05dd & IoT",
+        "href": "https://triolla.io/he/%d7%9e%d7%9b%d7%a9%d7%99%d7%a8%d7%99%d7%9d-iot-new/",
+        "normalized": "https://triolla.io/he/%d7%9e%d7%9b%d7%a9%d7%99%d7%a8%d7%99%d7%9d-iot-new",
+        "status": 200,
+        "message": "OK"
+      },
+      {
+        "text": "\u05de\u05db\u05e9\u05d9\u05e8\u05d9\u05dd & IoT",
+        "href": "https://triolla.io/he/blog/designing-intuitive-and-secure-iot-products-for-the-future/",
+        "normalized": "https://triolla.io/he/blog/designing-intuitive-and-secure-iot-products-for-the-future",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "\u05de\u05e2\u05e8\u05db\u05d5\u05ea SaaS": [
+      {
+        "text": "\u05de\u05e2\u05e8\u05db\u05d5\u05ea SaaS",
+        "href": "https://triolla.io/he/saas-platforms/",
+        "normalized": "https://triolla.io/he/saas-platforms",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "\u05d1\u05e8\u05d9\u05d0\u05d5\u05ea \u05d5\u05e8\u05e4\u05d5\u05d0\u05d4": [
+      {
+        "text": "\u05d1\u05e8\u05d9\u05d0\u05d5\u05ea \u05d5\u05e8\u05e4\u05d5\u05d0\u05d4",
+        "href": "https://triolla.io/he/%d7%91%d7%a8%d7%99%d7%90%d7%95%d7%aa-%d7%95%d7%a8%d7%a4%d7%95%d7%90%d7%94/",
+        "normalized": "https://triolla.io/he/%d7%91%d7%a8%d7%99%d7%90%d7%95%d7%aa-%d7%95%d7%a8%d7%a4%d7%95%d7%90%d7%94",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "\u05e4\u05d9\u05ea\u05d5\u05d7 \u05d5\u05d8\u05db\u05e0\u05d5\u05dc\u05d5\u05d2\u05d9\u05d5\u05ea": [
+      {
+        "text": "\u05e4\u05d9\u05ea\u05d5\u05d7 \u05d5\u05d8\u05db\u05e0\u05d5\u05dc\u05d5\u05d2\u05d9\u05d5\u05ea",
+        "href": "https://triolla.io/technology/",
+        "normalized": "https://triolla.io/technology",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "\u05e2\u05dc\u05d9\u05e0\u05d5": [
+      {
+        "text": "\u05e2\u05dc\u05d9\u05e0\u05d5",
+        "href": "https://triolla.io/he/about/",
+        "normalized": "https://triolla.io/he/about",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "\u05d4\u05e9\u05d9\u05e8\u05d5\u05ea\u05d9\u05dd \u05e9\u05dc\u05e0\u05d5": [
+      {
+        "text": "\u05d4\u05e9\u05d9\u05e8\u05d5\u05ea\u05d9\u05dd \u05e9\u05dc\u05e0\u05d5",
+        "href": "https://triolla.io/he/%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa%d7%99%d7%9d-%d7%a9%d7%9c%d7%a0%d7%95/",
+        "normalized": "https://triolla.io/he/%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa%d7%99%d7%9d-%d7%a9%d7%9c%d7%a0%d7%95",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "\u05e6\u05e8\u05d5 \u05e7\u05e9\u05e8": [
+      {
+        "text": "\u05e6\u05e8\u05d5 \u05e7\u05e9\u05e8",
+        "href": "https://triolla.io/he/%d7%a6%d7%95%d7%a8-%d7%a7%d7%a9%d7%a8/",
+        "normalized": "https://triolla.io/he/%d7%a6%d7%95%d7%a8-%d7%a7%d7%a9%d7%a8",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "\u05e0\u05d2\u05d9\u05e9\u05d5\u05ea": [
+      {
+        "text": "\u05e0\u05d2\u05d9\u05e9\u05d5\u05ea",
+        "href": "https://triolla.io/he/%d7%94%d7%a6%d7%94%d7%a8%d7%aa-%d7%a0%d7%92%d7%99%d7%a9%d7%95%d7%aa/",
+        "normalized": "https://triolla.io/he/%d7%94%d7%a6%d7%94%d7%a8%d7%aa-%d7%a0%d7%92%d7%99%d7%a9%d7%95%d7%aa",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "\u05db\u05dc \u05d4\u05d1\u05dc\u05d5\u05d2\u05d9\u05dd": [
+      {
+        "text": "\u05db\u05dc \u05d4\u05d1\u05dc\u05d5\u05d2\u05d9\u05dd",
+        "href": "https://triolla.io/he/%d7%91%d7%9c%d7%95%d7%92/",
+        "normalized": "https://triolla.io/he/%d7%91%d7%9c%d7%95%d7%92",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "\u05de\u05d3\u05d9\u05e7\u05dc": [
+      {
+        "text": "\u05de\u05d3\u05d9\u05e7\u05dc",
+        "href": "https://triolla.io/he/blog/ux-in-medtech-when-trust-is-a-matter-of-life-and-death/",
+        "normalized": "https://triolla.io/he/blog/ux-in-medtech-when-trust-is-a-matter-of-life-and-death",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "Instergram": [
+      {
+        "text": "Instergram",
+        "href": "https://www.instagram.com/triollaofficial/",
+        "normalized": "https://www.instagram.com/triollaofficial",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "+1-408-627-7350": [
+      {
+        "text": "+1-408-627-7350",
+        "href": "tel:+1-408-627-7350",
+        "normalized": "tel://+1-408-627-7350",
+        "status": 0,
+        "message": "Error: No connection adapters were found for 'tel:+1-408-627-7350'"
+      }
+    ],
+    "\u05de\u05d3\u05d9\u05e0\u05d9\u05d5\u05ea \u05e4\u05e8\u05d8\u05d9\u05d5\u05ea": [
+      {
+        "text": "\u05de\u05d3\u05d9\u05e0\u05d9\u05d5\u05ea \u05e4\u05e8\u05d8\u05d9\u05d5\u05ea",
+        "href": "https://triolla.io/he/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%a4%d7%a8%d7%98%d7%99%d7%95%d7%aa/",
+        "normalized": "https://triolla.io/he/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%a4%d7%a8%d7%98%d7%99%d7%95%d7%aa",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "\u05ea\u05e0\u05d0\u05d9 \u05e9\u05d9\u05de\u05d5\u05e9": [
+      {
+        "text": "\u05ea\u05e0\u05d0\u05d9 \u05e9\u05d9\u05de\u05d5\u05e9",
+        "href": "https://triolla.io/he/%d7%aa%d7%a0%d7%90%d7%99-%d7%a9%d7%99%d7%9e%d7%95%d7%a9/",
+        "normalized": "https://triolla.io/he/%d7%aa%d7%a0%d7%90%d7%99-%d7%a9%d7%99%d7%9e%d7%95%d7%a9",
+        "status": 200,
+        "message": "OK"
+      }
+    ],
+    "\u05e2\u05d1\u05e8\u05d9\u05ea": [
+      {
+        "text": "\u05e2\u05d1\u05e8\u05d9\u05ea",
+        "href": "https://triolla.io/he/",
+        "normalized": "https://triolla.io/he",
+        "status": 200,
+        "message": "OK"
+      }
+    ]
+  }
+}

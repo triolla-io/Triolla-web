@@ -1,7 +1,7 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import { initTriollaConveyorTicker } from "./lib/initTriollaConveyorTicker";
 import { mountTriollaFaqAccordion } from "./lib/mountTriollaFaqAccordion";
 import {
@@ -140,6 +140,7 @@ export function HomeClient() {
           disposeFaqRef.current?.();
           disposeFaqRef.current = mountTriollaFaqAccordion(el);
           stripJQueryMenutoggleClickHandlers(el);
+          rewriteTriollaNavLinks(el);
         } catch (deferredErr) {
           console.error("[snapshot] home deferred scripts/init failed:", deferredErr);
         }
@@ -160,6 +161,13 @@ export function HomeClient() {
       disposeMobileMenuRef.current = null;
     };
   }, [assetBase, css, js, pathEncoding, fragmentUrl, historyRestoreKey, isHebrewHome]);
+
+  useLayoutEffect(() => {
+    if (phase !== "ready") return;
+    const el = rootRef.current;
+    if (!el) return;
+    rewriteTriollaNavLinks(el);
+  }, [phase, isHebrewHome]);
 
   return (
     <>

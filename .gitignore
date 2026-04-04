@@ -50,3 +50,5 @@ yarn-error.log*
 # macOS and keys
 .DS_Store
 *.pem
+
+certificates

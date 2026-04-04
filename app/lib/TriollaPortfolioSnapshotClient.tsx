@@ -195,6 +195,7 @@ export function TriollaPortfolioSnapshotClient({
           disposeFaqRef.current?.();
           disposeFaqRef.current = mountTriollaFaqAccordion(el);
           stripJQueryMenutoggleClickHandlers(el);
+          rewriteTriollaNavLinks(el);
         } catch (deferredErr) {
           console.error("[snapshot] portfolio snapshot deferred scripts/init failed:", deferredErr);
         }
@@ -232,6 +233,13 @@ export function TriollaPortfolioSnapshotClient({
     chromeUrl,
     historyRestoreKey,
   ]);
+
+  useLayoutEffect(() => {
+    if (phase !== "ready") return;
+    const el = rootRef.current;
+    if (!el) return;
+    rewriteTriollaNavLinks(el);
+  }, [phase, lang]);
 
   const ready = phase === "ready";
 

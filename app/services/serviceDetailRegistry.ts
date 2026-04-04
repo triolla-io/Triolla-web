@@ -190,7 +190,11 @@ export const SERVICE_DETAILS = {
       title: "UX Research Services | Triolla",
       description: "UX research: discovery, usability, and evidence for product decisions.",
     },
-    hasHebrew: false,
+    metaHe: {
+      title: "מחקר UX | טריולה",
+      description: "מחקר חוויית משתמש: גילוי, שימושיות ותובנות להחלטות מוצר.",
+    },
+    hasHebrew: true,
     Client: ServicesUxResearchClient,
   },
   wireframing: {

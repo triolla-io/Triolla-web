@@ -69,6 +69,21 @@ body {
 }
 
 /**
+ * English Triolla responsive.css sets `.menutoggle { display: none }` globally. Inside
+ * `@media (max-width: 1023px)` it only sets `.menutoggle a { display: inline-block }`, which
+ * cannot show children when the parent stays `display: none`. Hebrew `responsive-he.css` fixes
+ * this with `.menutoggle { display: block; ... }` in that breakpoint; mirror for LTR snapshots
+ * (home + English portfolio use `.main_container` without `dir="rtl"`).
+ */
+@media (max-width: 1023px) {
+  .main_container:not([dir="rtl"]) .menutoggle {
+    display: block;
+    float: left;
+    margin: 10px 0 0 0;
+  }
+}
+
+/**
  * Hebrew mobile top bar: theme CSS uses floats + absolute menutoggle (ml-responsive)
  * that don’t mirror cleanly under html[dir="rtl"]. Flex + order gives a stable row:
  * menu (inline-end) | logo (center) | contact (inline-start).

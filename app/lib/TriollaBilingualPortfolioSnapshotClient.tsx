@@ -283,6 +283,7 @@ export function TriollaBilingualPortfolioSnapshotClient({
           disposeFaqRef.current?.();
           disposeFaqRef.current = mountTriollaFaqAccordion(el);
           stripJQueryMenutoggleClickHandlers(el);
+          rewriteTriollaNavLinks(el);
         } catch (deferredErr) {
           console.error("[snapshot] bilingual portfolio deferred scripts/init failed:", deferredErr);
         }
@@ -308,6 +309,13 @@ export function TriollaBilingualPortfolioSnapshotClient({
       disposeMobileMenuRef.current = null;
     };
   }, [lang, depsEnKey, depsHeKey, fragmentUrlEn, fragmentUrlHe, revealPreset, historyRestoreKey]);
+
+  useLayoutEffect(() => {
+    if (phase !== "ready") return;
+    const el = rootRef.current;
+    if (!el) return;
+    rewriteTriollaNavLinks(el);
+  }, [phase, lang]);
 
   const landingSlug = lang === "he" ? landingSlugHe : landingSlugEn;
   const assetDir = lang === "he" ? assetDirHe : assetDirEn;

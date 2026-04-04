@@ -10,7 +10,8 @@ import { alternateLocalePath } from "@/lib/i18n";
  * Hebrew snapshot links may be URL-encoded (e.g., https://triolla.io/he/%d7%a1%d7%99%d7%99%d7%91%d7%a8/)
  * which decodes to "סייבר" but maps to the route /he/cyber-security.
  */
-const TRIOLLA_HOST = /^https?:\/\/(www\.)?triolla\.io/i;
+/** Absolute https, http, or protocol-relative `//triolla.io/...` (snapshot exports vary). */
+const TRIOLLA_HOST = /^(?:https?:)?\/\/(www\.)?triolla\.io/i;
 
 /**
  * Map decoded Hebrew text slugs to English route names.
@@ -239,7 +240,10 @@ export function rewriteTriollaNavLinks(root: HTMLElement, _localePrefix?: string
 
     if (TRIOLLA_HOST.test(href)) {
       try {
-        const u = new URL(href);
+        const u = new URL(
+          href,
+          typeof window !== "undefined" ? window.location.origin : "https://triolla.io",
+        );
         const nextPath = triollaPathnameToAppPath(u.pathname || "/", pathLocale);
         a.setAttribute("href", `${nextPath}${u.search}${u.hash}`);
       } catch {

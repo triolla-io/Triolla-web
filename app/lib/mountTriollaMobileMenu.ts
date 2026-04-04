@@ -23,13 +23,6 @@ export function mountTriollaMobileMenu(root: HTMLElement): () => void {
   const menuToggles = Array.from(root.querySelectorAll<HTMLElement>(".menutoggle"));
   const mobileMenu = root.querySelector<HTMLElement>(".hmenumob");
 
-  console.log("[triolla-menu] mountTriollaMobileMenu", {
-    rootId: root.id || root.className,
-    isHebrew,
-    togglesFound: menuToggles.length,
-    mobileMenuFound: !!mobileMenu,
-  });
-
   if (isHebrew) {
     menuToggles.forEach((toggle) => {
       toggle.classList.add("is-he");
@@ -57,62 +50,73 @@ export function mountTriollaMobileMenu(root: HTMLElement): () => void {
 
     const toggle = target.closest(".menutoggle");
     if (toggle && root.contains(toggle) && !inDrawer) {
-      console.log("[triolla-menu] toggle clicked → toggling mbodyact (was:", body.classList.contains("mbodyact"), ")");
       e.preventDefault();
       e.stopPropagation();
       body.classList.toggle("mbodyact");
-      const drawerEl = root.querySelector<HTMLElement>(".hmenumob");
-      if (drawerEl) {
-        const cs = window.getComputedStyle(drawerEl);
-        console.log("[triolla-menu] .hmenumob computed style after toggle:", {
-          display: cs.display,
-          visibility: cs.visibility,
-          left: cs.left,
-          top: cs.top,
-          position: cs.position,
-          zIndex: cs.zIndex,
-          width: cs.width,
-          height: cs.height,
-          overflow: cs.overflow,
-          transform: cs.transform,
-        });
-      // Walk ancestor chain — log visibility and any transforms
-      let el: HTMLElement | null = drawerEl.parentElement;
-      while (el) {
-        const s = window.getComputedStyle(el);
-        if (s.visibility !== 'visible') {
-          console.warn("[triolla-menu] ⚠ ancestor visibility!=visible:", el.tagName, el.className.slice(0, 80), "→", s.visibility, "| inline:", el.style.visibility);
-        }
-        if (s.transform !== 'none' || s.filter !== 'none' || s.willChange === 'transform') {
-          console.warn("[triolla-menu] ⚠ ancestor with transform/filter:", el.tagName, el.className.slice(0, 80));
-        }
-        el = el.parentElement;
-      }
-      } else {
-        console.warn("[triolla-menu] .hmenumob NOT FOUND inside root!");
-      }
-      console.log("[triolla-menu] mbodyact after toggle:", body.classList.contains("mbodyact"));
       return;
     }
 
-    const arrow = target.closest<HTMLElement>(".hmenumob .marrow");
-    if (arrow && root.contains(arrow)) {
-      e.preventDefault();
-      const li = arrow.closest("li");
-      if (!li) return;
-      li.classList.toggle("active");
-      const sub = li.querySelector<HTMLElement>(":scope > ul");
-      if (sub) {
-        sub.style.display = sub.style.display === "block" ? "none" : "block";
+    /* Theme chevron is on `a:after`; `.marrow` is often zero-size — taps hit the `a`. */
+    if (inDrawer) {
+      const liHasChildren = target.closest(".hmenumob li.menu-item-has-children");
+      if (liHasChildren && root.contains(liHasChildren)) {
+        const directA = liHasChildren.querySelector<HTMLElement>(":scope > a");
+        const marrow = liHasChildren.querySelector<HTMLElement>(":scope > .marrow");
+        const hitA =
+          !!directA && (target === directA || directA.contains(target));
+        const hitMarrow =
+          !!marrow && (target === marrow || marrow.contains(target));
+        if (hitA || hitMarrow) {
+          // #region agent log
+          fetch(
+            "http://127.0.0.1:7442/ingest/16494b4c-3094-42cb-81b5-aad92874073c",
+            {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+                "X-Debug-Session-Id": "143802",
+              },
+              body: JSON.stringify({
+                sessionId: "143802",
+                location: "mountTriollaMobileMenu.ts:submenu-toggle",
+                message: "mobile submenu toggle",
+                data: {
+                  hitA,
+                  hitMarrow,
+                  tag: target instanceof Element ? target.tagName : null,
+                },
+                timestamp: Date.now(),
+                hypothesisId: "A",
+              }),
+            },
+          ).catch(() => {});
+          // #endregion
+          e.preventDefault();
+          e.stopPropagation();
+          liHasChildren.classList.toggle("active");
+          const sub = liHasChildren.querySelector<HTMLElement>(":scope > ul");
+          if (sub) {
+            sub.style.display =
+              sub.style.display === "block" ? "none" : "block";
+          }
+        }
       }
     }
   };
 
+  const onKeyDown = (e: KeyboardEvent) => {
+    if (e.key !== "Escape") return;
+    if (!body.classList.contains("mbodyact")) return;
+    body.classList.remove("mbodyact");
+  };
+
   root.addEventListener("click", onClickCapture, true);
+  document.addEventListener("keydown", onKeyDown);
   stripJQueryMenutoggleClickHandlers(root);
 
   return () => {
     body.classList.remove("mbodyact");
     root.removeEventListener("click", onClickCapture, true);
+    document.removeEventListener("keydown", onKeyDown);
   };
 }
