@@ -90,7 +90,7 @@ body {
  */
 @media (max-width: 1023px) {
   html[dir="rtl"] .header_in.cf,
-  .main_container[dir="rtl"] .header_in.cf {
+  .main_container[dir="rtl"]:not([data-triolla-snapshot]) .header_in.cf {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -99,7 +99,7 @@ body {
   }
 
   html[dir="rtl"] .header_in .logo,
-  .main_container[dir="rtl"] .header_in .logo {
+  .main_container[dir="rtl"]:not([data-triolla-snapshot]) .header_in .logo {
     float: none;
     flex: 1 1 auto;
     min-width: 0;
@@ -110,12 +110,12 @@ body {
   }
 
   html[dir="rtl"] .header_in .logo a,
-  .main_container[dir="rtl"] .header_in .logo a {
+  .main_container[dir="rtl"]:not([data-triolla-snapshot]) .header_in .logo a {
     margin-inline: auto;
   }
 
   html[dir="rtl"] .header_in .menutoggle,
-  .main_container[dir="rtl"] .header_in .menutoggle {
+  .main_container[dir="rtl"]:not([data-triolla-snapshot]) .header_in .menutoggle {
     float: none;
     flex: 0 0 auto;
     margin: 0;
@@ -125,7 +125,7 @@ body {
   }
 
   html[dir="rtl"] .header_in .header_right,
-  .main_container[dir="rtl"] .header_in .header_right {
+  .main_container[dir="rtl"]:not([data-triolla-snapshot]) .header_in .header_right {
     float: none;
     flex: 0 0 auto;
     margin: 0;
@@ -134,7 +134,7 @@ body {
   }
 
   html[dir="rtl"] .header_in .header_contact,
-  .main_container[dir="rtl"] .header_in .header_contact {
+  .main_container[dir="rtl"]:not([data-triolla-snapshot]) .header_in .header_contact {
     float: none;
   }
 

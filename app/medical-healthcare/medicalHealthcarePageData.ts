@@ -1,6 +1,7 @@
 import type { PortfolioPageData } from "../components/PortfolioPageWithCSS";
 
-const H = "/assets/medical-healthcare";
+/** Portfolio imagery lives in `public/images/` (per-slug `public/assets/medical-healthcare/` is not shipped). */
+const H = "/images";
 
 const ASSETS = {
   bannerGridImg: `${H}/banner_grid.svg`,
@@ -60,7 +61,7 @@ const ITEMS_EN: PortfolioPageData["portfolioItems"] = [
   {
     logo: `${H}/edwards-min.png`,
     desktopImg: `${H}/Edwards-image-desktop.png`,
-    mobileImg: `${H}/Edwards-mobile.png`,
+    mobileImg: `${H}/Edwards-image-mobile.png`,
     title: "Real-Time Heart Monitoring,  Smarter Decisions",
     description:
       "We partnered with Edwards Lifesciences to help innovate a new product that uses advanced sensors to monitor heart conditions in real time—enabling cardiologists to make informed decisions instantly, based on live data.",
@@ -69,7 +70,7 @@ const ITEMS_EN: PortfolioPageData["portfolioItems"] = [
   {
     logo: `${H}/elasitmed-min.png`,
     desktopImg: `${H}/Elasitmed-image-desktop.png`,
-    mobileImg: `${H}/Elastimed-mobile.png`,
+    mobileImg: `${H}/Elasitmed-image-mobile.png`,
     title: "Enhancing Compression Therapy with Connected Guidance",
     description:
       "We designed a new IoT App for ElastiMed’s smart compression sock. The app guides users on proper use and offers real-time feedback to maximize results.",
@@ -78,7 +79,7 @@ const ITEMS_EN: PortfolioPageData["portfolioItems"] = [
   {
     logo: `${H}/twist-min.png`,
     desktopImg: `${H}/Twist-image-desktop.png`,
-    mobileImg: `${H}/Twist-mobile.png`,
+    mobileImg: `${H}/Twist-image-mobile.png`,
     title: "Pioneering Synthetic DNA with Twist Bioscience – Accelerating innovation",
     description:
       "Twist Bioscience partnered with us to redesign their cutting-edge silicon platform, enabling high-precision, scalable DNA synthesis and driving advancements in research, diagnostics, and therapeutics.",
@@ -87,7 +88,7 @@ const ITEMS_EN: PortfolioPageData["portfolioItems"] = [
   {
     logo: `${H}/digitalowl-min.png`,
     desktopImg: `${H}/Digitalowl-image-desktop-1.png`,
-    mobileImg: `${H}/Digitalowl-mobile.png`,
+    mobileImg: `${H}/Digitalowl-image-mobile.png`,
     title:
       "Transforming Medical Data with DigitalOwl – Delivering precision and efficiency through advanced technology",
     description:

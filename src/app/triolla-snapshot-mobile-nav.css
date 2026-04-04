@@ -1,7 +1,7 @@
 /* =============================================================================
    Triolla HTML snapshots — mobile / tablet (≤1023px), single source of truth.
-   - Header: flex row, room for absolutely positioned hamburger (theme ml-responsive idea)
-   - Drawer: body.mbodyact + right/left (not transform), z-index above page
+   - Header: hamburger on inline-end (logical); RTL pages mirror the *icon* with scaleX(-1)
+   - Drawer: slides from inline-end; position unchanged for LTR vs RTL
    globals.css .menutoggle { display:none } is scoped to .site-header / .hebrew-navigation only.
    ============================================================================= */
 
@@ -39,7 +39,8 @@
   [data-triolla-snapshot] .logo {
     flex: 0 0 auto !important;
     float: none !important;
-    margin: 0 8px 0 0 !important;
+    margin-inline-end: 8px !important;
+    margin-inline-start: 0 !important;
     position: relative !important;
     top: 0 !important;
   }
@@ -52,7 +53,8 @@
     min-width: 0 !important;
     float: none !important;
     margin: 0 !important;
-    padding: 0 52px 0 0 !important;
+    padding-inline-end: 52px !important;
+    padding-inline-start: 0 !important;
     box-sizing: border-box !important;
   }
 
@@ -73,8 +75,8 @@
     position: absolute !important;
     top: 50% !important;
     transform: translateY(-50%) !important;
-    right: 10px !important;
-    left: auto !important;
+    inset-inline-end: 10px !important;
+    inset-inline-start: auto !important;
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
@@ -113,6 +115,25 @@
     display: block !important;
   }
 
+  /*
+   * Triolla responsive-he / ml-responsive: tablet hamburger is inverted (white on dark bar);
+   * phone turns invert off again. Theme uses `.menutoggle a img`; snapshots use <button>.
+   */
+  [data-triolla-snapshot] .header .menutoggle a img,
+  [data-triolla-snapshot] .header .menutoggle button img {
+    filter: invert(1) !important;
+  }
+
+  /* Hebrew / RTL: mirror the hamburger graphic only (position stays inline-end). */
+  [dir="rtl"] [data-triolla-snapshot] .header .menutoggle a img.one,
+  [dir="rtl"] [data-triolla-snapshot] .header .menutoggle button img.one,
+  [data-triolla-snapshot][dir="rtl"] .header .menutoggle a img.one,
+  [data-triolla-snapshot][dir="rtl"] .header .menutoggle button img.one,
+  [data-triolla-snapshot].rtl .header .menutoggle a img.one,
+  [data-triolla-snapshot].rtl .header .menutoggle button img.one {
+    transform: scaleX(-1) !important;
+  }
+
   /* Drawer */
   [data-triolla-snapshot] .hmenumob {
     display: block !important;
@@ -120,8 +141,9 @@
     visibility: visible !important;
     position: fixed !important;
     top: 0 !important;
-    right: -100% !important;
-    left: auto !important;
+    /* Slide in from inline-end (right in LTR, left in RTL). */
+    inset-inline-end: -100% !important;
+    inset-inline-start: auto !important;
     width: 100% !important;
     max-width: 100vw !important;
     height: 100% !important;
@@ -132,7 +154,7 @@
     background-image: none !important;
     padding: max(120px, calc(env(safe-area-inset-top, 0px) + 88px)) 0
       max(41px, env(safe-area-inset-bottom, 0px)) !important;
-    transition: right 0.4s ease, left 0.4s ease !important;
+    transition: inset-inline-end 0.4s ease !important;
     overflow-y: auto !important;
     overflow-x: hidden !important;
     overscroll-behavior: contain !important;
@@ -141,8 +163,7 @@
   }
 
   body.mbodyact [data-triolla-snapshot] .hmenumob {
-    right: 0 !important;
-    left: auto !important;
+    inset-inline-end: 0 !important;
   }
 
   /*
@@ -197,8 +218,8 @@
   [data-triolla-snapshot] .hmenumob .hmenumobclose {
     position: absolute !important;
     top: max(16px, env(safe-area-inset-top, 0px)) !important;
-    right: 18px !important;
-    left: auto !important;
+    inset-inline-end: 18px !important;
+    inset-inline-start: auto !important;
     z-index: 50 !important;
     pointer-events: auto !important;
   }
@@ -244,15 +265,11 @@
     width: auto !important;
     min-height: 44px !important;
     line-height: 30px !important;
-    padding: 8px 28px 8px 0 !important;
+    padding-block: 8px !important;
+    padding-inline-end: 28px !important;
+    padding-inline-start: 0 !important;
     box-sizing: border-box !important;
     pointer-events: auto !important;
-  }
-
-  [dir="rtl"] [data-triolla-snapshot] .hmenumobdiv ul li ul li.menu-item-has-children > a,
-  [data-triolla-snapshot][dir="rtl"] .hmenumobdiv ul li ul li.menu-item-has-children > a,
-  [data-triolla-snapshot].rtl .hmenumobdiv ul li ul li.menu-item-has-children > a {
-    padding: 8px 0 8px 28px !important;
   }
 
   /* Theme hides all nested `a:after`; show chevron for expandable column headers only. */
@@ -283,40 +300,13 @@
     color: #000 !important;
   }
 
-  /* RTL */
-  [dir="rtl"] [data-triolla-snapshot] .header_right,
-  [data-triolla-snapshot][dir="rtl"] .header_right,
-  [data-triolla-snapshot].rtl .header_right {
-    justify-content: flex-start !important;
-    padding: 0 0 0 52px !important;
-  }
+}
 
-  [dir="rtl"] [data-triolla-snapshot] .header_in > .menutoggle,
-  [data-triolla-snapshot][dir="rtl"] .header_in > .menutoggle,
-  [data-triolla-snapshot].rtl .header_in > .menutoggle {
-    right: auto !important;
-    left: 10px !important;
-  }
-
-  [dir="rtl"] [data-triolla-snapshot] .hmenumob,
-  [data-triolla-snapshot][dir="rtl"] .hmenumob,
-  [data-triolla-snapshot].rtl .hmenumob {
-    right: auto !important;
-    left: -100% !important;
-  }
-
-  body.mbodyact [dir="rtl"] [data-triolla-snapshot] .hmenumob,
-  body.mbodyact [data-triolla-snapshot][dir="rtl"] .hmenumob,
-  body.mbodyact [data-triolla-snapshot].rtl .hmenumob {
-    left: 0 !important;
-    right: auto !important;
-  }
-
-  [dir="rtl"] [data-triolla-snapshot] .hmenumob .hmenumobclose,
-  [data-triolla-snapshot][dir="rtl"] .hmenumob .hmenumobclose,
-  [data-triolla-snapshot].rtl .hmenumob .hmenumobclose {
-    right: auto !important;
-    left: 18px !important;
+/* Triolla ml-responsive: ≤767px turns hamburger invert off again (narrow phones). */
+@media (max-width: 767px) {
+  [data-triolla-snapshot] .header .menutoggle a img,
+  [data-triolla-snapshot] .header .menutoggle button img {
+    filter: invert(0) !important;
   }
 }
 
@@ -383,6 +373,8 @@
   position: absolute !important;
   top: 50% !important;
   transform: translateY(-50%) !important;
+  inset-inline-end: 10px !important;
+  inset-inline-start: auto !important;
   display: inline-flex !important;
   visibility: visible !important;
   opacity: 1 !important;
@@ -392,11 +384,6 @@
   height: 44px !important;
   z-index: 20 !important;
   pointer-events: auto !important;
-}
-
-[data-triolla-snapshot].temp-mobile-nav-qa[dir="rtl"] .header_in > .menutoggle {
-  left: 10px !important;
-  right: auto !important;
 }
 
 [data-triolla-snapshot].temp-mobile-nav-qa .menutoggle a {
@@ -409,12 +396,17 @@
   visibility: visible !important;
 }
 
+[data-triolla-snapshot].temp-mobile-nav-qa[dir="rtl"] .menutoggle a img,
+[data-triolla-snapshot].temp-mobile-nav-qa[dir="rtl"] .menutoggle button img {
+  transform: scaleX(-1) !important;
+}
+
 [data-triolla-snapshot].temp-mobile-nav-qa .hmenumob {
   display: block !important;
   position: fixed !important;
   top: 0 !important;
-  left: -100% !important;
-  right: auto !important;
+  inset-inline-end: -100% !important;
+  inset-inline-start: auto !important;
   width: 100% !important;
   max-width: 100vw !important;
   height: 100% !important;
@@ -423,21 +415,20 @@
   background: #fed125 !important;
   padding: max(120px, calc(env(safe-area-inset-top, 0px) + 88px)) 0
     max(41px, env(safe-area-inset-bottom, 0px)) !important;
-  transition: left 0.4s ease !important;
+  transition: inset-inline-end 0.4s ease !important;
   overflow-y: auto !important;
   overflow-x: hidden !important;
 }
 
 body.mbodyact [data-triolla-snapshot].temp-mobile-nav-qa .hmenumob {
-  left: 0 !important;
-  right: auto !important;
+  inset-inline-end: 0 !important;
 }
 
 [data-triolla-snapshot].temp-mobile-nav-qa .hmenumob .hmenumobclose {
   position: absolute !important;
   top: max(16px, env(safe-area-inset-top, 0px)) !important;
-  left: 18px !important;
-  right: auto !important;
+  inset-inline-end: 18px !important;
+  inset-inline-start: auto !important;
   z-index: 50 !important;
   pointer-events: auto !important;
 }
@@ -468,13 +459,11 @@ body.mbodyact [data-triolla-snapshot].temp-mobile-nav-qa .hmenumob {
   width: auto !important;
   min-height: 44px !important;
   line-height: 30px !important;
-  padding: 8px 28px 8px 0 !important;
+  padding-block: 8px !important;
+  padding-inline-end: 28px !important;
+  padding-inline-start: 0 !important;
   box-sizing: border-box !important;
   pointer-events: auto !important;
-}
-
-[data-triolla-snapshot].temp-mobile-nav-qa[dir="rtl"] .hmenumobdiv ul li ul li.menu-item-has-children > a {
-  padding: 8px 0 8px 28px !important;
 }
 
 [data-triolla-snapshot].temp-mobile-nav-qa .hmenumobdiv ul li ul li.menu-item-has-children > a:after {
