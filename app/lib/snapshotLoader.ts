@@ -41,6 +41,55 @@ export function loadStylesheet(href: string): Promise<void> {
   });
 }
 
+/**
+ * Append all stylesheet links in dependency order (same cascade as sequential
+ * `loadStylesheet` calls), but let the browser fetch them in parallel.
+ * Returns only newly inserted `<link>` nodes (for cleanup on unmount).
+ */
+export function loadStylesheetsParallelOrdered(hrefs: string[]): Promise<HTMLLinkElement[]> {
+  const toAppend: HTMLLinkElement[] = [];
+  for (const href of hrefs) {
+    const abs = resolvedUrl(href);
+    let found = false;
+    for (const node of document.querySelectorAll("link[rel='stylesheet']")) {
+      if ((node as HTMLLinkElement).href === abs) {
+        found = true;
+        break;
+      }
+    }
+    if (found) continue;
+    const link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = href;
+    toAppend.push(link);
+  }
+
+  for (const link of toAppend) {
+    document.head.appendChild(link);
+  }
+
+  if (toAppend.length === 0) {
+    return Promise.resolve([]);
+  }
+
+  return Promise.all(
+    toAppend.map((link) => {
+      const href = link.href;
+      return new Promise<void>((resolve) => {
+        link.addEventListener("load", () => resolve(), { once: true });
+        link.addEventListener(
+          "error",
+          () => {
+            console.error(`Failed to load stylesheet: ${href}`);
+            resolve();
+          },
+          { once: true },
+        );
+      });
+    }),
+  ).then(() => toAppend);
+}
+
 const scriptPromises = new Map<string, Promise<void>>();
 
 export function loadScript(src: string): Promise<void> {

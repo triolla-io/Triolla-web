@@ -1,0 +1,30 @@
+{
+  "assetBase": "/assets/_consolidated/",
+  "bodyClass": "rtl wp-singular post-template-default single single-post postid-3501 single-format-standard wp-theme-triolla",
+  "dataRsssl": "1",
+  "css": [
+    "style.css",
+    "svgs-attachment.css",
+    "cms-navigation-base.css",
+    "cms-navigation.css",
+    "style-rtl.min.css_edabec9e.css",
+    "style-he.css_edabec9e.css",
+    "style-new-he.css_edabec9e.css",
+    "responsive-he.css_edabec9e.css",
+    "animate.css_edabec9e.css",
+    "animation.css_edabec9e.css",
+    "/assets/_shared/jquery.jConveyorTicker.min.css_edabec9e.css",
+    "mlstyle.css_edabec9e.css",
+    "ml-responsive.css_edabec9e.css",
+    "fonts.css"
+  ],
+  "js": [
+    "jquery-3.6.0.min.js_edabec9e.js",
+    "/assets/_shared/eb5e45d752068adfb4185f39ea2978f6_jquery.jConveyorTicker.min.js_edabec9e.js",
+    "metaview.js_edabec9e.js",
+    "gsap.min.js",
+    "ScrollTrigger.min.js",
+    "wow.js_edabec9e.js",
+    "all.js_edabec9e.js"
+  ]
+}

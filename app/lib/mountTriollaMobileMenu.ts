@@ -5,31 +5,6 @@
  * Theme CSS opens the panel when <body> has `mbodyact`.
  */
 export function mountTriollaMobileMenu(root: HTMLElement): () => void {
-  // #region agent log: verify menutoggle is found and clickable
-  const menutoggle = root.querySelector<HTMLElement>(".menutoggle");
-  if (menutoggle) {
-    fetch('http://127.0.0.1:7442/ingest/16494b4c-3094-42cb-81b5-aad92874073c', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'X-Debug-Session-Id': '143802' },
-      body: JSON.stringify({
-        sessionId: '143802',
-        location: 'mountTriollaMobileMenu.ts:8',
-        message: 'Menutoggle element found',
-        data: {
-          menutoggleDisplay: window.getComputedStyle(menutoggle).display,
-          menutogglePointerEvents: window.getComputedStyle(menutoggle).pointerEvents,
-          menutoggleCursor: window.getComputedStyle(menutoggle).cursor,
-          hasAnchor: !!menutoggle.querySelector('a'),
-          hasButton: !!menutoggle.querySelector('button')
-        },
-        timestamp: Date.now(),
-        runId: 'debug-menutoggle',
-        hypothesisId: 'H4-H5'
-      })
-    }).catch(() => {});
-  }
-  // #endregion
-
   const body = document.body;
   const isHebrew = root.getAttribute("dir") === "rtl";
   const mobileMenu = root.querySelector<HTMLElement>(".hmenumob");
@@ -50,37 +25,11 @@ export function mountTriollaMobileMenu(root: HTMLElement): () => void {
 
   // #region agent log: click handlers
   const onOpen = (e: Event) => {
-    fetch('http://127.0.0.1:7442/ingest/16494b4c-3094-42cb-81b5-aad92874073c', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'X-Debug-Session-Id': '143802' },
-      body: JSON.stringify({
-        sessionId: '143802',
-        location: 'mountTriollaMobileMenu.ts:onOpen',
-        message: 'Menu open clicked',
-        data: { isHebrew: isHebrew },
-        timestamp: Date.now(),
-        runId: 'debug-clicks',
-        hypothesisId: 'H2'
-      })
-    }).catch(() => {});
     e.preventDefault();
     body.classList.add("mbodyact");
   };
   
   const onClose = (e: Event) => {
-    fetch('http://127.0.0.1:7442/ingest/16494b4c-3094-42cb-81b5-aad92874073c', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'X-Debug-Session-Id': '143802' },
-      body: JSON.stringify({
-        sessionId: '143802',
-        location: 'mountTriollaMobileMenu.ts:onClose',
-        message: 'Menu close clicked',
-        data: { isHebrew: isHebrew },
-        timestamp: Date.now(),
-        runId: 'debug-clicks',
-        hypothesisId: 'H2'
-      })
-    }).catch(() => {});
     e.preventDefault();
     body.classList.remove("mbodyact");
   };

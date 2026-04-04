@@ -6,7 +6,11 @@ import { initTriollaConveyorTicker } from "./lib/initTriollaConveyorTicker";
 import { mountTriollaFaqAccordion } from "./lib/mountTriollaFaqAccordion";
 import { rewriteTriollaNavLinks } from "./lib/rewriteTriollaNavLinks";
 import { installSnapshotPluginStubs } from "./lib/snapshotPluginStubs";
-import { loadScript, loadStylesheet, waitForSnapshotFonts } from "./lib/snapshotLoader";
+import {
+  loadScript,
+  loadStylesheetsParallelOrdered,
+  waitForSnapshotFonts,
+} from "./lib/snapshotLoader";
 import { snapshotAssetUrl } from "./lib/snapshotAssetUrl";
 import { initTriollaOwlCarousels } from "./about-us/initTriollaCarousels";
 import { mountTriollaHeaderPill } from "./about-us/mountTriollaHeaderPill";
@@ -57,14 +61,7 @@ export function HomeClient() {
     (async () => {
       try {
         installSnapshotPluginStubs();
-        for (const file of css) {
-          if (cancelled) return;
-          try {
-            await loadStylesheet(hrefFor(file));
-          } catch (err) {
-            console.error(`Failed to load CSS: ${file}`, err);
-          }
-        }
+        await loadStylesheetsParallelOrdered(css.map((file) => hrefFor(file)));
 
         const res = await fetch(fragmentUrl);
         if (!res.ok) throw new Error("fragment fetch failed");
@@ -84,50 +81,57 @@ export function HomeClient() {
         el.setAttribute("dir", isHebrewHome ? "rtl" : "ltr");
         rewriteTriollaNavLinks(el);
         await waitForSnapshotFonts();
-
-        for (const file of js) {
-          if (cancelled) return;
-          const src = hrefFor(file);
-          await loadScript(src);
-          if (
-            file.endsWith(".js") &&
-            (file.includes("lottie") || file.includes("bodymovin"))
-          ) {
-            initTriollaLottie(el);
-          }
-        }
-
-        // Register GSAP ScrollTrigger plugin for parallax effects
-        const gsapWin = window as unknown as {
-          gsap?: { registerPlugin?: (plugin: unknown) => void; to?: (target: unknown, vars: unknown) => void };
-          ScrollTrigger?: unknown;
-        };
-        if (gsapWin.gsap?.registerPlugin && gsapWin.ScrollTrigger) {
-          gsapWin.gsap.registerPlugin(gsapWin.ScrollTrigger);
-        }
-
-        initTriollaConveyorTicker(el);
-        initTriollaOwlCarousels(el);
-        const $ = (window as unknown as { jQuery?: (sel: Window) => { trigger: (ev: string) => void } })
-          .jQuery;
-        $?.(window).trigger("resize");
-
-        window.dispatchEvent(new Event("DOMContentLoaded"));
-        window.dispatchEvent(new Event("load"));
-
-        // Add .loaded class to body after delay, matching theme behavior
-        setTimeout(() => {
-          document.body.classList.add("loaded");
-        }, 800);
+        await new Promise<void>((r) =>
+          requestAnimationFrame(() => requestAnimationFrame(() => r())),
+        );
 
         if (cancelled) return;
-        disposeRevealRef.current?.();
-        disposeRevealRef.current = mountTriollaSnapshotRevealStack(el, "technology");
-        disposeHeaderPillRef.current?.();
-        disposeHeaderPillRef.current = mountTriollaHeaderPill(el);
-        disposeFaqRef.current?.();
-        disposeFaqRef.current = mountTriollaFaqAccordion(el);
         setPhase("ready");
+
+        try {
+          for (const file of js) {
+            if (cancelled) return;
+            const src = hrefFor(file);
+            await loadScript(src);
+            if (
+              file.endsWith(".js") &&
+              (file.includes("lottie") || file.includes("bodymovin"))
+            ) {
+              initTriollaLottie(el);
+            }
+          }
+
+          const gsapWin = window as unknown as {
+            gsap?: { registerPlugin?: (plugin: unknown) => void; to?: (target: unknown, vars: unknown) => void };
+            ScrollTrigger?: unknown;
+          };
+          if (gsapWin.gsap?.registerPlugin && gsapWin.ScrollTrigger) {
+            gsapWin.gsap.registerPlugin(gsapWin.ScrollTrigger);
+          }
+
+          initTriollaConveyorTicker(el);
+          initTriollaOwlCarousels(el);
+          const $ = (window as unknown as { jQuery?: (sel: Window) => { trigger: (ev: string) => void } })
+            .jQuery;
+          $?.(window).trigger("resize");
+
+          window.dispatchEvent(new Event("DOMContentLoaded"));
+          window.dispatchEvent(new Event("load"));
+
+          setTimeout(() => {
+            document.body.classList.add("loaded");
+          }, 800);
+
+          if (cancelled) return;
+          disposeRevealRef.current?.();
+          disposeRevealRef.current = mountTriollaSnapshotRevealStack(el, "technology");
+          disposeHeaderPillRef.current?.();
+          disposeHeaderPillRef.current = mountTriollaHeaderPill(el);
+          disposeFaqRef.current?.();
+          disposeFaqRef.current = mountTriollaFaqAccordion(el);
+        } catch (deferredErr) {
+          console.error("[snapshot] home deferred scripts/init failed:", deferredErr);
+        }
       } catch {
         if (!cancelled) setPhase("error");
       }

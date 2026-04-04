@@ -7,7 +7,11 @@ import { rewriteTriollaNavLinks } from "./rewriteTriollaNavLinks";
 import { mountTriollaMobileMenu } from "./mountTriollaMobileMenu";
 import { normalizeHeaderAssetUrls } from "./normalizeHeaderAssetUrls";
 import { installSnapshotPluginStubs } from "./snapshotPluginStubs";
-import { loadScript, loadStylesheet, waitForSnapshotFonts } from "./snapshotLoader";
+import {
+  loadScript,
+  loadStylesheetsParallelOrdered,
+  waitForSnapshotFonts,
+} from "./snapshotLoader";
 import { snapshotAssetUrl } from "./snapshotAssetUrl";
 import { initTriollaOwlCarousels } from "../about-us/initTriollaCarousels";
 import { mountTriollaHeaderPill } from "../about-us/mountTriollaHeaderPill";
@@ -83,14 +87,7 @@ export function TriollaPortfolioSnapshotClient({
     (async () => {
       try {
         installSnapshotPluginStubs();
-        for (const file of css) {
-          if (cancelled) return;
-          try {
-            await loadStylesheet(hrefFor(file));
-          } catch (err) {
-            console.error(`Failed to load CSS: ${file}`, err);
-          }
-        }
+        await loadStylesheetsParallelOrdered(css.map((file) => hrefFor(file)));
 
         const res = await fetch(fragmentUrl, { signal: ac.signal });
         if (!res.ok) throw new Error("fragment fetch failed");
@@ -145,48 +142,56 @@ export function TriollaPortfolioSnapshotClient({
         ensurePortfolioFaqWrapShown(el);
         rewriteTriollaNavLinks(el);
         await waitForSnapshotFonts();
-
-        for (const file of js) {
-          if (cancelled) return;
-          const src = hrefFor(file);
-          await loadScript(src);
-          if (
-            file.endsWith(".js") &&
-            (file.includes("lottie") || file.includes("bodymovin"))
-          ) {
-            initTriollaLottie(el);
-          }
-        }
-
-        initTriollaConveyorTicker(el);
-        initTriollaOwlCarousels(el);
-        const $ = (window as unknown as { jQuery?: (sel: Window) => { trigger: (ev: string) => void } })
-          .jQuery;
-        $?.(window).trigger("resize");
-
-        window.dispatchEvent(new Event("DOMContentLoaded"));
-        window.dispatchEvent(new Event("load"));
+        await new Promise<void>((r) =>
+          requestAnimationFrame(() => requestAnimationFrame(() => r())),
+        );
 
         if (cancelled) return;
-        disposeAfterScriptsRef.current?.();
-        disposeAfterScriptsRef.current = null;
-        if (afterScripts) {
-          const d = afterScripts(el);
-          disposeAfterScriptsRef.current = typeof d === "function" ? d : null;
-        }
-
-        disposeRevealRef.current?.();
-        disposeRevealRef.current = mountTriollaSnapshotRevealStack(el, "technology");
-        disposeHeaderPillRef.current?.();
-        disposeHeaderPillRef.current = mountTriollaHeaderPill(el);
-        disposeFaqRef.current?.();
-        disposeFaqRef.current = mountTriollaFaqAccordion(el);
-
-        if (lang) {
-          mountTriollaMobileMenu(el);
-        }
-
         setPhase("ready");
+
+        try {
+          for (const file of js) {
+            if (cancelled) return;
+            const src = hrefFor(file);
+            await loadScript(src);
+            if (
+              file.endsWith(".js") &&
+              (file.includes("lottie") || file.includes("bodymovin"))
+            ) {
+              initTriollaLottie(el);
+            }
+          }
+
+          initTriollaConveyorTicker(el);
+          initTriollaOwlCarousels(el);
+          const $ = (window as unknown as { jQuery?: (sel: Window) => { trigger: (ev: string) => void } })
+            .jQuery;
+          $?.(window).trigger("resize");
+
+          window.dispatchEvent(new Event("DOMContentLoaded"));
+          window.dispatchEvent(new Event("load"));
+
+          if (cancelled) return;
+          disposeAfterScriptsRef.current?.();
+          disposeAfterScriptsRef.current = null;
+          if (afterScripts) {
+            const d = afterScripts(el);
+            disposeAfterScriptsRef.current = typeof d === "function" ? d : null;
+          }
+
+          disposeRevealRef.current?.();
+          disposeRevealRef.current = mountTriollaSnapshotRevealStack(el, "technology");
+          disposeHeaderPillRef.current?.();
+          disposeHeaderPillRef.current = mountTriollaHeaderPill(el);
+          disposeFaqRef.current?.();
+          disposeFaqRef.current = mountTriollaFaqAccordion(el);
+
+          if (lang) {
+            mountTriollaMobileMenu(el);
+          }
+        } catch (deferredErr) {
+          console.error("[snapshot] portfolio snapshot deferred scripts/init failed:", deferredErr);
+        }
       } catch (e) {
         if (cancelled) return;
         if (e instanceof DOMException && e.name === "AbortError") return;

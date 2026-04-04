@@ -3,7 +3,11 @@
 import { useEffect, useRef, useState } from "react";
 import { rewriteTriollaNavLinks } from "../../lib/rewriteTriollaNavLinks";
 import { installSnapshotPluginStubs } from "../../lib/snapshotPluginStubs";
-import { loadScript, loadStylesheet } from "../../lib/snapshotLoader";
+import {
+  loadScript,
+  loadStylesheetsParallelOrdered,
+  waitForSnapshotFonts,
+} from "../../lib/snapshotLoader";
 import { snapshotAssetUrl } from "../../lib/snapshotAssetUrl";
 import aboutUsDepsEn from "./about-us-deps.json";
 import aboutUsDepsHe from "./about-us-he-deps.json";
@@ -55,10 +59,7 @@ export function AboutUsClient({ lang }: { lang: string }) {
         installSnapshotPluginStubs();
         const fragmentUrl = getFragmentUrl(lang);
 
-        for (const file of css) {
-          if (cancelled) return;
-          await loadStylesheet(hrefFor(file));
-        }
+        await loadStylesheetsParallelOrdered(css.map((file) => hrefFor(file)));
 
         const res = await fetch(fragmentUrl);
         if (!res.ok) throw new Error("fragment fetch failed");
@@ -70,31 +71,41 @@ export function AboutUsClient({ lang }: { lang: string }) {
         el.innerHTML = html;
         el.setAttribute("dir", lang === "he" ? "rtl" : "ltr");
         rewriteTriollaNavLinks(el);
-
-        for (const file of js) {
-          if (cancelled) return;
-          await loadScript(hrefFor(file));
-          if (file.includes("lottie")) {
-            initTriollaLottie(el);
-          }
-        }
-
-        initTriollaOwlCarousels(el);
-        const $ = (window as unknown as { jQuery?: (sel: Window) => { trigger: (ev: string) => void } })
-          .jQuery;
-        $?.(window).trigger("resize");
-
-        window.dispatchEvent(new Event("DOMContentLoaded"));
-        window.dispatchEvent(new Event("load"));
+        await waitForSnapshotFonts();
+        await new Promise<void>((r) =>
+          requestAnimationFrame(() => requestAnimationFrame(() => r())),
+        );
 
         if (cancelled) return;
-        disposeRevealRef.current?.();
-        disposeRevealRef.current = mountTriollaSnapshotRevealStack(el, "about");
-        disposeHeaderPillRef.current?.();
-        disposeHeaderPillRef.current = mountTriollaHeaderPill(el);
-        disposeMobileMenuRef.current?.();
-        disposeMobileMenuRef.current = mountTriollaMobileMenu(el);
         setPhase("ready");
+
+        try {
+          for (const file of js) {
+            if (cancelled) return;
+            await loadScript(hrefFor(file));
+            if (file.includes("lottie")) {
+              initTriollaLottie(el);
+            }
+          }
+
+          initTriollaOwlCarousels(el);
+          const $ = (window as unknown as { jQuery?: (sel: Window) => { trigger: (ev: string) => void } })
+            .jQuery;
+          $?.(window).trigger("resize");
+
+          window.dispatchEvent(new Event("DOMContentLoaded"));
+          window.dispatchEvent(new Event("load"));
+
+          if (cancelled) return;
+          disposeRevealRef.current?.();
+          disposeRevealRef.current = mountTriollaSnapshotRevealStack(el, "about");
+          disposeHeaderPillRef.current?.();
+          disposeHeaderPillRef.current = mountTriollaHeaderPill(el);
+          disposeMobileMenuRef.current?.();
+          disposeMobileMenuRef.current = mountTriollaMobileMenu(el);
+        } catch (deferredErr) {
+          console.error("[snapshot] about-us (lang) deferred scripts/init failed:", deferredErr);
+        }
       } catch {
         if (!cancelled) setPhase("error");
       }

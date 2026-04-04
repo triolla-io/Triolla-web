@@ -11,7 +11,12 @@ import {
   localizeContactStripForHebrew,
 } from "./triollaSharedBodyInject";
 import { installSnapshotPluginStubs } from "./snapshotPluginStubs";
-import { loadScript, loadStylesheet, waitForSnapshotFonts } from "./snapshotLoader";
+import {
+  loadScript,
+  loadStylesheet,
+  loadStylesheetsParallelOrdered,
+  waitForSnapshotFonts,
+} from "./snapshotLoader";
 import { snapshotAssetUrl } from "./snapshotAssetUrl";
 import { initTriollaOwlCarousels } from "../about-us/initTriollaCarousels";
 import { mountTriollaHeaderPill } from "../about-us/mountTriollaHeaderPill";
@@ -196,14 +201,7 @@ export function TriollaBilingualPortfolioSnapshotClient({
           await loadStylesheet("/assets/_consolidated/fonts.css");
         }
 
-        for (const file of css) {
-          if (cancelled) return;
-          try {
-            await loadStylesheet(hrefFor(file));
-          } catch (err) {
-            console.error(`Failed to load CSS: ${file}`, err);
-          }
-        }
+        await loadStylesheetsParallelOrdered(css.map((file) => hrefFor(file)));
 
         const res = await fetch(fragmentUrl, { signal: ac.signal });
         if (!res.ok) throw new Error("fragment fetch failed");
@@ -234,36 +232,45 @@ export function TriollaBilingualPortfolioSnapshotClient({
           localizeContactStripForHebrew(el);
         }
         await waitForSnapshotFonts();
-
-        for (const file of js) {
-          if (cancelled) return;
-          await loadScript(hrefFor(file));
-          if (file.endsWith(".js") && (file.includes("lottie") || file.includes("bodymovin"))) {
-            initTriollaLottie(el);
-          }
-        }
-
-        initTriollaConveyorTicker(el);
-        initTriollaOwlCarousels(el);
-        const $ = (window as unknown as { jQuery?: (sel: Window) => { trigger: (ev: string) => void } })
-          .jQuery;
-        $?.(window).trigger("resize");
-
-        window.dispatchEvent(new Event("DOMContentLoaded"));
-        window.dispatchEvent(new Event("load"));
-        $?.(window).trigger("load");
+        await new Promise<void>((r) =>
+          requestAnimationFrame(() => requestAnimationFrame(() => r())),
+        );
 
         if (cancelled) return;
-
-        disposeRevealRef.current?.();
-        disposeRevealRef.current = mountTriollaSnapshotRevealStack(el, revealPreset);
-        disposeHeaderPillRef.current?.();
-        disposeHeaderPillRef.current = mountTriollaHeaderPill(el);
-        disposeFaqRef.current?.();
-        disposeFaqRef.current = mountTriollaFaqAccordion(el);
-        disposeMobileMenuRef.current?.();
-        disposeMobileMenuRef.current = mountTriollaMobileMenu(el);
         setPhase("ready");
+
+        try {
+          for (const file of js) {
+            if (cancelled) return;
+            await loadScript(hrefFor(file));
+            if (file.endsWith(".js") && (file.includes("lottie") || file.includes("bodymovin"))) {
+              initTriollaLottie(el);
+            }
+          }
+
+          initTriollaConveyorTicker(el);
+          initTriollaOwlCarousels(el);
+          const $ = (window as unknown as { jQuery?: (sel: Window) => { trigger: (ev: string) => void } })
+            .jQuery;
+          $?.(window).trigger("resize");
+
+          window.dispatchEvent(new Event("DOMContentLoaded"));
+          window.dispatchEvent(new Event("load"));
+          $?.(window).trigger("load");
+
+          if (cancelled) return;
+
+          disposeRevealRef.current?.();
+          disposeRevealRef.current = mountTriollaSnapshotRevealStack(el, revealPreset);
+          disposeHeaderPillRef.current?.();
+          disposeHeaderPillRef.current = mountTriollaHeaderPill(el);
+          disposeFaqRef.current?.();
+          disposeFaqRef.current = mountTriollaFaqAccordion(el);
+          disposeMobileMenuRef.current?.();
+          disposeMobileMenuRef.current = mountTriollaMobileMenu(el);
+        } catch (deferredErr) {
+          console.error("[snapshot] bilingual portfolio deferred scripts/init failed:", deferredErr);
+        }
       } catch (e) {
         if (cancelled) return;
         if (e instanceof DOMException && e.name === "AbortError") return;
@@ -291,46 +298,6 @@ export function TriollaBilingualPortfolioSnapshotClient({
   const assetDir = lang === "he" ? assetDirHe : assetDirEn;
 
   const ready = phase === "ready";
-
-  useEffect(() => {
-    // #region agent log: verify snapshot data attribute and header layout
-    const timer = setTimeout(() => {
-      const root = rootRef.current;
-      if (root) {
-        const hasAttr = root.hasAttribute('data-triolla-snapshot');
-        const headerIn = root.querySelector('.header_in');
-        const menutoggle = root.querySelector('.menutoggle');
-        const headerRight = root.querySelector('.header_right');
-        
-        fetch('http://127.0.0.1:7442/ingest/16494b4c-3094-42cb-81b5-aad92874073c', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json', 'X-Debug-Session-Id': '143802' },
-          body: JSON.stringify({
-            sessionId: '143802',
-            location: 'TriollaBilingualPortfolioSnapshotClient.tsx:150',
-            message: 'Snapshot layout DEBUG',
-            data: {
-              hasDataTriollaSnapshot: hasAttr,
-              headerInDisplay: headerIn ? window.getComputedStyle(headerIn).display : 'NOT_FOUND',
-              headerInFloat: headerIn ? window.getComputedStyle(headerIn).float : 'NOT_FOUND',
-              menutoggleDisplay: menutoggle ? window.getComputedStyle(menutoggle).display : 'NOT_FOUND',
-              menutoggleVisibility: menutoggle ? window.getComputedStyle(menutoggle).visibility : 'NOT_FOUND',
-              menutoggleFloat: menutoggle ? window.getComputedStyle(menutoggle).float : 'NOT_FOUND',
-              headerRightDisplay: headerRight ? window.getComputedStyle(headerRight).display : 'NOT_FOUND',
-              headerRightFloat: headerRight ? window.getComputedStyle(headerRight).float : 'NOT_FOUND',
-              windowWidth: window.innerWidth,
-              phase: phase
-            },
-            timestamp: Date.now(),
-            runId: 'debug-header-layout',
-            hypothesisId: 'H1-H5'
-          })
-        }).catch(() => {});
-      }
-    }, 1000);
-    return () => clearTimeout(timer);
-  }, [phase]);
-  // #endregion
 
   return (
     <>
@@ -361,7 +328,6 @@ export function TriollaBilingualPortfolioSnapshotClient({
         {...(dataRsssl != null ? { "data-rsssl": dataRsssl } : {})}
         suppressHydrationWarning
         style={{
-          // #region agent log: check if inline styles interfere
           visibility: ready ? "visible" : "hidden",
           pointerEvents: ready ? "auto" : "none",
           minHeight: "100vh",

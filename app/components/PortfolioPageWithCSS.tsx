@@ -15,6 +15,7 @@ import {
   localizeContactStripForHebrew,
 } from "../lib/triollaSharedBodyInject";
 import { installSnapshotPluginStubs } from "../lib/snapshotPluginStubs";
+import { loadStylesheetsParallelOrdered, waitForSnapshotFonts } from "../lib/snapshotLoader";
 import { snapshotAssetUrl } from "../lib/snapshotAssetUrl";
 import {
   PortfolioPageTemplate,
@@ -101,13 +102,11 @@ export function PortfolioPageWithCSS({
 
         const assetBaseNorm = normalizeAssetBase(deps.assetBase);
 
-        for (const cssFile of deps.css) {
-          const link = document.createElement("link");
-          link.rel = "stylesheet";
-          link.href = snapshotAssetUrl(assetBaseNorm, cssFile);
-          document.head.appendChild(link);
-          injectedLinks.push(link);
-        }
+        const cssHrefs = deps.css.map((cssFile) =>
+          snapshotAssetUrl(assetBaseNorm, cssFile),
+        );
+        const newCssLinks = await loadStylesheetsParallelOrdered(cssHrefs);
+        injectedLinks.push(...newCssLinks);
 
         const root = mainContainerRef.current;
         if (!root) return;
@@ -146,43 +145,53 @@ export function PortfolioPageWithCSS({
 
         if (cancelled) return;
 
-        disposePillRef.current?.();
-        disposePillRef.current = mountTriollaHeaderPill(root);
-        disposeFaqRef.current?.();
-        disposeFaqRef.current = mountTriollaFaqAccordion(root);
-
-        for (const jsFile of deps.js) {
-          if (cancelled) return;
-          const src = snapshotAssetUrl(assetBaseNorm, jsFile);
-          try {
-            const scriptEl = await loadScriptSequential(src);
-            injectedScripts.push(scriptEl);
-          } catch (scriptError) {
-            console.warn("Skipping failed script:", src, scriptError);
-          }
-        }
+        await waitForSnapshotFonts();
+        await new Promise<void>((r) =>
+          requestAnimationFrame(() => requestAnimationFrame(() => r())),
+        );
 
         if (cancelled) return;
-
-        const $ = (
-          window as unknown as {
-            jQuery?: (sel: Window) => { trigger: (ev: string) => void };
-          }
-        ).jQuery;
-        $?.(window).trigger("resize");
-        window.dispatchEvent(new Event("DOMContentLoaded"));
-        window.dispatchEvent(new Event("load"));
-        $?.(window).trigger("load");
-
-        initTriollaConveyorTicker(root);
-        initTriollaOwlCarousels(root);
-
-        disposeMobileMenuRef.current?.();
-        disposeMobileMenuRef.current = mountTriollaMobileMenu(root);
-        disposeFooterAccordionRef.current?.();
-        disposeFooterAccordionRef.current = mountTriollaFooterAccordion(root);
-
         setPhase("ready");
+
+        try {
+          for (const jsFile of deps.js) {
+            if (cancelled) return;
+            const src = snapshotAssetUrl(assetBaseNorm, jsFile);
+            try {
+              const scriptEl = await loadScriptSequential(src);
+              injectedScripts.push(scriptEl);
+            } catch (scriptError) {
+              console.warn("Skipping failed script:", src, scriptError);
+            }
+          }
+
+          if (cancelled) return;
+
+          const $ = (
+            window as unknown as {
+              jQuery?: (sel: Window) => { trigger: (ev: string) => void };
+            }
+          ).jQuery;
+          $?.(window).trigger("resize");
+          window.dispatchEvent(new Event("DOMContentLoaded"));
+          window.dispatchEvent(new Event("load"));
+          $?.(window).trigger("load");
+
+          initTriollaConveyorTicker(root);
+          initTriollaOwlCarousels(root);
+
+          disposePillRef.current?.();
+          disposePillRef.current = mountTriollaHeaderPill(root);
+          disposeFaqRef.current?.();
+          disposeFaqRef.current = mountTriollaFaqAccordion(root);
+
+          disposeMobileMenuRef.current?.();
+          disposeMobileMenuRef.current = mountTriollaMobileMenu(root);
+          disposeFooterAccordionRef.current?.();
+          disposeFooterAccordionRef.current = mountTriollaFooterAccordion(root);
+        } catch (deferredErr) {
+          console.error("[snapshot] portfolio page deferred scripts/init failed:", deferredErr);
+        }
       } catch (error) {
         console.error("Failed to load assets:", error);
         if (!cancelled) setPhase("error");

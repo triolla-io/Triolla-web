@@ -3,7 +3,11 @@
 import { useEffect, useRef, useState } from "react";
 import { rewriteTriollaNavLinks } from "../lib/rewriteTriollaNavLinks";
 import { installSnapshotPluginStubs } from "../lib/snapshotPluginStubs";
-import { loadScript, loadStylesheet } from "../lib/snapshotLoader";
+import {
+  loadScript,
+  loadStylesheetsParallelOrdered,
+  waitForSnapshotFonts,
+} from "../lib/snapshotLoader";
 import aboutDeps from "./about-us-deps.json";
 import { initTriollaOwlCarousels } from "./initTriollaCarousels";
 import { mountTriollaSnapshotRevealStack } from "../lib/mountTriollaSnapshotRevealStack";
@@ -27,10 +31,7 @@ export function AboutUsClient() {
     (async () => {
       try {
         installSnapshotPluginStubs();
-        for (const file of css) {
-          if (cancelled) return;
-          await loadStylesheet(`${assetBase}/${file}`);
-        }
+        await loadStylesheetsParallelOrdered(css.map((file) => `${assetBase}/${file}`));
 
         const res = await fetch(FRAGMENT_URL);
         if (!res.ok) throw new Error("fragment fetch failed");
@@ -41,32 +42,42 @@ export function AboutUsClient() {
         if (!el) return;
         el.innerHTML = html;
         rewriteTriollaNavLinks(el);
-
-        for (const file of js) {
-          if (cancelled) return;
-          const src = `${assetBase}/${file}`;
-          await loadScript(src);
-          if (file === "lottie.min.js") {
-            initTriollaLottie(el);
-          }
-        }
-
-        initTriollaOwlCarousels(el);
-        const $ = (window as unknown as { jQuery?: (sel: Window) => { trigger: (ev: string) => void } })
-          .jQuery;
-        $?.(window).trigger("resize");
-
-        window.dispatchEvent(new Event("DOMContentLoaded"));
-        window.dispatchEvent(new Event("load"));
+        await waitForSnapshotFonts();
+        await new Promise<void>((r) =>
+          requestAnimationFrame(() => requestAnimationFrame(() => r())),
+        );
 
         if (cancelled) return;
-        disposeRevealRef.current?.();
-        disposeRevealRef.current = mountTriollaSnapshotRevealStack(el, "about");
-        disposeHeaderPillRef.current?.();
-        disposeHeaderPillRef.current = mountTriollaHeaderPill(el);
-        disposeMobileMenuRef.current?.();
-        disposeMobileMenuRef.current = mountTriollaMobileMenu(el);
         setPhase("ready");
+
+        try {
+          for (const file of js) {
+            if (cancelled) return;
+            const src = `${assetBase}/${file}`;
+            await loadScript(src);
+            if (file === "lottie.min.js") {
+              initTriollaLottie(el);
+            }
+          }
+
+          initTriollaOwlCarousels(el);
+          const $ = (window as unknown as { jQuery?: (sel: Window) => { trigger: (ev: string) => void } })
+            .jQuery;
+          $?.(window).trigger("resize");
+
+          window.dispatchEvent(new Event("DOMContentLoaded"));
+          window.dispatchEvent(new Event("load"));
+
+          if (cancelled) return;
+          disposeRevealRef.current?.();
+          disposeRevealRef.current = mountTriollaSnapshotRevealStack(el, "about");
+          disposeHeaderPillRef.current?.();
+          disposeHeaderPillRef.current = mountTriollaHeaderPill(el);
+          disposeMobileMenuRef.current?.();
+          disposeMobileMenuRef.current = mountTriollaMobileMenu(el);
+        } catch (deferredErr) {
+          console.error("[snapshot] about-us deferred scripts/init failed:", deferredErr);
+        }
       } catch {
         if (!cancelled) setPhase("error");
       }
