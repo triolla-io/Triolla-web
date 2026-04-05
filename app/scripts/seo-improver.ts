@@ -26,6 +26,12 @@ function shouldApplyFix(report: AuditReport, fixType: string): boolean {
 }
 
 function createDefaultDescriptions(): void {
+  const libPath = path.join(process.cwd(), "app", "lib", "metadata.ts");
+  const existing = fs.readFileSync(libPath, "utf-8");
+  if (existing.includes("מותגי טק") && existing.includes("מחקרי מקרה")) {
+    return;
+  }
+
   // Ensure PAGE_DESCRIPTIONS has good lengths (150-160 chars)
   const descriptions = {
     en: {
@@ -36,15 +42,14 @@ function createDefaultDescriptions(): void {
       contact: "Get in touch with Triolla's design team today. Let's create exceptional digital experiences together.",
     },
     he: {
-      home: "סטודיו עיצוב UX/UI מובחר בישראל. אנחנו יוצרים חוויות דיגיטליות יוצאות דופן למותגי טך.",
+      home: "סטודיו עיצוב UX/UI מובחר בישראל. אנחנו יוצרים חוויות דיגיטליות יוצאות דופן למותגי טק.",
       about: "צוות טריולה - 65+ מעצבי UX/UI בעלי ניסיון היוצרים מוצרים דיגיטליים ברמה עולמית.",
       services: "שירותי עיצוב UX/UI מקיפים: מחקר UX, עיצוב UI, prototyping, מערכות עיצוב ועוד.",
-      blog: "תובנות עיצוב, טרנדים UX, אסטרטגיית מוצר, ו ו case studies מצוות טריולה.",
+      blog: "תובנות עיצוב, טרנדים UX, אסטרטגיית מוצר ומחקרי מקרה מצוות טריולה.",
       contact: "צור קשר עם צוות הדיזיין של טריולה היום. בואו ניצור חוויות דיגיטליות חריגות ביחד.",
     },
   };
 
-  const libPath = path.join(process.cwd(), "app", "lib", "metadata.ts");
   let content = fs.readFileSync(libPath, "utf-8");
 
   // Build the new descriptions object

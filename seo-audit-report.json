@@ -1,0 +1,717 @@
+{
+  "timestamp": "2026-04-05T00:44:19.702Z",
+  "baseUrl": "http://localhost:3000",
+  "scores": {
+    "metadataCompleteness": 77,
+    "structuredDataValid": 100,
+    "llmAccessibility": 70,
+    "en_he_parity": 50
+  },
+  "pages": [
+    {
+      "url": "http://localhost:3000/",
+      "status": 200,
+      "title": "Triolla - Web Design &amp; App Development",
+      "description": "Product UX/UI design studio in Israel: we craft digital experiences, design systems, and interfaces for technology brands, startups, and enterprise teams.",
+      "ogImage": "https://triolla.io/og-image.png",
+      "ogTitle": "Triolla - Web Design &amp; App Development",
+      "ogDescription": "Product UX/UI design studio in Israel: we craft digital experiences, design systems, and interfaces for technology brands, startups, and enterprise teams.",
+      "canonicalUrl": "https://triolla.io",
+      "hreflangs": {},
+      "jsonLdSchemas": [
+        {
+          "type": "Organization",
+          "valid": true,
+          "fields": [
+            "name",
+            "url",
+            "logo",
+            "description",
+            "sameAs",
+            "address",
+            "contactPoint"
+          ]
+        },
+        {
+          "type": "WebSite",
+          "valid": true,
+          "fields": [
+            "name",
+            "url",
+            "publisher",
+            "inLanguage",
+            "potentialAction"
+          ]
+        }
+      ],
+      "metadataIssues": [
+        {
+          "severity": "medium",
+          "type": "missing-h1",
+          "message": "Missing H1 heading"
+        }
+      ],
+      "robotsMeta": "noindex, nofollow",
+      "twitterCard": "summary_large_image",
+      "headingHierarchy": {
+        "h1": 0,
+        "h2": 0,
+        "h3": 0
+      }
+    },
+    {
+      "url": "http://localhost:3000/about-us",
+      "status": 200,
+      "title": "About Triolla | Leading UX/UI Design Agency | Triolla",
+      "description": "Leading UX/UI design agency with 65+ experts and over a decade of experience delivering research, UI design, prototyping, and design systems for technology brands worldwide.",
+      "ogImage": "https://triolla.io/og-image.png",
+      "ogTitle": "About Triolla | Leading UX/UI Design Agency",
+      "ogDescription": "Leading UX/UI design agency with 65+ experts and over a decade of experience delivering research, UI design, prototyping, and design systems for technology brands worldwide.",
+      "canonicalUrl": "https://triolla.io/about-us",
+      "hreflangs": {},
+      "jsonLdSchemas": [
+        {
+          "type": "Organization",
+          "valid": true,
+          "fields": [
+            "name",
+            "url",
+            "logo",
+            "description",
+            "sameAs",
+            "address",
+            "contactPoint"
+          ]
+        },
+        {
+          "type": "WebSite",
+          "valid": true,
+          "fields": [
+            "name",
+            "url",
+            "publisher",
+            "inLanguage",
+            "potentialAction"
+          ]
+        }
+      ],
+      "metadataIssues": [
+        {
+          "severity": "medium",
+          "type": "description-too-long",
+          "message": "Description too long: 173 chars",
+          "value": "Leading UX/UI design agency with 65+ experts and over a decade of experience delivering research, UI design, prototyping, and design systems for technology brands worldwide."
+        },
+        {
+          "severity": "medium",
+          "type": "missing-h1",
+          "message": "Missing H1 heading"
+        }
+      ],
+      "robotsMeta": "noindex, nofollow",
+      "twitterCard": "summary_large_image",
+      "headingHierarchy": {
+        "h1": 0,
+        "h2": 0,
+        "h3": 0
+      }
+    },
+    {
+      "url": "http://localhost:3000/services",
+      "status": 200,
+      "title": "UX/UI Design Services | Triolla | Triolla",
+      "description": "Triolla&#x27;s UX and UI services span user research, wireframing, prototyping, design systems, and end-to-end product design for SaaS, fintech, and enterprise digital products.",
+      "ogImage": "https://triolla.io/og-image.png",
+      "ogTitle": "UX/UI Design Services | Triolla",
+      "ogDescription": "Triolla&#x27;s UX and UI services span user research, wireframing, prototyping, design systems, and end-to-end product design for SaaS, fintech, and enterprise digital products.",
+      "canonicalUrl": "https://triolla.io/services",
+      "hreflangs": {},
+      "jsonLdSchemas": [
+        {
+          "type": "Organization",
+          "valid": true,
+          "fields": [
+            "name",
+            "url",
+            "logo",
+            "description",
+            "sameAs",
+            "address",
+            "contactPoint"
+          ]
+        },
+        {
+          "type": "WebSite",
+          "valid": true,
+          "fields": [
+            "name",
+            "url",
+            "publisher",
+            "inLanguage",
+            "potentialAction"
+          ]
+        },
+        {
+          "type": "BreadcrumbList",
+          "valid": true,
+          "fields": [
+            "itemListElement"
+          ]
+        }
+      ],
+      "metadataIssues": [
+        {
+          "severity": "medium",
+          "type": "description-too-long",
+          "message": "Description too long: 177 chars",
+          "value": "Triolla&#x27;s UX and UI services span user research, wireframing, prototyping, design systems, and end-to-end product design for SaaS, fintech, and enterprise digital products."
+        },
+        {
+          "severity": "medium",
+          "type": "missing-h1",
+          "message": "Missing H1 heading"
+        }
+      ],
+      "robotsMeta": "noindex, nofollow",
+      "twitterCard": "summary_large_image",
+      "headingHierarchy": {
+        "h1": 0,
+        "h2": 0,
+        "h3": 0
+      }
+    },
+    {
+      "url": "http://localhost:3000/contact-us",
+      "status": 200,
+      "title": "Contact Us | Triolla | Triolla",
+      "description": "Contact Triolla for UX/UI design projects, partnerships, and product questions. Our team helps scope research, UI design, and delivery for technology brands.",
+      "ogImage": "https://triolla.io/og-image.png",
+      "ogTitle": "Contact Us | Triolla",
+      "ogDescription": "Contact Triolla for UX/UI design projects, partnerships, and product questions. Our team helps scope research, UI design, and delivery for technology brands.",
+      "canonicalUrl": "https://triolla.io/contact-us",
+      "hreflangs": {},
+      "jsonLdSchemas": [
+        {
+          "type": "Organization",
+          "valid": true,
+          "fields": [
+            "name",
+            "url",
+            "logo",
+            "description",
+            "sameAs",
+            "address",
+            "contactPoint"
+          ]
+        },
+        {
+          "type": "WebSite",
+          "valid": true,
+          "fields": [
+            "name",
+            "url",
+            "publisher",
+            "inLanguage",
+            "potentialAction"
+          ]
+        }
+      ],
+      "metadataIssues": [],
+      "robotsMeta": "noindex, nofollow",
+      "twitterCard": "summary_large_image",
+      "headingHierarchy": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0
+      }
+    },
+    {
+      "url": "http://localhost:3000/blog",
+      "status": 200,
+      "title": "Blog | Triolla UX/UI Design | Triolla",
+      "description": "UX/UI design insights, trends, case studies, and practical product guidance from Triolla—research, prototyping, design systems, and interface craft for digital teams.",
+      "ogImage": "https://triolla.io/og-image.png",
+      "ogTitle": "Blog | Triolla UX/UI Design",
+      "ogDescription": "UX/UI design insights, trends, case studies, and practical product guidance from Triolla—research, prototyping, design systems, and interface craft for digital teams.",
+      "canonicalUrl": "https://triolla.io/blog",
+      "hreflangs": {},
+      "jsonLdSchemas": [
+        {
+          "type": "Organization",
+          "valid": true,
+          "fields": [
+            "name",
+            "url",
+            "logo",
+            "description",
+            "sameAs",
+            "address",
+            "contactPoint"
+          ]
+        },
+        {
+          "type": "WebSite",
+          "valid": true,
+          "fields": [
+            "name",
+            "url",
+            "publisher",
+            "inLanguage",
+            "potentialAction"
+          ]
+        },
+        {
+          "type": "BreadcrumbList",
+          "valid": true,
+          "fields": [
+            "itemListElement"
+          ]
+        }
+      ],
+      "metadataIssues": [
+        {
+          "severity": "medium",
+          "type": "description-too-long",
+          "message": "Description too long: 166 chars",
+          "value": "UX/UI design insights, trends, case studies, and practical product guidance from Triolla—research, prototyping, design systems, and interface craft for digital teams."
+        },
+        {
+          "severity": "medium",
+          "type": "missing-h1",
+          "message": "Missing H1 heading"
+        }
+      ],
+      "robotsMeta": "noindex, nofollow",
+      "twitterCard": "summary_large_image",
+      "headingHierarchy": {
+        "h1": 0,
+        "h2": 0,
+        "h3": 0
+      }
+    },
+    {
+      "url": "http://localhost:3000/he/",
+      "status": 200,
+      "hreflangs": {},
+      "jsonLdSchemas": [],
+      "metadataIssues": [
+        {
+          "severity": "high",
+          "type": "missing-title",
+          "message": "Missing page title"
+        },
+        {
+          "severity": "high",
+          "type": "missing-description",
+          "message": "Missing meta description"
+        },
+        {
+          "severity": "high",
+          "type": "missing-og-image",
+          "message": "Missing OG image"
+        },
+        {
+          "severity": "medium",
+          "type": "missing-og-title",
+          "message": "Missing OG title"
+        },
+        {
+          "severity": "medium",
+          "type": "missing-og-description",
+          "message": "Missing OG description"
+        },
+        {
+          "severity": "medium",
+          "type": "missing-twitter-card",
+          "message": "Missing Twitter card"
+        },
+        {
+          "severity": "medium",
+          "type": "missing-canonical",
+          "message": "Missing canonical URL"
+        },
+        {
+          "severity": "medium",
+          "type": "missing-schema",
+          "message": "No JSON-LD schema found"
+        },
+        {
+          "severity": "medium",
+          "type": "missing-h1",
+          "message": "Missing H1 heading"
+        }
+      ],
+      "headingHierarchy": {
+        "h1": 0,
+        "h2": 0,
+        "h3": 0
+      }
+    },
+    {
+      "url": "http://localhost:3000/he/about-us",
+      "status": 200,
+      "title": "אודות טריולה | חברת עיצוב ממשק משתמש מובילה",
+      "description": "חברת עיצוב ממשק משתמש מובילה עם למעלה מ-65 מומחי עיצוב ויותר מעשור ניסיון.",
+      "ogImage": "https://triolla.io/og-image.png",
+      "ogTitle": "אודות טריולה | חברת עיצוב ממשק משתמש מובילה",
+      "ogDescription": "חברת עיצוב ממשק משתמש מובילה עם למעלה מ-65 מומחי עיצוב ויותר מעשור ניסיון.",
+      "canonicalUrl": "https://triolla.io/he/about-us",
+      "hreflangs": {},
+      "jsonLdSchemas": [
+        {
+          "type": "Organization",
+          "valid": true,
+          "fields": [
+            "name",
+            "url",
+            "logo",
+            "description",
+            "sameAs",
+            "address",
+            "contactPoint"
+          ]
+        },
+        {
+          "type": "WebSite",
+          "valid": true,
+          "fields": [
+            "name",
+            "url",
+            "publisher",
+            "inLanguage",
+            "potentialAction"
+          ]
+        }
+      ],
+      "metadataIssues": [
+        {
+          "severity": "medium",
+          "type": "description-too-short",
+          "message": "Description too short: 74 chars",
+          "value": "חברת עיצוב ממשק משתמש מובילה עם למעלה מ-65 מומחי עיצוב ויותר מעשור ניסיון."
+        },
+        {
+          "severity": "medium",
+          "type": "missing-h1",
+          "message": "Missing H1 heading"
+        }
+      ],
+      "robotsMeta": "noindex, nofollow",
+      "twitterCard": "summary_large_image",
+      "headingHierarchy": {
+        "h1": 0,
+        "h2": 0,
+        "h3": 0
+      }
+    },
+    {
+      "url": "http://localhost:3000/he/services",
+      "status": 200,
+      "title": "שירותי UX/UI | טריולה",
+      "description": "שירותי UX ו-UI של טריולה כוללים מחקר משתמשים, wireframe, אבות טיפוס, מערכות עיצוב ועיצוב מוצר מקצה לקצה עבור SaaS, פינטק ומוצרים ארגוניים.",
+      "ogTitle": "טריולה | סטודיו עיצוב UX/UI",
+      "ogDescription": "#1 סטודיו עיצוב UX/UI בישראל",
+      "hreflangs": {},
+      "jsonLdSchemas": [
+        {
+          "type": "Organization",
+          "valid": true,
+          "fields": [
+            "name",
+            "url",
+            "logo",
+            "description",
+            "sameAs",
+            "address",
+            "contactPoint"
+          ]
+        },
+        {
+          "type": "WebSite",
+          "valid": true,
+          "fields": [
+            "name",
+            "url",
+            "publisher",
+            "inLanguage",
+            "potentialAction"
+          ]
+        }
+      ],
+      "metadataIssues": [
+        {
+          "severity": "medium",
+          "type": "title-too-short",
+          "message": "Title too short: 21 chars",
+          "value": "שירותי UX/UI | טריולה"
+        },
+        {
+          "severity": "high",
+          "type": "missing-og-image",
+          "message": "Missing OG image"
+        },
+        {
+          "severity": "medium",
+          "type": "missing-canonical",
+          "message": "Missing canonical URL"
+        },
+        {
+          "severity": "medium",
+          "type": "missing-h1",
+          "message": "Missing H1 heading"
+        }
+      ],
+      "robotsMeta": "noindex, nofollow",
+      "twitterCard": "summary",
+      "headingHierarchy": {
+        "h1": 0,
+        "h2": 0,
+        "h3": 0
+      }
+    },
+    {
+      "url": "http://localhost:3000/he/contact-us",
+      "status": 200,
+      "title": "צור קשר | טריולה",
+      "description": "צרו קשר עם טריולה לפרויקטי עיצוב UX/UI, שותפויות ושאלות מוצר. הצוות שלנו מסייע בהגדרת מחקר, עיצוב ממשק וליווי תהליך עבור ארגונים וחברות טכנולוגיה.",
+      "ogTitle": "טריולה | סטודיו עיצוב UX/UI",
+      "ogDescription": "#1 סטודיו עיצוב UX/UI בישראל",
+      "hreflangs": {},
+      "jsonLdSchemas": [
+        {
+          "type": "Organization",
+          "valid": true,
+          "fields": [
+            "name",
+            "url",
+            "logo",
+            "description",
+            "sameAs",
+            "address",
+            "contactPoint"
+          ]
+        },
+        {
+          "type": "WebSite",
+          "valid": true,
+          "fields": [
+            "name",
+            "url",
+            "publisher",
+            "inLanguage",
+            "potentialAction"
+          ]
+        }
+      ],
+      "metadataIssues": [
+        {
+          "severity": "medium",
+          "type": "title-too-short",
+          "message": "Title too short: 16 chars",
+          "value": "צור קשר | טריולה"
+        },
+        {
+          "severity": "high",
+          "type": "missing-og-image",
+          "message": "Missing OG image"
+        },
+        {
+          "severity": "medium",
+          "type": "missing-canonical",
+          "message": "Missing canonical URL"
+        }
+      ],
+      "robotsMeta": "noindex, nofollow",
+      "twitterCard": "summary",
+      "headingHierarchy": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0
+      }
+    },
+    {
+      "url": "http://localhost:3000/he/blog",
+      "status": 200,
+      "title": "בלוג | Triolla UX/UI Design | Triolla",
+      "description": "תובנות, טרנדים ומחקרי מקרה בעיצוב UX/UI מצוות טריולה—מחקר משתמשים, אבות טיפוס, מערכות עיצוב ומדריכים מעשיים לצוותי מוצר.",
+      "ogImage": "https://triolla.io/og-image.png",
+      "ogTitle": "בלוג | Triolla UX/UI Design",
+      "ogDescription": "תובנות, טרנדים ומחקרי מקרה בעיצוב UX/UI מצוות טריולה—מחקר משתמשים, אבות טיפוס, מערכות עיצוב ומדריכים מעשיים לצוותי מוצר.",
+      "canonicalUrl": "https://triolla.io/he/blog",
+      "hreflangs": {},
+      "jsonLdSchemas": [
+        {
+          "type": "Organization",
+          "valid": true,
+          "fields": [
+            "name",
+            "url",
+            "logo",
+            "description",
+            "sameAs",
+            "address",
+            "contactPoint"
+          ]
+        },
+        {
+          "type": "WebSite",
+          "valid": true,
+          "fields": [
+            "name",
+            "url",
+            "publisher",
+            "inLanguage",
+            "potentialAction"
+          ]
+        },
+        {
+          "type": "BreadcrumbList",
+          "valid": true,
+          "fields": [
+            "itemListElement"
+          ]
+        }
+      ],
+      "metadataIssues": [
+        {
+          "severity": "medium",
+          "type": "missing-h1",
+          "message": "Missing H1 heading"
+        }
+      ],
+      "robotsMeta": "noindex, nofollow",
+      "twitterCard": "summary_large_image",
+      "headingHierarchy": {
+        "h1": 0,
+        "h2": 0,
+        "h3": 0
+      }
+    }
+  ],
+  "issues": [
+    {
+      "severity": "medium",
+      "type": "missing-h1",
+      "count": 8,
+      "pages": [
+        "http://localhost:3000/",
+        "http://localhost:3000/about-us",
+        "http://localhost:3000/services",
+        "http://localhost:3000/blog",
+        "http://localhost:3000/he/",
+        "http://localhost:3000/he/about-us",
+        "http://localhost:3000/he/services",
+        "http://localhost:3000/he/blog"
+      ]
+    },
+    {
+      "severity": "medium",
+      "type": "description-too-long",
+      "count": 3,
+      "pages": [
+        "http://localhost:3000/about-us",
+        "http://localhost:3000/services",
+        "http://localhost:3000/blog"
+      ]
+    },
+    {
+      "severity": "high",
+      "type": "missing-title",
+      "count": 1,
+      "pages": [
+        "http://localhost:3000/he/"
+      ]
+    },
+    {
+      "severity": "high",
+      "type": "missing-description",
+      "count": 1,
+      "pages": [
+        "http://localhost:3000/he/"
+      ]
+    },
+    {
+      "severity": "high",
+      "type": "missing-og-image",
+      "count": 3,
+      "pages": [
+        "http://localhost:3000/he/",
+        "http://localhost:3000/he/services",
+        "http://localhost:3000/he/contact-us"
+      ]
+    },
+    {
+      "severity": "medium",
+      "type": "missing-og-title",
+      "count": 1,
+      "pages": [
+        "http://localhost:3000/he/"
+      ]
+    },
+    {
+      "severity": "medium",
+      "type": "missing-og-description",
+      "count": 1,
+      "pages": [
+        "http://localhost:3000/he/"
+      ]
+    },
+    {
+      "severity": "medium",
+      "type": "missing-twitter-card",
+      "count": 1,
+      "pages": [
+        "http://localhost:3000/he/"
+      ]
+    },
+    {
+      "severity": "medium",
+      "type": "missing-canonical",
+      "count": 3,
+      "pages": [
+        "http://localhost:3000/he/",
+        "http://localhost:3000/he/services",
+        "http://localhost:3000/he/contact-us"
+      ]
+    },
+    {
+      "severity": "medium",
+      "type": "missing-schema",
+      "count": 1,
+      "pages": [
+        "http://localhost:3000/he/"
+      ]
+    },
+    {
+      "severity": "medium",
+      "type": "description-too-short",
+      "count": 1,
+      "pages": [
+        "http://localhost:3000/he/about-us"
+      ]
+    },
+    {
+      "severity": "medium",
+      "type": "title-too-short",
+      "count": 2,
+      "pages": [
+        "http://localhost:3000/he/services",
+        "http://localhost:3000/he/contact-us"
+      ]
+    }
+  ],
+  "recommendations": [
+    "Improve metadata completeness (currently 77%)",
+    "Improve LLM accessibility (currently 70%)",
+    "Ensure English and Hebrew pages have matching metadata completeness"
+  ],
+  "robotsRules": {
+    "hasPublicNoindex": true,
+    "allowsAICrawlers": true,
+    "aiCrawlers": [
+      "Claude-Web",
+      "GPTBot",
+      "Googlebot-Extended"
+    ]
+  }
+}

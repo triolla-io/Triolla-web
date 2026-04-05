@@ -260,9 +260,11 @@ async function auditPage(url: string): Promise<PageAudit | null> {
 }
 
 function calculateCompleteness(page: PageAudit): number {
+  const desc = page.description?.replace(/&#x27;/g, "'") ?? "";
+  const descOk = desc.length >= 120 && desc.length <= 200;
   const checks = [
     !!page.title,
-    !!page.description,
+    descOk,
     !!page.ogImage,
     !!page.ogTitle,
     !!page.ogDescription,
@@ -274,6 +276,27 @@ function calculateCompleteness(page: PageAudit): number {
   return (checks.filter((c) => c).length / checks.length) * 100;
 }
 
+function pageLlmScore(page: PageAudit): number {
+  const hasSchema = page.jsonLdSchemas.length > 0 && page.jsonLdSchemas.every((s) => s.valid);
+  const h = page.headingHierarchy;
+  const headingScore =
+    h.h1 > 0 ? 35 : h.h2 > 0 || h.h3 > 0 ? 18 : 0;
+  const metaScore =
+    !!page.title && !!page.description && !!page.canonicalUrl ? 25 : 0;
+  const structuredScore = hasSchema ? 40 : 0;
+  return Math.min(100, structuredScore + headingScore + metaScore);
+}
+
+function userAgentBlockAllowsRoot(content: string, agent: string): boolean {
+  const escaped = agent.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const re = new RegExp(
+    `User-agent:\\s*${escaped}\\s*\\r?\\n([\\s\\S]*?)(?=\\r?\\nUser-agent:|\\z)`,
+    "i"
+  );
+  const block = content.match(re)?.[1] ?? "";
+  return /^\s*Allow:\s*\/\s*$/im.test(block);
+}
+
 async function checkRobotsTxt(): Promise<{ hasPublicNoindex: boolean; allowsAICrawlers: boolean; aiCrawlers: string[] }> {
   try {
     const robotsTxtPath = path.join(process.cwd(), "public", "robots.txt");
@@ -281,13 +304,14 @@ async function checkRobotsTxt(): Promise<{ hasPublicNoindex: boolean; allowsAICr
 
     const hasPublicNoindex =
       content.includes("User-agent: *") && content.includes("Disallow: /");
-    const aiCrawlers = content.match(/User-agent:\s*(Claude-Web|GPTBot|Googlebot-Extended)/g) || [];
-    const allowsAICrawlers = aiCrawlers.length > 0 && !content.includes("Disallow: /");
+    const aiAgents = ["Claude-Web", "GPTBot", "Googlebot-Extended"];
+    const aiCrawlers = aiAgents.filter((a) => userAgentBlockAllowsRoot(content, a));
+    const allowsAICrawlers = aiCrawlers.length >= 2;
 
     return {
       hasPublicNoindex,
       allowsAICrawlers,
-      aiCrawlers: aiCrawlers.map((c) => c.split(": ")[1]),
+      aiCrawlers,
     };
   } catch {
     return { hasPublicNoindex: false, allowsAICrawlers: false, aiCrawlers: [] };
@@ -299,13 +323,7 @@ async function generateReport(): Promise<AuditReport> {
 
   const robotsRules = await checkRobotsTxt();
 
-  const staticPages = [
-    "/",
-    "/about-us",
-    "/services",
-    "/contact-us",
-    "/blog",
-  ];
+  const staticPages = ["/", "/about-us", "/services", "/contact-us", "/blog"];
 
   const pages: PageAudit[] = [];
 
@@ -318,9 +336,9 @@ async function generateReport(): Promise<AuditReport> {
     await new Promise((r) => setTimeout(r, 500)); // Rate limit
   }
 
-  // Also check Hebrew versions
-  for (const page of ["/", "/services", "/about-us"]) {
-    const url = `${LOCALHOST}/he${page}`;
+  const hePages = ["/he/", "/he/about-us", "/he/services", "/he/contact-us", "/he/blog"];
+  for (const page of hePages) {
+    const url = `${LOCALHOST}${page}`;
     const audit = await auditPage(url);
     if (audit) {
       pages.push(audit);
@@ -337,22 +355,49 @@ async function generateReport(): Promise<AuditReport> {
   const structuredDataValid =
     pages.length > 0 ? Math.round((schemaValidPages.length / pages.length) * 100) : 0;
 
-  // LLM accessibility: check for AI crawlers, structured data, semantic HTML
-  const llmAccessiblePages = pages.filter((p) => {
-    const hasSchema = p.jsonLdSchemas.length > 0;
-    const hasProperHeadings = p.headingHierarchy.h1 > 0;
-    return hasSchema && hasProperHeadings;
-  });
-  const llmAccessibility = pages.length > 0 ? Math.round((llmAccessiblePages.length / pages.length) * 100) : 0;
+  const robotsBoost = robotsRules.allowsAICrawlers ? 100 : 0;
+  const pageLlmAvg =
+    pages.length > 0
+      ? pages.reduce((sum, p) => sum + pageLlmScore(p), 0) / pages.length
+      : 0;
+  const llmAccessibility = Math.round(robotsBoost * 0.25 + pageLlmAvg * 0.75);
 
-  // EN/HE parity check
-  const enPages = pages.filter((p) => !p.url.includes("/he"));
-  const hePages = pages.filter((p) => p.url.includes("/he"));
+  const pairs: Array<{ en: string; he: string }> = [
+    { en: "/", he: "/he/" },
+    { en: "/about-us", he: "/he/about-us" },
+    { en: "/services", he: "/he/services" },
+    { en: "/contact-us", he: "/he/contact-us" },
+    { en: "/blog", he: "/he/blog" },
+  ];
+
+  function pathnameFromAuditUrl(url: string): string {
+    try {
+      return new URL(url).pathname.replace(/\/$/, "") || "/";
+    } catch {
+      return "";
+    }
+  }
+
   let en_he_parity = 100;
-  if (enPages.length > 0 && hePages.length > 0) {
-    const enCompleteness = enPages.reduce((sum, p) => sum + calculateCompleteness(p), 0) / enPages.length;
-    const heCompleteness = hePages.reduce((sum, p) => sum + calculateCompleteness(p), 0) / hePages.length;
-    en_he_parity = Math.round(Math.abs(enCompleteness - heCompleteness) <= 5 ? 100 : 50);
+  const parityDiffs: number[] = [];
+  for (const { en, he } of pairs) {
+    const enPath = en.replace(/\/$/, "") || "/";
+    const hePath = he.replace(/\/$/, "") || "/";
+    const enPage = pages.find((p) => {
+      const path = pathnameFromAuditUrl(p.url);
+      return path === enPath || path === `${enPath}/`;
+    });
+    const hePage = pages.find((p) => {
+      const path = pathnameFromAuditUrl(p.url);
+      return path === hePath || path === `${hePath}/`;
+    });
+    if (enPage && hePage) {
+      parityDiffs.push(Math.abs(calculateCompleteness(enPage) - calculateCompleteness(hePage)));
+    }
+  }
+  if (parityDiffs.length > 0) {
+    const worst = Math.max(...parityDiffs);
+    en_he_parity = worst <= 8 ? 100 : worst <= 20 ? 85 : worst <= 35 ? 65 : 50;
   }
 
   // Aggregate issues

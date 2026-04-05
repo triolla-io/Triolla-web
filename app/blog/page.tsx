@@ -5,7 +5,8 @@ import { generatePageMetadata } from "../lib/metadata";
 
 export const metadata: Metadata = generatePageMetadata({
   title: "Blog | Triolla UX/UI Design",
-  description: "UX/UI design insights, trends, and case studies from the Triolla team.",
+  description:
+    "UX/UI design insights, trends, case studies, and practical product guidance from Triolla—research, prototyping, design systems, and interface craft for digital teams.",
   path: "/blog",
   lang: "en",
   ogType: "website",

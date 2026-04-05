@@ -20,9 +20,9 @@
     "dedupe:css": "node scripts/dedupe-public-css.js",
     "dedupe:assets": "node scripts/dedupe-public-assets.js",
     "dedupe:public": "npm run dedupe:css && npm run dedupe:assets",
-    "seo:check": "tsx app/scripts/seo-checker.ts",
-    "seo:improve": "tsx app/scripts/seo-improver.ts",
-    "seo:loop": "tsx app/scripts/seo-loop.ts"
+    "seo:check": "node ./node_modules/tsx/dist/cli.mjs app/scripts/seo-checker.ts",
+    "seo:improve": "node ./node_modules/tsx/dist/cli.mjs app/scripts/seo-improver.ts",
+    "seo:loop": "node ./node_modules/tsx/dist/cli.mjs app/scripts/seo-loop.ts"
   },
   "dependencies": {
     "framer-motion": "^12.38.0",

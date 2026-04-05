@@ -47,8 +47,8 @@ export const LANG_REDIRECT_PAGE_COPY: Record<`/${string}`, RedirectLangPageI18n>
   "/contact-us": {
     title: { en: "Contact Us | Triolla", he: "צור קשר | טריולה" },
     description: {
-      en: "Get in touch with Triolla.",
-      he: "צרו קשר עם טריולה.",
+      en: "Contact Triolla for UX/UI design projects, partnerships, and product questions. Our team helps scope research, UI design, and delivery for technology brands.",
+      he: "צרו קשר עם טריולה לפרויקטי עיצוב UX/UI, שותפויות ושאלות מוצר. הצוות שלנו מסייע בהגדרת מחקר, עיצוב ממשק וליווי תהליך עבור ארגונים וחברות טכנולוגיה.",
     },
   },
   "/dev": {
@@ -89,8 +89,8 @@ export const LANG_REDIRECT_PAGE_COPY: Record<`/${string}`, RedirectLangPageI18n>
   "/services": {
     title: { en: "UX/UI Design Services | Triolla", he: "שירותי UX/UI | טריולה" },
     description: {
-      en: "Triolla's UX and UI services: research, wireframing, prototyping, design systems, and product design.",
-      he: "שירותי UX ו-UI של טריולה: מחקר, wireframe, אבות טיפוס, מערכות עיצוב ועיצוב מוצר.",
+      en: "Triolla's UX and UI services span user research, wireframing, prototyping, design systems, and end-to-end product design for SaaS, fintech, and enterprise digital products.",
+      he: "שירותי UX ו-UI של טריולה כוללים מחקר משתמשים, wireframe, אבות טיפוס, מערכות עיצוב ועיצוב מוצר מקצה לקצה עבור SaaS, פינטק ומוצרים ארגוניים.",
     },
   },
   "/fintech-finance": {

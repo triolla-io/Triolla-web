@@ -28,9 +28,11 @@ export function generatePageMetadata({
   publishedTime,
   modifiedTime,
 }: PageMetadataProps): Metadata {
-  const canonicalUrl = `${BASE_URL}${path}`;
-  const fullImageUrl = image.startsWith("http") ? image : `${BASE_URL}${image}`;
   const isHebrew = lang === "he";
+  const enUrl = path === "/" ? `${BASE_URL}/` : `${BASE_URL}${path}`;
+  const heUrl = path === "/" ? `${BASE_URL}/he/` : `${BASE_URL}/he${path}`;
+  const canonicalUrl = isHebrew ? heUrl : enUrl;
+  const fullImageUrl = image.startsWith("http") ? image : `${BASE_URL}${image}`;
 
   return {
     title,
@@ -50,9 +52,9 @@ export function generatePageMetadata({
     alternates: {
       canonical: canonicalUrl,
       languages: {
-        "en-US": `${BASE_URL}${path}`,
-        he: `${BASE_URL}/he${path}`,
-        "x-default": `${BASE_URL}${path}`,
+        "en-US": enUrl,
+        he: heUrl,
+        "x-default": enUrl,
       },
     },
     openGraph: {
@@ -268,10 +270,10 @@ export const PAGE_DESCRIPTIONS = {
     contact: "Get in touch with Triolla's design team today. Let's create exceptional digital experiences together.",
   },
   he: {
-    home: "סטודיו עיצוב UX/UI מובחר בישראל. אנחנו יוצרים חוויות דיגיטליות יוצאות דופן למותגי טך.",
+    home: "סטודיו עיצוב UX/UI מובחר בישראל. אנחנו יוצרים חוויות דיגיטליות יוצאות דופן למותגי טק.",
     about: "צוות טריולה - 65+ מעצבי UX/UI בעלי ניסיון היוצרים מוצרים דיגיטליים ברמה עולמית.",
     services: "שירותי עיצוב UX/UI מקיפים: מחקר UX, עיצוב UI, prototyping, מערכות עיצוב ועוד.",
-    blog: "תובנות עיצוב, טרנדים UX, אסטרטגיית מוצר, ו ו case studies מצוות טריולה.",
+    blog: "תובנות עיצוב, טרנדים UX, אסטרטגיית מוצר ומחקרי מקרה מצוות טריולה.",
     contact: "צור קשר עם צוות הדיזיין של טריולה היום. בואו ניצור חוויות דיגיטליות חריגות ביחד.",
   },
 };

@@ -27,7 +27,7 @@ function getFragmentUrl(lang: string): string {
 }
 
 function getAssetBase(lang: string): string {
-  return lang === "he" ? "/assets/about-us-he" : "/assets/about-us";
+  return lang === "he" ? "/assets/about-us-he" : "/assets/_consolidated";
 }
 
 type SnapshotDeps = {

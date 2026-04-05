@@ -1,0 +1,65 @@
+[
+  {
+    "iteration": 1,
+    "timestamp": "2026-04-05T00:41:55.318Z",
+    "scores": {
+      "metadataCompleteness": 60,
+      "structuredDataValid": 100,
+      "llmAccessibility": 66,
+      "en_he_parity": 50
+    },
+    "improvements": 10,
+    "delta": {}
+  },
+  {
+    "iteration": 2,
+    "timestamp": "2026-04-05T00:42:03.230Z",
+    "scores": {
+      "metadataCompleteness": 60,
+      "structuredDataValid": 100,
+      "llmAccessibility": 66,
+      "en_he_parity": 50
+    },
+    "improvements": 10,
+    "delta": {
+      "metadataCompleteness": 0,
+      "structuredDataValid": 0,
+      "llmAccessibility": 0,
+      "en_he_parity": 0
+    }
+  },
+  {
+    "iteration": 3,
+    "timestamp": "2026-04-05T00:42:10.909Z",
+    "scores": {
+      "metadataCompleteness": 60,
+      "structuredDataValid": 100,
+      "llmAccessibility": 66,
+      "en_he_parity": 50
+    },
+    "improvements": 10,
+    "delta": {
+      "metadataCompleteness": 0,
+      "structuredDataValid": 0,
+      "llmAccessibility": 0,
+      "en_he_parity": 0
+    }
+  },
+  {
+    "iteration": 4,
+    "timestamp": "2026-04-05T00:42:18.601Z",
+    "scores": {
+      "metadataCompleteness": 60,
+      "structuredDataValid": 100,
+      "llmAccessibility": 66,
+      "en_he_parity": 50
+    },
+    "improvements": 10,
+    "delta": {
+      "metadataCompleteness": 0,
+      "structuredDataValid": 0,
+      "llmAccessibility": 0,
+      "en_he_parity": 0
+    }
+  }
+]

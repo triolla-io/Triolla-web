@@ -26,11 +26,13 @@ const CONVERGENCE_THRESHOLD = 3; // Stop after 3 consecutive no-improvement iter
 let iterationHistory: LoopIteration[] = [];
 let noImprovementCount = 0;
 
-function runCommand(command: string, args: string[]): Promise<number> {
+function runTsxScript(scriptFile: string): Promise<number> {
+  const tsxCli = path.join(process.cwd(), "node_modules", "tsx", "dist", "cli.mjs");
+  const scriptPath = path.join(process.cwd(), "app", "scripts", scriptFile);
   return new Promise((resolve) => {
-    const child = spawn(command, args, { stdio: "inherit", shell: true });
+    const child = spawn(process.execPath, [tsxCli, scriptPath], { stdio: "inherit" });
     child.on("close", (code) => {
-      resolve(code || 0);
+      resolve(code ?? 0);
     });
     child.on("error", () => {
       resolve(1);
@@ -135,7 +137,7 @@ async function main() {
 
     // Step 1: Run checker
     console.log("\n[1/3] Running SEO checker...");
-    const checkerExit = await runCommand("npx", ["tsx", "app/scripts/seo-checker.ts"]);
+    const checkerExit = await runTsxScript("seo-checker.ts");
     if (checkerExit !== 0) {
       console.error("Checker failed");
       break;
@@ -151,6 +153,14 @@ async function main() {
     const currentScores = report.scores;
     const delta = calculateDelta(previousScores, currentScores);
     const hasImprovement = hasSignificantImprovement(delta);
+
+    if (previousScores !== null) {
+      if (hasImprovement) {
+        noImprovementCount = 0;
+      } else {
+        noImprovementCount++;
+      }
+    }
 
     // Record iteration
     const iter: LoopIteration = {
@@ -170,16 +180,9 @@ async function main() {
 
     // Step 2: Run improver
     console.log("\n[2/3] Running SEO improver...");
-    const improverExit = await runCommand("npx", ["tsx", "app/scripts/seo-improver.ts"]);
+    const improverExit = await runTsxScript("seo-improver.ts");
     if (improverExit !== 0) {
       console.log("(Improver completed with non-zero exit, continuing...)");
-    }
-
-    // Update tracking
-    if (!hasImprovement) {
-      noImprovementCount++;
-    } else {
-      noImprovementCount = 0;
     }
 
     previousScores = currentScores;
