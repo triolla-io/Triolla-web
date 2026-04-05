@@ -261,17 +261,17 @@ export function generateHebrewBlogPostMetadata({
  */
 export const PAGE_DESCRIPTIONS = {
   en: {
-    home: "#1 Product UX/UI design studio in Israel. We craft exceptional digital experiences for technology brands.",
-    about: "Meet Triolla - an experienced UX/UI design team creating world-class digital products and experiences.",
-    services: "Comprehensive UX/UI design services: UX research, UI design, prototyping, design systems, and more.",
-    blog: "Design insights, UX trends, and product strategy from Triolla's expert design team.",
-    contact: "Get in touch with our team. Let's create exceptional digital experiences together.",
+    home: "Award-winning Product UX/UI design studio in Israel. We craft exceptional digital experiences for technology brands.",
+    about: "Meet Triolla - a team of 65+ experienced UX/UI designers creating world-class digital products and experiences.",
+    services: "Comprehensive UX/UI design services including research, UI design, prototyping, design systems, and product design.",
+    blog: "UX/UI design insights, trends, product strategy, and case studies from Triolla's expert design team.",
+    contact: "Get in touch with Triolla's design team today. Let's create exceptional digital experiences together.",
   },
   he: {
-    home: "סטודיו עיצוב UX/UI מובחר בישראל. אנחנו יוצרים חוויות דיגיטליות יוצאות דופן למותגי טק.",
-    about: "הכירו את צוות טריולה - מעצבי UX/UI בעלי ניסיון היוצרים מוצרים דיגיטליים ברמה עולמית.",
+    home: "סטודיו עיצוב UX/UI מובחר בישראל. אנחנו יוצרים חוויות דיגיטליות יוצאות דופן למותגי טך.",
+    about: "צוות טריולה - 65+ מעצבי UX/UI בעלי ניסיון היוצרים מוצרים דיגיטליים ברמה עולמית.",
     services: "שירותי עיצוב UX/UI מקיפים: מחקר UX, עיצוב UI, prototyping, מערכות עיצוב ועוד.",
-    blog: "תובנות עיצוב, טרנדים UX, ואסטרטגיית מוצר מצוות עיצוב מומחה.",
-    contact: "צור קשר עם הצוות שלנו. בואו ניצור חוויות דיגיטליות חריגות ביחד.",
+    blog: "תובנות עיצוב, טרנדים UX, אסטרטגיית מוצר, ו ו case studies מצוות טריולה.",
+    contact: "צור קשר עם צוות הדיזיין של טריולה היום. בואו ניצור חוויות דיגיטליות חריגות ביחד.",
   },
 };

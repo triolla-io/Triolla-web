@@ -1,4 +1,4 @@
-# Allow AI/LLM crawlers while keeping search engines out (staging mode)
+# Allow AI crawlers while keeping search engines out (staging mode)
 User-agent: Googlebot-Extended
 Allow: /
 
@@ -24,15 +24,8 @@ Disallow: /
 User-agent: *
 Disallow: /
 
-# Disallow crawling of internal paths
-Disallow: /.next/
-Disallow: /node_modules/
-Disallow: /_next/
-Disallow: /api/
-
-# Sitemaps
+# Sitemap
 Sitemap: https://triolla.io/sitemap.xml
 
-# Crawl delay (optional, in seconds)
+# Crawl delay
 Crawl-delay: 1
-

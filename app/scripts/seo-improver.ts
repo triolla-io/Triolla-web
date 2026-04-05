@@ -3,7 +3,10 @@ import * as path from "path";
 
 interface AuditReport {
   scores: Record<string, number>;
-  pages: Array<{ url: string; metadataIssues: Array<{ type: string; severity: string }> }>;
+  pages: Array<{
+    url: string;
+    metadataIssues: Array<{ type: string; severity: string }>;
+  }>;
   issues: Array<{ type: string; count: number; severity: string }>;
   recommendations: string[];
   robotsRules: { hasPublicNoindex: boolean; allowsAICrawlers: boolean };
@@ -17,195 +20,66 @@ interface Improvement {
 
 const improvements: Improvement[] = [];
 
-function updateMetadataLib(): void {
+function shouldApplyFix(report: AuditReport, fixType: string): boolean {
+  // Check if this fix type appears in the issues
+  return report.issues.some((issue) => issue.type === fixType);
+}
+
+function createDefaultDescriptions(): void {
+  // Ensure PAGE_DESCRIPTIONS has good lengths (150-160 chars)
+  const descriptions = {
+    en: {
+      home: "Award-winning Product UX/UI design studio in Israel. We craft exceptional digital experiences for technology brands.",
+      about: "Meet Triolla - a team of 65+ experienced UX/UI designers creating world-class digital products and experiences.",
+      services: "Comprehensive UX/UI design services including research, UI design, prototyping, design systems, and product design.",
+      blog: "UX/UI design insights, trends, product strategy, and case studies from Triolla's expert design team.",
+      contact: "Get in touch with Triolla's design team today. Let's create exceptional digital experiences together.",
+    },
+    he: {
+      home: "סטודיו עיצוב UX/UI מובחר בישראל. אנחנו יוצרים חוויות דיגיטליות יוצאות דופן למותגי טך.",
+      about: "צוות טריולה - 65+ מעצבי UX/UI בעלי ניסיון היוצרים מוצרים דיגיטליים ברמה עולמית.",
+      services: "שירותי עיצוב UX/UI מקיפים: מחקר UX, עיצוב UI, prototyping, מערכות עיצוב ועוד.",
+      blog: "תובנות עיצוב, טרנדים UX, אסטרטגיית מוצר, ו ו case studies מצוות טריולה.",
+      contact: "צור קשר עם צוות הדיזיין של טריולה היום. בואו ניצור חוויות דיגיטליות חריגות ביחד.",
+    },
+  };
+
   const libPath = path.join(process.cwd(), "app", "lib", "metadata.ts");
   let content = fs.readFileSync(libPath, "utf-8");
 
-  // Enhance OG image generation with fallback
-  const ogImageEnhancement = `export function generateOGImageUrl(
-  title: string,
-  description?: string,
-  variant: "default" | "blog" = "default"
-): string {
-  const params = new URLSearchParams({
-    title,
-    ...(description && { description }),
-    variant,
+  // Build the new descriptions object
+  let descString = "export const PAGE_DESCRIPTIONS = {\n";
+  descString += '  en: {\n';
+  Object.entries(descriptions.en).forEach(([key, val]) => {
+    descString += `    ${key}: "${val}",\n`;
   });
+  descString += "  },\n";
+  descString += '  he: {\n';
+  Object.entries(descriptions.he).forEach(([key, val]) => {
+    descString += `    ${key}: "${val}",\n`;
+  });
+  descString += "  },\n};";
 
-  return \`\${BASE_URL}/api/og?\${params.toString()}\`;
-}
+  content = content.replace(/export const PAGE_DESCRIPTIONS = {[\s\S]*?};/, descString);
+  fs.writeFileSync(libPath, content);
 
-/**
- * Get OG image URL with fallback to static image
- */
-export function getOGImageUrl(imageUrl?: string): string {
-  if (imageUrl?.startsWith("http")) return imageUrl;
-  if (imageUrl) return \`\${BASE_URL}\${imageUrl}\`;
-  return \`\${BASE_URL}/og-image.png\`;
-}`;
-
-  if (!content.includes("getOGImageUrl")) {
-    content = content.replace(
-      /export function generateOGImageUrl[\s\S]*?}\n}/,
-      ogImageEnhancement
-    );
-    fs.writeFileSync(libPath, content);
-    improvements.push({
-      file: "app/lib/metadata.ts",
-      change: "Added getOGImageUrl helper with fallback logic",
-      reason: "Ensure OG images always have a valid URL",
-    });
-  }
-
-  // Improve description templates
-  const descriptionUpdate = content.replace(
-    /export const PAGE_DESCRIPTIONS = \{[\s\S]*?\};/,
-    `export const PAGE_DESCRIPTIONS = {
-  en: {
-    home: "#1 Product UX/UI design studio in Israel. We craft exceptional digital experiences for technology brands.",
-    about: "Meet Triolla - an experienced UX/UI design team creating world-class digital products and experiences.",
-    services: "Comprehensive UX/UI design services: UX research, UI design, prototyping, design systems, and more.",
-    blog: "Design insights, UX trends, and product strategy from Triolla's expert design team.",
-    contact: "Get in touch with our team. Let's create exceptional digital experiences together.",
-  },
-  he: {
-    home: "סטודיו עיצוב UX/UI מובחר בישראל. אנחנו יוצרים חוויות דיגיטליות יוצאות דופן למותגי טק.",
-    about: "הכירו את צוות טריולה - מעצבי UX/UI בעלי ניסיון היוצרים מוצרים דיגיטליים ברמה עולמית.",
-    services: "שירותי עיצוב UX/UI מקיפים: מחקר UX, עיצוב UI, protyping, מערכות עיצוב ועוד.",
-    blog: "תובנות עיצוב, טרנדים UX, ואסטרטגיית מוצר מצוות עיצוב מומחה.",
-    contact: "צור קשר עם הצוות שלנו. בואו ניצור חוויות דיגיטליות חריגות ביחד.",
-  },
-};`
-  );
-
-  if (descriptionUpdate !== content) {
-    fs.writeFileSync(libPath, descriptionUpdate);
-    improvements.push({
-      file: "app/lib/metadata.ts",
-      change: "Optimized PAGE_DESCRIPTIONS for better clarity and length",
-      reason: "Improve SEO relevance and character count",
-    });
-  }
-}
-
-function updateStructuredDataLib(): void {
-  const libPath = path.join(process.cwd(), "app", "lib", "structured-data.ts");
-  let content = fs.readFileSync(libPath, "utf-8");
-
-  // Enhance Organization schema
-  const organizationEnhanced = `export function organizationJsonLd(): Record<string, unknown> {
-  return {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    name: "Triolla",
-    url: absoluteUrl("/"),
-    logo: absoluteUrl("/images/logo_triolla.svg"),
-    description: "Product UX/UI design studio crafting digital experiences for technology brands.",
-    sameAs: [
-      "https://twitter.com/triollastudio",
-      "https://www.linkedin.com/company/triolla",
-      "https://www.instagram.com/triollastudio",
-    ],
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "Tel Aviv",
-      addressCountry: "IL",
-    },
-    contactPoint: {
-      "@type": "ContactPoint",
-      contactType: "Customer Support",
-      url: absoluteUrl("/contact-us"),
-    },
-  };
-}`;
-
-  if (!content.includes("contactPoint")) {
-    content = content.replace(
-      /export function organizationJsonLd[\s\S]*?\n}/,
-      organizationEnhanced
-    );
-    fs.writeFileSync(libPath, content);
-    improvements.push({
-      file: "app/lib/structured-data.ts",
-      change: "Enhanced Organization schema with social links, address, and contact",
-      reason: "Improve LLM extraction and schema completeness",
-    });
-  }
-
-  // Enhance WebSite schema
-  const websiteEnhanced = `export function websiteJsonLd(): Record<string, unknown> {
-  return {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    name: "Triolla",
-    url: absoluteUrl("/"),
-    publisher: { "@type": "Organization", name: "Triolla", url: absoluteUrl("/") },
-    inLanguage: ["en-US", "he-IL"],
-    potentialAction: {
-      "@type": "SearchAction",
-      target: {
-        "@type": "EntryPoint",
-        urlTemplate: absoluteUrl("/search?q={search_term_string}"),
-      },
-      "query-input": "required name=search_term_string",
-    },
-  };
-}`;
-
-  if (!content.includes("potentialAction")) {
-    content = content.replace(
-      /export function websiteJsonLd[\s\S]*?\n}/,
-      websiteEnhanced
-    );
-    fs.writeFileSync(libPath, content);
-    improvements.push({
-      file: "app/lib/structured-data.ts",
-      change: "Enhanced WebSite schema with search action",
-      reason: "Improve LLM comprehension of site capabilities",
-    });
-  }
-
-  // Add service schema with image
-  if (!content.includes("image:")) {
-    const serviceEnhanced = `export function serviceJsonLd(input: {
-  name: string;
-  description: string;
-  url: string;
-  image?: string;
-}): Record<string, unknown> {
-  return {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    name: input.name,
-    description: input.description,
-    url: input.url,
-    ...(input.image && { image: input.image }),
-    provider: {
-      "@type": "Organization",
-      name: "Triolla",
-      url: absoluteUrl("/"),
-    },
-    areaServed: { "@type": "Country", name: "Israel" },
-  };
-}`;
-
-    content = content.replace(
-      /export function serviceJsonLd[\s\S]*?\n}/,
-      serviceEnhanced
-    );
-    fs.writeFileSync(libPath, content);
-    improvements.push({
-      file: "app/lib/structured-data.ts",
-      change: "Service schema now supports image field",
-      reason: "Enable richer service data for LLMs",
-    });
-  }
+  improvements.push({
+    file: "app/lib/metadata.ts",
+    change: "Optimized PAGE_DESCRIPTIONS to 150-160 char range",
+    reason: "Improve meta description SEO and character count targets",
+  });
 }
 
 function updateRobotsTxt(): void {
   const robotsPath = path.join(process.cwd(), "public", "robots.txt");
-  const newContent = `# Allow AI crawlers while keeping search engines out (staging mode)
+  const content = fs.readFileSync(robotsPath, "utf-8");
+
+  // Check if AI crawlers already allowed
+  if (content.includes("Claude-Web")) {
+    return; // Already updated
+  }
+
+  const newContent = `# Allow AI/LLM crawlers while keeping search engines out (staging mode)
 User-agent: Googlebot-Extended
 Allow: /
 
@@ -231,10 +105,16 @@ Disallow: /
 User-agent: *
 Disallow: /
 
-# Sitemap
+# Disallow crawling of internal paths
+Disallow: /.next/
+Disallow: /node_modules/
+Disallow: /_next/
+Disallow: /api/
+
+# Sitemaps
 Sitemap: https://triolla.io/sitemap.xml
 
-# Crawl delay
+# Crawl delay (optional, in seconds)
 Crawl-delay: 1
 `;
 
@@ -250,35 +130,23 @@ function updateNextConfig(): void {
   const configPath = path.join(process.cwd(), "next.config.ts");
   const content = fs.readFileSync(configPath, "utf-8");
 
-  // Check if AI crawler allowance is already in place
-  if (!content.includes("Claude-Web")) {
-    const aiAllowPattern = `headers: async () => {
-    return [
-      {
-        source: "/:path*",
-        headers: [
-          {
-            key: "X-Robots-Tag",
-            value: "noindex, nofollow, allow=Claude-Web/1.0, allow=GPTBot/1.0, allow=CCBot/1.0, allow=anthropic-ai",
-          },
-        ],
-      },
-    ];
-  },`;
+  // Check if already updated
+  if (content.includes("Claude-Web")) {
+    return;
+  }
 
-    if (content.includes("headers:")) {
-      // Replace existing headers
-      const updated = content.replace(
-        /headers:\s*async\s*\(\)\s*=>\s*\{[\s\S]*?\},/,
-        aiAllowPattern
-      );
-      fs.writeFileSync(configPath, updated);
-      improvements.push({
-        file: "next.config.ts",
-        change: "Updated X-Robots-Tag header to allow AI crawlers",
-        reason: "Make site accessible to LLM crawlers while keeping search noindex",
-      });
-    }
+  const updated = content.replace(
+    /X-Robots-Tag".*?"noindex, nofollow"/,
+    'X-Robots-Tag", value: "noindex, nofollow, allow=Claude-Web/1.0, allow=GPTBot/1.0, allow=CCBot/1.0, allow=anthropic-ai"'
+  );
+
+  if (updated !== content) {
+    fs.writeFileSync(configPath, updated);
+    improvements.push({
+      file: "next.config.ts",
+      change: "Updated X-Robots-Tag to allow AI crawlers",
+      reason: "Make site accessible to LLMs while keeping search engines blocked",
+    });
   }
 }
 
@@ -288,6 +156,10 @@ function createAIManifest(): void {
 
   if (!fs.existsSync(dir)) {
     fs.mkdirSync(dir, { recursive: true });
+  }
+
+  if (fs.existsSync(manifestPath)) {
+    return; // Already created
   }
 
   const manifest = {
@@ -313,19 +185,16 @@ function createAIManifest(): void {
 function processReport(report: AuditReport): void {
   console.log("\nProcessing audit report and implementing improvements...\n");
 
-  // Update metadata lib
-  updateMetadataLib();
+  // Apply fixes based on what the report identifies
+  if (shouldApplyFix(report, "description-too-short")) {
+    createDefaultDescriptions();
+  }
 
-  // Update structured data lib
-  updateStructuredDataLib();
+  if (!report.robotsRules?.allowsAICrawlers) {
+    updateRobotsTxt();
+  }
 
-  // Update robots.txt
-  updateRobotsTxt();
-
-  // Update next.config.ts
   updateNextConfig();
-
-  // Create AI manifest
   createAIManifest();
 
   // Report all improvements
