@@ -428,8 +428,52 @@
 
 /*
  * Desktop mega-menu: same flattening — theme hides `.bigmenu ul > li > a` (column headers).
+ *
+ * Flat portfolio list (snapshots): theme still applies `ul>li { display:inline-block; width:234px }`
+ * meant for nested column headers, so links read as one long row. Triolla.io uses two columns;
+ * restore that with a grid only when every direct `li` is a leaf (no nested mega columns).
  */
 @media (min-width: 1024px) {
+  [data-triolla-snapshot]
+    .header_menu
+    ul.menu
+    li.bigmenu
+    > ul.sub-menu:not(:has(> li.menu-item-has-children)) {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    column-gap: 32px !important;
+    row-gap: 0 !important;
+    align-content: start !important;
+    font-size: medium !important;
+  }
+
+  [data-triolla-snapshot]
+    .header_menu
+    ul.menu
+    li.bigmenu
+    > ul.sub-menu:not(:has(> li.menu-item-has-children))
+    > li {
+    display: block !important;
+    width: auto !important;
+    max-width: none !important;
+    padding: 0 !important;
+    float: none !important;
+    vertical-align: unset !important;
+  }
+
+  [data-triolla-snapshot][dir="rtl"]
+    .header_menu
+    ul.menu
+    li.bigmenu
+    > ul.sub-menu:not(:has(> li.menu-item-has-children)),
+  [data-triolla-snapshot].rtl
+    .header_menu
+    ul.menu
+    li.bigmenu
+    > ul.sub-menu:not(:has(> li.menu-item-has-children)) {
+    direction: rtl !important;
+  }
+
   [data-triolla-snapshot] .header_menu ul.menu li.bigmenu > ul.sub-menu > li:not(.menu-item-has-children) > a {
     display: block !important;
     font-size: 20px !important;

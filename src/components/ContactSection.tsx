@@ -21,7 +21,7 @@ export default function ContactSection() {
       id="contactus"
       className="py-[60px] px-6 lg:px-[20px] bg-white relative"
       style={{
-        backgroundImage: "url(/images/portfolio_grid_bg-old.png)",
+        backgroundImage: "url(/assets/home/portfolio_grid_bg-old.png)",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "top center",
         backgroundSize: "contain",

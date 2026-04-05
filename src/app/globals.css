@@ -247,9 +247,11 @@ body {
 .site-header.ticker-visible { top: 87px; }
 
 /* ============================================================
-   HEADER INNER LAYOUT  (mirrors .header_in cf)
+   HEADER INNER LAYOUT  (React pill header only — .site-header)
+   Triolla snapshots reuse .header_in / .header_menu / .logo; unscoped
+   flex on ul.menu breaks the WP mega-menu (portfolio drops to one row).
    ============================================================ */
-.header_in {
+.site-header .header_in {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -259,28 +261,28 @@ body {
 }
 
 /* Logo */
-.logo {
+.site-header .logo {
   flex-shrink: 0;
   position: relative;
   top: 2px;
   margin-right: 20px;
 }
-.logo a { display: block; }
+.site-header .logo a { display: block; }
 
 /* Nav menu */
-.header_menu {
+.site-header .header_menu {
   flex: 1;
   text-align: center;
   max-width: 700px;
   overflow: visible;
   transition: max-width 0.6s ease, opacity 0.6s ease;
 }
-.is-sticky .header_menu {
+.site-header.is-sticky .header_menu {
   max-width: 0;
   opacity: 0;
   pointer-events: none;
 }
-.header_menu ul.menu {
+.site-header .header_menu ul.menu {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -288,14 +290,14 @@ body {
   margin: 0;
   list-style: none;
 }
-.header_menu ul.menu > li {
+.site-header .header_menu ul.menu > li {
   display: inline-block;
   padding: 0;
   vertical-align: top;
   position: relative;
 }
-.header_menu ul.menu > li > a,
-.header_menu ul.menu > li > button {
+.site-header .header_menu ul.menu > li > a,
+.site-header .header_menu ul.menu > li > button {
   display: block;
   padding: 0 7px;
   font-weight: 400;
@@ -309,21 +311,15 @@ body {
   font-family: inherit;
   transition: opacity 0.2s, color 0.2s;
 }
-.header_menu ul.menu > li > a:hover,
-.header_menu ul.menu > li > button:hover { opacity: 0.75; }
+.site-header .header_menu ul.menu > li > a:hover,
+.site-header .header_menu ul.menu > li > button:hover { opacity: 0.75; }
 
 /* Right buttons */
-.header_right {
+.site-header .header_right {
   display: flex;
   align-items: center;
   gap: 8px;
   flex-shrink: 0;
-}
-
-/* Exclude snapshot pages from React header CSS */
-[data-triolla-snapshot] .header_right {
-  display: block;
-  gap: 0;
 }
 
 /*
@@ -846,8 +842,8 @@ header.site-header + .hmenumob .hmenumobclose button {
    ============================================================ */
 @media (max-width: 1199px) {
   .site-header { padding: 10px 20px; }
-  .header_menu ul.menu > li > a,
-  .header_menu ul.menu > li > button {
+  .site-header .header_menu ul.menu > li > a,
+  .site-header .header_menu ul.menu > li > button {
     font-size: 15px;
     line-height: 1;
   }
@@ -1321,7 +1317,7 @@ section.home-hero { background: #FED125; }
 /* Winners — exact match from WP style.css */
 #winners-section {
   padding: 102px 0;
-  background: url(/images/win_bg.png) no-repeat;
+  background: url(/assets/home/win_bg.png) no-repeat;
   background-size: cover;
 }
 .winners-content {
@@ -1759,7 +1755,7 @@ section.home-faq { background: #ffffff; }
    BOTTOM GRID  (.bottom_com_sec / .port_gridimage_sec)
    ============================================================ */
 .bottom_com_sec {
-  background: #E7EBF0 url(/images/portfolio_grid_bg-old.png) no-repeat top center;
+  background: #E7EBF0 url(/assets/home/portfolio_grid_bg-old.png) no-repeat top center;
   background-size: contain;
 }
 /* Service detail pages: contact strip only — no gray / grid behind */
