@@ -6,4 +6,6 @@
 export const HEBREW_BLOG_SLUG_TO_ENGLISH_SLUG: Record<string, string> = {
   "איך-ux-ui-ישפיע-על-העתיד-הטכנולוגי-שלנו":
     "how-will-ux-ui-shape-our-technological-future",
+  "מה-זה-ooux-היכרות-עם-עקרונות-object-oriented-ux-בעיצוב-מוצ":
+    "what-is-ooux-understanding-object-oriented-ux-in-product-and-interface-design",
 };

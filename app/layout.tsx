@@ -3,8 +3,6 @@ import { JsonLd } from "./components/JsonLd";
 import { organizationJsonLd, websiteJsonLd } from "./lib/structured-data";
 import { Geist, Geist_Mono } from "next/font/google";
 import "../src/app/globals.css";
-import "../src/app/hebrew-navigation.css";
-import "../src/app/hebrew-header.css";
 import "../src/app/triolla-snapshot-mobile-nav.css";
 
 const geistSans = Geist({

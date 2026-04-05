@@ -59,6 +59,7 @@
        url('/assets/_fonts/CoreNaraeProW01-Pro.woff') format('woff');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 .font-corenarae { font-family: 'CoreNaraeProW01-Pro', sans-serif; }
 @font-face {

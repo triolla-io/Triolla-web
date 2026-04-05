@@ -147,23 +147,27 @@ export const B2B_PAGE_DATA_EN: PortfolioPageData = {
   },
   portfolioItems: ITEMS_EN,
   why: {
-    mainTitle: "Why Do B2B companies choose us?",
+    mainTitle: "Why Do <br />B2B companies <br />choose us?",
     items: [
       {
-        title: "Enterprise Experience",
-        description: "Deep expertise in complex B2B workflows and processes.",
+        title: "We speak <br>your language",
+        description:
+          "Fluent in the terms, workflows, and mindset of B2B users",
       },
       {
-        title: "Team Efficiency",
-        description: "We design for multiple user roles and collaboration.",
+        title: "Proven B2B expertise",
+        description:
+          "50+ SaaS platforms designed for leading B2B companies",
       },
       {
-        title: "ROI-Focused Design",
-        description: "Every interface drives measurable business outcomes.",
+        title: "Ready to deliver from day one",
+        description:
+          "We understand your business, so we hit the ground running",
       },
       {
-        title: "Scalable Solutions",
-        description: "Platforms that grow with your enterprise needs.",
+        title: "Business-driven design",
+        description:
+          "Our UX is created for your users, processes, and enterprise needs",
       },
     ],
   },
@@ -184,9 +188,9 @@ export const B2B_PAGE_DATA_HE: PortfolioPageData = {
   header: {
     eyebrow: "עיצוב מוצר עבור",
     title: "B2B",
-    subtitle: "שתפו פעולה עם מומחי עיצוב מוצר שמבינים אתכם.",
+    subtitle: "שתפו פעולה עם מומחי עיצוב מוצר שמבינים את זה.",
     description:
-      "בטריאולה אנו דוברים תקשורת שוטפת בין עסקים (B2B) – החל מכלים ארגוניים ועד זרימות עבודה יעילות....",
+      "בטריאולה אנו דוברים תקשורת שוטפת בין עסקים (B2B) - החל מכלים ארגוניים ועד זרימות עבודה יעילות.",
     expandedText:
       "אנו מעצבים ממשקים אינטואיטיביים שמניעים תוצאות עסקיות, ומתאימים כל פתרון לאתגרים הייחודיים של סביבות B2B. תהליך עיצוב המוצר שלנו שם דגש על שימושיות, סקיילביליות ואינטגרציה חלקה עם תהליכי עבודה ארגוניים. עם טריאולה, העסק שלכם נהנה ממומחיות בעיצוב מוצר שמעצימה צמיחה ומספקת ערך מדיד.",
     buttonText: "שותפו איתנו",
@@ -195,23 +199,26 @@ export const B2B_PAGE_DATA_HE: PortfolioPageData = {
   },
   portfolioItems: ITEMS_HE,
   why: {
-    mainTitle: "למה חברות B2B בוחרות בנו?",
+    mainTitle: "למה חברות<br />B2B<br />בוחרות בנו?",
     items: [
       {
-        title: "ניסיון ארגוני",
-        description: "מומחיות בתהליכי B2B מורכבים.",
+        title: "אנחנו מדברים בשפה שלך",
+        description:
+          "שולטים במונחים, בתהליכים ובחשיבה של משתמשי B2B",
       },
       {
-        title: "יעילות צוותית",
-        description: "עיצוב לתפקידים שונים ולשיתוף פעולה.",
+        title: "מומחיות B2B מוכחת",
+        description:
+          "למעלה מ-50 פלטפורמות SaaS שעוצבו עבור חברות B2B מובילות",
       },
       {
-        title: "עיצוב ממוקד תשואה",
-        description: "כל ממשק תומך בתוצאות עסקיות מדידות.",
+        title: "מוכנים לספק תוצאות מהיום הראשון",
+        description: "אנחנו מבינים את העסק שלך – ומתחילים לעבוד מיד",
       },
       {
-        title: "פתרונות סקלאביליים",
-        description: "פלטפורמות שגדלות עם צרכי הארגון.",
+        title: "עיצוב מונחה עסקים",
+        description:
+          "חוויית המשתמש שלנו מותאמת למשתמשים, לתהליכים ולצרכים הארגוניים שלך",
       },
     ],
   },

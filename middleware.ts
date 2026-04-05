@@ -15,6 +15,16 @@ import { triollaPathnameToAppPath } from "./app/lib/rewriteTriollaNavLinks";
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
+  const norm = pathname.replace(/\/+$/, "") || "/";
+  if (norm === "/" || norm === "/he") {
+    const res = NextResponse.next();
+    res.headers.append(
+      "Link",
+      '</assets/_shared/medicak-ipad.webp>; rel=preload; as=image; type="image/webp"',
+    );
+    return res;
+  }
+
   /** WordPress has no Hebrew URL for these; English-only pages. */
   if (pathname === "/he/portfolio-page" || pathname === "/he/portfolio-page/") {
     const url = request.nextUrl.clone();
@@ -79,5 +89,5 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/en", "/en/:path*", "/he/:path*"],
+  matcher: ["/", "/en", "/en/:path*", "/he", "/he/:path*"],
 };

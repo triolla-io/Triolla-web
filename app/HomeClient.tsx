@@ -85,10 +85,8 @@ export function HomeClient() {
         el.innerHTML = html;
         el.setAttribute("dir", isHebrewHome ? "rtl" : "ltr");
         rewriteTriollaNavLinks(el);
-        await waitForSnapshotFonts();
-        await new Promise<void>((r) =>
-          requestAnimationFrame(() => requestAnimationFrame(() => r())),
-        );
+        void waitForSnapshotFonts();
+        await new Promise<void>((r) => requestAnimationFrame(() => r()));
 
         if (cancelled) return;
 

@@ -67,6 +67,22 @@ function refreshAbmobileOwlInNode(node: Element): void {
   });
 }
 
+function refreshPmobileOwlInPortfolioWhy(node: Element): void {
+  const $ = (window as unknown as { jQuery?: (el: Element) => { trigger: (e: string) => void } })
+    .jQuery;
+  if (!$) return;
+  const why =
+    node instanceof HTMLElement && node.classList.contains("portfolio_why")
+      ? node
+      : node instanceof HTMLElement
+        ? node.closest(".portfolio_why")
+        : null;
+  if (!why) return;
+  why.querySelectorAll("ul.pmobile.owl-carousel.owl-loaded").forEach((ul) => {
+    $(ul).trigger("refresh.owl.carousel");
+  });
+}
+
 export function mountTechnologyReveal(root: HTMLElement): () => void {
   const scheduleEqualHeight = () => {
     requestAnimationFrame(() => runTriollaEqualheightInRoot(root));
@@ -79,6 +95,7 @@ export function mountTechnologyReveal(root: HTMLElement): () => void {
         if (!entry.isIntersecting) continue;
         entry.target.classList.add("show");
         refreshAbmobileOwlInNode(entry.target);
+        refreshPmobileOwlInPortfolioWhy(entry.target);
         io.unobserve(entry.target);
         added = true;
       }
@@ -104,6 +121,7 @@ export function mountTechnologyReveal(root: HTMLElement): () => void {
         if (!isRoughlyInViewport(node)) return;
         node.classList.add("show");
         refreshAbmobileOwlInNode(node);
+        refreshPmobileOwlInPortfolioWhy(node);
         io.unobserve(node);
         added = true;
       });

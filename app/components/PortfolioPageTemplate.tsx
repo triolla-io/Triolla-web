@@ -161,26 +161,29 @@ export const PortfolioPageTemplate = forwardRef<
         .portfoli_lists ul li { margin-top: 0 !important; }
         .portfoli_lists ul li .protfolio_img { bottom: -100px !important; opacity: 0 !important; }
         .portfoli_lists ul li .protfolio_img.show { bottom: 0px !important; opacity: 1 !important; }
-        /* Why section: equal-height bordered cards (theme uses inline-block li; height:100% does not align rows). */
-        .portfolio_why ul.pdesktp {
-          display: flex !important;
-          flex-wrap: wrap;
-          align-items: stretch;
-        }
-        .portfolio_why ul.pdesktp > li {
-          display: flex !important;
-          flex-direction: column;
-        }
-        .portfolio_why ul.pdesktp > li .port_cyber_con {
-          flex: 1 1 auto;
-          display: flex !important;
-          flex-direction: column;
-          width: 100%;
-          min-height: 0;
-        }
-        .portfolio_why ul.pdesktp > li .port_cyber_con_new {
-          flex: 1 1 auto;
-          width: 100%;
+        /* Why section: equal-height cards on desktop only. Unscoped flex broke mobile: theme hides
+           .pdesktp and shows .pmobile owl below 768px (responsive[-he].css). */
+        @media (min-width: 768px) {
+          .portfolio_why ul.pdesktp {
+            display: flex !important;
+            flex-wrap: wrap;
+            align-items: stretch;
+          }
+          .portfolio_why ul.pdesktp > li {
+            display: flex !important;
+            flex-direction: column;
+          }
+          .portfolio_why ul.pdesktp > li .port_cyber_con {
+            flex: 1 1 auto;
+            display: flex !important;
+            flex-direction: column;
+            width: 100%;
+            min-height: 0;
+          }
+          .portfolio_why ul.pdesktp > li .port_cyber_con_new {
+            flex: 1 1 auto;
+            width: 100%;
+          }
         }
       `}</style>
 

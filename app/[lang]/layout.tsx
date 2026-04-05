@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { HebrewLayoutStyles } from "../lib/HebrewLayoutStyles";
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://triolla.io";
 
@@ -42,10 +43,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
  */
 export default async function LangLayout({
   children,
-  params: _params,
+  params,
 }: Readonly<{
   children: React.ReactNode;
   params: Promise<{ lang: string }>;
 }>) {
-  return children;
+  const { lang } = await params;
+  return (
+    <>
+      {lang === "he" ? <HebrewLayoutStyles /> : null}
+      {children}
+    </>
+  );
 }

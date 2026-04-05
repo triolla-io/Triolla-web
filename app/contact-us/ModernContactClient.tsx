@@ -48,6 +48,7 @@ const COPY = {
 
 function ContactForm({ lang }: { lang: "en" | "he" }) {
   const t = COPY[lang];
+  const rtl = lang === "he";
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [active, setActive] = useState<Record<string, boolean>>({});
@@ -89,7 +90,8 @@ function ContactForm({ lang }: { lang: "en" | "he" }) {
   }
 
   const inputClass =
-    "block w-full bg-transparent border-0 border-b border-white/35 text-white py-3 text-[20px] focus:outline-none focus:border-white/70 transition-colors";
+    "block w-full bg-transparent border-0 border-b border-white/35 text-white py-3 text-[18px] min-[480px]:text-[20px] focus:outline-none focus:border-white/70 transition-colors" +
+    (rtl ? " text-end" : "");
   const labelClass =
     "absolute top-[10px] start-0 text-[20px] text-white transition-all duration-300 pointer-events-none";
   const activeLabelClass = "!top-[-10px] !text-[14px] opacity-100";
@@ -116,13 +118,15 @@ function ContactForm({ lang }: { lang: "en" | "he" }) {
         </div>
       ))}
 
-      <div className="mt-[30px] mb-[62px]">
-        <p className="text-[20px] text-white mb-4">{t.interested}</p>
-        <div className="flex flex-wrap gap-3">
+      <div className="mt-[30px] mb-10 min-[480px]:mb-[62px]">
+        <p className="text-[18px] min-[480px]:text-[20px] text-white mb-4">{t.interested}</p>
+        <div
+          className={`flex flex-wrap gap-2 min-[480px]:gap-3 ${rtl ? "justify-center min-[480px]:justify-start" : ""}`}
+        >
           {t.interestOpts.map((opt, i) => (
             <label
               key={opt}
-              className="relative flex items-center justify-center px-5 py-2 border border-white/35 rounded-full cursor-pointer text-[16px] font-medium text-white hover:border-white transition-colors has-[:checked]:bg-[#FED125] has-[:checked]:text-black has-[:checked]:border-[#FED125]"
+              className="relative flex min-w-0 max-w-full items-center justify-center px-4 py-2 min-[480px]:px-5 border border-white/35 rounded-full cursor-pointer text-[14px] min-[480px]:text-[16px] font-medium text-white text-center leading-snug hover:border-white transition-colors has-[:checked]:bg-[#FED125] has-[:checked]:text-black has-[:checked]:border-[#FED125]"
             >
               <input
                 type="radio"
@@ -156,11 +160,13 @@ function ContactForm({ lang }: { lang: "en" | "he" }) {
 export function ModernContactClient({ lang = "en" }: TriollaLangProps) {
   const t = COPY[lang === "he" ? "he" : "en"];
   const dir = lang === "he" ? "rtl" : "ltr";
+  const isHe = lang === "he";
 
   return (
     <section
       dir={dir}
-      className="relative w-full overflow-hidden pt-[100px] pb-16 sm:pt-[180px] sm:pb-28 lg:pt-[262px] lg:pb-[201px]"
+      lang={isHe ? "he" : "en"}
+      className="relative w-full overflow-hidden pb-16 sm:pb-28 lg:pb-[201px] pt-[calc(8.75rem+env(safe-area-inset-top,0px))] min-[640px]:pt-[180px] lg:pt-[262px]"
       style={{ background: "#FED125" }}
     >
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
@@ -175,7 +181,7 @@ export function ModernContactClient({ lang = "en" }: TriollaLangProps) {
         <img
           src="/images/portolio_layer.svg"
           alt=""
-          className="absolute top-0 end-0 h-full w-auto opacity-30"
+          className={`pointer-events-none absolute top-0 end-0 h-full w-auto opacity-30 max-[480px]:max-h-[50%] max-[480px]:w-auto max-[480px]:opacity-[0.14] ${isHe ? "max-[480px]:hidden" : ""}`}
         />
       </div>
 
@@ -209,7 +215,9 @@ export function ModernContactClient({ lang = "en" }: TriollaLangProps) {
               <Image src="/images/jumping_3-1.svg" alt="" width={120} height={120} />
             </motion.div>
 
-            <h1 className="font-bold text-black capitalize mb-6 lg:mb-[30px] text-[clamp(2.5rem,12vw,5rem)] sm:text-[80px] lg:text-[130px] leading-[0.9] lg:leading-[110px]">
+            <h1
+              className={`font-bold text-black mb-6 lg:mb-[30px] text-[clamp(2rem,9vw,5rem)] min-[480px]:text-[clamp(2.5rem,12vw,5rem)] sm:text-[80px] lg:text-[130px] leading-[1.05] sm:leading-[0.9] lg:leading-[110px] ${isHe ? "normal-case" : "capitalize"}`}
+            >
               {t.heading}
             </h1>
 
@@ -228,8 +236,8 @@ export function ModernContactClient({ lang = "en" }: TriollaLangProps) {
             </div>
           </div>
 
-          <div className="w-full lg:w-[532px] lg:flex-shrink-0">
-            <div className="rounded-[20px] bg-black px-5 py-8 sm:px-12 sm:py-[60px] lg:px-[48px] lg:pt-[60px] lg:pb-[42px]">
+          <div className="w-full lg:w-[532px] lg:flex-shrink-0 min-w-0">
+            <div className="rounded-[20px] bg-black px-4 py-7 min-[480px]:px-5 min-[480px]:py-8 sm:px-12 sm:py-[60px] lg:px-[48px] lg:pt-[60px] lg:pb-[42px]">
               <ContactForm lang={lang === "he" ? "he" : "en"} />
             </div>
           </div>

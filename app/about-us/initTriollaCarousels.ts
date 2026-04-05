@@ -67,6 +67,26 @@ export function initTriollaOwlCarousels(root: HTMLElement): void {
     });
   });
 
+  /* Portfolio “Why choose us” mobile strip — was inline in triolla-io-b2b-body.html (`$('.pmobile').owlCarousel`). */
+  $root.find(".pmobile.owl-carousel").each((_i: number, el: Element) => {
+    const $el = $(el);
+    if ($el.hasClass("owl-loaded")) return;
+    $el.owlCarousel({
+      nav: false,
+      loop: true,
+      autoplay: false,
+      dots: true,
+      margin: 18,
+      singleItem: true,
+      slideSpeed: 1000,
+      smartSpeed: 1000,
+      items: 1.6,
+      rtl,
+      navText: ["", ""],
+      responsiveClass: true,
+    });
+  });
+
   $root.find(".bullet_slider.owl-carousel").each((_i: number, el: Element) => {
     const $el = $(el);
     if ($el.hasClass("owl-loaded")) return;

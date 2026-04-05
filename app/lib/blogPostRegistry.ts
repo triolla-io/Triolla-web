@@ -53,6 +53,8 @@ export const BLOG_TITLES: Partial<Record<string, string>> = {
     "Level Up Your Gaming App: Expert UX Tips for Engagement",
   "designing-an-engaging-and-effective-agritech-app":
     "Designing an Engaging and Effective Agritech App",
+  "what-is-ooux-understanding-object-oriented-ux-in-product-and-interface-design":
+    "What Is OOUX? Understanding Object-Oriented UX in Product and Interface Design",
 };
 
 export function loadBlogDeps(slug: string): TriollaPortfolioSnapshotDeps | null {
