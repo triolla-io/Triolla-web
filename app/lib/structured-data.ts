@@ -14,7 +14,21 @@ export function organizationJsonLd(): Record<string, unknown> {
     logo: absoluteUrl("/images/logo_triolla.svg"),
     description:
       "Product UX/UI design studio crafting digital experiences for technology brands.",
-    sameAs: ["https://twitter.com/triollastudio"],
+    sameAs: [
+      "https://twitter.com/triollastudio",
+      "https://www.linkedin.com/company/triolla",
+      "https://www.instagram.com/triollastudio",
+    ],
+    address: {
+      "@type": "PostalAddress",
+      addressCountry: "IL",
+      addressLocality: "Tel Aviv",
+    },
+    contactPoint: {
+      "@type": "ContactPoint",
+      contactType: "Customer Service",
+      url: absoluteUrl("/contact-us"),
+    },
   };
 }
 
@@ -26,6 +40,14 @@ export function websiteJsonLd(): Record<string, unknown> {
     url: absoluteUrl("/"),
     publisher: { "@type": "Organization", name: "Triolla", url: absoluteUrl("/") },
     inLanguage: ["en-US", "he-IL"],
+    potentialAction: {
+      "@type": "SearchAction",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: absoluteUrl("/blog?q={search_term_string}"),
+      },
+      "query-input": "required name=search_term_string",
+    },
   };
 }
 
@@ -78,6 +100,7 @@ export function serviceJsonLd(input: {
   name: string;
   description: string;
   url: string;
+  image?: string;
 }): Record<string, unknown> {
   return {
     "@context": "https://schema.org",
@@ -85,6 +108,7 @@ export function serviceJsonLd(input: {
     name: input.name,
     description: input.description,
     url: input.url,
+    ...(input.image && { image: input.image }),
     provider: {
       "@type": "Organization",
       name: "Triolla",

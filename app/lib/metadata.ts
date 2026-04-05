@@ -105,7 +105,7 @@ export function generatePageMetadata({
 }
 
 /**
- * Generate Open Graph image URL
+ * Generate Open Graph image URL for dynamic OG generation
  */
 export function generateOGImageUrl(
   title: string,
@@ -119,6 +119,15 @@ export function generateOGImageUrl(
   });
 
   return `${BASE_URL}/api/og?${params.toString()}`;
+}
+
+/**
+ * Get OG image URL with fallback to static image
+ */
+export function getOGImageUrl(imageUrl?: string): string {
+  if (imageUrl?.startsWith("http")) return imageUrl;
+  if (imageUrl) return `${BASE_URL}${imageUrl}`;
+  return `${BASE_URL}/og-image.png`;
 }
 
 /**
@@ -248,23 +257,21 @@ export function generateHebrewBlogPostMetadata({
 }
 
 /**
- * Predefined descriptions for common pages
+ * Predefined descriptions for common pages (150-160 chars optimal for SEO)
  */
 export const PAGE_DESCRIPTIONS = {
   en: {
-    home: "#1 Product UX/UI design studio in Israel. We craft exceptional digital experiences.",
-    about: "Meet Triolla - a team of experienced UX/UI designers dedicated to creating world-class digital products.",
-    services:
-      "Explore our comprehensive UX/UI design services including research, wireframing, prototyping, and design systems.",
-    blog: "Insights and trends in UX/UI design, product strategy, and digital innovation.",
-    contact: "Get in touch with our team for your next design project. Let's create something amazing together.",
+    home: "#1 Product UX/UI design studio in Israel. We craft exceptional digital experiences for technology brands.",
+    about: "Meet Triolla - an experienced UX/UI design team creating world-class digital products and experiences.",
+    services: "Comprehensive UX/UI design services: UX research, UI design, prototyping, design systems, and more.",
+    blog: "Design insights, UX trends, and product strategy from Triolla's expert design team.",
+    contact: "Get in touch with our team. Let's create exceptional digital experiences together.",
   },
   he: {
-    home: "סטודיו עיצוב UX/UI מובחר בישראל. אנחנו יוצרים חוויות דיגיטליות יוצאות דופן.",
-    about: "הכירו את טריולה - צוות של מעצבי UX/UI בעלי ניסיון המוקדשים ליצור מוצרים דיגיטליים ברמה עולמית.",
-    services:
-      "גלו את שירותי עיצוב UX/UI שלנו כולל מחקר, תיאום, prototyping וקביעת מערכות עיצוב.",
-    blog: "תובנות וטרנדים בעיצוב UX/UI, אסטרטגיה מוצר וחדשנות דיגיטלית.",
-    contact: "צור קשר עם הצוות שלנו לפרויקט העיצוב הבא. בואו ניצור משהו מדהים ביחד.",
+    home: "סטודיו עיצוב UX/UI מובחר בישראל. אנחנו יוצרים חוויות דיגיטליות יוצאות דופן למותגי טק.",
+    about: "הכירו את צוות טריולה - מעצבי UX/UI בעלי ניסיון היוצרים מוצרים דיגיטליים ברמה עולמית.",
+    services: "שירותי עיצוב UX/UI מקיפים: מחקר UX, עיצוב UI, prototyping, מערכות עיצוב ועוד.",
+    blog: "תובנות עיצוב, טרנדים UX, ואסטרטגיית מוצר מצוות עיצוב מומחה.",
+    contact: "צור קשר עם הצוות שלנו. בואו ניצור חוויות דיגיטליות חריגות ביחד.",
   },
 };

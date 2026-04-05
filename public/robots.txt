@@ -1,7 +1,30 @@
-# Allow all bots to crawl the site
-User-agent: *
+# Allow AI/LLM crawlers while keeping search engines out (staging mode)
+User-agent: Googlebot-Extended
 Allow: /
-Allow: /he/
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Block public search engines (staging/development)
+User-agent: Googlebot
+Disallow: /
+
+User-agent: Bingbot
+Disallow: /
+
+User-agent: *
+Disallow: /
+
+# Disallow crawling of internal paths
 Disallow: /.next/
 Disallow: /node_modules/
 Disallow: /_next/
@@ -12,3 +35,4 @@ Sitemap: https://triolla.io/sitemap.xml
 
 # Crawl delay (optional, in seconds)
 Crawl-delay: 1
+

@@ -1,0 +1,24 @@
+{
+  "version": "1.0",
+  "status": "active",
+  "name": "Triolla AI Accessibility",
+  "description": "Triolla staging environment optimized for AI/LLM crawling",
+  "organization": "Triolla",
+  "website": "https://triolla.io",
+  "allowedBots": [
+    "Claude-Web",
+    "GPTBot",
+    "CCBot",
+    "anthropic-ai",
+    "Googlebot-Extended"
+  ],
+  "disallowedBots": [
+    "Googlebot",
+    "Bingbot"
+  ],
+  "contentTypes": [
+    "website",
+    "blog",
+    "service"
+  ]
+}
