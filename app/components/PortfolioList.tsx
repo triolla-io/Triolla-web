@@ -28,17 +28,17 @@ export function PortfolioList({
         {items.map((item, idx) => (
           <li
             key={idx}
-            className={`rownumber${idx + 1} ${idx % 2 === 0 ? "odd" : "even"} cf`}
+            className={`rownumber${idx + 1} ${idx % 2 === 0 ? "odd" : "even"} cf show`}
           >
             <div
-              className={`protfolio_img protfolio_img${idx + 1} proheight1 show`}
+              className={`protfolio_img protfolio_img${idx + 1} proheight1`}
             >
               <div className="postfol_li_img">
                 <img className="one" alt="" src={item.desktopImg} />
                 <img className="two" alt="" src={item.mobileImg} />
               </div>
             </div>
-            <div className="protfolio_con proheight1 show">
+            <div className="protfolio_con proheight1">
               <div className="protfolio_con_in">
                 <div className="protolio_log">
                   <img src={item.logo} alt={item.title} />
