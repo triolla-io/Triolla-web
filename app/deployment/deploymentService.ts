@@ -56,7 +56,7 @@ export async function gitCommitAndPush(
 export async function isDeploymentAlreadyRunning(): Promise<boolean> {
   const url = `${process.env.COOLIFY_API_URL}/api/v1/applications/${process.env.COOLIFY_APP_UUID}/deployments?per_page=1`;
   const res = await fetch(url, { headers: coolifyHeaders() });
-  console.log("isDeploymentAlreadyRunning", res);
+  console.log("---------------isDeploymentAlreadyRunning", res);
   if (!res.ok) return false;
   const data = await res.json();
   const latest = data?.data?.[0] ?? data?.[0];
