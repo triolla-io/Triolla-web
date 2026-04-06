@@ -46,7 +46,7 @@ export async function gitCommitAndPush(
   const safeMessage = message.replace(/"/g, "'");
   await run("git add -A");
   await run(`git commit -m "${safeMessage}"`);
-  await run("git push");
+  await run("git push --set-upstream origin HEAD");
   const { stdout: commitHash } = await run("git rev-parse HEAD");
   return { commitHash };
 }
@@ -124,6 +124,7 @@ export type DeploymentPipelineResult =
   | { ok: false; reason: "already_running" | "nothing_to_commit" | "failed"; error?: string };
 
 export async function runDeploymentPipeline(commitMessage: string): Promise<DeploymentPipelineResult> {
+  console.log('****************CHECKING DEPL');
   const alreadyRunning = await isDeploymentAlreadyRunning();
   if (alreadyRunning) return { ok: false, reason: "already_running" };
 
