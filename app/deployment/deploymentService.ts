@@ -45,9 +45,13 @@ export async function gitCommitAndPush(
 ): Promise<{ commitHash: string }> {
   const safeMessage = message.replace(/"/g, "'");
   await run("git add -A");
+  console.log("git add -A done");
   await run(`git commit -m "${safeMessage}"`);
+  console.log("git push --set-upstream origin HEAD done");
   await run("git push --set-upstream origin HEAD");
+  console.log("git rev-parse HEAD done");
   const { stdout: commitHash } = await run("git rev-parse HEAD");
+  console.log("commit hash done", commitHash);
   return { commitHash };
 }
 
@@ -63,7 +67,6 @@ async function fetchLatestDeployment() {
 
 export async function isDeploymentAlreadyRunning(): Promise<boolean> {
   const latest = await fetchLatestDeployment();
-  console.log('*******************LATEST DEPL*****************', latest);
   if (!latest) return false;
   const status: CoolifyDeploymentStatus = latest.status;
   return status === "in_progress" || status === "queued";
@@ -122,17 +125,20 @@ export type DeploymentPipelineResult =
   | { ok: false; reason: "already_running" | "nothing_to_commit" | "failed"; error?: string };
 
 export async function runDeploymentPipeline(commitMessage: string): Promise<DeploymentPipelineResult> {
-  console.log('****************CHECKING DEPL*****************');
   const alreadyRunning = await isDeploymentAlreadyRunning();
+  console.log("already running?", alreadyRunning);
   if (alreadyRunning) return { ok: false, reason: "already_running" };
 
   const hasChanges = await checkGitStatus();
+  console.log("has changes?", hasChanges);
   if (!hasChanges) return { ok: false, reason: "nothing_to_commit" };
 
   let commitHash: string;
   try {
     ({ commitHash } = await gitCommitAndPush(commitMessage));
+    console.log("commit hash", commitHash);
   } catch (err) {
+    console.log("error", err);
     return { ok: false, reason: "failed", error: err instanceof Error ? err.message : String(err) };
   }
 
