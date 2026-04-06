@@ -1,0 +1,27 @@
+/* Global RTL positioning fixes for portfolio jump SVGs on Hebrew pages */
+/* These animated floating SVGs use left: in the base CSS which is wrong for RTL */
+
+/* Main portfolio section - fix jump_2 from left to right */
+.portfolio_jump_2 {
+  position: absolute !important;
+  left: auto !important;
+  right: -42px !important;
+}
+
+/* Contact/about sections - fix left: to right: for RTL */
+.contact_main_left .portfolio_jump_2 {
+  left: auto !important;
+  right: 0px !important;
+}
+
+.contact_main_left .portfolio_jump_3 {
+  left: auto !important;
+  right: 170px !important;
+}
+
+/* Override responsive breakpoint that sets left: 100px */
+@media (max-width: 1199px) {
+  .contact_main_left .portfolio_jump_3 {
+    right: 100px !important;
+  }
+}
