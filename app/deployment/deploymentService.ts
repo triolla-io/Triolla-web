@@ -58,7 +58,7 @@ export async function isDeploymentAlreadyRunning(): Promise<boolean> {
   const res = await fetch(url, { headers: coolifyHeaders() });
   if (!res.ok) return false;
   const data = await res.json();
-  console.log('!!!******DATA DEPL*****************', data);
+  console.log('!!!******DATA DEPL****!!!***', data);
   const latest = Array.isArray(data) ? data[0] : data?.data?.[0];
   console.log('*******************LATEST DEPL*****************', latest);
   if (!latest) return false;
