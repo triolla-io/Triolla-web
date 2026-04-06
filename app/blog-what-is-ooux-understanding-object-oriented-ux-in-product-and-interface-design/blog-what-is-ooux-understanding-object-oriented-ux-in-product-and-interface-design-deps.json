@@ -53,5 +53,11 @@
     "utils.min.js_f287a8f0.js",
     "vendor-theme.min.js_a3a18dac.js",
     "scripts-theme.min.js_39b5a2d5.js"
-  ]
+  ],
+  "sharedFontsManifest": "/Users/ariell/html-to-react/public/assets/_shared/fonts/fonts.json",
+  "sharedFontsUrl": "/assets/_shared/fonts",
+  "sharedFonts": {
+    "registry": "/assets/_shared/fonts/fonts.json",
+    "baseUrl": "/assets/_shared/fonts"
+  }
 }

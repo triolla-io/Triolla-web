@@ -3,5 +3,11 @@
   "bodyClass": "rtl wp-singular page-template page-template-page-servicedetail page-template-page-servicedetail-php page page-id-2624 page-child parent-pageid-3163 wp-theme-triolla",
   "dataRsssl": "1",
   "css": [],
-  "js": []
+  "js": [],
+  "sharedFontsManifest": "/Users/ariell/html-to-react/public/assets/_shared/fonts/fonts.json",
+  "sharedFontsUrl": "/assets/_shared/fonts",
+  "sharedFonts": {
+    "registry": "/assets/_shared/fonts/fonts.json",
+    "baseUrl": "/assets/_shared/fonts"
+  }
 }

@@ -34,5 +34,11 @@
     "wow.js_a1459148.js",
     "metaview.js_2af44128.js",
     "all.js_a1459148.js"
-  ]
+  ],
+  "sharedFontsManifest": "/Users/ariell/html-to-react/public/assets/_shared/fonts/fonts.json",
+  "sharedFontsUrl": "/assets/_shared/fonts",
+  "sharedFonts": {
+    "registry": "/assets/_shared/fonts/fonts.json",
+    "baseUrl": "/assets/_shared/fonts"
+  }
 }

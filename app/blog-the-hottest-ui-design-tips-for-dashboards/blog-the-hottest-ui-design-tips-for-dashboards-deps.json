@@ -45,5 +45,11 @@
     "gravityforms.min.js_13f93b15.js",
     "placeholders.jquery.min.js_13f93b15.js",
     "scripts-theme.min.js_39b5a2d5.js"
-  ]
+  ],
+  "sharedFontsManifest": "/Users/ariell/html-to-react/public/assets/_shared/fonts/fonts.json",
+  "sharedFontsUrl": "/assets/_shared/fonts",
+  "sharedFonts": {
+    "registry": "/assets/_shared/fonts/fonts.json",
+    "baseUrl": "/assets/_shared/fonts"
+  }
 }

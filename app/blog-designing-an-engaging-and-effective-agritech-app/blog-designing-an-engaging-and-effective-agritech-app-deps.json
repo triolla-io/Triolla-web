@@ -33,5 +33,11 @@
     "ScrollTrigger.min.js_a3d7f05c.js",
     "jquery.bez.min.js_edabec9e_8a0c603f.js",
     "all.js_a3d7f05c.js"
-  ]
+  ],
+  "sharedFontsManifest": "/Users/ariell/html-to-react/public/assets/_shared/fonts/fonts.json",
+  "sharedFontsUrl": "/assets/_shared/fonts",
+  "sharedFonts": {
+    "registry": "/assets/_shared/fonts/fonts.json",
+    "baseUrl": "/assets/_shared/fonts"
+  }
 }

@@ -1,0 +1,633 @@
+{
+  "timestamp": "2026-04-06T13:40:00Z",
+  "description": "Single source of truth for all project fonts",
+  "baseUrl": "/assets/_shared/fonts",
+  "totalFonts": 125,
+  "fonts": {
+    "AlmoniDLAAA-Bold.eot": {
+      "url": "/assets/_shared/fonts/AlmoniDLAAA-Bold.eot",
+      "size": 72742,
+      "type": "eot"
+    },
+    "AlmoniDLAAA-Bold.svg": {
+      "url": "/assets/_shared/fonts/AlmoniDLAAA-Bold.svg",
+      "size": 153718,
+      "type": "svg"
+    },
+    "AlmoniDLAAA-Bold.ttf": {
+      "url": "/assets/_shared/fonts/AlmoniDLAAA-Bold.ttf",
+      "size": 72540,
+      "type": "ttf"
+    },
+    "AlmoniDLAAA-Bold.woff": {
+      "url": "/assets/_shared/fonts/AlmoniDLAAA-Bold.woff",
+      "size": 41376,
+      "type": "woff"
+    },
+    "AlmoniDLAAA-Bold.woff2": {
+      "url": "/assets/_shared/fonts/AlmoniDLAAA-Bold.woff2",
+      "size": 28888,
+      "type": "woff2"
+    },
+    "AlmoniMLv5AAA-Bold.eot": {
+      "url": "/assets/_shared/fonts/AlmoniMLv5AAA-Bold.eot",
+      "size": 201360,
+      "type": "eot"
+    },
+    "AlmoniMLv5AAA-Bold.svg": {
+      "url": "/assets/_shared/fonts/AlmoniMLv5AAA-Bold.svg",
+      "size": 773342,
+      "type": "svg"
+    },
+    "AlmoniMLv5AAA-Bold.ttf": {
+      "url": "/assets/_shared/fonts/AlmoniMLv5AAA-Bold.ttf",
+      "size": 201152,
+      "type": "ttf"
+    },
+    "AlmoniMLv5AAA-Bold.woff": {
+      "url": "/assets/_shared/fonts/AlmoniMLv5AAA-Bold.woff",
+      "size": 91312,
+      "type": "woff"
+    },
+    "AlmoniMLv5AAA-Bold.woff2": {
+      "url": "/assets/_shared/fonts/AlmoniMLv5AAA-Bold.woff2",
+      "size": 66384,
+      "type": "woff2"
+    },
+    "AlmoniMLv5AAA-Regular.eot": {
+      "url": "/assets/_shared/fonts/AlmoniMLv5AAA-Regular.eot",
+      "size": 201896,
+      "type": "eot"
+    },
+    "AlmoniMLv5AAA-Regular.svg": {
+      "url": "/assets/_shared/fonts/AlmoniMLv5AAA-Regular.svg",
+      "size": 774758,
+      "type": "svg"
+    },
+    "AlmoniMLv5AAA-Regular.ttf": {
+      "url": "/assets/_shared/fonts/AlmoniMLv5AAA-Regular.ttf",
+      "size": 201676,
+      "type": "ttf"
+    },
+    "AlmoniMLv5AAA-Regular.woff": {
+      "url": "/assets/_shared/fonts/AlmoniMLv5AAA-Regular.woff",
+      "size": 91676,
+      "type": "woff"
+    },
+    "AlmoniMLv5AAA-Regular.woff2": {
+      "url": "/assets/_shared/fonts/AlmoniMLv5AAA-Regular.woff2",
+      "size": 66772,
+      "type": "woff2"
+    },
+    "CoreNaraeProW01-Pro.eot": {
+      "url": "/assets/_shared/fonts/CoreNaraeProW01-Pro.eot",
+      "size": 57190,
+      "type": "eot"
+    },
+    "CoreNaraeProW01-Pro.svg": {
+      "url": "/assets/_shared/fonts/CoreNaraeProW01-Pro.svg",
+      "size": 247910,
+      "type": "svg"
+    },
+    "CoreNaraeProW01-Pro.ttf": {
+      "url": "/assets/_shared/fonts/CoreNaraeProW01-Pro.ttf",
+      "size": 56972,
+      "type": "ttf"
+    },
+    "CoreNaraeProW01-Pro.woff": {
+      "url": "/assets/_shared/fonts/CoreNaraeProW01-Pro.woff",
+      "size": 31008,
+      "type": "woff"
+    },
+    "CoreNaraeProW01-Pro.woff2": {
+      "url": "/assets/_shared/fonts/CoreNaraeProW01-Pro.woff2",
+      "size": 25652,
+      "type": "woff2"
+    },
+    "Helvetica-Bold.eot": {
+      "url": "/assets/_shared/fonts/Helvetica-Bold.eot",
+      "size": 308816,
+      "type": "eot"
+    },
+    "Helvetica-Bold.svg": {
+      "url": "/assets/_shared/fonts/Helvetica-Bold.svg",
+      "size": 714476,
+      "type": "svg"
+    },
+    "Helvetica-Bold.ttf": {
+      "url": "/assets/_shared/fonts/Helvetica-Bold.ttf",
+      "size": 308628,
+      "type": "ttf"
+    },
+    "Helvetica-Bold.woff": {
+      "url": "/assets/_shared/fonts/Helvetica-Bold.woff",
+      "size": 161300,
+      "type": "woff"
+    },
+    "Helvetica-Bold.woff2": {
+      "url": "/assets/_shared/fonts/Helvetica-Bold.woff2",
+      "size": 108556,
+      "type": "woff2"
+    },
+    "Helvetica.eot": {
+      "url": "/assets/_shared/fonts/Helvetica.eot",
+      "size": 318150,
+      "type": "eot"
+    },
+    "Helvetica.svg": {
+      "url": "/assets/_shared/fonts/Helvetica.svg",
+      "size": 727042,
+      "type": "svg"
+    },
+    "Helvetica.ttf": {
+      "url": "/assets/_shared/fonts/Helvetica.ttf",
+      "size": 317968,
+      "type": "ttf"
+    },
+    "Helvetica.woff": {
+      "url": "/assets/_shared/fonts/Helvetica.woff",
+      "size": 152216,
+      "type": "woff"
+    },
+    "Helvetica.woff2": {
+      "url": "/assets/_shared/fonts/Helvetica.woff2",
+      "size": 104532,
+      "type": "woff2"
+    },
+    "SFCompactDisplay-Black.eot": {
+      "url": "/assets/_shared/fonts/SFCompactDisplay-Black.eot",
+      "size": 410568,
+      "type": "eot"
+    },
+    "SFCompactDisplay-Black.svg": {
+      "url": "/assets/_shared/fonts/SFCompactDisplay-Black.svg",
+      "size": 1763808,
+      "type": "svg"
+    },
+    "SFCompactDisplay-Black.ttf": {
+      "url": "/assets/_shared/fonts/SFCompactDisplay-Black.ttf",
+      "size": 410356,
+      "type": "ttf"
+    },
+    "SFCompactDisplay-Black.woff": {
+      "url": "/assets/_shared/fonts/SFCompactDisplay-Black.woff",
+      "size": 150224,
+      "type": "woff"
+    },
+    "SFCompactDisplay-Black.woff2": {
+      "url": "/assets/_shared/fonts/SFCompactDisplay-Black.woff2",
+      "size": 91744,
+      "type": "woff2"
+    },
+    "SFCompactDisplay-Bold.eot": {
+      "url": "/assets/_shared/fonts/SFCompactDisplay-Bold.eot",
+      "size": 421632,
+      "type": "eot"
+    },
+    "SFCompactDisplay-Bold.svg": {
+      "url": "/assets/_shared/fonts/SFCompactDisplay-Bold.svg",
+      "size": 2251331,
+      "type": "svg"
+    },
+    "SFCompactDisplay-Bold.ttf": {
+      "url": "/assets/_shared/fonts/SFCompactDisplay-Bold.ttf",
+      "size": 421424,
+      "type": "ttf"
+    },
+    "SFCompactDisplay-Bold.woff": {
+      "url": "/assets/_shared/fonts/SFCompactDisplay-Bold.woff",
+      "size": 157372,
+      "type": "woff"
+    },
+    "SFCompactDisplay-Bold.woff2": {
+      "url": "/assets/_shared/fonts/SFCompactDisplay-Bold.woff2",
+      "size": 98924,
+      "type": "woff2"
+    },
+    "SFCompactDisplay-Medium.eot": {
+      "url": "/assets/_shared/fonts/SFCompactDisplay-Medium.eot",
+      "size": 307784,
+      "type": "eot"
+    },
+    "SFCompactDisplay-Medium.svg": {
+      "url": "/assets/_shared/fonts/SFCompactDisplay-Medium.svg",
+      "size": 1353519,
+      "type": "svg"
+    },
+    "SFCompactDisplay-Medium.ttf": {
+      "url": "/assets/_shared/fonts/SFCompactDisplay-Medium.ttf",
+      "size": 307568,
+      "type": "ttf"
+    },
+    "SFCompactDisplay-Medium.woff": {
+      "url": "/assets/_shared/fonts/SFCompactDisplay-Medium.woff",
+      "size": 110608,
+      "type": "woff"
+    },
+    "SFCompactDisplay-Medium.woff2": {
+      "url": "/assets/_shared/fonts/SFCompactDisplay-Medium.woff2",
+      "size": 72716,
+      "type": "woff2"
+    },
+    "SFCompactDisplay-Regular.eot": {
+      "url": "/assets/_shared/fonts/SFCompactDisplay-Regular.eot",
+      "size": 304476,
+      "type": "eot"
+    },
+    "SFCompactDisplay-Regular.svg": {
+      "url": "/assets/_shared/fonts/SFCompactDisplay-Regular.svg",
+      "size": 1291719,
+      "type": "svg"
+    },
+    "SFCompactDisplay-Regular.ttf": {
+      "url": "/assets/_shared/fonts/SFCompactDisplay-Regular.ttf",
+      "size": 304256,
+      "type": "ttf"
+    },
+    "SFCompactDisplay-Regular.woff": {
+      "url": "/assets/_shared/fonts/SFCompactDisplay-Regular.woff",
+      "size": 109092,
+      "type": "woff"
+    },
+    "SFCompactDisplay-Regular.woff2": {
+      "url": "/assets/_shared/fonts/SFCompactDisplay-Regular.woff2",
+      "size": 71564,
+      "type": "woff2"
+    },
+    "SFPro-Regular.eot": {
+      "url": "/assets/_shared/fonts/SFPro-Regular.eot",
+      "size": 2974580,
+      "type": "eot"
+    },
+    "SFPro-Regular.svg": {
+      "url": "/assets/_shared/fonts/SFPro-Regular.svg",
+      "size": 11334220,
+      "type": "svg"
+    },
+    "SFPro-Regular.ttf": {
+      "url": "/assets/_shared/fonts/SFPro-Regular.ttf",
+      "size": 2974408,
+      "type": "ttf"
+    },
+    "SFPro-Regular.woff": {
+      "url": "/assets/_shared/fonts/SFPro-Regular.woff",
+      "size": 1186452,
+      "type": "woff"
+    },
+    "SFPro-Regular.woff2": {
+      "url": "/assets/_shared/fonts/SFPro-Regular.woff2",
+      "size": 815740,
+      "type": "woff2"
+    },
+    "SFProText-Bold.eot": {
+      "url": "/assets/_shared/fonts/SFProText-Bold.eot",
+      "size": 3531764,
+      "type": "eot"
+    },
+    "SFProText-Bold.svg": {
+      "url": "/assets/_shared/fonts/SFProText-Bold.svg",
+      "size": 10842778,
+      "type": "svg"
+    },
+    "SFProText-Bold.ttf": {
+      "url": "/assets/_shared/fonts/SFProText-Bold.ttf",
+      "size": 3531568,
+      "type": "ttf"
+    },
+    "SFProText-Bold.woff": {
+      "url": "/assets/_shared/fonts/SFProText-Bold.woff",
+      "size": 1569860,
+      "type": "woff"
+    },
+    "SFProText-Bold.woff2": {
+      "url": "/assets/_shared/fonts/SFProText-Bold.woff2",
+      "size": 983596,
+      "type": "woff2"
+    },
+    "SFProText-Light.eot": {
+      "url": "/assets/_shared/fonts/SFProText-Light.eot",
+      "size": 3525720,
+      "type": "eot"
+    },
+    "SFProText-Light.svg": {
+      "url": "/assets/_shared/fonts/SFProText-Light.svg",
+      "size": 10590012,
+      "type": "svg"
+    },
+    "SFProText-Light.ttf": {
+      "url": "/assets/_shared/fonts/SFProText-Light.ttf",
+      "size": 3525520,
+      "type": "ttf"
+    },
+    "SFProText-Light.woff": {
+      "url": "/assets/_shared/fonts/SFProText-Light.woff",
+      "size": 1554244,
+      "type": "woff"
+    },
+    "SFProText-Light.woff2": {
+      "url": "/assets/_shared/fonts/SFProText-Light.woff2",
+      "size": 960908,
+      "type": "woff2"
+    },
+    "SFProText-Medium.eot": {
+      "url": "/assets/_shared/fonts/SFProText-Medium.eot",
+      "size": 3543040,
+      "type": "eot"
+    },
+    "SFProText-Medium.svg": {
+      "url": "/assets/_shared/fonts/SFProText-Medium.svg",
+      "size": 10877720,
+      "type": "svg"
+    },
+    "SFProText-Medium.ttf": {
+      "url": "/assets/_shared/fonts/SFProText-Medium.ttf",
+      "size": 3542836,
+      "type": "ttf"
+    },
+    "SFProText-Medium.woff": {
+      "url": "/assets/_shared/fonts/SFProText-Medium.woff",
+      "size": 1577464,
+      "type": "woff"
+    },
+    "SFProText-Medium.woff2": {
+      "url": "/assets/_shared/fonts/SFProText-Medium.woff2",
+      "size": 985716,
+      "type": "woff2"
+    },
+    "SFProText-Regular.eot": {
+      "url": "/assets/_shared/fonts/SFProText-Regular.eot",
+      "size": 3513356,
+      "type": "eot"
+    },
+    "SFProText-Regular.svg": {
+      "url": "/assets/_shared/fonts/SFProText-Regular.svg",
+      "size": 10220187,
+      "type": "svg"
+    },
+    "SFProText-Regular.ttf": {
+      "url": "/assets/_shared/fonts/SFProText-Regular.ttf",
+      "size": 3513148,
+      "type": "ttf"
+    },
+    "SFProText-Regular.woff": {
+      "url": "/assets/_shared/fonts/SFProText-Regular.woff",
+      "size": 1527868,
+      "type": "woff"
+    },
+    "SFProText-Regular.woff2": {
+      "url": "/assets/_shared/fonts/SFProText-Regular.woff2",
+      "size": 940564,
+      "type": "woff2"
+    },
+    "SFProText-Semibold.eot": {
+      "url": "/assets/_shared/fonts/SFProText-Semibold.eot",
+      "size": 3528816,
+      "type": "eot"
+    },
+    "SFProText-Semibold.svg": {
+      "url": "/assets/_shared/fonts/SFProText-Semibold.svg",
+      "size": 10852018,
+      "type": "svg"
+    },
+    "SFProText-Semibold.ttf": {
+      "url": "/assets/_shared/fonts/SFProText-Semibold.ttf",
+      "size": 3528604,
+      "type": "ttf"
+    },
+    "SFProText-Semibold.woff": {
+      "url": "/assets/_shared/fonts/SFProText-Semibold.woff",
+      "size": 1580636,
+      "type": "woff"
+    },
+    "SFProText-Semibold.woff2": {
+      "url": "/assets/_shared/fonts/SFProText-Semibold.woff2",
+      "size": 990988,
+      "type": "woff2"
+    },
+    "SFProText-Thin.eot": {
+      "url": "/assets/_shared/fonts/SFProText-Thin.eot",
+      "size": 3514364,
+      "type": "eot"
+    },
+    "SFProText-Thin.svg": {
+      "url": "/assets/_shared/fonts/SFProText-Thin.svg",
+      "size": 10568505,
+      "type": "svg"
+    },
+    "SFProText-Thin.ttf": {
+      "url": "/assets/_shared/fonts/SFProText-Thin.ttf",
+      "size": 3514168,
+      "type": "ttf"
+    },
+    "SFProText-Thin.woff": {
+      "url": "/assets/_shared/fonts/SFProText-Thin.woff",
+      "size": 1524036,
+      "type": "woff"
+    },
+    "SFProText-Thin.woff2": {
+      "url": "/assets/_shared/fonts/SFProText-Thin.woff2",
+      "size": 937260,
+      "type": "woff2"
+    },
+    "almoni-dl-aaa-400.eot": {
+      "url": "/assets/_shared/fonts/almoni-dl-aaa-400.eot",
+      "size": 54182,
+      "type": "eot"
+    },
+    "almoni-dl-aaa-400.ttf": {
+      "url": "/assets/_shared/fonts/almoni-dl-aaa-400.ttf",
+      "size": 107416,
+      "type": "ttf"
+    },
+    "almoni-dl-aaa-400.woff": {
+      "url": "/assets/_shared/fonts/almoni-dl-aaa-400.woff",
+      "size": 63104,
+      "type": "woff"
+    },
+    "almoni-dl-aaa-900.eot": {
+      "url": "/assets/_shared/fonts/almoni-dl-aaa-900.eot",
+      "size": 54408,
+      "type": "eot"
+    },
+    "almoni-dl-aaa-900.ttf": {
+      "url": "/assets/_shared/fonts/almoni-dl-aaa-900.ttf",
+      "size": 111284,
+      "type": "ttf"
+    },
+    "almoni-dl-aaa-900.woff": {
+      "url": "/assets/_shared/fonts/almoni-dl-aaa-900.woff",
+      "size": 63568,
+      "type": "woff"
+    },
+    "banner_grid.svg": {
+      "url": "/assets/_shared/fonts/banner_grid.svg",
+      "size": 3783,
+      "type": "svg"
+    },
+    "bigribbon.svg": {
+      "url": "/assets/_shared/fonts/bigribbon.svg",
+      "size": 2391661,
+      "type": "svg"
+    },
+    "calenderimg.svg": {
+      "url": "/assets/_shared/fonts/calenderimg.svg",
+      "size": 4424,
+      "type": "svg"
+    },
+    "carminus.svg": {
+      "url": "/assets/_shared/fonts/carminus.svg",
+      "size": 204,
+      "type": "svg"
+    },
+    "carplus.svg": {
+      "url": "/assets/_shared/fonts/carplus.svg",
+      "size": 311,
+      "type": "svg"
+    },
+    "faq_minus.svg": {
+      "url": "/assets/_shared/fonts/faq_minus.svg",
+      "size": 573,
+      "type": "svg"
+    },
+    "faq_plus.svg": {
+      "url": "/assets/_shared/fonts/faq_plus.svg",
+      "size": 653,
+      "type": "svg"
+    },
+    "fonts.json": {
+      "url": "/assets/_shared/fonts/fonts.json",
+      "size": 17410,
+      "type": "json"
+    },
+    "footerphmob.svg": {
+      "url": "/assets/_shared/fonts/footerphmob.svg",
+      "size": 1397,
+      "type": "svg"
+    },
+    "footerwhatsmob.svg": {
+      "url": "/assets/_shared/fonts/footerwhatsmob.svg",
+      "size": 2375,
+      "type": "svg"
+    },
+    "footmearow.svg": {
+      "url": "/assets/_shared/fonts/footmearow.svg",
+      "size": 807,
+      "type": "svg"
+    },
+    "global_layer.svg": {
+      "url": "/assets/_shared/fonts/global_layer.svg",
+      "size": 722,
+      "type": "svg"
+    },
+    "hamburger.svg": {
+      "url": "/assets/_shared/fonts/hamburger.svg",
+      "size": 796,
+      "type": "svg"
+    },
+    "hamburger_white.svg": {
+      "url": "/assets/_shared/fonts/hamburger_white.svg",
+      "size": 280,
+      "type": "svg"
+    },
+    "instagram.svg": {
+      "url": "/assets/_shared/fonts/instagram.svg",
+      "size": 4270,
+      "type": "svg"
+    },
+    "jumping_1-1.svg": {
+      "url": "/assets/_shared/fonts/jumping_1-1.svg",
+      "size": 905411,
+      "type": "svg"
+    },
+    "jumping_2-1.svg": {
+      "url": "/assets/_shared/fonts/jumping_2-1.svg",
+      "size": 871409,
+      "type": "svg"
+    },
+    "jumping_3-1.svg": {
+      "url": "/assets/_shared/fonts/jumping_3-1.svg",
+      "size": 570681,
+      "type": "svg"
+    },
+    "logo_732.svg": {
+      "url": "/assets/_shared/fonts/logo_732.svg",
+      "size": 73831,
+      "type": "svg"
+    },
+    "logo_733.svg": {
+      "url": "/assets/_shared/fonts/logo_733.svg",
+      "size": 4610,
+      "type": "svg"
+    },
+    "logo_736.svg": {
+      "url": "/assets/_shared/fonts/logo_736.svg",
+      "size": 2867,
+      "type": "svg"
+    },
+    "logo_biz_735.svg": {
+      "url": "/assets/_shared/fonts/logo_biz_735.svg",
+      "size": 87637,
+      "type": "svg"
+    },
+    "logo_mako_734.svg": {
+      "url": "/assets/_shared/fonts/logo_mako_734.svg",
+      "size": 20152,
+      "type": "svg"
+    },
+    "logo_marker_731.svg": {
+      "url": "/assets/_shared/fonts/logo_marker_731.svg",
+      "size": 111119,
+      "type": "svg"
+    },
+    "menuarowdesk.svg": {
+      "url": "/assets/_shared/fonts/menuarowdesk.svg",
+      "size": 458,
+      "type": "svg"
+    },
+    "mobmenuicon.svg": {
+      "url": "/assets/_shared/fonts/mobmenuicon.svg",
+      "size": 444,
+      "type": "svg"
+    },
+    "oursteakblue.svg": {
+      "url": "/assets/_shared/fonts/oursteakblue.svg",
+      "size": 618,
+      "type": "svg"
+    },
+    "phmobicon.svg": {
+      "url": "/assets/_shared/fonts/phmobicon.svg",
+      "size": 1633,
+      "type": "svg"
+    },
+    "portolio_layer.svg": {
+      "url": "/assets/_shared/fonts/portolio_layer.svg",
+      "size": 841,
+      "type": "svg"
+    },
+    "suridata_logo.svg": {
+      "url": "/assets/_shared/fonts/suridata_logo.svg",
+      "size": 61266,
+      "type": "svg"
+    },
+    "tickerxlose.svg": {
+      "url": "/assets/_shared/fonts/tickerxlose.svg",
+      "size": 1085,
+      "type": "svg"
+    },
+    "togleclose.svg": {
+      "url": "/assets/_shared/fonts/togleclose.svg",
+      "size": 692,
+      "type": "svg"
+    },
+    "triolla.svg": {
+      "url": "/assets/_shared/fonts/triolla.svg",
+      "size": 4918,
+      "type": "svg"
+    },
+    "whatmobicon.svg": {
+      "url": "/assets/_shared/fonts/whatmobicon.svg",
+      "size": 2383,
+      "type": "svg"
+    }
+  }
+}
