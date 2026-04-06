@@ -17,3 +17,30 @@
   white-space: nowrap;
   display: inline-block;
 }
+
+/* FIX: RTL positioning for portfolio jump SVGs */
+/* These are animated floating SVGs in the portfolio section */
+/* In RTL layout, left: values should be right: values */
+
+/* Main portfolio section - fix jump_2 from left to right */
+.portfolio_jump_2 {
+  position: absolute !important;
+  left: auto !important;
+  right: -42px !important;
+}
+
+/* Contact section overrides - fix left: to right: */
+.contact_main_left .portfolio_jump_2 {
+  left: auto !important;
+  right: 0px !important;
+}
+
+.contact_main_left .portfolio_jump_3 {
+  left: auto !important;
+  right: 170px !important;
+}
+
+/* Also fix line 755 which has left: 100px */
+.contact_main_left .portfolio_jump_3 {
+  right: 100px !important;
+}
