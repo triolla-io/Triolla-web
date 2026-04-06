@@ -71,7 +71,38 @@ h2 {
   background-size: contain !important;
 }
 
-/* 9. Ensure SFProText font is available as fallback */
+/* 9. Hide reveal elements initially until .show class is added */
+.global_logos,
+.global_con,
+.portfolio_text,
+.design_wrap,
+.design_bullets ul,
+.partners_with,
+.abthretop,
+.abthrebot,
+.portfolio_why,
+.portfolio_faq_wrap {
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+  pointer-events: none;
+}
+
+/* Make them visible when .show class is added */
+.global_logos.show,
+.global_con.show,
+.portfolio_text.show,
+.design_wrap.show,
+.design_bullets ul.show,
+.partners_with.show,
+.abthretop.show,
+.abthrebot.show,
+.portfolio_why.show,
+.portfolio_faq_wrap.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* 10. Ensure SFProText font is available as fallback */
 body,
 body * {
   font-family: 'SFProText', 'SF Pro', -apple-system, BlinkMacSystemFont, sans-serif !important;
