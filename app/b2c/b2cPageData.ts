@@ -26,8 +26,8 @@ const B2C_COMPANY_TICKER = [
 
 const B2C_ITEMS_EN: PortfolioPageData["portfolioItems"] = [
   {
-    logo: `${B}/Tadiran.png`,
-    desktopImg: `${B}/Tadiran-1.png`,
+    logo: `${B}/Tadiran-1.png`,
+    desktopImg: `${B}/Tadiran.png`,
     mobileImg: `${B}/Tadiran-mobile-1-1.png`,
     title:
       "Reimagining climate control—Tadiran’s app lets users manage their indoor environment effortlessly, anytime, anywhere.",
