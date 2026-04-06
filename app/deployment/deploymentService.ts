@@ -56,10 +56,11 @@ export async function gitCommitAndPush(
 export async function isDeploymentAlreadyRunning(): Promise<boolean> {
   const url = `${process.env.COOLIFY_API_URL}/api/v1/deployments?applicationId=${process.env.COOLIFY_APP_UUID}&per_page=1`;
   const res = await fetch(url, { headers: coolifyHeaders() });
-  console.log('!!!!!!CHECKING DEPL*****************', res);
   if (!res.ok) return false;
   const data = await res.json();
+  console.log('*******************DATA DEPL*****************', data);
   const latest = Array.isArray(data) ? data[0] : data?.data?.[0];
+  console.log('*******************LATEST DEPL*****************', latest);
   if (!latest) return false;
   const status: CoolifyDeploymentStatus = latest.status;
   return status === "in_progress" || status === "queued";
