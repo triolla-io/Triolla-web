@@ -53,14 +53,16 @@ export async function gitCommitAndPush(
 
 // ─── Coolify ──────────────────────────────────────────────────────────────────
 
-export async function isDeploymentAlreadyRunning(): Promise<boolean> {
-  const url = `${process.env.COOLIFY_API_URL}/api/v1/deployments?applicationId=${process.env.COOLIFY_APP_UUID}&per_page=1`;
+async function fetchLatestDeployment() {
+  const url = `${process.env.COOLIFY_API_URL}/api/v1/deployments/applications/${process.env.COOLIFY_APP_UUID}?take=1`;
   const res = await fetch(url, { headers: coolifyHeaders() });
-  console.log('************RES DEPL************', res);
-  if (!res.ok) return false;
+  if (!res.ok) return null;
   const data = await res.json();
-  console.log('!!!******DATA DEPL****!!!***', data);
-  const latest = Array.isArray(data) ? data[0] : data?.data?.[0];
+  return data?.deployments?.[0] ?? null;
+}
+
+export async function isDeploymentAlreadyRunning(): Promise<boolean> {
+  const latest = await fetchLatestDeployment();
   console.log('*******************LATEST DEPL*****************', latest);
   if (!latest) return false;
   const status: CoolifyDeploymentStatus = latest.status;
@@ -68,17 +70,11 @@ export async function isDeploymentAlreadyRunning(): Promise<boolean> {
 }
 
 export async function getLatestDeploymentId(): Promise<string> {
-  const url = `${process.env.COOLIFY_API_URL}/api/v1/deployments?applicationId=${process.env.COOLIFY_APP_UUID}&per_page=1`;
-  const res = await fetch(url, { headers: coolifyHeaders() });
-  if (!res.ok) {
-    throw new Error(`Coolify API error: ${res.status} ${res.statusText}`);
-  }
-  const data = await res.json();
-  const latest = Array.isArray(data) ? data[0] : data?.data?.[0];
-  if (!latest?.uuid) {
+  const latest = await fetchLatestDeployment();
+  if (!latest?.deployment_uuid) {
     throw new Error("No deployments found for this application");
   }
-  return latest.uuid;
+  return latest.deployment_uuid;
 }
 
 export async function getDeploymentStatus(
