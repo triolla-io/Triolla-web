@@ -12,33 +12,33 @@
 /* Hebrew fonts */
 @font-face {
   font-family: 'Almoni DL AAA';
-  src: url('/assets/_fonts/almoni-dl-aaa-400.woff') format('woff'),
-       url('/assets/_fonts/almoni-dl-aaa-400.ttf') format('truetype');
+  src: url('/assets/_shared/fonts/almoni-dl-aaa-400.woff') format('woff'),
+       url('/assets/_shared/fonts/almoni-dl-aaa-400.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Almoni DL AAA';
-  src: url('/assets/_fonts/AlmoniDLAAA-Bold.woff2') format('woff2'),
-       url('/assets/_fonts/AlmoniDLAAA-Bold.woff') format('woff'),
-       url('/assets/_fonts/AlmoniDLAAA-Bold.ttf') format('truetype');
+  src: url('/assets/_shared/fonts/AlmoniDLAAA-Bold.woff2') format('woff2'),
+       url('/assets/_shared/fonts/AlmoniDLAAA-Bold.woff') format('woff'),
+       url('/assets/_shared/fonts/AlmoniDLAAA-Bold.ttf') format('truetype');
   font-weight: 700 900;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Almoni ML v5 AAA';
-  src: url('/assets/_fonts/AlmoniMLv5AAA-Regular.woff2') format('woff2'),
-       url('/assets/_fonts/AlmoniMLv5AAA-Regular.woff') format('woff');
+  src: url('/assets/_shared/fonts/AlmoniMLv5AAA-Regular.woff2') format('woff2'),
+       url('/assets/_shared/fonts/AlmoniMLv5AAA-Regular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Almoni ML v5 AAA';
-  src: url('/assets/_fonts/AlmoniMLv5AAA-Bold.woff2') format('woff2'),
-       url('/assets/_fonts/AlmoniMLv5AAA-Bold.woff') format('woff');
+  src: url('/assets/_shared/fonts/AlmoniMLv5AAA-Bold.woff2') format('woff2'),
+       url('/assets/_shared/fonts/AlmoniMLv5AAA-Bold.woff') format('woff');
   font-weight: 700 900;
   font-style: normal;
   font-display: swap;
@@ -55,8 +55,8 @@
 
 @font-face {
   font-family: 'CoreNaraeProW01-Pro';
-  src: url('/assets/_fonts/CoreNaraeProW01-Pro.woff2') format('woff2'),
-       url('/assets/_fonts/CoreNaraeProW01-Pro.woff') format('woff');
+  src: url('/assets/_shared/fonts/CoreNaraeProW01-Pro.woff2') format('woff2'),
+       url('/assets/_shared/fonts/CoreNaraeProW01-Pro.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -64,72 +64,72 @@
 .font-corenarae { font-family: 'CoreNaraeProW01-Pro', sans-serif; }
 @font-face {
   font-family: 'SFProText';
-  src: url('/assets/_fonts/SFProText-Thin.woff2') format('woff2'),
-       url('/assets/_fonts/SFProText-Thin.woff') format('woff'),
-       url('/assets/_fonts/SFProText-Thin.ttf') format('truetype');
+  src: url('/assets/_shared/fonts/SFProText-Thin.woff2') format('woff2'),
+       url('/assets/_shared/fonts/SFProText-Thin.woff') format('woff'),
+       url('/assets/_shared/fonts/SFProText-Thin.ttf') format('truetype');
   font-weight: 100;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'SFProText';
-  src: url('/assets/_fonts/SFProText-Light.woff2') format('woff2'),
-       url('/assets/_fonts/SFProText-Light.woff') format('woff'),
-       url('/assets/_fonts/SFProText-Light.ttf') format('truetype');
+  src: url('/assets/_shared/fonts/SFProText-Light.woff2') format('woff2'),
+       url('/assets/_shared/fonts/SFProText-Light.woff') format('woff'),
+       url('/assets/_shared/fonts/SFProText-Light.ttf') format('truetype');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'SFProText';
-  src: url('/assets/_fonts/SFProText-Regular.woff2') format('woff2'),
-       url('/assets/_fonts/SFProText-Regular.woff') format('woff'),
-       url('/assets/_fonts/SFProText-Regular.ttf') format('truetype');
+  src: url('/assets/_shared/fonts/SFProText-Regular.woff2') format('woff2'),
+       url('/assets/_shared/fonts/SFProText-Regular.woff') format('woff'),
+       url('/assets/_shared/fonts/SFProText-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'SFProText';
-  src: url('/assets/_fonts/SFProText-Medium.woff2') format('woff2'),
-       url('/assets/_fonts/SFProText-Medium.woff') format('woff'),
-       url('/assets/_fonts/SFProText-Medium.ttf') format('truetype');
+  src: url('/assets/_shared/fonts/SFProText-Medium.woff2') format('woff2'),
+       url('/assets/_shared/fonts/SFProText-Medium.woff') format('woff'),
+       url('/assets/_shared/fonts/SFProText-Medium.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'SFProText';
-  src: url('/assets/_fonts/SFProText-Semibold.woff2') format('woff2'),
-       url('/assets/_fonts/SFProText-Semibold.woff') format('woff'),
-       url('/assets/_fonts/SFProText-Semibold.ttf') format('truetype');
+  src: url('/assets/_shared/fonts/SFProText-Semibold.woff2') format('woff2'),
+       url('/assets/_shared/fonts/SFProText-Semibold.woff') format('woff'),
+       url('/assets/_shared/fonts/SFProText-Semibold.ttf') format('truetype');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'SFProText';
-  src: url('/assets/_fonts/SFProText-Bold.woff2') format('woff2'),
-       url('/assets/_fonts/SFProText-Bold.woff') format('woff'),
-       url('/assets/_fonts/SFProText-Bold.ttf') format('truetype');
+  src: url('/assets/_shared/fonts/SFProText-Bold.woff2') format('woff2'),
+       url('/assets/_shared/fonts/SFProText-Bold.woff') format('woff'),
+       url('/assets/_shared/fonts/SFProText-Bold.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Helvetica';
-  src: url('/assets/_fonts/Helvetica.woff2') format('woff2'),
-       url('/assets/_fonts/Helvetica.woff') format('woff'),
-       url('/assets/_fonts/Helvetica.ttf') format('truetype');
+  src: url('/assets/_shared/fonts/Helvetica.woff2') format('woff2'),
+       url('/assets/_shared/fonts/Helvetica.woff') format('woff'),
+       url('/assets/_shared/fonts/Helvetica.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Helvetica';
-  src: url('/assets/_fonts/Helvetica-Bold.woff2') format('woff2'),
-       url('/assets/_fonts/Helvetica-Bold.woff') format('woff'),
-       url('/assets/_fonts/Helvetica-Bold.ttf') format('truetype');
+  src: url('/assets/_shared/fonts/Helvetica-Bold.woff2') format('woff2'),
+       url('/assets/_shared/fonts/Helvetica-Bold.woff') format('woff'),
+       url('/assets/_shared/fonts/Helvetica-Bold.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
