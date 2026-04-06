@@ -1,0 +1,219 @@
+{
+  "timestamp": "2026-04-06T13:00:00Z",
+  "totalAssets": 716,
+  "duplicateFiles": 260,
+  "potentialSavings": {
+    "bytes": 152570344,
+    "megabytes": "145.5"
+  },
+  "consolidationStrategy": {
+    "sharedAssets": 207,
+    "fonts": 122,
+    "images": 35,
+    "css": 16,
+    "js": 34,
+    "assetLocation": "/assets/_shared/"
+  },
+  "duplicates": {
+    "vendor-theme.min.js_a3a18dac.js": {
+      "occurrences": 125,
+      "consolidatedPath": "/assets/_shared/vendor-theme.min.js_a3a18dac.js"
+    },
+    "v8c78df7c7c0f484497ecbca7046644da1771523124516.js": {
+      "occurrences": 125,
+      "consolidatedPath": "/assets/_shared/v8c78df7c7c0f484497ecbca7046644da1771523124516.js"
+    },
+    "utils.min.js_f287a8f0.js": {
+      "occurrences": 125,
+      "consolidatedPath": "/assets/_shared/utils.min.js_f287a8f0.js"
+    },
+    "togleclose.svg": {
+      "occurrences": 125,
+      "consolidatedPath": "/assets/_shared/togleclose.svg"
+    },
+    "svgs-inline-min.js": {
+      "occurrences": 125,
+      "consolidatedPath": "/assets/_shared/svgs-inline-min.js"
+    },
+    "sqlink_icon.png": {
+      "occurrences": 125,
+      "consolidatedPath": "/assets/_shared/sqlink_icon.png"
+    },
+    "phmobicon.svg": {
+      "occurrences": 125,
+      "consolidatedPath": "/assets/_shared/phmobicon.svg"
+    },
+    "main.js_a1459148.js": {
+      "occurrences": 125,
+      "consolidatedPath": "/assets/_shared/main.js_a1459148.js"
+    },
+    "lottie.min.js_2af44128.js": {
+      "occurrences": 125,
+      "consolidatedPath": "/assets/_shared/lottie.min.js_2af44128.js"
+    },
+    "logo_marker_731.svg": {
+      "occurrences": 125,
+      "consolidatedPath": "/assets/_shared/logo_marker_731.svg"
+    },
+    "logo_mako_734.svg": {
+      "occurrences": 125,
+      "consolidatedPath": "/assets/_shared/logo_mako_734.svg"
+    },
+    "logo_736.svg": {
+      "occurrences": 125,
+      "consolidatedPath": "/assets/_shared/logo_736.svg"
+    },
+    "jumping_3-1.svg": {
+      "occurrences": 125,
+      "consolidatedPath": "/assets/_shared/jumping_3-1.svg"
+    },
+    "jquery.bez.min.js_edabec9e.js": {
+      "occurrences": 125,
+      "consolidatedPath": "/assets/_shared/jquery.bez.min.js_edabec9e.js"
+    },
+    "jquery-migrate.min.js_558973c0.js": {
+      "occurrences": 125,
+      "consolidatedPath": "/assets/_shared/jquery-migrate.min.js_558973c0.js"
+    },
+    "image-745.png": {
+      "occurrences": 125,
+      "consolidatedPath": "/assets/_shared/image-745.png"
+    },
+    "image-740.png": {
+      "occurrences": 125,
+      "consolidatedPath": "/assets/_shared/image-740.png"
+    },
+    "hooks.min.js_4fddbd9c.js": {
+      "occurrences": 125,
+      "consolidatedPath": "/assets/_shared/hooks.min.js_4fddbd9c.js"
+    },
+    "hamburger.svg": {
+      "occurrences": 125,
+      "consolidatedPath": "/assets/_shared/hamburger.svg"
+    },
+    "gdpr-logo.png": {
+      "occurrences": 125,
+      "consolidatedPath": "/assets/_shared/gdpr-logo.png"
+    },
+    "footerwhatsmob.svg": {
+      "occurrences": 125,
+      "consolidatedPath": "/assets/_shared/footerwhatsmob.svg"
+    },
+    "favicon.ico": {
+      "occurrences": 125,
+      "consolidatedPath": "/assets/_shared/favicon.ico"
+    },
+    "email-decode.min.js": {
+      "occurrences": 125,
+      "consolidatedPath": "/assets/_shared/email-decode.min.js"
+    },
+    "all.js_a1459148.js": {
+      "occurrences": 125,
+      "consolidatedPath": "/assets/_shared/all.js_a1459148.js"
+    },
+    "TweenMax.min.js_edabec9e.js": {
+      "occurrences": 125,
+      "consolidatedPath": "/assets/_shared/TweenMax.min.js_edabec9e.js"
+    },
+    "Frame-2147224208.png": {
+      "occurrences": 125,
+      "consolidatedPath": "/assets/_shared/Frame-2147224208.png"
+    },
+    "wow.js_a1459148.js": {
+      "occurrences": 124,
+      "consolidatedPath": "/assets/_shared/wow.js_a1459148.js"
+    },
+    "widget.js_a1459148.js": {
+      "occurrences": 124,
+      "consolidatedPath": "/assets/_shared/widget.js_a1459148.js"
+    },
+    "whatmobicon.svg": {
+      "occurrences": 124,
+      "consolidatedPath": "/assets/_shared/whatmobicon.svg"
+    },
+    "triolla.svg": {
+      "occurrences": 124,
+      "consolidatedPath": "/assets/_shared/triolla.svg"
+    },
+    "tickerxlose.svg": {
+      "occurrences": 124,
+      "consolidatedPath": "/assets/_shared/tickerxlose.svg"
+    },
+    "svgs-attachment.css_2af44128.css": {
+      "occurrences": 124,
+      "consolidatedPath": "/assets/_shared/svgs-attachment.css_2af44128.css"
+    },
+    "style.min.css_edabec9e.css": {
+      "occurrences": 124,
+      "consolidatedPath": "/assets/_shared/style.min.css_edabec9e.css"
+    },
+    "style.css_2af44128.css": {
+      "occurrences": 124,
+      "consolidatedPath": "/assets/_shared/style.css_2af44128.css"
+    },
+    "scripts-theme.min.js_39b5a2d5.js": {
+      "occurrences": 124,
+      "consolidatedPath": "/assets/_shared/scripts-theme.min.js_39b5a2d5.js"
+    },
+    "placeholders.jquery.min.js_13f93b15.js": {
+      "occurrences": 124,
+      "consolidatedPath": "/assets/_shared/placeholders.jquery.min.js_13f93b15.js"
+    },
+    "owl.carousel.js_2af44128.js": {
+      "occurrences": 124,
+      "consolidatedPath": "/assets/_shared/owl.carousel.js_2af44128.js"
+    },
+    "owl.carousel.css_2af44128.css": {
+      "occurrences": 124,
+      "consolidatedPath": "/assets/_shared/owl.carousel.css_2af44128.css"
+    },
+    "ml-responsive.css_2af44128.css": {
+      "occurrences": 124,
+      "consolidatedPath": "/assets/_shared/ml-responsive.css_2af44128.css"
+    },
+    "metaview.js_2af44128.js": {
+      "occurrences": 124,
+      "consolidatedPath": "/assets/_shared/metaview.js_2af44128.js"
+    },
+    "logo_new.png": {
+      "occurrences": 124,
+      "consolidatedPath": "/assets/_shared/logo_new.png"
+    },
+    "logo_biz_735.svg": {
+      "occurrences": 124,
+      "consolidatedPath": "/assets/_shared/logo_biz_735.svg"
+    },
+    "logo_733.svg": {
+      "occurrences": 124,
+      "consolidatedPath": "/assets/_shared/logo_733.svg"
+    },
+    "language-cookie.js_2af44128.js": {
+      "occurrences": 124,
+      "consolidatedPath": "/assets/_shared/language-cookie.js_2af44128.js"
+    },
+    "jumping_2-1.svg": {
+      "occurrences": 124,
+      "consolidatedPath": "/assets/_shared/jumping_2-1.svg"
+    },
+    "jumping_1-1.svg": {
+      "occurrences": 124,
+      "consolidatedPath": "/assets/_shared/jumping_1-1.svg"
+    },
+    "jquery.min.js_f43b551b.js": {
+      "occurrences": 124,
+      "consolidatedPath": "/assets/_shared/jquery.min.js_f43b551b.js"
+    },
+    "jquery.json.min.js_13f93b15.js": {
+      "occurrences": 124,
+      "consolidatedPath": "/assets/_shared/jquery.json.min.js_13f93b15.js"
+    },
+    "jquery.jConveyorTicker.min.js_edabec9e.js": {
+      "occurrences": 124,
+      "consolidatedPath": "/assets/_shared/jquery.jConveyorTicker.min.js_edabec9e.js"
+    },
+    "jquery.jConveyorTicker.min.css_edabec9e.css": {
+      "occurrences": 124,
+      "consolidatedPath": "/assets/_shared/jquery.jConveyorTicker.min.css_edabec9e.css"
+    }
+  }
+}
