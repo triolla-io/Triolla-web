@@ -131,14 +131,8 @@ export default function Header() {
           {/* Logo */}
           <div className="logo">
             <Link href={withLocalePrefix("/", locale)}>
-              <Image
-                src="/images/logo_new.png"
-                alt="Triolla"
-                width={79}
-                height={38}
-                priority
-                className="h-[20px] w-auto min-[768px]:h-[37px] max-[1023px]:brightness-0"
-              />
+              <img className="logoimg" alt="Triolla" src="/images/logo_triolla.svg" style={{ height: 20 }} />
+              <span>Formally Pitangoux</span>
             </Link>
           </div>
 
