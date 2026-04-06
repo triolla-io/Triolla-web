@@ -405,7 +405,7 @@
 
   #winners-section {
     padding: 102px 0;
-    background: url(win_bg.png) no-repeat;
+    background: url(/assets/_shared/win_bg.png) no-repeat;
     background-size: cover;
 }
 
