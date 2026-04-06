@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { generatePageMetadata } from "./lib/metadata";
 import { HomeClient } from "./HomeClient";
+import { PublishButton } from "./components/PublishButton";
 
 export const metadata: Metadata = generatePageMetadata({
   title: "Triolla - Web Design & App Development",
@@ -12,5 +13,10 @@ export const metadata: Metadata = generatePageMetadata({
 });
 
 export default function HomePage() {
-  return <HomeClient />;
+  return (
+    <>
+      <PublishButton /> {/* TODO: remove this button */}
+      <HomeClient />
+    </>
+  );
 }

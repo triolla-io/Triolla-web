@@ -6,6 +6,7 @@
 /pipeline/
 /web/
 /.git_web_backup/
+/.vscode/
 
 # Planning docs
 *.md
