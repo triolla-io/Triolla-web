@@ -1,0 +1,105 @@
+
+> web@0.1.0 regression:home
+> node scripts/visual-regression/index.js --page=home --viewport=desktop --language=en
+
+
+
+┌──────────────────────────────────────────────────────────┐
+│ Visual Regression Pipeline                               │
+├──────────────────────────────────────────────────────────┤
+│ Test: home-desktop-en                                      │
+│ Viewport: 1920×1080px                                     │
+│ Language: en                                               │
+└──────────────────────────────────────────────────────────┘
+
+🎬 CAPTURE PHASE
+────────────────────────────────────────────────────────────
+
+📸 Original WP Site
+  📸 Original: https://triolla.io/
+     ✅ Page loaded
+     ✅ Images loaded
+     📊 Page info - Body: 10052px, HTML: 10052px
+     📄 Title: "Triolla-Product UX/UI Design Studio"
+     🎠 Carousels found: 2
+     📐 Grids found: 3
+     👁️  Hidden elements: 1
+     📜 Scrolling through page...
+     📐 Initial page height: 10052px, viewport: 1080px
+     📐 Page height: 10052px, viewport: 1080px
+     ⬇️  Scrolled 0%     ⬇️  Scrolled 20%     ⬇️  Scrolled 40%     ⬇️  Scrolled 60%     ⬇️  Scrolled 80%     ⬇️  Scrolled 100%     ✅ Scroll complete
+     ⏳ Waiting for scroll animations to stabilize...
+     ✅ Page stable
+     📍 Capture position - Scroll: 0px, Page height: 12072px
+     ✅ Screenshot captured (full-page)
+
+🚀 Current React Version
+  📸 Current: http://localhost:3000/
+     ✅ Page loaded
+     ✅ Images loaded
+     📊 Page info - Body: 15539px, HTML: 15539px
+     📄 Title: "Triolla - Web Design & App Development"
+     🎠 Carousels found: 2
+     📐 Grids found: 3
+     👁️  Hidden elements: 10
+     📜 Scrolling through page...
+     📐 Initial page height: 15539px, viewport: 1080px
+     📐 Page height: 15539px, viewport: 1080px
+     ⬇️  Scrolled 0%     ⬇️  Scrolled 20%     ⬇️  Scrolled 40%     ⬇️  Scrolled 60%     ⬇️  Scrolled 80%     ⬇️  Scrolled 100%     ✅ Scroll complete
+     ⏳ Waiting for scroll animations to stabilize...
+     ✅ Page stable
+     📍 Capture position - Scroll: 0px, Page height: 15539px
+     ✅ Screenshot captured (full-page)
+
+✅ Screenshots saved
+   Original: /Users/ariell/html-to-react/reports/home-desktop-en/original.png
+   Current:  /Users/ariell/html-to-react/reports/home-desktop-en/current.png
+
+🔍 DIFF PHASE
+────────────────────────────────────────────────────────────
+
+  📖 Loading screenshots...
+  ✅ Loaded: Original 1920x12072px, Current 1920x15539px
+  ⚠️  Dimensions differ, resizing to match...
+     Original: 1920x12072 → 1920x15539
+  ✅ Resized to: 1920x15539px
+  🔄 Running pixelmatch...
+  ✅ Comparison complete
+
+  🎨 Generating heatmap...
+  ✅ Heatmap generated
+
+📊 RESULTS
+────────────────────────────────────────────────────────────
+  Match:        68.59%
+  Different:    9,371,928 pixels
+  Total:        29,834,880 pixels
+  Diff ratio:   31.4127%
+
+  🗺️  Analyzing diff regions...
+  Found: 10 main diff regions
+
+┌──────────────────────────────────────────────────────────┐
+│ ✅ PIPELINE COMPLETE                                      │
+├──────────────────────────────────────────────────────────┤
+│ Match: 68.59%                                            │
+│ Different: 9,371,928 pixels                              │
+│ Duration: 172.5s                                         │
+├──────────────────────────────────────────────────────────┤
+│ Report: reports/home-desktop-en                          │
+└──────────────────────────────────────────────────────────┘
+
+📋 ACCEPTANCE CRITERIA
+────────────────────────────────────────────────────────────
+  Match ≥99%: ❌ 68.59%
+  Pixels ≤5000: ❌ 9,371,928
+  Console errors ≤0: ✅ 0
+
+⚠️  SOME CRITERIA FAILED
+
+📂 Generated Files:
+   Original:  /Users/ariell/html-to-react/reports/home-desktop-en/original.png
+   Current:   /Users/ariell/html-to-react/reports/home-desktop-en/current.png
+   Heatmap:   /Users/ariell/html-to-react/reports/home-desktop-en/heatmap.png
+   Diff:      /Users/ariell/html-to-react/reports/home-desktop-en/diff-raw.png
+   Report:    /Users/ariell/html-to-react/reports/home-desktop-en/report.html
