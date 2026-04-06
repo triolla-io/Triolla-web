@@ -37,6 +37,7 @@ function coolifyHeaders(): HeadersInit {
 
 export async function checkGitStatus(): Promise<boolean> {
   const { stdout } = await run("git status --porcelain");
+  console.log("git status --porcelain done", stdout);
   return stdout.length > 0;
 }
 
