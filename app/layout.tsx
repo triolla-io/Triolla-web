@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { JsonLd } from "./components/JsonLd";
 import { organizationJsonLd, websiteJsonLd } from "./lib/structured-data";
 import { Geist, Geist_Mono } from "next/font/google";
-import "../src/app/globals.css";
-import "../src/app/triolla-snapshot-mobile-nav.css";
+import "./globals.css";
+import "./triolla-snapshot-mobile-nav.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
