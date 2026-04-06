@@ -124,7 +124,7 @@ export type DeploymentPipelineResult =
   | { ok: false; reason: "already_running" | "nothing_to_commit" | "failed"; error?: string };
 
 export async function runDeploymentPipeline(commitMessage: string): Promise<DeploymentPipelineResult> {
-  console.log('****************CHECKING DEPL');
+  console.log('****************CHECKING DEPL*****************');
   const alreadyRunning = await isDeploymentAlreadyRunning();
   if (alreadyRunning) return { ok: false, reason: "already_running" };
 
