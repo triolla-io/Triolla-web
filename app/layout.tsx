@@ -4,6 +4,7 @@ import { organizationJsonLd, websiteJsonLd } from "./lib/structured-data";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import "./triolla-snapshot-mobile-nav.css";
+import "../public/assets/_shared/fonts/fonts.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

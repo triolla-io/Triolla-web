@@ -25,7 +25,10 @@
     "seo:loop": "node ./node_modules/tsx/dist/cli.mjs app/scripts/seo-loop.ts",
     "deduplicate:safe": "node scripts/safe-deduplicate-assets.js",
     "regression": "node scripts/visual-regression/index.js",
-    "regression:home": "node scripts/visual-regression/index.js --page=home --viewport=desktop --language=en"
+    "regression:home": "node scripts/visual-regression/index.js --page=home --viewport=desktop --language=en",
+    "regression:diagnose": "node scripts/visual-regression/height-diagnostic.js",
+    "regression:dom-sizes": "node scripts/visual-regression/dom-size-diagnostic.js",
+    "regression:carousels": "node scripts/visual-regression/carousel-diagnostic.js"
   },
   "dependencies": {
     "framer-motion": "^12.38.0",
