@@ -1,8 +1,8 @@
 import { readFile, writeFile } from "fs/promises";
-import { join } from "path";
 import type { Tool } from "./tools";
+import { PATHS } from "../deployment-agent/config";
 
-const CONTENT_FILE = join(process.cwd(), "content/mock-data.json");
+const CONTENT_FILE = PATHS.contentLocal;
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 

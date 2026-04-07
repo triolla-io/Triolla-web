@@ -1,7 +1,7 @@
 import { readFile, writeFile } from "fs/promises";
-import { join } from "path";
+import { PATHS } from "./config";
 
-const RECEIPT_FILE = join(process.cwd(), "content/deployment-receipt.json");
+const RECEIPT_FILE = PATHS.receipt;
 
 export type DeploymentReceipt = {
   deploymentId: string;
