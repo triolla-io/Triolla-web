@@ -48,13 +48,10 @@ export async function gitCommitAndPush(
 ): Promise<{ commitHash: string }> {
   const safeMessage = message.replace(/"/g, "'");
   await run("git add -A");
-  console.log("git add -A done");
   await run(`git commit -m "${safeMessage}"`);
-  console.log("git push --set-upstream origin HEAD done");
   await run("git push --set-upstream origin HEAD");
-  console.log("git rev-parse HEAD done");
   const { stdout: commitHash } = await run("git rev-parse HEAD");
-  console.log("aaa try!!!!!!commit hash done", commitHash);
+  console.log("aaa!!!!!!commit hash done", commitHash);
   return { commitHash };
 }
 
