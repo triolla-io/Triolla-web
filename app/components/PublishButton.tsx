@@ -17,14 +17,16 @@ const COLORS = {
 export function PublishButton() {
   const [phase, setPhase] = useState<StartPhase>("idle");
   const [deploymentId, setDeploymentId] = useState<string | null>(null);
-  const [mockVersion, setMockVersion] = useState<number | null>(null);
+  const [mockData, setMockData] = useState<{ version: number; updatedAt: string } | null>(null);
 
-  useEffect(() => {
+  function loadMockData() {
     fetch("/api/mock-data")
       .then((r) => r.json())
-      .then((d) => setMockVersion(d.version))
+      .then((d) => setMockData(d))
       .catch(() => {});
-  }, []);
+  }
+
+  useEffect(() => { loadMockData(); }, []);
   const { status, timedOut } = useDeploymentPoller(deploymentId);
 
   const isPolling = deploymentId !== null && !timedOut && status !== "finished" && status !== "failed" && status !== "cancelled" && status !== "error";
@@ -34,7 +36,7 @@ export function PublishButton() {
   useEffect(() => {
     if ((isFinished || isFailed) && deploymentId) {
       if (isFinished) {
-        fetch("/api/mock-data").then((r) => r.json()).then((d) => setMockVersion(d.version)).catch(() => {});
+        fetch("/api/mock-data").then((r) => r.json()).then((d) => setMockData(d)).catch(() => {});
       }
       const t = setTimeout(() => { setPhase("idle"); setDeploymentId(null); }, 4000);
       return () => clearTimeout(t);
@@ -100,8 +102,10 @@ export function PublishButton() {
       }}
     >
       <span style={{ display: "block" }}>{label}</span>
-      {mockVersion !== null && (
-        <span style={{ display: "block", fontSize: 10, opacity: 0.75, fontWeight: 400 }}>v{mockVersion}</span>
+      {mockData !== null && (
+        <span style={{ display: "block", fontSize: 10, opacity: 0.75, fontWeight: 400 }}>
+          v{mockData.version}{mockData.updatedAt ? ` · ${new Date(mockData.updatedAt).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}` : ""}
+        </span>
       )}
     </button>
   );
