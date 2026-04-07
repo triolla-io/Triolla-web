@@ -152,7 +152,9 @@ export async function runDeploymentPipeline(commitMessage: string): Promise<Depl
   let deploymentId: string;
   try {
     deploymentId = await triggerCoolifyDeploy();
+    console.log("deployment id", deploymentId);
   } catch (err) {
+    console.log("error in deployment", err);
     return { ok: false, reason: "failed", error: err instanceof Error ? err.message : String(err) };
   }
 

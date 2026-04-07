@@ -43,10 +43,16 @@ export function useDeploymentPoller(deploymentId: string | null): PollerResult {
       }
     }
 
-    poll(); // immediate first poll
+    // Delay first poll to let Coolify register the new deployment as in_progress
+    const firstPollTimeout = setTimeout(() => {
+      poll();
+    }, 3000);
     const interval = setInterval(() => poll(interval), POLL_INTERVAL_MS);
 
-    return () => clearInterval(interval);
+    return () => {
+      clearTimeout(firstPollTimeout);
+      clearInterval(interval);
+    };
   }, [deploymentId]);
 
   return { status, timedOut };

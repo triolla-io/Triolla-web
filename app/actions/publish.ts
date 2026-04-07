@@ -4,5 +4,7 @@ import { runDeploymentPipeline } from "../deployment/deploymentService";
 import type { DeploymentPipelineResult } from "../deployment/deploymentService";
 
 export async function publishAction(message?: string): Promise<DeploymentPipelineResult> {
-  return runDeploymentPipeline(message ?? "chore: manual publish");
+  const result = await runDeploymentPipeline(message ?? "chore: manual publish");
+  console.log("[publishAction] result:", JSON.stringify(result));
+  return result;
 }
