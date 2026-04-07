@@ -7,7 +7,7 @@ const withBundleAnalyzer = bundleAnalyzer({
 
 const nextConfig: NextConfig = {
   output: "standalone",
-  async redirects() {
+    async redirects() {
     return [
       {
         source: "/temp/mobile-menu",

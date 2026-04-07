@@ -4,7 +4,7 @@ FROM node:22-alpine AS base
 FROM base AS deps
 WORKDIR /app
 COPY package.json package-lock.json ./
-RUN --mount=type=cache,target=/root/.npm \
+RUN --mount=type=cache,id=triolla-npm,target=/root/.npm \
     npm ci --ignore-scripts
 
 # Stage 2: build
@@ -12,7 +12,7 @@ FROM base AS builder
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
-RUN --mount=type=cache,target=/app/.next/cache npm run build
+RUN --mount=type=cache,id=triolla-next,target=/app/.next/cache npm run build
 
 # Stage 3: production runner
 FROM base AS runner
