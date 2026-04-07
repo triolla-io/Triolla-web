@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useDeploymentPoller } from "../hooks/useDeploymentPoller";
 
 const COLORS = {
@@ -85,6 +85,33 @@ export function PublishButton({ initialVersion, initialUpdatedAt }: Props) {
     isMuted                         ? COLORS.muted :
     COLORS.idle;
 
+  // Fade label + color smoothly, with a minimum display time so fast transitions don't flash
+  const MIN_LABEL_MS = 2000;
+  const FADE_MS = 120;
+
+  const [displayLabel, setDisplayLabel] = useState(label);
+  const [displayBg,    setDisplayBg]    = useState(bg);
+  const [labelOpacity, setLabelOpacity] = useState(1);
+  const labelShownAt = useRef<number>(Date.now());
+  const fadeTimer    = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  useEffect(() => {
+    if (label === displayLabel && bg === displayBg) return;
+    if (fadeTimer.current) clearTimeout(fadeTimer.current);
+    const elapsed = Date.now() - labelShownAt.current;
+    const waitMs  = Math.max(0, MIN_LABEL_MS - elapsed);
+    fadeTimer.current = setTimeout(() => {
+      setLabelOpacity(0);
+      fadeTimer.current = setTimeout(() => {
+        setDisplayLabel(label);
+        setDisplayBg(bg);
+        setLabelOpacity(1);
+        labelShownAt.current = Date.now();
+      }, FADE_MS);
+    }, waitMs);
+    return () => { if (fadeTimer.current) clearTimeout(fadeTimer.current); };
+  }, [label, bg]); // eslint-disable-line react-hooks/exhaustive-deps
+
   const subtitle =
     isFailed && doneResult?.ok === false && doneResult.error
       ? doneResult.error
@@ -100,19 +127,21 @@ export function PublishButton({ initialVersion, initialUpdatedAt }: Props) {
         top:          16,
         right:        16,
         zIndex:       9999,
+        width:        220,
         padding:      "8px 18px",
-        background:   bg,
+        background:   displayBg,
         color:        "#fff",
         border:       "none",
         borderRadius: 8,
         cursor:       isStarting || isRunning ? "default" : "pointer",
         fontWeight:   600,
         fontSize:     14,
+        textAlign:    "center",
         transition:   "background 0.2s",
         fontFamily:   "inherit",
       }}
     >
-      <span style={{ display: "block" }}>{label}</span>
+      <span style={{ display: "block", opacity: labelOpacity, transition: "opacity 0.12s" }}>{displayLabel}</span>
       <span style={{ display: "block", fontSize: 10, opacity: 0.75, fontWeight: 400 }}>
         {subtitle}
       </span>
