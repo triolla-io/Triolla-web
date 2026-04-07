@@ -99,8 +99,12 @@ async function step(state: AgentState, commitMessage: string, logs: AgentLog[], 
       const fetchResult = await runWithRetry(fetchTool, undefined, logs);
       if (!fetchResult.ok) return { phase: "done", result: { ok: false, reason: "failed", error: fetchResult.error } };
 
-      // Diff + log what changed
+      // Diff — bail out if nothing actually changed
       const diffLines = diffObjects(fetchResult.data.content, state.local.parsed);
+      if (diffLines.length === 0) {
+        log.info("content_diff", "no content changes, skipping commit");
+        return { phase: "done", result: { ok: false, reason: "nothing_to_commit" } };
+      }
       for (const line of formatDiff(diffLines)) log.info("content_diff", line);
 
       // Bump metadata
