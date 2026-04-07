@@ -51,7 +51,7 @@ export async function gitCommitAndPush(
   await run(`git commit -m "${safeMessage}"`);
   await run("git push --set-upstream origin HEAD");
   const { stdout: commitHash } = await run("git rev-parse HEAD");
-  console.log("aaaa!!!!commit hash done", commitHash);
+  console.log("a!!!!commit hash done", commitHash);
   return { commitHash };
 }
 
