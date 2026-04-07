@@ -137,6 +137,7 @@ async function triggerCoolifyDeploy(): Promise<string> {
 // ─── Pipeline ─────────────────────────────────────────────────────────────────
 
 export async function runDeploymentPipeline(commitMessage: string): Promise<DeploymentPipelineResult> {
+  console.log('Version 2!!!')
   const alreadyRunning = await isDeploymentAlreadyRunning();
   if (alreadyRunning) return { ok: false, reason: "already_running" };
 
