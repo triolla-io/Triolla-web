@@ -1,10 +1,8 @@
-import { exec } from "child_process";
-import { readFile, writeFile } from "fs/promises";
-import { join } from "path";
-import { promisify } from "util";
 import type { CoolifyDeploymentStatus, DeploymentPipelineResult } from "./types";
 
-const execAsync = promisify(exec);
+// Uses GitHub API instead of local git — no git binary or SSH keys needed.
+// Required env vars: GITHUB_TOKEN, GITHUB_REPO, GITHUB_BRANCH,
+//                    COOLIFY_API_TOKEN, COOLIFY_API_URL, COOLIFY_APP_UUID
 
 const POLL_INTERVAL_MS = 5_000;
 const TIMEOUT_MS = 10 * 60 * 1_000;
@@ -23,11 +21,6 @@ function sleep(ms: number): Promise<void> {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-async function run(cmd: string): Promise<{ stdout: string; stderr: string }> {
-  const { stdout, stderr } = await execAsync(cmd, { cwd: process.cwd() });
-  return { stdout: stdout.trim(), stderr: stderr.trim() };
-}
-
 function coolifyHeaders(): HeadersInit {
   return {
     Authorization: `Bearer ${process.env.COOLIFY_API_TOKEN}`,
@@ -35,24 +28,52 @@ function coolifyHeaders(): HeadersInit {
   };
 }
 
-// ─── Git ─────────────────────────────────────────────────────────────────────
-
-export async function checkGitStatus(): Promise<boolean> {
-  const { stdout } = await run("git status --porcelain");
-  console.log("git status --porcelain done", stdout);
-  return stdout.length > 0;
+function githubHeaders(): HeadersInit {
+  return {
+    Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
+    "Content-Type": "application/json",
+    Accept: "application/vnd.github+json",
+    "X-GitHub-Api-Version": "2022-11-28",
+  };
 }
 
-export async function gitCommitAndPush(
-  message: string
-): Promise<{ commitHash: string }> {
-  const safeMessage = message.replace(/"/g, "'");
-  await run("git add -A");
-  await run(`git commit -m "${safeMessage}"`);
-  await run("git push --set-upstream origin HEAD");
-  const { stdout: commitHash } = await run("git rev-parse HEAD");
-  console.log("aaaa!!!!commit hash done", commitHash);
-  return { commitHash };
+// ─── GitHub API ───────────────────────────────────────────────────────────────
+
+const GITHUB_REPO = process.env.GITHUB_REPO;
+const GITHUB_BRANCH = process.env.GITHUB_BRANCH ?? "main";
+const MOCK_DATA_FILE = "app/deployment-agent/mock-data.json";
+
+async function commitMockDataUpdate(commitMessage: string): Promise<string> {
+  const getRes = await fetch(
+    `https://api.github.com/repos/${GITHUB_REPO}/contents/${MOCK_DATA_FILE}?ref=${GITHUB_BRANCH}`,
+    { headers: githubHeaders() }
+  );
+  if (!getRes.ok) throw new Error(`GitHub GET failed: ${getRes.status} ${getRes.statusText}`);
+  const existing = await getRes.json();
+
+  const current = JSON.parse(Buffer.from(existing.content, "base64").toString("utf8"));
+  current.version = (current.version ?? 0) + 1;
+  current.updatedAt = new Date().toISOString();
+
+  const putRes = await fetch(
+    `https://api.github.com/repos/${GITHUB_REPO}/contents/${MOCK_DATA_FILE}`,
+    {
+      method: "PUT",
+      headers: githubHeaders(),
+      body: JSON.stringify({
+        message: commitMessage,
+        content: Buffer.from(JSON.stringify(current, null, 2) + "\n").toString("base64"),
+        sha: existing.sha,
+        branch: GITHUB_BRANCH,
+      }),
+    }
+  );
+  if (!putRes.ok) {
+    const err = await putRes.json();
+    throw new Error(`GitHub PUT failed: ${putRes.status} ${JSON.stringify(err)}`);
+  }
+  const data = await putRes.json();
+  return data.commit.sha as string;
 }
 
 // ─── Coolify ──────────────────────────────────────────────────────────────────
@@ -65,19 +86,11 @@ async function fetchLatestDeployment() {
   return data?.deployments?.[0] ?? null;
 }
 
-export async function isDeploymentAlreadyRunning(): Promise<boolean> {
+async function isDeploymentAlreadyRunning(): Promise<boolean> {
   const latest = await fetchLatestDeployment();
   if (!latest) return false;
   const status: CoolifyDeploymentStatus = latest.status;
   return status === "in_progress" || status === "queued";
-}
-
-export async function getLatestDeploymentId(): Promise<string> {
-  const latest = await fetchLatestDeployment();
-  if (!latest?.deployment_uuid) {
-    throw new Error("No deployments found for this application");
-  }
-  return latest.deployment_uuid;
 }
 
 export async function getDeploymentStatus(
@@ -86,7 +99,6 @@ export async function getDeploymentStatus(
   const url = `${process.env.COOLIFY_API_URL}/api/v1/deployments/${deploymentId}`;
   const res = await fetch(url, { headers: coolifyHeaders() });
   if (!res.ok) {
-    // Coolify sometimes 500s on individual deployment lookup — fall back to latest
     const latest = await fetchLatestDeployment();
     if (latest?.deployment_uuid === deploymentId) return latest.status as CoolifyDeploymentStatus;
     throw new Error(`Coolify API error: ${res.status} ${res.statusText}`);
@@ -112,34 +124,6 @@ export async function pollUntilDone(
   }
 }
 
-export async function runHealthCheck(url: string): Promise<boolean> {
-  try {
-    const res = await fetch(url, { method: "GET" });
-    return res.ok;
-  } catch {
-    return false;
-  }
-}
-
-// ─── Mock Data ───────────────────────────────────────────────────────────────
-
-const MOCK_DATA_PATH = join(process.cwd(), "app/deployment-agent/mock-data.json");
-
-async function updateMockData(): Promise<void> {
-  let data: { version: number; updatedAt: string } = { version: 0, updatedAt: "" };
-  try {
-    data = JSON.parse(await readFile(MOCK_DATA_PATH, "utf8"));
-  } catch {
-    // start fresh if missing
-  }
-  data.version = (data.version ?? 0) + 1;
-  data.updatedAt = new Date().toISOString();
-  await writeFile(MOCK_DATA_PATH, JSON.stringify(data, null, 2));
-}
-
-// ─── Pipeline ─────────────────────────────────────────────────────────────────
-
-
 async function triggerCoolifyDeploy(): Promise<string> {
   const url = `${process.env.COOLIFY_API_URL}/api/v1/deploy?uuid=${process.env.COOLIFY_APP_UUID}&force=false`;
   const res = await fetch(url, { method: "POST", headers: coolifyHeaders() });
@@ -150,18 +134,15 @@ async function triggerCoolifyDeploy(): Promise<string> {
   return deploymentId;
 }
 
+// ─── Pipeline ─────────────────────────────────────────────────────────────────
+
 export async function runDeploymentPipeline(commitMessage: string): Promise<DeploymentPipelineResult> {
   const alreadyRunning = await isDeploymentAlreadyRunning();
   if (alreadyRunning) return { ok: false, reason: "already_running" };
 
-  const hasChanges = await checkGitStatus();
-  if (!hasChanges) return { ok: false, reason: "nothing_to_commit" };
-
-  await updateMockData();
-
   let commitHash: string;
   try {
-    ({ commitHash } = await gitCommitAndPush(commitMessage));
+    commitHash = await commitMockDataUpdate(commitMessage);
   } catch (err) {
     return { ok: false, reason: "failed", error: err instanceof Error ? err.message : String(err) };
   }
@@ -169,9 +150,7 @@ export async function runDeploymentPipeline(commitMessage: string): Promise<Depl
   let deploymentId: string;
   try {
     deploymentId = await triggerCoolifyDeploy();
-    console.log("deployment id", deploymentId);
   } catch (err) {
-    console.log("error in deployment", err);
     return { ok: false, reason: "failed", error: err instanceof Error ? err.message : String(err) };
   }
 
