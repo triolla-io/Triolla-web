@@ -52,7 +52,7 @@ export async function gitCommitAndPush(
   await run("git push --set-upstream origin HEAD");
   console.log("git rev-parse HEAD done");
   const { stdout: commitHash } = await run("git rev-parse HEAD");
-  console.log("Aaaaaanothrt try!!!!!!commit hash done", commitHash);
+  console.log("Aaaaaanothrtdss try!!!!!!commit hash done", commitHash);
   return { commitHash };
 }
 
