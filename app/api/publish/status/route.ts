@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getDeploymentStatus } from "../../../deployment-agent/deploymentService";
+import { getDeploymentStatus } from "../../../agents/deployment-agent/deploymentService";
 
 export async function GET(req: NextRequest) {
   const id = req.nextUrl.searchParams.get("id");

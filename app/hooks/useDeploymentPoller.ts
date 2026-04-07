@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import type { CoolifyDeploymentStatus } from "../deployment-agent/types";
+import type { CoolifyDeploymentStatus } from "../agents/deployment-agent/types";
 
 const POLL_INTERVAL_MS = 30_000;
 const TIMEOUT_MS = 10 * 60 * 1_000;

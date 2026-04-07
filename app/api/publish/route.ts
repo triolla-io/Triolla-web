@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
-import { runDeploymentPipeline } from "../../deployment-agent/deploymentService";
+import { runDeploymentPipeline } from "../../agents/deployment-agent/deploymentService";
 
 // ─── Rate limiting (in-memory, sliding window) ────────────────────────────────
 

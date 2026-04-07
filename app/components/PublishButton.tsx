@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useDeploymentPoller } from "../hooks/useDeploymentPoller";
-import type { DeploymentPipelineResult } from "../deployment-agent/types";
+import type { DeploymentPipelineResult } from "../agents/deployment-agent/types";
 
 type StartPhase = "idle" | "starting" | "nothing_to_commit" | "already_running" | "start_failed";
 
@@ -23,6 +23,7 @@ export function PublishButton({ initialVersion, initialUpdatedAt }: Props) {
   const [phase, setPhase] = useState<StartPhase>("idle");
   const [deploymentId, setDeploymentId] = useState<string | null>(null);
   const [content, setContent] = useState({ version: initialVersion, updatedAt: initialUpdatedAt });
+  const [errorDetail, setErrorDetail] = useState<string | null>(null);
 
   const { status, timedOut } = useDeploymentPoller(deploymentId);
 
@@ -56,11 +57,12 @@ export function PublishButton({ initialVersion, initialUpdatedAt }: Props) {
     }
 
     if (!result.ok) {
+      setErrorDetail(result.error ?? null);
       setPhase(
         result.reason === "nothing_to_commit" ? "nothing_to_commit" :
         result.reason === "already_running" ? "already_running" : "start_failed"
       );
-      setTimeout(() => setPhase("idle"), 4000);
+      setTimeout(() => { setPhase("idle"); setErrorDetail(null); }, 4000);
       return;
     }
 
@@ -110,7 +112,9 @@ export function PublishButton({ initialVersion, initialUpdatedAt }: Props) {
     >
       <span style={{ display: "block" }}>{label}</span>
       <span style={{ display: "block", fontSize: 10, opacity: 0.75, fontWeight: 400 }}>
-        v{content.version}{content.updatedAt ? ` · ${new Date(content.updatedAt).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}` : ""}
+        {errorDetail
+          ? errorDetail
+          : `v${content.version}${content.updatedAt ? ` · ${new Date(content.updatedAt).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}` : ""}`}
       </span>
     </button>
   );

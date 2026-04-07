@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { generatePageMetadata } from "./lib/metadata";
 import { HomeClient } from "./HomeClient";
 import { PublishButton } from "./components/PublishButton";
-import { getContent } from "./deployment-agent/content";
+import { getContent } from "./agents/utils/content";
 
 export const metadata: Metadata = generatePageMetadata({
   title: "Triolla - Web Design & App Development",

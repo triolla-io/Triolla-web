@@ -1,7 +1,8 @@
 import { readFile, writeFile } from "fs/promises";
 import { join } from "path";
+import type { Tool } from "./tools";
 
-const CONTENT_FILE = join(process.cwd(), "app/deployment-agent/mock-data.json");
+const CONTENT_FILE = join(process.cwd(), "content/mock-data.json");
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -39,3 +40,31 @@ export async function updateContent<K extends PageKey>(
   current[page] = { ...current[page], ...updates };
   await writeFile(CONTENT_FILE, JSON.stringify(current, null, 2) + "\n");
 }
+
+// ─── Tools ────────────────────────────────────────────────────────────────────
+
+export const readContentTool: Tool<void, SiteContent> = {
+  name: "read_content",
+  maxAttempts: 2,
+  async execute() {
+    try {
+      const raw = await readFile(CONTENT_FILE, "utf8");
+      return { ok: true, data: JSON.parse(raw) as SiteContent };
+    } catch (e) {
+      return { ok: false, retryable: true, error: String(e) };
+    }
+  },
+};
+
+export const updateContentTool: Tool<{ page: PageKey; updates: Partial<PageContent[PageKey]> }, void> = {
+  name: "update_content",
+  maxAttempts: 2,
+  async execute({ page, updates }) {
+    try {
+      await updateContent(page, updates as never);
+      return { ok: true, data: undefined };
+    } catch (e) {
+      return { ok: false, retryable: true, error: String(e) };
+    }
+  },
+};

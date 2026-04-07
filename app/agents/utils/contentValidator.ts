@@ -25,6 +25,21 @@ export class ContentSecurityError extends Error {
   }
 }
 
+import type { Tool } from "./tools";
+
+export const validateContentTool: Tool<unknown, void> = {
+  name: "validate_content",
+  maxAttempts: 1,
+  async execute(obj) {
+    try {
+      validateContent(obj);
+      return { ok: true, data: undefined };
+    } catch (e) {
+      return { ok: false, retryable: false, error: e instanceof Error ? e.message : String(e), code: "security_violation" };
+    }
+  },
+};
+
 export function validateContent(obj: unknown, path = "root"): void {
   const violations: string[] = [];
   collectViolations(obj, path, violations);
