@@ -26,23 +26,25 @@ export function useDeploymentPoller(deploymentId: string | null): PollerResult {
 
     startedAt.current = Date.now();
 
-    const interval = setInterval(async () => {
+    async function poll(intervalRef?: ReturnType<typeof setInterval>) {
       if (Date.now() - startedAt.current >= TIMEOUT_MS) {
-        clearInterval(interval);
+        if (intervalRef) clearInterval(intervalRef);
         setTimedOut(true);
         return;
       }
-
       try {
         const res = await fetch(`/api/publish/status?id=${deploymentId}`);
         const { status: next }: { status: CoolifyDeploymentStatus } = await res.json();
         setStatus(next);
-        if (TERMINAL.includes(next)) clearInterval(interval);
+        if (TERMINAL.includes(next) && intervalRef) clearInterval(intervalRef);
       } catch {
-        clearInterval(interval);
+        if (intervalRef) clearInterval(intervalRef);
         setStatus("error");
       }
-    }, POLL_INTERVAL_MS);
+    }
+
+    poll(); // immediate first poll
+    const interval = setInterval(() => poll(interval), POLL_INTERVAL_MS);
 
     return () => clearInterval(interval);
   }, [deploymentId]);

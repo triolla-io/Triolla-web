@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { publishAction } from "../actions/publish";
 import { useDeploymentPoller } from "../hooks/useDeploymentPoller";
 
@@ -23,9 +23,12 @@ export function PublishButton() {
   const isFinished = status === "finished";
   const isFailed = timedOut || status === "failed" || status === "cancelled" || status === "error";
 
-  if ((isFinished || isFailed) && deploymentId) {
-    setTimeout(() => { setPhase("idle"); setDeploymentId(null); }, 4000);
-  }
+  useEffect(() => {
+    if ((isFinished || isFailed) && deploymentId) {
+      const t = setTimeout(() => { setPhase("idle"); setDeploymentId(null); }, 4000);
+      return () => clearTimeout(t);
+    }
+  }, [isFinished, isFailed, deploymentId]);
 
   async function handlePublish() {
     setPhase("starting");

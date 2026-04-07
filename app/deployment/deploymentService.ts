@@ -52,7 +52,7 @@ export async function gitCommitAndPush(
   await run("git push --set-upstream origin HEAD");
   console.log("git rev-parse HEAD done");
   const { stdout: commitHash } = await run("git rev-parse HEAD");
-  console.log("Aaaaaanothrtdss try!!!!!!commit hash done", commitHash);
+  console.log("aaa try!!!!!!commit hash done", commitHash);
   return { commitHash };
 }
 
@@ -125,29 +125,33 @@ export type DeploymentPipelineResult =
   | { ok: true; deploymentId: string; commitHash: string }
   | { ok: false; reason: "already_running" | "nothing_to_commit" | "failed"; error?: string };
 
+async function triggerCoolifyDeploy(): Promise<string> {
+  const url = `${process.env.COOLIFY_API_URL}/api/v1/deploy?uuid=${process.env.COOLIFY_APP_UUID}&force=false`;
+  const res = await fetch(url, { method: "POST", headers: coolifyHeaders() });
+  if (!res.ok) throw new Error(`Coolify deploy trigger failed: ${res.status} ${res.statusText}`);
+  const data = await res.json();
+  const deploymentId = data?.deployments?.[0]?.deployment_uuid;
+  if (!deploymentId) throw new Error("No deployment UUID returned from Coolify");
+  return deploymentId;
+}
+
 export async function runDeploymentPipeline(commitMessage: string): Promise<DeploymentPipelineResult> {
   const alreadyRunning = await isDeploymentAlreadyRunning();
-  console.log("already running?", alreadyRunning);
   if (alreadyRunning) return { ok: false, reason: "already_running" };
 
   const hasChanges = await checkGitStatus();
-  console.log("has changes?", hasChanges);
   if (!hasChanges) return { ok: false, reason: "nothing_to_commit" };
 
   let commitHash: string;
   try {
     ({ commitHash } = await gitCommitAndPush(commitMessage));
-    console.log("commit hash", commitHash);
   } catch (err) {
-    console.log("error", err);
     return { ok: false, reason: "failed", error: err instanceof Error ? err.message : String(err) };
   }
 
-  await sleep(3000);
-
   let deploymentId: string;
   try {
-    deploymentId = await getLatestDeploymentId();
+    deploymentId = await triggerCoolifyDeploy();
   } catch (err) {
     return { ok: false, reason: "failed", error: err instanceof Error ? err.message : String(err) };
   }
