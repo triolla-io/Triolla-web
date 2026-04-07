@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { generatePageMetadata } from "./lib/metadata";
 import { HomeClient } from "./HomeClient";
 import { PublishButton } from "./components/PublishButton";
+import { getContent } from "./deployment-agent/content";
 
 export const metadata: Metadata = generatePageMetadata({
   title: "Triolla - Web Design & App Development",
@@ -12,10 +13,11 @@ export const metadata: Metadata = generatePageMetadata({
   ogType: "website",
 });
 
-export default function HomePage() {
+export default async function HomePage() {
+  const { version, updatedAt } = await getContent("metadata");
   return (
     <>
-      <PublishButton /> {/* TODO: remove this button */}
+      <PublishButton initialVersion={version} initialUpdatedAt={updatedAt} /> {/* TODO: remove this button */}
       <HomeClient />
     </>
   );

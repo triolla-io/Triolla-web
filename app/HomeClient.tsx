@@ -33,7 +33,12 @@ type SnapshotDeps = {
   pathEncoding?: "segments";
 };
 
-export function HomeClient() {
+type HomeContent = {
+  heroTitle: string;
+  heroSubtitle: string;
+};
+
+export function HomeClient({ content }: { content?: HomeContent }) {
   const pathname = usePathname();
   const historyRestoreKey = useSnapshotHistoryRestoreKey();
   const pathNorm = (pathname ?? "").replace(/\/+$/, "") || "/";

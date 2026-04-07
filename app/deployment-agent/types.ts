@@ -23,5 +23,5 @@ export type CoolifyDeploymentStatus =
   | "error";
 
 export type DeploymentPipelineResult =
-  | { ok: true; deploymentId: string; commitHash: string }
-  | { ok: false; reason: "already_running" | "nothing_to_commit" | "failed"; error?: string };
+  | { ok: true; deploymentId: string; commitHash: string; version: number; updatedAt: string }
+  | { ok: false; reason: "already_running" | "nothing_to_commit" | "security_violation" | "failed"; error?: string };

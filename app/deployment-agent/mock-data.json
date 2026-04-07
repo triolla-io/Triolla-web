@@ -1,4 +1,10 @@
 {
-  "version": 19,
-  "updatedAt": "2026-04-07T12:18:49.899Z"
+  "metadata": {
+    "version": 19,
+    "updatedAt": "2026-04-07T12:18:49.899Z"
+  },
+  "home": {
+    "heroTitle": "Product UX/UI Design Studio",
+    "heroSubtitle": "We craft digital experiences for technology brands, startups, and enterprise teams."
+  }
 }

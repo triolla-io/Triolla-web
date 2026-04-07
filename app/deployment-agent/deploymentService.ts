@@ -1,25 +1,12 @@
+import { readFile, writeFile } from "fs/promises";
+import { join } from "path";
 import type { CoolifyDeploymentStatus, DeploymentPipelineResult } from "./types";
+import { validateContent, ContentSecurityError } from "./contentValidator";
 
 // Uses GitHub API instead of local git — no git binary or SSH keys needed.
 // Required env vars: GITHUB_TOKEN, GITHUB_REPO, GITHUB_BRANCH,
 //                    COOLIFY_API_TOKEN, COOLIFY_API_URL, COOLIFY_APP_UUID
-
-const POLL_INTERVAL_MS = 5_000;
-const TIMEOUT_MS = 10 * 60 * 1_000;
-const TERMINAL_STATUSES = new Set<CoolifyDeploymentStatus>([
-  "finished",
-  "failed",
-  "cancelled",
-  "error",
-]);
-
-function timestamp(): string {
-  return new Date().toTimeString().slice(0, 8);
-}
-
-function sleep(ms: number): Promise<void> {
-  return new Promise((resolve) => setTimeout(resolve, ms));
-}
+//                    PUBLISH_SECRET (for the /api/publish HTTP endpoint)
 
 function coolifyHeaders(): HeadersInit {
   return {
@@ -41,39 +28,105 @@ function githubHeaders(): HeadersInit {
 
 const GITHUB_REPO = process.env.GITHUB_REPO;
 const GITHUB_BRANCH = process.env.GITHUB_BRANCH ?? "main";
-const MOCK_DATA_FILE = "app/deployment-agent/mock-data.json";
+const CONTENT_FILE_PATH = "app/deployment-agent/mock-data.json";
+const CONTENT_FILE_LOCAL = join(process.cwd(), CONTENT_FILE_PATH);
+const CONTENT_FILE_BKP = join(process.cwd(), "app/deployment-agent/mock-data.json.bkp");
 
-async function commitMockDataUpdate(commitMessage: string): Promise<string> {
+class NothingToCommitError extends Error {}
+
+type CommitResult = { commitHash: string; version: number; updatedAt: string };
+
+type CommitResultWithRollback = {
+  result: CommitResult;
+  rollback: () => Promise<void>;
+};
+
+async function commitContentFile(commitMessage: string): Promise<CommitResultWithRollback> {
+  // Read current local content
+  const originalRaw = await readFile(CONTENT_FILE_LOCAL, "utf8");
+  const local = JSON.parse(originalRaw) as Record<string, unknown>;
+
+  // Security check before touching anything
+  validateContent(local);
+
+  // Save one backup
+  await writeFile(CONTENT_FILE_BKP, originalRaw);
+
+  // Get current file from GitHub to obtain SHA and compare content
   const getRes = await fetch(
-    `https://api.github.com/repos/${GITHUB_REPO}/contents/${MOCK_DATA_FILE}?ref=${GITHUB_BRANCH}`,
+    `https://api.github.com/repos/${GITHUB_REPO}/contents/${CONTENT_FILE_PATH}?ref=${GITHUB_BRANCH}`,
     { headers: githubHeaders() }
   );
   if (!getRes.ok) throw new Error(`GitHub GET failed: ${getRes.status} ${getRes.statusText}`);
-  const existing = await getRes.json();
+  const remote = await getRes.json();
+  const remoteContent = JSON.parse(Buffer.from(remote.content, "base64").toString("utf8")) as Record<string, unknown>;
 
-  const current = JSON.parse(Buffer.from(existing.content, "base64").toString("utf8"));
-  current.version = (current.version ?? 0) + 1;
-  current.updatedAt = new Date().toISOString();
+  // TODO: restore nothing-to-commit check once admin panel can edit content  
+  // if (JSON.stringify(local) === JSON.stringify(remoteContent)) {
+  //   throw new NothingToCommitError();
+  // }
 
-  const putRes = await fetch(
-    `https://api.github.com/repos/${GITHUB_REPO}/contents/${MOCK_DATA_FILE}`,
-    {
-      method: "PUT",
-      headers: githubHeaders(),
-      body: JSON.stringify({
-        message: commitMessage,
-        content: Buffer.from(JSON.stringify(current, null, 2) + "\n").toString("base64"),
-        sha: existing.sha,
-        branch: GITHUB_BRANCH,
-      }),
+  // Bump version and timestamp based on remote version (source of truth)
+  const remoteMeta = remoteContent.metadata as { version: number; updatedAt: string };
+  const newMeta = { version: (remoteMeta?.version ?? 0) + 1, updatedAt: new Date().toISOString() };
+  (local.metadata as Record<string, unknown>) = newMeta;
+  const updatedRaw = JSON.stringify(local, null, 2) + "\n";
+
+  // Persist bumped metadata back to local file
+  await writeFile(CONTENT_FILE_LOCAL, updatedRaw);
+
+  // Push to GitHub — on failure, restore local from backup
+  let putData: Record<string, unknown>;
+  try {
+    const putRes = await fetch(
+      `https://api.github.com/repos/${GITHUB_REPO}/contents/${CONTENT_FILE_PATH}`,
+      {
+        method: "PUT",
+        headers: githubHeaders(),
+        body: JSON.stringify({
+          message: commitMessage,
+          content: Buffer.from(updatedRaw).toString("base64"),
+          sha: remote.sha,
+          branch: GITHUB_BRANCH,
+        }),
+      }
+    );
+    if (!putRes.ok) {
+      const err = await putRes.json();
+      throw new Error(`GitHub PUT failed: ${putRes.status} ${JSON.stringify(err)}`);
     }
-  );
-  if (!putRes.ok) {
-    const err = await putRes.json();
-    throw new Error(`GitHub PUT failed: ${putRes.status} ${JSON.stringify(err)}`);
+    putData = await putRes.json();
+  } catch (err) {
+    await writeFile(CONTENT_FILE_LOCAL, originalRaw);
+    throw err;
   }
-  const data = await putRes.json();
-  return data.commit.sha as string;
+
+  // SHA of the file after our commit — needed to revert if deploy fails
+  const newFileSha = (putData.content as Record<string, unknown>).sha as string;
+  const commitHash = (putData.commit as Record<string, unknown>).sha as string;
+
+  // Rollback: revert the GitHub commit and restore local file
+  const rollback = async () => {
+    await fetch(
+      `https://api.github.com/repos/${GITHUB_REPO}/contents/${CONTENT_FILE_PATH}`,
+      {
+        method: "PUT",
+        headers: githubHeaders(),
+        body: JSON.stringify({
+          message: "revert: rollback failed deployment",
+          content: Buffer.from(originalRaw).toString("base64"),
+          sha: newFileSha,
+          branch: GITHUB_BRANCH,
+        }),
+      }
+    );
+    await writeFile(CONTENT_FILE_LOCAL, originalRaw);
+  };
+
+  return {
+    result: { commitHash, version: newMeta.version, updatedAt: newMeta.updatedAt },
+    rollback,
+  };
 }
 
 // ─── Coolify ──────────────────────────────────────────────────────────────────
@@ -107,23 +160,6 @@ export async function getDeploymentStatus(
   return data.status as CoolifyDeploymentStatus;
 }
 
-export async function pollUntilDone(
-  deploymentId: string,
-  logs: string[]
-): Promise<CoolifyDeploymentStatus> {
-  const start = Date.now();
-  while (true) {
-    if (Date.now() - start > TIMEOUT_MS) {
-      logs.push(`[${timestamp()}] Timed out after 10 minutes`);
-      return "error";
-    }
-    const status = await getDeploymentStatus(deploymentId);
-    logs.push(`[${timestamp()}] Status: ${status}`);
-    if (TERMINAL_STATUSES.has(status)) return status;
-    await sleep(POLL_INTERVAL_MS);
-  }
-}
-
 async function triggerCoolifyDeploy(): Promise<string> {
   const url = `${process.env.COOLIFY_API_URL}/api/v1/deploy?uuid=${process.env.COOLIFY_APP_UUID}&force=false`;
   const res = await fetch(url, { method: "POST", headers: coolifyHeaders() });
@@ -138,21 +174,33 @@ async function triggerCoolifyDeploy(): Promise<string> {
 
 export async function runDeploymentPipeline(commitMessage: string): Promise<DeploymentPipelineResult> {
   const alreadyRunning = await isDeploymentAlreadyRunning();
+  console.log("deployment already running?", alreadyRunning);
   if (alreadyRunning) return { ok: false, reason: "already_running" };
 
-  let commitHash: string;
+  let commit: CommitResult;
+  let rollback: () => Promise<void>;
   try {
-    commitHash = await commitMockDataUpdate(commitMessage);
+    ({ result: commit, rollback } = await commitContentFile(commitMessage));
+    console.log("commit result", commit);
   } catch (err) {
+    console.log("failed to commit", err);
+    if (err instanceof NothingToCommitError) return { ok: false, reason: "nothing_to_commit" };
+    if (err instanceof ContentSecurityError) return { ok: false, reason: "security_violation", error: err.message };
     return { ok: false, reason: "failed", error: err instanceof Error ? err.message : String(err) };
   }
 
   let deploymentId: string;
   try {
     deploymentId = await triggerCoolifyDeploy();
+    console.log("coolify deploy triggered", deploymentId);
   } catch (err) {
+    console.log("failed to trigger coolify deploy", err);
+    await rollback().catch(() => {
+      console.log("rollback failed");
+    });
+    console.log("rollback done");
     return { ok: false, reason: "failed", error: err instanceof Error ? err.message : String(err) };
   }
 
-  return { ok: true, deploymentId, commitHash };
+  return { ok: true, deploymentId, commitHash: commit.commitHash, version: commit.version, updatedAt: commit.updatedAt };
 }

@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { publishAction } from "../actions/publish";
 import { useDeploymentPoller } from "../hooks/useDeploymentPoller";
+import type { DeploymentPipelineResult } from "../deployment-agent/types";
 
 type StartPhase = "idle" | "starting" | "nothing_to_commit" | "already_running" | "start_failed";
 
@@ -14,19 +14,16 @@ const COLORS = {
   muted: "#6b7280",
 };
 
-export function PublishButton() {
+type Props = {
+  initialVersion: number;
+  initialUpdatedAt: string;
+};
+
+export function PublishButton({ initialVersion, initialUpdatedAt }: Props) {
   const [phase, setPhase] = useState<StartPhase>("idle");
   const [deploymentId, setDeploymentId] = useState<string | null>(null);
-  const [mockData, setMockData] = useState<{ version: number; updatedAt: string } | null>(null);
+  const [content, setContent] = useState({ version: initialVersion, updatedAt: initialUpdatedAt });
 
-  function loadMockData() {
-    fetch("/api/mock-data")
-      .then((r) => r.json())
-      .then((d) => setMockData(d))
-      .catch(() => {});
-  }
-
-  useEffect(() => { loadMockData(); }, []);
   const { status, timedOut } = useDeploymentPoller(deploymentId);
 
   const isPolling = deploymentId !== null && !timedOut && status !== "finished" && status !== "failed" && status !== "cancelled" && status !== "error";
@@ -35,9 +32,6 @@ export function PublishButton() {
 
   useEffect(() => {
     if ((isFinished || isFailed) && deploymentId) {
-      if (isFinished) {
-        fetch("/api/mock-data").then((r) => r.json()).then((d) => setMockData(d)).catch(() => {});
-      }
       const t = setTimeout(() => { setPhase("idle"); setDeploymentId(null); }, 4000);
       return () => clearTimeout(t);
     }
@@ -47,7 +41,19 @@ export function PublishButton() {
     setPhase("starting");
     setDeploymentId(null);
 
-    const result = await publishAction("chore: manual publish");
+    let result: DeploymentPipelineResult;
+    try {
+      const res = await fetch("/api/publish", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message: `chore: manual publish - ${new Date().toISOString()}` }),
+      });
+      result = await res.json();
+    } catch {
+      setPhase("start_failed");
+      setTimeout(() => setPhase("idle"), 4000);
+      return;
+    }
 
     if (!result.ok) {
       setPhase(
@@ -58,6 +64,7 @@ export function PublishButton() {
       return;
     }
 
+    setContent({ version: result.version, updatedAt: result.updatedAt });
     setPhase("idle");
     setDeploymentId(result.deploymentId);
   }
@@ -102,11 +109,9 @@ export function PublishButton() {
       }}
     >
       <span style={{ display: "block" }}>{label}</span>
-      {mockData !== null && (
-        <span style={{ display: "block", fontSize: 10, opacity: 0.75, fontWeight: 400 }}>
-          v{mockData.version}{mockData.updatedAt ? ` · ${new Date(mockData.updatedAt).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}` : ""}
-        </span>
-      )}
+      <span style={{ display: "block", fontSize: 10, opacity: 0.75, fontWeight: 400 }}>
+        v{content.version}{content.updatedAt ? ` · ${new Date(content.updatedAt).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}` : ""}
+      </span>
     </button>
   );
 }
