@@ -34,8 +34,9 @@ type AgentState =
 
 export type AgentOptions = {
   waitForDeploy?: boolean;
-  siteUrl?: string;  // if provided, HTTP-verify the site after a successful deploy
-  dryRun?: boolean;  // simulate the full pipeline without committing or deploying
+  siteUrl?: string;        // if provided, HTTP-verify the site after a successful deploy
+  dryRun?: boolean;        // simulate the full pipeline without committing or deploying
+  onPhaseChange?: (phase: string) => void;
 };
 
 type Tools = {
@@ -261,6 +262,7 @@ export async function runAgent(
   let state: AgentState = { phase: "preflight" };
 
   while (state.phase !== "done") {
+    options.onPhaseChange?.(state.phase);
     state = await step(state, commitMessage, logs, options, tools);
   }
 

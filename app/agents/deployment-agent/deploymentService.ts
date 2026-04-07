@@ -1,21 +1,30 @@
 import { runAgent, type AgentOptions } from "./agent";
-import { createCoolifyTools } from "./coolify";
-import { getCoolifyConfig } from "./config";
-import type { DeploymentPipelineResult } from "./types";
+import { setPhase, setDone } from "./statusStore";
 
-export function getDeploymentStatus(deploymentId: string) {
-  return createCoolifyTools(getCoolifyConfig()).getDeploymentStatus(deploymentId);
-}
+export function startDeployment(
+  commitMessage: string,
+  options: Omit<AgentOptions, "onPhaseChange" | "waitForDeploy"> = {}
+): string {
+  const runId = crypto.randomUUID();
+  setPhase(runId, "preflight");
 
-export async function runDeploymentPipeline(commitMessage: string, options: AgentOptions = {}): Promise<DeploymentPipelineResult> {
-  const { result, logs } = await runAgent(commitMessage, options);
+  runAgent(commitMessage, {
+    ...options,
+    waitForDeploy: true,
+    onPhaseChange: (phase) => setPhase(runId, phase),
+  })
+    .then(({ result, logs }) => {
+      for (const entry of logs) {
+        const prefix = `[deployment-agent][${entry.tool ?? "-"}]`;
+        if      (entry.level === "error") console.error(prefix, entry.message);
+        else if (entry.level === "warn")  console.warn(prefix, entry.message);
+        else                              console.log(prefix, entry.message);
+      }
+      setDone(runId, result);
+    })
+    .catch((err) => {
+      setDone(runId, { ok: false, reason: "failed", error: String(err) });
+    });
 
-  for (const entry of logs) {
-    const prefix = `[deployment-agent][${entry.tool ?? "-"}]`;
-    if      (entry.level === "error") console.error(prefix, entry.message);
-    else if (entry.level === "warn")  console.warn(prefix, entry.message);
-    else                              console.log(prefix, entry.message);
-  }
-
-  return result;
+  return runId;
 }

@@ -1,25 +1,24 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import type { CoolifyDeploymentStatus } from "../agents/deployment-agent/types";
+import type { RunStatus } from "../agents/deployment-agent/statusStore";
 
-const POLL_INTERVAL_MS = 30_000;
+const POLL_INTERVAL_MS = 2_000;
 const TIMEOUT_MS = 10 * 60 * 1_000;
-const TERMINAL: CoolifyDeploymentStatus[] = ["finished", "failed", "cancelled", "error"];
 
 type PollerResult = {
-  status: CoolifyDeploymentStatus | null;
+  runStatus: RunStatus | null;
   timedOut: boolean;
 };
 
-export function useDeploymentPoller(deploymentId: string | null): PollerResult {
-  const [status, setStatus] = useState<CoolifyDeploymentStatus | null>(null);
-  const [timedOut, setTimedOut] = useState(false);
+export function useDeploymentPoller(runId: string | null): PollerResult {
+  const [runStatus, setRunStatus] = useState<RunStatus | null>(null);
+  const [timedOut, setTimedOut]   = useState(false);
   const startedAt = useRef<number>(0);
 
   useEffect(() => {
-    if (!deploymentId) {
-      setStatus(null);
+    if (!runId) {
+      setRunStatus(null);
       setTimedOut(false);
       return;
     }
@@ -33,27 +32,20 @@ export function useDeploymentPoller(deploymentId: string | null): PollerResult {
         return;
       }
       try {
-        const res = await fetch(`/api/publish/status?id=${deploymentId}`);
-        const { status: next }: { status: CoolifyDeploymentStatus } = await res.json();
-        setStatus(next);
-        if (TERMINAL.includes(next) && intervalRef) clearInterval(intervalRef);
+        const res = await fetch(`/api/publish/status?id=${runId}`);
+        if (!res.ok) return; // transient — keep polling
+        const data: RunStatus = await res.json();
+        setRunStatus(data);
+        if (data.state === "done" && intervalRef) clearInterval(intervalRef);
       } catch {
-        if (intervalRef) clearInterval(intervalRef);
-        setStatus("error");
+        // network error — keep polling until timeout
       }
     }
 
-    // Delay first poll to let Coolify register the new deployment as in_progress
-    const firstPollTimeout = setTimeout(() => {
-      poll();
-    }, 3000);
+    poll();
     const interval = setInterval(() => poll(interval), POLL_INTERVAL_MS);
+    return () => clearInterval(interval);
+  }, [runId]);
 
-    return () => {
-      clearTimeout(firstPollTimeout);
-      clearInterval(interval);
-    };
-  }, [deploymentId]);
-
-  return { status, timedOut };
+  return { runStatus, timedOut };
 }

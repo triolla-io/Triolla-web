@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
-import { runDeploymentPipeline } from "../../agents/deployment-agent/deploymentService";
+import { startDeployment } from "../../agents/deployment-agent/deploymentService";
 
 // ─── Rate limiting (in-memory, sliding window) ────────────────────────────────
 
@@ -37,6 +37,6 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: parsed.error.issues }, { status: 400 });
   }
 
-  const result = await runDeploymentPipeline(parsed.data.message ?? "chore: publish update");
-  return NextResponse.json(result);
+  const runId = startDeployment(parsed.data.message ?? "chore: publish update");
+  return NextResponse.json({ runId });
 }
