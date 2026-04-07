@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
-import { runDeploymentPipeline } from "../../deployment/deploymentService";
+import { runDeploymentPipeline } from "../../deployment-agent/deploymentService";
 
 const publishBodySchema = z.object({
   message: z.string().min(1).max(200).optional(),

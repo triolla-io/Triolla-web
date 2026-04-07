@@ -17,6 +17,14 @@ const COLORS = {
 export function PublishButton() {
   const [phase, setPhase] = useState<StartPhase>("idle");
   const [deploymentId, setDeploymentId] = useState<string | null>(null);
+  const [mockVersion, setMockVersion] = useState<number | null>(null);
+
+  useEffect(() => {
+    fetch("/api/mock-data")
+      .then((r) => r.json())
+      .then((d) => setMockVersion(d.version))
+      .catch(() => {});
+  }, []);
   const { status, timedOut } = useDeploymentPoller(deploymentId);
 
   const isPolling = deploymentId !== null && !timedOut && status !== "finished" && status !== "failed" && status !== "cancelled" && status !== "error";
@@ -25,6 +33,9 @@ export function PublishButton() {
 
   useEffect(() => {
     if ((isFinished || isFailed) && deploymentId) {
+      if (isFinished) {
+        fetch("/api/mock-data").then((r) => r.json()).then((d) => setMockVersion(d.version)).catch(() => {});
+      }
       const t = setTimeout(() => { setPhase("idle"); setDeploymentId(null); }, 4000);
       return () => clearTimeout(t);
     }
@@ -88,7 +99,10 @@ export function PublishButton() {
         fontFamily: "inherit",
       }}
     >
-      {label}
+      <span style={{ display: "block" }}>{label}</span>
+      {mockVersion !== null && (
+        <span style={{ display: "block", fontSize: 10, opacity: 0.75, fontWeight: 400 }}>v{mockVersion}</span>
+      )}
     </button>
   );
 }

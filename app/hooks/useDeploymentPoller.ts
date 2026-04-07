@@ -1,9 +1,9 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import type { CoolifyDeploymentStatus } from "../deployment/types";
+import type { CoolifyDeploymentStatus } from "../deployment-agent/types";
 
-const POLL_INTERVAL_MS = 5_000;
+const POLL_INTERVAL_MS = 30_000;
 const TIMEOUT_MS = 10 * 60 * 1_000;
 const TERMINAL: CoolifyDeploymentStatus[] = ["finished", "failed", "cancelled", "error"];
 

@@ -1,4 +1,6 @@
 import { exec } from "child_process";
+import { readFile, writeFile } from "fs/promises";
+import { join } from "path";
 import { promisify } from "util";
 import type { CoolifyDeploymentStatus } from "./types";
 
@@ -87,6 +89,9 @@ export async function getDeploymentStatus(
   const url = `${process.env.COOLIFY_API_URL}/api/v1/deployments/${deploymentId}`;
   const res = await fetch(url, { headers: coolifyHeaders() });
   if (!res.ok) {
+    // Coolify sometimes 500s on individual deployment lookup — fall back to latest
+    const latest = await fetchLatestDeployment();
+    if (latest?.deployment_uuid === deploymentId) return latest.status as CoolifyDeploymentStatus;
     throw new Error(`Coolify API error: ${res.status} ${res.statusText}`);
   }
   const data = await res.json();
@@ -119,6 +124,22 @@ export async function runHealthCheck(url: string): Promise<boolean> {
   }
 }
 
+// ─── Mock Data ───────────────────────────────────────────────────────────────
+
+const MOCK_DATA_PATH = join(process.cwd(), "app/deployment-agent/mock-data.json");
+
+async function updateMockData(): Promise<void> {
+  let data: { version: number; updatedAt: string } = { version: 0, updatedAt: "" };
+  try {
+    data = JSON.parse(await readFile(MOCK_DATA_PATH, "utf8"));
+  } catch {
+    // start fresh if missing
+  }
+  data.version = (data.version ?? 0) + 1;
+  data.updatedAt = new Date().toISOString();
+  await writeFile(MOCK_DATA_PATH, JSON.stringify(data, null, 2));
+}
+
 // ─── Pipeline ─────────────────────────────────────────────────────────────────
 
 export type DeploymentPipelineResult =
@@ -141,6 +162,8 @@ export async function runDeploymentPipeline(commitMessage: string): Promise<Depl
 
   const hasChanges = await checkGitStatus();
   if (!hasChanges) return { ok: false, reason: "nothing_to_commit" };
+
+  await updateMockData();
 
   let commitHash: string;
   try {
