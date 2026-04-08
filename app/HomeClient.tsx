@@ -159,13 +159,13 @@ export function HomeClient() {
             }
           };
 
-          // Wait 300ms to let all.js add it first, then add as fallback if needed
-          // Reduced from 850ms for faster animation start
+          // Match theme all.js: body gets .loaded ~800ms after window load.
+          // Wait so all.js can win; then fallback if it did not run (async injection).
           await new Promise<void>((resolve) => {
             setTimeout(() => {
               addLoadedClass();
               resolve();
-            }, 300);
+            }, 800);
           });
 
           if (cancelled) return;

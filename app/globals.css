@@ -161,9 +161,9 @@ body {
 }
 
 /* ============================================================
-   HEADER TICKER
+   HEADER TICKER (React shell only — not snapshot [data-triolla-snapshot])
    ============================================================ */
-.headerticker {
+body:not(:has([data-triolla-snapshot])) .headerticker {
   padding: 11px 70px;
   background: #1063F4;
   font-size: 20px;
@@ -178,12 +178,12 @@ body {
   z-index: 100;
   transition: transform 0.4s ease;
 }
-.headerticker.is-hidden {
+body:not(:has([data-triolla-snapshot])) .headerticker.is-hidden {
   transform: translateY(-100%);
 }
-.headerticker ul { margin: 0; padding: 0; }
-.headerticker ul li { padding: 0 20px; margin: 0; display: block; }
-.headerticker .tickclose {
+body:not(:has([data-triolla-snapshot])) .headerticker ul { margin: 0; padding: 0; }
+body:not(:has([data-triolla-snapshot])) .headerticker ul li { padding: 0 20px; margin: 0; display: block; }
+body:not(:has([data-triolla-snapshot])) .headerticker .tickclose {
   position: absolute;
   display: inline-block;
   right: 62px;
@@ -196,25 +196,25 @@ body {
   padding: 0;
   line-height: 1;
 }
-.headerticker .tickclose:hover { opacity: 1; }
+body:not(:has([data-triolla-snapshot])) .headerticker .tickclose:hover { opacity: 1; }
 
 @media (max-width: 1199px) {
-  .headerticker {
+  body:not(:has([data-triolla-snapshot])) .headerticker {
     padding: 11px 52px;
     font-size: 18px;
   }
-  .headerticker .tickclose {
+  body:not(:has([data-triolla-snapshot])) .headerticker .tickclose {
     right: 14px;
     top: 14px;
   }
 }
 @media (max-width: 479px) {
-  .headerticker {
+  body:not(:has([data-triolla-snapshot])) .headerticker {
     padding: 10px 40px;
     font-size: 16px;
     line-height: 22px;
   }
-  .headerticker .tickclose {
+  body:not(:has([data-triolla-snapshot])) .headerticker .tickclose {
     right: 10px;
     top: 12px;
   }
@@ -492,8 +492,8 @@ a.pill-btn[aria-disabled="true"] {
   color: #fff;
 }
 
-/* WhatsApp */
-.header_whatsapp {
+/* WhatsApp + Book a Call — React header only (.site-header). Snapshot home uses .header .header_*; theme CSS must apply. */
+.site-header .header_whatsapp {
   display: flex;
   align-items: center;
   margin: 0 13px;
@@ -503,7 +503,7 @@ a.pill-btn[aria-disabled="true"] {
   overflow: hidden;
   transition: max-width 0.5s ease, opacity 0.5s ease, margin 0.5s ease;
 }
-.header_whatsapp a {
+.site-header .header_whatsapp a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -512,18 +512,17 @@ a.pill-btn[aria-disabled="true"] {
   opacity: 1;
   transition: opacity 0.2s;
 }
-.header_whatsapp a:hover { opacity: 0.85; }
-.is-sticky .header_whatsapp {
+.site-header .header_whatsapp a:hover { opacity: 0.85; }
+.site-header.is-sticky .header_whatsapp {
   max-width: 0;
   opacity: 0;
   margin: 0;
 }
 
-/* Book a Call */
-.header_book {
+.site-header .header_book {
   transition: opacity 0.5s ease;
 }
-.header_book a {
+.site-header .header_book a {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -540,23 +539,23 @@ a.pill-btn[aria-disabled="true"] {
   transition: background 0.2s;
   justify-content: center;
 }
-.header_book a:hover { background: #005ee0; border-color: #006BFF; }
-.header_book a svg {
+.site-header .header_book a:hover { background: #005ee0; border-color: #006BFF; }
+.site-header .header_book a svg {
   display: inline-block;
   width: 16px;
   height: 16px;
   flex-shrink: 0;
 }
-.header_book a .default-text,
-.header_book a .hover-text {
+.site-header .header_book a .default-text,
+.site-header .header_book a .hover-text {
   display: inline-flex;
   align-items: center;
   gap: 8px;
   line-height: 1;
   white-space: nowrap;
 }
-.header_book a > span.default-text,
-.header_book a > span.hover-text {
+.site-header .header_book a > span.default-text,
+.site-header .header_book a > span.hover-text {
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
@@ -565,7 +564,7 @@ a.pill-btn[aria-disabled="true"] {
   line-height: 1 !important;
   white-space: nowrap !important;
 }
-.is-sticky .header_book {
+.site-header.is-sticky .header_book {
   opacity: 0;
 }
 
@@ -893,7 +892,7 @@ header.site-header + .hmenumob .hmenumobclose button {
 }
 @media (max-width: 767px) {
   /* Keep the blue ticker pinned to document top as absolute. */
-  .headerticker {
+  body:not(:has([data-triolla-snapshot])) .headerticker {
     display: block;
     position: absolute;
     top: 0;

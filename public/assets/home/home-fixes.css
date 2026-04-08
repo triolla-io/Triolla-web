@@ -1,35 +1,39 @@
 /* ========================================
-   TYPOGRAPHY FIXES FOR HOME PAGE
+   TYPOGRAPHY / PARITY FIXES FOR HOME SNAPSHOT
+   Theme: body + headings default to 'SF Pro'; nav pills use 'SFProText'.
+   Do not !important-override ticker / hero h2 / winners — responsive.css uses
+   SF Pro + mobile Helvetica for hero h2; globals body font differs from triolla.io.
    ======================================== */
+
+/* Match triolla style.css body stack for injected fragment (inherits into ticker, winners h3, etc.) */
+[data-triolla-snapshot] {
+  font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+/* Portfolio dropdown (nav menu submenu): align content to LEFT
+   Theme submenu items should flow left-aligned, not centered. */
+[data-triolla-snapshot] .header_menu ul.menu li.bigmenu > ul,
+[data-triolla-snapshot] .header_menu ul.menu li.bigmenu > ul li {
+  text-align: left !important;
+}
+[data-triolla-snapshot] .header_menu ul.menu li.bigmenu > ul li a {
+  text-align: left !important;
+}
+
+/* Hero h1: reset bottom offset that causes visual position mismatch.
+   Theme uses bottom: -30px (animation start); remove for parity with live site. */
+.homemaintopone h1 {
+  bottom: 0 !important;
+}
 
 /* CRITICAL: Fix header max-width to match Live site (95% not 98%) */
 .headnewact {
   max-width: 95% !important;
 }
 
-/* 1. Hero section - h1 and h2 headings */
-.homemaintopone h1 {
-  font-family: 'SFProText' !important;
-  font-weight: 700 !important;
-}
-
-.homemaintopone h2 {
-  font-family: 'SFProText' !important;
-  font-weight: 400 !important;
-}
-
-/* 2. Pitangoux ticker text */
-.headerticker {
-  font-family: 'SFProText' !important;
-  font-weight: 400 !important;
-}
-
-.headerticker li {
-  font-family: 'SFProText' !important;
-  font-weight: 400 !important;
-}
-
-/* 3. Top navigation buttons */
+/* Top navigation pills — theme .header_book a already uses SFProText; keep explicit for cascade */
 .header_contact a,
 .header_contact a span,
 .header_book a,
@@ -40,7 +44,7 @@
   font-weight: 500 !important;
 }
 
-/* 4. Portfolio section headings and text */
+/* Portfolio / process section */
 .top_design_text h3 {
   font-family: 'SFProText' !important;
   font-weight: 700 !important;
@@ -51,30 +55,7 @@
   font-weight: 400 !important;
 }
 
-/* 5. Winners section */
-.winners-title {
-  font-family: 'SFProText' !important;
-  font-weight: 700 !important;
-}
-
-.winners-subtitle {
-  font-family: 'SFProText' !important;
-  font-weight: 600 !important;
-}
-
-
-/* 6. Global/Our Clients section */
-.global_con h2 {
-  font-family: 'SFProText' !important;
-  font-weight: 400 !important;
-}
-
-.global_con h3 {
-  font-family: 'SFProText' !important;
-  font-weight: 700 !important;
-}
-
-/* 7. FAQ section */
+/* FAQ section */
 .faqtitle a {
   font-family: 'SFProText' !important;
   font-weight: 400 !important;
@@ -92,7 +73,7 @@
   font-weight: 400 !important;
 }
 
-/* 8. FAQ SVG icons - corrected paths */
+/* FAQ SVG icons - corrected paths */
 .faqtitle a::after {
   background-image: url(/images/faq_plus.svg) !important;
   background-repeat: no-repeat !important;
@@ -107,7 +88,7 @@
   background-size: contain !important;
 }
 
-/* 9. Preserve specific themed fonts */
+/* Preserve specific themed fonts */
 .technmtxt,
 .techthretop p,
 .techthretop h4 {
