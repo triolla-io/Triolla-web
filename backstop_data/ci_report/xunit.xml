@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="2" failures="2" errors="2" skipped="0">
+  <testsuite name="BackstopJS" tests="2" failures="2" errors="2" skipped="0">
+    <testcase classname="body" name=" ›› Homepage - Desktop - EN">
+      <failure message="Design deviation ›› Homepage - Desktop - EN (body) component"/>
+      <error message="Design deviation ›› Homepage - Desktop - EN (body) component"/>
+    </testcase>
+    <testcase classname="body" name=" ›› Homepage - Desktop - HE">
+      <failure message="Design deviation ›› Homepage - Desktop - HE (body) component"/>
+      <error message="Design deviation ›› Homepage - Desktop - HE (body) component"/>
+    </testcase>
+  </testsuite>
+</testsuites>

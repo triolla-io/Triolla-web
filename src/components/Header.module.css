@@ -1,0 +1,370 @@
+/**
+ * Header.module.css - Scoped styles for Header component
+ * Pixel-perfect match to Live site (https://triolla.io)
+ * Uses CSS Reset to prevent inheritance from old global styles
+ */
+
+/* ===== RESET: Block inheritance from old global styles ===== */
+.headerRoot {
+  all: revert;
+  font-family: inherit;
+  color: inherit;
+}
+
+/* ===== TOP TICKER ===== */
+.headerticker {
+  padding-left: 20px;
+  padding-right: 0;
+  background: #1063F4;
+  font-size: 20px;
+  line-height: 25px;
+  color: #fff;
+  text-align: left;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  z-index: 99;
+  display: block;
+}
+
+.headerticker ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.headerticker li {
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+
+/* ===== MAIN HEADER (BLACK PILL) ===== */
+.siteHeader {
+  display: block;
+  position: fixed;
+  top: 47px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: 95%;
+  margin: 0 auto;
+  /* Pill Container Styling */
+  background-color: #000000;
+  border-radius: 170px;
+  padding: 15px 20px 15px 28px;
+  height: 76px;
+  z-index: 100;
+}
+
+.headerIn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  flex-wrap: nowrap;
+}
+
+/* ===== LOGO ===== */
+.logo {
+  display: block;
+  width: 125px;
+  height: 38px;
+  padding: 0;
+  margin: 0;
+  line-height: normal;
+  flex-shrink: 0;
+}
+
+.logo a {
+  display: inline-block;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+}
+
+.logo img {
+  display: block;
+  height: 38px;
+  width: 78px;
+  object-fit: contain;
+}
+
+/* ===== HEADER MENU (Navigation) ===== */
+.headerMenu {
+  display: block;
+  flex: 1;
+  padding: 12px 0 0 0;
+  margin: 0;
+  list-style: none;
+  text-align: left;
+}
+
+.headerMenu li {
+  display: inline-flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.headerMenu a,
+.headerMenu button {
+  display: inline-block;
+  font-family: 'SFProText', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #ffffff;
+  text-decoration: none;
+  letter-spacing: normal;
+  padding: 0 7px;
+  margin: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  line-height: normal;
+}
+
+.headerMenu a:hover,
+.headerMenu button:hover {
+  color: #FED125;
+}
+
+/* ===== HEADER RIGHT (Button Container) ===== */
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-left: auto;
+}
+
+/* ===== CONTACT US BUTTON ===== */
+.headerContact {
+  display: block;
+  width: 118px;
+  height: 44px;
+  flex-shrink: 0;
+}
+
+.headerContact a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  background: #FED125;
+  border: 1px solid #FED125;
+  border-radius: 50px;
+  color: #000;
+  text-decoration: none;
+  font-family: 'SFProText', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* ===== WHATSAPP ICON ===== */
+.headerWhatsapp {
+  display: block;
+  width: 44px;
+  height: 44px;
+  margin: 0 12px;
+  line-height: normal;
+  flex-shrink: 0;
+}
+
+.headerWhatsapp a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  line-height: normal;
+}
+
+.headerWhatsapp svg {
+  width: 44px;
+  height: 44px;
+  display: block;
+}
+
+/* ===== BOOK A CALL BUTTON ===== */
+.headerBook {
+  display: block;
+  width: 142px;
+  height: 44px;
+  flex-shrink: 0;
+}
+
+.headerBook a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #000;
+  background: #006BFF;
+  border-radius: 50px;
+  font-family: 'SFProText', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: normal;
+  color: #FFF;
+  padding: 0 10px;
+  position: relative;
+  transition: 0.3s;
+  overflow: hidden;
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.headerBook a svg {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  width: 16px;
+  height: 16px;
+}
+
+.headerBook a span {
+  color: #FFF;
+  display: inline;
+}
+
+/* Button hover effects */
+.headerBook a:hover {
+  border: 1px solid #006BFF;
+}
+
+/* ===== MOBILE MENU ===== */
+.hmenumob {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #FED125;
+  z-index: 500;
+  overflow-y: auto;
+}
+
+.hmenumob.open {
+  display: block;
+}
+
+.hmenumob.is-he {
+  direction: rtl;
+}
+
+.menutoggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  color: currentColor;
+}
+
+/* Mobile menu internal sections */
+.hmenumobclose {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.hmenumobclose button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hmenumobdiv {
+  padding: 20px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.hmobmenubot {
+  padding: 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.hmobmenubot ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hmobmenubot li {
+  padding: 10px 0;
+}
+
+.hmobmbuts {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 15px;
+}
+
+.hmobbutlftb {
+  flex: 1;
+}
+
+.hmobbutlftb a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 15px;
+  background: #006BFF;
+  color: white;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.hmobbutrsocl {
+  display: flex;
+  gap: 10px;
+}
+
+.hmobbutrsocl a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: #006BFF;
+  border-radius: 50%;
+  color: white;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .menutoggle {
+    display: block;
+  }
+
+  .hmenumob {
+    display: none;
+  }
+
+  .hmenumob.open {
+    display: block;
+  }
+}

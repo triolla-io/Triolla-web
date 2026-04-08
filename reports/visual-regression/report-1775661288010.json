@@ -1,0 +1,229 @@
+{
+  "timestamp": "2026-04-08T15:14:15.681Z",
+  "route": "/",
+  "urls": {
+    "live": "https://triolla.io",
+    "local": "http://localhost:3000"
+  },
+  "comparisons": [
+    {
+      "viewport": "mobile",
+      "error": "Image sizes do not match.",
+      "match": false
+    },
+    {
+      "viewport": "tablet",
+      "error": "Image sizes do not match.",
+      "match": false
+    },
+    {
+      "viewport": "desktop",
+      "error": "Image sizes do not match.",
+      "match": false
+    }
+  ],
+  "selectors": {
+    "live": {
+      ".homemaintopone": {
+        "description": "Hero section",
+        "exists": true,
+        "visible": true,
+        "boundingBox": {
+          "x": 185,
+          "y": 265,
+          "width": 1550,
+          "height": 433
+        }
+      },
+      ".top_design_text": {
+        "description": "Design section",
+        "exists": true,
+        "visible": true,
+        "boundingBox": {
+          "x": 134,
+          "y": 9375,
+          "width": 1128,
+          "height": 557
+        }
+      },
+      ".global_con": {
+        "description": "Global section",
+        "exists": true,
+        "visible": true,
+        "boundingBox": {
+          "x": 0,
+          "y": 7612,
+          "width": 1920,
+          "height": 1498
+        }
+      },
+      ".global_logos": {
+        "description": "Logos grid",
+        "exists": true,
+        "visible": false,
+        "boundingBox": {
+          "x": 0,
+          "y": 7612,
+          "width": 0,
+          "height": 0
+        }
+      },
+      ".winners-section": {
+        "description": "Winners section",
+        "exists": false,
+        "visible": false
+      },
+      ".faq_main": {
+        "description": "FAQ section",
+        "exists": false,
+        "visible": false
+      },
+      "header": {
+        "description": "Header",
+        "exists": false,
+        "visible": false
+      },
+      ".header_contact": {
+        "description": "Contact button",
+        "exists": true,
+        "visible": true,
+        "boundingBox": {
+          "x": 1523,
+          "y": 103,
+          "width": 118,
+          "height": 44
+        }
+      },
+      ".header_book": {
+        "description": "Book button",
+        "exists": true,
+        "visible": true,
+        "boundingBox": {
+          "x": 1709,
+          "y": 103,
+          "width": 142,
+          "height": 44
+        }
+      }
+    },
+    "local": {
+      ".homemaintopone": {
+        "description": "Hero section",
+        "exists": true,
+        "visible": true,
+        "boundingBox": {
+          "x": 178,
+          "y": 265,
+          "width": 1550,
+          "height": 433
+        }
+      },
+      ".top_design_text": {
+        "description": "Design section",
+        "exists": true,
+        "visible": true,
+        "boundingBox": {
+          "x": 127,
+          "y": 9449,
+          "width": 1128,
+          "height": 557
+        }
+      },
+      ".global_con": {
+        "description": "Global section",
+        "exists": true,
+        "visible": true,
+        "boundingBox": {
+          "x": 0,
+          "y": 7686,
+          "width": 1905,
+          "height": 1498
+        }
+      },
+      ".global_logos": {
+        "description": "Logos grid",
+        "exists": true,
+        "visible": true,
+        "boundingBox": {
+          "x": 0,
+          "y": 7686,
+          "width": 1905,
+          "height": 1498
+        }
+      },
+      ".winners-section": {
+        "description": "Winners section",
+        "exists": false,
+        "visible": false
+      },
+      ".faq_main": {
+        "description": "FAQ section",
+        "exists": false,
+        "visible": false
+      },
+      "header": {
+        "description": "Header",
+        "exists": false,
+        "visible": false
+      },
+      ".header_contact": {
+        "description": "Contact button",
+        "exists": true,
+        "visible": true,
+        "boundingBox": {
+          "x": 1508,
+          "y": 103,
+          "width": 118,
+          "height": 44
+        }
+      },
+      ".header_book": {
+        "description": "Book button",
+        "exists": true,
+        "visible": true,
+        "boundingBox": {
+          "x": 1694,
+          "y": 103,
+          "width": 142,
+          "height": 44
+        }
+      }
+    }
+  },
+  "summary": {
+    "totalViewports": 3,
+    "matchedViewports": 0,
+    "mismatchedViewports": 0,
+    "averageMismatchPercentage": 0
+  },
+  "mismatchedSelectors": {
+    ".global_logos": {
+      "description": "Logos grid",
+      "issues": [
+        "visibility mismatch (live: false, local: true)"
+      ],
+      "live": {
+        "description": "Logos grid",
+        "exists": true,
+        "visible": false,
+        "boundingBox": {
+          "x": 0,
+          "y": 7612,
+          "width": 0,
+          "height": 0
+        }
+      },
+      "local": {
+        "description": "Logos grid",
+        "exists": true,
+        "visible": true,
+        "boundingBox": {
+          "x": 0,
+          "y": 7686,
+          "width": 1905,
+          "height": 1498
+        }
+      }
+    }
+  }
+}

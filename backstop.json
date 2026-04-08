@@ -1,0 +1,76 @@
+{
+  "id": "triolla_visual_regression",
+  "viewports": [
+    {
+      "label": "desktop",
+      "width": 1920,
+      "height": 1200
+    }
+  ],
+  "scenarios": [
+    {
+      "label": "Homepage - Desktop - EN",
+      "url": "http://localhost:3000/",
+      "referenceUrl": "https://triolla.io/",
+      "readyEvent": "",
+      "readySelector": "",
+      "readyEvent": "",
+      "readyTimeout": 0,
+      "delay": 0,
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "hoverSelector": "",
+      "clickSelector": "",
+      "postInteractionWait": 500,
+      "selectors": ["body"],
+      "selectorExpansion": false,
+      "expect": 0,
+      "misMatchThreshold": 0.1,
+      "requireSameDimensions": true
+    },
+    {
+      "label": "Homepage - Desktop - HE",
+      "url": "http://localhost:3000/he",
+      "referenceUrl": "https://triolla.io/he/",
+      "readyEvent": "",
+      "readySelector": "",
+      "readyEvent": "",
+      "readyTimeout": 0,
+      "delay": 0,
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "hoverSelector": "",
+      "clickSelector": "",
+      "postInteractionWait": 500,
+      "selectors": ["body"],
+      "selectorExpansion": false,
+      "expect": 0,
+      "misMatchThreshold": 0.1,
+      "requireSameDimensions": true
+    }
+  ],
+  "paths": {
+    "bitmaps_reference": "backstop_data/bitmaps_reference",
+    "bitmaps_test": "backstop_data/bitmaps_test",
+    "engine_scripts": "backstop_data/engine_scripts",
+    "html_report": "backstop_data/html_report",
+    "ci_report": "backstop_data/ci_report"
+  },
+  "report": [
+    "browser",
+    "CI"
+  ],
+  "engine": "puppeteer",
+  "engineOptions": {
+    "args": [
+      "--no-sandbox"
+    ],
+    "gotoOptions": {
+      "waitUntil": "networkidle2"
+    }
+  },
+  "asyncCaptureLimit": 5,
+  "asyncCompareLimit": 50,
+  "debug": false,
+  "debugWindow": false
+}

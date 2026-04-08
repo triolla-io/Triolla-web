@@ -1,0 +1,3187 @@
+{
+  "timestamp": "2026-04-06T23:11:32.762Z",
+  "summary": {
+    "totalTags": 19,
+    "tagsDifferent": 15,
+    "missingElements": 90,
+    "extraElements": 1,
+    "criticalElementsMissing": 2,
+    "status": "ISSUES_FOUND"
+  },
+  "elementDifferences": [
+    {
+      "tag": "h5",
+      "originalCount": 4,
+      "currentCount": 1,
+      "difference": -3,
+      "severity": "HIGH",
+      "type": "MISSING",
+      "description": "3 missing <h5> elements"
+    },
+    {
+      "tag": "img",
+      "originalCount": 18,
+      "currentCount": 16,
+      "difference": -2,
+      "severity": "HIGH",
+      "type": "MISSING",
+      "description": "2 missing <img> elements"
+    },
+    {
+      "tag": "h4",
+      "originalCount": 3,
+      "currentCount": 1,
+      "difference": -2,
+      "severity": "HIGH",
+      "type": "MISSING",
+      "description": "2 missing <h4> elements"
+    },
+    {
+      "tag": "ul",
+      "originalCount": 11,
+      "currentCount": 10,
+      "difference": -1,
+      "severity": "HIGH",
+      "type": "MISSING",
+      "description": "1 missing <ul> element"
+    },
+    {
+      "tag": "svg",
+      "originalCount": 2,
+      "currentCount": 1,
+      "difference": -1,
+      "severity": "HIGH",
+      "type": "MISSING",
+      "description": "1 missing <svg> element"
+    },
+    {
+      "tag": "iframe",
+      "originalCount": 1,
+      "currentCount": 0,
+      "difference": -1,
+      "severity": "HIGH",
+      "type": "MISSING",
+      "description": "1 missing <iframe> element"
+    },
+    {
+      "tag": "path",
+      "originalCount": 1,
+      "currentCount": 0,
+      "difference": -1,
+      "severity": "HIGH",
+      "type": "MISSING",
+      "description": "1 missing <path> element"
+    },
+    {
+      "tag": "picture",
+      "originalCount": 0,
+      "currentCount": 1,
+      "difference": 1,
+      "severity": "HIGH",
+      "type": "EXTRA",
+      "description": "1 extra <picture> element"
+    },
+    {
+      "tag": "a",
+      "originalCount": 30,
+      "currentCount": 11,
+      "difference": -19,
+      "severity": "CRITICAL",
+      "type": "MISSING",
+      "description": "19 missing <a> elements"
+    },
+    {
+      "tag": "span",
+      "originalCount": 24,
+      "currentCount": 5,
+      "difference": -19,
+      "severity": "CRITICAL",
+      "type": "MISSING",
+      "description": "19 missing <span> elements"
+    },
+    {
+      "tag": "p",
+      "originalCount": 17,
+      "currentCount": 4,
+      "difference": -13,
+      "severity": "CRITICAL",
+      "type": "MISSING",
+      "description": "13 missing <p> elements"
+    },
+    {
+      "tag": "li",
+      "originalCount": 37,
+      "currentCount": 26,
+      "difference": -11,
+      "severity": "CRITICAL",
+      "type": "MISSING",
+      "description": "11 missing <li> elements"
+    },
+    {
+      "tag": "br",
+      "originalCount": 10,
+      "currentCount": 3,
+      "difference": -7,
+      "severity": "CRITICAL",
+      "type": "MISSING",
+      "description": "7 missing <br> elements"
+    },
+    {
+      "tag": "div",
+      "originalCount": 184,
+      "currentCount": 179,
+      "difference": -5,
+      "severity": "CRITICAL",
+      "type": "MISSING",
+      "description": "5 missing <div> elements"
+    },
+    {
+      "tag": "h3",
+      "originalCount": 13,
+      "currentCount": 8,
+      "difference": -5,
+      "severity": "CRITICAL",
+      "type": "MISSING",
+      "description": "5 missing <h3> elements"
+    }
+  ],
+  "criticalElements": {
+    "headerWhatsapp": {
+      "name": "WhatsApp CTA Pill",
+      "selector": ".header_whatsapp",
+      "importance": "CRITICAL",
+      "status": "FOUND",
+      "element": {
+        "tag": "div",
+        "className": "header_whatsapp",
+        "id": "",
+        "layout": {
+          "top": 103,
+          "left": 1059,
+          "width": 31,
+          "height": 44,
+          "docTop": 103
+        },
+        "visible": true,
+        "opacity": 1,
+        "spacing": {
+          "marginTop": 0,
+          "marginBottom": 0,
+          "marginLeft": 13,
+          "marginRight": 13,
+          "paddingTop": 0,
+          "paddingBottom": 0,
+          "paddingLeft": 0,
+          "paddingRight": 0
+        },
+        "typography": {
+          "fontSize": "18px",
+          "lineHeight": "27px",
+          "fontWeight": "400",
+          "fontFamily": "\"SF Pro\""
+        },
+        "colors": {
+          "color": "rgb(0, 0, 0)",
+          "backgroundColor": "rgba(0, 0, 0, 0)"
+        },
+        "text": "",
+        "attributes": {
+          "href": null,
+          "src": null,
+          "alt": null,
+          "role": null
+        },
+        "children": [
+          {
+            "tag": "a",
+            "className": "",
+            "id": "",
+            "layout": {
+              "top": 103,
+              "left": 1059,
+              "width": 44,
+              "height": 44,
+              "docTop": 103
+            },
+            "visible": true,
+            "opacity": 1,
+            "spacing": {
+              "marginTop": 0,
+              "marginBottom": 0,
+              "marginLeft": 0,
+              "marginRight": 0,
+              "paddingTop": 0,
+              "paddingBottom": 0,
+              "paddingLeft": 0,
+              "paddingRight": 0
+            },
+            "typography": {
+              "fontSize": "18px",
+              "lineHeight": "27px",
+              "fontWeight": "400",
+              "fontFamily": "\"SF Pro\""
+            },
+            "colors": {
+              "color": "rgb(0, 0, 0)",
+              "backgroundColor": "rgba(0, 0, 0, 0)"
+            },
+            "text": "",
+            "attributes": {
+              "href": "https://api.whatsapp.com/send/?phone=+972525956644&text=שלום, הייתי רוצה לשמוע עוד פרטים... &app_absent=0",
+              "src": null,
+              "alt": null,
+              "role": null
+            }
+          }
+        ]
+      },
+      "message": "✅ WhatsApp CTA Pill found"
+    },
+    "headerBook": {
+      "name": "Book CTA Pill",
+      "selector": ".header_book",
+      "importance": "CRITICAL",
+      "status": "FOUND",
+      "element": {
+        "tag": "div",
+        "className": "header_book",
+        "id": "",
+        "layout": {
+          "top": 103,
+          "left": 1103,
+          "width": 142,
+          "height": 44,
+          "docTop": 103
+        },
+        "visible": true,
+        "opacity": 1,
+        "spacing": {
+          "marginTop": 0,
+          "marginBottom": 0,
+          "marginLeft": 0,
+          "marginRight": 0,
+          "paddingTop": 0,
+          "paddingBottom": 0,
+          "paddingLeft": 0,
+          "paddingRight": 0
+        },
+        "typography": {
+          "fontSize": "18px",
+          "lineHeight": "27px",
+          "fontWeight": "400",
+          "fontFamily": "\"SF Pro\""
+        },
+        "colors": {
+          "color": "rgb(0, 0, 0)",
+          "backgroundColor": "rgba(0, 0, 0, 0)"
+        },
+        "text": "Book a Call\n                        \n\nBook a Call",
+        "attributes": {
+          "href": null,
+          "src": null,
+          "alt": null,
+          "role": null
+        },
+        "children": [
+          {
+            "tag": "a",
+            "className": "",
+            "id": "",
+            "layout": {
+              "top": 103,
+              "left": 1103,
+              "width": 142,
+              "height": 44,
+              "docTop": 103
+            },
+            "visible": true,
+            "opacity": 1,
+            "spacing": {
+              "marginTop": 0,
+              "marginBottom": 0,
+              "marginLeft": 0,
+              "marginRight": 0,
+              "paddingTop": 0,
+              "paddingBottom": 0,
+              "paddingLeft": 23,
+              "paddingRight": 23
+            },
+            "typography": {
+              "fontSize": "16px",
+              "lineHeight": "48px",
+              "fontWeight": "500",
+              "fontFamily": "SFProText"
+            },
+            "colors": {
+              "color": "rgb(255, 255, 255)",
+              "backgroundColor": "rgb(0, 107, 255)"
+            },
+            "text": "Book a Call\n                        \n\nBook a Call",
+            "attributes": {
+              "href": "https://calendly.com/triolla/pitangoux-introductory-meeting-clone",
+              "src": null,
+              "alt": null,
+              "role": null
+            }
+          }
+        ]
+      },
+      "message": "✅ Book CTA Pill found"
+    },
+    "headerMenu": {
+      "name": "Navigation Menu",
+      "selector": ".header_menu",
+      "importance": "CRITICAL",
+      "status": "FOUND",
+      "element": {
+        "tag": "div",
+        "className": "header_menu",
+        "id": "",
+        "layout": {
+          "top": 103,
+          "left": 693,
+          "width": 254,
+          "height": 44,
+          "docTop": 103
+        },
+        "visible": true,
+        "opacity": 1,
+        "spacing": {
+          "marginTop": 0,
+          "marginBottom": 0,
+          "marginLeft": 0,
+          "marginRight": 0,
+          "paddingTop": 12,
+          "paddingBottom": 0,
+          "paddingLeft": 0,
+          "paddingRight": 0
+        },
+        "typography": {
+          "fontSize": "18px",
+          "lineHeight": "27px",
+          "fontWeight": "400",
+          "fontFamily": "\"SF Pro\""
+        },
+        "colors": {
+          "color": "rgb(0, 0, 0)",
+          "backgroundColor": "rgba(0, 0, 0, 0)"
+        },
+        "text": "Portfolio\n\n\tCybersecurity\n\tDigital Health\n\tFintech & Finance\n\tGaming\n\tAgritech\n\t",
+        "attributes": {
+          "href": null,
+          "src": null,
+          "alt": null,
+          "role": null
+        },
+        "children": [
+          {
+            "tag": "div",
+            "className": "menu-header-menu-container",
+            "id": "",
+            "layout": {
+              "top": 115,
+              "left": 693,
+              "width": 254,
+              "height": 32,
+              "docTop": 115
+            },
+            "visible": true,
+            "opacity": 1,
+            "spacing": {
+              "marginTop": 0,
+              "marginBottom": 0,
+              "marginLeft": 0,
+              "marginRight": 0,
+              "paddingTop": 0,
+              "paddingBottom": 0,
+              "paddingLeft": 0,
+              "paddingRight": 0
+            },
+            "typography": {
+              "fontSize": "18px",
+              "lineHeight": "27px",
+              "fontWeight": "400",
+              "fontFamily": "\"SF Pro\""
+            },
+            "colors": {
+              "color": "rgb(0, 0, 0)",
+              "backgroundColor": "rgba(0, 0, 0, 0)"
+            },
+            "text": "Portfolio\n\n\tCybersecurity\n\tDigital Health\n\tFintech & Finance\n\tGaming\n\tAgritech\n\t",
+            "attributes": {
+              "href": null,
+              "src": null,
+              "alt": null,
+              "role": null
+            },
+            "children": [
+              {
+                "tag": "ul",
+                "className": "menu",
+                "id": "menu-header-menu",
+                "layout": {
+                  "top": 115,
+                  "left": 693,
+                  "width": 254,
+                  "height": 32,
+                  "docTop": 115
+                },
+                "visible": true,
+                "opacity": 1,
+                "spacing": {
+                  "marginTop": 0,
+                  "marginBottom": 0,
+                  "marginLeft": 0,
+                  "marginRight": 0,
+                  "paddingTop": 0,
+                  "paddingBottom": 0,
+                  "paddingLeft": 0,
+                  "paddingRight": 0
+                },
+                "typography": {
+                  "fontSize": "18px",
+                  "lineHeight": "27px",
+                  "fontWeight": "400",
+                  "fontFamily": "\"SF Pro\""
+                },
+                "colors": {
+                  "color": "rgb(0, 0, 0)",
+                  "backgroundColor": "rgba(0, 0, 0, 0)"
+                },
+                "text": "Portfolio\n\n\tCybersecurity\n\tDigital Health\n\tFintech & Finance\n\tGaming\n\tAgritech\n\t",
+                "attributes": {
+                  "href": null,
+                  "src": null,
+                  "alt": null,
+                  "role": null
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "message": "✅ Navigation Menu found"
+    },
+    "header": {
+      "name": "Header Container",
+      "selector": ".header",
+      "importance": "HIGH",
+      "status": "FOUND",
+      "element": {
+        "tag": "div",
+        "className": "headerticker",
+        "id": "",
+        "layout": {
+          "top": 0,
+          "left": 0,
+          "width": 1905,
+          "height": 47,
+          "docTop": 0
+        },
+        "visible": true,
+        "opacity": 1,
+        "spacing": {
+          "marginTop": 0,
+          "marginBottom": 0,
+          "marginLeft": 0,
+          "marginRight": 0,
+          "paddingTop": 11,
+          "paddingBottom": 11,
+          "paddingLeft": 70,
+          "paddingRight": 70
+        },
+        "typography": {
+          "fontSize": "20px",
+          "lineHeight": "25px",
+          "fontWeight": "400",
+          "fontFamily": "\"SF Pro\""
+        },
+        "colors": {
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "rgb(16, 99, 244)"
+        },
+        "text": "Pitangoux is now Triolla – We’ve rebranded! Hello and welcome!",
+        "attributes": {
+          "href": null,
+          "src": null,
+          "alt": null,
+          "role": null
+        },
+        "children": [
+          {
+            "tag": "a",
+            "className": "tickclose",
+            "id": "",
+            "layout": {
+              "top": 16,
+              "left": 1882,
+              "width": 13,
+              "height": 13,
+              "docTop": 16
+            },
+            "visible": true,
+            "opacity": 0.85,
+            "spacing": {
+              "marginTop": 0,
+              "marginBottom": 0,
+              "marginLeft": 0,
+              "marginRight": 0,
+              "paddingTop": 0,
+              "paddingBottom": 0,
+              "paddingLeft": 0,
+              "paddingRight": 0
+            },
+            "typography": {
+              "fontSize": "20px",
+              "lineHeight": "20px",
+              "fontWeight": "400",
+              "fontFamily": "\"SF Pro\""
+            },
+            "colors": {
+              "color": "rgb(0, 0, 0)",
+              "backgroundColor": "rgba(0, 0, 0, 0)"
+            },
+            "text": "",
+            "attributes": {
+              "href": "javascript:void(0);",
+              "src": null,
+              "alt": null,
+              "role": null
+            },
+            "children": [
+              {
+                "tag": "img",
+                "className": "",
+                "id": "",
+                "layout": {
+                  "top": 16,
+                  "left": 1882,
+                  "width": 13,
+                  "height": 13,
+                  "docTop": 16
+                },
+                "visible": true,
+                "opacity": 1,
+                "spacing": {
+                  "marginTop": 0,
+                  "marginBottom": 0,
+                  "marginLeft": 0,
+                  "marginRight": 0,
+                  "paddingTop": 0,
+                  "paddingBottom": 0,
+                  "paddingLeft": 0,
+                  "paddingRight": 0
+                },
+                "typography": {
+                  "fontSize": "20px",
+                  "lineHeight": "20px",
+                  "fontWeight": "400",
+                  "fontFamily": "\"SF Pro\""
+                },
+                "colors": {
+                  "color": "rgb(0, 0, 0)",
+                  "backgroundColor": "rgba(0, 0, 0, 0)"
+                },
+                "text": "",
+                "attributes": {
+                  "href": null,
+                  "src": "/assets/_shared/tickerxlose.svg",
+                  "alt": "",
+                  "role": null
+                }
+              }
+            ]
+          },
+          {
+            "tag": "ul",
+            "className": "",
+            "id": "",
+            "layout": {
+              "top": 11,
+              "left": 70,
+              "width": 1765,
+              "height": 25,
+              "docTop": 11
+            },
+            "visible": true,
+            "opacity": 1,
+            "spacing": {
+              "marginTop": 0,
+              "marginBottom": 0,
+              "marginLeft": 0,
+              "marginRight": 0,
+              "paddingTop": 0,
+              "paddingBottom": 0,
+              "paddingLeft": 0,
+              "paddingRight": 0
+            },
+            "typography": {
+              "fontSize": "20px",
+              "lineHeight": "25px",
+              "fontWeight": "400",
+              "fontFamily": "\"SF Pro\""
+            },
+            "colors": {
+              "color": "rgb(255, 255, 255)",
+              "backgroundColor": "rgba(0, 0, 0, 0)"
+            },
+            "text": "Pitangoux is now Triolla – We’ve rebranded! Hello and welcome!",
+            "attributes": {
+              "href": null,
+              "src": null,
+              "alt": null,
+              "role": null
+            },
+            "children": [
+              {
+                "tag": "li",
+                "className": "",
+                "id": "",
+                "layout": {
+                  "top": 11,
+                  "left": 70,
+                  "width": 1765,
+                  "height": 25,
+                  "docTop": 11
+                },
+                "visible": true,
+                "opacity": 1,
+                "spacing": {
+                  "marginTop": 0,
+                  "marginBottom": 0,
+                  "marginLeft": 0,
+                  "marginRight": 0,
+                  "paddingTop": 0,
+                  "paddingBottom": 0,
+                  "paddingLeft": 0,
+                  "paddingRight": 0
+                },
+                "typography": {
+                  "fontSize": "14px",
+                  "lineHeight": "25px",
+                  "fontWeight": "400",
+                  "fontFamily": "\"SF Pro\""
+                },
+                "colors": {
+                  "color": "rgb(255, 255, 255)",
+                  "backgroundColor": "rgba(0, 0, 0, 0)"
+                },
+                "text": "Pitangoux is now Triolla – We’ve rebranded! Hello and welcome!",
+                "attributes": {
+                  "href": null,
+                  "src": null,
+                  "alt": null,
+                  "role": null
+                },
+                "children": [
+                  {
+                    "tag": "br",
+                    "className": "",
+                    "id": "",
+                    "layout": {
+                      "top": 0,
+                      "left": 0,
+                      "width": 0,
+                      "height": 0,
+                      "docTop": 0
+                    },
+                    "visible": false,
+                    "opacity": 1,
+                    "spacing": {
+                      "marginTop": 0,
+                      "marginBottom": 0,
+                      "marginLeft": 0,
+                      "marginRight": 0,
+                      "paddingTop": 0,
+                      "paddingBottom": 0,
+                      "paddingLeft": 0,
+                      "paddingRight": 0
+                    },
+                    "typography": {
+                      "fontSize": "14px",
+                      "lineHeight": "25px",
+                      "fontWeight": "400",
+                      "fontFamily": "\"SF Pro\""
+                    },
+                    "colors": {
+                      "color": "rgb(255, 255, 255)",
+                      "backgroundColor": "rgba(0, 0, 0, 0)"
+                    },
+                    "text": "",
+                    "attributes": {
+                      "href": null,
+                      "src": null,
+                      "alt": null,
+                      "role": null
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "message": "✅ Header Container found"
+    },
+    "heroSection": {
+      "name": "Hero Section",
+      "selector": ".homemaintopone, .hero",
+      "importance": "HIGH",
+      "status": "MISSING",
+      "element": null,
+      "message": "❌ Hero Section MISSING - CRITICAL!"
+    },
+    "clientsSection": {
+      "name": "Clients Section",
+      "selector": ".global_con, section.clients",
+      "importance": "HIGH",
+      "status": "MISSING",
+      "element": null,
+      "message": "❌ Clients Section MISSING - CRITICAL!"
+    },
+    "footer": {
+      "name": "Footer",
+      "selector": "footer, .footer",
+      "importance": "MEDIUM",
+      "status": "FOUND",
+      "element": {
+        "tag": "div",
+        "className": "footer",
+        "id": "",
+        "layout": {
+          "top": 18324,
+          "left": 0,
+          "width": 1905,
+          "height": 772,
+          "docTop": 18324
+        },
+        "visible": true,
+        "opacity": 1,
+        "spacing": {
+          "marginTop": 0,
+          "marginBottom": 0,
+          "marginLeft": 0,
+          "marginRight": 0,
+          "paddingTop": 50,
+          "paddingBottom": 33,
+          "paddingLeft": 0,
+          "paddingRight": 0
+        },
+        "typography": {
+          "fontSize": "18px",
+          "lineHeight": "27px",
+          "fontWeight": "400",
+          "fontFamily": "\"SF Pro\""
+        },
+        "colors": {
+          "color": "rgb(0, 0, 0)",
+          "backgroundColor": "rgb(0, 0, 0)"
+        },
+        "text": "Talk to us                                \n                \t\n                   ",
+        "attributes": {
+          "href": null,
+          "src": null,
+          "alt": null,
+          "role": null
+        },
+        "children": [
+          {
+            "tag": "div",
+            "className": "footer_inner",
+            "id": "",
+            "layout": {
+              "top": 18374,
+              "left": 0,
+              "width": 1905,
+              "height": 689,
+              "docTop": 18374
+            },
+            "visible": true,
+            "opacity": 1,
+            "spacing": {
+              "marginTop": 0,
+              "marginBottom": 0,
+              "marginLeft": 0,
+              "marginRight": 0,
+              "paddingTop": 0,
+              "paddingBottom": 0,
+              "paddingLeft": 34,
+              "paddingRight": 0
+            },
+            "typography": {
+              "fontSize": "18px",
+              "lineHeight": "27px",
+              "fontWeight": "400",
+              "fontFamily": "\"SF Pro\""
+            },
+            "colors": {
+              "color": "rgb(0, 0, 0)",
+              "backgroundColor": "rgba(0, 0, 0, 0)"
+            },
+            "text": "Talk to us                                \n                \t\n                   ",
+            "attributes": {
+              "href": null,
+              "src": null,
+              "alt": null,
+              "role": null
+            },
+            "children": [
+              {
+                "tag": "div",
+                "className": "footer_wrap",
+                "id": "",
+                "layout": {
+                  "top": 18374,
+                  "left": 38,
+                  "width": 1864,
+                  "height": 689,
+                  "docTop": 18374
+                },
+                "visible": true,
+                "opacity": 1,
+                "spacing": {
+                  "marginTop": 0,
+                  "marginBottom": 0,
+                  "marginLeft": 0,
+                  "marginRight": 0,
+                  "paddingTop": 0,
+                  "paddingBottom": 0,
+                  "paddingLeft": 28,
+                  "paddingRight": 28
+                },
+                "typography": {
+                  "fontSize": "18px",
+                  "lineHeight": "27px",
+                  "fontWeight": "400",
+                  "fontFamily": "\"SF Pro\""
+                },
+                "colors": {
+                  "color": "rgb(0, 0, 0)",
+                  "backgroundColor": "rgba(0, 0, 0, 0)"
+                },
+                "text": "Talk to us                                \n                \t\n                   ",
+                "attributes": {
+                  "href": null,
+                  "src": null,
+                  "alt": null,
+                  "role": null
+                },
+                "children": [
+                  {
+                    "tag": "div",
+                    "className": "footmobdiv",
+                    "id": "",
+                    "layout": {
+                      "top": 0,
+                      "left": 0,
+                      "width": 0,
+                      "height": 0,
+                      "docTop": 0
+                    },
+                    "visible": false,
+                    "opacity": 1,
+                    "spacing": {
+                      "marginTop": 0,
+                      "marginBottom": 0,
+                      "marginLeft": 0,
+                      "marginRight": 0,
+                      "paddingTop": 0,
+                      "paddingBottom": 0,
+                      "paddingLeft": 0,
+                      "paddingRight": 0
+                    },
+                    "typography": {
+                      "fontSize": "18px",
+                      "lineHeight": "27px",
+                      "fontWeight": "400",
+                      "fontFamily": "\"SF Pro\""
+                    },
+                    "colors": {
+                      "color": "rgb(0, 0, 0)",
+                      "backgroundColor": "rgba(0, 0, 0, 0)"
+                    },
+                    "text": "Talk to us                                \n                \t\n                   ",
+                    "attributes": {
+                      "href": null,
+                      "src": null,
+                      "alt": null,
+                      "role": null
+                    },
+                    "children": [
+                      {
+                        "tag": "h5",
+                        "className": "",
+                        "id": "",
+                        "layout": {
+                          "top": 0,
+                          "left": 0,
+                          "width": 0,
+                          "height": 0,
+                          "docTop": 0
+                        },
+                        "visible": false,
+                        "opacity": 0,
+                        "spacing": {
+                          "marginTop": 0,
+                          "marginBottom": 0,
+                          "marginLeft": 0,
+                          "marginRight": 0,
+                          "paddingTop": 0,
+                          "paddingBottom": 0,
+                          "paddingLeft": 0,
+                          "paddingRight": 0
+                        },
+                        "typography": {
+                          "fontSize": "24px",
+                          "lineHeight": "25px",
+                          "fontWeight": "700",
+                          "fontFamily": "SFProText"
+                        },
+                        "colors": {
+                          "color": "rgb(255, 255, 255)",
+                          "backgroundColor": "rgba(0, 0, 0, 0)"
+                        },
+                        "text": "Talk to us",
+                        "attributes": {
+                          "href": null,
+                          "src": null,
+                          "alt": null,
+                          "role": null
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "className": "footer_top cf",
+                    "id": "",
+                    "layout": {
+                      "top": 18374,
+                      "left": 66,
+                      "width": 1808,
+                      "height": 76,
+                      "docTop": 18374
+                    },
+                    "visible": true,
+                    "opacity": 1,
+                    "spacing": {
+                      "marginTop": 0,
+                      "marginBottom": 0,
+                      "marginLeft": 0,
+                      "marginRight": 0,
+                      "paddingTop": 0,
+                      "paddingBottom": 30,
+                      "paddingLeft": 0,
+                      "paddingRight": 0
+                    },
+                    "typography": {
+                      "fontSize": "18px",
+                      "lineHeight": "27px",
+                      "fontWeight": "400",
+                      "fontFamily": "\"SF Pro\""
+                    },
+                    "colors": {
+                      "color": "rgb(0, 0, 0)",
+                      "backgroundColor": "rgba(0, 0, 0, 0)"
+                    },
+                    "text": "Mentions:",
+                    "attributes": {
+                      "href": null,
+                      "src": null,
+                      "alt": null,
+                      "role": null
+                    },
+                    "children": [
+                      {
+                        "tag": "div",
+                        "className": "footer_logo_label",
+                        "id": "",
+                        "layout": {
+                          "top": 18404,
+                          "left": 66,
+                          "width": 165,
+                          "height": 26,
+                          "docTop": 18404
+                        },
+                        "visible": false,
+                        "opacity": 0,
+                        "spacing": {
+                          "marginTop": 0,
+                          "marginBottom": 0,
+                          "marginLeft": 0,
+                          "marginRight": 0,
+                          "paddingTop": 10,
+                          "paddingBottom": 0,
+                          "paddingLeft": 0,
+                          "paddingRight": 0
+                        },
+                        "typography": {
+                          "fontSize": "24px",
+                          "lineHeight": "16px",
+                          "fontWeight": "500",
+                          "fontFamily": "SFProText"
+                        },
+                        "colors": {
+                          "color": "rgba(255, 255, 255, 0.5)",
+                          "backgroundColor": "rgba(0, 0, 0, 0)"
+                        },
+                        "text": "Mentions:",
+                        "attributes": {
+                          "href": null,
+                          "src": null,
+                          "alt": null,
+                          "role": null
+                        }
+                      },
+                      {
+                        "tag": "div",
+                        "className": "footer_logos",
+                        "id": "",
+                        "layout": {
+                          "top": 18404,
+                          "left": 246,
+                          "width": 1628,
+                          "height": 45,
+                          "docTop": 18404
+                        },
+                        "visible": false,
+                        "opacity": 0,
+                        "spacing": {
+                          "marginTop": 0,
+                          "marginBottom": 0,
+                          "marginLeft": 0,
+                          "marginRight": 0,
+                          "paddingTop": 0,
+                          "paddingBottom": 0,
+                          "paddingLeft": 0,
+                          "paddingRight": 0
+                        },
+                        "typography": {
+                          "fontSize": "18px",
+                          "lineHeight": "27px",
+                          "fontWeight": "400",
+                          "fontFamily": "\"SF Pro\""
+                        },
+                        "colors": {
+                          "color": "rgb(0, 0, 0)",
+                          "backgroundColor": "rgba(0, 0, 0, 0)"
+                        },
+                        "text": "",
+                        "attributes": {
+                          "href": null,
+                          "src": null,
+                          "alt": null,
+                          "role": null
+                        },
+                        "children": [
+                          {
+                            "tag": "ul",
+                            "className": "",
+                            "id": "",
+                            "layout": {
+                              "top": 18404,
+                              "left": 246,
+                              "width": 1628,
+                              "height": 45,
+                              "docTop": 18404
+                            },
+                            "visible": true,
+                            "opacity": 1,
+                            "spacing": {
+                              "marginTop": 0,
+                              "marginBottom": 0,
+                              "marginLeft": 0,
+                              "marginRight": 0,
+                              "paddingTop": 0,
+                              "paddingBottom": 0,
+                              "paddingLeft": 0,
+                              "paddingRight": 0
+                            },
+                            "typography": {
+                              "fontSize": "0px",
+                              "lineHeight": "0px",
+                              "fontWeight": "400",
+                              "fontFamily": "\"SF Pro\""
+                            },
+                            "colors": {
+                              "color": "rgb(0, 0, 0)",
+                              "backgroundColor": "rgba(0, 0, 0, 0)"
+                            },
+                            "text": "",
+                            "attributes": {
+                              "href": null,
+                              "src": null,
+                              "alt": null,
+                              "role": null
+                            },
+                            "children": [
+                              {
+                                "tag": "li",
+                                "className": "",
+                                "id": "",
+                                "layout": {
+                                  "top": 18404,
+                                  "left": 246,
+                                  "width": 271,
+                                  "height": 45,
+                                  "docTop": 18404
+                                },
+                                "visible": true,
+                                "opacity": 1,
+                                "spacing": {
+                                  "marginTop": 0,
+                                  "marginBottom": 0,
+                                  "marginLeft": 0,
+                                  "marginRight": 0,
+                                  "paddingTop": 0,
+                                  "paddingBottom": 0,
+                                  "paddingLeft": 30,
+                                  "paddingRight": 30
+                                },
+                                "typography": {
+                                  "fontSize": "0px",
+                                  "lineHeight": "0px",
+                                  "fontWeight": "400",
+                                  "fontFamily": "\"SF Pro\""
+                                },
+                                "colors": {
+                                  "color": "rgb(0, 0, 0)",
+                                  "backgroundColor": "rgba(0, 0, 0, 0)"
+                                },
+                                "text": "",
+                                "attributes": {
+                                  "href": null,
+                                  "src": null,
+                                  "alt": null,
+                                  "role": null
+                                }
+                              },
+                              {
+                                "tag": "li",
+                                "className": "",
+                                "id": "",
+                                "layout": {
+                                  "top": 18404,
+                                  "left": 517,
+                                  "width": 271,
+                                  "height": 45,
+                                  "docTop": 18404
+                                },
+                                "visible": true,
+                                "opacity": 1,
+                                "spacing": {
+                                  "marginTop": 0,
+                                  "marginBottom": 0,
+                                  "marginLeft": 0,
+                                  "marginRight": 0,
+                                  "paddingTop": 0,
+                                  "paddingBottom": 0,
+                                  "paddingLeft": 30,
+                                  "paddingRight": 30
+                                },
+                                "typography": {
+                                  "fontSize": "0px",
+                                  "lineHeight": "0px",
+                                  "fontWeight": "400",
+                                  "fontFamily": "\"SF Pro\""
+                                },
+                                "colors": {
+                                  "color": "rgb(0, 0, 0)",
+                                  "backgroundColor": "rgba(0, 0, 0, 0)"
+                                },
+                                "text": "",
+                                "attributes": {
+                                  "href": null,
+                                  "src": null,
+                                  "alt": null,
+                                  "role": null
+                                }
+                              },
+                              {
+                                "tag": "li",
+                                "className": "",
+                                "id": "",
+                                "layout": {
+                                  "top": 18404,
+                                  "left": 789,
+                                  "width": 271,
+                                  "height": 45,
+                                  "docTop": 18404
+                                },
+                                "visible": true,
+                                "opacity": 1,
+                                "spacing": {
+                                  "marginTop": 0,
+                                  "marginBottom": 0,
+                                  "marginLeft": 0,
+                                  "marginRight": 0,
+                                  "paddingTop": 0,
+                                  "paddingBottom": 0,
+                                  "paddingLeft": 30,
+                                  "paddingRight": 30
+                                },
+                                "typography": {
+                                  "fontSize": "0px",
+                                  "lineHeight": "0px",
+                                  "fontWeight": "400",
+                                  "fontFamily": "\"SF Pro\""
+                                },
+                                "colors": {
+                                  "color": "rgb(0, 0, 0)",
+                                  "backgroundColor": "rgba(0, 0, 0, 0)"
+                                },
+                                "text": "",
+                                "attributes": {
+                                  "href": null,
+                                  "src": null,
+                                  "alt": null,
+                                  "role": null
+                                }
+                              },
+                              {
+                                "tag": "li",
+                                "className": "",
+                                "id": "",
+                                "layout": {
+                                  "top": 18404,
+                                  "left": 1060,
+                                  "width": 271,
+                                  "height": 45,
+                                  "docTop": 18404
+                                },
+                                "visible": true,
+                                "opacity": 1,
+                                "spacing": {
+                                  "marginTop": 0,
+                                  "marginBottom": 0,
+                                  "marginLeft": 0,
+                                  "marginRight": 0,
+                                  "paddingTop": 0,
+                                  "paddingBottom": 0,
+                                  "paddingLeft": 30,
+                                  "paddingRight": 30
+                                },
+                                "typography": {
+                                  "fontSize": "0px",
+                                  "lineHeight": "0px",
+                                  "fontWeight": "400",
+                                  "fontFamily": "\"SF Pro\""
+                                },
+                                "colors": {
+                                  "color": "rgb(0, 0, 0)",
+                                  "backgroundColor": "rgba(0, 0, 0, 0)"
+                                },
+                                "text": "",
+                                "attributes": {
+                                  "href": null,
+                                  "src": null,
+                                  "alt": null,
+                                  "role": null
+                                }
+                              },
+                              {
+                                "tag": "li",
+                                "className": "",
+                                "id": "",
+                                "layout": {
+                                  "top": 18404,
+                                  "left": 1331,
+                                  "width": 271,
+                                  "height": 45,
+                                  "docTop": 18404
+                                },
+                                "visible": true,
+                                "opacity": 1,
+                                "spacing": {
+                                  "marginTop": 0,
+                                  "marginBottom": 0,
+                                  "marginLeft": 0,
+                                  "marginRight": 0,
+                                  "paddingTop": 0,
+                                  "paddingBottom": 0,
+                                  "paddingLeft": 30,
+                                  "paddingRight": 30
+                                },
+                                "typography": {
+                                  "fontSize": "0px",
+                                  "lineHeight": "0px",
+                                  "fontWeight": "400",
+                                  "fontFamily": "\"SF Pro\""
+                                },
+                                "colors": {
+                                  "color": "rgb(0, 0, 0)",
+                                  "backgroundColor": "rgba(0, 0, 0, 0)"
+                                },
+                                "text": "",
+                                "attributes": {
+                                  "href": null,
+                                  "src": null,
+                                  "alt": null,
+                                  "role": null
+                                }
+                              },
+                              {
+                                "tag": "li",
+                                "className": "",
+                                "id": "",
+                                "layout": {
+                                  "top": 18404,
+                                  "left": 1602,
+                                  "width": 271,
+                                  "height": 45,
+                                  "docTop": 18404
+                                },
+                                "visible": true,
+                                "opacity": 1,
+                                "spacing": {
+                                  "marginTop": 0,
+                                  "marginBottom": 0,
+                                  "marginLeft": 0,
+                                  "marginRight": 0,
+                                  "paddingTop": 0,
+                                  "paddingBottom": 0,
+                                  "paddingLeft": 30,
+                                  "paddingRight": 30
+                                },
+                                "typography": {
+                                  "fontSize": "0px",
+                                  "lineHeight": "0px",
+                                  "fontWeight": "400",
+                                  "fontFamily": "\"SF Pro\""
+                                },
+                                "colors": {
+                                  "color": "rgb(0, 0, 0)",
+                                  "backgroundColor": "rgba(0, 0, 0, 0)"
+                                },
+                                "text": "",
+                                "attributes": {
+                                  "href": null,
+                                  "src": null,
+                                  "alt": null,
+                                  "role": null
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "className": "footer_all_menus",
+                    "id": "",
+                    "layout": {
+                      "top": 18450,
+                      "left": 66,
+                      "width": 1808,
+                      "height": 461,
+                      "docTop": 18450
+                    },
+                    "visible": true,
+                    "opacity": 1,
+                    "spacing": {
+                      "marginTop": 0,
+                      "marginBottom": 0,
+                      "marginLeft": 0,
+                      "marginRight": 0,
+                      "paddingTop": 50,
+                      "paddingBottom": 56,
+                      "paddingLeft": 18,
+                      "paddingRight": 0
+                    },
+                    "typography": {
+                      "fontSize": "18px",
+                      "lineHeight": "27px",
+                      "fontWeight": "400",
+                      "fontFamily": "\"SF Pro\""
+                    },
+                    "colors": {
+                      "color": "rgb(0, 0, 0)",
+                      "backgroundColor": "rgba(0, 0, 0, 0)"
+                    },
+                    "text": "Product Design                            \n                                Produ",
+                    "attributes": {
+                      "href": null,
+                      "src": null,
+                      "alt": null,
+                      "role": null
+                    },
+                    "children": [
+                      {
+                        "tag": "div",
+                        "className": "footer_menu_wrap cf",
+                        "id": "",
+                        "layout": {
+                          "top": 18500,
+                          "left": 149,
+                          "width": 1660,
+                          "height": 354,
+                          "docTop": 18500
+                        },
+                        "visible": true,
+                        "opacity": 1,
+                        "spacing": {
+                          "marginTop": 0,
+                          "marginBottom": 0,
+                          "marginLeft": 0,
+                          "marginRight": 0,
+                          "paddingTop": 0,
+                          "paddingBottom": 0,
+                          "paddingLeft": 0,
+                          "paddingRight": 0
+                        },
+                        "typography": {
+                          "fontSize": "18px",
+                          "lineHeight": "27px",
+                          "fontWeight": "400",
+                          "fontFamily": "\"SF Pro\""
+                        },
+                        "colors": {
+                          "color": "rgb(0, 0, 0)",
+                          "backgroundColor": "rgba(0, 0, 0, 0)"
+                        },
+                        "text": "Product Design                            \n                                Produ",
+                        "attributes": {
+                          "href": null,
+                          "src": null,
+                          "alt": null,
+                          "role": null
+                        },
+                        "children": [
+                          {
+                            "tag": "div",
+                            "className": "footer_menu_inall",
+                            "id": "",
+                            "layout": {
+                              "top": 18500,
+                              "left": 149,
+                              "width": 1660,
+                              "height": 51,
+                              "docTop": 18500
+                            },
+                            "visible": true,
+                            "opacity": 1,
+                            "spacing": {
+                              "marginTop": 0,
+                              "marginBottom": 0,
+                              "marginLeft": 0,
+                              "marginRight": 0,
+                              "paddingTop": 0,
+                              "paddingBottom": 0,
+                              "paddingLeft": 0,
+                              "paddingRight": 0
+                            },
+                            "typography": {
+                              "fontSize": "0px",
+                              "lineHeight": "0px",
+                              "fontWeight": "400",
+                              "fontFamily": "\"SF Pro\""
+                            },
+                            "colors": {
+                              "color": "rgb(0, 0, 0)",
+                              "backgroundColor": "rgba(0, 0, 0, 0)"
+                            },
+                            "text": "Product Design                            \n                                Produ",
+                            "attributes": {
+                              "href": null,
+                              "src": null,
+                              "alt": null,
+                              "role": null
+                            },
+                            "children": [
+                              {
+                                "tag": "div",
+                                "className": "footer_menu_col footer_menu_1 active",
+                                "id": "",
+                                "layout": {
+                                  "top": 18530,
+                                  "left": 149,
+                                  "width": 349,
+                                  "height": 51,
+                                  "docTop": 18530
+                                },
+                                "visible": false,
+                                "opacity": 0,
+                                "spacing": {
+                                  "marginTop": 0,
+                                  "marginBottom": 0,
+                                  "marginLeft": 0,
+                                  "marginRight": 0,
+                                  "paddingTop": 0,
+                                  "paddingBottom": 0,
+                                  "paddingLeft": 0,
+                                  "paddingRight": 0
+                                },
+                                "typography": {
+                                  "fontSize": "0px",
+                                  "lineHeight": "0px",
+                                  "fontWeight": "400",
+                                  "fontFamily": "\"SF Pro\""
+                                },
+                                "colors": {
+                                  "color": "rgb(0, 0, 0)",
+                                  "backgroundColor": "rgba(0, 0, 0, 0)"
+                                },
+                                "text": "Product Design                            \n                                Produ",
+                                "attributes": {
+                                  "href": null,
+                                  "src": null,
+                                  "alt": null,
+                                  "role": null
+                                }
+                              },
+                              {
+                                "tag": "div",
+                                "className": "footer_menu_col footer_menu_2",
+                                "id": "",
+                                "layout": {
+                                  "top": 18530,
+                                  "left": 498,
+                                  "width": 320,
+                                  "height": 51,
+                                  "docTop": 18530
+                                },
+                                "visible": false,
+                                "opacity": 0,
+                                "spacing": {
+                                  "marginTop": 0,
+                                  "marginBottom": 0,
+                                  "marginLeft": 0,
+                                  "marginRight": 0,
+                                  "paddingTop": 0,
+                                  "paddingBottom": 0,
+                                  "paddingLeft": 0,
+                                  "paddingRight": 0
+                                },
+                                "typography": {
+                                  "fontSize": "0px",
+                                  "lineHeight": "0px",
+                                  "fontWeight": "400",
+                                  "fontFamily": "\"SF Pro\""
+                                },
+                                "colors": {
+                                  "color": "rgb(0, 0, 0)",
+                                  "backgroundColor": "rgba(0, 0, 0, 0)"
+                                },
+                                "text": "Case studies                            \n                                Mobile ",
+                                "attributes": {
+                                  "href": null,
+                                  "src": null,
+                                  "alt": null,
+                                  "role": null
+                                }
+                              },
+                              {
+                                "tag": "div",
+                                "className": "footer_menu_col footer_menu_3",
+                                "id": "",
+                                "layout": {
+                                  "top": 18530,
+                                  "left": 818,
+                                  "width": 320,
+                                  "height": 51,
+                                  "docTop": 18530
+                                },
+                                "visible": false,
+                                "opacity": 0,
+                                "spacing": {
+                                  "marginTop": 0,
+                                  "marginBottom": 0,
+                                  "marginLeft": 0,
+                                  "marginRight": 0,
+                                  "paddingTop": 0,
+                                  "paddingBottom": 0,
+                                  "paddingLeft": 0,
+                                  "paddingRight": 0
+                                },
+                                "typography": {
+                                  "fontSize": "0px",
+                                  "lineHeight": "0px",
+                                  "fontWeight": "400",
+                                  "fontFamily": "\"SF Pro\""
+                                },
+                                "colors": {
+                                  "color": "rgb(0, 0, 0)",
+                                  "backgroundColor": "rgba(0, 0, 0, 0)"
+                                },
+                                "text": "Technology                            \n                                Dev & Tec",
+                                "attributes": {
+                                  "href": null,
+                                  "src": null,
+                                  "alt": null,
+                                  "role": null
+                                }
+                              },
+                              {
+                                "tag": "div",
+                                "className": "footer_menu_col footer_menu_4",
+                                "id": "",
+                                "layout": {
+                                  "top": 18530,
+                                  "left": 1138,
+                                  "width": 320,
+                                  "height": 51,
+                                  "docTop": 18530
+                                },
+                                "visible": false,
+                                "opacity": 0,
+                                "spacing": {
+                                  "marginTop": 0,
+                                  "marginBottom": 0,
+                                  "marginLeft": 0,
+                                  "marginRight": 0,
+                                  "paddingTop": 0,
+                                  "paddingBottom": 0,
+                                  "paddingLeft": 0,
+                                  "paddingRight": 0
+                                },
+                                "typography": {
+                                  "fontSize": "0px",
+                                  "lineHeight": "0px",
+                                  "fontWeight": "400",
+                                  "fontFamily": "\"SF Pro\""
+                                },
+                                "colors": {
+                                  "color": "rgb(0, 0, 0)",
+                                  "backgroundColor": "rgba(0, 0, 0, 0)"
+                                },
+                                "text": "About                             \n                                About us\nCare",
+                                "attributes": {
+                                  "href": null,
+                                  "src": null,
+                                  "alt": null,
+                                  "role": null
+                                }
+                              },
+                              {
+                                "tag": "div",
+                                "className": "footer_menu_col footer_menu_5",
+                                "id": "",
+                                "layout": {
+                                  "top": 18530,
+                                  "left": 1458,
+                                  "width": 349,
+                                  "height": 51,
+                                  "docTop": 18530
+                                },
+                                "visible": false,
+                                "opacity": 0,
+                                "spacing": {
+                                  "marginTop": 0,
+                                  "marginBottom": 0,
+                                  "marginLeft": 0,
+                                  "marginRight": 0,
+                                  "paddingTop": 0,
+                                  "paddingBottom": 0,
+                                  "paddingLeft": 0,
+                                  "paddingRight": 0
+                                },
+                                "typography": {
+                                  "fontSize": "0px",
+                                  "lineHeight": "0px",
+                                  "fontWeight": "400",
+                                  "fontFamily": "\"SF Pro\""
+                                },
+                                "colors": {
+                                  "color": "rgb(0, 0, 0)",
+                                  "backgroundColor": "rgba(0, 0, 0, 0)"
+                                },
+                                "text": "Our Blog                            \n                                All Blogs\nF",
+                                "attributes": {
+                                  "href": null,
+                                  "src": null,
+                                  "alt": null,
+                                  "role": null
+                                }
+                              },
+                              {
+                                "tag": "div",
+                                "className": "clr",
+                                "id": "",
+                                "layout": {
+                                  "top": 18551,
+                                  "left": 149,
+                                  "width": 1660,
+                                  "height": 0,
+                                  "docTop": 18551
+                                },
+                                "visible": true,
+                                "opacity": 1,
+                                "spacing": {
+                                  "marginTop": 0,
+                                  "marginBottom": 0,
+                                  "marginLeft": 0,
+                                  "marginRight": 0,
+                                  "paddingTop": 0,
+                                  "paddingBottom": 0,
+                                  "paddingLeft": 0,
+                                  "paddingRight": 0
+                                },
+                                "typography": {
+                                  "fontSize": "0px",
+                                  "lineHeight": "0px",
+                                  "fontWeight": "400",
+                                  "fontFamily": "\"SF Pro\""
+                                },
+                                "colors": {
+                                  "color": "rgb(0, 0, 0)",
+                                  "backgroundColor": "rgba(0, 0, 0, 0)"
+                                },
+                                "text": "",
+                                "attributes": {
+                                  "href": null,
+                                  "src": null,
+                                  "alt": null,
+                                  "role": null
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "tag": "div",
+                            "className": "footer_socail",
+                            "id": "",
+                            "layout": {
+                              "top": 18551,
+                              "left": 149,
+                              "width": 1660,
+                              "height": 51,
+                              "docTop": 18551
+                            },
+                            "visible": true,
+                            "opacity": 1,
+                            "spacing": {
+                              "marginTop": 0,
+                              "marginBottom": 0,
+                              "marginLeft": 0,
+                              "marginRight": 0,
+                              "paddingTop": 0,
+                              "paddingBottom": 0,
+                              "paddingLeft": 0,
+                              "paddingRight": 0
+                            },
+                            "typography": {
+                              "fontSize": "18px",
+                              "lineHeight": "27px",
+                              "fontWeight": "400",
+                              "fontFamily": "\"SF Pro\""
+                            },
+                            "colors": {
+                              "color": "rgb(0, 0, 0)",
+                              "backgroundColor": "rgba(0, 0, 0, 0)"
+                            },
+                            "text": "Social\n                        \n                        \t                       ",
+                            "attributes": {
+                              "href": null,
+                              "src": null,
+                              "alt": null,
+                              "role": null
+                            },
+                            "children": [
+                              {
+                                "tag": "h3",
+                                "className": "",
+                                "id": "",
+                                "layout": {
+                                  "top": 18581,
+                                  "left": 149,
+                                  "width": 170,
+                                  "height": 50,
+                                  "docTop": 18581
+                                },
+                                "visible": false,
+                                "opacity": 0,
+                                "spacing": {
+                                  "marginTop": 0,
+                                  "marginBottom": 0,
+                                  "marginLeft": 0,
+                                  "marginRight": 0,
+                                  "paddingTop": 0,
+                                  "paddingBottom": 0,
+                                  "paddingLeft": 0,
+                                  "paddingRight": 0
+                                },
+                                "typography": {
+                                  "fontSize": "24px",
+                                  "lineHeight": "25px",
+                                  "fontWeight": "700",
+                                  "fontFamily": "\"SF Pro\""
+                                },
+                                "colors": {
+                                  "color": "rgb(255, 255, 255)",
+                                  "backgroundColor": "rgba(0, 0, 0, 0)"
+                                },
+                                "text": "Social",
+                                "attributes": {
+                                  "href": null,
+                                  "src": null,
+                                  "alt": null,
+                                  "role": null
+                                }
+                              },
+                              {
+                                "tag": "ul",
+                                "className": "",
+                                "id": "",
+                                "layout": {
+                                  "top": 0,
+                                  "left": 0,
+                                  "width": 0,
+                                  "height": 0,
+                                  "docTop": 0
+                                },
+                                "visible": false,
+                                "opacity": 0,
+                                "spacing": {
+                                  "marginTop": 0,
+                                  "marginBottom": 0,
+                                  "marginLeft": 0,
+                                  "marginRight": 0,
+                                  "paddingTop": 0,
+                                  "paddingBottom": 0,
+                                  "paddingLeft": 0,
+                                  "paddingRight": 0
+                                },
+                                "typography": {
+                                  "fontSize": "18px",
+                                  "lineHeight": "27px",
+                                  "fontWeight": "400",
+                                  "fontFamily": "\"SF Pro\""
+                                },
+                                "colors": {
+                                  "color": "rgb(0, 0, 0)",
+                                  "backgroundColor": "rgba(0, 0, 0, 0)"
+                                },
+                                "text": "Facebook\n                                                    \t\tLinkedin\n        ",
+                                "attributes": {
+                                  "href": null,
+                                  "src": null,
+                                  "alt": null,
+                                  "role": null
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "tag": "div",
+                            "className": "footer_contact ",
+                            "id": "",
+                            "layout": {
+                              "top": 18602,
+                              "left": 149,
+                              "width": 1660,
+                              "height": 252,
+                              "docTop": 18602
+                            },
+                            "visible": true,
+                            "opacity": 1,
+                            "spacing": {
+                              "marginTop": 0,
+                              "marginBottom": 0,
+                              "marginLeft": 0,
+                              "marginRight": 0,
+                              "paddingTop": 0,
+                              "paddingBottom": 0,
+                              "paddingLeft": 0,
+                              "paddingRight": 0
+                            },
+                            "typography": {
+                              "fontSize": "18px",
+                              "lineHeight": "27px",
+                              "fontWeight": "400",
+                              "fontFamily": "\"SF Pro\""
+                            },
+                            "colors": {
+                              "color": "rgb(0, 0, 0)",
+                              "backgroundColor": "rgba(0, 0, 0, 0)"
+                            },
+                            "text": "Talk to us                        \n                                             ",
+                            "attributes": {
+                              "href": null,
+                              "src": null,
+                              "alt": null,
+                              "role": null
+                            },
+                            "children": [
+                              {
+                                "tag": "h3",
+                                "className": "",
+                                "id": "",
+                                "layout": {
+                                  "top": 18632,
+                                  "left": 149,
+                                  "width": 170,
+                                  "height": 50,
+                                  "docTop": 18632
+                                },
+                                "visible": false,
+                                "opacity": 0,
+                                "spacing": {
+                                  "marginTop": 0,
+                                  "marginBottom": 0,
+                                  "marginLeft": 0,
+                                  "marginRight": 0,
+                                  "paddingTop": 0,
+                                  "paddingBottom": 0,
+                                  "paddingLeft": 0,
+                                  "paddingRight": 0
+                                },
+                                "typography": {
+                                  "fontSize": "24px",
+                                  "lineHeight": "25px",
+                                  "fontWeight": "700",
+                                  "fontFamily": "\"SF Pro\""
+                                },
+                                "colors": {
+                                  "color": "rgb(255, 255, 255)",
+                                  "backgroundColor": "rgba(0, 0, 0, 0)"
+                                },
+                                "text": "Talk to us",
+                                "attributes": {
+                                  "href": null,
+                                  "src": null,
+                                  "alt": null,
+                                  "role": null
+                                }
+                              },
+                              {
+                                "tag": "div",
+                                "className": "footcondvin",
+                                "id": "",
+                                "layout": {
+                                  "top": 18682,
+                                  "left": 149,
+                                  "width": 1660,
+                                  "height": 202,
+                                  "docTop": 18682
+                                },
+                                "visible": false,
+                                "opacity": 0,
+                                "spacing": {
+                                  "marginTop": 0,
+                                  "marginBottom": 0,
+                                  "marginLeft": 0,
+                                  "marginRight": 0,
+                                  "paddingTop": 0,
+                                  "paddingBottom": 0,
+                                  "paddingLeft": 0,
+                                  "paddingRight": 0
+                                },
+                                "typography": {
+                                  "fontSize": "18px",
+                                  "lineHeight": "27px",
+                                  "fontWeight": "400",
+                                  "fontFamily": "\"SF Pro\""
+                                },
+                                "colors": {
+                                  "color": "rgb(0, 0, 0)",
+                                  "backgroundColor": "rgba(0, 0, 0, 0)"
+                                },
+                                "text": "Mail: [email protected]\n                                                \n       ",
+                                "attributes": {
+                                  "href": null,
+                                  "src": null,
+                                  "alt": null,
+                                  "role": null
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "className": "footmoblogos",
+                    "id": "",
+                    "layout": {
+                      "top": 0,
+                      "left": 0,
+                      "width": 0,
+                      "height": 0,
+                      "docTop": 0
+                    },
+                    "visible": false,
+                    "opacity": 1,
+                    "spacing": {
+                      "marginTop": 0,
+                      "marginBottom": 0,
+                      "marginLeft": 0,
+                      "marginRight": 0,
+                      "paddingTop": 0,
+                      "paddingBottom": 0,
+                      "paddingLeft": 0,
+                      "paddingRight": 0
+                    },
+                    "typography": {
+                      "fontSize": "18px",
+                      "lineHeight": "27px",
+                      "fontWeight": "400",
+                      "fontFamily": "\"SF Pro\""
+                    },
+                    "colors": {
+                      "color": "rgb(0, 0, 0)",
+                      "backgroundColor": "rgba(0, 0, 0, 0)"
+                    },
+                    "text": "",
+                    "attributes": {
+                      "href": null,
+                      "src": null,
+                      "alt": null,
+                      "role": null
+                    },
+                    "children": [
+                      {
+                        "tag": "ul",
+                        "className": "",
+                        "id": "",
+                        "layout": {
+                          "top": 0,
+                          "left": 0,
+                          "width": 0,
+                          "height": 0,
+                          "docTop": 0
+                        },
+                        "visible": false,
+                        "opacity": 0,
+                        "spacing": {
+                          "marginTop": 0,
+                          "marginBottom": 0,
+                          "marginLeft": 0,
+                          "marginRight": 0,
+                          "paddingTop": 0,
+                          "paddingBottom": 0,
+                          "paddingLeft": 0,
+                          "paddingRight": 20
+                        },
+                        "typography": {
+                          "fontSize": "18px",
+                          "lineHeight": "27px",
+                          "fontWeight": "400",
+                          "fontFamily": "\"SF Pro\""
+                        },
+                        "colors": {
+                          "color": "rgb(0, 0, 0)",
+                          "backgroundColor": "rgba(0, 0, 0, 0)"
+                        },
+                        "text": "",
+                        "attributes": {
+                          "href": null,
+                          "src": null,
+                          "alt": null,
+                          "role": null
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "className": "footer_bottom cf",
+                    "id": "",
+                    "layout": {
+                      "top": 18911,
+                      "left": 66,
+                      "width": 1808,
+                      "height": 152,
+                      "docTop": 18911
+                    },
+                    "visible": true,
+                    "opacity": 1,
+                    "spacing": {
+                      "marginTop": 0,
+                      "marginBottom": 0,
+                      "marginLeft": 0,
+                      "marginRight": 0,
+                      "paddingTop": 18,
+                      "paddingBottom": 0,
+                      "paddingLeft": 0,
+                      "paddingRight": 0
+                    },
+                    "typography": {
+                      "fontSize": "18px",
+                      "lineHeight": "27px",
+                      "fontWeight": "400",
+                      "fontFamily": "\"SF Pro\""
+                    },
+                    "colors": {
+                      "color": "rgb(0, 0, 0)",
+                      "backgroundColor": "rgba(0, 0, 0, 0)"
+                    },
+                    "text": "All rights reserved to Triolla LTD | Privacy Policy | Terms Of Use\n             ",
+                    "attributes": {
+                      "href": null,
+                      "src": null,
+                      "alt": null,
+                      "role": null
+                    },
+                    "children": [
+                      {
+                        "tag": "div",
+                        "className": "footer_logo_site",
+                        "id": "",
+                        "layout": {
+                          "top": 18959,
+                          "left": 66,
+                          "width": 304,
+                          "height": 53,
+                          "docTop": 18959
+                        },
+                        "visible": false,
+                        "opacity": 0,
+                        "spacing": {
+                          "marginTop": 0,
+                          "marginBottom": 0,
+                          "marginLeft": 0,
+                          "marginRight": 0,
+                          "paddingTop": 16,
+                          "paddingBottom": 0,
+                          "paddingLeft": 0,
+                          "paddingRight": 0
+                        },
+                        "typography": {
+                          "fontSize": "18px",
+                          "lineHeight": "27px",
+                          "fontWeight": "400",
+                          "fontFamily": "\"SF Pro\""
+                        },
+                        "colors": {
+                          "color": "rgb(0, 0, 0)",
+                          "backgroundColor": "rgba(0, 0, 0, 0)"
+                        },
+                        "text": "",
+                        "attributes": {
+                          "href": null,
+                          "src": null,
+                          "alt": null,
+                          "role": null
+                        },
+                        "children": [
+                          {
+                            "tag": "a",
+                            "className": "",
+                            "id": "",
+                            "layout": {
+                              "top": 18975,
+                              "left": 66,
+                              "width": 92,
+                              "height": 30,
+                              "docTop": 18975
+                            },
+                            "visible": true,
+                            "opacity": 1,
+                            "spacing": {
+                              "marginTop": 0,
+                              "marginBottom": 0,
+                              "marginLeft": 0,
+                              "marginRight": 0,
+                              "paddingTop": 0,
+                              "paddingBottom": 0,
+                              "paddingLeft": 0,
+                              "paddingRight": 0
+                            },
+                            "typography": {
+                              "fontSize": "18px",
+                              "lineHeight": "27px",
+                              "fontWeight": "400",
+                              "fontFamily": "\"SF Pro\""
+                            },
+                            "colors": {
+                              "color": "rgb(0, 0, 0)",
+                              "backgroundColor": "rgba(0, 0, 0, 0)"
+                            },
+                            "text": "",
+                            "attributes": {
+                              "href": "/",
+                              "src": null,
+                              "alt": null,
+                              "role": null
+                            },
+                            "children": [
+                              {
+                                "tag": "img",
+                                "className": "",
+                                "id": "",
+                                "layout": {
+                                  "top": 18975,
+                                  "left": 66,
+                                  "width": 92,
+                                  "height": 30,
+                                  "docTop": 18975
+                                },
+                                "visible": true,
+                                "opacity": 1,
+                                "spacing": {
+                                  "marginTop": 0,
+                                  "marginBottom": 0,
+                                  "marginLeft": 0,
+                                  "marginRight": 0,
+                                  "paddingTop": 0,
+                                  "paddingBottom": 0,
+                                  "paddingLeft": 0,
+                                  "paddingRight": 0
+                                },
+                                "typography": {
+                                  "fontSize": "18px",
+                                  "lineHeight": "27px",
+                                  "fontWeight": "400",
+                                  "fontFamily": "\"SF Pro\""
+                                },
+                                "colors": {
+                                  "color": "rgb(0, 0, 0)",
+                                  "backgroundColor": "rgba(0, 0, 0, 0)"
+                                },
+                                "text": "",
+                                "attributes": {
+                                  "href": null,
+                                  "src": "/assets/_shared/triolla.svg",
+                                  "alt": "",
+                                  "role": null
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "tag": "div",
+                        "className": "footer_copywright",
+                        "id": "",
+                        "layout": {
+                          "top": 18959,
+                          "left": 370,
+                          "width": 1048,
+                          "height": 58,
+                          "docTop": 18959
+                        },
+                        "visible": false,
+                        "opacity": 0,
+                        "spacing": {
+                          "marginTop": 0,
+                          "marginBottom": 0,
+                          "marginLeft": 0,
+                          "marginRight": 0,
+                          "paddingTop": 42,
+                          "paddingBottom": 0,
+                          "paddingLeft": 0,
+                          "paddingRight": 0
+                        },
+                        "typography": {
+                          "fontSize": "0px",
+                          "lineHeight": "0px",
+                          "fontWeight": "400",
+                          "fontFamily": "\"SF Pro\""
+                        },
+                        "colors": {
+                          "color": "rgb(0, 0, 0)",
+                          "backgroundColor": "rgba(0, 0, 0, 0)"
+                        },
+                        "text": "All rights reserved to Triolla LTD | Privacy Policy | Terms Of Use",
+                        "attributes": {
+                          "href": null,
+                          "src": null,
+                          "alt": null,
+                          "role": null
+                        },
+                        "children": [
+                          {
+                            "tag": "p",
+                            "className": "",
+                            "id": "",
+                            "layout": {
+                              "top": 19001,
+                              "left": 370,
+                              "width": 1048,
+                              "height": 16,
+                              "docTop": 19001
+                            },
+                            "visible": true,
+                            "opacity": 1,
+                            "spacing": {
+                              "marginTop": 0,
+                              "marginBottom": 0,
+                              "marginLeft": 0,
+                              "marginRight": 0,
+                              "paddingTop": 0,
+                              "paddingBottom": 0,
+                              "paddingLeft": 0,
+                              "paddingRight": 0
+                            },
+                            "typography": {
+                              "fontSize": "16px",
+                              "lineHeight": "16px",
+                              "fontWeight": "510",
+                              "fontFamily": "SFProText"
+                            },
+                            "colors": {
+                              "color": "rgba(255, 255, 255, 0.5)",
+                              "backgroundColor": "rgba(0, 0, 0, 0)"
+                            },
+                            "text": "All rights reserved to Triolla LTD | Privacy Policy | Terms Of Use",
+                            "attributes": {
+                              "href": null,
+                              "src": null,
+                              "alt": null,
+                              "role": null
+                            },
+                            "children": [
+                              {
+                                "tag": "a",
+                                "className": "",
+                                "id": "",
+                                "layout": {
+                                  "top": 19001,
+                                  "left": 911,
+                                  "width": 110,
+                                  "height": 16,
+                                  "docTop": 19001
+                                },
+                                "visible": true,
+                                "opacity": 1,
+                                "spacing": {
+                                  "marginTop": 0,
+                                  "marginBottom": 0,
+                                  "marginLeft": 0,
+                                  "marginRight": 0,
+                                  "paddingTop": 0,
+                                  "paddingBottom": 0,
+                                  "paddingLeft": 0,
+                                  "paddingRight": 0
+                                },
+                                "typography": {
+                                  "fontSize": "16px",
+                                  "lineHeight": "16px",
+                                  "fontWeight": "510",
+                                  "fontFamily": "SFProText"
+                                },
+                                "colors": {
+                                  "color": "rgba(255, 255, 255, 0.5)",
+                                  "backgroundColor": "rgba(0, 0, 0, 0)"
+                                },
+                                "text": "Privacy Policy",
+                                "attributes": {
+                                  "href": "/privacy-policy/",
+                                  "src": null,
+                                  "alt": null,
+                                  "role": null
+                                }
+                              },
+                              {
+                                "tag": "a",
+                                "className": "",
+                                "id": "",
+                                "layout": {
+                                  "top": 19001,
+                                  "left": 1034,
+                                  "width": 106,
+                                  "height": 16,
+                                  "docTop": 19001
+                                },
+                                "visible": true,
+                                "opacity": 1,
+                                "spacing": {
+                                  "marginTop": 0,
+                                  "marginBottom": 0,
+                                  "marginLeft": 0,
+                                  "marginRight": 0,
+                                  "paddingTop": 0,
+                                  "paddingBottom": 0,
+                                  "paddingLeft": 0,
+                                  "paddingRight": 0
+                                },
+                                "typography": {
+                                  "fontSize": "16px",
+                                  "lineHeight": "16px",
+                                  "fontWeight": "510",
+                                  "fontFamily": "SFProText"
+                                },
+                                "colors": {
+                                  "color": "rgba(255, 255, 255, 0.5)",
+                                  "backgroundColor": "rgba(0, 0, 0, 0)"
+                                },
+                                "text": "Terms Of Use",
+                                "attributes": {
+                                  "href": "/terms-of-use/",
+                                  "src": null,
+                                  "alt": null,
+                                  "role": null
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "tag": "div",
+                        "className": "footmobsocial",
+                        "id": "",
+                        "layout": {
+                          "top": 19017,
+                          "left": 66,
+                          "width": 1548,
+                          "height": 34,
+                          "docTop": 19017
+                        },
+                        "visible": false,
+                        "opacity": 0,
+                        "spacing": {
+                          "marginTop": 0,
+                          "marginBottom": 0,
+                          "marginLeft": 0,
+                          "marginRight": 0,
+                          "paddingTop": 0,
+                          "paddingBottom": 0,
+                          "paddingLeft": 0,
+                          "paddingRight": 0
+                        },
+                        "typography": {
+                          "fontSize": "18px",
+                          "lineHeight": "27px",
+                          "fontWeight": "400",
+                          "fontFamily": "\"SF Pro\""
+                        },
+                        "colors": {
+                          "color": "rgb(0, 0, 0)",
+                          "backgroundColor": "rgba(0, 0, 0, 0)"
+                        },
+                        "text": "",
+                        "attributes": {
+                          "href": null,
+                          "src": null,
+                          "alt": null,
+                          "role": null
+                        },
+                        "children": [
+                          {
+                            "tag": "ul",
+                            "className": "",
+                            "id": "",
+                            "layout": {
+                              "top": 19017,
+                              "left": 59,
+                              "width": 1562,
+                              "height": 34,
+                              "docTop": 19017
+                            },
+                            "visible": true,
+                            "opacity": 1,
+                            "spacing": {
+                              "marginTop": 0,
+                              "marginBottom": 0,
+                              "marginLeft": -7,
+                              "marginRight": -7,
+                              "paddingTop": 0,
+                              "paddingBottom": 0,
+                              "paddingLeft": 0,
+                              "paddingRight": 0
+                            },
+                            "typography": {
+                              "fontSize": "18px",
+                              "lineHeight": "27px",
+                              "fontWeight": "400",
+                              "fontFamily": "\"SF Pro\""
+                            },
+                            "colors": {
+                              "color": "rgb(0, 0, 0)",
+                              "backgroundColor": "rgba(0, 0, 0, 0)"
+                            },
+                            "text": "",
+                            "attributes": {
+                              "href": null,
+                              "src": null,
+                              "alt": null,
+                              "role": null
+                            },
+                            "children": [
+                              {
+                                "tag": "li",
+                                "className": "f_tiktok",
+                                "id": "",
+                                "layout": {
+                                  "top": 19017,
+                                  "left": 780,
+                                  "width": 37,
+                                  "height": 34,
+                                  "docTop": 19017
+                                },
+                                "visible": true,
+                                "opacity": 1,
+                                "spacing": {
+                                  "marginTop": 0,
+                                  "marginBottom": 0,
+                                  "marginLeft": 0,
+                                  "marginRight": 0,
+                                  "paddingTop": 0,
+                                  "paddingBottom": 0,
+                                  "paddingLeft": 7,
+                                  "paddingRight": 7
+                                },
+                                "typography": {
+                                  "fontSize": "18px",
+                                  "lineHeight": "27px",
+                                  "fontWeight": "400",
+                                  "fontFamily": "\"SF Pro\""
+                                },
+                                "colors": {
+                                  "color": "rgb(0, 0, 0)",
+                                  "backgroundColor": "rgba(0, 0, 0, 0)"
+                                },
+                                "text": "",
+                                "attributes": {
+                                  "href": null,
+                                  "src": null,
+                                  "alt": null,
+                                  "role": null
+                                }
+                              },
+                              {
+                                "tag": "li",
+                                "className": "f_instagram",
+                                "id": "",
+                                "layout": {
+                                  "top": 19017,
+                                  "left": 821,
+                                  "width": 37,
+                                  "height": 23,
+                                  "docTop": 19017
+                                },
+                                "visible": true,
+                                "opacity": 1,
+                                "spacing": {
+                                  "marginTop": 0,
+                                  "marginBottom": 0,
+                                  "marginLeft": 0,
+                                  "marginRight": 0,
+                                  "paddingTop": 0,
+                                  "paddingBottom": 0,
+                                  "paddingLeft": 7,
+                                  "paddingRight": 7
+                                },
+                                "typography": {
+                                  "fontSize": "18px",
+                                  "lineHeight": "27px",
+                                  "fontWeight": "400",
+                                  "fontFamily": "\"SF Pro\""
+                                },
+                                "colors": {
+                                  "color": "rgb(0, 0, 0)",
+                                  "backgroundColor": "rgba(0, 0, 0, 0)"
+                                },
+                                "text": "",
+                                "attributes": {
+                                  "href": null,
+                                  "src": null,
+                                  "alt": null,
+                                  "role": null
+                                }
+                              },
+                              {
+                                "tag": "li",
+                                "className": "f_facefook",
+                                "id": "",
+                                "layout": {
+                                  "top": 19017,
+                                  "left": 862,
+                                  "width": 37,
+                                  "height": 34,
+                                  "docTop": 19017
+                                },
+                                "visible": true,
+                                "opacity": 1,
+                                "spacing": {
+                                  "marginTop": 0,
+                                  "marginBottom": 0,
+                                  "marginLeft": 0,
+                                  "marginRight": 0,
+                                  "paddingTop": 0,
+                                  "paddingBottom": 0,
+                                  "paddingLeft": 7,
+                                  "paddingRight": 7
+                                },
+                                "typography": {
+                                  "fontSize": "18px",
+                                  "lineHeight": "27px",
+                                  "fontWeight": "400",
+                                  "fontFamily": "\"SF Pro\""
+                                },
+                                "colors": {
+                                  "color": "rgb(0, 0, 0)",
+                                  "backgroundColor": "rgba(0, 0, 0, 0)"
+                                },
+                                "text": "",
+                                "attributes": {
+                                  "href": null,
+                                  "src": null,
+                                  "alt": null,
+                                  "role": null
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "tag": "div",
+                        "className": "footer_bot_socail",
+                        "id": "",
+                        "layout": {
+                          "top": 19021,
+                          "left": 1421,
+                          "width": 452,
+                          "height": 42,
+                          "docTop": 19021
+                        },
+                        "visible": true,
+                        "opacity": 1,
+                        "spacing": {
+                          "marginTop": 0,
+                          "marginBottom": 0,
+                          "marginLeft": 0,
+                          "marginRight": 0,
+                          "paddingTop": 0,
+                          "paddingBottom": 0,
+                          "paddingLeft": 0,
+                          "paddingRight": 0
+                        },
+                        "typography": {
+                          "fontSize": "0px",
+                          "lineHeight": "0px",
+                          "fontWeight": "400",
+                          "fontFamily": "\"SF Pro\""
+                        },
+                        "colors": {
+                          "color": "rgb(0, 0, 0)",
+                          "backgroundColor": "rgba(0, 0, 0, 0)"
+                        },
+                        "text": "Eng\nHeb\n\n                    \n                \t                \t\tPart of",
+                        "attributes": {
+                          "href": null,
+                          "src": null,
+                          "alt": null,
+                          "role": null
+                        },
+                        "children": [
+                          {
+                            "tag": "div",
+                            "className": "footlangmenu",
+                            "id": "",
+                            "layout": {
+                              "top": 19040,
+                              "left": 1421,
+                              "width": 110,
+                              "height": 22,
+                              "docTop": 19040
+                            },
+                            "visible": true,
+                            "opacity": 1,
+                            "spacing": {
+                              "marginTop": 19,
+                              "marginBottom": 0,
+                              "marginLeft": 0,
+                              "marginRight": 38,
+                              "paddingTop": 0,
+                              "paddingBottom": 0,
+                              "paddingLeft": 0,
+                              "paddingRight": 0
+                            },
+                            "typography": {
+                              "fontSize": "0px",
+                              "lineHeight": "0px",
+                              "fontWeight": "400",
+                              "fontFamily": "\"SF Pro\""
+                            },
+                            "colors": {
+                              "color": "rgb(0, 0, 0)",
+                              "backgroundColor": "rgba(0, 0, 0, 0)"
+                            },
+                            "text": "Eng\nHeb",
+                            "attributes": {
+                              "href": null,
+                              "src": null,
+                              "alt": null,
+                              "role": null
+                            },
+                            "children": [
+                              {
+                                "tag": "svg",
+                                "className": {},
+                                "id": "",
+                                "layout": {
+                                  "top": 19041,
+                                  "left": 1421,
+                                  "width": 20,
+                                  "height": 20,
+                                  "docTop": 19041
+                                },
+                                "visible": true,
+                                "opacity": 1,
+                                "spacing": {
+                                  "marginTop": 0,
+                                  "marginBottom": 0,
+                                  "marginLeft": 0,
+                                  "marginRight": 7,
+                                  "paddingTop": 0,
+                                  "paddingBottom": 0,
+                                  "paddingLeft": 0,
+                                  "paddingRight": 0
+                                },
+                                "typography": {
+                                  "fontSize": "0px",
+                                  "lineHeight": "0px",
+                                  "fontWeight": "400",
+                                  "fontFamily": "\"SF Pro\""
+                                },
+                                "colors": {
+                                  "color": "rgb(0, 0, 0)",
+                                  "backgroundColor": "rgba(0, 0, 0, 0)"
+                                },
+                                "text": "",
+                                "attributes": {
+                                  "href": null,
+                                  "src": null,
+                                  "alt": null,
+                                  "role": null
+                                }
+                              },
+                              {
+                                "tag": "div",
+                                "className": "menu-language-menu-container",
+                                "id": "",
+                                "layout": {
+                                  "top": 19040,
+                                  "left": 1448,
+                                  "width": 83,
+                                  "height": 22,
+                                  "docTop": 19040
+                                },
+                                "visible": true,
+                                "opacity": 1,
+                                "spacing": {
+                                  "marginTop": 0,
+                                  "marginBottom": 0,
+                                  "marginLeft": 0,
+                                  "marginRight": 0,
+                                  "paddingTop": 0,
+                                  "paddingBottom": 0,
+                                  "paddingLeft": 0,
+                                  "paddingRight": 0
+                                },
+                                "typography": {
+                                  "fontSize": "0px",
+                                  "lineHeight": "0px",
+                                  "fontWeight": "400",
+                                  "fontFamily": "\"SF Pro\""
+                                },
+                                "colors": {
+                                  "color": "rgb(0, 0, 0)",
+                                  "backgroundColor": "rgba(0, 0, 0, 0)"
+                                },
+                                "text": "Eng\nHeb",
+                                "attributes": {
+                                  "href": null,
+                                  "src": null,
+                                  "alt": null,
+                                  "role": null
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "tag": "div",
+                            "className": "foo_bot_socail_label",
+                            "id": "",
+                            "layout": {
+                              "top": 19051,
+                              "left": 1570,
+                              "width": 110,
+                              "height": 41,
+                              "docTop": 19051
+                            },
+                            "visible": false,
+                            "opacity": 0,
+                            "spacing": {
+                              "marginTop": 0,
+                              "marginBottom": 0,
+                              "marginLeft": 0,
+                              "marginRight": 0,
+                              "paddingTop": 0,
+                              "paddingBottom": 0,
+                              "paddingLeft": 0,
+                              "paddingRight": 16
+                            },
+                            "typography": {
+                              "fontSize": "12px",
+                              "lineHeight": "16px",
+                              "fontWeight": "500",
+                              "fontFamily": "SFProText"
+                            },
+                            "colors": {
+                              "color": "rgba(255, 255, 255, 0.5)",
+                              "backgroundColor": "rgba(0, 0, 0, 0)"
+                            },
+                            "text": "Part of",
+                            "attributes": {
+                              "href": null,
+                              "src": null,
+                              "alt": null,
+                              "role": null
+                            },
+                            "children": [
+                              {
+                                "tag": "a",
+                                "className": "",
+                                "id": "",
+                                "layout": {
+                                  "top": 19052,
+                                  "left": 1570,
+                                  "width": 94,
+                                  "height": 40,
+                                  "docTop": 19052
+                                },
+                                "visible": true,
+                                "opacity": 1,
+                                "spacing": {
+                                  "marginTop": 0,
+                                  "marginBottom": 0,
+                                  "marginLeft": 0,
+                                  "marginRight": 0,
+                                  "paddingTop": 0,
+                                  "paddingBottom": 0,
+                                  "paddingLeft": 0,
+                                  "paddingRight": 0
+                                },
+                                "typography": {
+                                  "fontSize": "12px",
+                                  "lineHeight": "16px",
+                                  "fontWeight": "500",
+                                  "fontFamily": "SFProText"
+                                },
+                                "colors": {
+                                  "color": "rgba(255, 255, 255, 0.5)",
+                                  "backgroundColor": "rgba(0, 0, 0, 0)"
+                                },
+                                "text": "Part of",
+                                "attributes": {
+                                  "href": "https://www.sqlink.com/",
+                                  "src": null,
+                                  "alt": null,
+                                  "role": null
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "tag": "ul",
+                            "className": "",
+                            "id": "",
+                            "layout": {
+                              "top": 19051,
+                              "left": 1680,
+                              "width": 194,
+                              "height": 42,
+                              "docTop": 19051
+                            },
+                            "visible": false,
+                            "opacity": 0,
+                            "spacing": {
+                              "marginTop": 0,
+                              "marginBottom": 0,
+                              "marginLeft": 0,
+                              "marginRight": 0,
+                              "paddingTop": 8,
+                              "paddingBottom": 0,
+                              "paddingLeft": 0,
+                              "paddingRight": 0
+                            },
+                            "typography": {
+                              "fontSize": "0px",
+                              "lineHeight": "0px",
+                              "fontWeight": "400",
+                              "fontFamily": "\"SF Pro\""
+                            },
+                            "colors": {
+                              "color": "rgb(0, 0, 0)",
+                              "backgroundColor": "rgba(0, 0, 0, 0)"
+                            },
+                            "text": "",
+                            "attributes": {
+                              "href": null,
+                              "src": null,
+                              "alt": null,
+                              "role": null
+                            },
+                            "children": [
+                              {
+                                "tag": "li",
+                                "className": "f_linkedin",
+                                "id": "",
+                                "layout": {
+                                  "top": 19059,
+                                  "left": 1680,
+                                  "width": 50,
+                                  "height": 34,
+                                  "docTop": 19059
+                                },
+                                "visible": true,
+                                "opacity": 1,
+                                "spacing": {
+                                  "marginTop": 0,
+                                  "marginBottom": 0,
+                                  "marginLeft": 0,
+                                  "marginRight": 0,
+                                  "paddingTop": 0,
+                                  "paddingBottom": 0,
+                                  "paddingLeft": 8,
+                                  "paddingRight": 8
+                                },
+                                "typography": {
+                                  "fontSize": "0px",
+                                  "lineHeight": "0px",
+                                  "fontWeight": "400",
+                                  "fontFamily": "\"SF Pro\""
+                                },
+                                "colors": {
+                                  "color": "rgb(0, 0, 0)",
+                                  "backgroundColor": "rgba(0, 0, 0, 0)"
+                                },
+                                "text": "",
+                                "attributes": {
+                                  "href": null,
+                                  "src": null,
+                                  "alt": null,
+                                  "role": null
+                                }
+                              },
+                              {
+                                "tag": "li",
+                                "className": "f_tiktok",
+                                "id": "",
+                                "layout": {
+                                  "top": 19059,
+                                  "left": 1730,
+                                  "width": 51,
+                                  "height": 34,
+                                  "docTop": 19059
+                                },
+                                "visible": true,
+                                "opacity": 1,
+                                "spacing": {
+                                  "marginTop": 0,
+                                  "marginBottom": 0,
+                                  "marginLeft": 0,
+                                  "marginRight": 0,
+                                  "paddingTop": 0,
+                                  "paddingBottom": 0,
+                                  "paddingLeft": 8,
+                                  "paddingRight": 8
+                                },
+                                "typography": {
+                                  "fontSize": "0px",
+                                  "lineHeight": "0px",
+                                  "fontWeight": "400",
+                                  "fontFamily": "\"SF Pro\""
+                                },
+                                "colors": {
+                                  "color": "rgb(0, 0, 0)",
+                                  "backgroundColor": "rgba(0, 0, 0, 0)"
+                                },
+                                "text": "",
+                                "attributes": {
+                                  "href": null,
+                                  "src": null,
+                                  "alt": null,
+                                  "role": null
+                                }
+                              },
+                              {
+                                "tag": "li",
+                                "className": "f_instagram",
+                                "id": "",
+                                "layout": {
+                                  "top": 19059,
+                                  "left": 1781,
+                                  "width": 50,
+                                  "height": 34,
+                                  "docTop": 19059
+                                },
+                                "visible": true,
+                                "opacity": 1,
+                                "spacing": {
+                                  "marginTop": 0,
+                                  "marginBottom": 0,
+                                  "marginLeft": 0,
+                                  "marginRight": 0,
+                                  "paddingTop": 0,
+                                  "paddingBottom": 0,
+                                  "paddingLeft": 8,
+                                  "paddingRight": 8
+                                },
+                                "typography": {
+                                  "fontSize": "0px",
+                                  "lineHeight": "0px",
+                                  "fontWeight": "400",
+                                  "fontFamily": "\"SF Pro\""
+                                },
+                                "colors": {
+                                  "color": "rgb(0, 0, 0)",
+                                  "backgroundColor": "rgba(0, 0, 0, 0)"
+                                },
+                                "text": "",
+                                "attributes": {
+                                  "href": null,
+                                  "src": null,
+                                  "alt": null,
+                                  "role": null
+                                }
+                              },
+                              {
+                                "tag": "li",
+                                "className": "f_facefook",
+                                "id": "",
+                                "layout": {
+                                  "top": 19059,
+                                  "left": 1831,
+                                  "width": 43,
+                                  "height": 34,
+                                  "docTop": 19059
+                                },
+                                "visible": true,
+                                "opacity": 1,
+                                "spacing": {
+                                  "marginTop": 0,
+                                  "marginBottom": 0,
+                                  "marginLeft": 0,
+                                  "marginRight": 0,
+                                  "paddingTop": 0,
+                                  "paddingBottom": 0,
+                                  "paddingLeft": 8,
+                                  "paddingRight": 0
+                                },
+                                "typography": {
+                                  "fontSize": "0px",
+                                  "lineHeight": "0px",
+                                  "fontWeight": "400",
+                                  "fontFamily": "\"SF Pro\""
+                                },
+                                "colors": {
+                                  "color": "rgb(0, 0, 0)",
+                                  "backgroundColor": "rgba(0, 0, 0, 0)"
+                                },
+                                "text": "",
+                                "attributes": {
+                                  "href": null,
+                                  "src": null,
+                                  "alt": null,
+                                  "role": null
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "message": "✅ Footer found"
+    }
+  },
+  "recommendations": [
+    {
+      "priority": "CRITICAL",
+      "element": "<a> elements",
+      "issue": "Missing 19 a elements",
+      "action": "FIX_REQUIRED",
+      "steps": [
+        "Original had 30 <a> elements",
+        "Current has only 11",
+        "Search React components for missing <a> markup",
+        "Check if conditional rendering is hiding them"
+      ],
+      "severity": "STRUCTURAL_ISSUE"
+    },
+    {
+      "priority": "CRITICAL",
+      "element": "<span> elements",
+      "issue": "Missing 19 span elements",
+      "action": "FIX_REQUIRED",
+      "steps": [
+        "Original had 24 <span> elements",
+        "Current has only 5",
+        "Search React components for missing <span> markup",
+        "Check if conditional rendering is hiding them"
+      ],
+      "severity": "STRUCTURAL_ISSUE"
+    },
+    {
+      "priority": "CRITICAL",
+      "element": "<p> elements",
+      "issue": "Missing 13 p elements",
+      "action": "FIX_REQUIRED",
+      "steps": [
+        "Original had 17 <p> elements",
+        "Current has only 4",
+        "Search React components for missing <p> markup",
+        "Check if conditional rendering is hiding them"
+      ],
+      "severity": "STRUCTURAL_ISSUE"
+    },
+    {
+      "priority": "CRITICAL",
+      "element": "<li> elements",
+      "issue": "Missing 11 li elements",
+      "action": "FIX_REQUIRED",
+      "steps": [
+        "Original had 37 <li> elements",
+        "Current has only 26",
+        "Search React components for missing <li> markup",
+        "Check if conditional rendering is hiding them"
+      ],
+      "severity": "STRUCTURAL_ISSUE"
+    },
+    {
+      "priority": "CRITICAL",
+      "element": "<br> elements",
+      "issue": "Missing 7 br elements",
+      "action": "FIX_REQUIRED",
+      "steps": [
+        "Original had 10 <br> elements",
+        "Current has only 3",
+        "Search React components for missing <br> markup",
+        "Check if conditional rendering is hiding them"
+      ],
+      "severity": "STRUCTURAL_ISSUE"
+    },
+    {
+      "priority": "CRITICAL",
+      "element": "<div> elements",
+      "issue": "Missing 5 div elements",
+      "action": "FIX_REQUIRED",
+      "steps": [
+        "Original had 184 <div> elements",
+        "Current has only 179",
+        "Search React components for missing <div> markup",
+        "Check if conditional rendering is hiding them"
+      ],
+      "severity": "STRUCTURAL_ISSUE"
+    },
+    {
+      "priority": "CRITICAL",
+      "element": "<h3> elements",
+      "issue": "Missing 5 h3 elements",
+      "action": "FIX_REQUIRED",
+      "steps": [
+        "Original had 13 <h3> elements",
+        "Current has only 8",
+        "Search React components for missing <h3> markup",
+        "Check if conditional rendering is hiding them"
+      ],
+      "severity": "STRUCTURAL_ISSUE"
+    }
+  ]
+}

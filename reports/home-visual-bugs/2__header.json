@@ -1,0 +1,27 @@
+{
+  "selector": ".header",
+  "differences": [
+    {
+      "category": "typography",
+      "property": "line-height",
+      "original": "normal",
+      "current": "27px",
+      "impact": "HIGH"
+    },
+    {
+      "category": "spacing",
+      "property": "margin",
+      "original": "0px 32px",
+      "current": "0px 31.625px",
+      "impact": "HIGH"
+    },
+    {
+      "category": "spacing",
+      "property": "line-height",
+      "original": "normal",
+      "current": "27px",
+      "impact": "HIGH"
+    }
+  ],
+  "totalDifferences": 4
+}

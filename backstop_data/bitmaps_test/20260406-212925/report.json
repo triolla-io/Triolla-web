@@ -1,0 +1,60 @@
+{
+  "testSuite": "BackstopJS",
+  "tests": [
+    {
+      "pair": {
+        "reference": "../bitmaps_reference/triolla_visual_regression_Homepage_-_Desktop_-_EN_0_body_0_desktop.png",
+        "test": "../bitmaps_test/20260406-212925/triolla_visual_regression_Homepage_-_Desktop_-_EN_0_body_0_desktop.png",
+        "selector": "body",
+        "fileName": "triolla_visual_regression_Homepage_-_Desktop_-_EN_0_body_0_desktop.png",
+        "label": "Homepage - Desktop - EN",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "http://localhost:3000/",
+        "referenceUrl": "https://triolla.io/",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 99.83276909722221,
+          "misMatchPercentage": "99.83",
+          "analysisTime": 38
+        },
+        "diffImage": "../bitmaps_test/20260406-212925/failed_diff_triolla_visual_regression_Homepage_-_Desktop_-_EN_0_body_0_desktop.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "../bitmaps_reference/triolla_visual_regression_Homepage_-_Desktop_-_HE_0_body_0_desktop.png",
+        "test": "../bitmaps_test/20260406-212925/triolla_visual_regression_Homepage_-_Desktop_-_HE_0_body_0_desktop.png",
+        "selector": "body",
+        "fileName": "triolla_visual_regression_Homepage_-_Desktop_-_HE_0_body_0_desktop.png",
+        "label": "Homepage - Desktop - HE",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "http://localhost:3000/he",
+        "referenceUrl": "https://triolla.io/he/",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 9.601258680555555,
+          "misMatchPercentage": "9.60",
+          "analysisTime": 39
+        },
+        "diffImage": "../bitmaps_test/20260406-212925/failed_diff_triolla_visual_regression_Homepage_-_Desktop_-_HE_0_body_0_desktop.png"
+      },
+      "status": "fail"
+    }
+  ],
+  "id": "triolla_visual_regression"
+}

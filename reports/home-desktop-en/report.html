@@ -315,7 +315,7 @@
         </div>
         <div class="meta-item">
           <span class="meta-label">Generated</span>
-          <span>4/6/2026, 3:13:48 PM</span>
+          <span>4/6/2026, 10:02:48 PM</span>
         </div>
       </div>
     </div>
@@ -324,11 +324,11 @@
     <div class="metrics">
       <div class="metrics-grid">
         <div class="metric-card">
-          <div class="metric-value">83.56%</div>
-          <div class="metric-label">Pixel Match</div>
+          <div class="metric-value">86.53%</div>
+          <div class="metric-label">Structural Match</div>
         </div>
         <div class="metric-card">
-          <div class="metric-value">4,903,684</div>
+          <div class="metric-value">4,019,593</div>
           <div class="metric-label">Different Pixels</div>
         </div>
         <div class="metric-card">
@@ -336,8 +336,8 @@
           <div class="metric-label">Total Pixels</div>
         </div>
         <div class="metric-card">
-          <div class="metric-value">16.44%</div>
-          <div class="metric-label">Diff Ratio</div>
+          <div class="metric-value">13.47%</div>
+          <div class="metric-label">Layout Diff Ratio</div>
         </div>
       </div>
     </div>
@@ -345,6 +345,9 @@
     <!-- Comparison -->
     <div class="comparison-section">
       <h2>Visual Comparison</h2>
+      <p style="color: #666; font-size: 14px; margin-bottom: 20px;">
+        💡 <strong>Structural Heatmap Focus:</strong> The heatmap below shows layout and element differences only, with visual noise (backgrounds, gradients, shadows) normalized away. This highlights meaningful layout changes rather than styling variations.
+      </p>
       <div class="image-grid">
         <div class="image-container">
           <div class="image-label">Original WP Site</div>
@@ -359,9 +362,9 @@
           </div>
         </div>
         <div class="image-container">
-          <div class="image-label">Diff Heatmap (red = different)</div>
+          <div class="image-label">Structural Diff Heatmap (red = layout differences)</div>
           <div class="image-wrapper">
-            <img src="heatmap.png" alt="Diff heatmap showing changes in red">
+            <img src="heatmap-structural.png" alt="Structural diff heatmap showing layout changes in red">
           </div>
         </div>
       </div>
@@ -369,176 +372,6 @@
 
     <!-- Affected Regions -->
     
-    <div class="regions-section">
-      <h2>Top Diff Regions (10)</h2>
-      <p style="color: #666; font-size: 14px; margin-bottom: 15px;">
-        Largest areas of pixel differences, sorted by size
-      </p>
-      <div class="regions-list">
-        
-        <div class="region-item">
-          <div class="region-header">
-            <div class="region-title">Region 1</div>
-            <span class="region-severity severity-high">
-              62,500 pixels
-            </span>
-          </div>
-          <div class="region-coords">
-            Position: (0, 0) | Size: 250×250px
-          </div>
-          <div class="region-elements">
-            <strong>This region likely contains multiple elements.</strong><br/>
-            Check the heatmap above to see the exact location of differences.
-          </div>
-        </div>
-        
-        <div class="region-item">
-          <div class="region-header">
-            <div class="region-title">Region 2</div>
-            <span class="region-severity severity-high">
-              62,500 pixels
-            </span>
-          </div>
-          <div class="region-coords">
-            Position: (50, 0) | Size: 250×250px
-          </div>
-          <div class="region-elements">
-            <strong>This region likely contains multiple elements.</strong><br/>
-            Check the heatmap above to see the exact location of differences.
-          </div>
-        </div>
-        
-        <div class="region-item">
-          <div class="region-header">
-            <div class="region-title">Region 3</div>
-            <span class="region-severity severity-high">
-              62,500 pixels
-            </span>
-          </div>
-          <div class="region-coords">
-            Position: (100, 0) | Size: 250×250px
-          </div>
-          <div class="region-elements">
-            <strong>This region likely contains multiple elements.</strong><br/>
-            Check the heatmap above to see the exact location of differences.
-          </div>
-        </div>
-        
-        <div class="region-item">
-          <div class="region-header">
-            <div class="region-title">Region 4</div>
-            <span class="region-severity severity-high">
-              62,500 pixels
-            </span>
-          </div>
-          <div class="region-coords">
-            Position: (150, 0) | Size: 250×250px
-          </div>
-          <div class="region-elements">
-            <strong>This region likely contains multiple elements.</strong><br/>
-            Check the heatmap above to see the exact location of differences.
-          </div>
-        </div>
-        
-        <div class="region-item">
-          <div class="region-header">
-            <div class="region-title">Region 5</div>
-            <span class="region-severity severity-high">
-              62,500 pixels
-            </span>
-          </div>
-          <div class="region-coords">
-            Position: (200, 0) | Size: 250×250px
-          </div>
-          <div class="region-elements">
-            <strong>This region likely contains multiple elements.</strong><br/>
-            Check the heatmap above to see the exact location of differences.
-          </div>
-        </div>
-        
-        <div class="region-item">
-          <div class="region-header">
-            <div class="region-title">Region 6</div>
-            <span class="region-severity severity-high">
-              62,500 pixels
-            </span>
-          </div>
-          <div class="region-coords">
-            Position: (250, 0) | Size: 250×250px
-          </div>
-          <div class="region-elements">
-            <strong>This region likely contains multiple elements.</strong><br/>
-            Check the heatmap above to see the exact location of differences.
-          </div>
-        </div>
-        
-        <div class="region-item">
-          <div class="region-header">
-            <div class="region-title">Region 7</div>
-            <span class="region-severity severity-high">
-              62,500 pixels
-            </span>
-          </div>
-          <div class="region-coords">
-            Position: (300, 0) | Size: 250×250px
-          </div>
-          <div class="region-elements">
-            <strong>This region likely contains multiple elements.</strong><br/>
-            Check the heatmap above to see the exact location of differences.
-          </div>
-        </div>
-        
-        <div class="region-item">
-          <div class="region-header">
-            <div class="region-title">Region 8</div>
-            <span class="region-severity severity-high">
-              62,500 pixels
-            </span>
-          </div>
-          <div class="region-coords">
-            Position: (350, 0) | Size: 250×250px
-          </div>
-          <div class="region-elements">
-            <strong>This region likely contains multiple elements.</strong><br/>
-            Check the heatmap above to see the exact location of differences.
-          </div>
-        </div>
-        
-        <div class="region-item">
-          <div class="region-header">
-            <div class="region-title">Region 9</div>
-            <span class="region-severity severity-high">
-              62,500 pixels
-            </span>
-          </div>
-          <div class="region-coords">
-            Position: (400, 0) | Size: 250×250px
-          </div>
-          <div class="region-elements">
-            <strong>This region likely contains multiple elements.</strong><br/>
-            Check the heatmap above to see the exact location of differences.
-          </div>
-        </div>
-        
-        <div class="region-item">
-          <div class="region-header">
-            <div class="region-title">Region 10</div>
-            <span class="region-severity severity-high">
-              62,500 pixels
-            </span>
-          </div>
-          <div class="region-coords">
-            Position: (450, 0) | Size: 250×250px
-          </div>
-          <div class="region-elements">
-            <strong>This region likely contains multiple elements.</strong><br/>
-            Check the heatmap above to see the exact location of differences.
-          </div>
-        </div>
-        
-      </div>
-    </div>
-        
 
     <!-- Acceptance Criteria -->
     <div class="acceptance-section">
@@ -546,11 +379,11 @@
       <div class="criteria-list">
         <div class="criterion">
           <span class="status-icon">❌</span>
-          <span>Match: ≥99% (current: 83.56%)</span>
+          <span>Match: ≥99% (current: 83.48%)</span>
         </div>
         <div class="criterion">
           <span class="status-icon">❌</span>
-          <span>Max Different Pixels: ≤5,000 (current: 4,903,684)</span>
+          <span>Max Different Pixels: ≤5,000 (current: 4,929,699)</span>
         </div>
       </div>
     </div>

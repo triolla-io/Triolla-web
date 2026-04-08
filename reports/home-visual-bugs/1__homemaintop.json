@@ -1,0 +1,27 @@
+{
+  "selector": ".homemaintop",
+  "differences": [
+    {
+      "category": "typography",
+      "property": "line-height",
+      "original": "normal",
+      "current": "27px",
+      "impact": "HIGH"
+    },
+    {
+      "category": "spacing",
+      "property": "line-height",
+      "original": "normal",
+      "current": "27px",
+      "impact": "HIGH"
+    },
+    {
+      "category": "color",
+      "property": "background-color",
+      "original": "rgb(254, 211, 36)",
+      "current": "rgb(254, 209, 37)",
+      "impact": "HIGH"
+    }
+  ],
+  "totalDifferences": 5
+}

@@ -1,0 +1,821 @@
+[
+  {
+    "tag": "h1",
+    "className": "",
+    "id": "",
+    "analysis": {
+      "lineCount": 9,
+      "lines": [
+        {
+          "top": 234,
+          "start": 0,
+          "text": "Creative"
+        },
+        {
+          "top": 434,
+          "start": 9,
+          "text": "Design"
+        },
+        {
+          "top": 634,
+          "start": 16,
+          "text": "Attracts"
+        },
+        {
+          "top": 834,
+          "start": 25,
+          "text": "People."
+        },
+        {
+          "top": 1034,
+          "start": 33,
+          "text": "Smart"
+        },
+        {
+          "top": 1234,
+          "start": 39,
+          "text": "UX"
+        },
+        {
+          "top": 1434,
+          "start": 42,
+          "text": "Makes"
+        },
+        {
+          "top": 1634,
+          "start": 48,
+          "text": "Them"
+        },
+        {
+          "top": 1834,
+          "start": 53,
+          "text": ""
+        }
+      ],
+      "gaps": [
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200
+      ],
+      "statistics": {
+        "averageGap": 200,
+        "maxGap": 200,
+        "minGap": 200,
+        "maxVariance": 0,
+        "minVariance": 0,
+        "isConsistent": true
+      }
+    }
+  },
+  {
+    "tag": "h2",
+    "className": "",
+    "id": "",
+    "analysis": {
+      "lineCount": 3,
+      "lines": [
+        {
+          "top": 2168,
+          "start": 0,
+          "text": "Product Design for Tech, Gaming,"
+        },
+        {
+          "top": 2198,
+          "start": 33,
+          "text": "Medical, Cyber, IoT, Agritech,"
+        },
+        {
+          "top": 2227,
+          "start": 64,
+          "text": ""
+        }
+      ],
+      "gaps": [
+        30,
+        29
+      ],
+      "statistics": {
+        "averageGap": 29.5,
+        "maxGap": 30,
+        "minGap": 29,
+        "maxVariance": 1,
+        "minVariance": 1,
+        "isConsistent": true
+      }
+    }
+  },
+  {
+    "tag": "p",
+    "className": "",
+    "id": "",
+    "analysis": {
+      "lineCount": 3,
+      "lines": [
+        {
+          "top": 9271,
+          "start": 0,
+          "text": "Thanks to our exceptionally talented & experienced product designers, we"
+        },
+        {
+          "top": 9308,
+          "start": 73,
+          "text": "provide customized UX/UI and product design services to most industries:"
+        },
+        {
+          "top": 9345,
+          "start": 146,
+          "text": ""
+        }
+      ],
+      "gaps": [
+        37,
+        37
+      ],
+      "statistics": {
+        "averageGap": 37,
+        "maxGap": 37,
+        "minGap": 37,
+        "maxVariance": 0,
+        "minVariance": 0,
+        "isConsistent": true
+      }
+    }
+  },
+  {
+    "tag": "h5",
+    "className": "",
+    "id": "",
+    "analysis": {
+      "lineCount": 2,
+      "lines": [
+        {
+          "top": 9698,
+          "start": 0,
+          "text": "Improve an existing"
+        },
+        {
+          "top": 9740,
+          "start": 20,
+          "text": ""
+        }
+      ],
+      "gaps": [
+        42
+      ],
+      "statistics": {
+        "averageGap": 42,
+        "maxGap": 42,
+        "minGap": 42,
+        "maxVariance": 0,
+        "minVariance": 0,
+        "isConsistent": true
+      }
+    }
+  },
+  {
+    "tag": "p",
+    "className": "",
+    "id": "",
+    "analysis": {
+      "lineCount": 2,
+      "lines": [
+        {
+          "top": 9825,
+          "start": 0,
+          "text": "Upgrade and redesign your product to"
+        },
+        {
+          "top": 9847,
+          "start": 37,
+          "text": ""
+        }
+      ],
+      "gaps": [
+        22
+      ],
+      "statistics": {
+        "averageGap": 22,
+        "maxGap": 22,
+        "minGap": 22,
+        "maxVariance": 0,
+        "minVariance": 0,
+        "isConsistent": true
+      }
+    }
+  },
+  {
+    "tag": "h5",
+    "className": "",
+    "id": "",
+    "analysis": {
+      "lineCount": 2,
+      "lines": [
+        {
+          "top": 9698,
+          "start": 0,
+          "text": "First Steps for"
+        },
+        {
+          "top": 9740,
+          "start": 16,
+          "text": ""
+        }
+      ],
+      "gaps": [
+        42
+      ],
+      "statistics": {
+        "averageGap": 42,
+        "maxGap": 42,
+        "minGap": 42,
+        "maxVariance": 0,
+        "minVariance": 0,
+        "isConsistent": true
+      }
+    }
+  },
+  {
+    "tag": "h3",
+    "className": "winners-title",
+    "id": "",
+    "analysis": {
+      "lineCount": 3,
+      "lines": [
+        {
+          "top": 10458,
+          "start": 0,
+          "text": "Global winners in"
+        },
+        {
+          "top": 10578,
+          "start": 18,
+          "text": "Product UX/UI Design"
+        },
+        {
+          "top": 10698,
+          "start": 39,
+          "text": ""
+        }
+      ],
+      "gaps": [
+        120,
+        120
+      ],
+      "statistics": {
+        "averageGap": 120,
+        "maxGap": 120,
+        "minGap": 120,
+        "maxVariance": 0,
+        "minVariance": 0,
+        "isConsistent": true
+      }
+    }
+  },
+  {
+    "tag": "h3",
+    "className": "",
+    "id": "",
+    "analysis": {
+      "lineCount": 3,
+      "lines": [
+        {
+          "top": 12074,
+          "start": 0,
+          "text": "From small to global, we have"
+        },
+        {
+          "top": 12153,
+          "start": 30,
+          "text": "partnered with some great"
+        },
+        {
+          "top": 12232,
+          "start": 56,
+          "text": ""
+        }
+      ],
+      "gaps": [
+        79,
+        79
+      ],
+      "statistics": {
+        "averageGap": 79,
+        "maxGap": 79,
+        "minGap": 79,
+        "maxVariance": 0,
+        "minVariance": 0,
+        "isConsistent": true
+      }
+    }
+  },
+  {
+    "tag": "p",
+    "className": "",
+    "id": "",
+    "analysis": {
+      "lineCount": 2,
+      "lines": [
+        {
+          "top": 13587,
+          "start": 0,
+          "text": "Our unique design process blends deep user insight with creative strategy to craft"
+        },
+        {
+          "top": 13619,
+          "start": 83,
+          "text": ""
+        }
+      ],
+      "gaps": [
+        32
+      ],
+      "statistics": {
+        "averageGap": 32,
+        "maxGap": 32,
+        "minGap": 32,
+        "maxVariance": 0,
+        "minVariance": 0,
+        "isConsistent": true
+      }
+    }
+  },
+  {
+    "tag": "div",
+    "className": "faqtitle",
+    "id": "",
+    "analysis": {
+      "lineCount": 3,
+      "lines": [
+        {
+          "top": 14515,
+          "start": 0,
+          "text": "H"
+        },
+        {
+          "top": 14519,
+          "start": 1,
+          "text": "o"
+        },
+        {
+          "top": 14540,
+          "start": 2,
+          "text": ""
+        }
+      ],
+      "gaps": [
+        4,
+        21
+      ],
+      "statistics": {
+        "averageGap": 12.5,
+        "maxGap": 21,
+        "minGap": 4,
+        "maxVariance": 9,
+        "minVariance": 9,
+        "isConsistent": false
+      }
+    }
+  },
+  {
+    "tag": "div",
+    "className": "faqtitle",
+    "id": "",
+    "analysis": {
+      "lineCount": 3,
+      "lines": [
+        {
+          "top": 14596,
+          "start": 0,
+          "text": "H"
+        },
+        {
+          "top": 14600,
+          "start": 1,
+          "text": "o"
+        },
+        {
+          "top": 14621,
+          "start": 2,
+          "text": ""
+        }
+      ],
+      "gaps": [
+        4,
+        21
+      ],
+      "statistics": {
+        "averageGap": 12.5,
+        "maxGap": 21,
+        "minGap": 4,
+        "maxVariance": 9,
+        "minVariance": 9,
+        "isConsistent": false
+      }
+    }
+  },
+  {
+    "tag": "div",
+    "className": "faqtitle",
+    "id": "",
+    "analysis": {
+      "lineCount": 3,
+      "lines": [
+        {
+          "top": 14677,
+          "start": 0,
+          "text": "W"
+        },
+        {
+          "top": 14681,
+          "start": 1,
+          "text": "h"
+        },
+        {
+          "top": 14702,
+          "start": 2,
+          "text": ""
+        }
+      ],
+      "gaps": [
+        4,
+        21
+      ],
+      "statistics": {
+        "averageGap": 12.5,
+        "maxGap": 21,
+        "minGap": 4,
+        "maxVariance": 9,
+        "minVariance": 9,
+        "isConsistent": false
+      }
+    }
+  },
+  {
+    "tag": "div",
+    "className": "faqtitle",
+    "id": "",
+    "analysis": {
+      "lineCount": 3,
+      "lines": [
+        {
+          "top": 14758,
+          "start": 0,
+          "text": "W"
+        },
+        {
+          "top": 14762,
+          "start": 1,
+          "text": "h"
+        },
+        {
+          "top": 14783,
+          "start": 2,
+          "text": ""
+        }
+      ],
+      "gaps": [
+        4,
+        21
+      ],
+      "statistics": {
+        "averageGap": 12.5,
+        "maxGap": 21,
+        "minGap": 4,
+        "maxVariance": 9,
+        "minVariance": 9,
+        "isConsistent": false
+      }
+    }
+  },
+  {
+    "tag": "div",
+    "className": "faqtitle",
+    "id": "",
+    "analysis": {
+      "lineCount": 3,
+      "lines": [
+        {
+          "top": 14839,
+          "start": 0,
+          "text": "W"
+        },
+        {
+          "top": 14843,
+          "start": 1,
+          "text": "h"
+        },
+        {
+          "top": 14864,
+          "start": 2,
+          "text": ""
+        }
+      ],
+      "gaps": [
+        4,
+        21
+      ],
+      "statistics": {
+        "averageGap": 12.5,
+        "maxGap": 21,
+        "minGap": 4,
+        "maxVariance": 9,
+        "minVariance": 9,
+        "isConsistent": false
+      }
+    }
+  },
+  {
+    "tag": "div",
+    "className": "faqtitle",
+    "id": "",
+    "analysis": {
+      "lineCount": 3,
+      "lines": [
+        {
+          "top": 14920,
+          "start": 0,
+          "text": "W"
+        },
+        {
+          "top": 14924,
+          "start": 1,
+          "text": "h"
+        },
+        {
+          "top": 14945,
+          "start": 2,
+          "text": ""
+        }
+      ],
+      "gaps": [
+        4,
+        21
+      ],
+      "statistics": {
+        "averageGap": 12.5,
+        "maxGap": 21,
+        "minGap": 4,
+        "maxVariance": 9,
+        "minVariance": 9,
+        "isConsistent": false
+      }
+    }
+  },
+  {
+    "tag": "div",
+    "className": "faqtitle",
+    "id": "",
+    "analysis": {
+      "lineCount": 3,
+      "lines": [
+        {
+          "top": 15001,
+          "start": 0,
+          "text": "D"
+        },
+        {
+          "top": 15005,
+          "start": 1,
+          "text": "o"
+        },
+        {
+          "top": 15026,
+          "start": 2,
+          "text": ""
+        }
+      ],
+      "gaps": [
+        4,
+        21
+      ],
+      "statistics": {
+        "averageGap": 12.5,
+        "maxGap": 21,
+        "minGap": 4,
+        "maxVariance": 9,
+        "minVariance": 9,
+        "isConsistent": false
+      }
+    }
+  },
+  {
+    "tag": "div",
+    "className": "faqtitle",
+    "id": "",
+    "analysis": {
+      "lineCount": 3,
+      "lines": [
+        {
+          "top": 15082,
+          "start": 0,
+          "text": "C"
+        },
+        {
+          "top": 15086,
+          "start": 1,
+          "text": "a"
+        },
+        {
+          "top": 15107,
+          "start": 2,
+          "text": ""
+        }
+      ],
+      "gaps": [
+        4,
+        21
+      ],
+      "statistics": {
+        "averageGap": 12.5,
+        "maxGap": 21,
+        "minGap": 4,
+        "maxVariance": 9,
+        "minVariance": 9,
+        "isConsistent": false
+      }
+    }
+  },
+  {
+    "tag": "div",
+    "className": "faqtitle",
+    "id": "",
+    "analysis": {
+      "lineCount": 3,
+      "lines": [
+        {
+          "top": 15163,
+          "start": 0,
+          "text": "D"
+        },
+        {
+          "top": 15167,
+          "start": 1,
+          "text": "o"
+        },
+        {
+          "top": 15188,
+          "start": 2,
+          "text": ""
+        }
+      ],
+      "gaps": [
+        4,
+        21
+      ],
+      "statistics": {
+        "averageGap": 12.5,
+        "maxGap": 21,
+        "minGap": 4,
+        "maxVariance": 9,
+        "minVariance": 9,
+        "isConsistent": false
+      }
+    }
+  },
+  {
+    "tag": "h3",
+    "className": "",
+    "id": "",
+    "analysis": {
+      "lineCount": 2,
+      "lines": [
+        {
+          "top": 17759,
+          "start": 0,
+          "text": "Wanna Chat?"
+        },
+        {
+          "top": 17829,
+          "start": 12,
+          "text": ""
+        }
+      ],
+      "gaps": [
+        70
+      ],
+      "statistics": {
+        "averageGap": 70,
+        "maxGap": 70,
+        "minGap": 70,
+        "maxVariance": 0,
+        "minVariance": 0,
+        "isConsistent": true
+      }
+    }
+  },
+  {
+    "tag": "div",
+    "className": "gform-body gform_body",
+    "id": "",
+    "analysis": {
+      "lineCount": 5,
+      "lines": [
+        {
+          "top": 0,
+          "start": 0,
+          "text": "P"
+        },
+        {
+          "top": 17920,
+          "start": 1,
+          "text": "h"
+        },
+        {
+          "top": 17975,
+          "start": 2,
+          "text": "o"
+        },
+        {
+          "top": 18030,
+          "start": 3,
+          "text": "n"
+        },
+        {
+          "top": 18085,
+          "start": 4,
+          "text": ""
+        }
+      ],
+      "gaps": [
+        17920,
+        55,
+        55,
+        55
+      ],
+      "statistics": {
+        "averageGap": 4521.3,
+        "maxGap": 17920,
+        "minGap": 55,
+        "maxVariance": 13399,
+        "minVariance": 4466,
+        "isConsistent": false
+      }
+    }
+  },
+  {
+    "tag": "div",
+    "className": "foo_book",
+    "id": "",
+    "analysis": {
+      "lineCount": 7,
+      "lines": [
+        {
+          "top": 0,
+          "start": 0,
+          "text": ""
+        },
+        {
+          "top": 18839,
+          "start": 1,
+          "text": ""
+        },
+        {
+          "top": 0,
+          "start": 2,
+          "text": ""
+        },
+        {
+          "top": 18839,
+          "start": 3,
+          "text": ""
+        },
+        {
+          "top": 0,
+          "start": 4,
+          "text": ""
+        },
+        {
+          "top": 18839,
+          "start": 5,
+          "text": ""
+        },
+        {
+          "top": 0,
+          "start": 6,
+          "text": ""
+        }
+      ],
+      "gaps": [
+        18839,
+        -18839,
+        18839,
+        -18839,
+        18839,
+        -18839
+      ],
+      "statistics": {
+        "averageGap": 0,
+        "maxGap": 18839,
+        "minGap": -18839,
+        "maxVariance": 18839,
+        "minVariance": 18839,
+        "isConsistent": false
+      }
+    }
+  }
+]

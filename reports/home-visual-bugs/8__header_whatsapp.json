@@ -1,0 +1,27 @@
+{
+  "selector": ".header_whatsapp",
+  "differences": [
+    {
+      "category": "typography",
+      "property": "line-height",
+      "original": "normal",
+      "current": "27px",
+      "impact": "HIGH"
+    },
+    {
+      "category": "spacing",
+      "property": "line-height",
+      "original": "normal",
+      "current": "27px",
+      "impact": "HIGH"
+    },
+    {
+      "category": "layout",
+      "property": "display",
+      "original": "block",
+      "current": "flex",
+      "impact": "HIGH"
+    }
+  ],
+  "totalDifferences": 3
+}

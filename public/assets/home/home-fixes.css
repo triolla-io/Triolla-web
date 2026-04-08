@@ -2,6 +2,11 @@
    TYPOGRAPHY FIXES FOR HOME PAGE
    ======================================== */
 
+/* CRITICAL: Fix header max-width to match Live site (95% not 98%) */
+.headnewact {
+  max-width: 95% !important;
+}
+
 /* 1. Hero section - h1 and h2 headings */
 .homemaintopone h1 {
   font-family: 'SFProText' !important;

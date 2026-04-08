@@ -1,0 +1,25 @@
+{
+  "testCaseId": "home-desktop-en",
+  "timestamp": "2026-04-06T18:49:52.606Z",
+  "decision": "investigate",
+  "reason": "No decisive pattern found",
+  "priority": "low",
+  "summary": {
+    "total": 0,
+    "noise": 0,
+    "issues": 0,
+    "byType": {
+      "spacing_issue": 0,
+      "alignment_issue": 0,
+      "typography_issue": 0,
+      "sizing_issue": 0,
+      "investigate": 0
+    }
+  },
+  "nextSteps": [
+    "🔍 Manually inspect 0 ambiguous regions",
+    "📊 Review heatmap to visualize differences",
+    "📋 Compare with original WP screenshot visually"
+  ],
+  "regions": []
+}
