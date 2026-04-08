@@ -1,5 +1,5 @@
 {
-  "assetBase": "/assets/triolla-io-blog-maximize-the-potential-of-iot-with-user-experience-design-by-triolla-ux",
+  "assetBase": "/assets/blog-maximize-the-potential-of-iot-with-user-experience-design-by-triolla-ux",
   "bodyClass": "wp-singular post-template-default single single-post postid-4311 single-format-standard wp-theme-triolla",
   "dataRsssl": "1",
   "css": [
@@ -17,7 +17,6 @@
     "style-new.css_2af44128.css",
     "style.css_2af44128.css",
     "style.min.css_68b3cde9.css",
-    "style.min.css_edabec9e.css",
     "svgs-attachment.css_2af44128.css"
   ],
   "js": [

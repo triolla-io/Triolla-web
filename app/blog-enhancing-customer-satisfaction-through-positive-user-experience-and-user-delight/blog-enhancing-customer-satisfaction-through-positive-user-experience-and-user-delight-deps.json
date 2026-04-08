@@ -1,5 +1,5 @@
 {
-  "assetBase": "/assets/triolla-io-blog-enhancing-customer-satisfaction-through-positive-user-experience-and-user-delight",
+  "assetBase": "/assets/blog-enhancing-customer-satisfaction-through-positive-user-experience-and-user-delight",
   "bodyClass": "wp-singular post-template-default single single-post postid-791 single-format-standard wp-theme-triolla",
   "dataRsssl": "1",
   "css": [
@@ -29,7 +29,6 @@
     "style.css_2af44128_d1b553d5.css",
     "style.min.css_68b3cde9.css",
     "style.min.css_68b3cde9_d78f27f2.css",
-    "style.min.css_edabec9e.css",
     "style.min.css_edabec9e_50264762.css",
     "svgs-attachment.css_2af44128.css",
     "svgs-attachment.css_2af44128_7d93c52d.css"
@@ -48,7 +47,6 @@
     "dom-ready.min.js_5346137b.js",
     "dom-ready.min.js_5346137b_5d0edca3.js",
     "email-decode.min.js",
-    "email-decode.min_dafc2825.js",
     "gravityforms.min.js_13f93b15.js",
     "gsap.min.js_a1459148.js",
     "gsap.min.js_a1459148_7bfa21d2.js",
@@ -78,16 +76,13 @@
     "placeholders.jquery.min.js_13f93b15_633fb5d7.js",
     "scripts-theme.min.js_39b5a2d5.js",
     "svgs-inline-min.js",
-    "svgs-inline-min_64ffabe9.js",
     "utils.min.js_f287a8f0.js",
     "utils.min.js_f287a8f0_dedef7d9.js",
     "v8c78df7c7c0f484497ecbca7046644da1771523124516.js",
-    "v8c78df7c7c0f484497ecbca7046644da1771523124516_de44fecf.js",
     "vendor-theme.min.js_a3a18dac.js",
     "vendor-theme.min.js_a3a18dac_a0aa309d.js",
     "widget.js_a1459148.js",
     "wow.js_a1459148.js",
-    "wpr-beacon.min.js",
-    "wpr-beacon.min_2eba8b80.js"
+    "wpr-beacon.min.js"
   ]
 }

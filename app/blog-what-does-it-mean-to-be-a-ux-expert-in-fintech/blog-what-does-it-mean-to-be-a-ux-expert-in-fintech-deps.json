@@ -1,5 +1,5 @@
 {
-  "assetBase": "/assets/triolla-io-blog-what-does-it-mean-to-be-a-ux-expert-in-fintech",
+  "assetBase": "/assets/blog-what-does-it-mean-to-be-a-ux-expert-in-fintech",
   "bodyClass": "wp-singular post-template-default single single-post postid-4388 single-format-standard wp-theme-triolla",
   "dataRsssl": "1",
   "css": [
@@ -17,7 +17,6 @@
     "style-new.css_2af44128.css",
     "style.css_2af44128.css",
     "style.min.css_68b3cde9.css",
-    "style.min.css_edabec9e.css",
     "svgs-attachment.css_2af44128.css"
   ],
   "js": [

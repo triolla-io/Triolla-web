@@ -1,5 +1,5 @@
 {
-  "assetBase": "/assets/triolla-io-blog-custom-ux-ui-design-for-power-bi-tableau-qlik-sap-oracle-bi",
+  "assetBase": "/assets/blog-custom-ux-ui-design-for-power-bi-tableau-qlik-sap-oracle-bi",
   "bodyClass": "wp-singular post-template-default single single-post postid-669 single-format-standard wp-theme-triolla",
   "dataRsssl": "1",
   "css": [
@@ -31,7 +31,6 @@
     "style.css_2af44128_d1b553d5.css",
     "style.min.css_68b3cde9.css",
     "style.min.css_68b3cde9_d78f27f2.css",
-    "style.min.css_edabec9e.css",
     "style.min.css_edabec9e_50264762.css",
     "svgs-attachment.css_2af44128.css",
     "svgs-attachment.css_2af44128_7d93c52d.css"
@@ -54,7 +53,6 @@
     "dom-ready.min.js_5346137b.js",
     "dom-ready.min.js_5346137b_5d0edca3.js",
     "email-decode.min.js",
-    "email-decode.min_dafc2825.js",
     "gravityforms.min.js_13f93b15.js",
     "gravityforms.min.js_13f93b15_fac2529c.js",
     "gsap.min.js_a1459148.js",
@@ -92,18 +90,15 @@
     "scripts-theme.min.js_39b5a2d5.js",
     "scripts-theme.min.js_39b5a2d5_76a80d96.js",
     "svgs-inline-min.js",
-    "svgs-inline-min_64ffabe9.js",
     "utils.min.js_f287a8f0.js",
     "utils.min.js_f287a8f0_dedef7d9.js",
     "v8c78df7c7c0f484497ecbca7046644da1771523124516.js",
-    "v8c78df7c7c0f484497ecbca7046644da1771523124516_de44fecf.js",
     "vendor-theme.min.js_a3a18dac.js",
     "vendor-theme.min.js_a3a18dac_a0aa309d.js",
     "widget.js_a1459148.js",
     "widget.js_a1459148_cad6b94a.js",
     "wow.js_a1459148.js",
     "wow.js_a1459148_55d66804.js",
-    "wpr-beacon.min.js",
-    "wpr-beacon.min_2eba8b80.js"
+    "wpr-beacon.min.js"
   ]
 }
