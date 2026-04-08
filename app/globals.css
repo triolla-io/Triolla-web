@@ -238,6 +238,12 @@ body:not(:has([data-triolla-snapshot])) .headerticker .tickclose:hover { opacity
   transition: width 0.7s ease, top 0.3s ease;
   box-sizing: border-box;
 }
+/* Desktop: reduce vertical padding to match snapshot header */
+@media (min-width: 1200px) {
+  .site-header {
+    padding: 10px 20px;
+  }
+}
 /* Sticky — pill shrinks; tuck under top when scrolled (ticker is hidden via .headerticker.is-hidden) */
 .site-header.is-sticky {
   width: min(550px, calc(100% - 30px));
