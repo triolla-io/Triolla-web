@@ -12,8 +12,7 @@
 
 /* ===== HEADER PILL CONTAINER ===== */
 .siteHeader {
-  max-width: 1810px;
-  margin: 0 auto;
+  width: 100%;
 }
 
 /* ===== LOGO ===== */
