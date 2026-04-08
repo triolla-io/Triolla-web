@@ -179,9 +179,8 @@ export function HomeClient() {
           if (cancelled) return;
           disposeRevealRef.current?.();
           disposeRevealRef.current = mountTriollaSnapshotRevealStack(el, "technology");
-          // ✅ all.js already handles header scroll animation - don't double-animate
-          // disposeHeaderPillRef.current?.();
-          // disposeHeaderPillRef.current = mountTriollaHeaderPill(el);
+          disposeHeaderPillRef.current?.();
+          disposeHeaderPillRef.current = mountTriollaHeaderPill(el);
           disposeFaqRef.current?.();
           disposeFaqRef.current = mountTriollaFaqAccordion(el);
           stripJQueryMenutoggleClickHandlers(el);
