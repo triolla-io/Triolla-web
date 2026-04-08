@@ -4,7 +4,6 @@
   "dataRsssl": "1",
   "css": [
     "style.min.css_edabec9e.css",
-    "/assets/home/home-grid-base.css",
     "cms-navigation-base.css_7976b2e5.css",
     "cms-navigation.css_7976b2e5.css",
     "style.css_edabec9e.css",
@@ -20,7 +19,6 @@
   ],
   "js": [
     "jquery-3.6.0.min.js_edabec9e.js",
-    "/assets/_shared/eb5e45d752068adfb4185f39ea2978f6_jquery.jConveyorTicker.min.js_edabec9e.js",
     "owl.carousel.js_edabec9e.js",
     "TweenMax.min.js_edabec9e.js",
     "ScrollMagic.min.js_edabec9e.js",

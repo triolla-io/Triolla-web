@@ -8,6 +8,7 @@ export function BlogMedicalControlTowerClient({ lang = "en" }: TriollaLangProps)
   const deps: TriollaPortfolioSnapshotDeps = {
     assetBase: "/assets/blog-medical-control-tower",
     bodyClass: "wp-singular post-template-default single single-post postid-4700 single-format-standard wp-theme-triolla",
+    dataRsssl: "1",
     css: [],
     js: [],
   };

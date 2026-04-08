@@ -19,7 +19,8 @@
     "owl.carousel.css_edabec9e.css",
     "mlstyle.css_edabec9e.css",
     "rtl.css_edabec9e.css",
-    "ml-responsive.css_edabec9e.css"
+    "ml-responsive.css_edabec9e.css",
+    "/assets/home/home-fixes.css"
   ],
   "js": [
     "jquery-3.6.0.min.js_edabec9e.js",

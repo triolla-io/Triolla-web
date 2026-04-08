@@ -71,6 +71,8 @@ interface PortfolioPageTemplateProps {
    * into this container is cleared on the next re-render when phase becomes "ready".
    */
   triollaPortfolioChromeHtml?: string;
+  /** WordPress body classes from deps.json — same role as `HomeClient` root `bodyClass`. */
+  bodyClass?: string;
 }
 
 function assignRef<T>(r: Ref<T> | undefined, el: T | null): void {
@@ -82,7 +84,10 @@ function assignRef<T>(r: Ref<T> | undefined, el: T | null): void {
 export const PortfolioPageTemplate = forwardRef<
   HTMLDivElement,
   PortfolioPageTemplateProps
->(function PortfolioPageTemplate({ data, triollaPortfolioChromeHtml = "" }, ref) {
+>(function PortfolioPageTemplate(
+  { data, triollaPortfolioChromeHtml = "", bodyClass = "" },
+  ref,
+) {
   const localRef = useRef<HTMLDivElement | null>(null);
 
   const setMainContainerRef = (el: HTMLDivElement | null) => {
@@ -113,14 +118,16 @@ export const PortfolioPageTemplate = forwardRef<
   }, [data.companyTicker]);
 
   const isRtl = (data.dir ?? "ltr") === "rtl";
+  const innerMainClass = isRtl ? "main_container rtl" : "main_container";
+  const outerClass = bodyClass.trim();
 
   return (
     <div
-      ref={setMainContainerRef}
       data-triolla-snapshot="1"
-      className={isRtl ? "main_container rtl" : "main_container"}
+      className={outerClass || undefined}
       dir={data.dir ?? "ltr"}
     >
+      <div ref={setMainContainerRef} className={innerMainClass}>
       {triollaPortfolioChromeHtml ? (
         <div
           className="triolla-portfolio-chrome-root"
@@ -201,6 +208,7 @@ export const PortfolioPageTemplate = forwardRef<
         <PortfolioWhy {...data.why} />
         <PortfolioGlobal {...data.global} />
       </main>
+      </div>
     </div>
   );
 });

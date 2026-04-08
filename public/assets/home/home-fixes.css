@@ -33,13 +33,13 @@
   max-width: 95% !important;
 }
 
-/* Top navigation pills — theme .header_book a already uses SFProText; keep explicit for cascade */
-.header_contact a,
-.header_contact a span,
-.header_book a,
-.header_book a span,
-.header_whatsapp a,
-.header_whatsapp a span {
+/* Top navigation pills — scoped so portfolio + home snapshots match; no app-level leakage */
+[data-triolla-snapshot] .header_contact a,
+[data-triolla-snapshot] .header_contact a span,
+[data-triolla-snapshot] .header_book a,
+[data-triolla-snapshot] .header_book a span,
+[data-triolla-snapshot] .header_whatsapp a,
+[data-triolla-snapshot] .header_whatsapp a span {
   font-family: 'SFProText' !important;
   font-weight: 500 !important;
 }
@@ -89,12 +89,12 @@
 }
 
 /* Preserve specific themed fonts */
-.technmtxt,
-.techthretop p,
-.techthretop h4 {
+[data-triolla-snapshot] .technmtxt,
+[data-triolla-snapshot] .techthretop p,
+[data-triolla-snapshot] .techthretop h4 {
   font-family: 'SF Compact Display' !important;
 }
 
-.circletxt {
+[data-triolla-snapshot] .circletxt {
   font-family: 'SFProText' !important;
 }

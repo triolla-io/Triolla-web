@@ -10,14 +10,12 @@
     "responsive.css",
     "animate.css_edabec9e.css",
     "animation.css_2af44128.css",
-    "/assets/_shared/jquery.jConveyorTicker.min.css_edabec9e.css",
     "mlstyle.css_2af44128.css",
     "ml-responsive.css_2af44128.css",
     "fonts.css"
   ],
   "js": [
     "jquery-3.6.0.min.js_edabec9e.js",
-    "/assets/_shared/eb5e45d752068adfb4185f39ea2978f6_jquery.jConveyorTicker.min.js_edabec9e.js",
     "metaview.js_edabec9e.js",
     "gsap.min.js",
     "ScrollTrigger.min.js",

@@ -41,6 +41,7 @@ interface Deps {
   css: string[];
   js: string[];
   assetBase: string;
+  bodyClass?: string;
 }
 
 function normalizeAssetBase(assetBase: string): string {
@@ -170,12 +171,14 @@ export function PortfolioPageWithCSS({
   const disposeRevealRef = useRef<(() => void) | null>(null);
   const [phase, setPhase] = useState<"loading" | "ready" | "error">("loading");
   const [triollaChromeHtml, setTriollaChromeHtml] = useState("");
+  const [snapshotBodyClass, setSnapshotBodyClass] = useState("");
 
   useEffect(() => {
     let cancelled = false;
     const injectedLinks: HTMLLinkElement[] = [];
     const injectedScripts: HTMLScriptElement[] = [];
     setTriollaChromeHtml("");
+    setSnapshotBodyClass("");
     setPhase("loading");
 
     const loadAssets = async () => {
@@ -184,6 +187,8 @@ export function PortfolioPageWithCSS({
         const response = await fetch(depsPath, { cache: "no-store" });
         const deps: Deps = await response.json();
         if (cancelled) return;
+
+        setSnapshotBodyClass(deps.bodyClass?.trim() ?? "");
 
         const assetBaseNorm = normalizeAssetBase(deps.assetBase);
 
@@ -367,6 +372,7 @@ export function PortfolioPageWithCSS({
           ref={mainContainerRef}
           data={data}
           triollaPortfolioChromeHtml={triollaChromeHtml}
+          bodyClass={snapshotBodyClass}
         />
       </div>
     </>
