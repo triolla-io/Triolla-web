@@ -802,6 +802,13 @@ header.site-header + .hmenumob .hmenumobclose button {
   background: #25D366; /* WhatsApp green */
 }
 
+/* Mobile social icons need white color inside buttons */
+.site-header .hmobbutrsocl a svg,
+.site-header .hmobbutrsocl a path {
+  color: #fff !important;
+  fill: #fff !important;
+}
+
 /* WP mobile menu — typography / spacing (max-width:1023 = hamburger) */
 @media (max-width: 1023px) {
   .hmobmbuts {
