@@ -1,20 +1,18 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import type { RunStatus } from "../agents/deployment-agent/statusStore";
-
-const POLL_INTERVAL_MS = 5_000;
-const TIMEOUT_MS = 6 * 60 * 1_000;
 
 type PollerResult = {
   runStatus: RunStatus | null;
   timedOut: boolean;
 };
 
+const TIMEOUT_MS = 6 * 60 * 1_000;
+
 export function useDeploymentPoller(runId: string | null): PollerResult {
   const [runStatus, setRunStatus] = useState<RunStatus | null>(null);
   const [timedOut, setTimedOut]   = useState(false);
-  const startedAt = useRef<number>(0);
 
   useEffect(() => {
     if (!runId) {
@@ -23,28 +21,30 @@ export function useDeploymentPoller(runId: string | null): PollerResult {
       return;
     }
 
-    startedAt.current = Date.now();
+    const source = new EventSource(`/api/admin/publish/stream?id=${runId}`);
+    const timeout = setTimeout(() => { source.close(); setTimedOut(true); }, TIMEOUT_MS);
 
-    async function poll(intervalRef?: ReturnType<typeof setInterval>) {
-      if (Date.now() - startedAt.current >= TIMEOUT_MS) {
-        if (intervalRef) clearInterval(intervalRef);
-        setTimedOut(true);
-        return;
+    source.onmessage = (e) => {
+      const event = JSON.parse(e.data) as { type: string } & Record<string, unknown>;
+      if (event.type === "phase") {
+        setRunStatus({ state: "running", phase: event.phase as string, updatedAt: event.updatedAt as string });
+      } else if (event.type === "done") {
+        setRunStatus({ state: "done", result: event.result as (RunStatus & { state: "done" })["result"], updatedAt: event.updatedAt as string });
+        source.close();
+        clearTimeout(timeout);
       }
-      try {
-        const res = await fetch(`/api/admin/publish/status?id=${runId}`);
-        if (!res.ok) return; // transient — keep polling
-        const data: RunStatus = await res.json();
-        setRunStatus(data);
-        if (data.state === "done" && intervalRef) clearInterval(intervalRef);
-      } catch {
-        // network error — keep polling until timeout
-      }
-    }
+    };
 
-    poll();
-    const interval = setInterval(() => poll(interval), POLL_INTERVAL_MS);
-    return () => clearInterval(interval);
+    source.onerror = () => {
+      source.close();
+      clearTimeout(timeout);
+      setTimedOut(true);
+    };
+
+    return () => {
+      source.close();
+      clearTimeout(timeout);
+    };
   }, [runId]);
 
   return { runStatus, timedOut };

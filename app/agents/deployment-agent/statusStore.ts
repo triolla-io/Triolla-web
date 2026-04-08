@@ -55,6 +55,10 @@ export function getRunStatus(runId: string): RunStatus | undefined {
   return store.get(runId);
 }
 
+export function getRunLogs(runId: string): AgentLog[] {
+  return logStore.get(runId) ?? [];
+}
+
 export function getAllRuns(): Array<{ runId: string; status: RunStatus; logs: AgentLog[] }> {
   return Array.from(store.entries()).map(([runId, status]) => ({
     runId,

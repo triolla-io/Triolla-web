@@ -1,5 +1,6 @@
 import { runAgent, type AgentOptions } from "./agent";
 import { setPhase, setDone, appendLog } from "./statusStore";
+import { createEmitter, deleteEmitter } from "./emitterStore";
 import type { AgentLog } from "../utils/tools";
 
 function printLog(entry: AgentLog): void {
@@ -13,20 +14,38 @@ export function startDeployment(
   commitMessage: string,
   options: Omit<AgentOptions, "onPhaseChange" | "onLog" | "waitForDeploy"> = {}
 ): string {
-  const runId = crypto.randomUUID();
+  const runId  = crypto.randomUUID();
+  const emitter = createEmitter(runId);
+  const now    = new Date().toISOString();
+
   setPhase(runId, "preflight");
+  emitter.emit("event", { type: "phase", phase: "preflight", updatedAt: now });
 
   runAgent(commitMessage, {
     ...options,
     waitForDeploy: true,
-    onPhaseChange: (phase) => setPhase(runId, phase),
+    onPhaseChange: (phase) => {
+      const updatedAt = new Date().toISOString();
+      setPhase(runId, phase);
+      emitter.emit("event", { type: "phase", phase, updatedAt });
+    },
     onLog: (entry) => {
       appendLog(runId, entry);
       printLog(entry);
+      emitter.emit("event", { type: "log", ...entry });
     },
   })
-    .then(({ result }) => setDone(runId, result))
-    .catch((err)       => setDone(runId, { ok: false, reason: "failed", error: String(err) }));
+    .then(({ result }) => {
+      const updatedAt = new Date().toISOString();
+      setDone(runId, result);
+      emitter.emit("event", { type: "done", result, updatedAt });
+    })
+    .catch((err) => {
+      const result = { ok: false, reason: "failed", error: String(err) } as const;
+      setDone(runId, result);
+      emitter.emit("event", { type: "done", result, updatedAt: new Date().toISOString() });
+    })
+    .finally(() => deleteEmitter(runId));
 
   return runId;
 }

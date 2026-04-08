@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { useDeploymentPoller } from "../hooks/useDeploymentPoller";
+import { useRunIdPersistence } from "../hooks/useRunIdPersistence";
 
 const PHASE_LABELS: Record<string, string> = {
   preflight:       "Checking services…",
@@ -30,7 +31,7 @@ type Props = {
 
 export function PublishButton({ initialVersion, initialUpdatedAt }: Props) {
   const [isStarting, setIsStarting] = useState(false);
-  const [runId, setRunId]           = useState<string | null>(null);
+  const { runId, setRunId, clearRunId } = useRunIdPersistence();
   const [content, setContent]       = useState({ version: initialVersion, updatedAt: initialUpdatedAt });
   const [startError, setStartError] = useState<string | null>(null);
 
@@ -47,7 +48,7 @@ export function PublishButton({ initialVersion, initialUpdatedAt }: Props) {
   // Reset after terminal state (not on timeout — user must retry manually)
   useEffect(() => {
     if (isDone && runId) {
-      const t = setTimeout(() => { setRunId(null); setStartError(null); }, 4000);
+      const t = setTimeout(() => { clearRunId(); setStartError(null); }, 4000);
       return () => clearTimeout(t);
     }
   }, [isDone, runId]);
