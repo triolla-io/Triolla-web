@@ -1,5 +1,5 @@
 import { type Tool, fetchWithTimeout, isRetryableStatus } from "../utils/tools";
-import type { GitHubConfig } from "./config";
+import type { GitProviderConfig } from "./config";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -29,7 +29,7 @@ export type RevertCommitInput = {
 
 // ─── Factory ──────────────────────────────────────────────────────────────────
 
-export function createGitHubTools(cfg: GitHubConfig) {
+export function createGitProviderTools(cfg: GitProviderConfig) {
   const headers = (): HeadersInit => ({
     Authorization: `Bearer ${cfg.token}`,
     "Content-Type": "application/json",
@@ -40,22 +40,22 @@ export function createGitHubTools(cfg: GitHubConfig) {
   const base = `https://api.github.com/repos/${cfg.repo}`;
 
   const checkHealth: Tool<void, void> = {
-    name: "github_health",
+    name: "git_provider_health",
     maxAttempts: 2,
     async execute() {
       try {
         const res = await fetchWithTimeout(base, { headers: headers() });
-        if (!res.ok) return { ok: false, retryable: isRetryableStatus(res.status), error: `GitHub unreachable: ${res.status}` };
+        if (!res.ok) return { ok: false, retryable: isRetryableStatus(res.status), error: `Git provider unreachable: ${res.status}` };
         return { ok: true, data: undefined };
       } catch (e) {
-        return { ok: false, retryable: true, error: `GitHub unreachable: ${String(e)}` };
+        return { ok: false, retryable: true, error: `Git provider unreachable: ${String(e)}` };
       }
     },
   };
 
   function makeFetchRemoteFile(filePath: string): Tool<void, RemoteFile> {
     return {
-      name: "github_fetch_remote",
+      name: "git_provider_fetch_file",
       maxAttempts: 3,
       async execute() {
         try {
@@ -63,7 +63,7 @@ export function createGitHubTools(cfg: GitHubConfig) {
             `${base}/contents/${filePath}?ref=${cfg.branch}`,
             { headers: headers() }
           );
-          if (!res.ok) return { ok: false, retryable: isRetryableStatus(res.status), error: `GitHub GET ${res.status} ${res.statusText}` };
+          if (!res.ok) return { ok: false, retryable: isRetryableStatus(res.status), error: `Git provider GET ${res.status} ${res.statusText}` };
           const json = await res.json();
           const raw = Buffer.from(json.content, "base64").toString("utf8");
           return { ok: true, data: { sha: json.sha, content: JSON.parse(raw), raw } };
@@ -75,7 +75,7 @@ export function createGitHubTools(cfg: GitHubConfig) {
   }
 
   const commitFile: Tool<CommitFileInput, CommitFileOutput> = {
-    name: "github_commit_file",
+    name: "git_provider_commit_file",
     maxAttempts: 2,
     async execute({ filePath, content, remoteFileSha, message }) {
       try {
@@ -91,7 +91,7 @@ export function createGitHubTools(cfg: GitHubConfig) {
         });
         if (!res.ok) {
           const err = await res.json().catch(() => ({}));
-          return { ok: false, retryable: isRetryableStatus(res.status), error: `GitHub PUT ${res.status}: ${JSON.stringify(err)}` };
+          return { ok: false, retryable: isRetryableStatus(res.status), error: `Git provider PUT ${res.status}: ${JSON.stringify(err)}` };
         }
         const data = await res.json();
         return {
@@ -108,7 +108,7 @@ export function createGitHubTools(cfg: GitHubConfig) {
   };
 
   const revertCommit: Tool<RevertCommitInput, void> = {
-    name: "github_revert_commit",
+    name: "git_provider_revert_file",
     maxAttempts: 3,
     async execute({ filePath, originalContent, currentFileSha }) {
       try {
@@ -122,7 +122,7 @@ export function createGitHubTools(cfg: GitHubConfig) {
             branch: cfg.branch,
           }),
         });
-        if (!res.ok) return { ok: false, retryable: isRetryableStatus(res.status), error: `GitHub revert ${res.status}` };
+        if (!res.ok) return { ok: false, retryable: isRetryableStatus(res.status), error: `Git provider revert ${res.status}` };
         return { ok: true, data: undefined };
       } catch (e) {
         return { ok: false, retryable: true, error: String(e) };

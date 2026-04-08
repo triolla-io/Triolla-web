@@ -21,14 +21,16 @@ export function useDeploymentPoller(runId: string | null): PollerResult {
       return;
     }
 
-    const source = new EventSource(`/api/admin/publish/stream?id=${runId}`);
+    const source  = new EventSource(`/api/admin/publish/stream?id=${runId}`);
     const timeout = setTimeout(() => { source.close(); setTimedOut(true); }, TIMEOUT_MS);
+    const done    = { received: false };
 
     source.onmessage = (e) => {
       const event = JSON.parse(e.data) as { type: string } & Record<string, unknown>;
       if (event.type === "phase") {
         setRunStatus({ state: "running", phase: event.phase as string, updatedAt: event.updatedAt as string });
       } else if (event.type === "done") {
+        done.received = true;
         setRunStatus({ state: "done", result: event.result as (RunStatus & { state: "done" })["result"], updatedAt: event.updatedAt as string });
         source.close();
         clearTimeout(timeout);
@@ -38,7 +40,7 @@ export function useDeploymentPoller(runId: string | null): PollerResult {
     source.onerror = () => {
       source.close();
       clearTimeout(timeout);
-      setTimedOut(true);
+      if (!done.received) setTimedOut(true); // ignore close-after-done
     };
 
     return () => {

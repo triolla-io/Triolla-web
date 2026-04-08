@@ -1,4 +1,4 @@
-import { runAgent, type AgentOptions } from "./agent";
+import { runAgent, type AgentOptions } from "./deploymentAgent";
 import { setPhase, setDone, appendLog } from "./statusStore";
 import { createEmitter, deleteEmitter } from "./emitterStore";
 import type { AgentLog } from "../utils/tools";
