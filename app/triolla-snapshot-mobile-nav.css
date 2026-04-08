@@ -124,8 +124,20 @@
     position: relative !important;
     width: 100% !important;
     min-width: 0 !important;
-    padding: 0 12px !important;
+    /* Theme already pads `.header` (e.g. 13px 19px 11px 16px @ ≤1023px); extra horizontal
+       padding here doubled the bar inset and looked like “wrong padding” vs triolla.io. */
+    padding: 0 !important;
     box-sizing: border-box !important;
+  }
+
+  /* Full-bleed yellow mobile bar; override mlstyle `.headnewact{max-width:95%}` and any stray !important padding. */
+  [data-triolla-snapshot] .header.headnewact {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box !important;
+    padding: 13px 16px 11px 16px !important;
   }
 
   [data-triolla-snapshot] .header_menu {

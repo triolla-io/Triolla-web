@@ -28,8 +28,8 @@
   bottom: 0 !important;
 }
 
-/* CRITICAL: Fix header max-width to match Live site (95% not 98%) */
-.headnewact {
+/* Home-only: pill header max-width (was unscoped and leaked onto /technology & other snapshots). */
+[data-triolla-snapshot].home .headnewact {
   max-width: 95% !important;
 }
 

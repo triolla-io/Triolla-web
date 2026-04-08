@@ -4,7 +4,6 @@
   "dataRsssl": "1",
   "css": [
     "style.css",
-    "svgs-attachment.css",
     "cms-navigation-base.css",
     "cms-navigation.css",
     "style-new.css",
