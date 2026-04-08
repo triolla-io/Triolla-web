@@ -1355,12 +1355,11 @@ section.home-hero { background: #FED125; }
   width: 30%;
   text-align: center;
 }
-.winner-boxes .wbox-title {
+.wbox-title {
   font-size: 30px;
   line-height: 1.2;
   font-weight: 590;
   margin-top: 30px;
-  white-space: pre-line;
 }
 .wbox-img img {
   display: inline-block;
