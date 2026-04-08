@@ -3,8 +3,8 @@
 import { useEffect, useRef, useState } from "react";
 import type { RunStatus } from "../agents/deployment-agent/statusStore";
 
-const POLL_INTERVAL_MS = 2_000;
-const TIMEOUT_MS = 10 * 60 * 1_000;
+const POLL_INTERVAL_MS = 5_000;
+const TIMEOUT_MS = 6 * 60 * 1_000;
 
 type PollerResult = {
   runStatus: RunStatus | null;
@@ -32,7 +32,7 @@ export function useDeploymentPoller(runId: string | null): PollerResult {
         return;
       }
       try {
-        const res = await fetch(`/api/publish/status?id=${runId}`);
+        const res = await fetch(`/api/admin/publish/status?id=${runId}`);
         if (!res.ok) return; // transient — keep polling
         const data: RunStatus = await res.json();
         setRunStatus(data);

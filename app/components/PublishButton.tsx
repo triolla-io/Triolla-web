@@ -3,6 +3,18 @@
 import { useEffect, useRef, useState } from "react";
 import { useDeploymentPoller } from "../hooks/useDeploymentPoller";
 
+const PHASE_LABELS: Record<string, string> = {
+  preflight:       "Checking services…",
+  checking_guard:  "Checking services…",
+  reading_content: "Validating content…",
+  validating:      "Validating content…",
+  committing:      "Deploying…",
+  triggering:      "Deploying…",
+  polling:         "Deploying…",
+  verifying:       "Verifying site…",
+  rolling_back:    "Rolling back…",
+};
+
 const COLORS = {
   idle:     "#6366f1",
   running:  "#f59e0b",
@@ -32,13 +44,13 @@ export function PublishButton({ initialVersion, initialUpdatedAt }: Props) {
   const isMuted    = isDone && doneResult?.ok === false &&
     (doneResult.reason === "nothing_to_commit" || doneResult.reason === "already_running");
 
-  // Reset after terminal state
+  // Reset after terminal state (not on timeout — user must retry manually)
   useEffect(() => {
-    if ((isDone || timedOut) && runId) {
+    if (isDone && runId) {
       const t = setTimeout(() => { setRunId(null); setStartError(null); }, 4000);
       return () => clearTimeout(t);
     }
-  }, [isDone, timedOut, runId]);
+  }, [isDone, runId]);
 
   // Update version display on success
   useEffect(() => {
@@ -51,7 +63,7 @@ export function PublishButton({ initialVersion, initialUpdatedAt }: Props) {
     setIsStarting(true);
     setStartError(null);
     try {
-      const res = await fetch("/api/publish", {
+      const res = await fetch("/api/admin/publish", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: `chore: manual publish - ${new Date().toISOString()}` }),
@@ -73,7 +85,7 @@ export function PublishButton({ initialVersion, initialUpdatedAt }: Props) {
     isFailed                                                        ? "Failed" :
     isMuted && doneResult?.reason === "nothing_to_commit"           ? "Nothing to commit" :
     isMuted && doneResult?.reason === "already_running"             ? "Already deploying" :
-    isRunning ? (runStatus?.state === "running" ? runStatus.message : "Starting…") :
+    isRunning ? (runStatus?.state === "running" ? (PHASE_LABELS[runStatus.phase] ?? runStatus.phase) : "Starting…") :
     isStarting                                                      ? "Starting…" :
     startError                                                      ? "Failed" :
     "Publish";

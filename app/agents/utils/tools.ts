@@ -33,14 +33,17 @@ function sleep(ms: number) {
 export async function runWithRetry<TInput, TOutput>(
   tool: Tool<TInput, TOutput>,
   input: TInput,
-  logs: AgentLog[]
+  logs: AgentLog[],
+  onLog?: (entry: AgentLog) => void
 ): Promise<ToolResult<TOutput>> {
   for (let attempt = 1; attempt <= tool.maxAttempts; attempt++) {
     const result = await tool.execute(input);
     if (result.ok) return result;
     if (!result.retryable || attempt === tool.maxAttempts) return result;
     const backoff = Math.min(500 * 2 ** (attempt - 1), 8_000);
-    logs.push({ level: "warn", tool: tool.name, message: `attempt ${attempt}/${tool.maxAttempts} failed, retrying in ${backoff}ms — ${result.error}` });
+    const entry: AgentLog = { level: "warn", tool: tool.name, message: `attempt ${attempt}/${tool.maxAttempts} failed, retrying in ${backoff}ms — ${result.error}` };
+    logs.push(entry);
+    onLog?.(entry);
     await sleep(backoff);
   }
   return { ok: false, retryable: false, error: "max attempts exceeded" };
@@ -54,11 +57,15 @@ export type AgentLog = {
   message: string;
 };
 
-export function makeLogger(logs: AgentLog[]) {
+export function makeLogger(logs: AgentLog[], onLog?: (entry: AgentLog) => void) {
+  function push(entry: AgentLog) {
+    logs.push(entry);
+    onLog?.(entry);
+  }
   return {
-    info:  (tool: string, message: string) => logs.push({ level: "info",  tool, message }),
-    warn:  (tool: string, message: string) => logs.push({ level: "warn",  tool, message }),
-    error: (tool: string, message: string) => logs.push({ level: "error", tool, message }),
+    info:  (tool: string, message: string) => push({ level: "info",  tool, message }),
+    warn:  (tool: string, message: string) => push({ level: "warn",  tool, message }),
+    error: (tool: string, message: string) => push({ level: "error", tool, message }),
   };
 }
 

@@ -37,6 +37,7 @@ export type AgentOptions = {
   siteUrl?: string;        // if provided, HTTP-verify the site after a successful deploy
   dryRun?: boolean;        // simulate the full pipeline without committing or deploying
   onPhaseChange?: (phase: string) => void;
+  onLog?: (entry: AgentLog) => void;
 };
 
 type Tools = {
@@ -48,13 +49,14 @@ type Tools = {
 
 async function step(state: AgentState, commitMessage: string, logs: AgentLog[], options: AgentOptions, tools: Tools): Promise<AgentState> {
   const { gh, cl } = tools;
-  const log = makeLogger(logs);
+  const { onLog } = options;
+  const log = makeLogger(logs, onLog);
 
   switch (state.phase) {
     case "preflight": {
       const [github, coolify, receipt] = await Promise.all([
-        runWithRetry(gh.checkHealth, undefined, logs),
-        runWithRetry(cl.checkHealth, undefined, logs),
+        runWithRetry(gh.checkHealth, undefined, logs, onLog),
+        runWithRetry(cl.checkHealth, undefined, logs, onLog),
         readReceipt(),
       ]);
       if (!github.ok) return { phase: "done", result: { ok: false, reason: "failed", error: github.error } };
@@ -65,7 +67,7 @@ async function step(state: AgentState, commitMessage: string, logs: AgentLog[], 
     }
 
     case "checking_guard": {
-      const result = await runWithRetry(cl.checkDeploymentRunning, undefined, logs);
+      const result = await runWithRetry(cl.checkDeploymentRunning, undefined, logs, onLog);
       if (!result.ok) return { phase: "done", result: { ok: false, reason: "failed", error: result.error } };
       if (result.data) {
         log.info("coolify_check_running", "deployment already running");
@@ -83,7 +85,7 @@ async function step(state: AgentState, commitMessage: string, logs: AgentLog[], 
     }
 
     case "validating": {
-      const result = await runWithRetry(validateContentTool, state.local.parsed, logs);
+      const result = await runWithRetry(validateContentTool, state.local.parsed, logs, onLog);
       if (!result.ok) {
         log.error("validate_content", result.error);
         return { phase: "done", result: { ok: false, reason: "security_violation", error: result.error } };
@@ -97,15 +99,15 @@ async function step(state: AgentState, commitMessage: string, logs: AgentLog[], 
 
       // Fetch remote to get SHA + diff
       const fetchTool = gh.makeFetchRemoteFile(PATHS.contentGithub);
-      const fetchResult = await runWithRetry(fetchTool, undefined, logs);
+      const fetchResult = await runWithRetry(fetchTool, undefined, logs, onLog);
       if (!fetchResult.ok) return { phase: "done", result: { ok: false, reason: "failed", error: fetchResult.error } };
 
       // Diff — bail out if nothing actually changed
       const diffLines = diffObjects(fetchResult.data.content, state.local.parsed);
-      if (diffLines.length === 0) {
-        log.info("content_diff", "no content changes, skipping commit");
-        return { phase: "done", result: { ok: false, reason: "nothing_to_commit" } };
-      }
+      // if (diffLines.length === 0) {
+      //   log.info("content_diff", "no content changes, skipping commit");
+      //   return { phase: "done", result: { ok: false, reason: "nothing_to_commit" } };
+      // }
       for (const line of formatDiff(diffLines)) log.info("content_diff", line);
 
       // Bump metadata
@@ -125,7 +127,7 @@ async function step(state: AgentState, commitMessage: string, logs: AgentLog[], 
         content: updatedRaw,
         remoteFileSha: fetchResult.data.sha,
         message: commitMessage,
-      }, logs);
+      }, logs, onLog);
 
       if (!commitResult.ok) {
         await writeFile(PATHS.contentLocal, state.local.raw); // restore before any retry
@@ -146,7 +148,7 @@ async function step(state: AgentState, commitMessage: string, logs: AgentLog[], 
     }
 
     case "triggering": {
-      const result = await runWithRetry(cl.triggerDeploy, undefined, logs);
+      const result = await runWithRetry(cl.triggerDeploy, undefined, logs, onLog);
       if (!result.ok) {
         log.error("coolify_trigger_deploy", result.error);
         return { phase: "rolling_back", commit: state.commit, reason: result.error };
@@ -176,9 +178,7 @@ async function step(state: AgentState, commitMessage: string, logs: AgentLog[], 
     }
 
     case "polling": {
-      const pollLogs: string[] = [];
-      const finalStatus = await cl.pollUntilDone(state.deploymentId, pollLogs);
-      for (const msg of pollLogs) log.info("polling", msg);
+      const finalStatus = await cl.pollUntilDone(state.deploymentId, (msg) => log.info("polling", msg));
       if (finalStatus === "finished") {
         if (options.siteUrl) {
           return { phase: "verifying", commit: state.commit, deploymentId: state.deploymentId };
@@ -226,7 +226,7 @@ async function step(state: AgentState, commitMessage: string, logs: AgentLog[], 
         filePath: PATHS.contentGithub,
         originalContent: state.commit.originalRaw,
         currentFileSha:  state.commit.fileSha,
-      }, logs);
+      }, logs, onLog);
       if (!result.ok) log.error("github_revert_commit", `rollback failed: ${result.error}`);
       else {
         await writeFile(PATHS.contentLocal, state.commit.originalRaw);

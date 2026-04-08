@@ -77,15 +77,15 @@ export function createCoolifyTools(cfg: CoolifyConfig) {
 
   async function pollUntilDone(
     deploymentId: string,
-    logs: string[],
+    onLog: (msg: string) => void,
     options: { intervalMs?: number; timeoutMs?: number } = {}
   ): Promise<CoolifyDeploymentStatus> {
     const { intervalMs = 5_000, timeoutMs = 10 * 60 * 1_000 } = options;
     const start = Date.now();
     while (true) {
-      if (Date.now() - start > timeoutMs) { logs.push("Timed out"); return "error"; }
+      if (Date.now() - start > timeoutMs) { onLog("Timed out"); return "error"; }
       const status = await getDeploymentStatus(deploymentId);
-      logs.push(`Status: ${status}`);
+      onLog(`Status: ${status}`);
       if (TERMINAL_STATUSES.has(status)) return status;
       await new Promise<void>((r) => setTimeout(r, intervalMs));
     }

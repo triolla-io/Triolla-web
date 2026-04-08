@@ -1,8 +1,8 @@
 {
-  "deploymentId": "h5njsxof9p1xcxznfg79lvdl",
-  "commitSha": "655077514f5a9f7f5adf42e5d1762f01ccf48a95",
-  "version": 20,
-  "deployedAt": "2026-04-07T15:32:44.616Z",
-  "commitMessage": "chore: manual publish - 2026-04-07T15:32:42.313Z",
+  "deploymentId": "k87xhco2bj4jb1leiloh3ql0",
+  "commitSha": "1b7cdabdabe86e1017adb06cac25838860b19e70",
+  "version": 25,
+  "deployedAt": "2026-04-08T11:50:43.211Z",
+  "commitMessage": "chore: manual publish - 2026-04-08T11:50:41.258Z",
   "status": "triggered"
 }
