@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { useDeploymentPoller } from "../hooks/useDeploymentPoller";
+import { useDeploymentStream } from "../hooks/useDeploymentStream";
 import { useRunIdPersistence } from "../hooks/useRunIdPersistence";
 
 const PHASE_LABELS: Record<string, string> = {
@@ -35,7 +35,7 @@ export function PublishButton({ initialVersion, initialUpdatedAt }: Props) {
   const [content, setContent]       = useState({ version: initialVersion, updatedAt: initialUpdatedAt });
   const [startError, setStartError] = useState<string | null>(null);
 
-  const { runStatus, timedOut } = useDeploymentPoller(runId);
+  const { runStatus, timedOut } = useDeploymentStream(runId);
 
   const isRunning  = runId !== null && !timedOut && runStatus?.state !== "done";
   const isDone     = runStatus?.state === "done";

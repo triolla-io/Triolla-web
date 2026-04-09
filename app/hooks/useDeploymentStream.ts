@@ -3,14 +3,14 @@
 import { useEffect, useState } from "react";
 import type { RunStatus } from "../agents/deployment-agent/statusStore";
 
-type PollerResult = {
+type StreamResult = {
   runStatus: RunStatus | null;
   timedOut: boolean;
 };
 
 const TIMEOUT_MS = 6 * 60 * 1_000;
 
-export function useDeploymentPoller(runId: string | null): PollerResult {
+export function useDeploymentStream(runId: string | null): StreamResult {
   const [runStatus, setRunStatus] = useState<RunStatus | null>(null);
   const [timedOut, setTimedOut]   = useState(false);
 
