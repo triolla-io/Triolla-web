@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import { JsonLd } from "./components/JsonLd";
 import { organizationJsonLd, websiteJsonLd } from "./lib/structured-data";
 import { Geist, Geist_Mono } from "next/font/google";
-import "../src/app/globals.css";
-import "../src/app/triolla-snapshot-mobile-nav.css";
+import "./globals.css";
+import "./triolla-snapshot-mobile-nav.css";
+import "../public/assets/_shared/fonts/fonts.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -39,14 +40,14 @@ export default function RootLayout({
         {/* Hebrew UI fonts (globals.css @font-face); Latin UI uses next/font Geist above. */}
         <link
           rel="preload"
-          href="/assets/_fonts/AlmoniMLv5AAA-Regular.woff2"
+          href="/assets/_shared/fonts/AlmoniMLv5AAA-Regular.woff2"
           as="font"
           type="font/woff2"
           crossOrigin="anonymous"
         />
         <link
           rel="preload"
-          href="/assets/_fonts/AlmoniMLv5AAA-Bold.woff2"
+          href="/assets/_shared/fonts/AlmoniMLv5AAA-Bold.woff2"
           as="font"
           type="font/woff2"
           crossOrigin="anonymous"

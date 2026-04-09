@@ -1,0 +1,438 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]:
+        - link [ref=e5] [cursor=pointer]:
+          - /url: javascript:void(0);
+        - list [ref=e6]:
+          - listitem [ref=e7]: פיטנגו UX היא עכשיו טריאולה! שלום וברוכים הבאים
+      - generic [ref=e10]:
+        - link "Triolla" [ref=e12] [cursor=pointer]:
+          - /url: /he
+          - img "Triolla" [ref=e14]
+        - list [ref=e17]:
+          - listitem [ref=e18]:
+            - generic [ref=e19] [cursor=pointer]: פורטפוליו
+            - list:
+              - listitem:
+                - link "אבטחת סייבר":
+                  - /url: /he/cyber-security
+              - listitem:
+                - link "רפואה ובריאות":
+                  - /url: /he/medical-healthcare
+              - listitem:
+                - link "פינטק ופיננסים":
+                  - /url: /he/fintech-finance
+              - listitem:
+                - link "גיימינג":
+                  - /url: /he/gaming
+              - listitem:
+                - link "אגריטק":
+                  - /url: /he/agritech
+              - listitem:
+                - link "B2C":
+                  - /url: /he/b2c
+              - listitem:
+                - link "מכשירים ו-IoT":
+                  - /url: /he/device-iot
+              - listitem:
+                - link "סטארט-אפים וטכנולוגיה":
+                  - /url: /he/startups-tech
+              - listitem:
+                - link "אפליקציות מובייל":
+                  - /url: /he/mobile-apps
+              - listitem:
+                - link "SaaS":
+                  - /url: /he/saas-platforms
+              - listitem:
+                - link "B2B":
+                  - /url: /he/b2b
+              - listitem:
+                - link "פיתוח מערכות":
+                  - /url: /he/technology
+          - listitem [ref=e20]:
+            - link "שירותים" [ref=e21] [cursor=pointer]:
+              - /url: /he/services
+          - listitem [ref=e22]:
+            - link "טכנולוגיה" [ref=e23] [cursor=pointer]:
+              - /url: /he/technology
+          - listitem [ref=e24]:
+            - link "אודותינו" [ref=e25] [cursor=pointer]:
+              - /url: /he/about-us
+        - generic [ref=e26]:
+          - link "צור קשר" [ref=e28] [cursor=pointer]:
+            - /url: /he/contact-us
+            - generic [ref=e29]: צור קשר
+          - link [ref=e31] [cursor=pointer]:
+            - /url: https://api.whatsapp.com/send/?phone=+972525956644&text=&app_absent=0
+            - img [ref=e32]
+          - link "קבעו שיחה" [ref=e37] [cursor=pointer]:
+            - /url: https://calendly.com/triolla/pitangoux-introductory-meeting-clone
+            - generic [ref=e38]:
+              - img [ref=e39]
+              - text: קבעו שיחה
+      - generic [ref=e41]:
+        - generic [ref=e46]:
+          - heading "עיצוב יצירתי מושך אנשים, חוויית משתמש חכמה גורמת להם להישאר" [level=1] [ref=e47]
+          - paragraph [ref=e48]: לסטארט-אפים וחברות בינלאומיות, מתמחים בגיימינג, רפואה, סייבר, IoT, אגריטק, אפליקציות, ופלטפורמות-SaaS
+        - generic [ref=e78]:
+          - generic [ref=e79]:
+            - heading "למה סטארט-אפים וחברות היי-טק גלובליות משתפות איתנו פעולה..." [level=3] [ref=e80]
+            - paragraph [ref=e81]: יזמים ומנהלי מוצר זקוקים לנסיון והתמחות וורטיקלית. לטריאולה מחלקות מתמחות בסייבר סקיוריטי, מדיקל, פינטק, אגרו, מערכות מורכבות
+          - list [ref=e83]:
+            - listitem [ref=e84]:
+              - generic [ref=e90]:
+                - heading "תיכנון מוצר חדש" [level=5] [ref=e91]
+                - paragraph [ref=e92]:
+                  - text: תיכנון ופיתוח
+                  - text: מוצר מוביל בתעשייה
+            - listitem [ref=e93]:
+              - generic [ref=e99]:
+                - heading "שיפור מוצר קיים" [level=5] [ref=e100]
+                - paragraph [ref=e101]: שידרוג, עיצוב מחדש והפכו את המוצר שלכם למוביל בקטגוריה
+            - listitem [ref=e102]:
+              - generic [ref=e108]:
+                - heading "צעדים ראשונים עבור סטארט-אפים" [level=5] [ref=e109]
+                - paragraph [ref=e110]:
+                  - text: קחו את החזון שלכם
+                  - text: מהקונספט ועד להשקה
+            - listitem [ref=e111]:
+              - generic [ref=e117]:
+                - heading "ייעוץ מוצרי" [level=5] [ref=e118]
+                - paragraph [ref=e119]:
+                  - text: האץ את תהליך התכנון
+                  - text: האסטרטגי שלך
+          - link "בואו נבנה יחד" [ref=e121] [cursor=pointer]:
+            - /url: /he/contact-us
+            - generic [ref=e122]: בואו נבנה יחד
+        - generic [ref=e124]:
+          - heading "זוכי העולם בעיצוב מוצר UX/UI לשנת 2025" [level=3] [ref=e125]
+          - generic [ref=e126]: Triolla בלטה בין השחקנים הגדולים בתעשייה
+          - generic [ref=e127]:
+            - generic [ref=e131]:
+              - text: "#1"
+              - text: UX UI
+              - text: רפואה ובריאות
+            - generic [ref=e135]:
+              - text: "#1"
+              - text: UX UI
+              - text: אבטחת סייבר
+            - generic [ref=e139]:
+              - text: "#1"
+              - text: UX UI
+              - text: פינטק ופיננסים
+        - generic [ref=e167]:
+          - heading "הלקוחות שלנו" [level=2] [ref=e168]
+          - heading "מחברות קטנות ועד גלובליות, שיתפנו פעולה עם כמה חברות מדהימות" [level=3] [ref=e169]
+          - link "בוא נדבר" [ref=e171] [cursor=pointer]:
+            - /url: "#contactus"
+            - generic [ref=e172]: בוא נדבר
+        - generic [ref=e174]:
+          - generic [ref=e175]:
+            - heading "תהליך העיצוב הייחודי שלנו" [level=3] [ref=e176]:
+              - text: תהליך העיצוב
+              - text: הייחודי שלנו
+            - paragraph [ref=e177]: תהליך העיצוב הייחודי שלנו משלב הבנה עמוקה של המשתמש עם אסטרטגיה יצירתית, כדי ליצור חוויות דיגיטליות שבאמת בולטות מעל כולם.
+          - list [ref=e180]:
+            - listitem [ref=e181]:
+              - paragraph [ref=e183]:
+                - text: פגישת
+                - text: התנעה
+            - listitem [ref=e184]:
+              - paragraph [ref=e186]:
+                - text: מחקר &
+                - text: תחרותי
+                - text: ניתוח
+            - listitem [ref=e187]:
+              - paragraph [ref=e189]:
+                - text: ראיונות
+                - text: משתמשים
+            - listitem [ref=e190]:
+              - paragraph [ref=e192]:
+                - text: סיעור מוחות
+                - text: שלב פיתוח רעיון
+                - text: בניית Use case
+                - text: + תרשימי זרימה
+            - listitem [ref=e193]:
+              - paragraph [ref=e195]:
+                - text: ויירפריימים
+                - text: מפורטים
+            - listitem [ref=e196]:
+              - paragraph [ref=e198]:
+                - text: בדיקות
+                - text: משתמשים
+            - listitem [ref=e199]:
+              - paragraph [ref=e201]:
+                - text: עיצוב
+                - text: קונספטים
+            - listitem [ref=e202]:
+              - paragraph [ref=e204]:
+                - text: עיצוב
+                - text: מפורט
+        - generic [ref=e207]:
+          - heading "אנשים שאלו אותנו" [level=3] [ref=e208]
+          - paragraph [ref=e209]: ריכזנו עבורכם כמה שאלות ותשובות נפוצות כדי להקל עליכם ולחסוך לכם זמן
+        - generic [ref=e222]:
+          - generic [ref=e223]:
+            - heading "רוצים לדבר? צרו קשר" [level=3] [ref=e224]
+            - generic [ref=e225]:
+              - heading "התקשרו אלינו:" [level=4] [ref=e226]
+              - paragraph [ref=e227]:
+                - text: TLV
+                - link "+972-73-744-3322" [ref=e228] [cursor=pointer]:
+                  - /url: tel:+972-73-744-3322
+              - paragraph [ref=e229]:
+                - text: NY & SF
+                - link "+1408-627-7350" [ref=e230] [cursor=pointer]:
+                  - /url: tel:+1408-627-7350
+            - generic [ref=e231]:
+              - heading "אימייל:" [level=4] [ref=e232]
+              - paragraph [ref=e233]:
+                - link "[email protected]" [ref=e234] [cursor=pointer]:
+                  - /url: /cdn-cgi/l/email-protection#365043587642445f595a5a57185f59
+              - paragraph [ref=e235]:
+                - strong [ref=e236]: "כתובתנו:"
+                - text: רחוב התדהר 5, רעננה
+            - generic [ref=e237]:
+              - heading "זוכה לאמון של יותר מ-1000 חברות:" [level=5] [ref=e238]
+              - list [ref=e239]:
+                - listitem [ref=e240]
+                - listitem [ref=e244]
+                - listitem [ref=e248]
+                - listitem [ref=e252]
+          - generic [ref=e256]:
+            - heading "קבע פגישת ייעוץ חינם" [level=4] [ref=e257]:
+              - text: קבע פגישת
+              - text: ייעוץ חינם
+            - generic [ref=e259]:
+              - generic:
+                - paragraph
+              - generic [ref=e260]:
+                - generic [ref=e262]:
+                  - textbox "שם מלא(חובה)" [ref=e265]:
+                    - /placeholder: שם מלא
+                  - textbox "טלפון(חובה)" [ref=e268]:
+                    - /placeholder: טלפון
+                  - textbox "אימייל(חובה)" [ref=e271]:
+                    - /placeholder: אימייל
+                - button "שלח!" [ref=e273] [cursor=pointer]
+    - generic [ref=e276]:
+      - generic [ref=e277]:
+        - generic [ref=e278]: "אזכורים:"
+        - list [ref=e280]:
+          - listitem [ref=e281]:
+            - link [ref=e282] [cursor=pointer]:
+              - /url: https://13tv.co.il/item/special/recommended/economy/k2fy3-902776824/
+          - listitem [ref=e284]:
+            - link [ref=e285] [cursor=pointer]:
+              - /url: https://www.bizportal.co.il/BizTech/news/article/20015580
+          - listitem [ref=e287]:
+            - link [ref=e288] [cursor=pointer]:
+              - /url: https://www.themarker.com/labels/2021-04-05/ty-article-labels/0000017f-f88a-d044-adff-fbfb48ad0000
+          - listitem [ref=e290]:
+            - link [ref=e291] [cursor=pointer]:
+              - /url: https://www.globes.co.il/news/article.aspx?did=1001450720
+          - listitem [ref=e293]:
+            - link [ref=e294] [cursor=pointer]:
+              - /url: https://www.pc.co.il/featured/420350/
+          - listitem [ref=e296]:
+            - link [ref=e297] [cursor=pointer]:
+              - /url: https://www.mako.co.il/special-articles/Article-c2a83bbe7224d71026.htm
+      - generic [ref=e300]:
+        - generic [ref=e301]:
+          - generic [ref=e302]:
+            - heading "שירותים" [level=3]:
+              - generic: שירותים
+            - list [ref=e305]:
+              - listitem [ref=e306]:
+                - link "עיצוב מוצר וחווית משתמש" [ref=e307] [cursor=pointer]:
+                  - /url: /he/services/product-ux-ui-design
+              - listitem [ref=e308]:
+                - link "מחקר חווית משתמש" [ref=e309] [cursor=pointer]:
+                  - /url: /he/services/ux-research
+              - listitem [ref=e310]:
+                - link "אב-טיפוס" [ref=e311] [cursor=pointer]:
+                  - /url: /he/services/prototyping
+              - listitem [ref=e312]:
+                - link "מיתוג דיגיטלי" [ref=e313] [cursor=pointer]:
+                  - /url: /he/מיתוג-וסטודיו
+              - listitem [ref=e314]:
+                - link "פיתוח תוכנה" [ref=e315] [cursor=pointer]:
+                  - /url: /he/services/front-end-dev
+          - generic [ref=e316]:
+            - heading "פורטפוליו" [level=3]:
+              - generic: פורטפוליו
+            - list [ref=e319]:
+              - listitem [ref=e320]:
+                - link "אפליקציות מובייל" [ref=e321] [cursor=pointer]:
+                  - /url: /he/mobile-apps
+              - listitem [ref=e322]:
+                - link "פינטק & פיננסים" [ref=e323] [cursor=pointer]:
+                  - /url: /he/fintech-finance
+              - listitem [ref=e324]:
+                - link "מכשירים & IoT" [ref=e325] [cursor=pointer]:
+                  - /url: /he/device-iot
+              - listitem [ref=e326]:
+                - link "מערכות SaaS" [ref=e327] [cursor=pointer]:
+                  - /url: /he/saas-platforms
+              - listitem [ref=e328]:
+                - link "גיימינג" [ref=e329] [cursor=pointer]:
+                  - /url: /he/gaming
+              - listitem [ref=e330]:
+                - link "בריאות ורפואה" [ref=e331] [cursor=pointer]:
+                  - /url: /he/medical-healthcare
+              - listitem [ref=e332]:
+                - link "אגריטק" [ref=e333] [cursor=pointer]:
+                  - /url: /he/agritech
+          - generic [ref=e334]:
+            - heading "טכנולוגיה" [level=3]:
+              - generic: טכנולוגיה
+            - list [ref=e337]:
+              - listitem [ref=e338]:
+                - link "פיתוח וטכנולוגיות" [ref=e339] [cursor=pointer]:
+                  - /url: /he/technology
+              - listitem [ref=e340]:
+                - link "Front End" [ref=e341] [cursor=pointer]:
+                  - /url: /he/services/front-end-dev
+              - listitem [ref=e342]:
+                - link "React.js" [ref=e343] [cursor=pointer]:
+                  - /url: /he/services/front-end-dev
+              - listitem [ref=e344]:
+                - link "Vue.js" [ref=e345] [cursor=pointer]:
+                  - /url: /he/services/front-end-dev
+              - listitem [ref=e346]:
+                - link "Back End" [ref=e347] [cursor=pointer]:
+                  - /url: /he/services/back-end-dev
+              - listitem [ref=e348]:
+                - link "Node. Js" [ref=e349] [cursor=pointer]:
+                  - /url: /he/services/back-end-dev
+          - generic [ref=e350]:
+            - heading "אודות החברה" [level=3]:
+              - generic: אודות החברה
+            - list [ref=e353]:
+              - listitem [ref=e354]:
+                - link "עלינו" [ref=e355] [cursor=pointer]:
+                  - /url: /he/about-us
+              - listitem [ref=e356]:
+                - link "קריירה" [ref=e357] [cursor=pointer]:
+                  - /url: /he/careers
+              - listitem [ref=e358]:
+                - link "השירותים שלנו" [ref=e359] [cursor=pointer]:
+                  - /url: /he/services
+              - listitem [ref=e360]:
+                - link "צרו קשר" [ref=e361] [cursor=pointer]:
+                  - /url: /he/contact-us
+              - listitem [ref=e362]:
+                - link "עיתונות" [ref=e363] [cursor=pointer]:
+                  - /url: "#"
+              - listitem [ref=e364]:
+                - link "נגישות" [ref=e365] [cursor=pointer]:
+                  - /url: /he/accessibility-statement
+          - generic [ref=e366]:
+            - heading "הבלוג שלנו" [level=3]:
+              - generic: הבלוג שלנו
+            - list [ref=e369]:
+              - listitem [ref=e370]:
+                - link "כל הבלוגים" [ref=e371] [cursor=pointer]:
+                  - /url: /he/blog
+              - listitem [ref=e372]:
+                - link "פינטק & פיננסים" [ref=e373] [cursor=pointer]:
+                  - /url: /he/blog/the-fintech-ux-playbook
+              - listitem [ref=e374]:
+                - link "מכשירים & IoT" [ref=e375] [cursor=pointer]:
+                  - /url: /he/blog/designing-intuitive-and-secure-iot-products-for-the-future
+              - listitem [ref=e376]:
+                - link "SaaS" [ref=e377] [cursor=pointer]:
+                  - /url: /he/blog/the-3-most-common-pain-points-when-hiring-ui-ux-agency-for-a-saas-product
+              - listitem [ref=e378]:
+                - link "גיימינג" [ref=e379] [cursor=pointer]:
+                  - /url: /he/blog/level-up-your-gaming-app-with-triollas-expert-ux-tips-boost-user-engagement-and-retention
+              - listitem [ref=e380]:
+                - link "מדיקל" [ref=e381] [cursor=pointer]:
+                  - /url: /he/blog/ux-in-medtech-when-trust-is-a-matter-of-life-and-death
+              - listitem [ref=e382]:
+                - link "אגריטק" [ref=e383] [cursor=pointer]:
+                  - /url: /he/blog/designing-an-engaging-and-effective-agritech-app
+        - generic [ref=e384]:
+          - heading "מדיה חברתית" [level=3]:
+            - generic: מדיה חברתית
+          - list [ref=e385]:
+            - listitem [ref=e386]:
+              - link "Facebook" [ref=e387] [cursor=pointer]:
+                - /url: https://www.facebook.com/triollaofficial
+            - listitem [ref=e388]:
+              - link "Linkedin" [ref=e389] [cursor=pointer]:
+                - /url: https://www.linkedin.com/company/triolla-official/
+            - listitem [ref=e390]:
+              - link "Instergram" [ref=e391] [cursor=pointer]:
+                - /url: https://www.instagram.com/triollaofficial/
+            - listitem [ref=e392]:
+              - link "Tiktok" [ref=e393] [cursor=pointer]:
+                - /url: https://www.tiktok.com/@triolla.io
+            - listitem [ref=e394]:
+              - link "Driblle" [ref=e395] [cursor=pointer]:
+                - /url: https://dribbble.com/Triolla
+            - listitem [ref=e396]:
+              - link "BeHnace" [ref=e397] [cursor=pointer]:
+                - /url: https://www.behance.net/asaf8ac9
+        - generic [ref=e398]:
+          - heading "דברו איתנו" [level=3]:
+            - generic: דברו איתנו
+          - generic [ref=e399]:
+            - generic [ref=e400]:
+              - text: "דוא\"ל:"
+              - link "[email protected]" [ref=e401] [cursor=pointer]:
+                - /url: /cdn-cgi/l/email-protection#f6908398b682849f999a9a97d89f99
+            - generic [ref=e402]:
+              - text: "משרדי TLV:"
+              - link "+972-73-744-3322" [ref=e403] [cursor=pointer]:
+                - /url: tel:+972-73-744-3322
+            - generic [ref=e404]:
+              - text: "משרדי ניו יורק:"
+              - link "+1-408-627-7350" [ref=e405] [cursor=pointer]:
+                - /url: tel:+1-408-627-7350
+            - link "קבעו שיחה" [ref=e407] [cursor=pointer]:
+              - /url: https://calendly.com/triolla/pitangoux-introductory-meeting-clone
+              - generic [ref=e408]:
+                - img [ref=e409]
+                - text: קבעו שיחה
+      - generic [ref=e411]:
+        - link [ref=e413] [cursor=pointer]:
+          - /url: /he
+        - paragraph [ref=e415]:
+          - text: All rights reserved to Triolla LTD |
+          - link "מדיניות פרטיות" [ref=e416] [cursor=pointer]:
+            - /url: /he/privacy-policy
+          - text: "|"
+          - link "תנאי שימוש" [ref=e417] [cursor=pointer]:
+            - /url: /he/terms-of-use
+        - generic [ref=e418]:
+          - generic [ref=e419]:
+            - img [ref=e420]
+            - list [ref=e423]:
+              - listitem [ref=e424]:
+                - menuitem "עבור ל-אנגלית" [ref=e425] [cursor=pointer]: אנגלית
+              - listitem [ref=e426]:
+                - menuitem "עברית" [ref=e427] [cursor=pointer]
+          - link "Part of" [ref=e429] [cursor=pointer]:
+            - /url: https://www.sqlink.com/
+            - text: Part of
+          - list [ref=e431]:
+            - listitem [ref=e432]:
+              - link [ref=e433] [cursor=pointer]:
+                - /url: https://www.linkedin.com/company/triolla-official/
+                - img [ref=e434]
+            - listitem [ref=e441]:
+              - link [ref=e442] [cursor=pointer]:
+                - /url: https://www.tiktok.com/@triolla.io
+                - img [ref=e443]
+            - listitem [ref=e447]:
+              - link [ref=e448] [cursor=pointer]:
+                - /url: https://www.instagram.com/triollaofficial/
+            - listitem [ref=e449]:
+              - link [ref=e450] [cursor=pointer]:
+                - /url: https://www.facebook.com/triollaofficial
+                - img [ref=e451]
+  - button "Open Next.js Dev Tools" [ref=e460] [cursor=pointer]:
+    - img [ref=e461]
+  - alert [ref=e464]

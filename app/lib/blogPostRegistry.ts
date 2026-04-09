@@ -33,6 +33,7 @@ export function getBlogSlugs(): string[] {
 
 /** Title lookup from sitemap. Used for <title> metadata. */
 export const BLOG_TITLES: Partial<Record<string, string>> = {
+  "globs-best-agency-in-israel": "Globs Best Agency In Israel",
   "six-things-you-need-to-check-before-hiring-a-ux-ui-agency":
     "Six Things You Need to Check Before Hiring a UX/UI Agency",
   "triollas-mobile-app-ux-mastery-will-make-your-app-a-sensation":

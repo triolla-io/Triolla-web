@@ -22,7 +22,17 @@
     "dedupe:public": "npm run dedupe:css && npm run dedupe:assets",
     "seo:check": "node ./node_modules/tsx/dist/cli.mjs app/scripts/seo-checker.ts",
     "seo:improve": "node ./node_modules/tsx/dist/cli.mjs app/scripts/seo-improver.ts",
-    "seo:loop": "node ./node_modules/tsx/dist/cli.mjs app/scripts/seo-loop.ts"
+    "seo:loop": "node ./node_modules/tsx/dist/cli.mjs app/scripts/seo-loop.ts",
+    "deduplicate:safe": "node scripts/safe-deduplicate-assets.js",
+    "regression": "node scripts/visual-regression/index.js",
+    "regression:home": "node scripts/visual-regression/index.js --page=home --viewport=desktop --language=en",
+    "regression:diagnose": "node scripts/visual-regression/height-diagnostic.js",
+    "regression:dom-sizes": "node scripts/visual-regression/dom-size-diagnostic.js",
+    "regression:carousels": "node scripts/visual-regression/carousel-diagnostic.js",
+    "compare:visual": "node scripts/compare-visual-regression.js",
+    "compare:visual:he": "node scripts/compare-visual-regression.js he",
+    "inspect:lazy": "node scripts/inspect-lazy-loading.js",
+    "inspect:lazy:he": "node scripts/inspect-lazy-loading.js he"
   },
   "dependencies": {
     "framer-motion": "^12.38.0",
@@ -39,6 +49,9 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.2.1",
+    "pixelmatch": "^5.3.0",
+    "playwright": "^1.40.0",
+    "pngjs": "^7.0.0",
     "sharp": "^0.34.5",
     "tailwindcss": "^4.2.2",
     "tsx": "^4.21.0",

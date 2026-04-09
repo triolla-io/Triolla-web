@@ -1,0 +1,33 @@
+{
+  "testSuite": "BackstopJS",
+  "tests": [
+    {
+      "pair": {
+        "reference": "../bitmaps_reference/triolla_visual_regression_Homepage_-_Desktop_0_body_0_desktop.png",
+        "test": "../bitmaps_test/20260406-210645/triolla_visual_regression_Homepage_-_Desktop_0_body_0_desktop.png",
+        "selector": "body",
+        "fileName": "triolla_visual_regression_Homepage_-_Desktop_0_body_0_desktop.png",
+        "label": "Homepage - Desktop",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "http://localhost:3000/",
+        "referenceUrl": "https://triolla.io/",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 41.206640625,
+          "misMatchPercentage": "41.21",
+          "analysisTime": 39
+        },
+        "diffImage": "../bitmaps_test/20260406-210645/failed_diff_triolla_visual_regression_Homepage_-_Desktop_0_body_0_desktop.png"
+      },
+      "status": "fail"
+    }
+  ],
+  "id": "triolla_visual_regression"
+}

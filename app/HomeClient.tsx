@@ -102,17 +102,40 @@ export function HomeClient({ content }: { content?: HomeContent }) {
         setPhase("ready");
 
         try {
-          for (const file of js) {
-            if (cancelled) return;
-            const src = hrefFor(file);
-            await loadScript(src);
-            if (
-              file.endsWith(".js") &&
-              (file.includes("lottie") || file.includes("bodymovin"))
-            ) {
-              initTriollaLottie(el);
-            }
-          }
+          // Load scripts with smart ordering: critical dependencies first, rest in parallel
+          // jQuery and jquery plugins must load in sequence, but other scripts can load in parallel
+          const criticalScripts = [
+            js[0], // jquery
+            ...js.slice(1, 5), // jquery plugins (indices 1-4)
+            js[11], // all.js (must load last, index 11)
+          ];
+          const parallelScripts = js.filter((_, i) => !criticalScripts.includes(js[i]));
+
+          // Load jQuery first
+          if (cancelled) return;
+          await loadScript(hrefFor(js[0]));
+
+          // Load jquery plugins + independent scripts in parallel
+          if (cancelled) return;
+          await Promise.all(js.slice(1, 5).map((file) => loadScript(hrefFor(file))));
+
+          // Load remaining scripts in parallel (except all.js)
+          if (cancelled) return;
+          await Promise.all(
+            parallelScripts.map((file) => {
+              if (
+                file.endsWith(".js") &&
+                (file.includes("lottie") || file.includes("bodymovin"))
+              ) {
+                return loadScript(hrefFor(file)).then(() => initTriollaLottie(el));
+              }
+              return loadScript(hrefFor(file));
+            })
+          );
+
+          // Finally load all.js
+          if (cancelled) return;
+          await loadScript(hrefFor(js[11]));
 
           const gsapWin = window as unknown as {
             gsap?: { registerPlugin?: (plugin: unknown) => void; to?: (target: unknown, vars: unknown) => void };
@@ -128,12 +151,35 @@ export function HomeClient({ content }: { content?: HomeContent }) {
             .jQuery;
           $?.(window).trigger("resize");
 
+          // Trigger load events - all.js listens for these to initialize animations
           window.dispatchEvent(new Event("DOMContentLoaded"));
           window.dispatchEvent(new Event("load"));
 
-          setTimeout(() => {
-            document.body.classList.add("loaded");
-          }, 800);
+          // all.js will add .loaded class after 800ms via $(window).on('load', ...).
+          // We add it here as a fallback to ensure animations trigger
+          // (in case all.js didn't execute, jQuery isn't available, etc.)
+          const addLoadedClass = () => {
+            if (!document.body.classList.contains("loaded")) {
+              document.body.classList.add("loaded");
+            }
+          };
+
+          // Match theme all.js: body gets .loaded ~800ms after window load.
+          // Wait so all.js can win; then fallback if it did not run (async injection).
+          await new Promise<void>((resolve) => {
+            setTimeout(() => {
+              addLoadedClass();
+              resolve();
+            }, 800);
+          });
+
+          if (cancelled) return;
+
+          // Wait for CSS animations triggered by .loaded class to complete
+          // Most animations are 1.2s based on animation.css
+          await new Promise<void>((resolve) => {
+            setTimeout(resolve, 1500);
+          });
 
           if (cancelled) return;
           disposeRevealRef.current?.();

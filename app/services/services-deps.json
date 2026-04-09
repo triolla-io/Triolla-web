@@ -4,14 +4,11 @@
   "css": [
     "fonts.css_2af44128.css",
     "style.min.css_edabec9e.css",
-    "style.min.css_68b3cde9.css",
     "style.css_2af44128.css",
     "style-new.css_2af44128.css",
     "responsive.css_2af44128.css",
     "animate.css_2af44128.css",
-    "animation.css_2af44128.css",
     "jquery.jConveyorTicker.min.css_edabec9e.css",
-    "owl.carousel.css_2af44128.css",
     "mlstyle.css_2af44128.css",
     "ml-responsive.css_2af44128.css"
   ],
@@ -24,9 +21,13 @@
     "ScrollMagic.min.js_edabec9e.js",
     "lottie.min.js_2af44128.js",
     "gsap.min.js_a1459148.js",
-    "ScrollTrigger.min.js_a1459148.js",
     "wow.js_a1459148.js",
-    "metaview.js_2af44128.js",
-    "all.js_a1459148.js"
-  ]
+    "metaview.js_2af44128.js"
+  ],
+  "sharedFontsManifest": "/Users/ariell/html-to-react/public/assets/_shared/fonts/fonts.json",
+  "sharedFontsUrl": "/assets/_shared/fonts",
+  "sharedFonts": {
+    "registry": "/assets/_shared/fonts/fonts.json",
+    "baseUrl": "/assets/_shared/fonts"
+  }
 }

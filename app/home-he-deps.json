@@ -4,7 +4,6 @@
   "dataRsssl": "1",
   "css": [
     "style-rtl.min.css_edabec9e.css",
-    "svgs-attachment.css_2af44128.css",
     "home-grid-base.css",
     "style.min.css_68b3cde9.css",
     "cms-navigation-base.css_2af44128.css",
@@ -36,5 +35,11 @@
     "ScrollTrigger.min.js_a1459148.js",
     "all.js_a1459148.js",
     "v8c78df7c7c0f484497ecbca7046644da1771523124516.js"
-  ]
+  ],
+  "sharedFontsManifest": "/Users/ariell/html-to-react/public/assets/_shared/fonts/fonts.json",
+  "sharedFontsUrl": "/assets/_shared/fonts",
+  "sharedFonts": {
+    "registry": "/assets/_shared/fonts/fonts.json",
+    "baseUrl": "/assets/_shared/fonts"
+  }
 }

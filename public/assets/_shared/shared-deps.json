@@ -1,0 +1,40 @@
+{
+  "description": "Shared CSS and JS files loaded in 80%+ of blog pages",
+  "consolidationThreshold": 0.8,
+  "totalBlogs": 101,
+  "css": [
+    "gdpr-main-nf.css_d6ea100c.css",
+    "jquery.jConveyorTicker.min.css_edabec9e.css",
+    "style.min.css_68b3cde9.css",
+    "style.min.css_edabec9e.css",
+    "svgs-attachment.css"
+  ],
+  "js": [
+    "DOMPurify.min.js_ed4212ae.js",
+    "ScrollMagic.min.js_edabec9e.js",
+    "ScrollTrigger.min.js",
+    "TweenMax.min.js_edabec9e.js",
+    "a11y.min.js_3f73a7c5.js",
+    "dom-ready.min.js_5346137b.js",
+    "gravityforms.min.js_13f93b15.js",
+    "gsap.min.js",
+    "hooks.min.js_4fddbd9c.js",
+    "i18n.min.js_c33ce333.js",
+    "isotope.pkgd.min.js_edabec9e.js",
+    "jquery-3.6.0.min.js_edabec9e.js",
+    "jquery-migrate.min.js_558973c0.js",
+    "jquery.bez.min.js_edabec9e.js",
+    "jquery.jConveyorTicker.min.js_edabec9e.js",
+    "jquery.json.min.js_13f93b15.js",
+    "jquery.min.js_f43b551b.js",
+    "metaview.js_edabec9e.js",
+    "placeholders.jquery.min.js_13f93b15.js",
+    "scripts-theme.min.js_39b5a2d5.js",
+    "svgs-inline-min.js",
+    "utils.min.js_f287a8f0.js",
+    "vendor-theme.min.js_a3a18dac.js",
+    "wow.js_edabec9e.js"
+  ],
+  "assetBase": "/assets/_shared",
+  "note": "These files should be loaded once globally instead of per-page"
+}

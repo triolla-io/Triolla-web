@@ -1,0 +1,41 @@
+{
+  "testCaseId": "home-desktop-en",
+  "timestamp": "2026-04-06T18:49:52.604Z",
+  "summary": {
+    "total": 0,
+    "noise": 0,
+    "spacing_issue": 0,
+    "alignment_issue": 0,
+    "sizing_issue": 0,
+    "typography_issue": 0,
+    "investigate": 0
+  },
+  "classifiedRegions": [],
+  "thresholds": {
+    "size": {
+      "small": 2000,
+      "medium": 20000
+    },
+    "density": {
+      "noiseSmallRegion": 0.05,
+      "noiseThinRegion": 0.03
+    },
+    "typography": {
+      "maxHeight": 100,
+      "minAspectRatio": 3
+    },
+    "layout": {
+      "minHeight": 200,
+      "minPixels": 20000
+    },
+    "thin": {
+      "maxHeight": 100
+    }
+  },
+  "diffMetrics": {
+    "matchPercent": 100,
+    "matchPercentStructural": 100,
+    "pixelsDifferent": 0,
+    "pixelsDifferentStructural": 0
+  }
+}

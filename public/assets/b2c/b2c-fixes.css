@@ -1,0 +1,19 @@
+/* Show logo in header pill */
+.site-header .logo {
+  display: block !important;
+}
+
+.site-header .logo img {
+  display: block !important;
+  width: auto !important;
+  height: 20px !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.site-header .logo span {
+  font-size: 10px;
+  margin-left: 4px;
+  white-space: nowrap;
+  display: inline-block;
+}

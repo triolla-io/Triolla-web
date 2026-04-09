@@ -1,39 +1,67 @@
-/* COMPREHENSIVE FONT FIXES FOR HOME PAGE */
+/* ========================================
+   TYPOGRAPHY / PARITY FIXES FOR HOME SNAPSHOT
+   Theme: body + headings default to 'SF Pro'; nav pills use 'SFProText'.
+   Do not !important-override ticker / hero h2 / winners — responsive.css uses
+   SF Pro + mobile Helvetica for hero h2; globals body font differs from triolla.io.
+   ======================================== */
 
-/* 1. Hero section headings */
-.homemaintopone h1,
-.homemaintopone h2 {
+/* Match triolla style.css body stack for injected fragment (inherits into ticker, winners h3, etc.) */
+[data-triolla-snapshot] {
+  font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+/* Portfolio dropdown (nav menu submenu): align content to LEFT
+   Theme submenu items should flow left-aligned, not centered. */
+[data-triolla-snapshot] .header_menu ul.menu li.bigmenu > ul,
+[data-triolla-snapshot] .header_menu ul.menu li.bigmenu > ul li {
+  text-align: left !important;
+}
+[data-triolla-snapshot] .header_menu ul.menu li.bigmenu > ul li a {
+  text-align: left !important;
+}
+
+/* Hero h1: reset bottom offset that causes visual position mismatch.
+   Theme uses bottom: -30px (animation start); remove for parity with live site. */
+.homemaintopone h1 {
+  bottom: 0 !important;
+}
+
+/* Home-only: pill header max-width (was unscoped and leaked onto /technology & other snapshots). */
+[data-triolla-snapshot].home .headnewact {
+  max-width: 95% !important;
+}
+
+/* Top navigation pills — scoped so portfolio + home snapshots match; no app-level leakage */
+[data-triolla-snapshot] .header_contact a,
+[data-triolla-snapshot] .header_contact a span,
+[data-triolla-snapshot] .header_book a,
+[data-triolla-snapshot] .header_book a span,
+[data-triolla-snapshot] .header_whatsapp a,
+[data-triolla-snapshot] .header_whatsapp a span {
+  font-family: 'SFProText' !important;
+  font-weight: 500 !important;
+}
+
+/* Portfolio / process section */
+.top_design_text h3 {
   font-family: 'SFProText' !important;
   font-weight: 700 !important;
 }
 
-/* 2. Unique design section - MISSING FONT ON P TAG */
 .top_design_text p {
   font-family: 'SFProText' !important;
   font-weight: 400 !important;
 }
 
-/* 3. Global/Our Clients section */
-.global_con h2,
-.global_con h3 {
+/* FAQ section */
+.faqtitle a {
   font-family: 'SFProText' !important;
-  font-weight: 700 !important;
+  font-weight: 400 !important;
 }
 
-/* 4. Winners section */
-.winners-title,
-.winners-subtitle {
-  font-family: 'SFProText' !important;
-  font-weight: 700 !important;
-}
-
-/* 5. Global h2 override for "Our Clients" */
-h2 {
-  font-family: 'SFProText' !important;
-  font-weight: 700 !important;
-}
-
-/* 6. FAQ section text */
+.faqtitle a span,
 .faq_quest {
   font-family: 'SFProText' !important;
   font-weight: 400 !important;
@@ -45,45 +73,28 @@ h2 {
   font-weight: 400 !important;
 }
 
-/* 7. Black pill button text - CRITICAL FIX */
-.header_contact a,
-.header_contact a span,
-.header_book a,
-.header_book a span,
-.header_whatsapp a,
-.header_whatsapp a span {
-  font-family: 'SFProText' !important;
-  font-weight: 500 !important;
-}
-
-/* 8. FAQ SVG plus/minus icons - FIX BROKEN PATHS */
+/* FAQ SVG icons - corrected paths */
 .faqtitle a::after {
-  background-image: url(/assets/_shared/faq_plus.svg) !important;
+  background-image: url(/images/faq_plus.svg) !important;
   background-repeat: no-repeat !important;
   background-position: center center !important;
   background-size: contain !important;
 }
 
 .active .faqtitle a::after {
-  background-image: url(/assets/_shared/faq_minus.svg) !important;
+  background-image: url(/images/faq_minus.svg) !important;
   background-repeat: no-repeat !important;
   background-position: center center !important;
   background-size: contain !important;
 }
 
-/* 9. Ensure SFProText font is available as fallback */
-body,
-body * {
-  font-family: 'SFProText', 'SF Pro', -apple-system, BlinkMacSystemFont, sans-serif !important;
-}
-
-/* BUT preserve specific font overrides for themed elements */
-.technmtxt,
-.techthretop p,
-.techthretop h4 {
+/* Preserve specific themed fonts */
+[data-triolla-snapshot] .technmtxt,
+[data-triolla-snapshot] .techthretop p,
+[data-triolla-snapshot] .techthretop h4 {
   font-family: 'SF Compact Display' !important;
 }
 
-.circletxt {
+[data-triolla-snapshot] .circletxt {
   font-family: 'SFProText' !important;
 }

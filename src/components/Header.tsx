@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 import { localeFromPathname, withLocalePrefix, alternateLocalePath } from "@/lib/i18n";
 import { shouldHideSiteChromeForPath } from "@/lib/snapshotFullPagePaths";
 import { common, portfolioCol1Keys, portfolioCol2Keys } from "@/messages/common";
+import styles from "./Header.module.css";
 
 /** Normalize for comparison (Next pathname usually has no trailing slash). */
 function normalizePath(p: string): string {
@@ -109,10 +110,10 @@ export default function Header() {
   }, [mobileOpen]);
 
   return (
-    <>
+    <div className={styles.headerRoot}>
       {/* ── TICKER ─────────────────────────────────────────── */}
       {tickerVisible && (
-        <div className={`headerticker${isSticky ? " is-hidden" : ""}`}>
+        <div className={`${styles.headerticker}${isSticky ? " is-hidden" : ""}`}>
           <ul><li>{t.ticker}</li></ul>
           <button className="tickclose" onClick={() => setTickerVisible(false)} aria-label={t.closeTicker}>
             <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
@@ -124,27 +125,21 @@ export default function Header() {
 
       {/* ── HEADER PILL ────────────────────────────────────── */}
       <header
-        className={`site-header${isSticky ? " is-sticky" : ""}${tickerVisible && !isSticky ? " ticker-visible" : ""}`}
+        className={`${styles.siteHeader}${isSticky ? " is-sticky" : ""}${tickerVisible && !isSticky ? " ticker-visible" : ""}`}
       >
-        <div className="header_in">
+        <div className={styles.headerIn}>
 
           {/* Logo */}
-          <div className="logo">
+          <div className={styles.logo}>
             <Link href={withLocalePrefix("/", locale)}>
-              <Image
-                src="/images/logo_new.png"
-                alt="Triolla"
-                width={79}
-                height={38}
-                priority
-                className="h-[20px] w-auto min-[768px]:h-[37px] max-[1023px]:brightness-0"
-              />
+              <img className="logoimg" alt="Triolla" src="/images/logo_triolla.svg" />
+              <span>Formally Pitangoux</span>
             </Link>
           </div>
 
           {/* Desktop nav */}
-          <div className="header_menu">
-            <ul className="menu">
+          <div>
+            <ul className={styles.headerMenu}>
 
               {/* Portfolio — bigmenu with dropdown */}
               <li
@@ -226,8 +221,8 @@ export default function Header() {
           </div>
 
           {/* Right buttons */}
-          <div className="header_right">
-            <div className="header_contact">
+          <div className={styles.headerRight}>
+            <div className={styles.headerContact}>
               <Link href={withLocalePrefix("/contact-us/", locale)}>
                 <span className="header-contact-text-wrap">
                   <span className="header-contact-base">{t.contactUs}</span>
@@ -235,7 +230,7 @@ export default function Header() {
               </Link>
             </div>
 
-            <div className="header_whatsapp">
+            <div className={styles.headerWhatsapp}>
               <a href="https://api.whatsapp.com/send/?phone=972525956644&text=Hello%2C+I%27d+like+to+learn+more...&app_absent=0" target="_blank" rel="noopener noreferrer" aria-label={t.whatsappLabel}>
                 <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g clipPath="url(#wa-clip)">
@@ -247,9 +242,9 @@ export default function Header() {
               </a>
             </div>
 
-            <div className="header_book">
+            <div className={styles.headerBook}>
               <a href="https://calendly.com/triolla/pitangoux-introductory-meeting-clone" target="_blank" rel="noopener noreferrer">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className={styles.headerBookSvg}>
                   <path fillRule="evenodd" clipRule="evenodd" d="M8.614 2.458V3.073c-.011.545-.89.856-1.17.26a.63.63 0 01-.039-.26V2.458H5.544c-.473-.023-.789-.641-.464-1.017C5.192 1.312 5.282 1.242 5.544 1.229c.613 0 1.228-.002 1.842-.005V.615C7.388.514 7.398.482 7.417.422A.81.81 0 018.012 0c.328.013.607.258.614.615V1.216c1.228-.007 2.456-.014 3.685-.008V.615c.006-.329.245-.601.601-.615.008 0 .016 0 .025 0 .328.013.606.258.613.615v.604c.22.003.44.007.66.01.94.03 1.778.84 1.796 1.821.023 3.703.023 7.406 0 11.11-.017.95-.839 1.802-1.819 1.82-4.109.026-8.217.026-12.326 0C.89 15.963.036 15.157.018 14.16c-.023-3.703-.023-7.406 0-11.11C.035 2.093.854 1.236 1.858 1.229h.616V.615C2.475.514 2.485.482 2.504.422A.81.81 0 013.1 0c.328.013.606.258.613.615V3.073c-.01.545-.867.85-1.157.284a.664.664 0 01-.047-.284V2.456c-.21-.001-.42-.001-.63 0-.312.01-.589.283-.598.6C.904 6.755.903 10.455.992 14.152c.01.313.282.59.598.6 4.103.076 8.21.076 12.312 0 .312-.01.589-.283.598-.6.069-3.697.069-7.397 0-11.094-.01-.318-.294-.597-.621-.6H12.3V3.073c-.01.54-.868.845-1.16.283a.664.664 0 01-.047-.283V2.458H8.614z" fill="white"/>
                 </svg>
                 {t.bookACall}
@@ -258,7 +253,7 @@ export default function Header() {
 
             {/* Hamburger — mobile only */}
             <button
-              className={`menutoggle${isHebrew ? " is-he" : ""}`}
+              className={`${styles.menutoggle}${isHebrew ? " is-he" : ""}`}
               onClick={() => setMobileOpen(true)}
               aria-label={t.openMenu}
               style={{ background:"none", border:"none", cursor:"pointer", padding:"4px" }}
@@ -275,15 +270,15 @@ export default function Header() {
       </header>
 
       {/* ── MOBILE MENU ────────────────────────────────────── */}
-      <div className={`hmenumob${mobileOpen ? " open" : ""}${isHebrew ? " is-he" : ""}`}>
-        <div className="hmenumobclose">
+      <div className={`${styles.hmenumob}${mobileOpen ? " open" : ""}${isHebrew ? " is-he" : ""}`}>
+        <div className={styles.hmenumobclose}>
           <button type="button" onClick={() => setMobileOpen(false)} aria-label={t.closeMenu}>
             <Image src="/images/togleclose.svg" alt="" width={18} height={18} />
           </button>
         </div>
 
         {/* Main nav — mockup: solid yellow, one Portfolio block + flat sub-links, then Services / Technology / Company */}
-        <div className="hmenumobdiv">
+        <div className={styles.hmenumobdiv}>
           <div className="menu-header-menu-container">
             <ul className="menu">
               <li
@@ -337,7 +332,7 @@ export default function Header() {
         </div>
 
         {/* Secondary nav — Blog + Career (mirrors WP hmobmenubot) */}
-        <div className="hmobmenubot">
+        <div className={styles.hmobmenubot}>
           <ul>
             <li>
               <Link
@@ -373,8 +368,8 @@ export default function Header() {
           </ul>
         </div>
 
-        <div className="hmobmbuts">
-          <div className="hmobbutlftb">
+        <div className={styles.hmobmbuts}>
+          <div className={styles.hmobbutlftb}>
             <a href="https://calendly.com/triolla/pitangoux-introductory-meeting-clone" target="_blank" rel="noopener noreferrer">
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                 <path fillRule="evenodd" clipRule="evenodd" d="M8.614 2.458V3.073c-.011.545-.89.856-1.17.26a.63.63 0 01-.039-.26V2.458H5.544c-.473-.023-.789-.641-.464-1.017C5.192 1.312 5.282 1.242 5.544 1.229c.613 0 1.228-.002 1.842-.005V.615C7.388.514 7.398.482 7.417.422A.81.81 0 018.012 0c.328.013.607.258.614.615V1.216c1.228-.007 2.456-.014 3.685-.008V.615c.006-.329.245-.601.601-.615.008 0 .016 0 .025 0 .328.013.606.258.613.615v.604c.22.003.44.007.66.01.94.03 1.778.84 1.796 1.821.023 3.703.023 7.406 0 11.11-.017.95-.839 1.802-1.819 1.82-4.109.026-8.217.026-12.326 0C.89 15.963.036 15.157.018 14.16c-.023-3.703-.023-7.406 0-11.11C.035 2.093.854 1.236 1.858 1.229h.616V.615C2.475.514 2.485.482 2.504.422A.81.81 0 013.1 0c.328.013.606.258.613.615V3.073c-.01.545-.867.85-1.157.284a.664.664 0 01-.047-.284V2.456c-.21-.001-.42-.001-.63 0-.312.01-.589.283-.598.6C.904 6.755.903 10.455.992 14.152c.01.313.282.59.598.6 4.103.076 8.21.076 12.312 0 .312-.01.589-.283.598-.6.069-3.697.069-7.397 0-11.094-.01-.318-.294-.597-.621-.6H12.3V3.073c-.01.54-.868.845-1.16.283a.664.664 0 01-.047-.283V2.458H8.614z" fill="white"/>
@@ -382,7 +377,7 @@ export default function Header() {
               {t.bookACall}
             </a>
           </div>
-          <div className="hmobbutrsocl">
+          <div className={styles.hmobbutrsocl}>
             <a href="tel:+972737443322" aria-label="Call us">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
                 <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02L6.62 10.79z" fill="white"/>
@@ -396,6 +391,6 @@ export default function Header() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }

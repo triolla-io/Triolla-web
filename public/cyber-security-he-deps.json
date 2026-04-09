@@ -16,7 +16,8 @@
     "/assets/_shared/jquery.jConveyorTicker.min.css_edabec9e.css",
     "mlstyle.css_edabec9e.css",
     "ml-responsive.css_edabec9e.css",
-    "fonts.css"
+    "fonts.css",
+    "/assets/home/home-fixes.css"
   ],
   "js": [
     "jquery-3.6.0.min.js_edabec9e.js",

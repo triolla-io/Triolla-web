@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visual Bug Report - home</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f5f5f5; }
+    .container { max-width: 1400px; margin: 0 auto; padding: 20px; }
+    h1 { color: #333; margin-bottom: 30px; padding: 20px; background: white; border-radius: 8px; }
+    .bug-item { background: white; margin-bottom: 20px; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    .bug-header { padding: 15px 20px; background: #f0f0f0; border-bottom: 1px solid #ddd; }
+    .bug-title { font-weight: 600; color: #333; margin-bottom: 5px; }
+    .bug-selector { font-family: monospace; color: #666; font-size: 13px; }
+    .bug-differences { font-size: 12px; color: #999; margin-top: 5px; }
+    .bug-image { padding: 20px; background: #fafafa; text-align: center; }
+    .bug-image img { max-width: 100%; height: auto; border-radius: 4px; }
+    .comparison-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; padding: 20px; }
+    .original { background: #e8f5e9; padding: 15px; border-radius: 4px; }
+    .current { background: #ffebee; padding: 15px; border-radius: 4px; }
+    .label { font-weight: 600; margin-bottom: 10px; font-size: 12px; text-transform: uppercase; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🐛 Visual Bug Report - home</h1>
+
+    <div class="comparison-grid">
+      <div class="original">
+        <div class="label">✅ ORIGINAL (triolla.io)</div>
+        <p style="font-size: 12px; color: #666;">How it should look</p>
+      </div>
+      <div class="current">
+        <div class="label">❌ CURRENT (localhost:3000)</div>
+        <p style="font-size: 12px; color: #666;">What needs to be fixed</p>
+      </div>
+    </div>
+
+    
+    <div class="bug-item">
+      <div class="bug-header">
+        <div class="bug-title">#1 .homemaintop</div>
+        <div class="bug-selector">Element: <code>.homemaintop</code></div>
+        <div class="bug-differences">
+          Type: ELEMENT |
+          Differences: 5 issues |
+          Impact: 5 HIGH
+        </div>
+      </div>
+      <div class="bug-image">
+        <img src="1_____________.png" alt=".homemaintop" />
+        <div style="margin-top: 15px; font-size: 12px; color: #666;">
+          <strong>Differences found:</strong>
+          <ul style="margin-top: 5px; margin-left: 20px;">
+            
+            <li>line-height: <code>normal</code> → <code>27px</code></li>
+            
+            <li>line-height: <code>normal</code> → <code>27px</code></li>
+            
+            <li>background-color: <code>rgb(254, 211, 36)</code> → <code>rgb(254, 209, 37)</code></li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="bug-item">
+      <div class="bug-header">
+        <div class="bug-title">#2 .header</div>
+        <div class="bug-selector">Element: <code>.header</code></div>
+        <div class="bug-differences">
+          Type: ELEMENT |
+          Differences: 4 issues |
+          Impact: 4 HIGH
+        </div>
+      </div>
+      <div class="bug-image">
+        <img src="2________.png" alt=".header" />
+        <div style="margin-top: 15px; font-size: 12px; color: #666;">
+          <strong>Differences found:</strong>
+          <ul style="margin-top: 5px; margin-left: 20px;">
+            
+            <li>line-height: <code>normal</code> → <code>27px</code></li>
+            
+            <li>margin: <code>0px 32px</code> → <code>0px 31.625px</code></li>
+            
+            <li>line-height: <code>normal</code> → <code>27px</code></li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="bug-item">
+      <div class="bug-header">
+        <div class="bug-title">#3 .footer</div>
+        <div class="bug-selector">Element: <code>.footer</code></div>
+        <div class="bug-differences">
+          Type: ELEMENT |
+          Differences: 4 issues |
+          Impact: 4 HIGH
+        </div>
+      </div>
+      <div class="bug-image">
+        <img src="3________.png" alt=".footer" />
+        <div style="margin-top: 15px; font-size: 12px; color: #666;">
+          <strong>Differences found:</strong>
+          <ul style="margin-top: 5px; margin-left: 20px;">
+            
+            <li>line-height: <code>normal</code> → <code>27px</code></li>
+            
+            <li>line-height: <code>normal</code> → <code>27px</code></li>
+            
+            <li>width: <code>1280px</code> → <code>1265px</code></li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="bug-item">
+      <div class="bug-header">
+        <div class="bug-title">#4 .header_wrap</div>
+        <div class="bug-selector">Element: <code>.header_wrap</code></div>
+        <div class="bug-differences">
+          Type: ELEMENT |
+          Differences: 3 issues |
+          Impact: 3 HIGH
+        </div>
+      </div>
+      <div class="bug-image">
+        <img src="4_________w___.png" alt=".header_wrap" />
+        <div style="margin-top: 15px; font-size: 12px; color: #666;">
+          <strong>Differences found:</strong>
+          <ul style="margin-top: 5px; margin-left: 20px;">
+            
+            <li>line-height: <code>normal</code> → <code>27px</code></li>
+            
+            <li>line-height: <code>normal</code> → <code>27px</code></li>
+            
+            <li>width: <code>1166px</code> → <code>1151.75px</code></li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="bug-item">
+      <div class="bug-header">
+        <div class="bug-title">#5 .header_menu</div>
+        <div class="bug-selector">Element: <code>.header_menu</code></div>
+        <div class="bug-differences">
+          Type: ELEMENT |
+          Differences: 3 issues |
+          Impact: 3 HIGH
+        </div>
+      </div>
+      <div class="bug-image">
+        <img src="5_____________.png" alt=".header_menu" />
+        <div style="margin-top: 15px; font-size: 12px; color: #666;">
+          <strong>Differences found:</strong>
+          <ul style="margin-top: 5px; margin-left: 20px;">
+            
+            <li>line-height: <code>normal</code> → <code>27px</code></li>
+            
+            <li>line-height: <code>normal</code> → <code>27px</code></li>
+            
+            <li>width: <code>672px</code> → <code>657.75px</code></li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="bug-item">
+      <div class="bug-header">
+        <div class="bug-title">#6 .homemaintopone</div>
+        <div class="bug-selector">Element: <code>.homemaintopone</code></div>
+        <div class="bug-differences">
+          Type: ELEMENT |
+          Differences: 3 issues |
+          Impact: 3 HIGH
+        </div>
+      </div>
+      <div class="bug-image">
+        <img src="6________________.png" alt=".homemaintopone" />
+        <div style="margin-top: 15px; font-size: 12px; color: #666;">
+          <strong>Differences found:</strong>
+          <ul style="margin-top: 5px; margin-left: 20px;">
+            
+            <li>line-height: <code>normal</code> → <code>27px</code></li>
+            
+            <li>line-height: <code>normal</code> → <code>27px</code></li>
+            
+            <li>width: <code>1280px</code> → <code>1265px</code></li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="bug-item">
+      <div class="bug-header">
+        <div class="bug-title">#7 .global_con</div>
+        <div class="bug-selector">Element: <code>.global_con</code></div>
+        <div class="bug-differences">
+          Type: ELEMENT |
+          Differences: 3 issues |
+          Impact: 3 HIGH
+        </div>
+      </div>
+      <div class="bug-image">
+        <img src="7____________.png" alt=".global_con" />
+        <div style="margin-top: 15px; font-size: 12px; color: #666;">
+          <strong>Differences found:</strong>
+          <ul style="margin-top: 5px; margin-left: 20px;">
+            
+            <li>line-height: <code>normal</code> → <code>27px</code></li>
+            
+            <li>line-height: <code>normal</code> → <code>27px</code></li>
+            
+            <li>width: <code>1280px</code> → <code>1265px</code></li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="bug-item">
+      <div class="bug-header">
+        <div class="bug-title">#8 .header_whatsapp</div>
+        <div class="bug-selector">Element: <code>.header_whatsapp</code></div>
+        <div class="bug-differences">
+          Type: ELEMENT |
+          Differences: 3 issues |
+          Impact: 3 HIGH
+        </div>
+      </div>
+      <div class="bug-image">
+        <img src="8_________w_______.png" alt=".header_whatsapp" />
+        <div style="margin-top: 15px; font-size: 12px; color: #666;">
+          <strong>Differences found:</strong>
+          <ul style="margin-top: 5px; margin-left: 20px;">
+            
+            <li>line-height: <code>normal</code> → <code>27px</code></li>
+            
+            <li>line-height: <code>normal</code> → <code>27px</code></li>
+            
+            <li>display: <code>block</code> → <code>flex</code></li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="bug-item">
+      <div class="bug-header">
+        <div class="bug-title">#9 .faqtitle</div>
+        <div class="bug-selector">Element: <code>.faqtitle</code></div>
+        <div class="bug-differences">
+          Type: ELEMENT |
+          Differences: 3 issues |
+          Impact: 3 HIGH
+        </div>
+      </div>
+      <div class="bug-image">
+        <img src="9__________.png" alt=".faqtitle" />
+        <div style="margin-top: 15px; font-size: 12px; color: #666;">
+          <strong>Differences found:</strong>
+          <ul style="margin-top: 5px; margin-left: 20px;">
+            
+            <li>line-height: <code>normal</code> → <code>27px</code></li>
+            
+            <li>line-height: <code>normal</code> → <code>27px</code></li>
+            
+            <li>width: <code>1091.19px</code> → <code>1078px</code></li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="bug-item">
+      <div class="bug-header">
+        <div class="bug-title">#10 h4</div>
+        <div class="bug-selector">Element: <code>h4</code></div>
+        <div class="bug-differences">
+          Type: ELEMENT |
+          Differences: 2 issues |
+          Impact: 2 HIGH
+        </div>
+      </div>
+      <div class="bug-image">
+        <img src="10___.png" alt="h4" />
+        <div style="margin-top: 15px; font-size: 12px; color: #666;">
+          <strong>Differences found:</strong>
+          <ul style="margin-top: 5px; margin-left: 20px;">
+            
+            <li>margin: <code>0px</code> → <code>0px 0px 6px</code></li>
+            
+            <li>width: <code>522.234px</code> → <code>516.109px</code></li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</body>
+</html>

@@ -248,13 +248,29 @@ export function TriollaBilingualPortfolioSnapshotClient({
         setPhase("ready");
 
         try {
-          for (const file of js) {
-            if (cancelled) return;
-            await loadScript(hrefFor(file));
-            if (file.endsWith(".js") && (file.includes("lottie") || file.includes("bodymovin"))) {
-              initTriollaLottie(el);
-            }
-          }
+          // Load scripts with smart ordering: jQuery first, lottie and others in parallel
+          const jqueryFile = js.find((f) => f.includes("jquery-3.6.0"));
+          const otherFiles = js.filter((f) => !f.includes("jquery-3.6.0") && !f.includes("all.js"));
+          const allJsFile = js.find((f) => f.includes("all.js"));
+
+          // Load jQuery first
+          if (cancelled) return;
+          if (jqueryFile) await loadScript(hrefFor(jqueryFile));
+
+          // Load other scripts in parallel (except all.js)
+          if (cancelled) return;
+          await Promise.all(
+            otherFiles.map((file) => {
+              if (file.endsWith(".js") && (file.includes("lottie") || file.includes("bodymovin"))) {
+                return loadScript(hrefFor(file)).then(() => initTriollaLottie(el));
+              }
+              return loadScript(hrefFor(file));
+            })
+          );
+
+          // Finally load all.js
+          if (cancelled) return;
+          if (allJsFile) await loadScript(hrefFor(allJsFile));
 
           const gsapWin = window as unknown as {
             gsap?: { registerPlugin?: (plugin: unknown) => void };
@@ -273,6 +289,30 @@ export function TriollaBilingualPortfolioSnapshotClient({
           window.dispatchEvent(new Event("DOMContentLoaded"));
           window.dispatchEvent(new Event("load"));
           $?.(window).trigger("load");
+
+          // all.js will add .loaded class after 800ms via $(window).on('load', ...).
+          // We add it here as a fallback to ensure animations trigger
+          const addLoadedClass = () => {
+            if (!document.body.classList.contains("loaded")) {
+              document.body.classList.add("loaded");
+            }
+          };
+
+          // Wait 300ms to let all.js add it first, then add as fallback if needed
+          await new Promise<void>((resolve) => {
+            setTimeout(() => {
+              addLoadedClass();
+              resolve();
+            }, 300);
+          });
+
+          if (cancelled) return;
+
+          // Wait for CSS animations triggered by .loaded class to complete
+          // Most animations are 1.2s based on animation.css
+          await new Promise<void>((resolve) => {
+            setTimeout(resolve, 1500);
+          });
 
           if (cancelled) return;
 

@@ -3,17 +3,34 @@
   "bodyClass": "wp-singular post-template-default single single-post postid-839 single-format-standard wp-theme-triolla",
   "dataRsssl": "1",
   "css": [
-    "svgs-attachment.css",
-    "animation.css_edabec9e.css",
-    "gdpr-main-nf.css_d6ea100c.css"
+    "animate.css_2af44128.css",
+    "animation.css_2af44128.css",
+    "cms-navigation-base.css_2af44128.css",
+    "cms-navigation.css_2af44128.css",
+    "fonts.css_2af44128.css",
+    "jquery.jConveyorTicker.min.css_edabec9e.css",
+    "ml-responsive.css_2af44128.css",
+    "mlstyle.css_2af44128.css",
+    "owl.carousel.css_2af44128.css",
+    "responsive.css_2af44128.css",
+    "style-new.css_2af44128.css",
+    "style.css_2af44128.css",
+    "style.min.css_68b3cde9.css"
   ],
   "js": [
-    "jquery-migrate.min.js_558973c0.js",
+    "ScrollMagic.min.js_edabec9e.js",
+    "ScrollTrigger.min.js_a1459148.js",
+    "TweenMax.min.js_edabec9e.js",
+    "all.js_a1459148.js",
+    "gsap.min.js_a1459148.js",
     "jquery-3.6.0.min.js_edabec9e.js",
-    "wow.js_edabec9e.js",
     "jquery.bez.min.js_edabec9e.js",
-    "dom-ready.min.js_5346137b.js",
-    "a11y.min.js_3f73a7c5.js",
-    "gravityforms.min.js_13f93b15.js"
+    "jquery.jConveyorTicker.min.js_edabec9e.js",
+    "lottie.min.js_2af44128.js",
+    "metaview.js_2af44128.js",
+    "owl.carousel.js_2af44128.js",
+    "v8c78df7c7c0f484497ecbca7046644da1771523124516.js",
+    "wow.js_a1459148.js",
+    "wpr-beacon.min.js"
   ]
 }

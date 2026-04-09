@@ -1,0 +1,4294 @@
+{
+  "domIssues": [
+    {
+      "type": "position_shift",
+      "tag": "h1",
+      "index": 0,
+      "section": "root",
+      "severity": "critical",
+      "confidence": 100,
+      "description": "Large position shift in root: top 5px, left 572px",
+      "deltas": {
+        "topDelta": 5,
+        "leftDelta": 572
+      },
+      "rootCauseHints": [
+        {
+          "cause": "Content reflow",
+          "probability": 0.4,
+          "evidence": "Large position shift (-5px, 572px)",
+          "tests": [
+            "Check if sibling elements changed size",
+            "Verify layout engine (flex vs float)",
+            "Check for hidden/shown sections above"
+          ]
+        },
+        {
+          "cause": "CSS layout change",
+          "probability": 0.3,
+          "evidence": "Element repositioned",
+          "tests": [
+            "Check for position: absolute/relative changes",
+            "Verify margin changes",
+            "Check flex/grid property changes"
+          ]
+        },
+        {
+          "cause": "Content size change",
+          "probability": 0.2,
+          "evidence": "Parent container affected",
+          "tests": [
+            "Check sibling element sizes",
+            "Verify text content length",
+            "Check padding/margin on parent"
+          ]
+        }
+      ],
+      "location": {
+        "section": "root",
+        "sectionPath": "",
+        "context": []
+      },
+      "impact": {
+        "score": 10,
+        "priority": "CRITICAL",
+        "reasons": [
+          "Critical structural issue",
+          "Large position shift (572px)",
+          "h1 element (5/5 semantic weight)",
+          "High confidence (reliable)"
+        ]
+      },
+      "debuggingSteps": [
+        "Inspect <h1> in DevTools to see current position",
+        "Check for float or flex layout changes",
+        "Look for margin-left/padding-left changes",
+        "Compare original vs current CSS for this element"
+      ]
+    },
+    {
+      "type": "position_shift",
+      "tag": "h2",
+      "index": 0,
+      "section": "root",
+      "severity": "critical",
+      "confidence": 100,
+      "description": "Large position shift in root: top 1492px, left 572px",
+      "deltas": {
+        "topDelta": 1492,
+        "leftDelta": 572
+      },
+      "rootCauseHints": [
+        {
+          "cause": "Content reflow",
+          "probability": 0.4,
+          "evidence": "Large position shift (1492px, 572px)",
+          "tests": [
+            "Check if sibling elements changed size",
+            "Verify layout engine (flex vs float)",
+            "Check for hidden/shown sections above"
+          ]
+        },
+        {
+          "cause": "CSS layout change",
+          "probability": 0.3,
+          "evidence": "Element repositioned",
+          "tests": [
+            "Check for position: absolute/relative changes",
+            "Verify margin changes",
+            "Check flex/grid property changes"
+          ]
+        },
+        {
+          "cause": "Content size change",
+          "probability": 0.2,
+          "evidence": "Parent container affected",
+          "tests": [
+            "Check sibling element sizes",
+            "Verify text content length",
+            "Check padding/margin on parent"
+          ]
+        }
+      ],
+      "location": {
+        "section": "root",
+        "sectionPath": "",
+        "context": []
+      },
+      "impact": {
+        "score": 10,
+        "priority": "CRITICAL",
+        "reasons": [
+          "Critical structural issue",
+          "Large position shift (1492px)",
+          "h2 element (4/5 semantic weight)",
+          "High confidence (reliable)"
+        ]
+      },
+      "debuggingSteps": [
+        "Inspect <h2> in DevTools to see current position",
+        "Check for sibling elements that changed size (padding/margin)",
+        "Verify parent container hasn't changed width or height",
+        "Check for float or flex layout changes",
+        "Look for margin-left/padding-left changes",
+        "Compare original vs current CSS for this element"
+      ]
+    },
+    {
+      "type": "position_shift",
+      "tag": "h2",
+      "index": 1,
+      "section": "root",
+      "severity": "critical",
+      "confidence": 100,
+      "description": "Large position shift in root: top 3897px, left 12px",
+      "deltas": {
+        "topDelta": 3897,
+        "leftDelta": 12
+      },
+      "rootCauseHints": [
+        {
+          "cause": "Content reflow",
+          "probability": 0.4,
+          "evidence": "Large position shift (3897px, 12px)",
+          "tests": [
+            "Check if sibling elements changed size",
+            "Verify layout engine (flex vs float)",
+            "Check for hidden/shown sections above"
+          ]
+        },
+        {
+          "cause": "CSS layout change",
+          "probability": 0.3,
+          "evidence": "Element repositioned",
+          "tests": [
+            "Check for position: absolute/relative changes",
+            "Verify margin changes",
+            "Check flex/grid property changes"
+          ]
+        },
+        {
+          "cause": "Content size change",
+          "probability": 0.2,
+          "evidence": "Parent container affected",
+          "tests": [
+            "Check sibling element sizes",
+            "Verify text content length",
+            "Check padding/margin on parent"
+          ]
+        }
+      ],
+      "location": {
+        "section": "root",
+        "sectionPath": "",
+        "context": []
+      },
+      "impact": {
+        "score": 10,
+        "priority": "CRITICAL",
+        "reasons": [
+          "Critical structural issue",
+          "Large position shift (3897px)",
+          "h2 element (4/5 semantic weight)",
+          "High confidence (reliable)"
+        ]
+      },
+      "debuggingSteps": [
+        "Inspect <h2> in DevTools to see current position",
+        "Check for sibling elements that changed size (padding/margin)",
+        "Verify parent container hasn't changed width or height",
+        "Compare original vs current CSS for this element"
+      ]
+    },
+    {
+      "type": "position_shift",
+      "tag": "h3",
+      "index": 0,
+      "section": "root",
+      "severity": "critical",
+      "confidence": 100,
+      "description": "Large position shift in root: top 3993px, left 7px",
+      "deltas": {
+        "topDelta": 3993,
+        "leftDelta": 7
+      },
+      "rootCauseHints": [
+        {
+          "cause": "Content reflow",
+          "probability": 0.4,
+          "evidence": "Large position shift (3993px, -7px)",
+          "tests": [
+            "Check if sibling elements changed size",
+            "Verify layout engine (flex vs float)",
+            "Check for hidden/shown sections above"
+          ]
+        },
+        {
+          "cause": "CSS layout change",
+          "probability": 0.3,
+          "evidence": "Element repositioned",
+          "tests": [
+            "Check for position: absolute/relative changes",
+            "Verify margin changes",
+            "Check flex/grid property changes"
+          ]
+        },
+        {
+          "cause": "Content size change",
+          "probability": 0.2,
+          "evidence": "Parent container affected",
+          "tests": [
+            "Check sibling element sizes",
+            "Verify text content length",
+            "Check padding/margin on parent"
+          ]
+        }
+      ],
+      "location": {
+        "section": "root",
+        "sectionPath": "",
+        "context": []
+      },
+      "impact": {
+        "score": 10,
+        "priority": "CRITICAL",
+        "reasons": [
+          "Critical structural issue",
+          "Large position shift (3993px)",
+          "h3 element (3/5 semantic weight)",
+          "High confidence (reliable)"
+        ]
+      },
+      "debuggingSteps": [
+        "Inspect <h3> in DevTools to see current position",
+        "Check for sibling elements that changed size (padding/margin)",
+        "Verify parent container hasn't changed width or height",
+        "Compare original vs current CSS for this element"
+      ]
+    },
+    {
+      "type": "position_shift",
+      "tag": "h3",
+      "index": 1,
+      "section": "root",
+      "severity": "critical",
+      "confidence": 100,
+      "description": "Large position shift in root: top 3872px, left 7px",
+      "deltas": {
+        "topDelta": 3872,
+        "leftDelta": 7
+      },
+      "rootCauseHints": [
+        {
+          "cause": "Content reflow",
+          "probability": 0.4,
+          "evidence": "Large position shift (3872px, -7px)",
+          "tests": [
+            "Check if sibling elements changed size",
+            "Verify layout engine (flex vs float)",
+            "Check for hidden/shown sections above"
+          ]
+        },
+        {
+          "cause": "CSS layout change",
+          "probability": 0.3,
+          "evidence": "Element repositioned",
+          "tests": [
+            "Check for position: absolute/relative changes",
+            "Verify margin changes",
+            "Check flex/grid property changes"
+          ]
+        },
+        {
+          "cause": "Content size change",
+          "probability": 0.2,
+          "evidence": "Parent container affected",
+          "tests": [
+            "Check sibling element sizes",
+            "Verify text content length",
+            "Check padding/margin on parent"
+          ]
+        }
+      ],
+      "location": {
+        "section": "root",
+        "sectionPath": "",
+        "context": []
+      },
+      "impact": {
+        "score": 10,
+        "priority": "CRITICAL",
+        "reasons": [
+          "Critical structural issue",
+          "Large position shift (3872px)",
+          "h3 element (3/5 semantic weight)",
+          "High confidence (reliable)"
+        ]
+      },
+      "debuggingSteps": [
+        "Inspect <h3> in DevTools to see current position",
+        "Check for sibling elements that changed size (padding/margin)",
+        "Verify parent container hasn't changed width or height",
+        "Compare original vs current CSS for this element"
+      ]
+    },
+    {
+      "type": "position_shift",
+      "tag": "h3",
+      "index": 2,
+      "section": "root",
+      "severity": "critical",
+      "confidence": 100,
+      "description": "Large position shift in root: top 3897px, left 12px",
+      "deltas": {
+        "topDelta": 3897,
+        "leftDelta": 12
+      },
+      "rootCauseHints": [
+        {
+          "cause": "Content reflow",
+          "probability": 0.4,
+          "evidence": "Large position shift (3897px, 12px)",
+          "tests": [
+            "Check if sibling elements changed size",
+            "Verify layout engine (flex vs float)",
+            "Check for hidden/shown sections above"
+          ]
+        },
+        {
+          "cause": "CSS layout change",
+          "probability": 0.3,
+          "evidence": "Element repositioned",
+          "tests": [
+            "Check for position: absolute/relative changes",
+            "Verify margin changes",
+            "Check flex/grid property changes"
+          ]
+        },
+        {
+          "cause": "Content size change",
+          "probability": 0.2,
+          "evidence": "Parent container affected",
+          "tests": [
+            "Check sibling element sizes",
+            "Verify text content length",
+            "Check padding/margin on parent"
+          ]
+        }
+      ],
+      "location": {
+        "section": "root",
+        "sectionPath": "",
+        "context": []
+      },
+      "impact": {
+        "score": 10,
+        "priority": "CRITICAL",
+        "reasons": [
+          "Critical structural issue",
+          "Large position shift (3897px)",
+          "h3 element (3/5 semantic weight)",
+          "High confidence (reliable)"
+        ]
+      },
+      "debuggingSteps": [
+        "Inspect <h3> in DevTools to see current position",
+        "Check for sibling elements that changed size (padding/margin)",
+        "Verify parent container hasn't changed width or height",
+        "Compare original vs current CSS for this element"
+      ]
+    },
+    {
+      "type": "position_shift",
+      "tag": "h3",
+      "index": 3,
+      "section": "root",
+      "severity": "critical",
+      "confidence": 100,
+      "description": "Large position shift in root: top 3880px, left 7px",
+      "deltas": {
+        "topDelta": 3880,
+        "leftDelta": 7
+      },
+      "rootCauseHints": [
+        {
+          "cause": "Content reflow",
+          "probability": 0.4,
+          "evidence": "Large position shift (3880px, -7px)",
+          "tests": [
+            "Check if sibling elements changed size",
+            "Verify layout engine (flex vs float)",
+            "Check for hidden/shown sections above"
+          ]
+        },
+        {
+          "cause": "CSS layout change",
+          "probability": 0.3,
+          "evidence": "Element repositioned",
+          "tests": [
+            "Check for position: absolute/relative changes",
+            "Verify margin changes",
+            "Check flex/grid property changes"
+          ]
+        },
+        {
+          "cause": "Content size change",
+          "probability": 0.2,
+          "evidence": "Parent container affected",
+          "tests": [
+            "Check sibling element sizes",
+            "Verify text content length",
+            "Check padding/margin on parent"
+          ]
+        }
+      ],
+      "location": {
+        "section": "root",
+        "sectionPath": "",
+        "context": []
+      },
+      "impact": {
+        "score": 10,
+        "priority": "CRITICAL",
+        "reasons": [
+          "Critical structural issue",
+          "Large position shift (3880px)",
+          "h3 element (3/5 semantic weight)",
+          "High confidence (reliable)"
+        ]
+      },
+      "debuggingSteps": [
+        "Inspect <h3> in DevTools to see current position",
+        "Check for sibling elements that changed size (padding/margin)",
+        "Verify parent container hasn't changed width or height",
+        "Compare original vs current CSS for this element"
+      ]
+    },
+    {
+      "type": "position_shift",
+      "tag": "h3",
+      "index": 4,
+      "section": "root",
+      "severity": "critical",
+      "confidence": 100,
+      "description": "Large position shift in root: top 4581px, left 7px",
+      "deltas": {
+        "topDelta": 4581,
+        "leftDelta": 7
+      },
+      "rootCauseHints": [
+        {
+          "cause": "Content reflow",
+          "probability": 0.4,
+          "evidence": "Large position shift (4581px, -7px)",
+          "tests": [
+            "Check if sibling elements changed size",
+            "Verify layout engine (flex vs float)",
+            "Check for hidden/shown sections above"
+          ]
+        },
+        {
+          "cause": "CSS layout change",
+          "probability": 0.3,
+          "evidence": "Element repositioned",
+          "tests": [
+            "Check for position: absolute/relative changes",
+            "Verify margin changes",
+            "Check flex/grid property changes"
+          ]
+        },
+        {
+          "cause": "Content size change",
+          "probability": 0.2,
+          "evidence": "Parent container affected",
+          "tests": [
+            "Check sibling element sizes",
+            "Verify text content length",
+            "Check padding/margin on parent"
+          ]
+        }
+      ],
+      "location": {
+        "section": "root",
+        "sectionPath": "",
+        "context": []
+      },
+      "impact": {
+        "score": 10,
+        "priority": "CRITICAL",
+        "reasons": [
+          "Critical structural issue",
+          "Large position shift (4581px)",
+          "h3 element (3/5 semantic weight)",
+          "High confidence (reliable)"
+        ]
+      },
+      "debuggingSteps": [
+        "Inspect <h3> in DevTools to see current position",
+        "Check for sibling elements that changed size (padding/margin)",
+        "Verify parent container hasn't changed width or height",
+        "Compare original vs current CSS for this element"
+      ]
+    },
+    {
+      "type": "position_shift",
+      "tag": "h3",
+      "index": 5,
+      "section": "root",
+      "severity": "critical",
+      "confidence": 100,
+      "description": "Large position shift in root: top 5545px, left 8px",
+      "deltas": {
+        "topDelta": 5545,
+        "leftDelta": 8
+      },
+      "rootCauseHints": [
+        {
+          "cause": "Content reflow",
+          "probability": 0.4,
+          "evidence": "Large position shift (5545px, -8px)",
+          "tests": [
+            "Check if sibling elements changed size",
+            "Verify layout engine (flex vs float)",
+            "Check for hidden/shown sections above"
+          ]
+        },
+        {
+          "cause": "CSS layout change",
+          "probability": 0.3,
+          "evidence": "Element repositioned",
+          "tests": [
+            "Check for position: absolute/relative changes",
+            "Verify margin changes",
+            "Check flex/grid property changes"
+          ]
+        },
+        {
+          "cause": "Content size change",
+          "probability": 0.2,
+          "evidence": "Parent container affected",
+          "tests": [
+            "Check sibling element sizes",
+            "Verify text content length",
+            "Check padding/margin on parent"
+          ]
+        }
+      ],
+      "location": {
+        "section": "root",
+        "sectionPath": "",
+        "context": []
+      },
+      "impact": {
+        "score": 10,
+        "priority": "CRITICAL",
+        "reasons": [
+          "Critical structural issue",
+          "Large position shift (5545px)",
+          "h3 element (3/5 semantic weight)",
+          "High confidence (reliable)"
+        ]
+      },
+      "debuggingSteps": [
+        "Inspect <h3> in DevTools to see current position",
+        "Check for sibling elements that changed size (padding/margin)",
+        "Verify parent container hasn't changed width or height",
+        "Compare original vs current CSS for this element"
+      ]
+    },
+    {
+      "type": "position_shift",
+      "tag": "h3",
+      "index": 6,
+      "section": "root",
+      "severity": "critical",
+      "confidence": 100,
+      "description": "Large position shift in root: top 8376px, left 7px",
+      "deltas": {
+        "topDelta": 8376,
+        "leftDelta": 7
+      },
+      "rootCauseHints": [
+        {
+          "cause": "Content reflow",
+          "probability": 0.4,
+          "evidence": "Large position shift (8376px, -7px)",
+          "tests": [
+            "Check if sibling elements changed size",
+            "Verify layout engine (flex vs float)",
+            "Check for hidden/shown sections above"
+          ]
+        },
+        {
+          "cause": "CSS layout change",
+          "probability": 0.3,
+          "evidence": "Element repositioned",
+          "tests": [
+            "Check for position: absolute/relative changes",
+            "Verify margin changes",
+            "Check flex/grid property changes"
+          ]
+        },
+        {
+          "cause": "Content size change",
+          "probability": 0.2,
+          "evidence": "Parent container affected",
+          "tests": [
+            "Check sibling element sizes",
+            "Verify text content length",
+            "Check padding/margin on parent"
+          ]
+        }
+      ],
+      "location": {
+        "section": "root",
+        "sectionPath": "",
+        "context": []
+      },
+      "impact": {
+        "score": 10,
+        "priority": "CRITICAL",
+        "reasons": [
+          "Critical structural issue",
+          "Large position shift (8376px)",
+          "h3 element (3/5 semantic weight)",
+          "High confidence (reliable)"
+        ]
+      },
+      "debuggingSteps": [
+        "Inspect <h3> in DevTools to see current position",
+        "Check for sibling elements that changed size (padding/margin)",
+        "Verify parent container hasn't changed width or height",
+        "Compare original vs current CSS for this element"
+      ]
+    },
+    {
+      "type": "position_shift",
+      "tag": "h3",
+      "index": 7,
+      "section": "root",
+      "severity": "critical",
+      "confidence": 100,
+      "description": "Large position shift in root: top 8427px, left 252px",
+      "deltas": {
+        "topDelta": 8427,
+        "leftDelta": 252
+      },
+      "rootCauseHints": [
+        {
+          "cause": "Content reflow",
+          "probability": 0.4,
+          "evidence": "Large position shift (8427px, -252px)",
+          "tests": [
+            "Check if sibling elements changed size",
+            "Verify layout engine (flex vs float)",
+            "Check for hidden/shown sections above"
+          ]
+        },
+        {
+          "cause": "CSS layout change",
+          "probability": 0.3,
+          "evidence": "Element repositioned",
+          "tests": [
+            "Check for position: absolute/relative changes",
+            "Verify margin changes",
+            "Check flex/grid property changes"
+          ]
+        },
+        {
+          "cause": "Content size change",
+          "probability": 0.2,
+          "evidence": "Parent container affected",
+          "tests": [
+            "Check sibling element sizes",
+            "Verify text content length",
+            "Check padding/margin on parent"
+          ]
+        }
+      ],
+      "location": {
+        "section": "root",
+        "sectionPath": "",
+        "context": []
+      },
+      "impact": {
+        "score": 10,
+        "priority": "CRITICAL",
+        "reasons": [
+          "Critical structural issue",
+          "Large position shift (8427px)",
+          "h3 element (3/5 semantic weight)",
+          "High confidence (reliable)"
+        ]
+      },
+      "debuggingSteps": [
+        "Inspect <h3> in DevTools to see current position",
+        "Check for sibling elements that changed size (padding/margin)",
+        "Verify parent container hasn't changed width or height",
+        "Check for float or flex layout changes",
+        "Look for margin-left/padding-left changes",
+        "Compare original vs current CSS for this element"
+      ]
+    },
+    {
+      "type": "position_shift",
+      "tag": "h4",
+      "index": 0,
+      "section": "root",
+      "severity": "critical",
+      "confidence": 100,
+      "description": "Large position shift in root: top 5416px, left 918px",
+      "deltas": {
+        "topDelta": 5416,
+        "leftDelta": 918
+      },
+      "rootCauseHints": [
+        {
+          "cause": "Content reflow",
+          "probability": 0.4,
+          "evidence": "Large position shift (5416px, 918px)",
+          "tests": [
+            "Check if sibling elements changed size",
+            "Verify layout engine (flex vs float)",
+            "Check for hidden/shown sections above"
+          ]
+        },
+        {
+          "cause": "CSS layout change",
+          "probability": 0.3,
+          "evidence": "Element repositioned",
+          "tests": [
+            "Check for position: absolute/relative changes",
+            "Verify margin changes",
+            "Check flex/grid property changes"
+          ]
+        },
+        {
+          "cause": "Content size change",
+          "probability": 0.2,
+          "evidence": "Parent container affected",
+          "tests": [
+            "Check sibling element sizes",
+            "Verify text content length",
+            "Check padding/margin on parent"
+          ]
+        }
+      ],
+      "location": {
+        "section": "root",
+        "sectionPath": "",
+        "context": []
+      },
+      "impact": {
+        "score": 9.4,
+        "priority": "CRITICAL",
+        "reasons": [
+          "Critical structural issue",
+          "Large position shift (5416px)",
+          "h4 element (1/5 semantic weight)",
+          "High confidence (reliable)"
+        ]
+      },
+      "debuggingSteps": [
+        "Inspect <h4> in DevTools to see current position",
+        "Check for sibling elements that changed size (padding/margin)",
+        "Verify parent container hasn't changed width or height",
+        "Check for float or flex layout changes",
+        "Look for margin-left/padding-left changes",
+        "Compare original vs current CSS for this element"
+      ]
+    },
+    {
+      "type": "position_shift",
+      "tag": "h5",
+      "index": 0,
+      "section": "root",
+      "severity": "critical",
+      "confidence": 100,
+      "description": "Large position shift in root: top 12615px, left 218px",
+      "deltas": {
+        "topDelta": 12615,
+        "leftDelta": 218
+      },
+      "rootCauseHints": [
+        {
+          "cause": "Content reflow",
+          "probability": 0.4,
+          "evidence": "Large position shift (-12615px, -218px)",
+          "tests": [
+            "Check if sibling elements changed size",
+            "Verify layout engine (flex vs float)",
+            "Check for hidden/shown sections above"
+          ]
+        },
+        {
+          "cause": "CSS layout change",
+          "probability": 0.3,
+          "evidence": "Element repositioned",
+          "tests": [
+            "Check for position: absolute/relative changes",
+            "Verify margin changes",
+            "Check flex/grid property changes"
+          ]
+        },
+        {
+          "cause": "Content size change",
+          "probability": 0.2,
+          "evidence": "Parent container affected",
+          "tests": [
+            "Check sibling element sizes",
+            "Verify text content length",
+            "Check padding/margin on parent"
+          ]
+        }
+      ],
+      "location": {
+        "section": "root",
+        "sectionPath": "",
+        "context": []
+      },
+      "impact": {
+        "score": 9.4,
+        "priority": "CRITICAL",
+        "reasons": [
+          "Critical structural issue",
+          "Large position shift (12615px)",
+          "h5 element (1/5 semantic weight)",
+          "High confidence (reliable)"
+        ]
+      },
+      "debuggingSteps": [
+        "Inspect <h5> in DevTools to see current position",
+        "Check for sibling elements that changed size (padding/margin)",
+        "Verify parent container hasn't changed width or height",
+        "Check for float or flex layout changes",
+        "Look for margin-left/padding-left changes",
+        "Compare original vs current CSS for this element"
+      ]
+    },
+    {
+      "type": "position_shift",
+      "tag": "a",
+      "index": 1,
+      "section": "root",
+      "severity": "critical",
+      "confidence": 100,
+      "description": "Large position shift in root: top 13px, left 591px",
+      "deltas": {
+        "topDelta": 13,
+        "leftDelta": 591
+      },
+      "rootCauseHints": [
+        {
+          "cause": "Content reflow",
+          "probability": 0.4,
+          "evidence": "Large position shift (13px, 591px)",
+          "tests": [
+            "Check if sibling elements changed size",
+            "Verify layout engine (flex vs float)",
+            "Check for hidden/shown sections above"
+          ]
+        },
+        {
+          "cause": "CSS layout change",
+          "probability": 0.3,
+          "evidence": "Element repositioned",
+          "tests": [
+            "Check for position: absolute/relative changes",
+            "Verify margin changes",
+            "Check flex/grid property changes"
+          ]
+        },
+        {
+          "cause": "Content size change",
+          "probability": 0.2,
+          "evidence": "Parent container affected",
+          "tests": [
+            "Check sibling element sizes",
+            "Verify text content length",
+            "Check padding/margin on parent"
+          ]
+        }
+      ],
+      "location": {
+        "section": "root",
+        "sectionPath": "",
+        "context": []
+      },
+      "impact": {
+        "score": 9.9,
+        "priority": "CRITICAL",
+        "reasons": [
+          "Critical structural issue",
+          "Large position shift (591px)",
+          "a element (2/5 semantic weight)",
+          "High confidence (reliable)"
+        ]
+      },
+      "debuggingSteps": [
+        "Inspect <a> in DevTools to see current position",
+        "Check for float or flex layout changes",
+        "Look for margin-left/padding-left changes",
+        "Compare original vs current CSS for this element"
+      ]
+    },
+    {
+      "type": "position_shift",
+      "tag": "a",
+      "index": 2,
+      "section": "root",
+      "severity": "critical",
+      "confidence": 100,
+      "description": "Large position shift in root: top 0px, left 576px",
+      "deltas": {
+        "topDelta": 0,
+        "leftDelta": 576
+      },
+      "rootCauseHints": [
+        {
+          "cause": "Content reflow",
+          "probability": 0.4,
+          "evidence": "Large position shift (0px, -576px)",
+          "tests": [
+            "Check if sibling elements changed size",
+            "Verify layout engine (flex vs float)",
+            "Check for hidden/shown sections above"
+          ]
+        },
+        {
+          "cause": "CSS layout change",
+          "probability": 0.3,
+          "evidence": "Element repositioned",
+          "tests": [
+            "Check for position: absolute/relative changes",
+            "Verify margin changes",
+            "Check flex/grid property changes"
+          ]
+        },
+        {
+          "cause": "Content size change",
+          "probability": 0.2,
+          "evidence": "Parent container affected",
+          "tests": [
+            "Check sibling element sizes",
+            "Verify text content length",
+            "Check padding/margin on parent"
+          ]
+        }
+      ],
+      "location": {
+        "section": "root",
+        "sectionPath": "",
+        "context": []
+      },
+      "impact": {
+        "score": 9.9,
+        "priority": "CRITICAL",
+        "reasons": [
+          "Critical structural issue",
+          "Large position shift (576px)",
+          "a element (2/5 semantic weight)",
+          "High confidence (reliable)"
+        ]
+      },
+      "debuggingSteps": [
+        "Inspect <a> in DevTools to see current position",
+        "Check for float or flex layout changes",
+        "Look for margin-left/padding-left changes",
+        "Compare original vs current CSS for this element"
+      ]
+    },
+    {
+      "type": "position_shift",
+      "tag": "a",
+      "index": 3,
+      "section": "root",
+      "severity": "critical",
+      "confidence": 100,
+      "description": "Large position shift in root: top 0px, left 594px",
+      "deltas": {
+        "topDelta": 0,
+        "leftDelta": 594
+      },
+      "rootCauseHints": [
+        {
+          "cause": "Content reflow",
+          "probability": 0.4,
+          "evidence": "Large position shift (0px, -594px)",
+          "tests": [
+            "Check if sibling elements changed size",
+            "Verify layout engine (flex vs float)",
+            "Check for hidden/shown sections above"
+          ]
+        },
+        {
+          "cause": "CSS layout change",
+          "probability": 0.3,
+          "evidence": "Element repositioned",
+          "tests": [
+            "Check for position: absolute/relative changes",
+            "Verify margin changes",
+            "Check flex/grid property changes"
+          ]
+        },
+        {
+          "cause": "Content size change",
+          "probability": 0.2,
+          "evidence": "Parent container affected",
+          "tests": [
+            "Check sibling element sizes",
+            "Verify text content length",
+            "Check padding/margin on parent"
+          ]
+        }
+      ],
+      "location": {
+        "section": "root",
+        "sectionPath": "",
+        "context": []
+      },
+      "impact": {
+        "score": 9.9,
+        "priority": "CRITICAL",
+        "reasons": [
+          "Critical structural issue",
+          "Large position shift (594px)",
+          "a element (2/5 semantic weight)",
+          "High confidence (reliable)"
+        ]
+      },
+      "debuggingSteps": [
+        "Inspect <a> in DevTools to see current position",
+        "Check for float or flex layout changes",
+        "Look for margin-left/padding-left changes",
+        "Compare original vs current CSS for this element"
+      ]
+    },
+    {
+      "type": "position_shift",
+      "tag": "a",
+      "index": 4,
+      "section": "root",
+      "severity": "critical",
+      "confidence": 100,
+      "description": "Large position shift in root: top 0px, left 606px",
+      "deltas": {
+        "topDelta": 0,
+        "leftDelta": 606
+      },
+      "rootCauseHints": [
+        {
+          "cause": "Content reflow",
+          "probability": 0.4,
+          "evidence": "Large position shift (0px, -606px)",
+          "tests": [
+            "Check if sibling elements changed size",
+            "Verify layout engine (flex vs float)",
+            "Check for hidden/shown sections above"
+          ]
+        },
+        {
+          "cause": "CSS layout change",
+          "probability": 0.3,
+          "evidence": "Element repositioned",
+          "tests": [
+            "Check for position: absolute/relative changes",
+            "Verify margin changes",
+            "Check flex/grid property changes"
+          ]
+        },
+        {
+          "cause": "Content size change",
+          "probability": 0.2,
+          "evidence": "Parent container affected",
+          "tests": [
+            "Check sibling element sizes",
+            "Verify text content length",
+            "Check padding/margin on parent"
+          ]
+        }
+      ],
+      "location": {
+        "section": "root",
+        "sectionPath": "",
+        "context": []
+      },
+      "impact": {
+        "score": 9.9,
+        "priority": "CRITICAL",
+        "reasons": [
+          "Critical structural issue",
+          "Large position shift (606px)",
+          "a element (2/5 semantic weight)",
+          "High confidence (reliable)"
+        ]
+      },
+      "debuggingSteps": [
+        "Inspect <a> in DevTools to see current position",
+        "Check for float or flex layout changes",
+        "Look for margin-left/padding-left changes",
+        "Compare original vs current CSS for this element"
+      ]
+    },
+    {
+      "type": "position_shift",
+      "tag": "a",
+      "index": 5,
+      "section": "root",
+      "severity": "critical",
+      "confidence": 100,
+      "description": "Large position shift in root: top 3872px, left 7px",
+      "deltas": {
+        "topDelta": 3872,
+        "leftDelta": 7
+      },
+      "rootCauseHints": [
+        {
+          "cause": "Content reflow",
+          "probability": 0.4,
+          "evidence": "Large position shift (3872px, -7px)",
+          "tests": [
+            "Check if sibling elements changed size",
+            "Verify layout engine (flex vs float)",
+            "Check for hidden/shown sections above"
+          ]
+        },
+        {
+          "cause": "CSS layout change",
+          "probability": 0.3,
+          "evidence": "Element repositioned",
+          "tests": [
+            "Check for position: absolute/relative changes",
+            "Verify margin changes",
+            "Check flex/grid property changes"
+          ]
+        },
+        {
+          "cause": "Content size change",
+          "probability": 0.2,
+          "evidence": "Parent container affected",
+          "tests": [
+            "Check sibling element sizes",
+            "Verify text content length",
+            "Check padding/margin on parent"
+          ]
+        }
+      ],
+      "location": {
+        "section": "root",
+        "sectionPath": "",
+        "context": []
+      },
+      "impact": {
+        "score": 9.9,
+        "priority": "CRITICAL",
+        "reasons": [
+          "Critical structural issue",
+          "Large position shift (3872px)",
+          "a element (2/5 semantic weight)",
+          "High confidence (reliable)"
+        ]
+      },
+      "debuggingSteps": [
+        "Inspect <a> in DevTools to see current position",
+        "Check for sibling elements that changed size (padding/margin)",
+        "Verify parent container hasn't changed width or height",
+        "Compare original vs current CSS for this element"
+      ]
+    },
+    {
+      "type": "position_shift",
+      "tag": "a",
+      "index": 6,
+      "section": "root",
+      "severity": "critical",
+      "confidence": 100,
+      "description": "Large position shift in root: top 3897px, left 52px",
+      "deltas": {
+        "topDelta": 3897,
+        "leftDelta": 52
+      },
+      "rootCauseHints": [
+        {
+          "cause": "Content reflow",
+          "probability": 0.4,
+          "evidence": "Large position shift (3897px, 52px)",
+          "tests": [
+            "Check if sibling elements changed size",
+            "Verify layout engine (flex vs float)",
+            "Check for hidden/shown sections above"
+          ]
+        },
+        {
+          "cause": "CSS layout change",
+          "probability": 0.3,
+          "evidence": "Element repositioned",
+          "tests": [
+            "Check for position: absolute/relative changes",
+            "Verify margin changes",
+            "Check flex/grid property changes"
+          ]
+        },
+        {
+          "cause": "Content size change",
+          "probability": 0.2,
+          "evidence": "Parent container affected",
+          "tests": [
+            "Check sibling element sizes",
+            "Verify text content length",
+            "Check padding/margin on parent"
+          ]
+        }
+      ],
+      "location": {
+        "section": "root",
+        "sectionPath": "",
+        "context": []
+      },
+      "impact": {
+        "score": 9.9,
+        "priority": "CRITICAL",
+        "reasons": [
+          "Critical structural issue",
+          "Large position shift (3897px)",
+          "a element (2/5 semantic weight)",
+          "High confidence (reliable)"
+        ]
+      },
+      "debuggingSteps": [
+        "Inspect <a> in DevTools to see current position",
+        "Check for sibling elements that changed size (padding/margin)",
+        "Verify parent container hasn't changed width or height",
+        "Check for float or flex layout changes",
+        "Look for margin-left/padding-left changes",
+        "Compare original vs current CSS for this element"
+      ]
+    },
+    {
+      "type": "position_shift",
+      "tag": "a",
+      "index": 7,
+      "section": "root",
+      "severity": "critical",
+      "confidence": 100,
+      "description": "Large position shift in root: top 9055px, left 189px",
+      "deltas": {
+        "topDelta": 9055,
+        "leftDelta": 189
+      },
+      "rootCauseHints": [
+        {
+          "cause": "Content reflow",
+          "probability": 0.4,
+          "evidence": "Large position shift (9055px, -189px)",
+          "tests": [
+            "Check if sibling elements changed size",
+            "Verify layout engine (flex vs float)",
+            "Check for hidden/shown sections above"
+          ]
+        },
+        {
+          "cause": "CSS layout change",
+          "probability": 0.3,
+          "evidence": "Element repositioned",
+          "tests": [
+            "Check for position: absolute/relative changes",
+            "Verify margin changes",
+            "Check flex/grid property changes"
+          ]
+        },
+        {
+          "cause": "Content size change",
+          "probability": 0.2,
+          "evidence": "Parent container affected",
+          "tests": [
+            "Check sibling element sizes",
+            "Verify text content length",
+            "Check padding/margin on parent"
+          ]
+        }
+      ],
+      "location": {
+        "section": "root",
+        "sectionPath": "",
+        "context": []
+      },
+      "impact": {
+        "score": 9.9,
+        "priority": "CRITICAL",
+        "reasons": [
+          "Critical structural issue",
+          "Large position shift (9055px)",
+          "a element (2/5 semantic weight)",
+          "High confidence (reliable)"
+        ]
+      },
+      "debuggingSteps": [
+        "Inspect <a> in DevTools to see current position",
+        "Check for sibling elements that changed size (padding/margin)",
+        "Verify parent container hasn't changed width or height",
+        "Check for float or flex layout changes",
+        "Look for margin-left/padding-left changes",
+        "Compare original vs current CSS for this element"
+      ]
+    },
+    {
+      "type": "position_shift",
+      "tag": "a",
+      "index": 8,
+      "section": "root",
+      "severity": "critical",
+      "confidence": 100,
+      "description": "Large position shift in root: top 8964px, left 656px",
+      "deltas": {
+        "topDelta": 8964,
+        "leftDelta": 656
+      },
+      "rootCauseHints": [
+        {
+          "cause": "Content reflow",
+          "probability": 0.4,
+          "evidence": "Large position shift (8964px, 656px)",
+          "tests": [
+            "Check if sibling elements changed size",
+            "Verify layout engine (flex vs float)",
+            "Check for hidden/shown sections above"
+          ]
+        },
+        {
+          "cause": "CSS layout change",
+          "probability": 0.3,
+          "evidence": "Element repositioned",
+          "tests": [
+            "Check for position: absolute/relative changes",
+            "Verify margin changes",
+            "Check flex/grid property changes"
+          ]
+        },
+        {
+          "cause": "Content size change",
+          "probability": 0.2,
+          "evidence": "Parent container affected",
+          "tests": [
+            "Check sibling element sizes",
+            "Verify text content length",
+            "Check padding/margin on parent"
+          ]
+        }
+      ],
+      "location": {
+        "section": "root",
+        "sectionPath": "",
+        "context": []
+      },
+      "impact": {
+        "score": 9.9,
+        "priority": "CRITICAL",
+        "reasons": [
+          "Critical structural issue",
+          "Large position shift (8964px)",
+          "a element (2/5 semantic weight)",
+          "High confidence (reliable)"
+        ]
+      },
+      "debuggingSteps": [
+        "Inspect <a> in DevTools to see current position",
+        "Check for sibling elements that changed size (padding/margin)",
+        "Verify parent container hasn't changed width or height",
+        "Check for float or flex layout changes",
+        "Look for margin-left/padding-left changes",
+        "Compare original vs current CSS for this element"
+      ]
+    },
+    {
+      "type": "position_shift",
+      "tag": "a",
+      "index": 9,
+      "section": "root",
+      "severity": "critical",
+      "confidence": 100,
+      "description": "Large position shift in root: top 8847px, left 779px",
+      "deltas": {
+        "topDelta": 8847,
+        "leftDelta": 779
+      },
+      "rootCauseHints": [
+        {
+          "cause": "Content reflow",
+          "probability": 0.4,
+          "evidence": "Large position shift (8847px, 779px)",
+          "tests": [
+            "Check if sibling elements changed size",
+            "Verify layout engine (flex vs float)",
+            "Check for hidden/shown sections above"
+          ]
+        },
+        {
+          "cause": "CSS layout change",
+          "probability": 0.3,
+          "evidence": "Element repositioned",
+          "tests": [
+            "Check for position: absolute/relative changes",
+            "Verify margin changes",
+            "Check flex/grid property changes"
+          ]
+        },
+        {
+          "cause": "Content size change",
+          "probability": 0.2,
+          "evidence": "Parent container affected",
+          "tests": [
+            "Check sibling element sizes",
+            "Verify text content length",
+            "Check padding/margin on parent"
+          ]
+        }
+      ],
+      "location": {
+        "section": "root",
+        "sectionPath": "",
+        "context": []
+      },
+      "impact": {
+        "score": 9.9,
+        "priority": "CRITICAL",
+        "reasons": [
+          "Critical structural issue",
+          "Large position shift (8847px)",
+          "a element (2/5 semantic weight)",
+          "High confidence (reliable)"
+        ]
+      },
+      "debuggingSteps": [
+        "Inspect <a> in DevTools to see current position",
+        "Check for sibling elements that changed size (padding/margin)",
+        "Verify parent container hasn't changed width or height",
+        "Check for float or flex layout changes",
+        "Look for margin-left/padding-left changes",
+        "Compare original vs current CSS for this element"
+      ]
+    },
+    {
+      "type": "position_shift",
+      "tag": "a",
+      "index": 10,
+      "section": "root",
+      "severity": "critical",
+      "confidence": 100,
+      "description": "Large position shift in root: top 8781px, left 1315px",
+      "deltas": {
+        "topDelta": 8781,
+        "leftDelta": 1315
+      },
+      "rootCauseHints": [
+        {
+          "cause": "Content reflow",
+          "probability": 0.4,
+          "evidence": "Large position shift (8781px, 1315px)",
+          "tests": [
+            "Check if sibling elements changed size",
+            "Verify layout engine (flex vs float)",
+            "Check for hidden/shown sections above"
+          ]
+        },
+        {
+          "cause": "CSS layout change",
+          "probability": 0.3,
+          "evidence": "Element repositioned",
+          "tests": [
+            "Check for position: absolute/relative changes",
+            "Verify margin changes",
+            "Check flex/grid property changes"
+          ]
+        },
+        {
+          "cause": "Content size change",
+          "probability": 0.2,
+          "evidence": "Parent container affected",
+          "tests": [
+            "Check sibling element sizes",
+            "Verify text content length",
+            "Check padding/margin on parent"
+          ]
+        }
+      ],
+      "location": {
+        "section": "root",
+        "sectionPath": "",
+        "context": []
+      },
+      "impact": {
+        "score": 9.9,
+        "priority": "CRITICAL",
+        "reasons": [
+          "Critical structural issue",
+          "Large position shift (8781px)",
+          "a element (2/5 semantic weight)",
+          "High confidence (reliable)"
+        ]
+      },
+      "debuggingSteps": [
+        "Inspect <a> in DevTools to see current position",
+        "Check for sibling elements that changed size (padding/margin)",
+        "Verify parent container hasn't changed width or height",
+        "Check for float or flex layout changes",
+        "Look for margin-left/padding-left changes",
+        "Compare original vs current CSS for this element"
+      ]
+    }
+  ],
+  "groupedByLocation": {
+    "bySection": {
+      "root": [
+        {
+          "type": "position_shift",
+          "tag": "h1",
+          "index": 0,
+          "section": "root",
+          "severity": "critical",
+          "confidence": 100,
+          "description": "Large position shift in root: top 5px, left 572px",
+          "deltas": {
+            "topDelta": 5,
+            "leftDelta": 572
+          },
+          "rootCauseHints": [
+            {
+              "cause": "Content reflow",
+              "probability": 0.4,
+              "evidence": "Large position shift (-5px, 572px)",
+              "tests": [
+                "Check if sibling elements changed size",
+                "Verify layout engine (flex vs float)",
+                "Check for hidden/shown sections above"
+              ]
+            },
+            {
+              "cause": "CSS layout change",
+              "probability": 0.3,
+              "evidence": "Element repositioned",
+              "tests": [
+                "Check for position: absolute/relative changes",
+                "Verify margin changes",
+                "Check flex/grid property changes"
+              ]
+            },
+            {
+              "cause": "Content size change",
+              "probability": 0.2,
+              "evidence": "Parent container affected",
+              "tests": [
+                "Check sibling element sizes",
+                "Verify text content length",
+                "Check padding/margin on parent"
+              ]
+            }
+          ],
+          "location": {
+            "section": "root",
+            "sectionPath": "",
+            "context": []
+          }
+        },
+        {
+          "type": "position_shift",
+          "tag": "h2",
+          "index": 0,
+          "section": "root",
+          "severity": "critical",
+          "confidence": 100,
+          "description": "Large position shift in root: top 1492px, left 572px",
+          "deltas": {
+            "topDelta": 1492,
+            "leftDelta": 572
+          },
+          "rootCauseHints": [
+            {
+              "cause": "Content reflow",
+              "probability": 0.4,
+              "evidence": "Large position shift (1492px, 572px)",
+              "tests": [
+                "Check if sibling elements changed size",
+                "Verify layout engine (flex vs float)",
+                "Check for hidden/shown sections above"
+              ]
+            },
+            {
+              "cause": "CSS layout change",
+              "probability": 0.3,
+              "evidence": "Element repositioned",
+              "tests": [
+                "Check for position: absolute/relative changes",
+                "Verify margin changes",
+                "Check flex/grid property changes"
+              ]
+            },
+            {
+              "cause": "Content size change",
+              "probability": 0.2,
+              "evidence": "Parent container affected",
+              "tests": [
+                "Check sibling element sizes",
+                "Verify text content length",
+                "Check padding/margin on parent"
+              ]
+            }
+          ],
+          "location": {
+            "section": "root",
+            "sectionPath": "",
+            "context": []
+          }
+        },
+        {
+          "type": "position_shift",
+          "tag": "h2",
+          "index": 1,
+          "section": "root",
+          "severity": "critical",
+          "confidence": 100,
+          "description": "Large position shift in root: top 3897px, left 12px",
+          "deltas": {
+            "topDelta": 3897,
+            "leftDelta": 12
+          },
+          "rootCauseHints": [
+            {
+              "cause": "Content reflow",
+              "probability": 0.4,
+              "evidence": "Large position shift (3897px, 12px)",
+              "tests": [
+                "Check if sibling elements changed size",
+                "Verify layout engine (flex vs float)",
+                "Check for hidden/shown sections above"
+              ]
+            },
+            {
+              "cause": "CSS layout change",
+              "probability": 0.3,
+              "evidence": "Element repositioned",
+              "tests": [
+                "Check for position: absolute/relative changes",
+                "Verify margin changes",
+                "Check flex/grid property changes"
+              ]
+            },
+            {
+              "cause": "Content size change",
+              "probability": 0.2,
+              "evidence": "Parent container affected",
+              "tests": [
+                "Check sibling element sizes",
+                "Verify text content length",
+                "Check padding/margin on parent"
+              ]
+            }
+          ],
+          "location": {
+            "section": "root",
+            "sectionPath": "",
+            "context": []
+          }
+        },
+        {
+          "type": "position_shift",
+          "tag": "h3",
+          "index": 0,
+          "section": "root",
+          "severity": "critical",
+          "confidence": 100,
+          "description": "Large position shift in root: top 3993px, left 7px",
+          "deltas": {
+            "topDelta": 3993,
+            "leftDelta": 7
+          },
+          "rootCauseHints": [
+            {
+              "cause": "Content reflow",
+              "probability": 0.4,
+              "evidence": "Large position shift (3993px, -7px)",
+              "tests": [
+                "Check if sibling elements changed size",
+                "Verify layout engine (flex vs float)",
+                "Check for hidden/shown sections above"
+              ]
+            },
+            {
+              "cause": "CSS layout change",
+              "probability": 0.3,
+              "evidence": "Element repositioned",
+              "tests": [
+                "Check for position: absolute/relative changes",
+                "Verify margin changes",
+                "Check flex/grid property changes"
+              ]
+            },
+            {
+              "cause": "Content size change",
+              "probability": 0.2,
+              "evidence": "Parent container affected",
+              "tests": [
+                "Check sibling element sizes",
+                "Verify text content length",
+                "Check padding/margin on parent"
+              ]
+            }
+          ],
+          "location": {
+            "section": "root",
+            "sectionPath": "",
+            "context": []
+          }
+        },
+        {
+          "type": "position_shift",
+          "tag": "h3",
+          "index": 1,
+          "section": "root",
+          "severity": "critical",
+          "confidence": 100,
+          "description": "Large position shift in root: top 3872px, left 7px",
+          "deltas": {
+            "topDelta": 3872,
+            "leftDelta": 7
+          },
+          "rootCauseHints": [
+            {
+              "cause": "Content reflow",
+              "probability": 0.4,
+              "evidence": "Large position shift (3872px, -7px)",
+              "tests": [
+                "Check if sibling elements changed size",
+                "Verify layout engine (flex vs float)",
+                "Check for hidden/shown sections above"
+              ]
+            },
+            {
+              "cause": "CSS layout change",
+              "probability": 0.3,
+              "evidence": "Element repositioned",
+              "tests": [
+                "Check for position: absolute/relative changes",
+                "Verify margin changes",
+                "Check flex/grid property changes"
+              ]
+            },
+            {
+              "cause": "Content size change",
+              "probability": 0.2,
+              "evidence": "Parent container affected",
+              "tests": [
+                "Check sibling element sizes",
+                "Verify text content length",
+                "Check padding/margin on parent"
+              ]
+            }
+          ],
+          "location": {
+            "section": "root",
+            "sectionPath": "",
+            "context": []
+          }
+        },
+        {
+          "type": "position_shift",
+          "tag": "h3",
+          "index": 2,
+          "section": "root",
+          "severity": "critical",
+          "confidence": 100,
+          "description": "Large position shift in root: top 3897px, left 12px",
+          "deltas": {
+            "topDelta": 3897,
+            "leftDelta": 12
+          },
+          "rootCauseHints": [
+            {
+              "cause": "Content reflow",
+              "probability": 0.4,
+              "evidence": "Large position shift (3897px, 12px)",
+              "tests": [
+                "Check if sibling elements changed size",
+                "Verify layout engine (flex vs float)",
+                "Check for hidden/shown sections above"
+              ]
+            },
+            {
+              "cause": "CSS layout change",
+              "probability": 0.3,
+              "evidence": "Element repositioned",
+              "tests": [
+                "Check for position: absolute/relative changes",
+                "Verify margin changes",
+                "Check flex/grid property changes"
+              ]
+            },
+            {
+              "cause": "Content size change",
+              "probability": 0.2,
+              "evidence": "Parent container affected",
+              "tests": [
+                "Check sibling element sizes",
+                "Verify text content length",
+                "Check padding/margin on parent"
+              ]
+            }
+          ],
+          "location": {
+            "section": "root",
+            "sectionPath": "",
+            "context": []
+          }
+        },
+        {
+          "type": "position_shift",
+          "tag": "h3",
+          "index": 3,
+          "section": "root",
+          "severity": "critical",
+          "confidence": 100,
+          "description": "Large position shift in root: top 3880px, left 7px",
+          "deltas": {
+            "topDelta": 3880,
+            "leftDelta": 7
+          },
+          "rootCauseHints": [
+            {
+              "cause": "Content reflow",
+              "probability": 0.4,
+              "evidence": "Large position shift (3880px, -7px)",
+              "tests": [
+                "Check if sibling elements changed size",
+                "Verify layout engine (flex vs float)",
+                "Check for hidden/shown sections above"
+              ]
+            },
+            {
+              "cause": "CSS layout change",
+              "probability": 0.3,
+              "evidence": "Element repositioned",
+              "tests": [
+                "Check for position: absolute/relative changes",
+                "Verify margin changes",
+                "Check flex/grid property changes"
+              ]
+            },
+            {
+              "cause": "Content size change",
+              "probability": 0.2,
+              "evidence": "Parent container affected",
+              "tests": [
+                "Check sibling element sizes",
+                "Verify text content length",
+                "Check padding/margin on parent"
+              ]
+            }
+          ],
+          "location": {
+            "section": "root",
+            "sectionPath": "",
+            "context": []
+          }
+        },
+        {
+          "type": "position_shift",
+          "tag": "h3",
+          "index": 4,
+          "section": "root",
+          "severity": "critical",
+          "confidence": 100,
+          "description": "Large position shift in root: top 4581px, left 7px",
+          "deltas": {
+            "topDelta": 4581,
+            "leftDelta": 7
+          },
+          "rootCauseHints": [
+            {
+              "cause": "Content reflow",
+              "probability": 0.4,
+              "evidence": "Large position shift (4581px, -7px)",
+              "tests": [
+                "Check if sibling elements changed size",
+                "Verify layout engine (flex vs float)",
+                "Check for hidden/shown sections above"
+              ]
+            },
+            {
+              "cause": "CSS layout change",
+              "probability": 0.3,
+              "evidence": "Element repositioned",
+              "tests": [
+                "Check for position: absolute/relative changes",
+                "Verify margin changes",
+                "Check flex/grid property changes"
+              ]
+            },
+            {
+              "cause": "Content size change",
+              "probability": 0.2,
+              "evidence": "Parent container affected",
+              "tests": [
+                "Check sibling element sizes",
+                "Verify text content length",
+                "Check padding/margin on parent"
+              ]
+            }
+          ],
+          "location": {
+            "section": "root",
+            "sectionPath": "",
+            "context": []
+          }
+        },
+        {
+          "type": "position_shift",
+          "tag": "h3",
+          "index": 5,
+          "section": "root",
+          "severity": "critical",
+          "confidence": 100,
+          "description": "Large position shift in root: top 5545px, left 8px",
+          "deltas": {
+            "topDelta": 5545,
+            "leftDelta": 8
+          },
+          "rootCauseHints": [
+            {
+              "cause": "Content reflow",
+              "probability": 0.4,
+              "evidence": "Large position shift (5545px, -8px)",
+              "tests": [
+                "Check if sibling elements changed size",
+                "Verify layout engine (flex vs float)",
+                "Check for hidden/shown sections above"
+              ]
+            },
+            {
+              "cause": "CSS layout change",
+              "probability": 0.3,
+              "evidence": "Element repositioned",
+              "tests": [
+                "Check for position: absolute/relative changes",
+                "Verify margin changes",
+                "Check flex/grid property changes"
+              ]
+            },
+            {
+              "cause": "Content size change",
+              "probability": 0.2,
+              "evidence": "Parent container affected",
+              "tests": [
+                "Check sibling element sizes",
+                "Verify text content length",
+                "Check padding/margin on parent"
+              ]
+            }
+          ],
+          "location": {
+            "section": "root",
+            "sectionPath": "",
+            "context": []
+          }
+        },
+        {
+          "type": "position_shift",
+          "tag": "h3",
+          "index": 6,
+          "section": "root",
+          "severity": "critical",
+          "confidence": 100,
+          "description": "Large position shift in root: top 8376px, left 7px",
+          "deltas": {
+            "topDelta": 8376,
+            "leftDelta": 7
+          },
+          "rootCauseHints": [
+            {
+              "cause": "Content reflow",
+              "probability": 0.4,
+              "evidence": "Large position shift (8376px, -7px)",
+              "tests": [
+                "Check if sibling elements changed size",
+                "Verify layout engine (flex vs float)",
+                "Check for hidden/shown sections above"
+              ]
+            },
+            {
+              "cause": "CSS layout change",
+              "probability": 0.3,
+              "evidence": "Element repositioned",
+              "tests": [
+                "Check for position: absolute/relative changes",
+                "Verify margin changes",
+                "Check flex/grid property changes"
+              ]
+            },
+            {
+              "cause": "Content size change",
+              "probability": 0.2,
+              "evidence": "Parent container affected",
+              "tests": [
+                "Check sibling element sizes",
+                "Verify text content length",
+                "Check padding/margin on parent"
+              ]
+            }
+          ],
+          "location": {
+            "section": "root",
+            "sectionPath": "",
+            "context": []
+          }
+        },
+        {
+          "type": "position_shift",
+          "tag": "h3",
+          "index": 7,
+          "section": "root",
+          "severity": "critical",
+          "confidence": 100,
+          "description": "Large position shift in root: top 8427px, left 252px",
+          "deltas": {
+            "topDelta": 8427,
+            "leftDelta": 252
+          },
+          "rootCauseHints": [
+            {
+              "cause": "Content reflow",
+              "probability": 0.4,
+              "evidence": "Large position shift (8427px, -252px)",
+              "tests": [
+                "Check if sibling elements changed size",
+                "Verify layout engine (flex vs float)",
+                "Check for hidden/shown sections above"
+              ]
+            },
+            {
+              "cause": "CSS layout change",
+              "probability": 0.3,
+              "evidence": "Element repositioned",
+              "tests": [
+                "Check for position: absolute/relative changes",
+                "Verify margin changes",
+                "Check flex/grid property changes"
+              ]
+            },
+            {
+              "cause": "Content size change",
+              "probability": 0.2,
+              "evidence": "Parent container affected",
+              "tests": [
+                "Check sibling element sizes",
+                "Verify text content length",
+                "Check padding/margin on parent"
+              ]
+            }
+          ],
+          "location": {
+            "section": "root",
+            "sectionPath": "",
+            "context": []
+          }
+        },
+        {
+          "type": "position_shift",
+          "tag": "h4",
+          "index": 0,
+          "section": "root",
+          "severity": "critical",
+          "confidence": 100,
+          "description": "Large position shift in root: top 5416px, left 918px",
+          "deltas": {
+            "topDelta": 5416,
+            "leftDelta": 918
+          },
+          "rootCauseHints": [
+            {
+              "cause": "Content reflow",
+              "probability": 0.4,
+              "evidence": "Large position shift (5416px, 918px)",
+              "tests": [
+                "Check if sibling elements changed size",
+                "Verify layout engine (flex vs float)",
+                "Check for hidden/shown sections above"
+              ]
+            },
+            {
+              "cause": "CSS layout change",
+              "probability": 0.3,
+              "evidence": "Element repositioned",
+              "tests": [
+                "Check for position: absolute/relative changes",
+                "Verify margin changes",
+                "Check flex/grid property changes"
+              ]
+            },
+            {
+              "cause": "Content size change",
+              "probability": 0.2,
+              "evidence": "Parent container affected",
+              "tests": [
+                "Check sibling element sizes",
+                "Verify text content length",
+                "Check padding/margin on parent"
+              ]
+            }
+          ],
+          "location": {
+            "section": "root",
+            "sectionPath": "",
+            "context": []
+          }
+        },
+        {
+          "type": "position_shift",
+          "tag": "h5",
+          "index": 0,
+          "section": "root",
+          "severity": "critical",
+          "confidence": 100,
+          "description": "Large position shift in root: top 12615px, left 218px",
+          "deltas": {
+            "topDelta": 12615,
+            "leftDelta": 218
+          },
+          "rootCauseHints": [
+            {
+              "cause": "Content reflow",
+              "probability": 0.4,
+              "evidence": "Large position shift (-12615px, -218px)",
+              "tests": [
+                "Check if sibling elements changed size",
+                "Verify layout engine (flex vs float)",
+                "Check for hidden/shown sections above"
+              ]
+            },
+            {
+              "cause": "CSS layout change",
+              "probability": 0.3,
+              "evidence": "Element repositioned",
+              "tests": [
+                "Check for position: absolute/relative changes",
+                "Verify margin changes",
+                "Check flex/grid property changes"
+              ]
+            },
+            {
+              "cause": "Content size change",
+              "probability": 0.2,
+              "evidence": "Parent container affected",
+              "tests": [
+                "Check sibling element sizes",
+                "Verify text content length",
+                "Check padding/margin on parent"
+              ]
+            }
+          ],
+          "location": {
+            "section": "root",
+            "sectionPath": "",
+            "context": []
+          }
+        },
+        {
+          "type": "position_shift",
+          "tag": "a",
+          "index": 1,
+          "section": "root",
+          "severity": "critical",
+          "confidence": 100,
+          "description": "Large position shift in root: top 13px, left 591px",
+          "deltas": {
+            "topDelta": 13,
+            "leftDelta": 591
+          },
+          "rootCauseHints": [
+            {
+              "cause": "Content reflow",
+              "probability": 0.4,
+              "evidence": "Large position shift (13px, 591px)",
+              "tests": [
+                "Check if sibling elements changed size",
+                "Verify layout engine (flex vs float)",
+                "Check for hidden/shown sections above"
+              ]
+            },
+            {
+              "cause": "CSS layout change",
+              "probability": 0.3,
+              "evidence": "Element repositioned",
+              "tests": [
+                "Check for position: absolute/relative changes",
+                "Verify margin changes",
+                "Check flex/grid property changes"
+              ]
+            },
+            {
+              "cause": "Content size change",
+              "probability": 0.2,
+              "evidence": "Parent container affected",
+              "tests": [
+                "Check sibling element sizes",
+                "Verify text content length",
+                "Check padding/margin on parent"
+              ]
+            }
+          ],
+          "location": {
+            "section": "root",
+            "sectionPath": "",
+            "context": []
+          }
+        },
+        {
+          "type": "position_shift",
+          "tag": "a",
+          "index": 2,
+          "section": "root",
+          "severity": "critical",
+          "confidence": 100,
+          "description": "Large position shift in root: top 0px, left 576px",
+          "deltas": {
+            "topDelta": 0,
+            "leftDelta": 576
+          },
+          "rootCauseHints": [
+            {
+              "cause": "Content reflow",
+              "probability": 0.4,
+              "evidence": "Large position shift (0px, -576px)",
+              "tests": [
+                "Check if sibling elements changed size",
+                "Verify layout engine (flex vs float)",
+                "Check for hidden/shown sections above"
+              ]
+            },
+            {
+              "cause": "CSS layout change",
+              "probability": 0.3,
+              "evidence": "Element repositioned",
+              "tests": [
+                "Check for position: absolute/relative changes",
+                "Verify margin changes",
+                "Check flex/grid property changes"
+              ]
+            },
+            {
+              "cause": "Content size change",
+              "probability": 0.2,
+              "evidence": "Parent container affected",
+              "tests": [
+                "Check sibling element sizes",
+                "Verify text content length",
+                "Check padding/margin on parent"
+              ]
+            }
+          ],
+          "location": {
+            "section": "root",
+            "sectionPath": "",
+            "context": []
+          }
+        },
+        {
+          "type": "position_shift",
+          "tag": "a",
+          "index": 3,
+          "section": "root",
+          "severity": "critical",
+          "confidence": 100,
+          "description": "Large position shift in root: top 0px, left 594px",
+          "deltas": {
+            "topDelta": 0,
+            "leftDelta": 594
+          },
+          "rootCauseHints": [
+            {
+              "cause": "Content reflow",
+              "probability": 0.4,
+              "evidence": "Large position shift (0px, -594px)",
+              "tests": [
+                "Check if sibling elements changed size",
+                "Verify layout engine (flex vs float)",
+                "Check for hidden/shown sections above"
+              ]
+            },
+            {
+              "cause": "CSS layout change",
+              "probability": 0.3,
+              "evidence": "Element repositioned",
+              "tests": [
+                "Check for position: absolute/relative changes",
+                "Verify margin changes",
+                "Check flex/grid property changes"
+              ]
+            },
+            {
+              "cause": "Content size change",
+              "probability": 0.2,
+              "evidence": "Parent container affected",
+              "tests": [
+                "Check sibling element sizes",
+                "Verify text content length",
+                "Check padding/margin on parent"
+              ]
+            }
+          ],
+          "location": {
+            "section": "root",
+            "sectionPath": "",
+            "context": []
+          }
+        },
+        {
+          "type": "position_shift",
+          "tag": "a",
+          "index": 4,
+          "section": "root",
+          "severity": "critical",
+          "confidence": 100,
+          "description": "Large position shift in root: top 0px, left 606px",
+          "deltas": {
+            "topDelta": 0,
+            "leftDelta": 606
+          },
+          "rootCauseHints": [
+            {
+              "cause": "Content reflow",
+              "probability": 0.4,
+              "evidence": "Large position shift (0px, -606px)",
+              "tests": [
+                "Check if sibling elements changed size",
+                "Verify layout engine (flex vs float)",
+                "Check for hidden/shown sections above"
+              ]
+            },
+            {
+              "cause": "CSS layout change",
+              "probability": 0.3,
+              "evidence": "Element repositioned",
+              "tests": [
+                "Check for position: absolute/relative changes",
+                "Verify margin changes",
+                "Check flex/grid property changes"
+              ]
+            },
+            {
+              "cause": "Content size change",
+              "probability": 0.2,
+              "evidence": "Parent container affected",
+              "tests": [
+                "Check sibling element sizes",
+                "Verify text content length",
+                "Check padding/margin on parent"
+              ]
+            }
+          ],
+          "location": {
+            "section": "root",
+            "sectionPath": "",
+            "context": []
+          }
+        },
+        {
+          "type": "position_shift",
+          "tag": "a",
+          "index": 5,
+          "section": "root",
+          "severity": "critical",
+          "confidence": 100,
+          "description": "Large position shift in root: top 3872px, left 7px",
+          "deltas": {
+            "topDelta": 3872,
+            "leftDelta": 7
+          },
+          "rootCauseHints": [
+            {
+              "cause": "Content reflow",
+              "probability": 0.4,
+              "evidence": "Large position shift (3872px, -7px)",
+              "tests": [
+                "Check if sibling elements changed size",
+                "Verify layout engine (flex vs float)",
+                "Check for hidden/shown sections above"
+              ]
+            },
+            {
+              "cause": "CSS layout change",
+              "probability": 0.3,
+              "evidence": "Element repositioned",
+              "tests": [
+                "Check for position: absolute/relative changes",
+                "Verify margin changes",
+                "Check flex/grid property changes"
+              ]
+            },
+            {
+              "cause": "Content size change",
+              "probability": 0.2,
+              "evidence": "Parent container affected",
+              "tests": [
+                "Check sibling element sizes",
+                "Verify text content length",
+                "Check padding/margin on parent"
+              ]
+            }
+          ],
+          "location": {
+            "section": "root",
+            "sectionPath": "",
+            "context": []
+          }
+        },
+        {
+          "type": "position_shift",
+          "tag": "a",
+          "index": 6,
+          "section": "root",
+          "severity": "critical",
+          "confidence": 100,
+          "description": "Large position shift in root: top 3897px, left 52px",
+          "deltas": {
+            "topDelta": 3897,
+            "leftDelta": 52
+          },
+          "rootCauseHints": [
+            {
+              "cause": "Content reflow",
+              "probability": 0.4,
+              "evidence": "Large position shift (3897px, 52px)",
+              "tests": [
+                "Check if sibling elements changed size",
+                "Verify layout engine (flex vs float)",
+                "Check for hidden/shown sections above"
+              ]
+            },
+            {
+              "cause": "CSS layout change",
+              "probability": 0.3,
+              "evidence": "Element repositioned",
+              "tests": [
+                "Check for position: absolute/relative changes",
+                "Verify margin changes",
+                "Check flex/grid property changes"
+              ]
+            },
+            {
+              "cause": "Content size change",
+              "probability": 0.2,
+              "evidence": "Parent container affected",
+              "tests": [
+                "Check sibling element sizes",
+                "Verify text content length",
+                "Check padding/margin on parent"
+              ]
+            }
+          ],
+          "location": {
+            "section": "root",
+            "sectionPath": "",
+            "context": []
+          }
+        },
+        {
+          "type": "position_shift",
+          "tag": "a",
+          "index": 7,
+          "section": "root",
+          "severity": "critical",
+          "confidence": 100,
+          "description": "Large position shift in root: top 9055px, left 189px",
+          "deltas": {
+            "topDelta": 9055,
+            "leftDelta": 189
+          },
+          "rootCauseHints": [
+            {
+              "cause": "Content reflow",
+              "probability": 0.4,
+              "evidence": "Large position shift (9055px, -189px)",
+              "tests": [
+                "Check if sibling elements changed size",
+                "Verify layout engine (flex vs float)",
+                "Check for hidden/shown sections above"
+              ]
+            },
+            {
+              "cause": "CSS layout change",
+              "probability": 0.3,
+              "evidence": "Element repositioned",
+              "tests": [
+                "Check for position: absolute/relative changes",
+                "Verify margin changes",
+                "Check flex/grid property changes"
+              ]
+            },
+            {
+              "cause": "Content size change",
+              "probability": 0.2,
+              "evidence": "Parent container affected",
+              "tests": [
+                "Check sibling element sizes",
+                "Verify text content length",
+                "Check padding/margin on parent"
+              ]
+            }
+          ],
+          "location": {
+            "section": "root",
+            "sectionPath": "",
+            "context": []
+          }
+        },
+        {
+          "type": "position_shift",
+          "tag": "a",
+          "index": 8,
+          "section": "root",
+          "severity": "critical",
+          "confidence": 100,
+          "description": "Large position shift in root: top 8964px, left 656px",
+          "deltas": {
+            "topDelta": 8964,
+            "leftDelta": 656
+          },
+          "rootCauseHints": [
+            {
+              "cause": "Content reflow",
+              "probability": 0.4,
+              "evidence": "Large position shift (8964px, 656px)",
+              "tests": [
+                "Check if sibling elements changed size",
+                "Verify layout engine (flex vs float)",
+                "Check for hidden/shown sections above"
+              ]
+            },
+            {
+              "cause": "CSS layout change",
+              "probability": 0.3,
+              "evidence": "Element repositioned",
+              "tests": [
+                "Check for position: absolute/relative changes",
+                "Verify margin changes",
+                "Check flex/grid property changes"
+              ]
+            },
+            {
+              "cause": "Content size change",
+              "probability": 0.2,
+              "evidence": "Parent container affected",
+              "tests": [
+                "Check sibling element sizes",
+                "Verify text content length",
+                "Check padding/margin on parent"
+              ]
+            }
+          ],
+          "location": {
+            "section": "root",
+            "sectionPath": "",
+            "context": []
+          }
+        },
+        {
+          "type": "position_shift",
+          "tag": "a",
+          "index": 9,
+          "section": "root",
+          "severity": "critical",
+          "confidence": 100,
+          "description": "Large position shift in root: top 8847px, left 779px",
+          "deltas": {
+            "topDelta": 8847,
+            "leftDelta": 779
+          },
+          "rootCauseHints": [
+            {
+              "cause": "Content reflow",
+              "probability": 0.4,
+              "evidence": "Large position shift (8847px, 779px)",
+              "tests": [
+                "Check if sibling elements changed size",
+                "Verify layout engine (flex vs float)",
+                "Check for hidden/shown sections above"
+              ]
+            },
+            {
+              "cause": "CSS layout change",
+              "probability": 0.3,
+              "evidence": "Element repositioned",
+              "tests": [
+                "Check for position: absolute/relative changes",
+                "Verify margin changes",
+                "Check flex/grid property changes"
+              ]
+            },
+            {
+              "cause": "Content size change",
+              "probability": 0.2,
+              "evidence": "Parent container affected",
+              "tests": [
+                "Check sibling element sizes",
+                "Verify text content length",
+                "Check padding/margin on parent"
+              ]
+            }
+          ],
+          "location": {
+            "section": "root",
+            "sectionPath": "",
+            "context": []
+          }
+        },
+        {
+          "type": "position_shift",
+          "tag": "a",
+          "index": 10,
+          "section": "root",
+          "severity": "critical",
+          "confidence": 100,
+          "description": "Large position shift in root: top 8781px, left 1315px",
+          "deltas": {
+            "topDelta": 8781,
+            "leftDelta": 1315
+          },
+          "rootCauseHints": [
+            {
+              "cause": "Content reflow",
+              "probability": 0.4,
+              "evidence": "Large position shift (8781px, 1315px)",
+              "tests": [
+                "Check if sibling elements changed size",
+                "Verify layout engine (flex vs float)",
+                "Check for hidden/shown sections above"
+              ]
+            },
+            {
+              "cause": "CSS layout change",
+              "probability": 0.3,
+              "evidence": "Element repositioned",
+              "tests": [
+                "Check for position: absolute/relative changes",
+                "Verify margin changes",
+                "Check flex/grid property changes"
+              ]
+            },
+            {
+              "cause": "Content size change",
+              "probability": 0.2,
+              "evidence": "Parent container affected",
+              "tests": [
+                "Check sibling element sizes",
+                "Verify text content length",
+                "Check padding/margin on parent"
+              ]
+            }
+          ],
+          "location": {
+            "section": "root",
+            "sectionPath": "",
+            "context": []
+          }
+        }
+      ]
+    },
+    "byRegion": {
+      "critical": [
+        {
+          "type": "position_shift",
+          "tag": "h1",
+          "index": 0,
+          "section": "root",
+          "severity": "critical",
+          "confidence": 100,
+          "description": "Large position shift in root: top 5px, left 572px",
+          "deltas": {
+            "topDelta": 5,
+            "leftDelta": 572
+          },
+          "rootCauseHints": [
+            {
+              "cause": "Content reflow",
+              "probability": 0.4,
+              "evidence": "Large position shift (-5px, 572px)",
+              "tests": [
+                "Check if sibling elements changed size",
+                "Verify layout engine (flex vs float)",
+                "Check for hidden/shown sections above"
+              ]
+            },
+            {
+              "cause": "CSS layout change",
+              "probability": 0.3,
+              "evidence": "Element repositioned",
+              "tests": [
+                "Check for position: absolute/relative changes",
+                "Verify margin changes",
+                "Check flex/grid property changes"
+              ]
+            },
+            {
+              "cause": "Content size change",
+              "probability": 0.2,
+              "evidence": "Parent container affected",
+              "tests": [
+                "Check sibling element sizes",
+                "Verify text content length",
+                "Check padding/margin on parent"
+              ]
+            }
+          ],
+          "location": {
+            "section": "root",
+            "sectionPath": "",
+            "context": []
+          },
+          "impact": {
+            "score": 10,
+            "priority": "CRITICAL",
+            "reasons": [
+              "Critical structural issue",
+              "Large position shift (572px)",
+              "h1 element (5/5 semantic weight)",
+              "High confidence (reliable)"
+            ]
+          },
+          "debuggingSteps": [
+            "Inspect <h1> in DevTools to see current position",
+            "Check for float or flex layout changes",
+            "Look for margin-left/padding-left changes",
+            "Compare original vs current CSS for this element"
+          ]
+        },
+        {
+          "type": "position_shift",
+          "tag": "h2",
+          "index": 0,
+          "section": "root",
+          "severity": "critical",
+          "confidence": 100,
+          "description": "Large position shift in root: top 1492px, left 572px",
+          "deltas": {
+            "topDelta": 1492,
+            "leftDelta": 572
+          },
+          "rootCauseHints": [
+            {
+              "cause": "Content reflow",
+              "probability": 0.4,
+              "evidence": "Large position shift (1492px, 572px)",
+              "tests": [
+                "Check if sibling elements changed size",
+                "Verify layout engine (flex vs float)",
+                "Check for hidden/shown sections above"
+              ]
+            },
+            {
+              "cause": "CSS layout change",
+              "probability": 0.3,
+              "evidence": "Element repositioned",
+              "tests": [
+                "Check for position: absolute/relative changes",
+                "Verify margin changes",
+                "Check flex/grid property changes"
+              ]
+            },
+            {
+              "cause": "Content size change",
+              "probability": 0.2,
+              "evidence": "Parent container affected",
+              "tests": [
+                "Check sibling element sizes",
+                "Verify text content length",
+                "Check padding/margin on parent"
+              ]
+            }
+          ],
+          "location": {
+            "section": "root",
+            "sectionPath": "",
+            "context": []
+          },
+          "impact": {
+            "score": 10,
+            "priority": "CRITICAL",
+            "reasons": [
+              "Critical structural issue",
+              "Large position shift (1492px)",
+              "h2 element (4/5 semantic weight)",
+              "High confidence (reliable)"
+            ]
+          },
+          "debuggingSteps": [
+            "Inspect <h2> in DevTools to see current position",
+            "Check for sibling elements that changed size (padding/margin)",
+            "Verify parent container hasn't changed width or height",
+            "Check for float or flex layout changes",
+            "Look for margin-left/padding-left changes",
+            "Compare original vs current CSS for this element"
+          ]
+        },
+        {
+          "type": "position_shift",
+          "tag": "h2",
+          "index": 1,
+          "section": "root",
+          "severity": "critical",
+          "confidence": 100,
+          "description": "Large position shift in root: top 3897px, left 12px",
+          "deltas": {
+            "topDelta": 3897,
+            "leftDelta": 12
+          },
+          "rootCauseHints": [
+            {
+              "cause": "Content reflow",
+              "probability": 0.4,
+              "evidence": "Large position shift (3897px, 12px)",
+              "tests": [
+                "Check if sibling elements changed size",
+                "Verify layout engine (flex vs float)",
+                "Check for hidden/shown sections above"
+              ]
+            },
+            {
+              "cause": "CSS layout change",
+              "probability": 0.3,
+              "evidence": "Element repositioned",
+              "tests": [
+                "Check for position: absolute/relative changes",
+                "Verify margin changes",
+                "Check flex/grid property changes"
+              ]
+            },
+            {
+              "cause": "Content size change",
+              "probability": 0.2,
+              "evidence": "Parent container affected",
+              "tests": [
+                "Check sibling element sizes",
+                "Verify text content length",
+                "Check padding/margin on parent"
+              ]
+            }
+          ],
+          "location": {
+            "section": "root",
+            "sectionPath": "",
+            "context": []
+          },
+          "impact": {
+            "score": 10,
+            "priority": "CRITICAL",
+            "reasons": [
+              "Critical structural issue",
+              "Large position shift (3897px)",
+              "h2 element (4/5 semantic weight)",
+              "High confidence (reliable)"
+            ]
+          },
+          "debuggingSteps": [
+            "Inspect <h2> in DevTools to see current position",
+            "Check for sibling elements that changed size (padding/margin)",
+            "Verify parent container hasn't changed width or height",
+            "Compare original vs current CSS for this element"
+          ]
+        },
+        {
+          "type": "position_shift",
+          "tag": "h3",
+          "index": 0,
+          "section": "root",
+          "severity": "critical",
+          "confidence": 100,
+          "description": "Large position shift in root: top 3993px, left 7px",
+          "deltas": {
+            "topDelta": 3993,
+            "leftDelta": 7
+          },
+          "rootCauseHints": [
+            {
+              "cause": "Content reflow",
+              "probability": 0.4,
+              "evidence": "Large position shift (3993px, -7px)",
+              "tests": [
+                "Check if sibling elements changed size",
+                "Verify layout engine (flex vs float)",
+                "Check for hidden/shown sections above"
+              ]
+            },
+            {
+              "cause": "CSS layout change",
+              "probability": 0.3,
+              "evidence": "Element repositioned",
+              "tests": [
+                "Check for position: absolute/relative changes",
+                "Verify margin changes",
+                "Check flex/grid property changes"
+              ]
+            },
+            {
+              "cause": "Content size change",
+              "probability": 0.2,
+              "evidence": "Parent container affected",
+              "tests": [
+                "Check sibling element sizes",
+                "Verify text content length",
+                "Check padding/margin on parent"
+              ]
+            }
+          ],
+          "location": {
+            "section": "root",
+            "sectionPath": "",
+            "context": []
+          },
+          "impact": {
+            "score": 10,
+            "priority": "CRITICAL",
+            "reasons": [
+              "Critical structural issue",
+              "Large position shift (3993px)",
+              "h3 element (3/5 semantic weight)",
+              "High confidence (reliable)"
+            ]
+          },
+          "debuggingSteps": [
+            "Inspect <h3> in DevTools to see current position",
+            "Check for sibling elements that changed size (padding/margin)",
+            "Verify parent container hasn't changed width or height",
+            "Compare original vs current CSS for this element"
+          ]
+        },
+        {
+          "type": "position_shift",
+          "tag": "h3",
+          "index": 1,
+          "section": "root",
+          "severity": "critical",
+          "confidence": 100,
+          "description": "Large position shift in root: top 3872px, left 7px",
+          "deltas": {
+            "topDelta": 3872,
+            "leftDelta": 7
+          },
+          "rootCauseHints": [
+            {
+              "cause": "Content reflow",
+              "probability": 0.4,
+              "evidence": "Large position shift (3872px, -7px)",
+              "tests": [
+                "Check if sibling elements changed size",
+                "Verify layout engine (flex vs float)",
+                "Check for hidden/shown sections above"
+              ]
+            },
+            {
+              "cause": "CSS layout change",
+              "probability": 0.3,
+              "evidence": "Element repositioned",
+              "tests": [
+                "Check for position: absolute/relative changes",
+                "Verify margin changes",
+                "Check flex/grid property changes"
+              ]
+            },
+            {
+              "cause": "Content size change",
+              "probability": 0.2,
+              "evidence": "Parent container affected",
+              "tests": [
+                "Check sibling element sizes",
+                "Verify text content length",
+                "Check padding/margin on parent"
+              ]
+            }
+          ],
+          "location": {
+            "section": "root",
+            "sectionPath": "",
+            "context": []
+          },
+          "impact": {
+            "score": 10,
+            "priority": "CRITICAL",
+            "reasons": [
+              "Critical structural issue",
+              "Large position shift (3872px)",
+              "h3 element (3/5 semantic weight)",
+              "High confidence (reliable)"
+            ]
+          },
+          "debuggingSteps": [
+            "Inspect <h3> in DevTools to see current position",
+            "Check for sibling elements that changed size (padding/margin)",
+            "Verify parent container hasn't changed width or height",
+            "Compare original vs current CSS for this element"
+          ]
+        },
+        {
+          "type": "position_shift",
+          "tag": "h3",
+          "index": 2,
+          "section": "root",
+          "severity": "critical",
+          "confidence": 100,
+          "description": "Large position shift in root: top 3897px, left 12px",
+          "deltas": {
+            "topDelta": 3897,
+            "leftDelta": 12
+          },
+          "rootCauseHints": [
+            {
+              "cause": "Content reflow",
+              "probability": 0.4,
+              "evidence": "Large position shift (3897px, 12px)",
+              "tests": [
+                "Check if sibling elements changed size",
+                "Verify layout engine (flex vs float)",
+                "Check for hidden/shown sections above"
+              ]
+            },
+            {
+              "cause": "CSS layout change",
+              "probability": 0.3,
+              "evidence": "Element repositioned",
+              "tests": [
+                "Check for position: absolute/relative changes",
+                "Verify margin changes",
+                "Check flex/grid property changes"
+              ]
+            },
+            {
+              "cause": "Content size change",
+              "probability": 0.2,
+              "evidence": "Parent container affected",
+              "tests": [
+                "Check sibling element sizes",
+                "Verify text content length",
+                "Check padding/margin on parent"
+              ]
+            }
+          ],
+          "location": {
+            "section": "root",
+            "sectionPath": "",
+            "context": []
+          },
+          "impact": {
+            "score": 10,
+            "priority": "CRITICAL",
+            "reasons": [
+              "Critical structural issue",
+              "Large position shift (3897px)",
+              "h3 element (3/5 semantic weight)",
+              "High confidence (reliable)"
+            ]
+          },
+          "debuggingSteps": [
+            "Inspect <h3> in DevTools to see current position",
+            "Check for sibling elements that changed size (padding/margin)",
+            "Verify parent container hasn't changed width or height",
+            "Compare original vs current CSS for this element"
+          ]
+        },
+        {
+          "type": "position_shift",
+          "tag": "h3",
+          "index": 3,
+          "section": "root",
+          "severity": "critical",
+          "confidence": 100,
+          "description": "Large position shift in root: top 3880px, left 7px",
+          "deltas": {
+            "topDelta": 3880,
+            "leftDelta": 7
+          },
+          "rootCauseHints": [
+            {
+              "cause": "Content reflow",
+              "probability": 0.4,
+              "evidence": "Large position shift (3880px, -7px)",
+              "tests": [
+                "Check if sibling elements changed size",
+                "Verify layout engine (flex vs float)",
+                "Check for hidden/shown sections above"
+              ]
+            },
+            {
+              "cause": "CSS layout change",
+              "probability": 0.3,
+              "evidence": "Element repositioned",
+              "tests": [
+                "Check for position: absolute/relative changes",
+                "Verify margin changes",
+                "Check flex/grid property changes"
+              ]
+            },
+            {
+              "cause": "Content size change",
+              "probability": 0.2,
+              "evidence": "Parent container affected",
+              "tests": [
+                "Check sibling element sizes",
+                "Verify text content length",
+                "Check padding/margin on parent"
+              ]
+            }
+          ],
+          "location": {
+            "section": "root",
+            "sectionPath": "",
+            "context": []
+          },
+          "impact": {
+            "score": 10,
+            "priority": "CRITICAL",
+            "reasons": [
+              "Critical structural issue",
+              "Large position shift (3880px)",
+              "h3 element (3/5 semantic weight)",
+              "High confidence (reliable)"
+            ]
+          },
+          "debuggingSteps": [
+            "Inspect <h3> in DevTools to see current position",
+            "Check for sibling elements that changed size (padding/margin)",
+            "Verify parent container hasn't changed width or height",
+            "Compare original vs current CSS for this element"
+          ]
+        },
+        {
+          "type": "position_shift",
+          "tag": "h3",
+          "index": 4,
+          "section": "root",
+          "severity": "critical",
+          "confidence": 100,
+          "description": "Large position shift in root: top 4581px, left 7px",
+          "deltas": {
+            "topDelta": 4581,
+            "leftDelta": 7
+          },
+          "rootCauseHints": [
+            {
+              "cause": "Content reflow",
+              "probability": 0.4,
+              "evidence": "Large position shift (4581px, -7px)",
+              "tests": [
+                "Check if sibling elements changed size",
+                "Verify layout engine (flex vs float)",
+                "Check for hidden/shown sections above"
+              ]
+            },
+            {
+              "cause": "CSS layout change",
+              "probability": 0.3,
+              "evidence": "Element repositioned",
+              "tests": [
+                "Check for position: absolute/relative changes",
+                "Verify margin changes",
+                "Check flex/grid property changes"
+              ]
+            },
+            {
+              "cause": "Content size change",
+              "probability": 0.2,
+              "evidence": "Parent container affected",
+              "tests": [
+                "Check sibling element sizes",
+                "Verify text content length",
+                "Check padding/margin on parent"
+              ]
+            }
+          ],
+          "location": {
+            "section": "root",
+            "sectionPath": "",
+            "context": []
+          },
+          "impact": {
+            "score": 10,
+            "priority": "CRITICAL",
+            "reasons": [
+              "Critical structural issue",
+              "Large position shift (4581px)",
+              "h3 element (3/5 semantic weight)",
+              "High confidence (reliable)"
+            ]
+          },
+          "debuggingSteps": [
+            "Inspect <h3> in DevTools to see current position",
+            "Check for sibling elements that changed size (padding/margin)",
+            "Verify parent container hasn't changed width or height",
+            "Compare original vs current CSS for this element"
+          ]
+        },
+        {
+          "type": "position_shift",
+          "tag": "h3",
+          "index": 5,
+          "section": "root",
+          "severity": "critical",
+          "confidence": 100,
+          "description": "Large position shift in root: top 5545px, left 8px",
+          "deltas": {
+            "topDelta": 5545,
+            "leftDelta": 8
+          },
+          "rootCauseHints": [
+            {
+              "cause": "Content reflow",
+              "probability": 0.4,
+              "evidence": "Large position shift (5545px, -8px)",
+              "tests": [
+                "Check if sibling elements changed size",
+                "Verify layout engine (flex vs float)",
+                "Check for hidden/shown sections above"
+              ]
+            },
+            {
+              "cause": "CSS layout change",
+              "probability": 0.3,
+              "evidence": "Element repositioned",
+              "tests": [
+                "Check for position: absolute/relative changes",
+                "Verify margin changes",
+                "Check flex/grid property changes"
+              ]
+            },
+            {
+              "cause": "Content size change",
+              "probability": 0.2,
+              "evidence": "Parent container affected",
+              "tests": [
+                "Check sibling element sizes",
+                "Verify text content length",
+                "Check padding/margin on parent"
+              ]
+            }
+          ],
+          "location": {
+            "section": "root",
+            "sectionPath": "",
+            "context": []
+          },
+          "impact": {
+            "score": 10,
+            "priority": "CRITICAL",
+            "reasons": [
+              "Critical structural issue",
+              "Large position shift (5545px)",
+              "h3 element (3/5 semantic weight)",
+              "High confidence (reliable)"
+            ]
+          },
+          "debuggingSteps": [
+            "Inspect <h3> in DevTools to see current position",
+            "Check for sibling elements that changed size (padding/margin)",
+            "Verify parent container hasn't changed width or height",
+            "Compare original vs current CSS for this element"
+          ]
+        },
+        {
+          "type": "position_shift",
+          "tag": "h3",
+          "index": 6,
+          "section": "root",
+          "severity": "critical",
+          "confidence": 100,
+          "description": "Large position shift in root: top 8376px, left 7px",
+          "deltas": {
+            "topDelta": 8376,
+            "leftDelta": 7
+          },
+          "rootCauseHints": [
+            {
+              "cause": "Content reflow",
+              "probability": 0.4,
+              "evidence": "Large position shift (8376px, -7px)",
+              "tests": [
+                "Check if sibling elements changed size",
+                "Verify layout engine (flex vs float)",
+                "Check for hidden/shown sections above"
+              ]
+            },
+            {
+              "cause": "CSS layout change",
+              "probability": 0.3,
+              "evidence": "Element repositioned",
+              "tests": [
+                "Check for position: absolute/relative changes",
+                "Verify margin changes",
+                "Check flex/grid property changes"
+              ]
+            },
+            {
+              "cause": "Content size change",
+              "probability": 0.2,
+              "evidence": "Parent container affected",
+              "tests": [
+                "Check sibling element sizes",
+                "Verify text content length",
+                "Check padding/margin on parent"
+              ]
+            }
+          ],
+          "location": {
+            "section": "root",
+            "sectionPath": "",
+            "context": []
+          },
+          "impact": {
+            "score": 10,
+            "priority": "CRITICAL",
+            "reasons": [
+              "Critical structural issue",
+              "Large position shift (8376px)",
+              "h3 element (3/5 semantic weight)",
+              "High confidence (reliable)"
+            ]
+          },
+          "debuggingSteps": [
+            "Inspect <h3> in DevTools to see current position",
+            "Check for sibling elements that changed size (padding/margin)",
+            "Verify parent container hasn't changed width or height",
+            "Compare original vs current CSS for this element"
+          ]
+        },
+        {
+          "type": "position_shift",
+          "tag": "h3",
+          "index": 7,
+          "section": "root",
+          "severity": "critical",
+          "confidence": 100,
+          "description": "Large position shift in root: top 8427px, left 252px",
+          "deltas": {
+            "topDelta": 8427,
+            "leftDelta": 252
+          },
+          "rootCauseHints": [
+            {
+              "cause": "Content reflow",
+              "probability": 0.4,
+              "evidence": "Large position shift (8427px, -252px)",
+              "tests": [
+                "Check if sibling elements changed size",
+                "Verify layout engine (flex vs float)",
+                "Check for hidden/shown sections above"
+              ]
+            },
+            {
+              "cause": "CSS layout change",
+              "probability": 0.3,
+              "evidence": "Element repositioned",
+              "tests": [
+                "Check for position: absolute/relative changes",
+                "Verify margin changes",
+                "Check flex/grid property changes"
+              ]
+            },
+            {
+              "cause": "Content size change",
+              "probability": 0.2,
+              "evidence": "Parent container affected",
+              "tests": [
+                "Check sibling element sizes",
+                "Verify text content length",
+                "Check padding/margin on parent"
+              ]
+            }
+          ],
+          "location": {
+            "section": "root",
+            "sectionPath": "",
+            "context": []
+          },
+          "impact": {
+            "score": 10,
+            "priority": "CRITICAL",
+            "reasons": [
+              "Critical structural issue",
+              "Large position shift (8427px)",
+              "h3 element (3/5 semantic weight)",
+              "High confidence (reliable)"
+            ]
+          },
+          "debuggingSteps": [
+            "Inspect <h3> in DevTools to see current position",
+            "Check for sibling elements that changed size (padding/margin)",
+            "Verify parent container hasn't changed width or height",
+            "Check for float or flex layout changes",
+            "Look for margin-left/padding-left changes",
+            "Compare original vs current CSS for this element"
+          ]
+        },
+        {
+          "type": "position_shift",
+          "tag": "h4",
+          "index": 0,
+          "section": "root",
+          "severity": "critical",
+          "confidence": 100,
+          "description": "Large position shift in root: top 5416px, left 918px",
+          "deltas": {
+            "topDelta": 5416,
+            "leftDelta": 918
+          },
+          "rootCauseHints": [
+            {
+              "cause": "Content reflow",
+              "probability": 0.4,
+              "evidence": "Large position shift (5416px, 918px)",
+              "tests": [
+                "Check if sibling elements changed size",
+                "Verify layout engine (flex vs float)",
+                "Check for hidden/shown sections above"
+              ]
+            },
+            {
+              "cause": "CSS layout change",
+              "probability": 0.3,
+              "evidence": "Element repositioned",
+              "tests": [
+                "Check for position: absolute/relative changes",
+                "Verify margin changes",
+                "Check flex/grid property changes"
+              ]
+            },
+            {
+              "cause": "Content size change",
+              "probability": 0.2,
+              "evidence": "Parent container affected",
+              "tests": [
+                "Check sibling element sizes",
+                "Verify text content length",
+                "Check padding/margin on parent"
+              ]
+            }
+          ],
+          "location": {
+            "section": "root",
+            "sectionPath": "",
+            "context": []
+          },
+          "impact": {
+            "score": 9.4,
+            "priority": "CRITICAL",
+            "reasons": [
+              "Critical structural issue",
+              "Large position shift (5416px)",
+              "h4 element (1/5 semantic weight)",
+              "High confidence (reliable)"
+            ]
+          },
+          "debuggingSteps": [
+            "Inspect <h4> in DevTools to see current position",
+            "Check for sibling elements that changed size (padding/margin)",
+            "Verify parent container hasn't changed width or height",
+            "Check for float or flex layout changes",
+            "Look for margin-left/padding-left changes",
+            "Compare original vs current CSS for this element"
+          ]
+        },
+        {
+          "type": "position_shift",
+          "tag": "h5",
+          "index": 0,
+          "section": "root",
+          "severity": "critical",
+          "confidence": 100,
+          "description": "Large position shift in root: top 12615px, left 218px",
+          "deltas": {
+            "topDelta": 12615,
+            "leftDelta": 218
+          },
+          "rootCauseHints": [
+            {
+              "cause": "Content reflow",
+              "probability": 0.4,
+              "evidence": "Large position shift (-12615px, -218px)",
+              "tests": [
+                "Check if sibling elements changed size",
+                "Verify layout engine (flex vs float)",
+                "Check for hidden/shown sections above"
+              ]
+            },
+            {
+              "cause": "CSS layout change",
+              "probability": 0.3,
+              "evidence": "Element repositioned",
+              "tests": [
+                "Check for position: absolute/relative changes",
+                "Verify margin changes",
+                "Check flex/grid property changes"
+              ]
+            },
+            {
+              "cause": "Content size change",
+              "probability": 0.2,
+              "evidence": "Parent container affected",
+              "tests": [
+                "Check sibling element sizes",
+                "Verify text content length",
+                "Check padding/margin on parent"
+              ]
+            }
+          ],
+          "location": {
+            "section": "root",
+            "sectionPath": "",
+            "context": []
+          },
+          "impact": {
+            "score": 9.4,
+            "priority": "CRITICAL",
+            "reasons": [
+              "Critical structural issue",
+              "Large position shift (12615px)",
+              "h5 element (1/5 semantic weight)",
+              "High confidence (reliable)"
+            ]
+          },
+          "debuggingSteps": [
+            "Inspect <h5> in DevTools to see current position",
+            "Check for sibling elements that changed size (padding/margin)",
+            "Verify parent container hasn't changed width or height",
+            "Check for float or flex layout changes",
+            "Look for margin-left/padding-left changes",
+            "Compare original vs current CSS for this element"
+          ]
+        },
+        {
+          "type": "position_shift",
+          "tag": "a",
+          "index": 1,
+          "section": "root",
+          "severity": "critical",
+          "confidence": 100,
+          "description": "Large position shift in root: top 13px, left 591px",
+          "deltas": {
+            "topDelta": 13,
+            "leftDelta": 591
+          },
+          "rootCauseHints": [
+            {
+              "cause": "Content reflow",
+              "probability": 0.4,
+              "evidence": "Large position shift (13px, 591px)",
+              "tests": [
+                "Check if sibling elements changed size",
+                "Verify layout engine (flex vs float)",
+                "Check for hidden/shown sections above"
+              ]
+            },
+            {
+              "cause": "CSS layout change",
+              "probability": 0.3,
+              "evidence": "Element repositioned",
+              "tests": [
+                "Check for position: absolute/relative changes",
+                "Verify margin changes",
+                "Check flex/grid property changes"
+              ]
+            },
+            {
+              "cause": "Content size change",
+              "probability": 0.2,
+              "evidence": "Parent container affected",
+              "tests": [
+                "Check sibling element sizes",
+                "Verify text content length",
+                "Check padding/margin on parent"
+              ]
+            }
+          ],
+          "location": {
+            "section": "root",
+            "sectionPath": "",
+            "context": []
+          },
+          "impact": {
+            "score": 9.9,
+            "priority": "CRITICAL",
+            "reasons": [
+              "Critical structural issue",
+              "Large position shift (591px)",
+              "a element (2/5 semantic weight)",
+              "High confidence (reliable)"
+            ]
+          },
+          "debuggingSteps": [
+            "Inspect <a> in DevTools to see current position",
+            "Check for float or flex layout changes",
+            "Look for margin-left/padding-left changes",
+            "Compare original vs current CSS for this element"
+          ]
+        },
+        {
+          "type": "position_shift",
+          "tag": "a",
+          "index": 2,
+          "section": "root",
+          "severity": "critical",
+          "confidence": 100,
+          "description": "Large position shift in root: top 0px, left 576px",
+          "deltas": {
+            "topDelta": 0,
+            "leftDelta": 576
+          },
+          "rootCauseHints": [
+            {
+              "cause": "Content reflow",
+              "probability": 0.4,
+              "evidence": "Large position shift (0px, -576px)",
+              "tests": [
+                "Check if sibling elements changed size",
+                "Verify layout engine (flex vs float)",
+                "Check for hidden/shown sections above"
+              ]
+            },
+            {
+              "cause": "CSS layout change",
+              "probability": 0.3,
+              "evidence": "Element repositioned",
+              "tests": [
+                "Check for position: absolute/relative changes",
+                "Verify margin changes",
+                "Check flex/grid property changes"
+              ]
+            },
+            {
+              "cause": "Content size change",
+              "probability": 0.2,
+              "evidence": "Parent container affected",
+              "tests": [
+                "Check sibling element sizes",
+                "Verify text content length",
+                "Check padding/margin on parent"
+              ]
+            }
+          ],
+          "location": {
+            "section": "root",
+            "sectionPath": "",
+            "context": []
+          },
+          "impact": {
+            "score": 9.9,
+            "priority": "CRITICAL",
+            "reasons": [
+              "Critical structural issue",
+              "Large position shift (576px)",
+              "a element (2/5 semantic weight)",
+              "High confidence (reliable)"
+            ]
+          },
+          "debuggingSteps": [
+            "Inspect <a> in DevTools to see current position",
+            "Check for float or flex layout changes",
+            "Look for margin-left/padding-left changes",
+            "Compare original vs current CSS for this element"
+          ]
+        },
+        {
+          "type": "position_shift",
+          "tag": "a",
+          "index": 3,
+          "section": "root",
+          "severity": "critical",
+          "confidence": 100,
+          "description": "Large position shift in root: top 0px, left 594px",
+          "deltas": {
+            "topDelta": 0,
+            "leftDelta": 594
+          },
+          "rootCauseHints": [
+            {
+              "cause": "Content reflow",
+              "probability": 0.4,
+              "evidence": "Large position shift (0px, -594px)",
+              "tests": [
+                "Check if sibling elements changed size",
+                "Verify layout engine (flex vs float)",
+                "Check for hidden/shown sections above"
+              ]
+            },
+            {
+              "cause": "CSS layout change",
+              "probability": 0.3,
+              "evidence": "Element repositioned",
+              "tests": [
+                "Check for position: absolute/relative changes",
+                "Verify margin changes",
+                "Check flex/grid property changes"
+              ]
+            },
+            {
+              "cause": "Content size change",
+              "probability": 0.2,
+              "evidence": "Parent container affected",
+              "tests": [
+                "Check sibling element sizes",
+                "Verify text content length",
+                "Check padding/margin on parent"
+              ]
+            }
+          ],
+          "location": {
+            "section": "root",
+            "sectionPath": "",
+            "context": []
+          },
+          "impact": {
+            "score": 9.9,
+            "priority": "CRITICAL",
+            "reasons": [
+              "Critical structural issue",
+              "Large position shift (594px)",
+              "a element (2/5 semantic weight)",
+              "High confidence (reliable)"
+            ]
+          },
+          "debuggingSteps": [
+            "Inspect <a> in DevTools to see current position",
+            "Check for float or flex layout changes",
+            "Look for margin-left/padding-left changes",
+            "Compare original vs current CSS for this element"
+          ]
+        },
+        {
+          "type": "position_shift",
+          "tag": "a",
+          "index": 4,
+          "section": "root",
+          "severity": "critical",
+          "confidence": 100,
+          "description": "Large position shift in root: top 0px, left 606px",
+          "deltas": {
+            "topDelta": 0,
+            "leftDelta": 606
+          },
+          "rootCauseHints": [
+            {
+              "cause": "Content reflow",
+              "probability": 0.4,
+              "evidence": "Large position shift (0px, -606px)",
+              "tests": [
+                "Check if sibling elements changed size",
+                "Verify layout engine (flex vs float)",
+                "Check for hidden/shown sections above"
+              ]
+            },
+            {
+              "cause": "CSS layout change",
+              "probability": 0.3,
+              "evidence": "Element repositioned",
+              "tests": [
+                "Check for position: absolute/relative changes",
+                "Verify margin changes",
+                "Check flex/grid property changes"
+              ]
+            },
+            {
+              "cause": "Content size change",
+              "probability": 0.2,
+              "evidence": "Parent container affected",
+              "tests": [
+                "Check sibling element sizes",
+                "Verify text content length",
+                "Check padding/margin on parent"
+              ]
+            }
+          ],
+          "location": {
+            "section": "root",
+            "sectionPath": "",
+            "context": []
+          },
+          "impact": {
+            "score": 9.9,
+            "priority": "CRITICAL",
+            "reasons": [
+              "Critical structural issue",
+              "Large position shift (606px)",
+              "a element (2/5 semantic weight)",
+              "High confidence (reliable)"
+            ]
+          },
+          "debuggingSteps": [
+            "Inspect <a> in DevTools to see current position",
+            "Check for float or flex layout changes",
+            "Look for margin-left/padding-left changes",
+            "Compare original vs current CSS for this element"
+          ]
+        },
+        {
+          "type": "position_shift",
+          "tag": "a",
+          "index": 5,
+          "section": "root",
+          "severity": "critical",
+          "confidence": 100,
+          "description": "Large position shift in root: top 3872px, left 7px",
+          "deltas": {
+            "topDelta": 3872,
+            "leftDelta": 7
+          },
+          "rootCauseHints": [
+            {
+              "cause": "Content reflow",
+              "probability": 0.4,
+              "evidence": "Large position shift (3872px, -7px)",
+              "tests": [
+                "Check if sibling elements changed size",
+                "Verify layout engine (flex vs float)",
+                "Check for hidden/shown sections above"
+              ]
+            },
+            {
+              "cause": "CSS layout change",
+              "probability": 0.3,
+              "evidence": "Element repositioned",
+              "tests": [
+                "Check for position: absolute/relative changes",
+                "Verify margin changes",
+                "Check flex/grid property changes"
+              ]
+            },
+            {
+              "cause": "Content size change",
+              "probability": 0.2,
+              "evidence": "Parent container affected",
+              "tests": [
+                "Check sibling element sizes",
+                "Verify text content length",
+                "Check padding/margin on parent"
+              ]
+            }
+          ],
+          "location": {
+            "section": "root",
+            "sectionPath": "",
+            "context": []
+          },
+          "impact": {
+            "score": 9.9,
+            "priority": "CRITICAL",
+            "reasons": [
+              "Critical structural issue",
+              "Large position shift (3872px)",
+              "a element (2/5 semantic weight)",
+              "High confidence (reliable)"
+            ]
+          },
+          "debuggingSteps": [
+            "Inspect <a> in DevTools to see current position",
+            "Check for sibling elements that changed size (padding/margin)",
+            "Verify parent container hasn't changed width or height",
+            "Compare original vs current CSS for this element"
+          ]
+        },
+        {
+          "type": "position_shift",
+          "tag": "a",
+          "index": 6,
+          "section": "root",
+          "severity": "critical",
+          "confidence": 100,
+          "description": "Large position shift in root: top 3897px, left 52px",
+          "deltas": {
+            "topDelta": 3897,
+            "leftDelta": 52
+          },
+          "rootCauseHints": [
+            {
+              "cause": "Content reflow",
+              "probability": 0.4,
+              "evidence": "Large position shift (3897px, 52px)",
+              "tests": [
+                "Check if sibling elements changed size",
+                "Verify layout engine (flex vs float)",
+                "Check for hidden/shown sections above"
+              ]
+            },
+            {
+              "cause": "CSS layout change",
+              "probability": 0.3,
+              "evidence": "Element repositioned",
+              "tests": [
+                "Check for position: absolute/relative changes",
+                "Verify margin changes",
+                "Check flex/grid property changes"
+              ]
+            },
+            {
+              "cause": "Content size change",
+              "probability": 0.2,
+              "evidence": "Parent container affected",
+              "tests": [
+                "Check sibling element sizes",
+                "Verify text content length",
+                "Check padding/margin on parent"
+              ]
+            }
+          ],
+          "location": {
+            "section": "root",
+            "sectionPath": "",
+            "context": []
+          },
+          "impact": {
+            "score": 9.9,
+            "priority": "CRITICAL",
+            "reasons": [
+              "Critical structural issue",
+              "Large position shift (3897px)",
+              "a element (2/5 semantic weight)",
+              "High confidence (reliable)"
+            ]
+          },
+          "debuggingSteps": [
+            "Inspect <a> in DevTools to see current position",
+            "Check for sibling elements that changed size (padding/margin)",
+            "Verify parent container hasn't changed width or height",
+            "Check for float or flex layout changes",
+            "Look for margin-left/padding-left changes",
+            "Compare original vs current CSS for this element"
+          ]
+        },
+        {
+          "type": "position_shift",
+          "tag": "a",
+          "index": 7,
+          "section": "root",
+          "severity": "critical",
+          "confidence": 100,
+          "description": "Large position shift in root: top 9055px, left 189px",
+          "deltas": {
+            "topDelta": 9055,
+            "leftDelta": 189
+          },
+          "rootCauseHints": [
+            {
+              "cause": "Content reflow",
+              "probability": 0.4,
+              "evidence": "Large position shift (9055px, -189px)",
+              "tests": [
+                "Check if sibling elements changed size",
+                "Verify layout engine (flex vs float)",
+                "Check for hidden/shown sections above"
+              ]
+            },
+            {
+              "cause": "CSS layout change",
+              "probability": 0.3,
+              "evidence": "Element repositioned",
+              "tests": [
+                "Check for position: absolute/relative changes",
+                "Verify margin changes",
+                "Check flex/grid property changes"
+              ]
+            },
+            {
+              "cause": "Content size change",
+              "probability": 0.2,
+              "evidence": "Parent container affected",
+              "tests": [
+                "Check sibling element sizes",
+                "Verify text content length",
+                "Check padding/margin on parent"
+              ]
+            }
+          ],
+          "location": {
+            "section": "root",
+            "sectionPath": "",
+            "context": []
+          },
+          "impact": {
+            "score": 9.9,
+            "priority": "CRITICAL",
+            "reasons": [
+              "Critical structural issue",
+              "Large position shift (9055px)",
+              "a element (2/5 semantic weight)",
+              "High confidence (reliable)"
+            ]
+          },
+          "debuggingSteps": [
+            "Inspect <a> in DevTools to see current position",
+            "Check for sibling elements that changed size (padding/margin)",
+            "Verify parent container hasn't changed width or height",
+            "Check for float or flex layout changes",
+            "Look for margin-left/padding-left changes",
+            "Compare original vs current CSS for this element"
+          ]
+        },
+        {
+          "type": "position_shift",
+          "tag": "a",
+          "index": 8,
+          "section": "root",
+          "severity": "critical",
+          "confidence": 100,
+          "description": "Large position shift in root: top 8964px, left 656px",
+          "deltas": {
+            "topDelta": 8964,
+            "leftDelta": 656
+          },
+          "rootCauseHints": [
+            {
+              "cause": "Content reflow",
+              "probability": 0.4,
+              "evidence": "Large position shift (8964px, 656px)",
+              "tests": [
+                "Check if sibling elements changed size",
+                "Verify layout engine (flex vs float)",
+                "Check for hidden/shown sections above"
+              ]
+            },
+            {
+              "cause": "CSS layout change",
+              "probability": 0.3,
+              "evidence": "Element repositioned",
+              "tests": [
+                "Check for position: absolute/relative changes",
+                "Verify margin changes",
+                "Check flex/grid property changes"
+              ]
+            },
+            {
+              "cause": "Content size change",
+              "probability": 0.2,
+              "evidence": "Parent container affected",
+              "tests": [
+                "Check sibling element sizes",
+                "Verify text content length",
+                "Check padding/margin on parent"
+              ]
+            }
+          ],
+          "location": {
+            "section": "root",
+            "sectionPath": "",
+            "context": []
+          },
+          "impact": {
+            "score": 9.9,
+            "priority": "CRITICAL",
+            "reasons": [
+              "Critical structural issue",
+              "Large position shift (8964px)",
+              "a element (2/5 semantic weight)",
+              "High confidence (reliable)"
+            ]
+          },
+          "debuggingSteps": [
+            "Inspect <a> in DevTools to see current position",
+            "Check for sibling elements that changed size (padding/margin)",
+            "Verify parent container hasn't changed width or height",
+            "Check for float or flex layout changes",
+            "Look for margin-left/padding-left changes",
+            "Compare original vs current CSS for this element"
+          ]
+        },
+        {
+          "type": "position_shift",
+          "tag": "a",
+          "index": 9,
+          "section": "root",
+          "severity": "critical",
+          "confidence": 100,
+          "description": "Large position shift in root: top 8847px, left 779px",
+          "deltas": {
+            "topDelta": 8847,
+            "leftDelta": 779
+          },
+          "rootCauseHints": [
+            {
+              "cause": "Content reflow",
+              "probability": 0.4,
+              "evidence": "Large position shift (8847px, 779px)",
+              "tests": [
+                "Check if sibling elements changed size",
+                "Verify layout engine (flex vs float)",
+                "Check for hidden/shown sections above"
+              ]
+            },
+            {
+              "cause": "CSS layout change",
+              "probability": 0.3,
+              "evidence": "Element repositioned",
+              "tests": [
+                "Check for position: absolute/relative changes",
+                "Verify margin changes",
+                "Check flex/grid property changes"
+              ]
+            },
+            {
+              "cause": "Content size change",
+              "probability": 0.2,
+              "evidence": "Parent container affected",
+              "tests": [
+                "Check sibling element sizes",
+                "Verify text content length",
+                "Check padding/margin on parent"
+              ]
+            }
+          ],
+          "location": {
+            "section": "root",
+            "sectionPath": "",
+            "context": []
+          },
+          "impact": {
+            "score": 9.9,
+            "priority": "CRITICAL",
+            "reasons": [
+              "Critical structural issue",
+              "Large position shift (8847px)",
+              "a element (2/5 semantic weight)",
+              "High confidence (reliable)"
+            ]
+          },
+          "debuggingSteps": [
+            "Inspect <a> in DevTools to see current position",
+            "Check for sibling elements that changed size (padding/margin)",
+            "Verify parent container hasn't changed width or height",
+            "Check for float or flex layout changes",
+            "Look for margin-left/padding-left changes",
+            "Compare original vs current CSS for this element"
+          ]
+        },
+        {
+          "type": "position_shift",
+          "tag": "a",
+          "index": 10,
+          "section": "root",
+          "severity": "critical",
+          "confidence": 100,
+          "description": "Large position shift in root: top 8781px, left 1315px",
+          "deltas": {
+            "topDelta": 8781,
+            "leftDelta": 1315
+          },
+          "rootCauseHints": [
+            {
+              "cause": "Content reflow",
+              "probability": 0.4,
+              "evidence": "Large position shift (8781px, 1315px)",
+              "tests": [
+                "Check if sibling elements changed size",
+                "Verify layout engine (flex vs float)",
+                "Check for hidden/shown sections above"
+              ]
+            },
+            {
+              "cause": "CSS layout change",
+              "probability": 0.3,
+              "evidence": "Element repositioned",
+              "tests": [
+                "Check for position: absolute/relative changes",
+                "Verify margin changes",
+                "Check flex/grid property changes"
+              ]
+            },
+            {
+              "cause": "Content size change",
+              "probability": 0.2,
+              "evidence": "Parent container affected",
+              "tests": [
+                "Check sibling element sizes",
+                "Verify text content length",
+                "Check padding/margin on parent"
+              ]
+            }
+          ],
+          "location": {
+            "section": "root",
+            "sectionPath": "",
+            "context": []
+          },
+          "impact": {
+            "score": 9.9,
+            "priority": "CRITICAL",
+            "reasons": [
+              "Critical structural issue",
+              "Large position shift (8781px)",
+              "a element (2/5 semantic weight)",
+              "High confidence (reliable)"
+            ]
+          },
+          "debuggingSteps": [
+            "Inspect <a> in DevTools to see current position",
+            "Check for sibling elements that changed size (padding/margin)",
+            "Verify parent container hasn't changed width or height",
+            "Check for float or flex layout changes",
+            "Look for margin-left/padding-left changes",
+            "Compare original vs current CSS for this element"
+          ]
+        }
+      ]
+    }
+  },
+  "lineSpacingIssues": [
+    {
+      "type": "line_spacing_worse",
+      "severity": "medium",
+      "selector": "div.gform-body",
+      "description": "Line spacing variance increased from 9257px to 13399px",
+      "details": {
+        "original": {
+          "variance": 9257
+        },
+        "current": {
+          "variance": 13399
+        },
+        "delta": 4142
+      },
+      "message": "Line spacing variance increased from 9257px to 13399px",
+      "rootCauses": [
+        {
+          "cause": "Line-height became more variable",
+          "probability": 0.7,
+          "test": "Compare line-height values"
+        },
+        {
+          "cause": "Font changes caused uneven baselines",
+          "probability": 0.3,
+          "test": "Check font assignments"
+        }
+      ]
+    },
+    {
+      "type": "line_spacing_worse",
+      "severity": "medium",
+      "selector": "div.foo_book",
+      "description": "Line spacing variance increased from 10406px to 18839px",
+      "details": {
+        "original": {
+          "variance": 10406
+        },
+        "current": {
+          "variance": 18839
+        },
+        "delta": 8433
+      },
+      "message": "Line spacing variance increased from 10406px to 18839px",
+      "rootCauses": [
+        {
+          "cause": "Line-height became more variable",
+          "probability": 0.7,
+          "test": "Compare line-height values"
+        },
+        {
+          "cause": "Font changes caused uneven baselines",
+          "probability": 0.3,
+          "test": "Check font assignments"
+        }
+      ]
+    }
+  ]
+}

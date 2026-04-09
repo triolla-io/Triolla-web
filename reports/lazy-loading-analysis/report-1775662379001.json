@@ -1,0 +1,21 @@
+{
+  "timestamp": "2026-04-08T15:32:51.779Z",
+  "route": "/",
+  "urls": {
+    "live": "https://triolla.io",
+    "local": "http://localhost:3000"
+  },
+  "inspections": [
+    {
+      "siteName": "Live Site",
+      "url": "https://triolla.io",
+      "error": "Too many arguments. If you need to pass more than 1 argument to the function wrap them in an object."
+    },
+    {
+      "siteName": "Local Site",
+      "url": "http://localhost:3000",
+      "error": "Too many arguments. If you need to pass more than 1 argument to the function wrap them in an object."
+    }
+  ],
+  "summary": {}
+}

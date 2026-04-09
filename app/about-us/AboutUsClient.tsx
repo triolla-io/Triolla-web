@@ -59,13 +59,45 @@ export function AboutUsClient() {
         setPhase("ready");
 
         try {
-          for (const file of js) {
-            if (cancelled) return;
-            const src = `${assetBase}/${file}`;
-            await loadScript(src);
-            if (file === "lottie.min.js") {
-              initTriollaLottie(el);
-            }
+          // Load scripts with smart ordering: critical dependencies first, rest in parallel
+          // jQuery and jquery plugins must load in sequence, but other scripts can load in parallel
+          const criticalScripts = [
+            js[2], // jquery.min.js (index 2)
+            ...js.slice(3, 7), // jquery plugins (indices 3-6)
+            js[20], // all.js (must load last)
+          ];
+          const parallelScripts = js.filter((_, i) => !criticalScripts.includes(js[i]));
+
+          // Load jQuery first
+          if (cancelled) return;
+          await loadScript(`${assetBase}/${js[2]}`);
+
+          // Load jquery plugins in parallel
+          if (cancelled) return;
+          await Promise.all(js.slice(3, 7).map((file) => loadScript(`${assetBase}/${file}`)));
+
+          // Load remaining scripts in parallel (except all.js)
+          if (cancelled) return;
+          await Promise.all(
+            parallelScripts.map((file) => {
+              const src = `${assetBase}/${file}`;
+              if (file === "lottie.min.js") {
+                return loadScript(src).then(() => initTriollaLottie(el));
+              }
+              return loadScript(src);
+            })
+          );
+
+          // Finally load all.js
+          if (cancelled) return;
+          await loadScript(`${assetBase}/${js[20]}`);
+
+          const gsapWin = window as unknown as {
+            gsap?: { registerPlugin?: (plugin: unknown) => void };
+            ScrollTrigger?: unknown;
+          };
+          if (gsapWin.gsap?.registerPlugin && gsapWin.ScrollTrigger) {
+            gsapWin.gsap.registerPlugin(gsapWin.ScrollTrigger);
           }
 
           initTriollaOwlCarousels(el);
@@ -73,8 +105,33 @@ export function AboutUsClient() {
             .jQuery;
           $?.(window).trigger("resize");
 
+          // Trigger load events - all.js listens for these to initialize animations
           window.dispatchEvent(new Event("DOMContentLoaded"));
           window.dispatchEvent(new Event("load"));
+
+          // all.js will add .loaded class after 800ms via $(window).on('load', ...).
+          // We add it here as a fallback to ensure animations trigger
+          const addLoadedClass = () => {
+            if (!document.body.classList.contains("loaded")) {
+              document.body.classList.add("loaded");
+            }
+          };
+
+          // Wait 300ms to let all.js add it first, then add as fallback if needed
+          await new Promise<void>((resolve) => {
+            setTimeout(() => {
+              addLoadedClass();
+              resolve();
+            }, 300);
+          });
+
+          if (cancelled) return;
+
+          // Wait for CSS animations triggered by .loaded class to complete
+          // Most animations are 1.2s based on animation.css
+          await new Promise<void>((resolve) => {
+            setTimeout(resolve, 1500);
+          });
 
           if (cancelled) return;
           disposeRevealRef.current?.();

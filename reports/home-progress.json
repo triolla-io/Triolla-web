@@ -1,0 +1,23 @@
+{
+  "page": "home",
+  "baseline": 81.29,
+  "final": 81.32,
+  "improvement": 0.029999999999986926,
+  "iterations": 2,
+  "history": [
+    {
+      "iteration": 0,
+      "visualMatch": 81.29
+    },
+    {
+      "iteration": 1,
+      "visualMatch": 81.29
+    },
+    {
+      "iteration": 2,
+      "visualMatch": 81.32
+    }
+  ],
+  "target": 90,
+  "status": "INCOMPLETE"
+}
