@@ -8,7 +8,8 @@ type StreamResult = {
   timedOut: boolean;
 };
 
-const TIMEOUT_MS = 6 * 60 * 1_000;
+// Must be longer than server-side POLL_TIMEOUT_MS (10 min) + buffer
+const TIMEOUT_MS = 15 * 60 * 1_000;
 
 export function useDeploymentStream(runId: string | null): StreamResult {
   const [runStatus, setRunStatus] = useState<RunStatus | null>(null);

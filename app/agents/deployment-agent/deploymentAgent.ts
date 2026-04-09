@@ -1,4 +1,4 @@
-import { readFile, writeFile } from "fs/promises";
+import { readFile, writeFile, unlink } from "fs/promises";
 import { validateContentTool } from "../utils/contentValidator";
 import { createGitProviderTools } from "./gitProviderTools";
 import { createDeploymentProviderTools } from "./deploymentProviderTools";
@@ -6,6 +6,7 @@ import { type AgentLog, fetchWithTimeout, makeLogger, runWithRetry } from "../ut
 import { diffObjects, formatDiff } from "../utils/diff";
 import { readReceipt, writeReceipt } from "./receipt";
 import { PATHS, getGitProviderConfig, getDeploymentProviderConfig } from "./config";
+import { SITE_VERIFY_TIMEOUT_MS } from "./constants";
 import type { DeploymentPipelineResult } from "./types";
 
 // ─── State ────────────────────────────────────────────────────────────────────
@@ -70,16 +71,22 @@ async function step(state: AgentState, commitMessage: string, logs: AgentLog[], 
       const result = await runWithRetry(deployment.checkDeploymentRunning, undefined, logs, onLog);
       if (!result.ok) return { phase: "done", result: { ok: false, reason: "failed", error: result.error } };
       if (result.data) {
-        log.info("coolify_check_running", "deployment already running");
+        log.info("deployment_guard", "deployment already running");
         return { phase: "done", result: { ok: false, reason: "already_running" } };
       }
-      log.info("coolify_check_running", "ready to deploy");
+      log.info("deployment_guard", "ready to deploy");
       return { phase: "reading_content" };
     }
 
     case "reading_content": {
-      const raw = await readFile(PATHS.contentLocal, "utf8");
-      const parsed = JSON.parse(raw) as Record<string, unknown>;
+      let raw: string;
+      let parsed: Record<string, unknown>;
+      try {
+        raw = await readFile(PATHS.contentLocal, "utf8");
+        parsed = JSON.parse(raw) as Record<string, unknown>;
+      } catch (e) {
+        return { phase: "done", result: { ok: false, reason: "failed", error: `Failed to read content file: ${String(e)}` } };
+      }
       log.info("read_content", `read ${PATHS.contentLocal}`);
       return { phase: "validating", local: { raw, parsed } };
     }
@@ -134,7 +141,7 @@ async function step(state: AgentState, commitMessage: string, logs: AgentLog[], 
         return { phase: "done", result: { ok: false, reason: "failed", error: commitResult.error } };
       }
 
-      log.info("github_commit_file", `committed ${commitResult.data.commitSha}, version ${newMeta.version}`);
+      log.info("git_commit", `committed ${commitResult.data.commitSha}, version ${newMeta.version}`);
       return {
         phase: "triggering",
         commit: {
@@ -150,10 +157,10 @@ async function step(state: AgentState, commitMessage: string, logs: AgentLog[], 
     case "triggering": {
       const result = await runWithRetry(deployment.triggerDeploy, undefined, logs, onLog);
       if (!result.ok) {
-        log.error("coolify_trigger_deploy", result.error);
+        log.error("deployment_trigger", result.error);
         return { phase: "rolling_back", commit: state.commit, reason: result.error };
       }
-      log.info("coolify_trigger_deploy", `deployment started: ${result.data}`);
+      log.info("deployment_trigger", `deployment started: ${result.data}`);
       await writeReceipt({
         deploymentId:  result.data,
         commitSha:     state.commit.commitSha,
@@ -161,7 +168,7 @@ async function step(state: AgentState, commitMessage: string, logs: AgentLog[], 
         deployedAt:    new Date().toISOString(),
         commitMessage,
         status:        "triggered",
-      }).catch(() => {}); // receipt is best-effort
+      }).catch((e) => log.warn("receipt", `failed to write receipt: ${String(e)}`));
       if (options.waitForDeploy) {
         return { phase: "polling", commit: state.commit, deploymentId: result.data };
       }
@@ -200,7 +207,7 @@ async function step(state: AgentState, commitMessage: string, logs: AgentLog[], 
 
     case "verifying": {
       try {
-        const res = await fetchWithTimeout(options.siteUrl!, { timeoutMs: 10_000 });
+        const res = await fetchWithTimeout(options.siteUrl!, { timeoutMs: SITE_VERIFY_TIMEOUT_MS });
         if (!res.ok) {
           log.warn("verify_site", `site returned ${res.status} — deployment may have issues`);
         } else {
@@ -227,10 +234,10 @@ async function step(state: AgentState, commitMessage: string, logs: AgentLog[], 
         originalContent: state.commit.originalRaw,
         currentFileSha:  state.commit.fileSha,
       }, logs, onLog);
-      if (!result.ok) log.error("github_revert_commit", `rollback failed: ${result.error}`);
+      if (!result.ok) log.error("git_revert", `rollback failed: ${result.error}`);
       else {
         await writeFile(PATHS.contentLocal, state.commit.originalRaw);
-        log.info("github_revert_commit", "rolled back successfully");
+        log.info("git_revert", "rolled back successfully");
       }
       await writeReceipt({
         deploymentId:  "none",
@@ -239,7 +246,7 @@ async function step(state: AgentState, commitMessage: string, logs: AgentLog[], 
         deployedAt:    new Date().toISOString(),
         commitMessage,
         status:        "failed",
-      }).catch(() => {});
+      }).catch((e) => log.warn("receipt", `failed to write receipt: ${String(e)}`));
       return { phase: "done", result: { ok: false, reason: "failed", error: state.reason } };
     }
 
@@ -265,6 +272,9 @@ export async function runAgent(
     options.onPhaseChange?.(state.phase);
     state = await step(state, commitMessage, logs, options, tools);
   }
+
+  // Clean up backup file regardless of outcome — no longer needed after the run
+  await unlink(PATHS.contentBkp).catch(() => {}); // may not exist on first run
 
   return { result: state.result, logs };
 }

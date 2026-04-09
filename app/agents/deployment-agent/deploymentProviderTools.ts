@@ -1,6 +1,7 @@
 import { type Tool, fetchWithTimeout, isRetryableStatus } from "../utils/tools";
 import type { DeploymentProviderConfig } from "./config";
 import type { CoolifyDeploymentStatus } from "./types";
+import { POLL_INTERVAL_MS, POLL_TIMEOUT_MS } from "./constants";
 
 export const TERMINAL_STATUSES = new Set<CoolifyDeploymentStatus>(["finished", "failed", "cancelled", "error"]);
 
@@ -80,13 +81,17 @@ export function createDeploymentProviderTools(cfg: DeploymentProviderConfig) {
     onLog: (msg: string) => void,
     options: { intervalMs?: number; timeoutMs?: number } = {}
   ): Promise<CoolifyDeploymentStatus> {
-    const { intervalMs = 10_000, timeoutMs = 10 * 60 * 1_000 } = options;
+    const { intervalMs = POLL_INTERVAL_MS, timeoutMs = POLL_TIMEOUT_MS } = options;
     const start = Date.now();
     while (true) {
       if (Date.now() - start > timeoutMs) { onLog("Timed out"); return "error"; }
-      const status = await getDeploymentStatus(deploymentId);
-      onLog(`Status: ${status}`);
-      if (TERMINAL_STATUSES.has(status)) return status;
+      try {
+        const status = await getDeploymentStatus(deploymentId);
+        onLog(`Status: ${status}`);
+        if (TERMINAL_STATUSES.has(status)) return status;
+      } catch (e) {
+        onLog(`Status check failed (will retry): ${String(e)}`);
+      }
       await new Promise<void>((r) => setTimeout(r, intervalMs));
     }
   }

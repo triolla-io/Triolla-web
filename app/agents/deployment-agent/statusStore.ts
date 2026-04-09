@@ -9,8 +9,7 @@ export type RunStatus =
 
 // ─── Store ────────────────────────────────────────────────────────────────────
 
-const DONE_TTL_MS    = 10 * 60 * 1_000; // keep "done" entries for 10 min
-const RUNNING_TTL_MS = 20 * 60 * 1_000; // force-evict stuck "running" entries after 20 min
+import { DONE_TTL_MS, RUNNING_TTL_MS } from "./constants";
 
 // Next.js can re-evaluate modules during dev (hot reload), which would reset a plain Map.
 // Attaching to globalThis survives re-evaluation and keeps the store consistent across route handlers.

@@ -1,7 +1,5 @@
 // Recursively compares two plain objects and returns human-readable change lines.
-// Skips keys that are always system-managed (version, updatedAt).
-
-const SKIP_KEYS = new Set(["version", "updatedAt"]);
+import { CONTENT_SKIP_KEYS } from "../deployment-agent/constants";
 
 export type DiffLine = { path: string; from: unknown; to: unknown };
 
@@ -14,7 +12,7 @@ export function diffObjects(
   const keys = new Set([...Object.keys(from), ...Object.keys(to)]);
 
   for (const key of keys) {
-    if (SKIP_KEYS.has(key)) continue;
+    if (CONTENT_SKIP_KEYS.has(key)) continue;
     const fullPath = path ? `${path}.${key}` : key;
     const a = from[key];
     const b = to[key];

@@ -7,6 +7,7 @@ function encode(data: unknown): Uint8Array {
 }
 
 export async function GET(req: NextRequest) {
+  // TODO: add proper auth
   const id = req.nextUrl.searchParams.get("id");
   if (!id) return new Response("Missing id", { status: 400 });
 

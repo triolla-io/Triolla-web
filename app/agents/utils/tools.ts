@@ -26,6 +26,9 @@ export type Tool<TInput, TOutput> = {
   execute: (input: TInput) => Promise<ToolResult<TOutput>>;
 };
 
+const RETRY_BASE_MS = 500;
+const RETRY_MAX_MS  = 8_000;
+
 function sleep(ms: number) {
   return new Promise<void>((r) => setTimeout(r, ms));
 }
@@ -40,7 +43,7 @@ export async function runWithRetry<TInput, TOutput>(
     const result = await tool.execute(input);
     if (result.ok) return result;
     if (!result.retryable || attempt === tool.maxAttempts) return result;
-    const backoff = Math.min(500 * 2 ** (attempt - 1), 8_000);
+    const backoff = Math.min(RETRY_BASE_MS * 2 ** (attempt - 1), RETRY_MAX_MS);
     const entry: AgentLog = { level: "warn", tool: tool.name, message: `attempt ${attempt}/${tool.maxAttempts} failed, retrying in ${backoff}ms — ${result.error}` };
     logs.push(entry);
     onLog?.(entry);

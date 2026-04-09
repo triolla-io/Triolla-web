@@ -15,8 +15,7 @@ const DANGEROUS_PATTERNS: { pattern: RegExp; label: string }[] = [
   { pattern: /prototype\s*\[/,         label: "prototype[] (prototype pollution)" },
 ];
 
-// Keys whose values are always system-generated — skip validation
-const SKIP_KEYS = new Set(["version", "updatedAt"]);
+import { CONTENT_SKIP_KEYS } from "../deployment-agent/constants";
 
 export class ContentSecurityError extends Error {
   constructor(public readonly violations: string[]) {
@@ -63,7 +62,7 @@ function collectViolations(value: unknown, path: string, violations: string[]): 
 
   if (value !== null && typeof value === "object") {
     for (const [key, child] of Object.entries(value as Record<string, unknown>)) {
-      if (SKIP_KEYS.has(key)) continue;
+      if (CONTENT_SKIP_KEYS.has(key)) continue;
       collectViolations(child, `${path}.${key}`, violations);
     }
   }
