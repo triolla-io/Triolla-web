@@ -24,7 +24,7 @@ export function startDeployment(
   runAgent(commitMessage, {
     ...options,
     waitForDeploy: true,
-    dryRun: true,
+    // dryRun: true,
     onPhaseChange: (phase) => {
       const updatedAt = new Date().toISOString();
       setPhase(runId, phase);
