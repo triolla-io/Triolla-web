@@ -1,4 +1,5 @@
 import { readFile, writeFile, unlink } from "fs/promises";
+import { execSync } from "child_process";
 import { validateContentTool } from "../utils/contentValidator";
 import { createGitProviderTools } from "./gitProviderTools";
 import { createDeploymentProviderTools } from "./deploymentProviderTools";
@@ -6,7 +7,19 @@ import { type AgentLog, fetchWithTimeout, makeLogger, runWithRetry } from "../ut
 import { diffObjects, formatDiff } from "../utils/diff";
 import { readReceipt, writeReceipt } from "./receipt";
 import { PATHS, getGitProviderConfig, getDeploymentProviderConfig } from "./config";
-import { SITE_VERIFY_TIMEOUT_MS } from "./constants";
+import { SITE_VERIFY_TIMEOUT_MS, DISK_USAGE_THRESHOLD_PCT } from "./constants";
+
+function getDiskUsagePct(): { pct: number | null; error?: string } {
+  try {
+    const out = execSync("df /", { encoding: "utf8" }).trim();
+    const line = out.split("\n")[1];
+    const pct = line?.trim().split(/\s+/)[4]; // e.g. "18%"
+    const num = parseInt(pct ?? "");
+    return isNaN(num) ? { pct: null, error: `unexpected df output: ${JSON.stringify(line)}` } : { pct: num };
+  } catch (e) {
+    return { pct: null, error: String(e) };
+  }
+}
 import type { DeploymentPipelineResult } from "./types";
 
 // ─── State ────────────────────────────────────────────────────────────────────
@@ -55,6 +68,13 @@ async function step(state: AgentState, commitMessage: string, logs: AgentLog[], 
 
   switch (state.phase) {
     case "preflight": {
+      const { pct: diskPct, error: diskError } = getDiskUsagePct();
+      if (diskError) log.warn("preflight", `Could not check disk usage: ${diskError}`);
+      if (diskPct !== null && diskPct >= DISK_USAGE_THRESHOLD_PCT) {
+        return { phase: "done", result: { ok: false, reason: "failed", error: `Disk usage is at ${diskPct}% — aborting to prevent server issues (threshold: ${DISK_USAGE_THRESHOLD_PCT}%)` } };
+      }
+      if (diskPct !== null) log.info("preflight", `Disk usage: ${diskPct}%`);
+
       const [github, coolify, receipt] = await Promise.all([
         runWithRetry(git.checkHealth, undefined, logs, onLog),
         runWithRetry(deployment.checkHealth, undefined, logs, onLog),

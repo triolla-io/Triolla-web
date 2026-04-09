@@ -17,6 +17,10 @@ export const DONE_TTL_MS    = 15 * 60 * 1_000;  // keep "done" entries after com
 // Keys that are always system-generated — skip validation and diff
 export const CONTENT_SKIP_KEYS = new Set(["version", "updatedAt"]);
 
+// ─── Disk space ───────────────────────────────────────────────────────────────
+
+export const DISK_USAGE_THRESHOLD_PCT = 85;  // abort preflight if disk is above this %
+
 // ─── Client ───────────────────────────────────────────────────────────────────
 
 export const CLIENT_STREAM_TIMEOUT_MS = (POLL_TIMEOUT_MS + 5 * 60 * 1_000);  // client gives up after server max + buffer
