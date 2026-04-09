@@ -8,7 +8,7 @@ const publishBodySchema = z.object({
 });
 
 export async function POST(req: NextRequest) {
-  if (isRateLimited(getIp(req), { max: 2, windowMs: 5 * 60_000 })) {
+  if (isRateLimited(getIp(req), { max: 4, windowMs: 5 * 60_000 })) {
     return NextResponse.json({ error: "Too many requests" }, { status: 429 });
   }
 
