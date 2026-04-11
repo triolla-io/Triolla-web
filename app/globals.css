@@ -12,15 +12,8 @@
 /* Hebrew fonts - SVG only (all available formats) */
 @font-face {
   font-family: 'Almoni DL AAA';
-  src: url('/assets/_shared/fonts/almoni-dl-aaa-400.svg#almoni-dl-aaa-400') format('svg');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Almoni DL AAA';
   src: url('/assets/_shared/fonts/AlmoniDLAAA-Bold.svg#almoni-dl-aaa-bold') format('svg');
-  font-weight: 700 900;
+  font-weight: 400 700 900;
   font-style: normal;
   font-display: swap;
 }
