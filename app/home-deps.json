@@ -17,7 +17,7 @@
     "_shared/owl.carousel.css.css",
     "_shared/mlstyle.css.css",
     "_shared/ml-responsive.css.css",
-    "home-fixes.css"
+    "home/home-fixes.css"
   ],
   "js": [
     "_shared/jquery-3.6.0.min.js.js",
@@ -26,11 +26,11 @@
     "_shared/jquery.bez.min.js.js",
     "_shared/TweenMax.min.js.js",
     "_shared/ScrollMagic.min.js.js",
-    "lottie.min.js_2af44128.js",
+    "_shared/lottie.min.js",
     "_shared/metaview.js.js",
     "_shared/wow.js.js",
-    "gsap.min.js_a1459148.js",
-    "ScrollTrigger.min.js_a1459148.js",
+    "_shared/gsap.min.js",
+    "_shared/ScrollTrigger.min.js",
     "_shared/all.js.js",
     "_shared/v8c78df7c7c0f484497ecbca7046644da1771523124516.js"
   ],
