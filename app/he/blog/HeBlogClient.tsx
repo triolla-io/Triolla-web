@@ -24,7 +24,7 @@ export function HeBlogClient() {
       deps={deps as TriollaPortfolioSnapshotDeps}
       pageLabel="Hebrew Blog"
       landingSlug="triolla-io-he-blog"
-      assetDir="_consolidated"
+      assetDir="_shared"
       lang="he"
       afterScripts={afterScripts}
     />
