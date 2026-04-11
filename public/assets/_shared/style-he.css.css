@@ -562,7 +562,7 @@ body.active{ overflow:hidden;}
 .otgs-development-site-front-end {display:none !important;}
 
 .page-template-page-technology .header_menu ul.menu li a { color:#FFFFFF;}
-/*.page-template-page-technology .header_menu ul.menu li a:after { background:url(/assets/_shared/menuarowdeskwhite.svg) no-repeat center center;}*/
+/*.page-template-page-technology .header_menu ul.menu li a:after { background:url(/images/menuarowdeskwhite.svg) no-repeat center center;}*/
 .page-template-page-technology .header_contact a {background: linear-gradient(90deg, #E7604D 0%, #5843DA 100%); color:#fff; border:0px;}
 .page-template-page-technology .header_contact a>span.default-text {color:#fff;}
 .page-template-page-technology .header_contact a>span.button-overlay {background: linear-gradient(90deg, #5843DA 0%, #E7604D 100%);}
