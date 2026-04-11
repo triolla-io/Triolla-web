@@ -125,6 +125,34 @@ function logosWithBase(base: string): PortfolioPageData["global"]["logos"] {
   return names.map((file, i) => ({ img: `${base}/${file}`, alt: alts[i] }));
 }
 
+const CYBER_COMPANY_TICKER = [
+  "Krust.io",
+  "Cyngular Security",
+  "Comsecure",
+  "Cytwist",
+  "Armis",
+  "Suridata",
+  "Safebridge",
+  "Ciso Bot",
+  "Gremlin",
+  "Panorays",
+  "Safe Security",
+  "Infinipoint",
+  "Boundless Cyber",
+  "Varonis",
+  "Netskope",
+  "Wiz",
+  "SentinelOne",
+  "Aqua Security",
+  "JumpCloud",
+  "Cybereason",
+  "Rapid7",
+  "Veracode",
+  "Qualys",
+  "Tenable",
+  "CrowdStrike",
+];
+
 const CYBER_WHY: PortfolioPageData["why"] = {
   mainTitle: "Why Do <br />cyber companies <br />choose us?",
   items: [
@@ -153,6 +181,7 @@ export const CYBER_SECURITY_PAGE_DATA_EN: PortfolioPageData = {
   dir: "ltr",
   /** Matches `style.css` / triolla snapshot (`.portfolio_banner`); `#000` made the hero override the theme and looked broken. */
   bannerColor: "#FED125",
+  companyTicker: CYBER_COMPANY_TICKER,
   partnerCount: "50+ Cybersecurity platforms and counting",
   header: {
     eyebrow: "Product design for",

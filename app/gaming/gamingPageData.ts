@@ -165,6 +165,20 @@ const GAMING_GLOBAL_LOGOS: PortfolioPageData["global"]["logos"] = [
   { img: "/images/finaro_global.svg", alt: "Finaro" },
 ];
 
+const GAMING_COMPANY_TICKER = [
+  "Backgammon",
+  "Spring Game",
+  "Survivor-CBS",
+  "Monkey Ball",
+  "Betiton",
+  "Playtika",
+  "Overwolf",
+  "Cha Games",
+  "My Town Games",
+  "BabyTV",
+  "Aspire Global",
+];
+
 const GAMING_WHY: PortfolioPageData["why"] = {
   mainTitle: "Why Do <br />Gaming companies <br />choose us?",
   items: [
@@ -194,6 +208,7 @@ const GAMING_WHY: PortfolioPageData["why"] = {
 export const GAMING_PAGE_DATA_EN: PortfolioPageData = {
   dir: "ltr",
   bannerColor: "#fed125",
+  companyTicker: GAMING_COMPANY_TICKER,
   partnerCount: "50+ Gaming platforms and counting",
   header: {
     eyebrow: "Product design for",

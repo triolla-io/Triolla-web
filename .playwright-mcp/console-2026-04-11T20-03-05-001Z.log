@@ -1,0 +1,193 @@
+[      75ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/:0
+[      75ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/:0
+[      75ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/:0
+[      77ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/:0
+[      78ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/:0
+[      78ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/:0
+[     180ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[     228ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[   51285ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/:0
+[   51285ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/:0
+[   51285ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/:0
+[   51290ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/:0
+[   51290ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/:0
+[   51290ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/:0
+[   51316ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[   51328ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[   91375ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[   91380ms] [LOG] [Fast Refresh] done in 107ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  108597ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  108597ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  108597ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  108600ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  108600ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  108600ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  108660ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  108669ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  108762ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  108762ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  108762ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  108762ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/portfolio-page/_shared/style.min.css:0
+[  108763ms] [ERROR] Failed to load stylesheet: http://localhost:3000/assets/portfolio-page/_shared/style.min.css @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[  108763ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  108763ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  108763ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  108763ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/portfolio-page/_shared/cms-navigation-base.css:0
+[  108764ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  108764ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  108764ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  108764ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/portfolio-page/_shared/cms-navigation.css:0
+[  108765ms] [ERROR] Failed to load stylesheet: http://localhost:3000/assets/portfolio-page/_shared/cms-navigation-base.css @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[  108766ms] [ERROR] Failed to load stylesheet: http://localhost:3000/assets/portfolio-page/_shared/cms-navigation.css @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[  108789ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  108789ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  108789ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  108789ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/portfolio-page/_shared/style.css:0
+[  108790ms] [ERROR] Failed to load stylesheet: http://localhost:3000/assets/portfolio-page/_shared/style.css @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[  108804ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  108804ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  108804ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  108804ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/portfolio-page/_shared/style-new.css:0
+[  108805ms] [ERROR] Failed to load stylesheet: http://localhost:3000/assets/portfolio-page/_shared/style-new.css @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[  108805ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  108805ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  108805ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  108805ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/portfolio-page/_shared/responsive.css:0
+[  108806ms] [ERROR] Failed to load stylesheet: http://localhost:3000/assets/portfolio-page/_shared/responsive.css @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[  108866ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  108866ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  108866ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  108866ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/portfolio-page/_shared/fonts.css:0
+[  108867ms] [ERROR] Failed to load stylesheet: http://localhost:3000/assets/portfolio-page/_shared/fonts.css @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[  108885ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  108885ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  108885ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  108885ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/portfolio-page/_shared/animate.css:0
+[  108885ms] [ERROR] Failed to load stylesheet: http://localhost:3000/assets/portfolio-page/_shared/animate.css @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[  108905ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  108905ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  108905ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  108905ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/portfolio-page/_shared/animation.css:0
+[  108905ms] [ERROR] Failed to load stylesheet: http://localhost:3000/assets/portfolio-page/_shared/animation.css @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[  108915ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  108926ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  108926ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  108926ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  108926ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/portfolio-page/_shared/jquery.jConveyorTicker.min.css:0
+[  108926ms] [ERROR] Failed to load stylesheet: http://localhost:3000/assets/portfolio-page/_shared/jquery.jConveyorTicker.min.css @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[  108936ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  108936ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  108936ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  108936ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/portfolio-page/_shared/owl.carousel.css:0
+[  108936ms] [ERROR] Failed to load stylesheet: http://localhost:3000/assets/portfolio-page/_shared/owl.carousel.css @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[  108941ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  108941ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  108941ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  108941ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/portfolio-page/_shared/mlstyle.css:0
+[  108943ms] [ERROR] Failed to load stylesheet: http://localhost:3000/assets/portfolio-page/_shared/mlstyle.css @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[  108986ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  108986ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  108986ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  108986ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/portfolio-page/_shared/ml-responsive.css:0
+[  108987ms] [ERROR] Failed to load stylesheet: http://localhost:3000/assets/portfolio-page/_shared/ml-responsive.css @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[  109044ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  109044ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  109044ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  109044ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/_shared/portolio_layer.svg:0
+[  109077ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  109077ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  109077ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  109077ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/portfolio-page/suridata_logo.svg:0
+[  109089ms] [LOG] [Fast Refresh] done in 277ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  109124ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  109124ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  109124ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  109124ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/portfolio-page/_shared/jquery-3.6.0.min.js:0
+[  109215ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  109215ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  109215ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  109215ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/portfolio-page/_shared/jquery.jConveyorTicker.min.js:0
+[  109216ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  109216ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  109216ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  109216ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/portfolio-page/_shared/ScrollMagic.min.js:0
+[  109217ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  109217ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  109217ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  109217ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/portfolio-page/_shared/owl.carousel.js:0
+[  109217ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  109217ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  109217ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  109217ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/portfolio-page/_shared/TweenMax.min.js:0
+[  109218ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  109218ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  109218ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  109218ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/portfolio-page/_shared/metaview.js:0
+[  109312ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  109312ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  109312ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  109312ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/portfolio-page/_shared/lottie.min.js:0
+[  109312ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  109312ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  109312ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  109313ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/portfolio-page/_shared/wow.js:0
+[  109313ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  109313ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  109313ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  109313ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/portfolio-page/_shared/gsap.min.js:0
+[  109314ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  109314ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  109314ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  109314ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/portfolio-page/_shared/ScrollTrigger.min.js:0
+[  109315ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  109315ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  109315ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  109315ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/portfolio-page/_shared/jquery.bez.min.js:0
+[  109341ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  109341ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  109341ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  109341ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/portfolio-page/_shared/v8c78df7c7c0f484497ecbca7046644da1771523124516.js:0
+[  109364ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  109364ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  109364ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/portfolio-page:0
+[  109364ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/portfolio-page/_shared/all.js:0
+[  112125ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/saas-platforms:0
+[  112125ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/saas-platforms:0
+[  112125ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/saas-platforms:0
+[  112131ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/saas-platforms:0
+[  112131ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/saas-platforms:0
+[  112131ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/saas-platforms:0
+[  112154ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  112170ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  113207ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/gaming:0
+[  113207ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/gaming:0
+[  113207ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/gaming:0
+[  113212ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/gaming:0
+[  113212ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/gaming:0
+[  113212ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/gaming:0
+[  113275ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/gaming:0
+[  113275ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/gaming:0
+[  113275ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/gaming:0
+[  113275ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/images/cha-games-mobile.png:0
+[  113290ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  113303ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  113325ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/gaming:0
+[  113325ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/gaming:0
+[  113325ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/gaming:0
+[  113325ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/images/aspire-golobal-mobile.png:0
+[  113349ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/gaming:0
+[  113349ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/gaming:0
+[  113349ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/gaming:0
+[  113349ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/images/survivor-mobile.png:0
+[  118311ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/startups-tech:0
+[  118311ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/startups-tech:0
+[  118311ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/startups-tech:0
+[  118316ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/startups-tech:0
+[  118316ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/startups-tech:0
+[  118316ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/startups-tech:0
+[  118349ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  118364ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  125148ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  125156ms] [LOG] [Fast Refresh] done in 109ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  137636ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  137643ms] [LOG] [Fast Refresh] done in 107ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431

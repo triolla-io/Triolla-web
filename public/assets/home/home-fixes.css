@@ -6,6 +6,7 @@
    ======================================== */
 
 /* Match triolla style.css body stack for injected fragment (inherits into ticker, winners h3, etc.) */
+body,
 [data-triolla-snapshot] {
   font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
   font-weight: 400;
@@ -14,13 +15,20 @@
 
 /* Portfolio mega-menu alignment: see `app/triolla-snapshot-mobile-nav.css` (loaded for all snapshots). */
 
-/* Hero h1: reset bottom offset that causes visual position mismatch.
-   Theme uses bottom: -30px (animation start); remove for parity with live site.
-   Font-size 96px ensures proper line breaking matching triolla.io. */
+/* Hero h1/h2: match triolla.io theme responsive.css + WP Custom CSS (no app overrides on size/position). */
 .homemaintopone h1 {
-  font-size: 96px !important;
-  line-height: 90px !important;
-  bottom: 0 !important;
+  font-family: 'SFProText', -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif !important;
+}
+
+/* triolla.io → Appearance → Custom CSS (mobile hero visibility) */
+@media only screen and (max-width: 767px) {
+  .homemaintopone h2 {
+    opacity: 1 !important;
+    bottom: -50px;
+  }
+  .homemaintopone.portfolio_text h1 {
+    opacity: 1 !important;
+  }
 }
 
 /* Home-only: pill header max-width (was unscoped and leaked onto /technology & other snapshots). */
@@ -37,6 +45,24 @@
 [data-triolla-snapshot] .header_whatsapp a span {
   font-family: 'SFProText', -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif !important;
   font-weight: 500 !important;
+}
+
+/* Global/Clients section */
+.global_con h2 {
+  font-family: 'SFProText', -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif !important;
+  font-weight: 700 !important;
+}
+
+.global_con h3 {
+  font-family: 'SFProText', -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif !important;
+  font-weight: 400 !important;
+}
+
+/* Winners section */
+.winners-title,
+.winners-subtitle {
+  font-family: 'SFProText', -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif !important;
+  font-weight: 700 !important;
 }
 
 /* Portfolio / process section */
@@ -92,4 +118,19 @@
 
 [data-triolla-snapshot] .circletxt {
   font-family: 'SFProText', -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif !important;
+}
+
+/* CRITICAL FIX: Hero grid layout - allow floats to overlap
+   The .clr element inside .hometopimages was clearing all floats,
+   forcing images to stack vertically instead of overlapping.
+   Override to allow proper float behavior. */
+.hometopimages .clr {
+  clear: none !important;
+  display: none !important;
+}
+
+/* Grid container - set height to accommodate all floated overlapping elements
+   The floated elements with negative margins create a 3110px-tall composition. */
+.hometopimages .grid {
+  min-height: 3110px;
 }

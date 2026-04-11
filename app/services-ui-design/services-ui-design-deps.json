@@ -1,12 +1,12 @@
 {
-  "assetBase": "/assets/services-ui-design",
+  "assetBase": "/assets/_shared/",
   "bodyClass": "wp-singular page-template page-template-page-servicedetail page-template-page-servicedetail-php page page-id-1492 page-child parent-pageid-473 wp-theme-triolla",
   "dataRsssl": "1",
   "css": [
-    "_shared/style.min.css"
+    "style.min.css"
   ],
   "js": [
-    "_shared/jquery-3.6.0.min.js"
+    "jquery-3.6.0.min.js"
   ],
   "sharedFontsManifest": "/Users/ariell/html-to-react/public/assets/_shared/fonts/fonts.json",
   "sharedFontsUrl": "/assets/_shared/fonts",

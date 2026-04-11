@@ -66,56 +66,80 @@
 .font-corenarae { font-family: 'CoreNaraeProW01-Pro', sans-serif; }
 @font-face {
   font-family: 'SFProText';
-  src: url('/assets/_shared/fonts/SFProText-Thin.svg#sfprotext-thin') format('svg');
+  src: url('/assets/_shared/SFProText-Thin.woff2') format('woff2'),
+       url('/assets/_shared/SFProText-Thin.woff') format('woff'),
+       url('/assets/_shared/SFProText-Thin.ttf') format('truetype'),
+       url('/assets/_shared/SFProText-Thin.svg#sfprotext-thin') format('svg');
   font-weight: 100;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'SFProText';
-  src: url('/assets/_shared/fonts/SFProText-Light.svg#sfprotext-light') format('svg');
+  src: url('/assets/_shared/SFProText-Light.woff2') format('woff2'),
+       url('/assets/_shared/SFProText-Light.woff') format('woff'),
+       url('/assets/_shared/SFProText-Light.ttf') format('truetype'),
+       url('/assets/_shared/SFProText-Light.svg#sfprotext-light') format('svg');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'SFProText';
-  src: url('/assets/_shared/fonts/SFProText-Regular.svg#sfprotext-regular') format('svg');
+  src: url('/assets/_shared/SFProText-Regular.woff2') format('woff2'),
+       url('/assets/_shared/SFProText-Regular.woff') format('woff'),
+       url('/assets/_shared/SFProText-Regular.ttf') format('truetype'),
+       url('/assets/_shared/SFProText-Regular.svg#sfprotext-regular') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'SFProText';
-  src: url('/assets/_shared/fonts/SFProText-Medium.svg#sfprotext-medium') format('svg');
+  src: url('/assets/_shared/SFProText-Medium.woff2') format('woff2'),
+       url('/assets/_shared/SFProText-Medium.woff') format('woff'),
+       url('/assets/_shared/SFProText-Medium.ttf') format('truetype'),
+       url('/assets/_shared/SFProText-Medium.svg#sfprotext-medium') format('svg');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'SFProText';
-  src: url('/assets/_shared/fonts/SFProText-Semibold.svg#sfprotext-semibold') format('svg');
+  src: url('/assets/_shared/SFProText-Semibold.woff2') format('woff2'),
+       url('/assets/_shared/SFProText-Semibold.woff') format('woff'),
+       url('/assets/_shared/SFProText-Semibold.ttf') format('truetype'),
+       url('/assets/_shared/SFProText-Semibold.svg#sfprotext-semibold') format('svg');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'SFProText';
-  src: url('/assets/_shared/fonts/SFProText-Bold.svg#sfprotext-bold') format('svg');
+  src: url('/assets/_shared/SFProText-Bold.woff2') format('woff2'),
+       url('/assets/_shared/SFProText-Bold.woff') format('woff'),
+       url('/assets/_shared/SFProText-Bold.ttf') format('truetype'),
+       url('/assets/_shared/SFProText-Bold.svg#sfprotext-bold') format('svg');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Helvetica';
-  src: url('/assets/_shared/fonts/Helvetica.svg#helvetica') format('svg');
+  src: url('/assets/_shared/Helvetica.woff2') format('woff2'),
+       url('/assets/_shared/Helvetica.woff') format('woff'),
+       url('/assets/_shared/Helvetica.ttf') format('truetype'),
+       url('/assets/_shared/Helvetica.svg#helvetica') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Helvetica';
-  src: url('/assets/_shared/fonts/Helvetica-Bold.svg#helvetica-bold') format('svg');
+  src: url('/assets/_shared/Helvetica-Bold.woff2') format('woff2'),
+       url('/assets/_shared/Helvetica-Bold.woff') format('woff'),
+       url('/assets/_shared/Helvetica-Bold.ttf') format('truetype'),
+       url('/assets/_shared/Helvetica-Bold.svg#helvetica-bold') format('svg');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -1840,7 +1864,8 @@ section.home-faq { background: #ffffff; }
   position: relative;
   top: 0;
 }
-.portfolio_text h1 {
+/* Scoped to industry/blog banners only — home hero uses .homemaintopone.portfolio_text and must follow theme responsive.css */
+.portfolio_banner .portfolio_text h1 {
   font-weight: bold;
   font-size: 260px;
   line-height: 200px;
@@ -1926,7 +1951,7 @@ section.home-faq { background: #ffffff; }
 
 /* ≤1440px — scale h1 down from 260px; add side padding */
 @media (max-width: 1440px) {
-  .portfolio_text h1 { font-size: 180px; line-height: 155px; }
+  .portfolio_banner .portfolio_text h1 { font-size: 180px; line-height: 155px; }
   .portfolio_wrap { padding: 0 150px; }
 }
 /* ≤1300px — fluid wrap */
@@ -1939,13 +1964,13 @@ section.home-faq { background: #ffffff; }
 }
 /* ≤1200px — intermediate h1 step; banner padding raised to clear fixed header (bottom ~147px) */
 @media (max-width: 1200px) {
-  .portfolio_text h1 { font-size: 138px; line-height: 144px; }
+  .portfolio_banner .portfolio_text h1 { font-size: 138px; line-height: 144px; }
   .portfolio_banner { padding: 170px 0 100px 0; }
 }
 /* ≤1199px — tablet: collapse wrap to narrow, scale text to mobile size; constrain jump SVG sizes */
 @media (max-width: 1199px) {
   .portfolio_wrap { max-width: 600px; padding: 0 20px; }
-  .portfolio_text h1 { font-size: 77px; line-height: 1.1; padding: 0 0 25px 0; }
+  .portfolio_banner .portfolio_text h1 { font-size: 77px; line-height: 1.1; padding: 0 0 25px 0; }
   .portfolio_con_bold { font-size: 16px; line-height: 100%; }
   .portfolio_con p { font-size: 16px; line-height: 100%; }
   .portfolio_jump_1 img,
@@ -1959,7 +1984,7 @@ section.home-faq { background: #ffffff; }
 /* 641px–1199px — tablet: proportional values between mobile and desktop */
 @media (min-width: 641px) and (max-width: 1199px) {
   .portfolio_wrap { max-width: 680px; padding: 0 30px; }
-  .portfolio_text h1 { font-size: 96px; line-height: 1.05; padding: 0 0 40px 0; }
+  .portfolio_banner .portfolio_text h1 { font-size: 96px; line-height: 1.05; padding: 0 0 40px 0; }
   .portfolio_con_bold { font-size: 22px; line-height: 1.3; }
   .portfolio_con p { font-size: 22px; line-height: 1.3; }
   .portfolio_jump_1 img,
@@ -1980,7 +2005,7 @@ section.home-faq { background: #ffffff; }
 }
 /* ≤640px — mobile: reduce h1; jump SVGs fixed artboard (design: 88×35) */
 @media (max-width: 640px) {
-  .portfolio_text h1 { font-size: 56px; }
+  .portfolio_banner .portfolio_text h1 { font-size: 56px; }
   .portfolio_jump_1 img,
   .portfolio_jump_2 img,
   .portfolio_jump_3 img {
@@ -2005,7 +2030,7 @@ section.home-faq { background: #ffffff; }
 }
 /* ≤375px — very small phones: tighter h1, pull jump_2 flush */
 @media (max-width: 375px) {
-  .portfolio_text h1 { font-size: 44px; }
+  .portfolio_banner .portfolio_text h1 { font-size: 44px; }
   .portfolio_jump_2 { right: -10px; }
 }
 

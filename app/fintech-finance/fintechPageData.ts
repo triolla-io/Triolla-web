@@ -123,6 +123,35 @@ function logosWithBase(base: string): PortfolioPageData["global"]["logos"] {
   return names.map((file, i) => ({ img: `${base}/${file}`, alt: alts[i] }));
 }
 
+const FINTECH_COMPANY_TICKER = [
+  "Openops",
+  "Banksbride",
+  "Jifiti",
+  "Tel Aviv Payments",
+  "Prepay",
+  "Invisa",
+  "Certify",
+  "Payoneer",
+  "SolarDollar",
+  "Tradeshift",
+  "Marqeta",
+  "Adyen",
+  "Stripe",
+  "Square",
+  "Block",
+  "Wise",
+  "Remitly",
+  "Checkout.com",
+  "Revolut",
+  "N26",
+  "Klarna",
+  "Affirm",
+  "Afterpay",
+  "SoFi",
+  "Robinhood",
+  "Coinbase",
+];
+
 const FINTECH_WHY: PortfolioPageData["why"] = {
   mainTitle: "Why Do <br />fintech companies <br />choose us?",
   items: [
@@ -151,6 +180,7 @@ const FINTECH_WHY: PortfolioPageData["why"] = {
 export const FINTECH_PAGE_DATA_EN: PortfolioPageData = {
   dir: "ltr",
   bannerColor: "#fed125",
+  companyTicker: FINTECH_COMPANY_TICKER,
   partnerCount: "50+ Fintech platforms and counting",
   header: {
     eyebrow: "Product design for",

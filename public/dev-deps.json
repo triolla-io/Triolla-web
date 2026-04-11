@@ -1,0 +1,19 @@
+{
+  "assetBase": "/assets/_shared/",
+  "bodyClass": "port_page_mod",
+  "dataRsssl": null,
+  "css": [
+    "/assets/_shared/cms-navigation-base.css",
+    "/assets/_shared/cms-navigation.css",
+    "/assets/_shared/jquery.jConveyorTicker.min.css",
+    "/assets/_shared/animate.css",
+    "/assets/_shared/animation.css",
+    "/assets/_shared/fonts.css",
+    "/assets/_shared/company-ticker-visible.css",
+    "/assets/home/home-fixes.css"
+  ],
+  "js": [
+    "/assets/_shared/jquery-3.6.0.min.js",
+    "/assets/_shared/jquery.jConveyorTicker.min.js"
+  ]
+}

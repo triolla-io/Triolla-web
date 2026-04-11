@@ -1,18 +1,18 @@
 {
-  "assetBase": "/assets/services-front-end-dev",
+  "assetBase": "/assets/_shared/",
   "bodyClass": "wp-singular page-template page-template-page-servicedetail page-template-page-servicedetail-php page page-id-1985 page-child parent-pageid-473 wp-theme-triolla",
   "dataRsssl": "1",
   "css": [
-    "_shared/style.min.css",
-    "_shared/jquery.jConveyorTicker.min.css"
+    "style.min.css",
+    "jquery.jConveyorTicker.min.css"
   ],
   "js": [
-    "_shared/jquery-3.6.0.min.js",
-    "_shared/jquery.jConveyorTicker.min.js",
-    "_shared/TweenMax.min.js",
-    "_shared/ScrollMagic.min.js",
-    "_shared/jquery.bez.min.js",
-    "_shared/v8c78df7c7c0f484497ecbca7046644da1771523124516.js"
+    "jquery-3.6.0.min.js",
+    "jquery.jConveyorTicker.min.js",
+    "TweenMax.min.js",
+    "ScrollMagic.min.js",
+    "jquery.bez.min.js",
+    "v8c78df7c7c0f484497ecbca7046644da1771523124516.js"
   ],
   "sharedFontsManifest": "/Users/ariell/html-to-react/public/assets/_shared/fonts/fonts.json",
   "sharedFontsUrl": "/assets/_shared/fonts",

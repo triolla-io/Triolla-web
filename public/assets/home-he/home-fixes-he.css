@@ -140,3 +140,18 @@ body {
   margin: 0 !important;
   overflow: visible !important;
 }
+
+/* CRITICAL FIX: Hero grid layout - allow floats to overlap
+   The .clr element inside .hometopimages was clearing all floats,
+   forcing images to stack vertically instead of overlapping.
+   Override to allow proper float behavior. */
+.hometopimages .clr {
+  clear: none !important;
+  display: none !important;
+}
+
+/* Grid container - set height to accommodate all floated overlapping elements
+   The floated elements with negative margins create a 3110px-tall composition. */
+.hometopimages .grid {
+  min-height: 3110px;
+}
