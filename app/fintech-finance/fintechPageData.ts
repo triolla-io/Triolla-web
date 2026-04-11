@@ -154,7 +154,7 @@ export const FINTECH_PAGE_DATA_EN: PortfolioPageData = {
   partnerCount: "50+ Fintech platforms and counting",
   header: {
     eyebrow: "Product design for",
-    title: "Fintech & Finance",
+    title: "Finance & Tech",
     subtitle: "Join product design experts who will listen to you.",
     description:
       "Enterprise tools and efficient workflows are our language in Fintech & Finance.",

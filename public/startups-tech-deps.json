@@ -4,25 +4,25 @@
   "dataRsssl": "1",
   "css": [
     "style.css",
-    "cms-navigation-base.css.css",
-    "cms-navigation.css.css",
+    "cms-navigation-base.css",
+    "cms-navigation.css",
     "style-new.css",
     "responsive.css",
-    "animate.css.css",
-    "animation.css.css",
-    "/assets/_shared/jquery.jConveyorTicker.min.css.css",
-    "mlstyle.css.css",
-    "ml-responsive.css.css",
+    "animate.css",
+    "animation.css",
+    "/assets/_shared/jquery.jConveyorTicker.min.css",
+    "mlstyle.css",
+    "ml-responsive.css",
     "fonts.css",
     "/assets/home/home-fixes.css"
   ],
   "js": [
-    "jquery-3.6.0.min.js.js",
-    "/assets/_shared/jquery.jConveyorTicker.min.js.js",
-    "metaview.js.js",
+    "jquery-3.6.0.min.js",
+    "/assets/_shared/jquery.jConveyorTicker.min.js",
+    "metaview.js",
     "gsap.min.js",
     "ScrollTrigger.min.js",
     "wow.js",
-    "all.js.js"
+    "all.js"
   ]
 }

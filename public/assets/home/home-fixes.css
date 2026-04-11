@@ -15,8 +15,11 @@
 /* Portfolio mega-menu alignment: see `app/triolla-snapshot-mobile-nav.css` (loaded for all snapshots). */
 
 /* Hero h1: reset bottom offset that causes visual position mismatch.
-   Theme uses bottom: -30px (animation start); remove for parity with live site. */
+   Theme uses bottom: -30px (animation start); remove for parity with live site.
+   Font-size 96px ensures proper line breaking matching triolla.io. */
 .homemaintopone h1 {
+  font-size: 96px !important;
+  line-height: 90px !important;
   bottom: 0 !important;
 }
 

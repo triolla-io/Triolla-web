@@ -3,16 +3,16 @@
   "bodyClass": "home wp-singular page-template page-template-page-home2 page-template-page-home2-php page page-id-4640 wp-theme-triolla",
   "dataRsssl": "1",
   "css": [
-    "_shared/style.min.css.css",
-    "_shared/style.css.css",
-    "_shared/jquery.jConveyorTicker.min.css.css"
+    "_shared/style.min.css",
+    "_shared/style.css",
+    "_shared/jquery.jConveyorTicker.min.css"
   ],
   "js": [
-    "_shared/jquery-3.6.0.min.js.js",
-    "_shared/jquery.jConveyorTicker.min.js.js",
-    "_shared/TweenMax.min.js.js",
-    "_shared/ScrollMagic.min.js.js",
-    "_shared/jquery.bez.min.js.js",
+    "_shared/jquery-3.6.0.min.js",
+    "_shared/jquery.jConveyorTicker.min.js",
+    "_shared/TweenMax.min.js",
+    "_shared/ScrollMagic.min.js",
+    "_shared/jquery.bez.min.js",
     "_shared/v8c78df7c7c0f484497ecbca7046644da1771523124516.js"
   ]
 }
