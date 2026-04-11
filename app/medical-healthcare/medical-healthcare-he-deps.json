@@ -17,8 +17,7 @@
     "_shared/owl.carousel.css.css",
     "_shared/mlstyle.css.css",
     "_shared/rtl.css.css",
-    "_shared/ml-responsive.css.css",
-    "medical-healthcare-fixes.css"
+    "_shared/ml-responsive.css.css"
   ],
   "js": [
     "_shared/jquery-3.6.0.min.js.js",

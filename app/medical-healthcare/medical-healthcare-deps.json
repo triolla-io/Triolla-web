@@ -6,17 +6,16 @@
     "_shared/style.min.css.css",
     "_shared/cms-navigation-base.css.css",
     "_shared/cms-navigation.css.css",
-    "_shared/style.css",
-    "_shared/style-new.css",
-    "_shared/responsive.css",
-    "_shared/fonts.css",
+    "_shared/style.css.css",
+    "_shared/style-new.css.css",
+    "_shared/responsive.css.css",
+    "_shared/fonts.css.css",
     "_shared/animate.css.css",
     "_shared/animation.css.css",
     "_shared/jquery.jConveyorTicker.min.css.css",
     "_shared/owl.carousel.css.css",
     "_shared/mlstyle.css.css",
-    "_shared/ml-responsive.css.css",
-    "medical-healthcare-fixes.css"
+    "_shared/ml-responsive.css.css"
   ],
   "js": [
     "_shared/jquery-3.6.0.min.js.js",

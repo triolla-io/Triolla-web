@@ -1,9 +1,9 @@
 {
-  "assetBase": "/assets/_consolidated/",
+  "assetBase": "/assets",
   "bodyClass": "rtl wp-singular page-template page-template-page-portfolio page-template-page-portfolio-php page page-id-2609 wp-theme-triolla",
   "dataRsssl": "1",
   "css": [
-    "_shared/style.css",
+    "_shared/style.css.css",
     "_shared/cms-navigation-base.css.css",
     "_shared/cms-navigation.css.css",
     "_shared/style-rtl.min.css.css",
@@ -14,7 +14,7 @@
     "_shared/animation.css.css",
     "_shared/mlstyle.css.css",
     "_shared/ml-responsive.css.css",
-    "_shared/fonts.css"
+    "_shared/fonts.css.css"
   ],
   "js": [
     "_shared/jquery-3.6.0.min.js.js",

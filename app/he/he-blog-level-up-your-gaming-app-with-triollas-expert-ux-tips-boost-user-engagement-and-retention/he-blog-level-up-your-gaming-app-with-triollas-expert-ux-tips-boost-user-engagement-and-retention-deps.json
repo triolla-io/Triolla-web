@@ -3,7 +3,7 @@
   "bodyClass": "rtl wp-singular post-template-default single single-post postid-3494 single-format-standard wp-theme-triolla",
   "dataRsssl": "1",
   "css": [
-    "_shared/style.css",
+    "_shared/style.css.css",
     "_shared/cms-navigation-base.css.css",
     "_shared/cms-navigation.css.css",
     "_shared/style-rtl.min.css.css",
@@ -15,7 +15,7 @@
     "_shared/jquery.jConveyorTicker.min.css.css",
     "_shared/mlstyle.css.css",
     "_shared/ml-responsive.css.css",
-    "_shared/fonts.css"
+    "_shared/fonts.css.css"
   ],
   "js": [
     "_shared/jquery-3.6.0.min.js.js",

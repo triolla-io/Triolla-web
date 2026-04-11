@@ -1,5 +1,5 @@
 {
-  "assetBase": "/assets/_consolidated/",
+  "assetBase": "/assets",
   "bodyClass": "rtl wp-singular page-template page-template-page-portfolio page-template-page-portfolio-php page page-id-1928 wp-theme-triolla",
   "dataRsssl": "1",
   "css": [
@@ -22,8 +22,6 @@
     "_shared/ScrollMagic.min.js.js",
     "_shared/metaview.js.js",
     "_shared/wow.js.js",
-    "gsap.min.js",
-    "ScrollTrigger.min.js",
     "_shared/jquery.bez.min.js.js",
     "_shared/all.js.js"
   ],
