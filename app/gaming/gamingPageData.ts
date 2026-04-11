@@ -1,18 +1,18 @@
 import type { PortfolioPageData } from "../components/PortfolioPageWithCSS";
 
 const GAMING_ASSETS = {
-  bannerGridImg: "/assets/_shared/banner_grid.svg",
-  bannerLayerImg: "/assets/_shared/portolio_layer.svg",
-  jumpImg1: "/assets/_shared/jumping_1-1.svg",
-  jumpImg2: "/assets/_shared/jumping_2-1.svg",
-  jumpImg3: "/assets/_shared/jumping_3-1.svg",
+  bannerGridImg: "/images/banner_grid.svg",
+  bannerLayerImg: "/images/portolio_layer.svg",
+  jumpImg1: "/images/jumping_1-1.svg",
+  jumpImg2: "/images/jumping_2-1.svg",
+  jumpImg3: "/images/jumping_3-1.svg",
 } as const;
 
 const GAMING_ITEMS_EN: PortfolioPageData["portfolioItems"] = [
   {
-    logo: "/assets/_shared/playtika-min.png",
-    desktopImg: "/assets/_shared/Playtika-desktop.png",
-    mobileImg: "/assets/_shared/Playtika-mobile.png",
+    logo: "/images/playtika-min.png",
+    desktopImg: "/images/Playtika-desktop.png",
+    mobileImg: "/images/Playtika-mobile.png",
     title:
       "Redefining game intelligence by enhancing user engagement and performance through Playtika's management and analytics platforms.",
     description:
@@ -20,9 +20,9 @@ const GAMING_ITEMS_EN: PortfolioPageData["portfolioItems"] = [
     tags: ["InternalCommunication", "GameExperience", "UserData"],
   },
   {
-    logo: "/assets/_shared/overwolf-min.png",
-    desktopImg: "/assets/_shared/Eternal-overwolf-desktop.png",
-    mobileImg: "/assets/_shared/Eternal-overwolf-mobile.png",
+    logo: "/images/overwolf-min.png",
+    desktopImg: "/images/Eternal-overwolf-desktop.png",
+    mobileImg: "/images/Eternal-overwolf-mobile.png",
     title:
       "Empowering gaming's future with Overwolf's Eternal platform—enabling studios to create scalable, creator-driven UGC experiences.",
     description:
@@ -30,9 +30,9 @@ const GAMING_ITEMS_EN: PortfolioPageData["portfolioItems"] = [
     tags: ["GameStudio", "ProductPlatform", "OnlineCommunity"],
   },
   {
-    logo: "/assets/_shared/spring-games-min.png",
-    desktopImg: "/assets/_shared/spring-game-desktop.png",
-    mobileImg: "/assets/_shared/spring-game-mobile.png",
+    logo: "/images/spring-games-min.png",
+    desktopImg: "/images/spring-game-desktop.png",
+    mobileImg: "/images/spring-game-mobile.png",
     title:
       "Bringing casual gaming to life—creating an engaging design and accessible player experience from the ground up.",
     description:
@@ -40,9 +40,9 @@ const GAMING_ITEMS_EN: PortfolioPageData["portfolioItems"] = [
     tags: ["EngagingDesign", "MobileUI", "MobileUX"],
   },
   {
-    logo: "/assets/_shared/cha-games-min.png",
-    desktopImg: "/assets/_shared/Cha-game-sdesktop.png",
-    mobileImg: "/assets/_shared/cha-games-mobile.png",
+    logo: "/images/cha-games-min.png",
+    desktopImg: "/images/Cha-game-sdesktop.png",
+    mobileImg: "/images/cha-games-mobile.png",
     title:
       "Redefining social play—Cha Games unites players with user-first, interactive mini-games.",
     description:
@@ -50,9 +50,9 @@ const GAMING_ITEMS_EN: PortfolioPageData["portfolioItems"] = [
     tags: ["ProductDesigners", "StudioDesigners", "GamingDesign"],
   },
   {
-    logo: "/assets/_shared/my-town-min.png",
-    desktopImg: "/assets/_shared/my-town-desktop.png",
-    mobileImg: "/assets/_shared/my-town-mobile.png",
+    logo: "/images/my-town-min.png",
+    desktopImg: "/images/my-town-desktop.png",
+    mobileImg: "/images/my-town-mobile.png",
     title:
       "Inspiring imaginative play—My Town Games lets kids explore, create, and tell stories in safe, interactive worlds.",
     description:
@@ -60,9 +60,9 @@ const GAMING_ITEMS_EN: PortfolioPageData["portfolioItems"] = [
     tags: ["VisualDesign", "GamingProduct", "ImmersiveExperience"],
   },
   {
-    logo: "/assets/_shared/Frame-2147223744-e1747836676565.png",
-    desktopImg: "/assets/_shared/BabyTV-desktop.png",
-    mobileImg: "/assets/_shared/BabyTV-mobile.png",
+    logo: "/images/Frame-2147223744-e1747836676565.png",
+    desktopImg: "/images/BabyTV-desktop.png",
+    mobileImg: "/images/BabyTV-mobile.png",
     title:
       "Bringing early learning to life—BabyTV offers safe, playful experiences that support toddler development and parent peace of mind.",
     description:
@@ -70,9 +70,9 @@ const GAMING_ITEMS_EN: PortfolioPageData["portfolioItems"] = [
     tags: ["DigitalPlatforms", "IntuitiveInterfaces", "EngagingVisuals"],
   },
   {
-    logo: "/assets/_shared/Frame-2147223744-1.png",
-    desktopImg: "/assets/_shared/Aspire-global-desktop.png",
-    mobileImg: "/assets/_shared/aspire-golobal-mobile.png",
+    logo: "/images/Frame-2147223744-1.png",
+    desktopImg: "/images/Aspire-global-desktop.png",
+    mobileImg: "/images/aspire-golobal-mobile.png",
     title:
       "Driving iGaming growth—Aspire Global powers operators with seamless, end-to-end platforms and services.",
     description:
@@ -80,9 +80,9 @@ const GAMING_ITEMS_EN: PortfolioPageData["portfolioItems"] = [
     tags: ["UserTrust", "iGaming", "GamingExperience"],
   },
   {
-    logo: "/assets/_shared/Group-1410103797.png",
-    desktopImg: "/assets/_shared/Survivor-desktop.png",
-    mobileImg: "/assets/_shared/survivor-mobile.png",
+    logo: "/images/Group-1410103797.png",
+    desktopImg: "/images/Survivor-desktop.png",
+    mobileImg: "/images/survivor-mobile.png",
     title:
       "We created a real-time voting game for Survivor viewers, letting fans predict outcomes and vote on key moments, bringing the show's excitement to life on a second screen.",
     description:
@@ -151,18 +151,18 @@ const GAMING_ITEMS_HE: PortfolioPageData["portfolioItems"] = [
 ];
 
 const GAMING_GLOBAL_LOGOS: PortfolioPageData["global"]["logos"] = [
-  { img: "/assets/_shared/microsoft_global.svg", alt: "Microsoft" },
-  { img: "/assets/_shared/american_express_global.svg", alt: "American Express" },
-  { img: "/assets/_shared/n_gloabl.svg", alt: "N" },
-  { img: "/assets/_shared/human_global.svg", alt: "Human" },
-  { img: "/assets/_shared/passport_cart_global.svg", alt: "Passport" },
-  { img: "/assets/_shared/jfrog_global.svg", alt: "JFrog" },
-  { img: "/assets/_shared/alam_global.svg", alt: "Alam" },
-  { img: "/assets/_shared/taboola_global.svg", alt: "Taboola" },
-  { img: "/assets/_shared/is_global.svg", alt: "IS" },
-  { img: "/assets/_shared/star_global.svg", alt: "Star" },
-  { img: "/assets/_shared/playtika_global.svg", alt: "Playtika" },
-  { img: "/assets/_shared/finaro_global.svg", alt: "Finaro" },
+  { img: "/images/microsoft_global.svg", alt: "Microsoft" },
+  { img: "/images/american_express_global.svg", alt: "American Express" },
+  { img: "/images/n_gloabl.svg", alt: "N" },
+  { img: "/images/human_global.svg", alt: "Human" },
+  { img: "/images/passport_cart_global.svg", alt: "Passport" },
+  { img: "/images/jfrog_global.svg", alt: "JFrog" },
+  { img: "/images/alam_global.svg", alt: "Alam" },
+  { img: "/images/taboola_global.svg", alt: "Taboola" },
+  { img: "/images/is_global.svg", alt: "IS" },
+  { img: "/images/star_global.svg", alt: "Star" },
+  { img: "/images/playtika_global.svg", alt: "Playtika" },
+  { img: "/images/finaro_global.svg", alt: "Finaro" },
 ];
 
 const GAMING_WHY: PortfolioPageData["why"] = {

@@ -42,8 +42,8 @@ function entry(
     pageLabel,
     landingSlugEn,
     landingSlugHe,
-    assetDirEn: "_consolidated",
-    assetDirHe: "_consolidated",
+    assetDirEn: "_shared",
+    assetDirHe: "_shared",
     hePathsFromDeps: false,
   };
   return revealPreset ? { ...base, revealPreset } : base;
@@ -82,7 +82,7 @@ function careerPageDepsConsolidated(
   pack: { bodyClass: string; dataRsssl: string; css: string[] },
 ): TriollaPortfolioSnapshotDeps {
   return {
-    assetBase: "/assets/_consolidated/",
+    assetBase: "/assets",
     bodyClass: pack.bodyClass,
     dataRsssl: pack.dataRsssl,
     css: careersCssWithGridBase(pack.css),

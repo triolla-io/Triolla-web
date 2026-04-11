@@ -152,18 +152,18 @@ const ITEMS_HE: PortfolioPageData["portfolioItems"] = [
 ];
 
 const LOGOS: PortfolioPageData["global"]["logos"] = [
-  { img: "/assets/_shared/microsoft_global.svg", alt: "Microsoft" },
-  { img: "/assets/_shared/american_express_global.svg", alt: "American Express" },
-  { img: "/assets/_shared/n_gloabl.svg", alt: "N" },
-  { img: "/assets/_shared/human_global.svg", alt: "Human" },
-  { img: "/assets/_shared/passport_cart_global.svg", alt: "Passport" },
-  { img: "/assets/_shared/jfrog_global.svg", alt: "JFrog" },
-  { img: "/assets/_shared/alam_global.svg", alt: "Alam" },
-  { img: "/assets/_shared/taboola_global.svg", alt: "Taboola" },
-  { img: "/assets/_shared/is_global.svg", alt: "IS" },
-  { img: "/assets/_shared/star_global.svg", alt: "Star" },
-  { img: "/assets/_shared/playtika_global.svg", alt: "Playtika" },
-  { img: "/assets/_shared/finaro_global.svg", alt: "Finaro" },
+  { img: "/images/microsoft_global.svg", alt: "Microsoft" },
+  { img: "/images/american_express_global.svg", alt: "American Express" },
+  { img: "/images/n_gloabl.svg", alt: "N" },
+  { img: "/images/human_global.svg", alt: "Human" },
+  { img: "/images/passport_cart_global.svg", alt: "Passport" },
+  { img: "/images/jfrog_global.svg", alt: "JFrog" },
+  { img: "/images/alam_global.svg", alt: "Alam" },
+  { img: "/images/taboola_global.svg", alt: "Taboola" },
+  { img: "/images/is_global.svg", alt: "IS" },
+  { img: "/images/star_global.svg", alt: "Star" },
+  { img: "/images/playtika_global.svg", alt: "Playtika" },
+  { img: "/images/finaro_global.svg", alt: "Finaro" },
 ];
 
 const MEDICAL_WHY: PortfolioPageData["why"] = {

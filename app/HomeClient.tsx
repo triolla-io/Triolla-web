@@ -77,10 +77,10 @@ export function HomeClient() {
         // Some snapshots reference non-existent /assets/home[-he]/hamburger*.svg.
         // Normalize to stable shared image paths so mobile icon always renders.
         html = html
-          .replaceAll('/assets/_shared/hamburger.svg', '/images/hamburger.svg')
-          .replaceAll('/assets/_shared/hamburger_white.svg', '/images/hamburger_white.svg')
-          .replaceAll('/assets/_shared/hamburger.svg', '/images/hamburger.svg')
-          .replaceAll('/assets/_shared/hamburger_white.svg', '/images/hamburger_white.svg');
+          .replaceAll('/images/hamburger.svg', '/images/hamburger.svg')
+          .replaceAll('/images/hamburger_white.svg', '/images/hamburger_white.svg')
+          .replaceAll('/images/hamburger.svg', '/images/hamburger.svg')
+          .replaceAll('/images/hamburger_white.svg', '/images/hamburger_white.svg');
         if (cancelled) return;
 
         const el = rootRef.current;

@@ -7,7 +7,7 @@ export function normalizeHeaderAssetUrls(html: string): string {
     .replace(SHARED_SNAPSHOT_SVGS, "/assets/_shared/$1.svg")
     .replace(
       /\/assets\/[^"'\s]+\/logo_new\.png/gi,
-      "/assets/_shared/logo_new.png",
+      "/images/logo_new.png",
     )
     .replaceAll(
       "https://triolla.io/wp-content/themes/triolla/images/hamburger.svg",

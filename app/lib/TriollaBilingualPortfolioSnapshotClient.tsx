@@ -42,7 +42,7 @@ import {
  * Full-theme pages (e.g. careers) use per-folder mirrors (`/assets/careers-he/...`); those
  * URLs must stay intact so CSS url() and <img> resolve next to the snapshot stylesheets.
  *
- * Also keep `/assets/<pageMirror>/...` (e.g. `/assets/_shared/techtop1.svg`) intact — only
+ * Also keep `/assets/<pageMirror>/...` (e.g. `/images/techtop1.svg`) intact — only
  * flatten paths that are not already under a named snapshot folder (other than `_consolidated`).
  */
 function isUnderNonConsolidatedAssetDir(pathname: string): boolean {

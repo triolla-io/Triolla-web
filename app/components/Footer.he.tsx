@@ -56,7 +56,7 @@ export function FooterHe({ assetBase = "/assets/about-us-he" }: FooterHeProps) {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <img alt="" src={`/assets/_shared/calenderimg.svg`} /> קבעו שיחה
+                  <img alt="" src={`/images/calenderimg.svg`} /> קבעו שיחה
                 </a>
                 <a
                   className="two"
@@ -72,13 +72,13 @@ export function FooterHe({ assetBase = "/assets/about-us-he" }: FooterHeProps) {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <img alt="" src={`/assets/_shared/footerwhatsmob.svg`} />
+                  <img alt="" src={`/images/footerwhatsmob.svg`} />
                 </a>
                 <a
                   className="two"
                   href="tel:+972-73-744-3322"
                 >
-                  <img alt="" src={`/assets/_shared/footerphmob.svg`} />
+                  <img alt="" src={`/images/footerphmob.svg`} />
                 </a>
               </div>
               <div className="clr"></div>
@@ -93,42 +93,42 @@ export function FooterHe({ assetBase = "/assets/about-us-he" }: FooterHeProps) {
                 <li>
                   <a href="https://13tv.co.il/item/special/recommended/economy/k2fy3-902776824/" target="_blank" rel="noopener noreferrer">
                     <span>
-                      <img src={`/assets/_shared/logo_736.svg`} alt="" />
+                      <img src={`/images/logo_736.svg`} alt="" />
                     </span>
                   </a>
                 </li>
                 <li>
                   <a href="https://www.bizportal.co.il/BizTech/news/article/20015580" target="_blank" rel="noopener noreferrer">
                     <span>
-                      <img src={`/assets/_shared/logo_biz_735.svg`} alt="" />
+                      <img src={`/images/logo_biz_735.svg`} alt="" />
                     </span>
                   </a>
                 </li>
                 <li>
                   <a href="https://www.themarker.com/labels/2021-04-05/ty-article-labels/0000017f-f88a-d044-adff-fbfb48ad0000" target="_blank" rel="noopener noreferrer">
                     <span>
-                      <img src={`/assets/_shared/logo_marker_731.svg`} alt="" />
+                      <img src={`/images/logo_marker_731.svg`} alt="" />
                     </span>
                   </a>
                 </li>
                 <li>
                   <a href="https://www.globes.co.il/news/article.aspx?did=1001450720" target="_blank" rel="noopener noreferrer">
                     <span>
-                      <img src={`/assets/_shared/logo_732.svg`} alt="" />
+                      <img src={`/images/logo_732.svg`} alt="" />
                     </span>
                   </a>
                 </li>
                 <li>
                   <a href="https://www.pc.co.il/featured/420350/" target="_blank" rel="noopener noreferrer">
                     <span>
-                      <img src={`/assets/_shared/logo_733.svg`} alt="" />
+                      <img src={`/images/logo_733.svg`} alt="" />
                     </span>
                   </a>
                 </li>
                 <li>
                   <a href="https://www.mako.co.il/special-articles/Article-c2a83bbe7224d71026.htm" target="_blank" rel="noopener noreferrer">
                     <span>
-                      <img src={`/assets/_shared/logo_mako_734.svg`} alt="" />
+                      <img src={`/images/logo_mako_734.svg`} alt="" />
                     </span>
                   </a>
                 </li>
@@ -223,12 +223,12 @@ export function FooterHe({ assetBase = "/assets/about-us-he" }: FooterHeProps) {
           {/* Mobile Logos Section */}
           <div className="footmoblogos">
             <ul>
-              <li><a href="https://13tv.co.il/item/special/recommended/economy/k2fy3-902776824/" target="_blank" rel="noopener noreferrer"><span><img src={`/assets/_shared/logo_736.svg`} alt="" /></span></a></li>
-              <li><a href="https://www.bizportal.co.il/BizTech/news/article/20015580" target="_blank" rel="noopener noreferrer"><span><img src={`/assets/_shared/logo_biz_735.svg`} alt="" /></span></a></li>
-              <li><a href="https://www.themarker.com/labels/2021-04-05/ty-article-labels/0000017f-f88a-d044-adff-fbfb48ad0000" target="_blank" rel="noopener noreferrer"><span><img src={`/assets/_shared/logo_marker_731.svg`} alt="" /></span></a></li>
-              <li><a href="https://www.globes.co.il/news/article.aspx?did=1001450720" target="_blank" rel="noopener noreferrer"><span><img src={`/assets/_shared/logo_732.svg`} alt="" /></span></a></li>
-              <li><a href="https://www.pc.co.il/featured/420350/" target="_blank" rel="noopener noreferrer"><span><img src={`/assets/_shared/logo_733.svg`} alt="" /></span></a></li>
-              <li><a href="https://www.mako.co.il/special-articles/Article-c2a83bbe7224d71026.htm" target="_blank" rel="noopener noreferrer"><span><img src={`/assets/_shared/logo_mako_734.svg`} alt="" /></span></a></li>
+              <li><a href="https://13tv.co.il/item/special/recommended/economy/k2fy3-902776824/" target="_blank" rel="noopener noreferrer"><span><img src={`/images/logo_736.svg`} alt="" /></span></a></li>
+              <li><a href="https://www.bizportal.co.il/BizTech/news/article/20015580" target="_blank" rel="noopener noreferrer"><span><img src={`/images/logo_biz_735.svg`} alt="" /></span></a></li>
+              <li><a href="https://www.themarker.com/labels/2021-04-05/ty-article-labels/0000017f-f88a-d044-adff-fbfb48ad0000" target="_blank" rel="noopener noreferrer"><span><img src={`/images/logo_marker_731.svg`} alt="" /></span></a></li>
+              <li><a href="https://www.globes.co.il/news/article.aspx?did=1001450720" target="_blank" rel="noopener noreferrer"><span><img src={`/images/logo_732.svg`} alt="" /></span></a></li>
+              <li><a href="https://www.pc.co.il/featured/420350/" target="_blank" rel="noopener noreferrer"><span><img src={`/images/logo_733.svg`} alt="" /></span></a></li>
+              <li><a href="https://www.mako.co.il/special-articles/Article-c2a83bbe7224d71026.htm" target="_blank" rel="noopener noreferrer"><span><img src={`/images/logo_mako_734.svg`} alt="" /></span></a></li>
             </ul>
           </div>
 
@@ -236,7 +236,7 @@ export function FooterHe({ assetBase = "/assets/about-us-he" }: FooterHeProps) {
           <div className="footer_bottom cf" ref={footerBottomRef}>
             <div className="footer_logo_site">
               <Link href="/he/">
-                <img src={`/assets/_shared/triolla.svg`} alt="" />
+                <img src={`/images/triolla.svg`} alt="" />
               </Link>
             </div>
             <div className="footer_copywright">
@@ -272,7 +272,7 @@ export function FooterHe({ assetBase = "/assets/about-us-he" }: FooterHeProps) {
                 </li>
                 <li className="f_instagram">
                   <a href="https://www.instagram.com/triollaofficial/" target="_blank" rel="noopener noreferrer">
-                    <img src={`/assets/_shared/instagram.svg`} alt="" />
+                    <img src={`/images/instagram.svg`} alt="" />
                   </a>
                 </li>
                 <li className="f_facebook">
@@ -308,7 +308,7 @@ export function FooterHe({ assetBase = "/assets/about-us-he" }: FooterHeProps) {
               </div>
               <div className="foo_bot_socail_label">
                 <a href="https://www.sqlink.com/" target="_blank" rel="noopener noreferrer">
-                  חלק מ <img src={`/assets/_shared/sqlink_icon.png`} alt="" />
+                  חלק מ <img src={`/images/sqlink_icon.png`} alt="" />
                 </a>
               </div>
               <ul>
@@ -344,7 +344,7 @@ export function FooterHe({ assetBase = "/assets/about-us-he" }: FooterHeProps) {
                 </li>
                 <li className="f_instagram">
                   <a href="https://www.instagram.com/triollaofficial/" target="_blank" rel="noopener noreferrer">
-                    <img src={`/assets/_shared/instagram.svg`} alt="" />
+                    <img src={`/images/instagram.svg`} alt="" />
                   </a>
                 </li>
                 <li className="f_facebook">

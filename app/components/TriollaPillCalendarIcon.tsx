@@ -4,7 +4,7 @@
 export function TriollaPillCalendarIcon() {
   return (
     <img
-      src="/assets/_shared/calenderimg.svg"
+      src="/images/calenderimg.svg"
       alt=""
       width={16}
       height={16}
