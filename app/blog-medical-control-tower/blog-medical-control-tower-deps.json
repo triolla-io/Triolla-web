@@ -6,13 +6,11 @@
     "_shared/animate.css.css",
     "animate.css_2af44128_c14735b9.css",
     "_shared/animation.css.css",
-    "animation.css_2af44128_ab811976.css",
     "_shared/cms-navigation-base.css.css",
     "cms-navigation-base.css_2af44128_4b011892.css",
     "_shared/cms-navigation.css.css",
     "cms-navigation.css_2af44128_0c630167.css",
     "_shared/fonts.css",
-    "_shared/fonts.css_2af44128.css",
     "_shared/gdpr-main-nf.css.css",
     "gdpr-main-nf.css_2af44128_f812281e.css",
     "_shared/jquery.jConveyorTicker.min.css.css",
@@ -32,9 +30,7 @@
     "_shared/style.min.css.css",
     "style.min.css_68b3cde9_d78f27f2.css",
     "_shared/style.min.css.css",
-    "style.min.css_edabec9e_50264762.css",
-    "svgs-attachment.css_2af44128.css",
-    "svgs-attachment.css_2af44128_7d93c52d.css"
+    "style.min.css_edabec9e_50264762.css"
   ],
   "js": [
     "_shared/5905093.js.js",
@@ -43,7 +39,6 @@
     "DOMPurify.min.js_ed4212ae_42a4771a.js",
     "_shared/ScrollMagic.min.js.js",
     "ScrollMagic.min.js_edabec9e_3a4ab393.js",
-    "ScrollTrigger.min.js_a1459148.js",
     "ScrollTrigger.min.js_a1459148_baba35d8.js",
     "_shared/TweenMax.min.js.js",
     "TweenMax.min.js_edabec9e_cf3a8d30.js",
@@ -55,7 +50,6 @@
     "dom-ready.min.js_5346137b_5d0edca3.js",
     "_shared/gravityforms.min.js.js",
     "gravityforms.min.js_13f93b15_fac2529c.js",
-    "gsap.min.js_a1459148.js",
     "gsap.min.js_a1459148_7bfa21d2.js",
     "_shared/hooks.min.js.js",
     "hooks.min.js_4fddbd9c_91206fa1.js",
@@ -77,7 +71,6 @@
     "jquery.min.js_f43b551b_8fc3e0d2.js",
     "_shared/language-cookie.js.js",
     "language-cookie.js_2af44128_a514a161.js",
-    "lottie.min.js_2af44128.js",
     "lottie.min.js_2af44128_9f054075.js",
     "_shared/main.js.js",
     "main.js_a1459148_2720a423.js",
@@ -99,7 +92,6 @@
     "widget.js_a1459148_cad6b94a.js",
     "_shared/wow.js.js",
     "wow.js_a1459148_55d66804.js",
-    "wpr-beacon.min.js",
     "wpr-beacon.min_2eba8b80.js"
   ]
 }

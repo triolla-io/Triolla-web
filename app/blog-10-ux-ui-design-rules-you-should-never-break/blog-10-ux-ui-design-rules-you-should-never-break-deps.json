@@ -6,13 +6,11 @@
     "_shared/animate.css.css",
     "animate.css_2af44128_c14735b9.css",
     "_shared/animation.css.css",
-    "animation.css_2af44128_ab811976.css",
     "_shared/cms-navigation-base.css.css",
     "cms-navigation-base.css_2af44128_4b011892.css",
     "_shared/cms-navigation.css.css",
     "cms-navigation.css_2af44128_0c630167.css",
     "_shared/fonts.css",
-    "_shared/fonts.css_2af44128.css",
     "_shared/jquery.jConveyorTicker.min.css.css",
     "jquery.jConveyorTicker.min.css_edabec9e_b5295813.css",
     "_shared/ml-responsive.css.css",
@@ -34,13 +32,11 @@
   "js": [
     "_shared/ScrollMagic.min.js.js",
     "ScrollMagic.min.js_edabec9e_3a4ab393.js",
-    "ScrollTrigger.min.js_a1459148.js",
     "ScrollTrigger.min.js_a1459148_baba35d8.js",
     "_shared/TweenMax.min.js.js",
     "TweenMax.min.js_edabec9e_cf3a8d30.js",
     "_shared/all.js.js",
     "all.js_a1459148_5800748e.js",
-    "gsap.min.js_a1459148.js",
     "gsap.min.js_a1459148_7bfa21d2.js",
     "_shared/jquery-3.6.0.min.js.js",
     "jquery-3.6.0.min.js_edabec9e_03680171.js",
@@ -48,7 +44,6 @@
     "jquery.bez.min.js_edabec9e_8a0c603f.js",
     "_shared/jquery.jConveyorTicker.min.js.js",
     "jquery.jConveyorTicker.min.js_edabec9e_50cee710.js",
-    "lottie.min.js_2af44128.js",
     "lottie.min.js_2af44128_9f054075.js",
     "_shared/metaview.js.js",
     "metaview.js_2af44128_b5aeffb6.js",
@@ -56,7 +51,6 @@
     "owl.carousel.js_2af44128_9e189872.js",
     "_shared/v8c78df7c7c0f484497ecbca7046644da1771523124516.js",
     "_shared/wow.js.js",
-    "wow.js_a1459148_55d66804.js",
-    "wpr-beacon.min.js"
+    "wow.js_a1459148_55d66804.js"
   ]
 }

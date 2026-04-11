@@ -4,7 +4,6 @@
   "dataRsssl": "1",
   "css": [
     "_shared/style-rtl.min.css.css",
-    "svgs-attachment.css",
     "_shared/style.min.css.css",
     "_shared/cms-navigation-base.css.css",
     "_shared/cms-navigation.css.css",

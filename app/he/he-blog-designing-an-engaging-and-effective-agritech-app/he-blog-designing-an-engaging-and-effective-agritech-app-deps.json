@@ -4,7 +4,6 @@
   "dataRsssl": "1",
   "css": [
     "_shared/style.css",
-    "svgs-attachment.css",
     "_shared/cms-navigation-base.css.css",
     "_shared/cms-navigation.css.css",
     "_shared/style-rtl.min.css.css",
@@ -20,7 +19,6 @@
   ],
   "js": [
     "_shared/jquery-3.6.0.min.js.js",
-    "/assets/_shared/eb5e45d752068adfb4185f39ea2978f6_jquery.jConveyorTicker.min.js_edabec9e.js",
     "_shared/metaview.js.js",
     "_shared/gsap.min.js",
     "_shared/ScrollTrigger.min.js",

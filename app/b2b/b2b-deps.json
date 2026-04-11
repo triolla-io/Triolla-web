@@ -3,19 +3,13 @@
   "bodyClass": "wp-singular page-template page-template-page-portfolio page-template-page-portfolio-php page page-id-1437 wp-theme-triolla",
   "dataRsssl": "1",
   "css": [
-    "style.min.css_edabec9e.css",
-    "cms-navigation-base.css_7976b2e5.css",
     "cms-navigation.css_7976b2e5.css",
     "style.css_edabec9e.css",
     "style-new.css_edabec9e.css",
-    "responsive.css_edabec9e.css",
-    "fonts.css_edabec9e.css",
-    "animate.css_edabec9e.css",
     "animation.css_edabec9e.css",
     "jquery.jConveyorTicker.min.css_edabec9e.css",
     "owl.carousel.css_edabec9e.css",
-    "mlstyle.css_edabec9e.css",
-    "ml-responsive.css_edabec9e.css"
+    "mlstyle.css_edabec9e.css"
   ],
   "js": [
     "jquery-3.6.0.min.js_edabec9e.js",

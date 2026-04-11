@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'SFProText';
     src:  format('embedded-opentype'),
-        url('/assets/_shared/fonts/SFProText-Medium.svg#SFProText-Medium') format('svg');
+        url('') format('svg');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -9,7 +9,7 @@
 @font-face {
     font-family: 'SFProText';
     src:  format('embedded-opentype'),
-        url('/assets/_shared/fonts/SFProText-Light.svg#SFProText-Light') format('svg');
+        url('') format('svg');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -17,7 +17,7 @@
 @font-face {
     font-family: 'SFProText';
     src:  format('embedded-opentype'),
-        url('/assets/_shared/fonts/SFProText-Regular.svg#SFProText-Regular') format('svg');
+        url('') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -25,7 +25,7 @@
 @font-face {
     font-family: 'SFProText';
     src:  format('embedded-opentype'),
-        url('/assets/_shared/fonts/SFProText-Thin.svg#SFProText-Thin') format('svg');
+        url('') format('svg');
     font-weight: 100;
     font-style: normal;
     font-display: swap;
@@ -33,7 +33,7 @@
 @font-face {
     font-family: 'SF Pro';
     src:  format('embedded-opentype'),
-        url('/assets/_shared/fonts/SFPro-Regular.svg#SFPro-Regular') format('svg');
+        url('') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -41,7 +41,7 @@
 @font-face {
     font-family: 'SFProText';
     src:  format('embedded-opentype'),
-        url('/assets/_shared/fonts/SFProText-Semibold.svg#SFProText-Semibold') format('svg');
+        url('') format('svg');
     font-weight: 600;
     font-style: normal;
     font-display: swap;
@@ -49,7 +49,7 @@
 @font-face {
     font-family: 'SFProText';
     src:  format('embedded-opentype'),
-        url('/assets/_shared/fonts/SFProText-Bold.svg#SFProText-Bold') format('svg');
+        url('') format('svg');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -57,7 +57,7 @@
 @font-face {
     font-family: 'Helvetica';
     src:  format('embedded-opentype'),
-        url('/assets/_shared/fonts/Helvetica-Bold.svg#Helvetica-Bold') format('svg');
+        url('') format('svg');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -85,7 +85,7 @@
 @font-face {
     font-family: 'Almoni DL AAA';
     src:  format('embedded-opentype'),
-        url('/assets/_shared/fonts/AlmoniDLAAA-Bold.svg#AlmoniDLAAA-Bold') format('svg');
+        url('') format('svg');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -93,7 +93,7 @@
 @font-face {
     font-family: 'Almoni ML v5 AAA';
     src:  format('embedded-opentype'),
-        url('/assets/_shared/fonts/AlmoniMLv5AAA-Regular.svg#AlmoniMLv5AAA-Regular') format('svg');
+        url('') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -101,7 +101,7 @@
 @font-face {
     font-family: 'Almoni ML v5 AAA';
     src:  format('embedded-opentype'),
-        url('/assets/_shared/fonts/AlmoniMLv5AAA-Bold.svg#AlmoniMLv5AAA-Bold') format('svg');
+        url('') format('svg');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -109,7 +109,7 @@
 @font-face {
     font-family: 'CoreNaraeProW01-Pro';
     src:  format('embedded-opentype'),
-        url('/assets/_shared/fonts/CoreNaraeProW01-Pro.svg#CoreNaraeProW01-Pro') format('svg');
+        url('') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -117,7 +117,7 @@
 @font-face {
     font-family: 'SF Compact Display';
     src:  format('embedded-opentype'),
-        url('/assets/_shared/fonts/SFCompactDisplay-Medium.svg#SFCompactDisplay-Medium') format('svg');
+        url('') format('svg');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -125,7 +125,7 @@
 @font-face {
     font-family: 'SF Compact Display';
     src:  format('embedded-opentype'),
-        url('/assets/_shared/fonts/SFCompactDisplay-Bold.svg#SFCompactDisplay-Bold') format('svg');
+        url('') format('svg');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -133,7 +133,7 @@
 @font-face {
     font-family: 'SF Compact Display';
     src:  format('embedded-opentype'),
-        url('/assets/_shared/fonts/SFCompactDisplay-Black.svg#SFCompactDisplay-Black') format('svg');
+        url('') format('svg');
     font-weight: 900;
     font-style: normal;
     font-display: swap;
@@ -141,28 +141,28 @@
 @font-face {
     font-family: 'SF Compact Display';
     src:  format('embedded-opentype'),
-        url('/assets/_shared/fonts/SFCompactDisplay-Regular.svg#SFCompactDisplay-Regular') format('svg');
+        url('') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
-@font-face{font-family:'SFProText';src:url('/assets/_shared/fonts/SFCompactDisplay-Regular.svg#SFCompactDisplay-Regular') format('svg');font-weight:400;font-style:normal;font-display:swap}
-@font-face{font-family:'SFProText';src: format('embedded-opentype'),url('/assets/_shared/fonts/SFProText-Medium.svg#SFProText-Medium') format('svg');font-weight:500;font-style:normal;font-display:swap}
-@font-face{font-family:'SFProText';src: format('embedded-opentype'),url('/assets/_shared/fonts/SFProText-Light.svg#SFProText-Light') format('svg');font-weight:300;font-style:normal;font-display:swap}
-@font-face{font-family:'SFProText';src: format('embedded-opentype'),url('/assets/_shared/fonts/SFProText-Regular.svg#SFProText-Regular') format('svg');font-weight:400;font-style:normal;font-display:swap}
-@font-face{font-family:'SFProText';src: format('embedded-opentype'),url('/assets/_shared/fonts/SFProText-Thin.svg#SFProText-Thin') format('svg');font-weight:100;font-style:normal;font-display:swap}
-@font-face{font-family:'SF Pro';src: format('embedded-opentype'),url('/assets/_shared/fonts/SFPro-Regular.svg#SFPro-Regular') format('svg');font-weight:400;font-style:normal;font-display:swap}
-@font-face{font-family:'SFProText';src: format('embedded-opentype'),url('/assets/_shared/fonts/SFProText-Semibold.svg#SFProText-Semibold') format('svg');font-weight:600;font-style:normal;font-display:swap}
-@font-face{font-family:'SFProText';src: format('embedded-opentype'),url('/assets/_shared/fonts/SFProText-Bold.svg#SFProText-Bold') format('svg');font-weight:700;font-style:normal;font-display:swap}
-@font-face{font-family:'Helvetica';src: format('embedded-opentype'),url('/assets/_shared/fonts/Helvetica-Bold.svg#Helvetica-Bold') format('svg');font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:'SFProText';src:url('') format('svg');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'SFProText';src: format('embedded-opentype'),url('') format('svg');font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:'SFProText';src: format('embedded-opentype'),url('') format('svg');font-weight:300;font-style:normal;font-display:swap}
+@font-face{font-family:'SFProText';src: format('embedded-opentype'),url('') format('svg');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'SFProText';src: format('embedded-opentype'),url('') format('svg');font-weight:100;font-style:normal;font-display:swap}
+@font-face{font-family:'SF Pro';src: format('embedded-opentype'),url('') format('svg');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'SFProText';src: format('embedded-opentype'),url('') format('svg');font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:'SFProText';src: format('embedded-opentype'),url('') format('svg');font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:'Helvetica';src: format('embedded-opentype'),url('') format('svg');font-weight:700;font-style:normal;font-display:swap}
 @font-face{font-family:'Helvetica';src: format('embedded-opentype'),url('/assets/_shared/Helvetica.svg#Helvetica') format('svg');font-weight:400;font-style:normal;font-display:swap}
 @font-face{font-display:swap;font-family:'almoni-dl';font-weight:400;font-style:normal;src: format('embedded-opentype')}
 @font-face{font-display:swap;font-family:'almoni-dl';font-weight:900;font-style:normal;src: format('embedded-opentype')}
-@font-face{font-family:'Almoni DL AAA';src: format('embedded-opentype'),url('/assets/_shared/fonts/AlmoniDLAAA-Bold.svg#AlmoniDLAAA-Bold') format('svg');font-weight:700;font-style:normal;font-display:swap}
-@font-face{font-family:'Almoni ML v5 AAA';src: format('embedded-opentype'),url('/assets/_shared/fonts/AlmoniMLv5AAA-Regular.svg#AlmoniMLv5AAA-Regular') format('svg');font-weight:400;font-style:normal;font-display:swap}
-@font-face{font-family:'Almoni ML v5 AAA';src: format('embedded-opentype'),url('/assets/_shared/fonts/AlmoniMLv5AAA-Bold.svg#AlmoniMLv5AAA-Bold') format('svg');font-weight:700;font-style:normal;font-display:swap}
-@font-face{font-family:'CoreNaraeProW01-Pro';src: format('embedded-opentype'),url('/assets/_shared/fonts/CoreNaraeProW01-Pro.svg#CoreNaraeProW01-Pro') format('svg');font-weight:400;font-style:normal;font-display:swap}
-@font-face{font-family:'SF Compact Display';src: format('embedded-opentype'),url('/assets/_shared/fonts/SFCompactDisplay-Medium.svg#SFCompactDisplay-Medium') format('svg');font-weight:500;font-style:normal;font-display:swap}
-@font-face{font-family:'SF Compact Display';src: format('embedded-opentype'),url('/assets/_shared/fonts/SFCompactDisplay-Bold.svg#SFCompactDisplay-Bold') format('svg');font-weight:700;font-style:normal;font-display:swap}
-@font-face{font-family:'SF Compact Display';src: format('embedded-opentype'),url('/assets/_shared/fonts/SFCompactDisplay-Black.svg#SFCompactDisplay-Black') format('svg');font-weight:900;font-style:normal;font-display:swap}
-@font-face{font-family:'SF Compact Display';src: format('embedded-opentype'),url('/assets/_shared/fonts/SFCompactDisplay-Regular.svg#SFCompactDisplay-Regular') format('svg');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Almoni DL AAA';src: format('embedded-opentype'),url('') format('svg');font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:'Almoni ML v5 AAA';src: format('embedded-opentype'),url('') format('svg');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Almoni ML v5 AAA';src: format('embedded-opentype'),url('') format('svg');font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:'CoreNaraeProW01-Pro';src: format('embedded-opentype'),url('') format('svg');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'SF Compact Display';src: format('embedded-opentype'),url('') format('svg');font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:'SF Compact Display';src: format('embedded-opentype'),url('') format('svg');font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:'SF Compact Display';src: format('embedded-opentype'),url('') format('svg');font-weight:900;font-style:normal;font-display:swap}
+@font-face{font-family:'SF Compact Display';src: format('embedded-opentype'),url('') format('svg');font-weight:400;font-style:normal;font-display:swap}

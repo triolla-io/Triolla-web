@@ -19,18 +19,14 @@
   ],
   "js": [
     "_shared/ScrollMagic.min.js.js",
-    "ScrollTrigger.min.js_a1459148.js",
     "_shared/TweenMax.min.js.js",
     "_shared/all.js.js",
-    "gsap.min.js_a1459148.js",
     "_shared/jquery-3.6.0.min.js.js",
     "_shared/jquery.bez.min.js.js",
     "_shared/jquery.jConveyorTicker.min.js.js",
-    "lottie.min.js_2af44128.js",
     "_shared/metaview.js.js",
     "_shared/owl.carousel.js.js",
     "_shared/v8c78df7c7c0f484497ecbca7046644da1771523124516.js",
-    "_shared/wow.js.js",
-    "wpr-beacon.min.js"
+    "_shared/wow.js.js"
   ]
 }

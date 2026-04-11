@@ -5,8 +5,6 @@
   "css": [
     "_shared/fonts.css",
     "_shared/style.min.css.css",
-    "svgs-attachment.css",
-    "style(1).min.css",
     "_shared/cms-navigation-base.css.css",
     "_shared/cms-navigation.css.css",
     "_shared/style.css",
@@ -50,8 +48,7 @@
     "_shared/placeholders.jquery.min.js.js",
     "_shared/utils.min.js.js",
     "_shared/vendor-theme.min.js.js",
-    "_shared/scripts-theme.min.js.js",
-    "widget(1).js"
+    "_shared/scripts-theme.min.js.js"
   ],
   "sharedFontsManifest": "/Users/ariell/html-to-react/public/assets/_shared/fonts/fonts.json",
   "sharedFontsUrl": "/assets/_shared/fonts",
