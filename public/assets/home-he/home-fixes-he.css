@@ -110,7 +110,7 @@ body * {
 .technmtxt,
 .techthretop p,
 .techthretop h4 {
-  font-family: 'SF Compact Display' !important;
+  font-family: 'SF Compact Display', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif !important;
 }
 
 .circletxt {

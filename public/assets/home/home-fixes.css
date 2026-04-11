@@ -32,36 +32,36 @@
 [data-triolla-snapshot] .header_book a span,
 [data-triolla-snapshot] .header_whatsapp a,
 [data-triolla-snapshot] .header_whatsapp a span {
-  font-family: 'SFProText' !important;
+  font-family: 'SFProText', -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif !important;
   font-weight: 500 !important;
 }
 
 /* Portfolio / process section */
 .top_design_text h3 {
-  font-family: 'SFProText' !important;
+  font-family: 'SFProText', -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif !important;
   font-weight: 700 !important;
 }
 
 .top_design_text p {
-  font-family: 'SFProText' !important;
+  font-family: 'SFProText', -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif !important;
   font-weight: 400 !important;
 }
 
 /* FAQ section */
 .faqtitle a {
-  font-family: 'SFProText' !important;
+  font-family: 'SFProText', -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif !important;
   font-weight: 400 !important;
 }
 
 .faqtitle a span,
 .faq_quest {
-  font-family: 'SFProText' !important;
+  font-family: 'SFProText', -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif !important;
   font-weight: 400 !important;
 }
 
 .faqdetail,
 .faqdetail p {
-  font-family: 'SFProText' !important;
+  font-family: 'SFProText', -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif !important;
   font-weight: 400 !important;
 }
 
@@ -84,9 +84,9 @@
 [data-triolla-snapshot] .technmtxt,
 [data-triolla-snapshot] .techthretop p,
 [data-triolla-snapshot] .techthretop h4 {
-  font-family: 'SF Compact Display' !important;
+  font-family: 'SF Compact Display', -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif !important;
 }
 
 [data-triolla-snapshot] .circletxt {
-  font-family: 'SFProText' !important;
+  font-family: 'SFProText', -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif !important;
 }
