@@ -7,7 +7,7 @@
     "animation.css_2af44128.css",
     "cms-navigation-base.css_2af44128.css",
     "cms-navigation.css_2af44128.css",
-    "fonts.css_2af44128.css",
+    "_shared/fonts.css_2af44128.css",
     "jquery.jConveyorTicker.min.css_edabec9e.css",
     "ml-responsive.css_2af44128.css",
     "mlstyle.css_2af44128.css",
@@ -29,7 +29,7 @@
     "lottie.min.js_2af44128.js",
     "metaview.js_2af44128.js",
     "owl.carousel.js_2af44128.js",
-    "v8c78df7c7c0f484497ecbca7046644da1771523124516.js",
+    "_shared/v8c78df7c7c0f484497ecbca7046644da1771523124516.js",
     "wow.js_a1459148.js"
   ]
 }

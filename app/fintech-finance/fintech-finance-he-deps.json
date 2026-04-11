@@ -3,24 +3,24 @@
   "bodyClass": "rtl wp-singular page-template page-template-page-portfolio page-template-page-portfolio-php page page-id-2609 wp-theme-triolla",
   "dataRsssl": "1",
   "css": [
-    "style.css",
+    "_shared/style.css",
     "cms-navigation-base.css",
     "cms-navigation.css",
     "style-rtl.min.css_edabec9e.css",
-    "style-he.css_edabec9e.css",
-    "style-new-he.css_edabec9e.css",
-    "responsive-he.css_edabec9e.css",
+    "_shared/style-he.css_edabec9e.css",
+    "_shared/style-new-he.css_edabec9e.css",
+    "_shared/responsive-he.css_edabec9e.css",
     "animate.css_edabec9e.css",
     "animation.css_edabec9e.css",
     "mlstyle.css_edabec9e.css",
     "ml-responsive.css_edabec9e.css",
-    "fonts.css"
+    "_shared/fonts.css"
   ],
   "js": [
     "jquery-3.6.0.min.js_edabec9e.js",
     "metaview.js_edabec9e.js",
-    "gsap.min.js",
-    "ScrollTrigger.min.js",
+    "_shared/gsap.min.js",
+    "_shared/ScrollTrigger.min.js",
     "wow.js_edabec9e.js",
     "all.js_edabec9e.js"
   ],

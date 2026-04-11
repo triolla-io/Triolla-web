@@ -12,15 +12,7 @@
   font-size: 18px;
 }
 
-/* Portfolio dropdown (nav menu submenu): align content to LEFT
-   Theme submenu items should flow left-aligned, not centered. */
-[data-triolla-snapshot] .header_menu ul.menu li.bigmenu > ul,
-[data-triolla-snapshot] .header_menu ul.menu li.bigmenu > ul li {
-  text-align: left !important;
-}
-[data-triolla-snapshot] .header_menu ul.menu li.bigmenu > ul li a {
-  text-align: left !important;
-}
+/* Portfolio mega-menu alignment: see `app/triolla-snapshot-mobile-nav.css` (loaded for all snapshots). */
 
 /* Hero h1: reset bottom offset that causes visual position mismatch.
    Theme uses bottom: -30px (animation start); remove for parity with live site. */

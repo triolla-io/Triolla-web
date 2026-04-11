@@ -428,6 +428,40 @@
     color: #000 !important;
   }
 
+  /* Same center-inheritance inside the drawer on mobile. */
+  [data-triolla-snapshot] .hmenumobdiv ul.menu li.bigmenu > ul,
+  [data-triolla-snapshot] .hmenumobdiv ul.menu li.bigmenu > ul.sub-menu {
+    text-align: left !important;
+  }
+
+  [data-triolla-snapshot] .hmenumobdiv ul.menu li.bigmenu > ul > li,
+  [data-triolla-snapshot] .hmenumobdiv ul.menu li.bigmenu > ul.sub-menu > li {
+    text-align: left !important;
+  }
+
+  [data-triolla-snapshot] .hmenumobdiv ul.menu li.bigmenu > ul li a {
+    text-align: left !important;
+  }
+
+  [data-triolla-snapshot][dir="rtl"] .hmenumobdiv ul.menu li.bigmenu > ul,
+  [data-triolla-snapshot][dir="rtl"] .hmenumobdiv ul.menu li.bigmenu > ul.sub-menu,
+  [data-triolla-snapshot].rtl .hmenumobdiv ul.menu li.bigmenu > ul,
+  [data-triolla-snapshot].rtl .hmenumobdiv ul.menu li.bigmenu > ul.sub-menu {
+    text-align: right !important;
+  }
+
+  [data-triolla-snapshot][dir="rtl"] .hmenumobdiv ul.menu li.bigmenu > ul > li,
+  [data-triolla-snapshot][dir="rtl"] .hmenumobdiv ul.menu li.bigmenu > ul.sub-menu > li,
+  [data-triolla-snapshot].rtl .hmenumobdiv ul.menu li.bigmenu > ul > li,
+  [data-triolla-snapshot].rtl .hmenumobdiv ul.menu li.bigmenu > ul.sub-menu > li {
+    text-align: right !important;
+  }
+
+  [data-triolla-snapshot][dir="rtl"] .hmenumobdiv ul.menu li.bigmenu > ul li a,
+  [data-triolla-snapshot].rtl .hmenumobdiv ul.menu li.bigmenu > ul li a {
+    text-align: right !important;
+  }
+
 }
 
 /* Triolla ml-responsive: ≤767px turns hamburger invert off again (narrow phones). */
@@ -446,6 +480,44 @@
  * restore that with a grid only when every direct `li` is a leaf (no nested mega columns).
  */
 @media (min-width: 1024px) {
+  /*
+   * Theme `style.css`: `.header_menu { text-align: center }` — the Portfolio mega-menu `ul` sits
+   * inside it, so flat links inherit centered text on every route that loads the theme (not only
+   * when `home-fixes.css` is present). Reset for LTR; RTL overrides follow.
+   */
+  [data-triolla-snapshot] .header_menu ul.menu li.bigmenu > ul,
+  [data-triolla-snapshot] .header_menu ul.menu li.bigmenu > ul.sub-menu {
+    text-align: left !important;
+  }
+
+  [data-triolla-snapshot] .header_menu ul.menu li.bigmenu > ul > li,
+  [data-triolla-snapshot] .header_menu ul.menu li.bigmenu > ul.sub-menu > li {
+    text-align: left !important;
+  }
+
+  [data-triolla-snapshot] .header_menu ul.menu li.bigmenu > ul li a {
+    text-align: left !important;
+  }
+
+  [data-triolla-snapshot][dir="rtl"] .header_menu ul.menu li.bigmenu > ul,
+  [data-triolla-snapshot][dir="rtl"] .header_menu ul.menu li.bigmenu > ul.sub-menu,
+  [data-triolla-snapshot].rtl .header_menu ul.menu li.bigmenu > ul,
+  [data-triolla-snapshot].rtl .header_menu ul.menu li.bigmenu > ul.sub-menu {
+    text-align: right !important;
+  }
+
+  [data-triolla-snapshot][dir="rtl"] .header_menu ul.menu li.bigmenu > ul > li,
+  [data-triolla-snapshot][dir="rtl"] .header_menu ul.menu li.bigmenu > ul.sub-menu > li,
+  [data-triolla-snapshot].rtl .header_menu ul.menu li.bigmenu > ul > li,
+  [data-triolla-snapshot].rtl .header_menu ul.menu li.bigmenu > ul.sub-menu > li {
+    text-align: right !important;
+  }
+
+  [data-triolla-snapshot][dir="rtl"] .header_menu ul.menu li.bigmenu > ul li a,
+  [data-triolla-snapshot].rtl .header_menu ul.menu li.bigmenu > ul li a {
+    text-align: right !important;
+  }
+
   [data-triolla-snapshot]
     .header_menu
     ul.menu
@@ -456,6 +528,7 @@
     column-gap: 32px !important;
     row-gap: 0 !important;
     align-content: start !important;
+    justify-items: start !important;
     font-size: medium !important;
   }
 
@@ -484,6 +557,7 @@
     li.bigmenu
     > ul.sub-menu:not(:has(> li.menu-item-has-children)) {
     direction: rtl !important;
+    justify-items: end !important;
   }
 
   [data-triolla-snapshot] .header_menu ul.menu li.bigmenu > ul.sub-menu > li:not(.menu-item-has-children) > a {
@@ -558,7 +632,19 @@
   pointer-events: auto !important;
 }
 
-[data-triolla-snapshot].temp-mobile-nav-qa .menutoggle a {
+[data-triolla-snapshot].temp-mobile-nav-qa .menutoggle button.triolla-menutoggle-btn,
+[data-triolla-snapshot].temp-mobile-nav-qa .hmenumobclose button.triolla-drawer-close-btn {
+  background: none !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  cursor: pointer !important;
+  color: inherit !important;
+  font: inherit !important;
+}
+
+[data-triolla-snapshot].temp-mobile-nav-qa .menutoggle a,
+[data-triolla-snapshot].temp-mobile-nav-qa .menutoggle button.triolla-menutoggle-btn {
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;

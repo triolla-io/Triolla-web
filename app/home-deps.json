@@ -4,13 +4,13 @@
   "dataRsssl": "1",
   "css": [
     "style.min.css_edabec9e.css",
-    "home-grid-base.css",
+    "_shared/home-grid-base.css",
     "cms-navigation-base.css_2af44128.css",
     "cms-navigation.css_2af44128.css",
     "style.css_2af44128.css",
     "style-new.css_2af44128.css",
     "responsive.css_2af44128.css",
-    "fonts.css_2af44128.css",
+    "_shared/fonts.css_2af44128.css",
     "animate.css_2af44128.css",
     "animation.css_2af44128.css",
     "jquery.jConveyorTicker.min.css_edabec9e.css",
@@ -32,7 +32,7 @@
     "gsap.min.js_a1459148.js",
     "ScrollTrigger.min.js_a1459148.js",
     "all.js_a1459148.js",
-    "v8c78df7c7c0f484497ecbca7046644da1771523124516.js"
+    "_shared/v8c78df7c7c0f484497ecbca7046644da1771523124516.js"
   ],
   "sharedFontsManifest": "/Users/ariell/html-to-react/public/assets/_shared/fonts/fonts.json",
   "sharedFontsUrl": "/assets/_shared/fonts",

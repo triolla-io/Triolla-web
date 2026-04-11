@@ -187,7 +187,8 @@ body:not(:has([data-triolla-snapshot])) .headerticker .tickclose {
   position: absolute;
   display: inline-block;
   right: 62px;
-  top: 16px;
+  top: 50%;
+  transform: translateY(-50%);
   opacity: 0.85;
   transition: opacity 0.2s;
   cursor: pointer;
@@ -197,6 +198,25 @@ body:not(:has([data-triolla-snapshot])) .headerticker .tickclose {
   line-height: 1;
 }
 body:not(:has([data-triolla-snapshot])) .headerticker .tickclose:hover { opacity: 1; }
+
+/* ============================================================
+   HEADER TICKER FIX (Snapshot pages — fix X button alignment)
+   ============================================================ */
+[data-triolla-snapshot] .headerticker .tickclose,
+[data-triolla-snapshot] .headerticker a.tickclose {
+  position: absolute !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  right: auto !important;
+  inset-inline-end: 20px !important;
+  opacity: 0.9 !important;
+  display: inline-block !important;
+  cursor: pointer !important;
+}
+[data-triolla-snapshot] .headerticker .tickclose:hover,
+[data-triolla-snapshot] .headerticker a.tickclose:hover {
+  opacity: 1 !important;
+}
 
 @media (max-width: 1199px) {
   body:not(:has([data-triolla-snapshot])) .headerticker {
@@ -1593,6 +1613,19 @@ section.home-hero { background: #FED125; }
   .portfolio_global { height: auto; min-height: 900px; }
   .about_main .portfolio_global { height: auto; min-height: 900px; }
   .global_logos .g_logo { display: none; }
+  /*
+   * WP responsive.css hides every .g_logo then re-shows via `img.g_microsoft, .g_logo1` etc.
+   * Snapshot React markup uses `<div class="g_logo g_logoN">` + `.grid__item-img` without img.g_* classes,
+   * so the follow-up rules never reset display — logos vanish between ~768px and 1023px.
+   */
+  [data-triolla-snapshot] .portfolio_global .global_logos .g_logo {
+    display: block;
+  }
+  [data-triolla-snapshot] .portfolio_global .global_logos .grid__item-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
   .global_logos img.g_microsoft, .global_logos .g_logo1 {width: 100px;}
   .global_logos img.g_american, .global_logos .g_logo2 {width: 100px;}
   .global_logos img.g_ni, .global_logos .g_logo3 {width: 90px;}

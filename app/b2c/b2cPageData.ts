@@ -196,6 +196,30 @@ const B2C_GLOBAL_LOGOS: PortfolioPageData["global"]["logos"] = [
   { img: `${B}/finaro_global.svg`, alt: "Finaro" },
 ];
 
+const B2C_WHY: PortfolioPageData["why"] = {
+  mainTitle: "Why Do <br />B2C companies <br />choose us?",
+  items: [
+    {
+      title: "We get <br />your audience",
+      description:
+        "Aligned with the habits, journeys, and expectations of B2C users",
+    },
+    {
+      title: "Consumer-focused expertise",
+      description: "Dozens of digital products designed for top B2C brands",
+    },
+    {
+      title: "Quick to connect",
+      description: "We understand your market, so we create impact from day one",
+    },
+    {
+      title: "Experience-first approach",
+      description:
+        "Our UX is shaped around your customers, their needs, and their lifestyle",
+    },
+  ],
+};
+
 export const B2C_PAGE_DATA_EN: PortfolioPageData = {
   dir: "ltr",
   bannerColor: "#fed125",
@@ -206,39 +230,15 @@ export const B2C_PAGE_DATA_EN: PortfolioPageData = {
     title: "B2C",
     subtitle: "Collaborate with product design leaders.",
     description:
-      "Triolla’s approach to B2C unites advanced tools and efficient workflows....",
+      "Triolla’s approach to B2C unites advanced tools and efficient workflows.",
     expandedText:
-      "We craft engaging and intuitive interfaces that elevate the user experience and connect directly with your customers. Our product design process for B2C brands focuses on usability, visual appeal, and seamless interaction across all digital touchpoints. With Triolla, your consumer products benefit from design expertise that drives loyalty, boosts satisfaction, and sets your brand apart in a competitive market.",
+      "We craft engaging and intuitive interfaces that elevate the user experience and connect directly with your customers.\n\nOur product design process for B2C brands focuses on usability, visual appeal, and seamless interaction across all digital touchpoints.\n\nWith Triolla, your consumer products benefit from design expertise that drives loyalty, boosts satisfaction, and sets your brand apart in a competitive market.",
     buttonText: "Partner with us",
     buttonLink: "#contactus",
     ...B2C_ASSETS,
   },
   portfolioItems: B2C_ITEMS_EN,
-  why: {
-    mainTitle: "Why Do B2C companies choose us?",
-    items: [
-      {
-        title: "We get your audience",
-        description:
-          "Aligned with the habits, journeys, and expectations of B2C users",
-      },
-      {
-        title: "Consumer-focused expertise",
-        description:
-          "Dozens of digital products designed for top B2C brands",
-      },
-      {
-        title: "Quick to connect",
-        description:
-          "We understand your market, so we create impact from day one",
-      },
-      {
-        title: "Experience-first approach",
-        description:
-          "Our UX is shaped around your customers, their needs, and their lifestyle",
-      },
-    ],
-  },
+  why: B2C_WHY,
   global: {
     title: "Our Clients",
     subtitle: "From small to global, we have partnered with some great companies",
@@ -258,36 +258,15 @@ export const B2C_PAGE_DATA_HE: PortfolioPageData = {
     title: "B2C",
     subtitle: "שתפו פעולה עם מומחי עיצוב מוצר שמבינים את זה.",
     description:
-      "בטריאולה, אנחנו דוברים שוטף את שיטת B2C - החל ממסעות לקוח ועד לחוויות דיגיטליות חלקות....",
+      "בטריאולה, אנחנו דוברים שוטף את שיטת B2C - החל ממסעות לקוח ועד לחוויות דיגיטליות חלקות",
     expandedText:
-      "אנחנו יוצרים ממשקים מרתקים ואינטואיטיביים שמעצימים את חוויית המשתמש ומתחברים ישירות ללקוחות שלך. תהליך עיצוב המוצר שלנו עבור מותגי B2C מתמקד בשמישות, באסתטיקה ויזואלית ובאינטראקציה חלקה בכל נקודות המגע הדיגיטליות. עם Triolla, מוצרי הצריכה שלך נהנים ממומחיות עיצובית שמגבירה נאמנות, משפרת שביעות רצון ומבדלת את המותג שלך בשוק תחרותי.",
+      "אנחנו יוצרים ממשקים מרתקים ואינטואיטיביים שמעצימים את חוויית המשתמש ומתחברים ישירות ללקוחות שלך.\n\nתהליך עיצוב המוצר שלנו עבור מותגי B2C מתמקד בשמישות, באסתטיקה ויזואלית ובאינטראקציה חלקה בכל נקודות המגע הדיגיטליות.\n\nעם Triolla, מוצרי הצריכה שלך נהנים ממומחיות עיצובית שמגבירה נאמנות, משפרת שביעות רצון ומבדלת את המותג שלך בשוק תחרותי.",
     buttonText: "בוא נדבר",
     buttonLink: "#contactus",
     ...B2C_ASSETS,
   },
   portfolioItems: B2C_ITEMS_HE,
-  why: {
-    mainTitle: "למה חברות B2C בוחרות בנו?",
-    items: [
-      {
-        title: "אנחנו מבינים את הקהל שלך",
-        description: "מתואמים להרגלים, למסעות ולציפיות של משתמשי B2C",
-      },
-      {
-        title: "מומחיות ממוקדת צרכן",
-        description: "עשרות מוצרים דיגיטליים שעוצבו עבור מותגי B2C מובילים",
-      },
-      {
-        title: "יוצרים חיבור מהיר",
-        description: "אנחנו מכירים את השוק שלך – ומייצרים השפעה מהיום הראשון",
-      },
-      {
-        title: "גישה ממוקדת חוויה",
-        description:
-          "חוויית המשתמש שלנו נבנית סביב הלקוחות שלך, הצרכים שלהם ואורח החיים שלהם",
-      },
-    ],
-  },
+  why: B2C_WHY,
   global: {
     title: "הלקוחות שלנו",
     subtitle: "מחברות קטנות ועד גלובליות, שיתפנו פעולה עם כמה חברות מדהימות",

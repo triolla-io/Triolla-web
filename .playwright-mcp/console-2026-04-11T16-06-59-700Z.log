@@ -1,0 +1,15 @@
+[     258ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[     328ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[     446ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[     673ms] [LOG] JQMIGRATE: Migrate is installed, version 3.4.1 @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[     936ms] [LOG] [Fast Refresh] done in 598ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[    2494ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[    2761ms] [LOG] [Fast Refresh] done in 374ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[   28283ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[   28313ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[   28529ms] [LOG] JQMIGRATE: Migrate is installed, version 3.4.1 @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[   30030ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[   30041ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[   30207ms] [LOG] JQMIGRATE: Migrate is installed, version 3.4.1 @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[   31481ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[   31745ms] [LOG] [Fast Refresh] done in 365ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431

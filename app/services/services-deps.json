@@ -2,7 +2,7 @@
   "assetBase": "/assets/services",
   "bodyClass": "main_container",
   "css": [
-    "fonts.css_2af44128.css",
+    "_shared/fonts.css_2af44128.css",
     "style.min.css_edabec9e.css",
     "style.css_2af44128.css",
     "style-new.css_2af44128.css",

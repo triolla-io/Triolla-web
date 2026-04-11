@@ -1,13 +1,6 @@
 "use client";
 
-import {
-  forwardRef,
-  useEffect,
-  useRef,
-  type MutableRefObject,
-  type Ref,
-} from "react";
-import { initTriollaConveyorTicker } from "../lib/initTriollaConveyorTicker";
+import { forwardRef, useRef, type MutableRefObject, type Ref } from "react";
 import { PortfolioCompanyTicker } from "./PortfolioCompanyTicker";
 import { PortfolioHeader } from "./PortfolioHeader";
 import { PortfolioList } from "./PortfolioList";
@@ -95,28 +88,6 @@ export const PortfolioPageTemplate = forwardRef<
     assignRef(ref, el);
   };
 
-  useEffect(() => {
-    if (!data.companyTicker?.length) return;
-    let attempts = 0;
-    const maxAttempts = 40;
-    const intervalId = window.setInterval(() => {
-      attempts += 1;
-      const el = localRef.current;
-      const $ = (
-        window as unknown as {
-          jQuery?: { fn?: { jConveyorTicker?: unknown } };
-        }
-      ).jQuery;
-      if (el && $?.fn?.jConveyorTicker) {
-        initTriollaConveyorTicker(el);
-        window.clearInterval(intervalId);
-      } else if (attempts >= maxAttempts) {
-        window.clearInterval(intervalId);
-      }
-    }, 125);
-    return () => window.clearInterval(intervalId);
-  }, [data.companyTicker]);
-
   const isRtl = (data.dir ?? "ltr") === "rtl";
   const innerMainClass = isRtl ? "main_container rtl" : "main_container";
   const outerClass = bodyClass.trim();
@@ -164,6 +135,17 @@ export const PortfolioPageTemplate = forwardRef<
           color: inherit;
         }
                 .portfolio_banner { background-color: ${data.bannerColor}; }
+        /* jConveyorTicker animates ul via physical left; RTL dir inverts inline-block order and breaks measure/scroll */
+        [data-triolla-snapshot][dir="rtl"] .company_triker.jctkr-wrapper {
+          direction: ltr !important;
+        }
+        [data-triolla-snapshot][dir="rtl"] .company_triker.jctkr-wrapper > ul {
+          text-align: left !important;
+        }
+        /* Defeat jquery.jConveyorTicker.min.css ul { font-size: 0 } if cascade order flips */
+        [data-triolla-snapshot] .company_triker.jctkr-wrapper > ul > li > span {
+          font-size: inherit !important;
+        }
         .portfoli_lists ul li .protfolio_con { margin-top: 0 !important; }
         .portfoli_lists ul li { margin-top: 0 !important; }
         .portfoli_lists ul li .protfolio_img { bottom: -100px !important; opacity: 0 !important; }

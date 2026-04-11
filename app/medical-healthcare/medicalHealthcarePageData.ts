@@ -166,6 +166,30 @@ const LOGOS: PortfolioPageData["global"]["logos"] = [
   { img: "/assets/_shared/finaro_global.svg", alt: "Finaro" },
 ];
 
+const MEDICAL_WHY: PortfolioPageData["why"] = {
+  mainTitle: "Why Do <br />Medical companies <br />choose us?",
+  items: [
+    {
+      title: "We understand <br />healthcare",
+      description:
+        "Fluent in clinical workflows, patient needs, and regulatory standards",
+    },
+    {
+      title: "Healthcare design expertise",
+      description: "Over 70 digital solutions for medical and health organizations",
+    },
+    {
+      title: "Ready to care from day one",
+      description: "We know your environment, so we deliver meaningful results quickly",
+    },
+    {
+      title: "High end design",
+      description:
+        "Our UX focuses on accessibility and empowering both patients and professionals",
+    },
+  ],
+};
+
 export const MEDICAL_HEALTHCARE_PAGE_DATA_EN: PortfolioPageData = {
   dir: "ltr",
   bannerColor: "#fed125",
@@ -176,38 +200,18 @@ export const MEDICAL_HEALTHCARE_PAGE_DATA_EN: PortfolioPageData = {
     title: "Digital Health",
     subtitle: "Team up with product design pros.",
     description:
-      "Triolla’s approach to Medical & Healthcare unites experience and innovation....",
+      "Triolla’s approach to Medical & Healthcare unites experience and innovation.",
     expandedText:
-      "We design clear and accessible interfaces that support patient care and streamline complex medical workflows in the healthcare sector. Our product design process prioritizes usability, regulatory compliance, and seamless integration with healthcare systems to ensure safe and effective user experiences. With Triolla, your medical and healthcare solutions benefit from design expertise that improves outcomes, builds trust, and empowers both patients and professionals.",
+      "We design clear and accessible interfaces that support patient care and streamline complex medical workflows in the healthcare sector.\n\nOur product design process prioritizes usability, regulatory compliance, and seamless integration with healthcare systems to ensure safe and effective user experiences.\n\nWith Triolla, your medical and healthcare solutions benefit from design expertise that improves outcomes, builds trust, and empowers both patients and professionals.",
     buttonText: "Partner with us",
     buttonLink: "#contactus",
     ...ASSETS,
   },
   portfolioItems: ITEMS_EN,
-  why: {
-    mainTitle: "Why Do healthcare companies choose us?",
-    items: [
-      {
-        title: "Healthcare Expertise",
-        description: "Deep understanding of HIPAA compliance and healthcare workflows.",
-      },
-      {
-        title: "Patient-Centered Design",
-        description: "We design with patient needs and accessibility at the core.",
-      },
-      {
-        title: "Provider Efficiency",
-        description: "Our UX reduces cognitive load and streamlines medical workflows.",
-      },
-      {
-        title: "Regulatory Compliance",
-        description: "We navigate complex healthcare regulations with precision.",
-      },
-    ],
-  },
+  why: MEDICAL_WHY,
   global: {
     title: "Our Clients",
-    subtitle: "Trusted by leading healthcare organizations",
+    subtitle: "From small to global, we have partnered with some great companies",
     logos: LOGOS,
     buttonText: "Let's Talk",
     buttonLink: "#contactus",
@@ -224,35 +228,15 @@ export const MEDICAL_HEALTHCARE_PAGE_DATA_HE: PortfolioPageData = {
     title: "בריאות ורפואה",
     subtitle: "שתפו פעולה עם מומחי עיצוב מוצר שמבינים אתכם.",
     description:
-      "בטריאולה משלבים ניסיון רפואי עם חדשנות טכנולוגית – לטובת עולם הבריאות של המחר....",
+      "בטריאולה משלבים ניסיון רפואי עם חדשנות טכנולוגית – לטובת עולם הבריאות של המחר",
     expandedText:
-      "אנחנו מעצבים ממשקים ברורים ונגישים שתומכים בטיפול רפואי ומייעלים תהליכים רפואיים מורכבים במערכות הבריאות. תהליך עיצוב המוצרים שלנו שם דגש על שימושיות, עמידה בתקנות רגולציה ושילוב חלק עם מערכות רפואיות – כדי להבטיח חוויית משתמש בטוחה, יעילה ואפקטיבית. עם Triolla, פתרונות הבריאות והרפואה שלך נהנים ממומחיות עיצוב שמשפרת תוצאות, בונה אמון, ומעצימה גם מטופלים וגם אנשי מקצוע.",
+      "אנחנו מעצבים ממשקים ברורים ונגישים שתומכים בטיפול רפואי ומייעלים תהליכים רפואיים מורכבים במערכות הבריאות.\n\nתהליך עיצוב המוצרים שלנו שם דגש על שימושיות, עמידה בתקנות רגולציה ושילוב חלק עם מערכות רפואיות – כדי להבטיח חוויית משתמש בטוחה, יעילה ואפקטיבית.\n\nעם Triolla, פתרונות הבריאות והרפואה שלך נהנים ממומחיות עיצוב שמשפרת תוצאות, בונה אמון, ומעצימה גם מטופלים וגם אנשי מקצוע.",
     buttonText: "בואו נבנה יחד",
     buttonLink: "#contactus",
     ...ASSETS,
   },
   portfolioItems: ITEMS_HE,
-  why: {
-    mainTitle: "למה חברות בריאות בוחרות בנו?",
-    items: [
-      {
-        title: "מומחיות בריאות",
-        description: "היכרות עם ציות רגולטורי ותהליכי עבודה קליניים.",
-      },
-      {
-        title: "עיצוב ממוקד מטופל",
-        description: "צרכי מטופל ונגישות במרכז.",
-      },
-      {
-        title: "יעילות ספק",
-        description: "הפחתת עומס קוגניטיבי וייעול זרימות רפואיות.",
-      },
-      {
-        title: "ציות רגולטורי",
-        description: "ניווט מדויק ברגולציית בריאות מורכבת.",
-      },
-    ],
-  },
+  why: MEDICAL_WHY,
   global: {
     title: "הלקוחות שלנו",
     subtitle:

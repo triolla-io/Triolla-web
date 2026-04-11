@@ -59,10 +59,14 @@ export default function TriollaMobileMenuQaPage() {
               </ul>
             </div>
             <div className="menutoggle">
-              <a href="javascript:void(0);">
+              <button
+                type="button"
+                className="triolla-menutoggle-btn"
+                aria-label="פתח תפריט"
+              >
                 <img className="one" alt="" src="/images/hamburger.svg" />
                 <img className="two" alt="" src="/images/hamburger_white.svg" />
-              </a>
+              </button>
             </div>
             <div className="header_right">
               <div className="header_contact">
@@ -79,9 +83,9 @@ export default function TriollaMobileMenuQaPage() {
 
       <div className="hmenumob">
         <div className="hmenumobclose">
-          <a href="javascript:void(0);">
+          <button type="button" className="triolla-drawer-close-btn" aria-label="סגור תפריט">
             <img alt="" src="/images/togleclose.svg" width={24} height={24} />
-          </a>
+          </button>
         </div>
         <div className="hmenumobdiv">
           <p style={{ fontSize: "clamp(18px, 4vw, 28px)", margin: "16px 0 0 0" }}>

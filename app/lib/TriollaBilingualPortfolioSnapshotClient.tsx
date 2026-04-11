@@ -1,7 +1,10 @@
 "use client";
 
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
-import { initTriollaConveyorTicker } from "./initTriollaConveyorTicker";
+import {
+  ensureJConveyorTickerPlugin,
+  initTriollaConveyorTicker,
+} from "./initTriollaConveyorTicker";
 import { mountTriollaFaqAccordion } from "./mountTriollaFaqAccordion";
 import { mountTriollaFooterAccordion } from "./mountTriollaFooterAccordion";
 import { rewriteTriollaNavLinks } from "./rewriteTriollaNavLinks";
@@ -280,6 +283,9 @@ export function TriollaBilingualPortfolioSnapshotClient({
             gsapWin.gsap.registerPlugin(gsapWin.ScrollTrigger);
           }
 
+          if (el.querySelector(".company_triker")) {
+            await ensureJConveyorTickerPlugin(snap.assetBase);
+          }
           initTriollaConveyorTicker(el);
           initTriollaOwlCarousels(el);
           const $ = (window as unknown as { jQuery?: (sel: Window) => { trigger: (ev: string) => void } })

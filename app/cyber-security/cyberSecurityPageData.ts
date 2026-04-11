@@ -125,6 +125,30 @@ function logosWithBase(base: string): PortfolioPageData["global"]["logos"] {
   return names.map((file, i) => ({ img: `${base}/${file}`, alt: alts[i] }));
 }
 
+const CYBER_WHY: PortfolioPageData["why"] = {
+  mainTitle: "Why Do <br />cyber companies <br />choose us?",
+  items: [
+    {
+      title: "We speak <br />your language",
+      description:
+        "Fluent in the terms, flows, and mindset of cybersecurity users",
+    },
+    {
+      title: "Battle-tested experience",
+      description: "Over 65 SaaS platforms designed for top-tier cyber companies",
+    },
+    {
+      title: "Up to speed from day one",
+      description: "We get your world, so we get to work—fast.",
+    },
+    {
+      title: "Security-first thinking",
+      description:
+        "Our UX is built with your users, risks, and compliance in mind.",
+    },
+  ],
+};
+
 export const CYBER_SECURITY_PAGE_DATA_EN: PortfolioPageData = {
   dir: "ltr",
   /** Matches `style.css` / triolla snapshot (`.portfolio_banner`); `#000` made the hero override the theme and looked broken. */
@@ -133,37 +157,17 @@ export const CYBER_SECURITY_PAGE_DATA_EN: PortfolioPageData = {
   header: {
     eyebrow: "Product design for",
     title: "Cyber\nSecurity",
-    subtitle: "Team up with product design specialists who deliver.",
+    subtitle: "Partner with product design specialists who get it.",
     description:
-      "As cyber threats grow more complex, UX design helps simplify security processes without compromising protection...",
+      "User Experience (UX) design is crucial in the world of cybersecurity, where secure systems must also be intuitive and user-friendly.",
     expandedText:
-      "In cybersecurity, great UX means guiding users through secure actions without overwhelming them with technical complexity. A well-designed interface builds trust, encourages safe behavior, and gives users a sense of control. By anticipating risks and preventing common user errors, UX design plays a proactive role in reducing cyber threats. At Triolla, we specialize in designing secure, seamless, and human-centered experiences for cybersecurity products.",
+      "As cyber threats grow more complex, UX design helps simplify security processes without compromising protection. In cybersecurity, great UX means guiding users through secure actions without overwhelming them with technical complexity. A well-designed interface builds trust, encourages safe behavior, and gives users a sense of control.\n\nBy anticipating risks and preventing common user errors, UX design plays a proactive role in reducing cyber threats. At Triolla, we specialize in designing secure, seamless, and human-centered experiences for cybersecurity products.",
     buttonText: "Partner with us",
     buttonLink: "#contactus",
     ...ASSETS_EN,
   },
   portfolioItems: ITEMS_EN,
-  why: {
-    mainTitle: "Why Do cyber companies choose us?",
-    items: [
-      {
-        title: "We speak your language",
-        description: "Fluent in the terms, flows, and mindset of cybersecurity users",
-      },
-      {
-        title: "Battle-tested experience",
-        description: "Over 65 SaaS platforms designed for top-tier cyber companies",
-      },
-      {
-        title: "Up to speed from day one",
-        description: "We get your world, so we get to work—fast.",
-      },
-      {
-        title: "Security-first thinking",
-        description: "Our UX is built with your users, risks, and compliance in mind.",
-      },
-    ],
-  },
+  why: CYBER_WHY,
   global: {
     title: "Our Clients",
     subtitle: "From small to global, we have partnered with some great companies",
@@ -184,38 +188,19 @@ export const CYBER_SECURITY_PAGE_DATA_HE: PortfolioPageData = {
     title: "אבטחת\nסייבר",
     subtitle: "הצטרפו לצוות מומחי המוצר שמיישמים את החזון ומספקים תוצאות.",
     description:
-      "ככל שהאיומים מתרקמים, עיצוב UX מסייע לפשט תהליכי אבטחה בלי לוותר על הגנה...",
+      "ככל שהאיומים מתרקמים, עיצוב UX מסייע לפשט תהליכי אבטחה בלי לוותר על הגנה",
     expandedText:
-      "בסייבר, UX מצוין מנחה משתמשים לפעולות מאובטחות בלי להציף במורכבות טכנית. ממשק מתוכנן היטב בונה אמון, מעודד התנהגות בטוחה ונותן תחושת שליטה. לציד הימנעות משגיאות נפוצות, UX תורם באופן אקטיבי להפחתת סיכונים. בטריאולה אנו מתמחים בחוויות מאובטחות, חלקות וממוקדות אדם למוצרי סייבר.",
+      "בסייבר, UX מצוין מנחה משתמשים לפעולות מאובטחות בלי להציף במורכבות טכנית. ממשק מתוכנן היטב בונה אמון, מעודד התנהגות בטוחה ונותן תחושת שליטה.\n\nלצד הימנעות משגיאות נפוצות, UX תורם באופן אקטיבי להפחתת סיכונים.\n\nבטריאולה אנו מתמחים בחוויות מאובטחות, חלקות וממוקדות אדם למוצרי סייבר.",
     buttonText: "שותפו איתנו",
     buttonLink: "#contactus",
     ...ASSETS_HE,
   },
   portfolioItems: ITEMS_HE,
-  why: {
-    mainTitle: "למה חברות סייבר בוחרות בנו?",
-    items: [
-      {
-        title: "דוברים את השפה שלכם",
-        description: "שוטפים במונחים, בזרימות ובמנטליות של משתמשי סייבר.",
-      },
-      {
-        title: "ניסיון מלוטש בקרב",
-        description: "עשרות פלטפורמות SaaS לחברות סייבר מובילות.",
-      },
-      {
-        title: "בקצב מהיום הראשון",
-        description: "אנו מבינים את העולם שלכם — ומתחילים לעבוד מהר.",
-      },
-      {
-        title: "חשיבה אבטחה־פירסט",
-        description: "ה־UX נבנה עם משתמשים, סיכונים וציות בראש.",
-      },
-    ],
-  },
+  why: CYBER_WHY,
   global: {
     title: "הלקוחות שלנו",
-    subtitle: "מקומי ועד גלובלי — התקדמנו עם חברות מעולות",
+    subtitle:
+      "מחברות קטנות ועד גלובליות, שיתפנו פעולה עם כמה חברות מדהימות",
     logos: logosWithBase(IMG),
     buttonText: "בואו נדבר",
     buttonLink: "#contactus",

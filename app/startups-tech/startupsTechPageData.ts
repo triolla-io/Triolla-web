@@ -142,6 +142,32 @@ const GLOBAL_LOGOS: PortfolioPageData["global"]["logos"] = [
   { img: `${IMG}/finaro_global.svg`, alt: "Finaro" },
 ];
 
+const STARTUPS_WHY: PortfolioPageData["why"] = {
+  mainTitle: "Why Do <br />Startup companies <br />choose us?",
+  items: [
+    {
+      title: "We get <br /> startups",
+      description:
+        "Familiar with the language, pace, and mindset of founders and fast-moving teams.",
+    },
+    {
+      title: "Startup-proven expertise",
+      description:
+        "SaaS & AI products launched with top startups, from MVP to scale.",
+    },
+    {
+      title: "Momentum from the start",
+      description:
+        "We know your challenges—so we dive in and deliver value from day one.",
+    },
+    {
+      title: "User and growth focused",
+      description:
+        "Our UX is designed to drive engagement, support your vision, and adapt as your startup evolves.",
+    },
+  ],
+};
+
 export const STARTUPS_TECH_PAGE_DATA_EN: PortfolioPageData = {
   dir: "ltr",
   bannerColor: "#fed125",
@@ -152,38 +178,18 @@ export const STARTUPS_TECH_PAGE_DATA_EN: PortfolioPageData = {
     title: "Startups & Tech",
     subtitle: "Partner with product design experts who get it.",
     description:
-      "At Triolla, we speak fluent Startups & Tech — from MVPs to scalable digital solutions....",
+      "At Triolla, we speak fluent Startups & Tech — from MVPs to scalable digital solutions",
     expandedText:
-      "As startups and tech companies drive innovation, UX design is essential for turning bold ideas into products people love to use. In the fast-paced world of technology, great UX means guiding users through new features and experiences with clarity, making even complex solutions feel simple and approachable. A well-designed interface builds trust, accelerates adoption, and empowers users to get the most out of your product. By anticipating user needs and reducing friction, UX design helps startups deliver seamless, engaging, and memorable experiences. At Triolla, we specialize in designing intuitive, scalable, and user-focused products that help startups and tech companies succeed.",
+      "As startups and tech companies drive innovation, UX design is essential for turning bold ideas into products people love to use.\n\nIn the fast-paced world of technology, great UX means guiding users through new features and experiences with clarity, making even complex solutions feel simple and approachable. A well-designed interface builds trust, accelerates adoption, and empowers users to get the most out of your product. By anticipating user needs and reducing friction, UX design helps startups deliver seamless, engaging, and memorable experiences.\n\nAt Triolla, we specialize in designing intuitive, scalable, and user-focused products that help startups and tech companies succeed.",
     buttonText: "Partner with us",
     buttonLink: "#contactus",
     ...STARTUPS_TECH_ASSETS,
   },
   portfolioItems: ITEMS_EN,
-  why: {
-    mainTitle: "Why Do startup founders choose us?",
-    items: [
-      {
-        title: "Speed to Market",
-        description: "We deliver high-quality design at startup velocity.",
-      },
-      {
-        title: "Product-Market Fit Focus",
-        description: "Design that drives user validation and adoption.",
-      },
-      {
-        title: "Investor Appeal",
-        description: "Polished product design that impresses VCs and users alike.",
-      },
-      {
-        title: "Growth-Minded Design",
-        description: "UX that scales from MVP through Series A and beyond.",
-      },
-    ],
-  },
+  why: STARTUPS_WHY,
   global: {
     title: "Our Clients",
-    subtitle: "Trusted by innovative startups and tech leaders",
+    subtitle: "From small to global, we have partnered with some great companies",
     logos: GLOBAL_LOGOS,
     buttonText: "Let's Talk",
     buttonLink: "#contactus",
@@ -200,35 +206,15 @@ export const STARTUPS_TECH_PAGE_DATA_HE: PortfolioPageData = {
     title: "סטארטאפים & טק",
     subtitle: "הצטרפו למומחי עיצוב מוצר שמבינים אתכם באמת.",
     description:
-      "בטריאולה אנחנו דוברים סטארט-אפים וטכנולוגיה שוטף – ממוצרי MVP ועד פתרונות דיגיטליים גמישים וגדלים....",
+      "בטריאולה אנחנו דוברים סטארט-אפים וטכנולוגיה שוטף – ממוצרי MVP ועד פתרונות דיגיטליים גמישים וגדלים",
     expandedText:
-      "כשהחדשנות מובילה את עולם הסטארט-אפים והטכנולוגיה, עיצוב חוויית משתמש (UX) הוא המפתח להפיכת רעיונות נועזים למוצרים שאנשים אוהבים להשתמש בהם. בעולם הטכנולוגי המהיר, UX מצוין פירושו להוביל משתמשים בפשטות ובבהירות דרך פיצ'רים וחוויות חדשות, ולהפוך גם פתרונות מורכבים לנגישים וידידותיים. בטריאולה אנו מתמחים בעיצוב מוצרים אינטואיטיביים, גמישים וממוקדי משתמש שמסייעים לסטארט-אפים וחברות טכנולוגיה להצליח.",
+      "כשהחדשנות מובילה את עולם הסטארט-אפים והטכנולוגיה, עיצוב חוויית משתמש (UX) הוא המפתח להפיכת רעיונות נועזים למוצרים שאנשים אוהבים להשתמש בהם.\n\nבעולם הטכנולוגי המהיר, UX מצוין פירושו להוביל משתמשים בפשטות ובבהירות דרך פיצ'רים וחוויות חדשות, ולהפוך גם פתרונות מורכבים לנגישים וידידותיים.\n\nבטריאולה אנו מתמחים בעיצוב מוצרים אינטואיטיביים, גמישים וממוקדי משתמש שמסייעים לסטארט-אפים וחברות טכנולוגיה להצליח.",
     buttonText: "הצטרפו אלינו",
     buttonLink: "#contactus",
     ...STARTUPS_TECH_ASSETS,
   },
   portfolioItems: ITEMS_HE,
-  why: {
-    mainTitle: "למה מייסדי סטארט-אפ בוחרים בנו?",
-    items: [
-      {
-        title: "מהירות לשוק",
-        description: "אנו מספקים עיצוב איכותי במהירות שמתאימה לסטארט-אפ.",
-      },
-      {
-        title: "מיקוד ב־product-market fit",
-        description: "עיצוב שמניע אימות משתמשים ואימוץ.",
-      },
-      {
-        title: "משיכה למשקיעים",
-        description: "עיצוב מלוטש שמספק רושם גם לוונצ'ור וגם למשתמשים.",
-      },
-      {
-        title: "עיצוב חושב צמיחה",
-        description: "חוויית משתמש שמתאימה מ־MVP ועד סיבובי גיוס ומעלה.",
-      },
-    ],
-  },
+  why: STARTUPS_WHY,
   global: {
     title: "הלקוחות שלנו",
     subtitle:

@@ -1,0 +1,284 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e5]:
+    - generic [ref=e6]:
+      - generic [ref=e7]:
+        - button "Close announcement" [ref=e8] [cursor=pointer]
+        - list [ref=e9]:
+          - listitem [ref=e10]: Pitangoux is now Triolla – We’ve rebranded! Hello and welcome!
+      - generic [ref=e13]:
+        - link "Triolla" [ref=e15] [cursor=pointer]:
+          - /url: /
+          - img "Triolla" [ref=e17]
+        - list [ref=e20]:
+          - listitem [ref=e21]:
+            - link "Portfolio" [ref=e22] [cursor=pointer]:
+              - /url: /portfolio-page/
+            - list:
+              - listitem:
+                - link "Cybersecurity":
+                  - /url: /cyber-security/
+              - listitem:
+                - link "Digital Health":
+                  - /url: /medical-healthcare/
+              - listitem:
+                - link "Fintech & Finance":
+                  - /url: /fintech-finance/
+              - listitem:
+                - link "Gaming":
+                  - /url: /gaming/
+              - listitem:
+                - link "Agritech":
+                  - /url: /agritech/
+              - listitem:
+                - link "B2C":
+                  - /url: /b2c/
+              - listitem:
+                - link "Devices & IoT":
+                  - /url: /device-iot/
+              - listitem:
+                - link "Startups & Tech":
+                  - /url: /startups-tech/
+              - listitem:
+                - link "Mobile Apps":
+                  - /url: /mobile-apps/
+              - listitem:
+                - link "SaaS Platforms":
+                  - /url: /saas-platforms/
+              - listitem:
+                - link "B2B":
+                  - /url: /b2b/
+              - listitem:
+                - link "Dev":
+                  - /url: /dev/
+          - listitem [ref=e23]:
+            - link "Services" [ref=e24] [cursor=pointer]:
+              - /url: /services/
+          - listitem [ref=e25]:
+            - link "Technology" [ref=e26] [cursor=pointer]:
+              - /url: /technology/
+          - listitem [ref=e27]:
+            - link "The Company" [ref=e28] [cursor=pointer]:
+              - /url: /about-us/
+        - generic [ref=e29]:
+          - link "Contact Us" [ref=e31] [cursor=pointer]:
+            - /url: /contact-us/
+            - generic [ref=e32]: Contact Us
+          - link [ref=e34] [cursor=pointer]:
+            - /url: https://api.whatsapp.com/send/?phone=+972525956644&text=שלום, הייתי רוצה לשמוע עוד פרטים... &app_absent=0
+            - img [ref=e35]
+          - link "Book a Call" [ref=e40] [cursor=pointer]:
+            - /url: https://calendly.com/triolla/pitangoux-introductory-meeting-clone
+            - generic [ref=e41]:
+              - img [ref=e42]
+              - text: Book a Call
+    - main [ref=e44]:
+      - generic [ref=e45]:
+        - img "Triolla" [ref=e47]
+        - generic [ref=e50]:
+          - heading "Product design for" [level=4] [ref=e54]
+          - heading "SaaS Platforms" [level=1] [ref=e55]
+          - generic [ref=e56]:
+            - generic [ref=e57]: Partner with product design experts who get it.
+            - paragraph [ref=e58]:
+              - text: We speak fluent SaaS platforms — from onboarding flows to robust dashboards....
+              - generic [ref=e59]: ...
+              - button "Show more description" [ref=e60] [cursor=pointer]:
+                - img [ref=e61]
+          - link "Partner with us" [ref=e64] [cursor=pointer]:
+            - /url: "#contactus"
+            - generic [ref=e65]: Partner with us
+      - list [ref=e68]:
+        - listitem [ref=e69]: Jfrog
+        - listitem [ref=e70]: Playtika
+        - listitem [ref=e71]: Taboola
+        - listitem [ref=e72]: Juxta
+        - listitem [ref=e73]: LayerX
+        - listitem [ref=e74]: Melingo
+        - listitem [ref=e75]: PlainID
+      - generic [ref=e76]:
+        - list [ref=e77]:
+          - listitem [ref=e78]:
+            - generic [ref=e82]:
+              - img "Creating a CEO dashboard for quick, clear insights—enabling smarter, faster decisions." [ref=e84]
+              - generic [ref=e85]:
+                - paragraph [ref=e87]: Creating a CEO dashboard for quick, clear insights—enabling smarter, faster decisions.
+                - paragraph [ref=e88]: We designed a streamlined CEO dashboard focused on high-level performance insights, giving executives a clear, real-time view of key business metrics. With smart data visualizations, customizable reports, and intuitive navigation, the dashboard supports quick, informed decision-making at a glance.
+              - generic [ref=e89]:
+                - link "#ProductUI":
+                  - /url: "#"
+                - link "#Research":
+                  - /url: "#"
+                - link "#Interview":
+                  - /url: "#"
+          - listitem [ref=e90]:
+            - generic [ref=e94]:
+              - img "Redefining game intelligence by enhancing user engagement and performance through Playtika’s management and analytics platforms." [ref=e96]
+              - generic [ref=e97]:
+                - paragraph [ref=e99]: Redefining game intelligence by enhancing user engagement and performance through Playtika’s management and analytics platforms.
+                - paragraph [ref=e100]: A long and successful collaborations with Playtika on their internal platforms, focusing on analysis solutions, marketing, game experience, user satisfaction, data and more.
+              - generic [ref=e101]:
+                - link "#ProductUX":
+                  - /url: "#"
+                - link "#ProductResearch":
+                  - /url: "#"
+                - link "#UserInterview":
+                  - /url: "#"
+          - listitem [ref=e102]:
+            - generic [ref=e106]:
+              - img "A collaboration with Taboola to redesign key parts of their publisher and advertiser platforms, improving clarity and control at scale." [ref=e108]
+              - generic [ref=e109]:
+                - paragraph [ref=e111]: A collaboration with Taboola to redesign key parts of their publisher and advertiser platforms, improving clarity and control at scale.
+                - paragraph [ref=e112]: Focused on data-heavy interfaces, we worked to simplify the user journey for campaign setup, analytics, and content recommendations. The updated experience delivers faster insights, easier navigation, and a more consistent design across their suite of tools.
+              - generic [ref=e113]:
+                - link "#Product":
+                  - /url: "#"
+                - link "#UserPlatform":
+                  - /url: "#"
+                - link "#DataInterfaces":
+                  - /url: "#"
+          - listitem [ref=e114]:
+            - generic [ref=e118]:
+              - img "We teamed up with Juxta to design a clear, efficient platform for store management—simplifying inventory, malfunction reports, and daily operations." [ref=e120]
+              - generic [ref=e121]:
+                - paragraph [ref=e123]: We teamed up with Juxta to design a clear, efficient platform for store management—simplifying inventory, malfunction reports, and daily operations.
+                - paragraph [ref=e124]: a collaboration with Juxta to design a streamlined platform for store management, covering inventory tracking, malfunction reporting, and daily operations. Focused on clarity and efficiency, the UI helps managing accurately and efficiently —improving store performance and reducing downtime.
+              - generic [ref=e125]:
+                - link "#ProductDesign":
+                  - /url: "#"
+                - link "#ProductUI":
+                  - /url: "#"
+                - link "#UXUI":
+                  - /url: "#"
+          - listitem [ref=e126]:
+            - generic [ref=e130]:
+              - img "working with Layer X to simplify their security platform, designing clear dashboards and workflows, making threat data more accessible and actionable." [ref=e132]
+              - generic [ref=e133]:
+                - paragraph [ref=e135]: working with Layer X to simplify their security platform, designing clear dashboards and workflows, making threat data more accessible and actionable.
+                - paragraph [ref=e136]: In a collaboration with LayerX, we delivered an intuitive dashboards and smart data visuals to help IT teams easily monitor, manage, and respond to security events in real time.
+              - generic [ref=e137]:
+                - link "#UXUI":
+                  - /url: "#"
+                - link "#IntuitivDesign":
+                  - /url: "#"
+                - link "#DashboardDesign":
+                  - /url: "#"
+          - listitem [ref=e138]:
+            - generic [ref=e142]:
+              - img "Partnering with Melingo and Britannica to design user-friendly language learning experience —blending conversational AI with intuitive, engaging UI." [ref=e144]
+              - generic [ref=e145]:
+                - paragraph [ref=e147]: Partnering with Melingo and Britannica to design user-friendly language learning experience —blending conversational AI with intuitive, engaging UI.
+                - paragraph [ref=e148]: We worked with Melingo and Britannica to design an intuitive, engaging language learning experience. We created a student app and a teacher dashboard for monitoring and student tracking.
+              - generic [ref=e149]:
+                - link "#SystemDesign":
+                  - /url: "#"
+                - link "#UserExperience":
+                  - /url: "#"
+                - link "#DigitalDesign":
+                  - /url: "#"
+          - listitem [ref=e150]:
+            - generic [ref=e154]:
+              - img "We partnered with PlainID, elevating their platform user experience and design approach." [ref=e156]
+              - generic [ref=e157]:
+                - paragraph [ref=e159]: We partnered with PlainID, elevating their platform user experience and design approach.
+                - paragraph [ref=e160]: Designing PlainID new system—from dashboards to inner screens—creating a seamless, intuitive UX that simplifies complex authorization workflows for security teams.
+              - generic [ref=e161]:
+                - link "#UXDesign":
+                  - /url: "#"
+                - link "#UI":
+                  - /url: "#"
+                - link "#Product":
+                  - /url: "#"
+        - generic [ref=e163]:
+          - paragraph [ref=e164]: 50+ SaaS platforms and counting
+          - link "Partner with us" [ref=e166] [cursor=pointer]:
+            - /url: "#contactus"
+            - generic [ref=e167]: Partner with us
+      - generic [ref=e169]:
+        - heading "Why Do SaaS companies choose us?" [level=3] [ref=e170]
+        - list [ref=e172]:
+          - listitem [ref=e173]:
+            - generic [ref=e175]:
+              - heading "Retention Expertise" [level=4] [ref=e176]
+              - paragraph [ref=e177]: We design for adoption, engagement, and low churn rates.
+          - listitem [ref=e178]:
+            - generic [ref=e180]:
+              - heading "Onboarding Mastery" [level=4] [ref=e181]
+              - paragraph [ref=e182]: First-time users become power users through great design.
+          - listitem [ref=e183]:
+            - generic [ref=e185]:
+              - heading "Expansion Revenue Focus" [level=4] [ref=e186]
+              - paragraph [ref=e187]: Interfaces designed to increase customer lifetime value.
+          - listitem [ref=e188]:
+            - generic [ref=e190]:
+              - heading "SaaS Pattern Library" [level=4] [ref=e191]
+              - paragraph [ref=e192]: Deep experience with onboarding flows, freemium models, and analytics.
+      - generic [ref=e193]:
+        - generic [ref=e194]:
+          - img "Microsoft" [ref=e197]
+          - img "American Express" [ref=e200]
+          - img "N" [ref=e203]
+          - img "Human" [ref=e206]
+          - img "Passport" [ref=e209]
+          - img "JFrog" [ref=e212]
+          - img "Alam" [ref=e215]
+          - img "Taboola" [ref=e218]
+          - img "IS" [ref=e221]
+          - img "Star" [ref=e224]
+          - img "Playtika" [ref=e227]
+          - img "Finaro" [ref=e230]
+        - generic [ref=e232]:
+          - heading "Our Clients" [level=2] [ref=e233]
+          - heading "Trusted by leading SaaS innovators" [level=3] [ref=e234]
+          - link "Let's Talk" [ref=e236] [cursor=pointer]:
+            - /url: "#contactus"
+            - generic [ref=e237]: Let's Talk
+    - generic [ref=e240]:
+      - heading "People Asked us" [level=3] [ref=e241]
+      - paragraph [ref=e242]: We’ve gathered some common Q&A to make things easier and save you time
+    - generic [ref=e248]:
+      - generic [ref=e249]:
+        - heading "Wanna Chat? Get In Touch" [level=3] [ref=e250]
+        - generic [ref=e251]:
+          - heading "Give us a call:" [level=4] [ref=e252]
+          - paragraph [ref=e253]:
+            - text: TLV
+            - link "+972-73-744-3322" [ref=e254] [cursor=pointer]:
+              - /url: tel:+972-73-744-3322
+          - paragraph [ref=e255]:
+            - text: NY & SF
+            - link "+1408-627-7350" [ref=e256] [cursor=pointer]:
+              - /url: tel:+1408-627-7350
+        - generic [ref=e257]:
+          - heading "Mail:" [level=4] [ref=e258]
+          - paragraph [ref=e259]:
+            - link "[email protected]" [ref=e260] [cursor=pointer]:
+              - /url: /cdn-cgi/l/email-protection#bff9cad1ffcbcdd6d0d3d3de91d6d0
+          - paragraph [ref=e261]:
+            - strong [ref=e262]: "HQ Address:"
+            - text: Zarchin St. 2, Ranana
+        - generic [ref=e263]:
+          - heading "Trusted by 1000+ companies:" [level=5] [ref=e264]
+          - list [ref=e265]:
+            - listitem [ref=e266]
+            - listitem [ref=e269]
+            - listitem [ref=e272]
+            - listitem [ref=e275]
+      - generic [ref=e278]:
+        - heading "Schedule a Free Consultation" [level=4] [ref=e279]:
+          - text: Schedule a
+          - text: Free Consultation
+        - generic [ref=e281]:
+          - generic:
+            - paragraph
+          - generic [ref=e282]:
+            - generic [ref=e284]:
+              - textbox "Full Name(Required)" [ref=e287]:
+                - /placeholder: Full Name
+              - textbox "Phone(Required)" [ref=e290]:
+                - /placeholder: Phone
+              - textbox "Email(Required)" [ref=e293]:
+                - /placeholder: Email
+            - button "Let's Go!" [ref=e295] [cursor=pointer]
+  - button "Open Next.js Dev Tools" [ref=e301] [cursor=pointer]:
+    - img [ref=e302]
+  - alert [ref=e305]

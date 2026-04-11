@@ -3,7 +3,10 @@
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { initTriollaOwlCarousels } from "../about-us/initTriollaCarousels";
 import { mountTriollaHeaderPill } from "../about-us/mountTriollaHeaderPill";
-import { initTriollaConveyorTicker } from "../lib/initTriollaConveyorTicker";
+import {
+  ensureJConveyorTickerPlugin,
+  initTriollaConveyorTicker,
+} from "../lib/initTriollaConveyorTicker";
 import { mountTriollaFaqAccordion } from "../lib/mountTriollaFaqAccordion";
 import { mountTriollaFooterAccordion } from "../lib/mountTriollaFooterAccordion";
 import {
@@ -274,7 +277,14 @@ export function PortfolioPageWithCSS({
           window.dispatchEvent(new Event("load"));
           $?.(window).trigger("load");
 
+          if (data.companyTicker?.length) {
+            await ensureJConveyorTickerPlugin(assetBaseNorm);
+          }
           initTriollaConveyorTicker(root);
+          requestAnimationFrame(() => {
+            if (cancelled) return;
+            initTriollaConveyorTicker(root);
+          });
           initTriollaOwlCarousels(root);
 
           disposeRevealRef.current?.();
@@ -318,7 +328,7 @@ export function PortfolioPageWithCSS({
       injectedLinks.forEach((el) => el.remove());
       injectedScripts.forEach((el) => el.remove());
     };
-  }, [depsPath, lang]);
+  }, [depsPath, lang, data.companyTicker?.length ?? 0]);
 
   /** React may re-commit chrome when `phase` becomes ready; theme `all.js` runs after — re-apply local hrefs. */
   useLayoutEffect(() => {

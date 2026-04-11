@@ -165,6 +165,32 @@ const GAMING_GLOBAL_LOGOS: PortfolioPageData["global"]["logos"] = [
   { img: "/assets/_shared/finaro_global.svg", alt: "Finaro" },
 ];
 
+const GAMING_WHY: PortfolioPageData["why"] = {
+  mainTitle: "Why Do <br />Gaming companies <br />choose us?",
+  items: [
+    {
+      title: "We play <br />to win",
+      description:
+        "Fluent in player journeys, game mechanics, and immersive experiences.",
+    },
+    {
+      title: "Game design expertise",
+      description:
+        "Extensive experience crafting interfaces for top gaming platforms and studios.",
+    },
+    {
+      title: "In the game from day one",
+      description:
+        "We understand gamer culture, so we create engaging experiences right away.",
+    },
+    {
+      title: "Fun by design",
+      description:
+        "Our UX is built for excitement, retention, and seamless player interaction.",
+    },
+  ],
+};
+
 export const GAMING_PAGE_DATA_EN: PortfolioPageData = {
   dir: "ltr",
   bannerColor: "#fed125",
@@ -174,39 +200,15 @@ export const GAMING_PAGE_DATA_EN: PortfolioPageData = {
     title: "Gaming",
     subtitle: "Team up with product design specialists who deliver.",
     description:
-      "Fluent in Gaming, Triolla delivers immersive gameplay and engaging experiences...",
+      "Fluent in Gaming, Triolla delivers immersive gameplay and engaging experiences",
     expandedText:
-      "We design immersive and engaging interfaces that elevate gameplay and keep players coming back for more. Our product design process for gaming focuses on intuitive navigation, captivating visuals, and seamless user interaction across platforms. With Triolla, your gaming products benefit from design expertise that enhances player experience, boosts retention, and brings your creative vision to life.",
+      "We design immersive and engaging interfaces that elevate gameplay and keep players coming back for more.\n\nOur product design process for gaming focuses on intuitive navigation, captivating visuals, and seamless user interaction across platforms.\n\nWith Triolla, your gaming products benefit from design expertise that enhances player experience, boosts retention, and brings your creative vision to life.",
     buttonText: "Partner with us",
     buttonLink: "#contactus",
     ...GAMING_ASSETS,
   },
   portfolioItems: GAMING_ITEMS_EN,
-  why: {
-    mainTitle: "Why Do Gaming companies choose us?",
-    items: [
-      {
-        title: "We play to win",
-        description:
-          "Fluent in player journeys, game mechanics, and immersive experiences.",
-      },
-      {
-        title: "Game design expertise",
-        description:
-          "Extensive experience crafting interfaces for top gaming platforms and studios.",
-      },
-      {
-        title: "In the game from day one",
-        description:
-          "We understand gamer culture, so we create engaging experiences right away.",
-      },
-      {
-        title: "Fun by design",
-        description:
-          "Our UX is built for excitement, retention, and seamless player interaction.",
-      },
-    ],
-  },
+  why: GAMING_WHY,
   global: {
     title: "Our Clients",
     subtitle: "From small to global, we have partnered with some great companies",
@@ -225,38 +227,19 @@ export const GAMING_PAGE_DATA_HE: PortfolioPageData = {
     title: "גיימינג",
     subtitle: "הצטרפו לצוות מומחי המוצר שמיישמים את החזון ומספקים תוצאות.",
     description:
-      "שוטפים בשפה של גיימינג — טריאולה מספקת חוויית משחק מרתקת וסוחפת...",
+      "שוטפים בשפה של גיימינג — טריאולה מספקת חוויית משחק מרתקת וסוחפת",
     expandedText:
-      "אנו מעצבים ממשקים סוחפים ומרתקים שמרימים את חוויית המשחק ומחזירים שחקנים שוב ושוב. תהליך עיצוב המוצר מתמקד בניווט אינטואיטיבי, ויזואליה מושכת ואינטראקציה חלקה בין פלטפורמות. עם טריאולה, מוצרי הגיימינג שלכם נהנים ממומחיות שמשפרת חוויית שחקן, שימור והגשמת חזון יצירתי.",
+      "אנו מעצבים ממשקים סוחפים ומרתקים שמרימים את חוויית המשחק ומחזירים שחקנים שוב ושוב.\n\nתהליך עיצוב המוצר מתמקד בניווט אינטואיטיבי, ויזואליה מושכת ואינטראקציה חלקה בין פלטפורמות.\n\nעם טריאולה, מוצרי הגיימינג שלכם נהנים ממומחיות שמשפרת חוויית שחקן, שימור והגשמת חזון יצירתי.",
     buttonText: "שותפו איתנו",
     buttonLink: "#contactus",
     ...GAMING_ASSETS,
   },
   portfolioItems: GAMING_ITEMS_HE,
-  why: {
-    mainTitle: "למה חברות גיימינג בוחרות בנו?",
-    items: [
-      {
-        title: "משחקים כדי לנצח",
-        description: "שוטפים במסעות שחקן, במכאניקת משחק ובחוויות סוחפות.",
-      },
-      {
-        title: "מומחיות בעיצוב משחק",
-        description: "ניסיון רחב בממשקים לפלטפורמות ולסטודיואים מובילים.",
-      },
-      {
-        title: "במשחק מהיום הראשון",
-        description: "אנו מבינים תרבות גיימרים — ויוצרים חוויות מעורבות מהרגע הראשון.",
-      },
-      {
-        title: "כיף בעיצוב",
-        description: "ה־UX שלנו בנוי להתרגשות, שימור ואינטראקציה חלקה בין שחקנים.",
-      },
-    ],
-  },
+  why: GAMING_WHY,
   global: {
     title: "הלקוחות שלנו",
-    subtitle: "מקטן לגדול — התקדמנו עם חברות מגוונות ומובילות",
+    subtitle:
+      "מחברות קטנות ועד גלובליות, שיתפנו פעולה עם כמה חברות מדהימות",
     logos: GAMING_GLOBAL_LOGOS,
     buttonText: "בואו נדבר",
     buttonLink: "#contactus",

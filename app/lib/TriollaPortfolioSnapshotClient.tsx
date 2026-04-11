@@ -1,7 +1,10 @@
 "use client";
 
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
-import { initTriollaConveyorTicker } from "./initTriollaConveyorTicker";
+import {
+  ensureJConveyorTickerPlugin,
+  initTriollaConveyorTicker,
+} from "./initTriollaConveyorTicker";
 import { ensurePortfolioFaqWrapShown, mountTriollaFaqAccordion } from "./mountTriollaFaqAccordion";
 import {
   rewriteTriollaNavLinks,
@@ -178,6 +181,9 @@ export function TriollaPortfolioSnapshotClient({
             }
           }
 
+          if (el.querySelector(".company_triker")) {
+            await ensureJConveyorTickerPlugin(assetBase);
+          }
           initTriollaConveyorTicker(el);
           initTriollaOwlCarousels(el);
           const $ = (window as unknown as { jQuery?: (sel: Window) => { trigger: (ev: string) => void } })

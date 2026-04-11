@@ -11,7 +11,7 @@
     "cms-navigation-base.css_2af44128_4b011892.css",
     "cms-navigation.css_2af44128.css",
     "cms-navigation.css_2af44128_0c630167.css",
-    "fonts.css_2af44128.css",
+    "_shared/fonts.css_2af44128.css",
     "fonts.css_2af44128_c9fae59d.css",
     "jquery.jConveyorTicker.min.css_edabec9e.css",
     "jquery.jConveyorTicker.min.css_edabec9e_b5295813.css",
@@ -54,7 +54,7 @@
     "metaview.js_2af44128_b5aeffb6.js",
     "owl.carousel.js_2af44128.js",
     "owl.carousel.js_2af44128_9e189872.js",
-    "v8c78df7c7c0f484497ecbca7046644da1771523124516.js",
+    "_shared/v8c78df7c7c0f484497ecbca7046644da1771523124516.js",
     "wow.js_a1459148.js",
     "wow.js_a1459148_55d66804.js",
     "wpr-beacon.min.js"

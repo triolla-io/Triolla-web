@@ -12,12 +12,12 @@
   "js": [
     "DOMPurify.min.js_ed4212ae.js",
     "ScrollMagic.min.js_edabec9e.js",
-    "ScrollTrigger.min.js",
+    "_shared/ScrollTrigger.min.js",
     "TweenMax.min.js_edabec9e.js",
     "a11y.min.js_3f73a7c5.js",
     "dom-ready.min.js_5346137b.js",
     "gravityforms.min.js_13f93b15.js",
-    "gsap.min.js",
+    "_shared/gsap.min.js",
     "hooks.min.js_4fddbd9c.js",
     "i18n.min.js_c33ce333.js",
     "isotope.pkgd.min.js_edabec9e.js",
@@ -30,7 +30,7 @@
     "metaview.js_edabec9e.js",
     "placeholders.jquery.min.js_13f93b15.js",
     "scripts-theme.min.js_39b5a2d5.js",
-    "svgs-inline-min.js",
+    "_shared/svgs-inline-min.js",
     "utils.min.js_f287a8f0.js",
     "vendor-theme.min.js_a3a18dac.js",
     "wow.js_edabec9e.js"

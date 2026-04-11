@@ -6,8 +6,8 @@ export function PortfolioCompanyTicker({ names }: { names: string[] }) {
   return (
     <div className="company_triker show">
       <ul>
-        {names.map((name) => (
-          <li key={name}>
+        {names.map((name, idx) => (
+          <li key={`${idx}-${name}`}>
             <span>{name}</span>
           </li>
         ))}

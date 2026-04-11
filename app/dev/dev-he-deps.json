@@ -10,7 +10,7 @@
     "style-he.css_a7063d15.css",
     "style-new-he.css_a7063d15.css",
     "responsive-he.css_a7063d15.css",
-    "fonts.css_2af44128.css",
+    "_shared/fonts.css_2af44128.css",
     "animate.css_2af44128.css",
     "animation.css_2af44128.css",
     "jquery.jConveyorTicker.min.css_edabec9e.css",
@@ -33,7 +33,7 @@
     "jquery.bez.min.js_edabec9e.js",
     "all.js_a1459148.js",
     "wpr-beacon.min.js",
-    "v8c78df7c7c0f484497ecbca7046644da1771523124516.js"
+    "_shared/v8c78df7c7c0f484497ecbca7046644da1771523124516.js"
   ],
   "sharedFontsManifest": "/Users/ariell/html-to-react/public/assets/_shared/fonts/fonts.json",
   "sharedFontsUrl": "/assets/_shared/fonts",

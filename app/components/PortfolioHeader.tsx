@@ -96,7 +96,7 @@ export function PortfolioHeader({
               </button>
             </p>
             <div className="more_ban_txt" style={{ display: "none" }}>
-              <p>
+              <p style={{ whiteSpace: "pre-line" }}>
                 {expandedText}
                 <button
                   type="button"

@@ -123,6 +123,31 @@ function logosWithBase(base: string): PortfolioPageData["global"]["logos"] {
   return names.map((file, i) => ({ img: `${base}/${file}`, alt: alts[i] }));
 }
 
+const FINTECH_WHY: PortfolioPageData["why"] = {
+  mainTitle: "Why Do <br />fintech companies <br />choose us?",
+  items: [
+    {
+      title: "We speak <br />finance fluently",
+      description:
+        "Deep understanding of financial flows, compliance, and user trust",
+    },
+    {
+      title: "Fintech-focused expertise",
+      description:
+        "Proven track record designing digital products for leading financial brands",
+    },
+    {
+      title: "On the money from day one",
+      description: "We know your industry, so we deliver value right from the start",
+    },
+    {
+      title: "Trust by design",
+      description:
+        "Our UX prioritizes security, clarity, and seamless financial experiences",
+    },
+  ],
+};
+
 export const FINTECH_PAGE_DATA_EN: PortfolioPageData = {
   dir: "ltr",
   bannerColor: "#fed125",
@@ -130,40 +155,20 @@ export const FINTECH_PAGE_DATA_EN: PortfolioPageData = {
   header: {
     eyebrow: "Product design for",
     title: "Fintech & Finance",
-    subtitle: "Team up with product design specialists who deliver.",
+    subtitle: "Join product design experts who will listen to you.",
     description:
-      "Trust and clarity are paramount in fintech. Triolla designs secure, intuitive financial experiences...",
+      "Enterprise tools and efficient workflows are our language in Fintech & Finance.",
     expandedText:
-      "In fintech, users need to understand complex financial concepts quickly and trust their platform completely. Our UX design makes sophisticated financial tools accessible and secure. We create interfaces that build confidence, prevent errors, and guide users through transactions with clarity and ease.",
+      "We create secure and intuitive interfaces that simplify complex financial processes and build user trust in the fintech and finance sector.\n\nOur product design approach focuses on clarity, compliance, and seamless integration with financial systems to deliver exceptional user experiences.\n\nWith Triolla, your fintech solutions benefit from design expertise that drives engagement, ensures reliability, and supports your growth in a dynamic market.",
     buttonText: "Partner with us",
     buttonLink: "#contactus",
     ...ASSETS_EN,
   },
   portfolioItems: ITEMS_EN,
-  why: {
-    mainTitle: "Why Do fintech companies choose us?",
-    items: [
-      {
-        title: "Financial Expertise",
-        description: "Deep understanding of fintech regulations and best practices.",
-      },
-      {
-        title: "Security-First Design",
-        description: "Every interaction is designed with security and compliance in mind.",
-      },
-      {
-        title: "Trust Building",
-        description: "We create interfaces that users trust with their financial data.",
-      },
-      {
-        title: "Conversion Focused",
-        description: "Our UX drives adoption and engagement in competitive markets.",
-      },
-    ],
-  },
+  why: FINTECH_WHY,
   global: {
     title: "Our Clients",
-    subtitle: "Trusted by leading fintech companies worldwide",
+    subtitle: "From small to global, we have partnered with some great companies",
     logos: logosWithBase(IMG),
     buttonText: "Let's Talk",
     buttonLink: "#contactus",
@@ -181,35 +186,15 @@ export const FINTECH_PAGE_DATA_HE: PortfolioPageData = {
     title: "פינטק ופיננסים",
     subtitle: "הצטרפו לצוות מומחי המוצר שמיישמים את החזון ומספקים תוצאות.",
     description:
-      "אמון ובהירות הם קריטיים בפינטק. טריאולה מעצבת חוויות פיננסיות מאובטחות ואינטואיטיביות...",
+      "אמון ובהירות הם קריטיים בפינטק. טריאולה מעצבת חוויות פיננסיות מאובטחות ואינטואיטיביות",
     expandedText:
-      "בפינטק, משתמשים צריכים להבין מושגים פיננסיים מורכבים במהירות ולסמוך על הפלטפורמה לחלוטין. עיצוב ה־UX שלנו הופך כלים פיננסיים מתוחכמים לנגישים ומאובטחים. אנו יוצרים ממשקים שבונים ביטחון, מפחיתים טעויות ומנחים בעסקאות בבהירות.",
+      "בפינטק, משתמשים צריכים להבין מושגים פיננסיים מורכבים במהירות ולסמוך על הפלטפורמה לחלוטין.\n\nעיצוב ה־UX שלנו הופך כלים פיננסיים מתוחכמים לנגישים ומאובטחים.\n\nאנו יוצרים ממשקים שבונים ביטחון, מפחיתים טעויות ומנחים בעסקאות בבהירות.",
     buttonText: "שותפו איתנו",
     buttonLink: "#contactus",
     ...ASSETS_HE,
   },
   portfolioItems: ITEMS_HE,
-  why: {
-    mainTitle: "למה חברות פינטק בוחרות בנו?",
-    items: [
-      {
-        title: "מומחיות פיננסית",
-        description: "הבנה מעמיקה של רגולציה ושיטות עבודה מומלצות.",
-      },
-      {
-        title: "עיצוב אבטחה־פירסט",
-        description: "כל אינטראקציה נבחנת מול אבטחה וציות.",
-      },
-      {
-        title: "בניית אמון",
-        description: "ממשקים שמשתמשים סומכים עליהם עם הנתונים הפיננסיים שלהם.",
-      },
-      {
-        title: "מיקוד בהמרות",
-        description: "חוויית משתמש שמניעה אימוץ ומעורבות בשוק תחרותי.",
-      },
-    ],
-  },
+  why: FINTECH_WHY,
   global: {
     title: "הלקוחות שלנו",
     subtitle:

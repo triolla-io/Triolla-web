@@ -2,7 +2,10 @@
 
 import { usePathname } from "next/navigation";
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
-import { initTriollaConveyorTicker } from "./lib/initTriollaConveyorTicker";
+import {
+  ensureJConveyorTickerPlugin,
+  initTriollaConveyorTicker,
+} from "./lib/initTriollaConveyorTicker";
 import { mountTriollaFaqAccordion } from "./lib/mountTriollaFaqAccordion";
 import {
   mountTriollaMobileMenu,
@@ -140,6 +143,9 @@ export function HomeClient() {
             gsapWin.gsap.registerPlugin(gsapWin.ScrollTrigger);
           }
 
+          if (el.querySelector(".company_triker")) {
+            await ensureJConveyorTickerPlugin(assetBase);
+          }
           initTriollaConveyorTicker(el);
           initTriollaOwlCarousels(el);
           const $ = (window as unknown as { jQuery?: (sel: Window) => { trigger: (ev: string) => void } })

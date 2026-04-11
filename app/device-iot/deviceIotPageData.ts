@@ -177,6 +177,32 @@ function logosUnder(base: string): PortfolioPageData["global"]["logos"] {
   return files.map(([file, alt]) => ({ img: `${base}/${file}`, alt }));
 }
 
+const DEVICE_IOT_WHY: PortfolioPageData["why"] = {
+  mainTitle: "Why Do <br />IoT companies <br />choose us?",
+  items: [
+    {
+      title: "We connect <br />the dots",
+      description:
+        "Full mastery in the interactions, data flows, and logic of connected devices",
+    },
+    {
+      title: "IoT-driven expertise",
+      description:
+        "Extensive experience designing interfaces for smart devices and IoT platforms",
+    },
+    {
+      title: "Plugged in from the start",
+      description:
+        "We understand device ecosystems, so we accelerate your project from day one",
+    },
+    {
+      title: "Seamless integration mindset",
+      description:
+        "Our UX is crafted for real-time data, device reliability, and user convenience",
+    },
+  ],
+};
+
 export const DEVICE_IOT_PAGE_DATA_EN: PortfolioPageData = {
   dir: "ltr",
   bannerColor: "#fed125",
@@ -185,40 +211,20 @@ export const DEVICE_IOT_PAGE_DATA_EN: PortfolioPageData = {
   header: {
     eyebrow: "Product design for",
     title: "Device & IoT",
-    subtitle: "Team up with product design specialists who deliver.",
+    subtitle: "Work with with the best product designers.",
     description:
-      "Designing the future of connected devices. Triolla creates seamless IoT experiences across hardware and software...",
+      "Triolla brings Devices & IOT products to life with smart tools and workflows.",
     expandedText:
-      "IoT products require careful consideration of hardware constraints, connectivity challenges, and cross-platform experiences. Our UX design simplifies device setup and management, creates intuitive interfaces for real-time monitoring and control, and enables seamless communication between physical and digital worlds.",
+      "We design intuitive and reliable interfaces that bridge the gap between users and connected devices, ensuring seamless interaction in the IoT ecosystem.\n\nOur product design process emphasizes usability, real-time data visualization, and effortless device integration for smart environments.\n\nWith Triolla, your Devices & IoT solutions benefit from design expertise that enhances connectivity, improves user engagement, and accelerates innovation.",
     buttonText: "Partner with us",
     buttonLink: "#contactus",
     ...ASSETS,
   },
   portfolioItems: buildItems(ITEM_PATHS, ITEM_COPY_EN),
-  why: {
-    mainTitle: "Why Do IoT companies choose us?",
-    items: [
-      {
-        title: "Hardware-Software Expertise",
-        description: "Deep understanding of device constraints and capabilities.",
-      },
-      {
-        title: "Complex Data Visualization",
-        description: "Making real-time sensor data intuitive and actionable.",
-      },
-      {
-        title: "Connectivity Awareness",
-        description: "Designed for offline-first and unreliable connections.",
-      },
-      {
-        title: "Cross-Platform Mastery",
-        description: "Seamless experiences across devices, apps, and web.",
-      },
-    ],
-  },
+  why: DEVICE_IOT_WHY,
   global: {
     title: "Our Clients",
-    subtitle: "Trusted by leading IoT innovators",
+    subtitle: "From small to global, we have partnered with some great companies",
     logos: logosUnder(IMG),
     buttonText: "Let's Talk",
     buttonLink: "#contactus",
@@ -234,35 +240,15 @@ export const DEVICE_IOT_PAGE_DATA_HE: PortfolioPageData = {
     title: "מכשירים ו-IoT",
     subtitle: "הצטרפו לצוות מומחי המוצר שמיישמים את החזון ומספקים תוצאות.",
     description:
-      "עיצוב עתיד המכשירים המחוברים. טריאולה יוצרת חוויות IoT חלקות בין חומרה לתוכנה...",
+      "עיצוב עתיד המכשירים המחוברים. טריאולה יוצרת חוויות IoT חלקות בין חומרה לתוכנה",
     expandedText:
-      "מוצרי IoT דורשים התחשבות במגבלות חומרה, אתגרי קישוריות וחוויות חוצות פלטפורמות. עיצוב ה־UX שלנו מפשט הקמה וניהול מכשירים, יוצר ממשקים לניטור ובקרה בזמן אמת ומאפשר תקשורת חלקה בין הפיזי לדיגיטלי.",
+      "מוצרי IoT דורשים התחשבות במגבלות חומרה, אתגרי קישוריות וחוויות חוצות פלטפורמות.\n\nעיצוב ה־UX שלנו מפשט הקמה וניהול מכשירים, יוצר ממשקים לניטור ובקרה בזמן אמת ומאפשר תקשורת חלקה בין הפיזי לדיגיטלי.",
     buttonText: "שותפו איתנו",
     buttonLink: "#contactus",
     ...ASSETS,
   },
   portfolioItems: buildItems(ITEM_PATHS, ITEM_COPY_HE),
-  why: {
-    mainTitle: "למה חברות IoT בוחרות בנו?",
-    items: [
-      {
-        title: "מומחיות חומרה־תוכנה",
-        description: "הבנה מעמיקה במגבלות וביכולות מכשיר.",
-      },
-      {
-        title: "ויזואליזציה של נתונים מורכבים",
-        description: "נתוני חיישנים בזמן אמת — ברורים וניתנים לפעולה.",
-      },
-      {
-        title: "מודעות לקישוריות",
-        description: "עיצוב שמתחשב בעבודה ללא רשת ובחיבורים לא יציבים.",
-      },
-      {
-        title: "שליטה חוצת פלטפורמות",
-        description: "חוויה חלקה בין מכשירים, אפליקציות ואתר.",
-      },
-    ],
-  },
+  why: DEVICE_IOT_WHY,
   global: {
     title: "הלקוחות שלנו",
     subtitle:

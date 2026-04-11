@@ -119,6 +119,31 @@ const AGRITECH_GLOBAL_LOGOS: PortfolioPageData["global"]["logos"] = [
   { img: `${IMG}/finaro_global.svg`, alt: "Finaro" },
 ];
 
+const AGRITECH_WHY: PortfolioPageData["why"] = {
+  mainTitle: "Why Do <br />Agritech companies <br />choose us?",
+  items: [
+    {
+      title: "We speak <br />your language",
+      description:
+        "Fluent in the terms, flows, and mindset of agritech users",
+    },
+    {
+      title: "Battle-tested experience",
+      description:
+        "Over 50 Apps & SaaS platforms designed for top-tier agritech companies",
+    },
+    {
+      title: "Up to speed from day one",
+      description: "We get your world, so we get to work—fast.",
+    },
+    {
+      title: "Security-first thinking",
+      description:
+        "Our UX is built with your users, risks, and compliance in mind.",
+    },
+  ],
+};
+
 export const AGRITECH_PAGE_DATA_EN: PortfolioPageData = {
   dir: "ltr",
   bannerColor: "#fed125",
@@ -127,40 +152,20 @@ export const AGRITECH_PAGE_DATA_EN: PortfolioPageData = {
   header: {
     eyebrow: "Product design for",
     title: "Agritech",
-    subtitle: "Team up with product design specialists who deliver.",
+    subtitle: "Partner with product design experts who get it.",
     description:
-      "Designing agricultural technology that empowers farmers. Triolla creates tools that bridge farming and technology...",
+      "At Triolla, we speak fluent Agritech — from smart farming to precision agriculture",
     expandedText:
-      "In agritech, users range from small-scale farmers to large agricultural enterprises. Our UX design translates complex agricultural data into actionable insights, creates intuitive mobile-first interfaces for field use, and supports sustainable farming practices. We understand the unique challenges of agricultural technology and design accordingly.",
+      "We design smart, user-friendly interfaces that simplify complex agricultural processes and empower innovation in the Agritech sector.\n\nOur product design approach focuses on usability, data-driven insights, and seamless integration with agri-management systems.\n\nWith Triolla, your Agritech solutions benefit from design expertise that drives efficiency, support, and helps your business grow.",
     buttonText: "Partner with us",
     buttonLink: "#contactus",
     ...ASSETS,
   },
   portfolioItems: AGRITECH_ITEMS_EN,
-  why: {
-    mainTitle: "Why do agritech companies choose us?",
-    items: [
-      {
-        title: "Agricultural Domain Knowledge",
-        description: "We understand farming workflows and seasonal challenges.",
-      },
-      {
-        title: "Field-Ready Design",
-        description: "Interfaces designed for durability and offline functionality.",
-      },
-      {
-        title: "Data Simplification",
-        description: "Complex agricultural data made accessible to all farmers.",
-      },
-      {
-        title: "Global Agricultural Experience",
-        description: "Working across diverse farming communities worldwide.",
-      },
-    ],
-  },
+  why: AGRITECH_WHY,
   global: {
     title: "Our Clients",
-    subtitle: "Partnered with agritech innovators globally",
+    subtitle: "From small to global, we have partnered with some great companies",
     logos: AGRITECH_GLOBAL_LOGOS,
     buttonText: "Let's Talk",
     buttonLink: "#contactus",
@@ -176,38 +181,19 @@ export const AGRITECH_PAGE_DATA_HE: PortfolioPageData = {
     title: "אגריטק",
     subtitle: "הצטרפו לצוות מומחי המוצר שמיישמים את החזון ומספקים תוצאות.",
     description:
-      "אנחנו מעצבים טכנולוגיה חקלאית שמעצימה חקלאים. טריאולה יוצרת כלים שמחברים בין עבודת השדה לטכנולוגיה...",
+      "אנחנו מעצבים טכנולוגיה חקלאית שמעצימה חקלאים. טריאולה יוצרת כלים שמחברים בין עבודת השדה לטכנולוגיה",
     expandedText:
-      "באגריטק, קהל המשתמשים נע בין חקלאים בשטח קטן ועד ארגונים חקלאיים גדולים. עיצוב ה־UX שלנו הופך נתונים חקלאיים מורכבים לתובנות ברות מעש, מייצר ממשקים אינטואיטיביים המותאמים לעבודה בשטח ותומך בפרקטיקות קיימות. אנו מכירים את האתגרים הייחודיים של טכנולוגיה חקלאית ומתאימים את העיצוב בהתאם.",
+      "באגריטק, קהל המשתמשים נע בין חקלאים בשטח קטן ועד ארגונים חקלאיים גדולים.\n\nעיצוב ה־UX שלנו הופך נתונים חקלאיים מורכבים לתובנות ברות מעש, מייצר ממשקים אינטואיטיביים המותאמים לעבודה בשטח ותומך בפרקטיקות קיימות.\n\nאנו מכירים את האתגרים הייחודיים של טכנולוגיה חקלאית ומתאימים את העיצוב בהתאם.",
     buttonText: "שותפו איתנו",
     buttonLink: "#contactus",
     ...ASSETS,
   },
   portfolioItems: AGRITECH_ITEMS_HE,
-  why: {
-    mainTitle: "למה חברות במגזר האגריטק בוחרות בנו?",
-    items: [
-      {
-        title: "היכרות עם תחום החקלאות",
-        description: "אנו מבינים תהליכי עבודה בעונה ובשטח.",
-      },
-      {
-        title: "עיצוב מוכן לשטח",
-        description: "ממשקים שנבנו לעמידות, נוחות ועבודה ללא רשת כשצריך.",
-      },
-      {
-        title: "הפשטת נתונים",
-        description: "נתונים חקלאיים מורכבים נגישים יותר לכל משתמש.",
-      },
-      {
-        title: "ניסיון גלובלי",
-        description: "עבודה מגוונת עם קהילות חקלאיות ברחבי העולם.",
-      },
-    ],
-  },
+  why: AGRITECH_WHY,
   global: {
     title: "הלקוחות שלנו",
-    subtitle: "שותפים לחדשנות אגריטק ברחבי העולם",
+    subtitle:
+      "מחברות קטנות ועד גלובליות, שיתפנו פעולה עם כמה חברות מדהימות",
     logos: AGRITECH_GLOBAL_LOGOS,
     buttonText: "בואו נדבר",
     buttonLink: "#contactus",

@@ -128,6 +128,32 @@ const LOGOS: PortfolioPageData["global"]["logos"] = [
   { img: `${M}/finaro_global.svg`, alt: "Finaro" },
 ];
 
+const MOBILE_WHY: PortfolioPageData["why"] = {
+  mainTitle: "Why Do <br />Mobile App companies <br />choose us?",
+  items: [
+    {
+      title: "We think <br />mobile-first",
+      description:
+        "We know about user flows, gestures, and the dynamics of mobile experiences.",
+    },
+    {
+      title: "App design expertise",
+      description:
+        "A proven record designing intuitive and engaging mobile applications.",
+    },
+    {
+      title: "Onboard from day one",
+      description:
+        "We understand mobile users, so we deliver value from the very start.",
+    },
+    {
+      title: "Experience in your pocket",
+      description:
+        "Our UX is crafted for usability, speed, and seamless interaction on any device.",
+    },
+  ],
+};
+
 export const MOBILE_APPS_PAGE_DATA_EN: PortfolioPageData = {
   dir: "ltr",
   bannerColor: "#fed125",
@@ -138,41 +164,18 @@ export const MOBILE_APPS_PAGE_DATA_EN: PortfolioPageData = {
     title: "Mobile Apps",
     subtitle: "Design a product with experts who understand your needs",
     description:
-      "In the world of Mobile Apps, Triolla creates intuitive interfaces and powerful features....",
+      "In the world of Mobile Apps, Triolla creates intuitive interfaces and powerful features",
     expandedText:
-      "As mobile experiences become more central to daily life, UX design plays a crucial role in making powerful features accessible and intuitive. In mobile apps, great UX means guiding users through key actions with clarity and ease, without overwhelming them with unnecessary complexity. A well-designed mobile interface builds trust, encourages engagement, and gives users a sense of control on any device. By anticipating user needs and preventing common mistakes, UX design helps create seamless, enjoyable, and reliable app experiences. At Triolla, we specialize in designing mobile apps that are intuitive, engaging, and centered around real user needs.",
+      "As mobile experiences become more central to daily life, UX design plays a crucial role in making powerful features accessible and intuitive.\n\nIn mobile apps, great UX means guiding users through key actions with clarity and ease, without overwhelming them with unnecessary complexity. A well-designed mobile interface builds trust, encourages engagement, and gives users a sense of control on any device. By anticipating user needs and preventing common mistakes, UX design helps create seamless, enjoyable, and reliable app experiences.\n\nAt Triolla, we specialize in designing mobile apps that are intuitive, engaging, and centered around real user needs.",
     buttonText: "Partner with us",
     buttonLink: "#contactus",
     ...ASSETS,
   },
   portfolioItems: ITEMS_EN,
-  why: {
-    mainTitle: "Why Do mobile app companies choose us?",
-    items: [
-      {
-        title: "We think mobile-first",
-        description:
-          "We know about user flows, gestures, and the dynamics of mobile experiences.",
-      },
-      {
-        title: "App design expertise",
-        description:
-          "A proven record designing intuitive and engaging mobile applications.",
-      },
-      {
-        title: "Onboard from day one",
-        description: "We understand mobile users, so we deliver value from the very start.",
-      },
-      {
-        title: "Experience in your pocket",
-        description:
-          "Our UX is crafted for usability, speed, and seamless interaction on any device.",
-      },
-    ],
-  },
+  why: MOBILE_WHY,
   global: {
     title: "Our Clients",
-    subtitle: "Trusted by mobile leaders worldwide",
+    subtitle: "From small to global, we have partnered with some great companies",
     logos: LOGOS,
     buttonText: "Let's Talk",
     buttonLink: "#contactus",
@@ -189,36 +192,15 @@ export const MOBILE_APPS_PAGE_DATA_HE: PortfolioPageData = {
     title: "אפליקציות מובייל",
     subtitle: "שתפו פעולה עם מומחי עיצוב מוצר שמבינים אתכם.",
     description:
-      "טריאולה מובילה את עולם המובייל עם חוויות משתמש אינטואיטיביות ופיצ’רים שמייצרים ערך אמיתי....",
+      "טריאולה מובילה את עולם המובייל עם חוויות משתמש אינטואיטיביות ופיצ’רים שמייצרים ערך אמיתי",
     expandedText:
-      "באפליקציות מובייל, חוויית משתמש מצוינת היא כזו שמובילה את המשתמשים לפעולות המרכזיות בפשטות ובבהירות, מבלי להעמיס עליהם מורכבות מיותרת. ממשק מובייל מתוכנן היטב בונה אמון, מעודד מעורבות ומעניק למשתמשים תחושת שליטה – בכל מכשיר. בטריאולה אנו מתמחים בעיצוב אפליקציות מובייל אינטואיטיביות, מרתקות וממוקדות בצרכים האמיתיים של המשתמשים.",
+      "באפליקציות מובייל, חוויית משתמש מצוינת היא כזו שמובילה את המשתמשים לפעולות המרכזיות בפשטות ובבהירות, מבלי להעמיס עליהם מורכבות מיותרת.\n\nממשק מובייל מתוכנן היטב בונה אמון, מעודד מעורבות ומעניק למשתמשים תחושת שליטה – בכל מכשיר.\n\nבטריאולה אנו מתמחים בעיצוב אפליקציות מובייל אינטואיטיביות, מרתקות וממוקדות בצרכים האמיתיים של המשתמשים.",
     buttonText: "בואו נבנה יחד",
     buttonLink: "#contactus",
     ...ASSETS,
   },
   portfolioItems: ITEMS_HE,
-  why: {
-    mainTitle: "למה חברות אפליקציות מובייל בוחרות בנו?",
-    items: [
-      {
-        title: "אנחנו חושבים mobile-first",
-        description: "מכירים כל מחווה, כל זרימה – ואת מה שהופך חוויית מובייל לבלתי נשכחת.",
-      },
-      {
-        title: "ניסיון מוכח בעיצוב אפליקציות",
-        description:
-          "רקורד מוכח ביצירת אפליקציות מובייל חכמות, קלות לשימוש ומלאות ערך.",
-      },
-      {
-        title: "בקצב מהיום הראשון",
-        description: "כשמכירים את המשתמשים לעומק – הערך מורגש מהאינטראקציה הראשונה.",
-      },
-      {
-        title: "חוויה בכף היד",
-        description: "UX מדויק שמבטיח שימוש חלק, תגובה מהירה וחוויה מותאמת לכל מסך.",
-      },
-    ],
-  },
+  why: MOBILE_WHY,
   global: {
     title: "הלקוחות שלנו",
     subtitle:

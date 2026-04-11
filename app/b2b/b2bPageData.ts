@@ -128,6 +128,30 @@ const LOGOS: PortfolioPageData["global"]["logos"] = [
   { img: `${IMG}/finaro_global.svg`, alt: "Finaro" },
 ];
 
+const B2B_WHY: PortfolioPageData["why"] = {
+  mainTitle: "Why Do <br />B2B companies <br />choose us?",
+  items: [
+    {
+      title: "We speak <br />your language",
+      description:
+        "Fluent in the terms, workflows, and mindset of B2B users",
+    },
+    {
+      title: "Proven B2B expertise",
+      description: "50+ SaaS platforms designed for leading B2B companies",
+    },
+    {
+      title: "Ready to deliver from day one",
+      description: "We understand your business, so we hit the ground running",
+    },
+    {
+      title: "Business-driven design",
+      description:
+        "Our UX is created for your users, processes, and enterprise needs",
+    },
+  ],
+};
+
 export const B2B_PAGE_DATA_EN: PortfolioPageData = {
   dir: "ltr",
   bannerColor: "#fed125",
@@ -138,42 +162,18 @@ export const B2B_PAGE_DATA_EN: PortfolioPageData = {
     title: "B2B",
     subtitle: "Work with product design experts who understand you.",
     description:
-      "Fluent in B2B, Triolla delivers enterprise tools and efficient workflows....",
+      "Fluent in B2B, Triolla delivers enterprise tools and efficient workflows.",
     expandedText:
-      "We design intuitive interfaces that drive business results, tailoring every solution to the unique challenges of B2B environments. Our product design process focuses on usability, scalability, and seamless integration with enterprise workflows. With Triolla, your business benefits from product design expertise that empowers growth and delivers measurable value.",
+      "We design intuitive interfaces that drive business results, tailoring every solution to the unique challenges of B2B environments.\n\nOur product design process focuses on usability, scalability, and seamless integration with enterprise workflows.\n\nWith Triolla, your business benefits from product design expertise that empowers growth and delivers measurable value.",
     buttonText: "Partner with us",
     buttonLink: "#contactus",
     ...ASSETS,
   },
   portfolioItems: ITEMS_EN,
-  why: {
-    mainTitle: "Why Do <br />B2B companies <br />choose us?",
-    items: [
-      {
-        title: "We speak <br>your language",
-        description:
-          "Fluent in the terms, workflows, and mindset of B2B users",
-      },
-      {
-        title: "Proven B2B expertise",
-        description:
-          "50+ SaaS platforms designed for leading B2B companies",
-      },
-      {
-        title: "Ready to deliver from day one",
-        description:
-          "We understand your business, so we hit the ground running",
-      },
-      {
-        title: "Business-driven design",
-        description:
-          "Our UX is created for your users, processes, and enterprise needs",
-      },
-    ],
-  },
+  why: B2B_WHY,
   global: {
     title: "Our Clients",
-    subtitle: "Trusted by enterprise companies worldwide",
+    subtitle: "From small to global, we have partnered with some great companies",
     logos: LOGOS,
     buttonText: "Let's Talk",
     buttonLink: "#contactus",
@@ -198,30 +198,8 @@ export const B2B_PAGE_DATA_HE: PortfolioPageData = {
     ...ASSETS,
   },
   portfolioItems: ITEMS_HE,
-  why: {
-    mainTitle: "למה חברות<br />B2B<br />בוחרות בנו?",
-    items: [
-      {
-        title: "אנחנו מדברים בשפה שלך",
-        description:
-          "שולטים במונחים, בתהליכים ובחשיבה של משתמשי B2B",
-      },
-      {
-        title: "מומחיות B2B מוכחת",
-        description:
-          "למעלה מ-50 פלטפורמות SaaS שעוצבו עבור חברות B2B מובילות",
-      },
-      {
-        title: "מוכנים לספק תוצאות מהיום הראשון",
-        description: "אנחנו מבינים את העסק שלך – ומתחילים לעבוד מיד",
-      },
-      {
-        title: "עיצוב מונחה עסקים",
-        description:
-          "חוויית המשתמש שלנו מותאמת למשתמשים, לתהליכים ולצרכים הארגוניים שלך",
-      },
-    ],
-  },
+  /* triolla.io/he mirrors this block in English */
+  why: B2B_WHY,
   global: {
     title: "הלקוחות שלנו",
     subtitle:
