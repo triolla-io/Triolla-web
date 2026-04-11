@@ -58,7 +58,7 @@
 
 @font-face {
   font-family: 'CoreNaraeProW01-Pro';
-  src: url('/assets/_shared/fonts/CoreNaraeProW01-Pro.svg#corenarae') format('svg');
+  src: url('/assets/_shared/CoreNaraeProW01-Pro.svg#corenarae') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -389,18 +389,28 @@ body:not(:has([data-triolla-snapshot])) .headerticker .tickclose:hover { opacity
  */
 [data-triolla-snapshot] .learslider .owl-nav button.owl-prev,
 [data-triolla-snapshot] .learslider .owl-nav button.owl-next {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: 82px;
   height: 82px;
   border: 1px solid #c0bdbd;
   background: #fff;
-  text-align: center;
   border-radius: 50%;
-  padding: 23px 0 0;
+  padding: 0;
   margin: 0 5px;
   box-sizing: border-box;
   cursor: pointer;
+  vertical-align: top;
+  line-height: 0;
   -webkit-appearance: none;
   appearance: none;
+}
+
+[data-triolla-snapshot] .learslider .owl-nav button.owl-prev svg,
+[data-triolla-snapshot] .learslider .owl-nav button.owl-next svg {
+  display: block;
+  flex-shrink: 0;
 }
 
 [data-triolla-snapshot] .learslider .owl-nav button.owl-prev svg path,
@@ -2644,4 +2654,19 @@ section.home-faq { background: #ffffff; }
   .blogmtrustedmob {
     padding: 40px 20px;
   }
+}
+
+/*
+ * Tailwind generates `display: grid` for `.grid` because it appears in JSX source files
+ * (ServicePrototyping, OurClients, etc.). This overrides the Triolla theme's use of `.grid`
+ * as a block container inside snapshot pages — breaking the portfolio grid layout.
+ * Scoped to [data-triolla-snapshot] so it only affects injected HTML fragments.
+ */
+[data-triolla-snapshot] .grid {
+  display: block;
+  width: 100%;
+}
+[data-triolla-snapshot] .grid__item {
+  margin: 0;
+  padding: 0;
 }

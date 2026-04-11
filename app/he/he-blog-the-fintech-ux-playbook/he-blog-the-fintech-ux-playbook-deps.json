@@ -17,46 +17,20 @@
     "owl.carousel.css",
     "mlstyle.css",
     "rtl.css",
-    "ml-responsive.css",
-    "gdpr-main-nf.css"
+    "ml-responsive.css"
   ],
   "js": [
-    "language-cookie.js",
-    "DOMPurify.min.js",
-    "jquery.min.js",
-    "jquery-migrate.min.js",
     "jquery-3.6.0.min.js",
     "jquery.jConveyorTicker.min.js",
+    "jquery.bez.min.js",
     "owl.carousel.js",
     "TweenMax.min.js",
     "ScrollMagic.min.js",
-    "metaview.js",
     "lottie.min.js",
-    "widget.js",
-    "5905093.js",
+    "metaview.js",
     "wow.js",
-    "isotope.pkgd.min.js",
     "gsap.min.js",
     "ScrollTrigger.min.js",
-    "jquery.bez.min.js",
-    "all.js",
-    "main.js",
-    "dom-ready.min.js",
-    "hooks.min.js",
-    "i18n.min.js",
-    "a11y.min.js",
-    "jquery.json.min.js",
-    "gravityforms.min.js",
-    "placeholders.jquery.min.js",
-    "utils.min.js",
-    "vendor-theme.min.js",
-    "scripts-theme.min.js",
-    "v8c78df7c7c0f484497ecbca7046644da1771523124516.js"
-  ],
-  "sharedFontsManifest": "/Users/ariell/html-to-react/public/assets/_shared/fonts/fonts.json",
-  "sharedFontsUrl": "/assets/_shared/fonts",
-  "sharedFonts": {
-    "registry": "/assets/_shared/fonts/fonts.json",
-    "baseUrl": "/assets/_shared/fonts"
-  }
+    "all.js"
+  ]
 }

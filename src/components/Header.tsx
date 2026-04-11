@@ -152,7 +152,7 @@ export default function Header() {
                   className={isPortfolioPage ? "font-semibold text-[#FED125]" : ""}
                 >
                   {t.portfolio}
-                  <svg style={{ display:"inline-block", marginLeft:5, verticalAlign:"middle", transition:"transform 0.2s", transform: portfolioOpen ? "rotate(180deg)" : "rotate(0)" }} width="12" height="7" viewBox="0 0 12 7" fill="none">
+                  <svg style={{ display:"inline-block", ...(isHebrew ? { marginRight:5 } : { marginLeft:5 }), verticalAlign:"middle", transition:"transform 0.2s", transform: portfolioOpen ? "rotate(180deg)" : "rotate(0)" }} width="12" height="7" viewBox="0 0 12 7" fill="none">
                     <path d="M1 1l5 5 5-5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </button>
@@ -161,9 +161,11 @@ export default function Header() {
                 <div className="absolute top-full left-0 right-0 h-[52px]" />
 
                 <div
-                  className={`absolute top-[calc(100%+50px)] left-1/2 -translate-x-1/2 bg-white rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.15)] z-[200] overflow-hidden max-w-[min(800px,calc(100vw-32px))] ${portfolioOpen ? "grid grid-cols-[1fr_1fr_380px] w-[800px] max-[1299px]:grid-cols-[1fr_1fr] max-[1299px]:w-[min(380px,calc(100vw-32px))]" : "hidden"}`}
+                  className={`absolute top-[calc(100%+50px)] left-1/2 -translate-x-1/2 bg-white rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.15)] z-[200] overflow-hidden max-w-[min(800px,calc(100vw-32px))] ${portfolioOpen ? `grid w-[800px] max-[1299px]:w-[min(380px,calc(100vw-32px))] ${isHebrew ? "grid-cols-[380px_1fr_1fr] max-[1299px]:grid-cols-[1fr_1fr]" : "grid-cols-[1fr_1fr_380px] max-[1299px]:grid-cols-[1fr_1fr]"}` : "hidden"}`}
+                  dir={isHebrew ? "rtl" : undefined}
                 >
-                  <div className="py-[30px] px-5 pl-9 text-left">
+                  {isHebrew && <div className="bg-[url('/images/menu-image2.png')] bg-center bg-cover max-[1299px]:hidden" />}
+                  <div className={`py-[30px] px-5 ${isHebrew ? "pr-9 text-right" : "pl-9 text-left"}`}>
                     {portfolioCol1.map((item) => {
                       const active = pathMatches(pathname, item.href);
                       return (
@@ -181,7 +183,7 @@ export default function Header() {
                       );
                     })}
                   </div>
-                  <div className="py-[30px] px-5 pl-9 text-left">
+                  <div className={`py-[30px] px-5 ${isHebrew ? "pr-9 text-right" : "pl-9 text-left"}`}>
                     {portfolioCol2.map((item) => {
                       const active = pathMatches(pathname, item.href);
                       return (
@@ -199,7 +201,7 @@ export default function Header() {
                       );
                     })}
                   </div>
-                  <div className="bg-[url('/images/menu-image2.png')] bg-center bg-cover max-[1299px]:hidden" />
+                  {!isHebrew && <div className="bg-[url('/images/menu-image2.png')] bg-center bg-cover max-[1299px]:hidden" />}
                 </div>
               </li>
 

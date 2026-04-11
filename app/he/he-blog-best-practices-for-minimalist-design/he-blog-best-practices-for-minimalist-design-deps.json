@@ -1,0 +1,36 @@
+{
+  "assetBase": "/assets/_shared/",
+  "bodyClass": "rtl wp-singular post-template-default single single-post postid-2393 single-format-standard wp-theme-triolla",
+  "dataRsssl": "1",
+  "css": [
+    "style-rtl.min.css",
+    "style.min.css",
+    "cms-navigation-base.css",
+    "cms-navigation.css",
+    "style-he.css",
+    "style-new-he.css",
+    "responsive-he.css",
+    "fonts.css",
+    "animate.css",
+    "animation.css",
+    "jquery.jConveyorTicker.min.css",
+    "owl.carousel.css",
+    "mlstyle.css",
+    "rtl.css",
+    "ml-responsive.css"
+  ],
+  "js": [
+    "jquery-3.6.0.min.js",
+    "jquery.jConveyorTicker.min.js",
+    "jquery.bez.min.js",
+    "owl.carousel.js",
+    "TweenMax.min.js",
+    "ScrollMagic.min.js",
+    "lottie.min.js",
+    "metaview.js",
+    "wow.js",
+    "gsap.min.js",
+    "ScrollTrigger.min.js",
+    "all.js"
+  ]
+}

@@ -29,7 +29,7 @@
     "all.js",
     "v8c78df7c7c0f484497ecbca7046644da1771523124516.js"
   ],
-  "sharedFontsManifest": "/Users/ariell/html-to-react/public/assets/_shared/fonts/fonts.json",
+  "sharedFontsManifest": "/assets/_shared/fonts/fonts.json",
   "sharedFontsUrl": "/assets/_shared/fonts",
   "sharedFonts": {
     "registry": "/assets/_shared/fonts/fonts.json",

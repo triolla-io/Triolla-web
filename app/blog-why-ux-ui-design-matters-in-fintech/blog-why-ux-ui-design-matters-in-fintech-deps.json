@@ -17,15 +17,14 @@
     "style.min.css"
   ],
   "js": [
-    "ScrollMagic.min.js",
-    "TweenMax.min.js",
-    "all.js",
     "jquery-3.6.0.min.js",
-    "jquery.bez.min.js",
     "jquery.jConveyorTicker.min.js",
-    "metaview.js",
+    "jquery.bez.min.js",
     "owl.carousel.js",
-    "v8c78df7c7c0f484497ecbca7046644da1771523124516.js",
-    "wow.js"
+    "TweenMax.min.js",
+    "ScrollMagic.min.js",
+    "metaview.js",
+    "wow.js",
+    "all.js"
   ]
 }

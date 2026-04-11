@@ -233,7 +233,7 @@ export const bilingualSnapshotRegistry = {
   "services-creative-concept": entry(
     "Creative concept",
     "/fragments/services-creative-concept-body.html",
-    "/fragments/services-creative-concept-body.html",
+    "/fragments/services-creative-concept-he-body.html",
     "triolla-io-services-creative-concept",
     "triolla-io-services-creative-concept",
   ),
@@ -379,7 +379,7 @@ export const bilingualSnapshotRegistry = {
   "services-product-ux-ui-design": entry(
     "Product UX/UI design",
     "/fragments/services-product-ux-ui-design-body.html",
-    "/fragments/services-product-ux-ui-design-body.html",
+    "/fragments/services-product-ux-ui-design-he-body.html",
     "triolla-io-services-product-ux-ui-design",
     "triolla-io-services-product-ux-ui-design",
   ),
@@ -393,7 +393,7 @@ export const bilingualSnapshotRegistry = {
   "services-ux-research": entry(
     "UX research",
     "/fragments/services-ux-research-body.html",
-    "/fragments/services-ux-research-body.html",
+    "/fragments/services-ux-research-he-body.html",
     "triolla-io-services-ux-research",
     "triolla-io-services-ux-research",
   ),

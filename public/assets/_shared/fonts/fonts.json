@@ -5,52 +5,52 @@
   "totalFonts": 24,
   "fonts": {
     "AlmoniDLAAA-Bold.svg": {
-      "url": "/assets/_shared/fonts/AlmoniDLAAA-Bold.svg",
+      "url": "/assets/_shared/AlmoniDLAAA-Bold.svg",
       "size": 153718,
       "type": "svg"
     },
     "AlmoniMLv5AAA-Bold.svg": {
-      "url": "/assets/_shared/fonts/AlmoniMLv5AAA-Bold.svg",
+      "url": "/assets/_shared/AlmoniMLv5AAA-Bold.svg",
       "size": 773342,
       "type": "svg"
     },
     "AlmoniMLv5AAA-Regular.svg": {
-      "url": "/assets/_shared/fonts/AlmoniMLv5AAA-Regular.svg",
+      "url": "/assets/_shared/AlmoniMLv5AAA-Regular.svg",
       "size": 774758,
       "type": "svg"
     },
     "CoreNaraeProW01-Pro.svg": {
-      "url": "/assets/_shared/fonts/CoreNaraeProW01-Pro.svg",
+      "url": "/assets/_shared/CoreNaraeProW01-Pro.svg",
       "size": 247910,
       "type": "svg"
     },
     "Helvetica-Bold.svg": {
-      "url": "/assets/_shared/fonts/Helvetica-Bold.svg",
+      "url": "/assets/_shared/Helvetica-Bold.svg",
       "size": 714476,
       "type": "svg"
     },
     "Helvetica.svg": {
-      "url": "/assets/_shared/fonts/Helvetica.svg",
+      "url": "/assets/_shared/Helvetica.svg",
       "size": 727042,
       "type": "svg"
     },
     "SFCompactDisplay-Black.svg": {
-      "url": "/assets/_shared/fonts/SFCompactDisplay-Black.svg",
+      "url": "/assets/_shared/SFCompactDisplay-Black.svg",
       "size": 1763808,
       "type": "svg"
     },
     "SFCompactDisplay-Bold.svg": {
-      "url": "/assets/_shared/fonts/SFCompactDisplay-Bold.svg",
+      "url": "/assets/_shared/SFCompactDisplay-Bold.svg",
       "size": 2251331,
       "type": "svg"
     },
     "SFCompactDisplay-Medium.svg": {
-      "url": "/assets/_shared/fonts/SFCompactDisplay-Medium.svg",
+      "url": "/assets/_shared/SFCompactDisplay-Medium.svg",
       "size": 1353519,
       "type": "svg"
     },
     "SFCompactDisplay-Regular.svg": {
-      "url": "/assets/_shared/fonts/SFCompactDisplay-Regular.svg",
+      "url": "/assets/_shared/SFCompactDisplay-Regular.svg",
       "size": 1291719,
       "type": "svg"
     },
@@ -90,37 +90,37 @@
       "type": "svg"
     },
     "banner_grid.svg": {
-      "url": "/assets/_shared/fonts/banner_grid.svg",
+      "url": "/assets/_shared/banner_grid.svg",
       "size": 3783,
       "type": "svg"
     },
     "bigribbon.svg": {
-      "url": "/assets/_shared/fonts/bigribbon.svg",
+      "url": "/assets/_shared/bigribbon.svg",
       "size": 2391661,
       "type": "svg"
     },
     "calenderimg.svg": {
-      "url": "/assets/_shared/fonts/calenderimg.svg",
+      "url": "/assets/_shared/calenderimg.svg",
       "size": 4424,
       "type": "svg"
     },
     "carminus.svg": {
-      "url": "/assets/_shared/fonts/carminus.svg",
+      "url": "/assets/_shared/carminus.svg",
       "size": 204,
       "type": "svg"
     },
     "carplus.svg": {
-      "url": "/assets/_shared/fonts/carplus.svg",
+      "url": "/assets/_shared/carplus.svg",
       "size": 311,
       "type": "svg"
     },
     "faq_minus.svg": {
-      "url": "/assets/_shared/fonts/faq_minus.svg",
+      "url": "/assets/_shared/faq_minus.svg",
       "size": 573,
       "type": "svg"
     },
     "faq_plus.svg": {
-      "url": "/assets/_shared/fonts/faq_plus.svg",
+      "url": "/assets/_shared/faq_plus.svg",
       "size": 653,
       "type": "svg"
     }

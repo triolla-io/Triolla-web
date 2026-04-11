@@ -12,7 +12,9 @@ import {
 type Props = { params: Promise<{ lang: string; slug: string }> };
 
 export function generateStaticParams() {
-  return SERVICE_DETAIL_SLUGS.map((slug) => ({ lang: "he", slug }));
+  return SERVICE_DETAIL_SLUGS.filter(
+    (slug) => getServiceDetail(slug)?.hasHebrew,
+  ).map((slug) => ({ lang: "he" as const, slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

@@ -113,7 +113,6 @@ export function mountTechnologyReveal(root: HTMLElement): () => void {
   for (const sel of SHOW_SELECTORS) {
     root.querySelectorAll(sel).forEach((node) => io.observe(node));
   }
-
   const flushAlreadyVisible = () => {
     let added = false;
     for (const sel of SHOW_SELECTORS) {

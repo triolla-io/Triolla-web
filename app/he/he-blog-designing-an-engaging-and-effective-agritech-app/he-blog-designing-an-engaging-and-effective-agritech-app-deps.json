@@ -20,12 +20,12 @@
   "js": [
     "jquery-3.6.0.min.js",
     "metaview.js",
+    "wow.js",
     "gsap.min.js",
     "ScrollTrigger.min.js",
-    "wow.js",
     "all.js"
   ],
-  "sharedFontsManifest": "/Users/ariell/html-to-react/public/assets/_shared/fonts/fonts.json",
+  "sharedFontsManifest": "/assets/_shared/fonts/fonts.json",
   "sharedFontsUrl": "/assets/_shared/fonts",
   "sharedFonts": {
     "registry": "/assets/_shared/fonts/fonts.json",

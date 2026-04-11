@@ -3749,3 +3749,1336 @@
 [ 2963022ms] [LOG] [Fast Refresh] done in 105ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
 [ 2974385ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
 [ 2974650ms] [LOG] [Fast Refresh] done in 365ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3022873ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/about-us:0
+[ 3022873ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/about-us:0
+[ 3022873ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/about-us:0
+[ 3022880ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/about-us:0
+[ 3022880ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/about-us:0
+[ 3022880ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/about-us:0
+[ 3022958ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3022995ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3064400ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3065483ms] [LOG] [Fast Refresh] done in 1033ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3078161ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3078368ms] [LOG] [Fast Refresh] done in 308ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3078603ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3078603ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3078604ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3078612ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3078612ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3078612ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3078641ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3078693ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3078867ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3078920ms] [LOG] [Fast Refresh] done in 154ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3078973ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3078973ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3078973ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3078973ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/style-rtl.min.css:0
+[ 3078974ms] [ERROR] Failed to load stylesheet: http://localhost:3000/assets/about-us-he/style-rtl.min.css @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[ 3078974ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3078974ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3078974ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3078974ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/style.min.css:0
+[ 3078976ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3078977ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3078977ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3078977ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/cms-navigation-base.css:0
+[ 3078977ms] [ERROR] Failed to load stylesheet: http://localhost:3000/assets/about-us-he/style.min.css @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[ 3078979ms] [ERROR] Failed to load stylesheet: http://localhost:3000/assets/about-us-he/cms-navigation-base.css @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[ 3079005ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079005ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079005ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079005ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/cms-navigation.css:0
+[ 3079006ms] [ERROR] Failed to load stylesheet: http://localhost:3000/assets/about-us-he/cms-navigation.css @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[ 3079035ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079035ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079035ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079035ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/style-he.css:0
+[ 3079035ms] [ERROR] Failed to load stylesheet: http://localhost:3000/assets/about-us-he/style-he.css @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[ 3079036ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079036ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079036ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079036ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/style-new-he.css:0
+[ 3079037ms] [ERROR] Failed to load stylesheet: http://localhost:3000/assets/about-us-he/style-new-he.css @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[ 3079106ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079106ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079106ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079106ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/responsive-he.css:0
+[ 3079107ms] [ERROR] Failed to load stylesheet: http://localhost:3000/assets/about-us-he/responsive-he.css @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[ 3079126ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079126ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079126ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079126ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/fonts.css:0
+[ 3079126ms] [ERROR] Failed to load stylesheet: http://localhost:3000/assets/about-us-he/fonts.css @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[ 3079135ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3079150ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079150ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079150ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079150ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/animate.css:0
+[ 3079150ms] [ERROR] Failed to load stylesheet: http://localhost:3000/assets/about-us-he/animate.css @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[ 3079162ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079162ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079162ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079162ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/animation.css:0
+[ 3079163ms] [ERROR] Failed to load stylesheet: http://localhost:3000/assets/about-us-he/animation.css @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[ 3079175ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079175ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079175ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079175ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/jquery.jConveyorTicker.min.css:0
+[ 3079176ms] [ERROR] Failed to load stylesheet: http://localhost:3000/assets/about-us-he/jquery.jConveyorTicker.min.css @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[ 3079207ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079207ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079207ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079207ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/owl.carousel.css:0
+[ 3079209ms] [ERROR] Failed to load stylesheet: http://localhost:3000/assets/about-us-he/owl.carousel.css @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[ 3079273ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079273ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079273ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079273ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/mlstyle.css:0
+[ 3079273ms] [ERROR] Failed to load stylesheet: http://localhost:3000/assets/about-us-he/mlstyle.css @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[ 3079287ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079287ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079287ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079287ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/rtl.css:0
+[ 3079289ms] [ERROR] Failed to load stylesheet: http://localhost:3000/assets/about-us-he/rtl.css @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[ 3079302ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079302ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079302ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079302ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/ml-responsive.css:0
+[ 3079303ms] [ERROR] Failed to load stylesheet: http://localhost:3000/assets/about-us-he/ml-responsive.css @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[ 3079320ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079320ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079320ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079320ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/gdpr-main-nf.css:0
+[ 3079322ms] [ERROR] Failed to load stylesheet: http://localhost:3000/assets/about-us-he/gdpr-main-nf.css @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[ 3079515ms] [LOG] [Fast Refresh] done in 482ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3079585ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079585ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079585ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079585ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/language-cookie.js:0
+[ 3079622ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079622ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079622ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079622ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/DOMPurify.min.js:0
+[ 3079653ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079653ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079653ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079653ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/jquery.min.js:0
+[ 3079686ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079686ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079686ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079686ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/jquery-migrate.min.js:0
+[ 3079712ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079712ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079712ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079712ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/jquery-3.6.0.min.js:0
+[ 3079730ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3079737ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079738ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079738ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079738ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/jquery.jConveyorTicker.min.js:0
+[ 3079785ms] [LOG] [Fast Refresh] done in 156ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3079788ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079788ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079788ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079788ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/owl.carousel.js:0
+[ 3079818ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079818ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079818ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079818ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/TweenMax.min.js:0
+[ 3079841ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079841ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079841ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079841ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/ScrollMagic.min.js:0
+[ 3079865ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079865ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079865ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079865ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/metaview.js:0
+[ 3079888ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079888ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079888ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079888ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/widget.js:0
+[ 3079894ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3079926ms] [LOG] [Fast Refresh] done in 133ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3079928ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079928ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079928ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079928ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/5905093.js:0
+[ 3079953ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079953ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079953ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079953ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/wow.js:0
+[ 3079977ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079977ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079977ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3079977ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/isotope.pkgd.min.js:0
+[ 3080001ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3080001ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3080001ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3080001ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/jquery.bez.min.js:0
+[ 3080025ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3080025ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3080025ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3080025ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/all.js:0
+[ 3080032ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3080054ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3080054ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3080054ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3080054ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/main.js:0
+[ 3080077ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3080077ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3080077ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3080077ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/dom-ready.min.js:0
+[ 3080102ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3080102ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3080102ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3080102ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/hooks.min.js:0
+[ 3080125ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3080125ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3080125ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3080125ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/i18n.min.js:0
+[ 3080149ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3080149ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3080149ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3080149ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/a11y.min.js:0
+[ 3080172ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3080172ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3080172ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3080172ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/jquery.json.min.js:0
+[ 3080197ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3080197ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3080197ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3080197ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/gravityforms.min.js:0
+[ 3080222ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3080222ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3080222ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3080222ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/placeholders.jquery.min.js:0
+[ 3080246ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3080246ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3080246ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3080246ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/utils.min.js:0
+[ 3080270ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3080270ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3080270ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3080270ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/vendor-theme.min.js:0
+[ 3080302ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3080302ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3080302ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3080302ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/scripts-theme.min.js:0
+[ 3080329ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3080329ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3080329ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3080329ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/v8c78df7c7c0f484497ecbca7046644da1771523124516.js:0
+[ 3080339ms] [LOG] [Fast Refresh] done in 407ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3085322ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3085322ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3085322ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3085331ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3085331ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3085331ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3085354ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3085390ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3085676ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3085676ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3085676ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3085676ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/style-rtl.min.css:0
+[ 3085677ms] [ERROR] Failed to load stylesheet: http://localhost:3000/assets/about-us-he/style-rtl.min.css @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[ 3085677ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3085677ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3085677ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3085677ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/style.min.css:0
+[ 3085679ms] [ERROR] Failed to load stylesheet: http://localhost:3000/assets/about-us-he/style.min.css @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[ 3085713ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3085713ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3085713ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3085713ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/cms-navigation-base.css:0
+[ 3085713ms] [ERROR] Failed to load stylesheet: http://localhost:3000/assets/about-us-he/cms-navigation-base.css @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[ 3085713ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3085713ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3085713ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3085713ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/cms-navigation.css:0
+[ 3085714ms] [ERROR] Failed to load stylesheet: http://localhost:3000/assets/about-us-he/cms-navigation.css @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[ 3085717ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3085717ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3085717ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3085717ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/style-he.css:0
+[ 3085717ms] [ERROR] Failed to load stylesheet: http://localhost:3000/assets/about-us-he/style-he.css @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[ 3085730ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3085730ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3085730ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3085730ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/style-new-he.css:0
+[ 3085732ms] [ERROR] Failed to load stylesheet: http://localhost:3000/assets/about-us-he/style-new-he.css @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[ 3085860ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3085860ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3085860ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3085860ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/responsive-he.css:0
+[ 3085860ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3085860ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3085860ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3085860ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/fonts.css:0
+[ 3085861ms] [ERROR] Failed to load stylesheet: http://localhost:3000/assets/about-us-he/responsive-he.css @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[ 3085861ms] [ERROR] Failed to load stylesheet: http://localhost:3000/assets/about-us-he/fonts.css @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[ 3085881ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3085881ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3085881ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3085881ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/animate.css:0
+[ 3085881ms] [ERROR] Failed to load stylesheet: http://localhost:3000/assets/about-us-he/animate.css @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[ 3085921ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3085922ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3085922ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3085922ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/animation.css:0
+[ 3085922ms] [ERROR] Failed to load stylesheet: http://localhost:3000/assets/about-us-he/animation.css @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[ 3085937ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3085937ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3085937ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3085937ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/jquery.jConveyorTicker.min.css:0
+[ 3085938ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3085938ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3085938ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3085938ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/owl.carousel.css:0
+[ 3085939ms] [ERROR] Failed to load stylesheet: http://localhost:3000/assets/about-us-he/jquery.jConveyorTicker.min.css @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[ 3085939ms] [ERROR] Failed to load stylesheet: http://localhost:3000/assets/about-us-he/owl.carousel.css @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[ 3085999ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3085999ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3085999ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3085999ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/mlstyle.css:0
+[ 3085999ms] [ERROR] Failed to load stylesheet: http://localhost:3000/assets/about-us-he/mlstyle.css @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[ 3086018ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086018ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086018ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086019ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/rtl.css:0
+[ 3086019ms] [ERROR] Failed to load stylesheet: http://localhost:3000/assets/about-us-he/rtl.css @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[ 3086034ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086034ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086034ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086034ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/ml-responsive.css:0
+[ 3086034ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086034ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086034ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086034ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/gdpr-main-nf.css:0
+[ 3086036ms] [ERROR] Failed to load stylesheet: http://localhost:3000/assets/about-us-he/ml-responsive.css @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[ 3086036ms] [ERROR] Failed to load stylesheet: http://localhost:3000/assets/about-us-he/gdpr-main-nf.css @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[ 3086204ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086204ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086204ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086204ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/language-cookie.js:0
+[ 3086232ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086232ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086232ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086232ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/DOMPurify.min.js:0
+[ 3086255ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086255ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086255ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086255ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/jquery.min.js:0
+[ 3086278ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086278ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086278ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086279ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/jquery-migrate.min.js:0
+[ 3086301ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086301ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086301ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086301ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/jquery-3.6.0.min.js:0
+[ 3086312ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3086326ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086326ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086326ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086326ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/jquery.jConveyorTicker.min.js:0
+[ 3086349ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086349ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086349ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086349ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/owl.carousel.js:0
+[ 3086374ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086374ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086374ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086374ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/TweenMax.min.js:0
+[ 3086406ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086406ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086406ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086406ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/ScrollMagic.min.js:0
+[ 3086410ms] [LOG] [Fast Refresh] done in 198ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3086429ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086429ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086429ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086429ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/metaview.js:0
+[ 3086452ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086452ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086452ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086452ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/widget.js:0
+[ 3086476ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086476ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086476ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086476ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/5905093.js:0
+[ 3086499ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086499ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086499ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086499ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/wow.js:0
+[ 3086511ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3086523ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086523ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086523ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086523ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/isotope.pkgd.min.js:0
+[ 3086546ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086546ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086546ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086546ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/jquery.bez.min.js:0
+[ 3086571ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086571ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086571ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086571ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/all.js:0
+[ 3086595ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086595ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086595ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086595ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/main.js:0
+[ 3086618ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086618ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086618ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086618ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/dom-ready.min.js:0
+[ 3086641ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086641ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086641ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086641ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/hooks.min.js:0
+[ 3086666ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086666ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086666ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086666ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/i18n.min.js:0
+[ 3086697ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086697ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086697ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086697ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/a11y.min.js:0
+[ 3086721ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086721ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086721ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086721ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/jquery.json.min.js:0
+[ 3086744ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086744ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086744ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086744ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/gravityforms.min.js:0
+[ 3086768ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086768ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086768ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086768ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/placeholders.jquery.min.js:0
+[ 3086791ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086791ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086791ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086791ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/utils.min.js:0
+[ 3086812ms] [LOG] [Fast Refresh] done in 401ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3086836ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086836ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086836ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086836ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/vendor-theme.min.js:0
+[ 3086859ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086859ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086859ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086859ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/scripts-theme.min.js:0
+[ 3086882ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086882ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086882ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3086882ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/v8c78df7c7c0f484497ecbca7046644da1771523124516.js:0
+[ 3100796ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3101322ms] [LOG] [Fast Refresh] done in 625ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3152017ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3152020ms] [LOG] [Fast Refresh] done in 104ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3175967ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3176051ms] [LOG] [Fast Refresh] done in 89ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3232163ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3232163ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3232163ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3232172ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3232172ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3232172ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3232199ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3232229ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3232402ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3232402ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3232402ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3232402ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/style-rtl.min.css:0
+[ 3232403ms] [ERROR] Failed to load stylesheet: http://localhost:3000/assets/about-us-he/style-rtl.min.css @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[ 3232408ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3232408ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3232408ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3232408ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/style.min.css:0
+[ 3232410ms] [ERROR] Failed to load stylesheet: http://localhost:3000/assets/about-us-he/style.min.css @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[ 3232410ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3232410ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3232410ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3232410ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/cms-navigation-base.css:0
+[ 3232412ms] [ERROR] Failed to load stylesheet: http://localhost:3000/assets/about-us-he/cms-navigation-base.css @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[ 3232445ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3232445ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3232445ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3232445ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/cms-navigation.css:0
+[ 3232445ms] [ERROR] Failed to load stylesheet: http://localhost:3000/assets/about-us-he/cms-navigation.css @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[ 3232451ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3232451ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3232451ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3232451ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/style-he.css:0
+[ 3232452ms] [ERROR] Failed to load stylesheet: http://localhost:3000/assets/about-us-he/style-he.css @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[ 3232476ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3232476ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3232476ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3232476ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/style-new-he.css:0
+[ 3232476ms] [ERROR] Failed to load stylesheet: http://localhost:3000/assets/about-us-he/style-new-he.css @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[ 3232533ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3232539ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3232539ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3232539ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3232539ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/responsive-he.css:0
+[ 3232540ms] [ERROR] Failed to load stylesheet: http://localhost:3000/assets/about-us-he/responsive-he.css @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[ 3232564ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3232564ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3232564ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3232564ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/fonts.css:0
+[ 3232564ms] [ERROR] Failed to load stylesheet: http://localhost:3000/assets/about-us-he/fonts.css @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[ 3232586ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3232586ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3232586ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3232586ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/animate.css:0
+[ 3232586ms] [ERROR] Failed to load stylesheet: http://localhost:3000/assets/about-us-he/animate.css @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[ 3232601ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3232601ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3232601ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3232601ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/animation.css:0
+[ 3232602ms] [ERROR] Failed to load stylesheet: http://localhost:3000/assets/about-us-he/animation.css @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[ 3232630ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3232630ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3232630ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3232630ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/jquery.jConveyorTicker.min.css:0
+[ 3232631ms] [ERROR] Failed to load stylesheet: http://localhost:3000/assets/about-us-he/jquery.jConveyorTicker.min.css @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[ 3232642ms] [LOG] [Fast Refresh] done in 210ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3232647ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3232647ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3232647ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3232647ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/owl.carousel.css:0
+[ 3232649ms] [ERROR] Failed to load stylesheet: http://localhost:3000/assets/about-us-he/owl.carousel.css @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[ 3232709ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3232710ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3232710ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3232710ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/mlstyle.css:0
+[ 3232710ms] [ERROR] Failed to load stylesheet: http://localhost:3000/assets/about-us-he/mlstyle.css @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[ 3232720ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3232720ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3232720ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3232720ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/rtl.css:0
+[ 3232720ms] [ERROR] Failed to load stylesheet: http://localhost:3000/assets/about-us-he/rtl.css @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[ 3232735ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3232735ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3232735ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3232735ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/ml-responsive.css:0
+[ 3232736ms] [ERROR] Failed to load stylesheet: http://localhost:3000/assets/about-us-he/ml-responsive.css @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[ 3232749ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3232749ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3232749ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3232749ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/gdpr-main-nf.css:0
+[ 3232749ms] [ERROR] Failed to load stylesheet: http://localhost:3000/assets/about-us-he/gdpr-main-nf.css @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[ 3232751ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3232850ms] [LOG] [Fast Refresh] done in 202ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3232919ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3232919ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3232919ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3232919ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/language-cookie.js:0
+[ 3232951ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3232951ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3232951ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3232951ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/DOMPurify.min.js:0
+[ 3232991ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3232991ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3232991ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3232991ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/jquery.min.js:0
+[ 3233038ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3233038ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3233038ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3233038ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/jquery-migrate.min.js:0
+[ 3233064ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3233064ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3233064ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3233064ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/jquery-3.6.0.min.js:0
+[ 3233086ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3233086ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3233086ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3233087ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/jquery.jConveyorTicker.min.js:0
+[ 3233121ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3233121ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3233121ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3233121ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/owl.carousel.js:0
+[ 3233234ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3233234ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3233234ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3233234ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/TweenMax.min.js:0
+[ 3233269ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3233269ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3233269ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3233269ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/ScrollMagic.min.js:0
+[ 3233309ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3233309ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3233310ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3233310ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/metaview.js:0
+[ 3233344ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3233344ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3233344ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3233344ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/widget.js:0
+[ 3233375ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3233375ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3233375ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3233375ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/5905093.js:0
+[ 3233400ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3233400ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3233400ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3233401ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/wow.js:0
+[ 3233424ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3233425ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3233425ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3233425ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/isotope.pkgd.min.js:0
+[ 3233452ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3233452ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3233452ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3233452ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/jquery.bez.min.js:0
+[ 3233455ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3233477ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3233477ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3233477ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3233478ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/all.js:0
+[ 3233506ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3233506ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3233506ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3233506ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/main.js:0
+[ 3233530ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3233530ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3233530ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3233531ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/dom-ready.min.js:0
+[ 3233553ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3233553ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3233553ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3233553ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/hooks.min.js:0
+[ 3233578ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3233578ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3233578ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3233578ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/i18n.min.js:0
+[ 3233605ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3233605ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3233605ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3233605ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/a11y.min.js:0
+[ 3233627ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3233628ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3233628ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3233628ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/jquery.json.min.js:0
+[ 3233652ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3233652ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3233652ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3233652ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/gravityforms.min.js:0
+[ 3233684ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3233685ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3233685ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3233685ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/placeholders.jquery.min.js:0
+[ 3233691ms] [LOG] [Fast Refresh] done in 337ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3233713ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3233713ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3233713ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3233713ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/utils.min.js:0
+[ 3233737ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3233737ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3233737ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3233737ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/vendor-theme.min.js:0
+[ 3233764ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3233764ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3233764ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3233765ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/scripts-theme.min.js:0
+[ 3233793ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3233797ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3233797ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3233797ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/about-us:0
+[ 3233797ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/about-us-he/v8c78df7c7c0f484497ecbca7046644da1771523124516.js:0
+[ 3233805ms] [LOG] [Fast Refresh] done in 114ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3268603ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3268875ms] [LOG] [Fast Refresh] done in 374ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3269143ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/agritech:0
+[ 3269143ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/agritech:0
+[ 3269143ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/agritech:0
+[ 3269154ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/agritech:0
+[ 3269154ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/agritech:0
+[ 3269154ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/agritech:0
+[ 3269264ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3269317ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3275268ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3275289ms] [LOG] [Fast Refresh] done in 122ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3275478ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3275502ms] [LOG] [Fast Refresh] done in 126ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3276708ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3276714ms] [LOG] [Fast Refresh] done in 107ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3276852ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3276862ms] [LOG] [Fast Refresh] done in 111ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3278040ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3278198ms] [LOG] [Fast Refresh] done in 259ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3278466ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/saas-platforms:0
+[ 3278467ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/saas-platforms:0
+[ 3278467ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/saas-platforms:0
+[ 3278477ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/saas-platforms:0
+[ 3278477ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/saas-platforms:0
+[ 3278477ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/saas-platforms:0
+[ 3278564ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3278604ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3292877ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3293075ms] [LOG] [Fast Refresh] done in 299ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3293335ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3293335ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3293335ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3293345ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3293345ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3293345ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3293398ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3293430ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3293847ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3293847ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3293847ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3293847ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/banner_grid_e8631b5d.svg:0
+[ 3293848ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3293848ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3293848ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3293848ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/jumping_2-1_f8f612b4.svg:0
+[ 3293848ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3293848ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3293848ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3293848ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/jumping_1-1_ab88a363.svg:0
+[ 3293849ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3293849ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3293849ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3293849ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/Temp2-2_834484cd.jpg:0
+[ 3293866ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3293866ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3293866ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3293866ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/tickerxlose_7caa6d56.svg:0
+[ 3293886ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3293886ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3293886ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3293886ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/logo_new_467866fd.png:0
+[ 3293962ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3293962ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3293962ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3293962ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/togleclose_0f2b17eb.svg:0
+[ 3293962ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3293962ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3293962ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3293962ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/hamburger_68300c51.svg:0
+[ 3294004ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3294004ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3294004ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3294004ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/hamburger_white_fb3cfe05.svg:0
+[ 3294005ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3294005ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3294005ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3294005ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/phmobicon_6d449c6b.svg:0
+[ 3294006ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3294010ms] [LOG] [Fast Refresh] done in 105ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3294013ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3294013ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3294013ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3294013ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/calenderimg_5bc73614.svg:0
+[ 3294016ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3294016ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3294016ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3294016ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/whatmobicon_f0dec20f.svg:0
+[ 3294072ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3294072ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3294072ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3294073ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/jumping_3-1_139db793.svg:0
+[ 3294091ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3294091ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3294091ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3294091ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/Frame-2147224208_b15858aa.png:0
+[ 3294114ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3294114ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3294114ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3294114ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/Frame-2147224231-836x432_b1f8b5f5.png:0
+[ 3294122ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3294130ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3294130ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3294130ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3294130ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/grid_all_fc2cfe1c.png:0
+[ 3294136ms] [LOG] [Fast Refresh] done in 114ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3294138ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3294138ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3294138ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3294138ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/image-740_71f47bb7.png:0
+[ 3294141ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3294141ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3294141ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3294141ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/image-744_9468ac87.png:0
+[ 3294196ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3294196ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3294196ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3294196ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/image-745_c3834330.png:0
+[ 3294212ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3294213ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3294213ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3294213ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/image-741_08209ac2.png:0
+[ 3294236ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3294236ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3294236ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3294236ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/footerwhatsmob_1de644ac.svg:0
+[ 3294244ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3294244ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3294244ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3294244ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/footerphmob_25752ef9.svg:0
+[ 3294247ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3294257ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3294257ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3294257ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3294257ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/logo_736_b7fda491.svg:0
+[ 3294266ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3294266ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3294266ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3294266ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/logo_biz_735_25081e7d.svg:0
+[ 3294317ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3294317ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3294317ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3294317ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/logo_marker_731_80c4ff78.svg:0
+[ 3294336ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3294336ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3294336ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3294336ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/logo_732_bc12cdde.svg:0
+[ 3294344ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3294344ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3294344ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3294344ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/logo_733_d68e7477.svg:0
+[ 3294359ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3294359ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3294359ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3294359ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/logo_mako_734_37dae4ce.svg:0
+[ 3294380ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3294380ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3294380ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3294380ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/triolla_51d80f16.svg:0
+[ 3294390ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3294390ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3294390ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3294390ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/instagram_141caf98.svg:0
+[ 3294432ms] [LOG] [Fast Refresh] done in 285ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3294435ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3294435ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3294435ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3294435ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/sqlink_icon_7a8110db.png:0
+[ 3294439ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3294439ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3294439ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 3294439ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/gdpr-logo_88d838bc.png:0
+[ 3294462ms] ReferenceError: jQuery is not defined
+    at http://localhost:3000/assets/_shared/all.js:1:1
+[ 3296158ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3296160ms] [LOG] [Fast Refresh] done in 103ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3298128ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3298131ms] [LOG] [Fast Refresh] done in 105ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3304234ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3304316ms] [LOG] [Fast Refresh] done in 143ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3304422ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3304435ms] [LOG] [Fast Refresh] done in 113ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3304787ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3304811ms] [LOG] [Fast Refresh] done in 124ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3305032ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3305041ms] [LOG] [Fast Refresh] done in 108ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3306106ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3306115ms] [LOG] [Fast Refresh] done in 112ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3306219ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3306251ms] [LOG] [Fast Refresh] done in 135ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3306393ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3306560ms] [LOG] [Fast Refresh] done in 268ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3306683ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/tickerxlose_7caa6d56.svg:0
+[ 3306683ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/logo_new_467866fd.png:0
+[ 3306684ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/hamburger_68300c51.svg:0
+[ 3306685ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/hamburger_white_fb3cfe05.svg:0
+[ 3306686ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/togleclose_0f2b17eb.svg:0
+[ 3306742ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/banner_grid_e8631b5d.svg:0
+[ 3306818ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3306824ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/Temp2-2_834484cd.jpg:0
+[ 3306848ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/jumping_2-1_f8f612b4.svg:0
+[ 3306868ms] [LOG] [Fast Refresh] done in 151ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3306877ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/jumping_1-1_ab88a363.svg:0
+[ 3306885ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/calenderimg_5bc73614.svg:0
+[ 3306891ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/phmobicon_6d449c6b.svg:0
+[ 3306935ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/whatmobicon_f0dec20f.svg:0
+[ 3306989ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3306994ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/jumping_3-1_139db793.svg:0
+[ 3307013ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/Frame-2147224208_b15858aa.png:0
+[ 3307034ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/Frame-2147224231-836x432_b1f8b5f5.png:0
+[ 3307043ms] [LOG] [Fast Refresh] done in 155ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3307047ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/grid_all_fc2cfe1c.png:0
+[ 3307053ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/image-740_71f47bb7.png:0
+[ 3307095ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/image-744_9468ac87.png:0
+[ 3307151ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3307164ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/image-745_c3834330.png:0
+[ 3307184ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/image-741_08209ac2.png:0
+[ 3307218ms] [LOG] [Fast Refresh] done in 168ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3307220ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/footerwhatsmob_1de644ac.svg:0
+[ 3307230ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/footerphmob_25752ef9.svg:0
+[ 3307234ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/logo_736_b7fda491.svg:0
+[ 3307262ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/logo_biz_735_25081e7d.svg:0
+[ 3307328ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/logo_marker_731_80c4ff78.svg:0
+[ 3307336ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3307348ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/logo_732_bc12cdde.svg:0
+[ 3307365ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/logo_733_d68e7477.svg:0
+[ 3307373ms] [LOG] [Fast Refresh] done in 137ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3307375ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/logo_mako_734_37dae4ce.svg:0
+[ 3307379ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/triolla_51d80f16.svg:0
+[ 3307439ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/instagram_141caf98.svg:0
+[ 3307481ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/sqlink_icon_7a8110db.png:0
+[ 3307484ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/gdpr-logo_88d838bc.png:0
+[ 3307589ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3307669ms] [LOG] [Fast Refresh] done in 181ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3612030ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3612234ms] [LOG] [Fast Refresh] done in 166ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3612522ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/tickerxlose_7caa6d56.svg:0
+[ 3612546ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/logo_new_467866fd.png:0
+[ 3612582ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/banner_grid_e8631b5d.svg:0
+[ 3612582ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/hamburger_68300c51.svg:0
+[ 3612588ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/hamburger_white_fb3cfe05.svg:0
+[ 3612618ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/jumping_1-1_ab88a363.svg:0
+[ 3612667ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/jumping_2-1_f8f612b4.svg:0
+[ 3612672ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/Temp2-2_834484cd.jpg:0
+[ 3612741ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/togleclose_0f2b17eb.svg:0
+[ 3612756ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/calenderimg_5bc73614.svg:0
+[ 3612773ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/phmobicon_6d449c6b.svg:0
+[ 3612798ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/whatmobicon_f0dec20f.svg:0
+[ 3612824ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/jumping_3-1_139db793.svg:0
+[ 3612827ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/Frame-2147224208_b15858aa.png:0
+[ 3612885ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/Frame-2147224231-836x432_b1f8b5f5.png:0
+[ 3612895ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/grid_all_fc2cfe1c.png:0
+[ 3612911ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/image-740_71f47bb7.png:0
+[ 3612931ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/image-744_9468ac87.png:0
+[ 3612931ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3612954ms] [LOG] [Fast Refresh] done in 123ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3612955ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/image-745_c3834330.png:0
+[ 3612958ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/image-741_08209ac2.png:0
+[ 3613012ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/footerwhatsmob_1de644ac.svg:0
+[ 3613022ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/footerphmob_25752ef9.svg:0
+[ 3613034ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/logo_736_b7fda491.svg:0
+[ 3613053ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/logo_biz_735_25081e7d.svg:0
+[ 3613061ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3613078ms] [LOG] [Fast Refresh] done in 118ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3613080ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/logo_marker_731_80c4ff78.svg:0
+[ 3613083ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/logo_732_bc12cdde.svg:0
+[ 3613179ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/logo_733_d68e7477.svg:0
+[ 3613188ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/logo_mako_734_37dae4ce.svg:0
+[ 3613200ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/triolla_51d80f16.svg:0
+[ 3613219ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/instagram_141caf98.svg:0
+[ 3613246ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/sqlink_icon_7a8110db.png:0
+[ 3613250ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/gdpr-logo_88d838bc.png:0
+[ 3629013ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3631597ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3631639ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3632047ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/tickerxlose_7caa6d56.svg:0
+[ 3632048ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/logo_new_467866fd.png:0
+[ 3632101ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/banner_grid_e8631b5d.svg:0
+[ 3632163ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3632165ms] [LOG] [Fast Refresh] done in 103ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3632173ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/jumping_1-1_ab88a363.svg:0
+[ 3632187ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/jumping_2-1_f8f612b4.svg:0
+[ 3632195ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/Temp2-2_834484cd.jpg:0
+[ 3632274ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/hamburger_68300c51.svg:0
+[ 3632294ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/togleclose_0f2b17eb.svg:0
+[ 3632295ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/hamburger_white_fb3cfe05.svg:0
+[ 3632356ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/calenderimg_5bc73614.svg:0
+[ 3632367ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/phmobicon_6d449c6b.svg:0
+[ 3632373ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/whatmobicon_f0dec20f.svg:0
+[ 3632412ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/jumping_3-1_139db793.svg:0
+[ 3632451ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/Frame-2147224208_b15858aa.png:0
+[ 3632471ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/Frame-2147224231-836x432_b1f8b5f5.png:0
+[ 3632477ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3632498ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/grid_all_fc2cfe1c.png:0
+[ 3632510ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/image-740_71f47bb7.png:0
+[ 3632522ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/image-744_9468ac87.png:0
+[ 3632570ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/image-745_c3834330.png:0
+[ 3632596ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/image-741_08209ac2.png:0
+[ 3632608ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/footerwhatsmob_1de644ac.svg:0
+[ 3632632ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/footerphmob_25752ef9.svg:0
+[ 3632647ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/logo_736_b7fda491.svg:0
+[ 3632662ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/logo_biz_735_25081e7d.svg:0
+[ 3632708ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/logo_marker_731_80c4ff78.svg:0
+[ 3632732ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/logo_732_bc12cdde.svg:0
+[ 3632747ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/logo_733_d68e7477.svg:0
+[ 3632774ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/logo_mako_734_37dae4ce.svg:0
+[ 3632787ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/triolla_51d80f16.svg:0
+[ 3632799ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/instagram_141caf98.svg:0
+[ 3632836ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/sqlink_icon_7a8110db.png:0
+[ 3632846ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/gdpr-logo_88d838bc.png:0
+[ 3632870ms] ReferenceError: jQuery is not defined
+    at http://localhost:3000/assets/_shared/all.js:1:1
+[ 3632885ms] [LOG] [Fast Refresh] done in 509ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3693841ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3694270ms] [LOG] [Fast Refresh] done in 501ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3715591ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3715600ms] [LOG] [Fast Refresh] done in 111ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3723337ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3723529ms] [LOG] [Fast Refresh] done in 237ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3723710ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/tickerxlose_7caa6d56.svg:0
+[ 3723719ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/logo_new_467866fd.png:0
+[ 3723748ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/hamburger_68300c51.svg:0
+[ 3723785ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/hamburger_white_fb3cfe05.svg:0
+[ 3723786ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/togleclose_0f2b17eb.svg:0
+[ 3723809ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/banner_grid_e8631b5d.svg:0
+[ 3723867ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/Temp2-2_834484cd.jpg:0
+[ 3723878ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/jumping_2-1_f8f612b4.svg:0
+[ 3723881ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/jumping_1-1_ab88a363.svg:0
+[ 3723926ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/calenderimg_5bc73614.svg:0
+[ 3723942ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/phmobicon_6d449c6b.svg:0
+[ 3723968ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/whatmobicon_f0dec20f.svg:0
+[ 3723984ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3723996ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/jumping_3-1_139db793.svg:0
+[ 3724008ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/Frame-2147224208_b15858aa.png:0
+[ 3724019ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/Frame-2147224231-836x432_b1f8b5f5.png:0
+[ 3724072ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/grid_all_fc2cfe1c.png:0
+[ 3724085ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/image-740_71f47bb7.png:0
+[ 3724106ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/image-744_9468ac87.png:0
+[ 3724133ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/image-745_c3834330.png:0
+[ 3724145ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/image-741_08209ac2.png:0
+[ 3724155ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/footerwhatsmob_1de644ac.svg:0
+[ 3724207ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/footerphmob_25752ef9.svg:0
+[ 3724220ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/logo_736_b7fda491.svg:0
+[ 3724241ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/logo_biz_735_25081e7d.svg:0
+[ 3724267ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/logo_marker_731_80c4ff78.svg:0
+[ 3724279ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/logo_732_bc12cdde.svg:0
+[ 3724288ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/logo_733_d68e7477.svg:0
+[ 3724331ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/logo_mako_734_37dae4ce.svg:0
+[ 3724345ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/triolla_51d80f16.svg:0
+[ 3724368ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/instagram_141caf98.svg:0
+[ 3724397ms] [LOG] [Fast Refresh] done in 514ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3724401ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/sqlink_icon_7a8110db.png:0
+[ 3724408ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/assets/triolla-io-blog-the-fintech-ux-playbook/gdpr-logo_88d838bc.png:0
+[ 3732192ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3732211ms] [LOG] [Fast Refresh] done in 121ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3758700ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3758835ms] [LOG] [Fast Refresh] done in 237ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3846900ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3847143ms] [LOG] [Fast Refresh] done in 343ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3847545ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3847809ms] [LOG] [Fast Refresh] done in 364ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3852196ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3852357ms] [LOG] [Fast Refresh] done in 192ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3852553ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3852606ms] [LOG] [Fast Refresh] done in 154ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 4155374ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 4155436ms] [LOG] [Fast Refresh] done in 120ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 4155593ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 4155733ms] [LOG] [Fast Refresh] done in 245ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 4218624ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 4218658ms] [LOG] [Fast Refresh] done in 106ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 4218759ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 4218759ms] [LOG] [Fast Refresh] done in 101ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 4401460ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 4401511ms] [LOG] [Fast Refresh] done in 122ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 4401625ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 4401672ms] [LOG] [Fast Refresh] done in 147ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 4406197ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 4406224ms] [LOG] [Fast Refresh] done in 82ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 4406370ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 4406384ms] [LOG] [Fast Refresh] done in 116ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 4614183ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 4614223ms] [LOG] [Fast Refresh] done in 140ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 4649096ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 4649116ms] [LOG] [Fast Refresh] done in 122ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 4657941ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 4657975ms] [LOG] [Fast Refresh] done in 135ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 4669005ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 4669041ms] [LOG] [Fast Refresh] done in 107ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 4794210ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 4794417ms] [LOG] [Fast Refresh] done in 308ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 4853407ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 4853432ms] [LOG] [Fast Refresh] done in 103ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 4853571ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 4853586ms] [LOG] [Fast Refresh] done in 115ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 4857861ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 4857890ms] [LOG] [Fast Refresh] done in 98ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 4861554ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 4861621ms] [LOG] [Fast Refresh] done in 140ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 4870120ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 4870164ms] [LOG] [Fast Refresh] done in 116ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 4870475ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 4870541ms] [LOG] [Fast Refresh] done in 138ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 4965898ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 4965933ms] [LOG] [Fast Refresh] done in 110ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 4966078ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 4966095ms] [LOG] [Fast Refresh] done in 118ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 4976786ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 4976913ms] [LOG] [Fast Refresh] done in 195ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 4982025ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 4982147ms] [LOG] [Fast Refresh] done in 193ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5195695ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5195736ms] [LOG] [Fast Refresh] done in 140ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5195886ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5195904ms] [LOG] [Fast Refresh] done in 119ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5196005ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5196020ms] [LOG] [Fast Refresh] done in 115ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5196167ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5196183ms] [LOG] [Fast Refresh] done in 116ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5196358ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5196377ms] [LOG] [Fast Refresh] done in 119ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5196718ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5196737ms] [LOG] [Fast Refresh] done in 121ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5196911ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5196924ms] [LOG] [Fast Refresh] done in 115ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5197074ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5197087ms] [LOG] [Fast Refresh] done in 114ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5197193ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5197207ms] [LOG] [Fast Refresh] done in 115ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5197312ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5197324ms] [LOG] [Fast Refresh] done in 114ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5197428ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5197441ms] [LOG] [Fast Refresh] done in 114ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5197593ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5197603ms] [LOG] [Fast Refresh] done in 111ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5197736ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5197746ms] [LOG] [Fast Refresh] done in 112ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5197855ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5197866ms] [LOG] [Fast Refresh] done in 112ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5198042ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5198053ms] [LOG] [Fast Refresh] done in 112ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5198211ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5198223ms] [LOG] [Fast Refresh] done in 113ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5198418ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5198431ms] [LOG] [Fast Refresh] done in 115ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5198627ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5198642ms] [LOG] [Fast Refresh] done in 115ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5198835ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5198846ms] [LOG] [Fast Refresh] done in 111ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5199150ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5199160ms] [LOG] [Fast Refresh] done in 110ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5199261ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5199271ms] [LOG] [Fast Refresh] done in 111ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5199794ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5199801ms] [LOG] [Fast Refresh] done in 107ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5199961ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5199976ms] [LOG] [Fast Refresh] done in 115ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5200092ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5200103ms] [LOG] [Fast Refresh] done in 113ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5200253ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5200266ms] [LOG] [Fast Refresh] done in 114ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5200655ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5200667ms] [LOG] [Fast Refresh] done in 113ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5200881ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5200890ms] [LOG] [Fast Refresh] done in 109ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5200991ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5200996ms] [LOG] [Fast Refresh] done in 106ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5201395ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5201405ms] [LOG] [Fast Refresh] done in 112ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5201640ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5201653ms] [LOG] [Fast Refresh] done in 114ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5201756ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5201767ms] [LOG] [Fast Refresh] done in 112ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5201978ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5201990ms] [LOG] [Fast Refresh] done in 113ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5202188ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5202200ms] [LOG] [Fast Refresh] done in 114ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5202785ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5202799ms] [LOG] [Fast Refresh] done in 115ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5202972ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5202985ms] [LOG] [Fast Refresh] done in 115ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5203087ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5203098ms] [LOG] [Fast Refresh] done in 113ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5203218ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5203245ms] [LOG] [Fast Refresh] done in 128ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5203382ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5203398ms] [LOG] [Fast Refresh] done in 118ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5203499ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5203511ms] [LOG] [Fast Refresh] done in 113ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5203621ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5203641ms] [LOG] [Fast Refresh] done in 122ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5203940ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5203952ms] [LOG] [Fast Refresh] done in 113ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5204107ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5204120ms] [LOG] [Fast Refresh] done in 115ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5204393ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5204405ms] [LOG] [Fast Refresh] done in 112ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5204699ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5204709ms] [LOG] [Fast Refresh] done in 110ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5204944ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5204955ms] [LOG] [Fast Refresh] done in 112ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5205248ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5205262ms] [LOG] [Fast Refresh] done in 116ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5205405ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5205419ms] [LOG] [Fast Refresh] done in 114ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5205558ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5205570ms] [LOG] [Fast Refresh] done in 114ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5205883ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5206067ms] [LOG] [Fast Refresh] done in 285ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5206313ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5206323ms] [LOG] [Fast Refresh] done in 111ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5206797ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5206815ms] [LOG] [Fast Refresh] done in 118ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5206917ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5206929ms] [LOG] [Fast Refresh] done in 113ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5207035ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5207043ms] [LOG] [Fast Refresh] done in 108ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5207232ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5207243ms] [LOG] [Fast Refresh] done in 111ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5207386ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5207398ms] [LOG] [Fast Refresh] done in 112ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5207726ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5207737ms] [LOG] [Fast Refresh] done in 112ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5208118ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5208131ms] [LOG] [Fast Refresh] done in 115ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5208238ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5208250ms] [LOG] [Fast Refresh] done in 114ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5208489ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5208503ms] [LOG] [Fast Refresh] done in 116ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5208646ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5208662ms] [LOG] [Fast Refresh] done in 116ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5208814ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5208827ms] [LOG] [Fast Refresh] done in 115ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5208965ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5208977ms] [LOG] [Fast Refresh] done in 114ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5209449ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5209460ms] [LOG] [Fast Refresh] done in 111ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5209632ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5209644ms] [LOG] [Fast Refresh] done in 112ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5209820ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5209829ms] [LOG] [Fast Refresh] done in 111ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5210012ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5210022ms] [LOG] [Fast Refresh] done in 111ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5210130ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5210143ms] [LOG] [Fast Refresh] done in 113ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5210360ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5210372ms] [LOG] [Fast Refresh] done in 112ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5210809ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5210822ms] [LOG] [Fast Refresh] done in 114ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5210926ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5210936ms] [LOG] [Fast Refresh] done in 110ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5211497ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5211507ms] [LOG] [Fast Refresh] done in 110ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5212347ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5212359ms] [LOG] [Fast Refresh] done in 112ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5213832ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5213865ms] [LOG] [Fast Refresh] done in 133ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5214523ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5214581ms] [LOG] [Fast Refresh] done in 108ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5214913ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5216048ms] [LOG] [Fast Refresh] done in 1181ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5217664ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5218438ms] [LOG] [Fast Refresh] done in 875ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5218548ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5218706ms] [LOG] [Fast Refresh] done in 259ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5218808ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5218876ms] [LOG] [Fast Refresh] done in 170ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5248851ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5249138ms] [LOG] [Fast Refresh] done in 17ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5249265ms] [WARNING] A speculation rule set was inserted into the document but will be ignored. This might happen, for example, if it was previously inserted into another document, or if it was created using the innerHTML setter. @ http://localhost:3000/_next/static/chunks/_013z7-q._.js:1817
+[ 5249276ms] [INFO] Autofocus processing was blocked because a document already has a focused element. @ http://localhost:3000/he/blog/the-fintech-ux-playbook:0
+[ 5355432ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5355479ms] [LOG] [Fast Refresh] done in 147ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5380922ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5381184ms] [LOG] [Fast Refresh] done in 364ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5381332ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5381477ms] [LOG] [Fast Refresh] done in 247ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5381579ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5381923ms] [LOG] [Fast Refresh] done in 444ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5382036ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5382201ms] [LOG] [Fast Refresh] done in 266ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5382361ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5382518ms] [LOG] [Fast Refresh] done in 258ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5382674ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5382876ms] [LOG] [Fast Refresh] done in 303ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5383313ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5384141ms] [LOG] [Fast Refresh] done in 928ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5385765ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5385961ms] [LOG] [Fast Refresh] done in 296ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5386321ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5386620ms] [LOG] [Fast Refresh] done in 400ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5386726ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5386952ms] [LOG] [Fast Refresh] done in 328ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5392539ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5392858ms] [LOG] [Fast Refresh] done in 419ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5392959ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5393041ms] [LOG] [Fast Refresh] done in 183ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5393511ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5393707ms] [LOG] [Fast Refresh] done in 296ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5399517ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5399718ms] [LOG] [Fast Refresh] done in 303ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5399823ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5399965ms] [LOG] [Fast Refresh] done in 243ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5466132ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5466270ms] [LOG] [Fast Refresh] done in 238ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5466966ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5467124ms] [LOG] [Fast Refresh] done in 259ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5467508ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5467656ms] [LOG] [Fast Refresh] done in 249ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5468008ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5468135ms] [LOG] [Fast Refresh] done in 229ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5468759ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5468889ms] [LOG] [Fast Refresh] done in 232ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5469222ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5469355ms] [LOG] [Fast Refresh] done in 234ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5469695ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5469836ms] [LOG] [Fast Refresh] done in 241ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5470187ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5470321ms] [LOG] [Fast Refresh] done in 234ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5470944ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5471176ms] [LOG] [Fast Refresh] done in 333ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5471508ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5471666ms] [LOG] [Fast Refresh] done in 259ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5472025ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5472170ms] [LOG] [Fast Refresh] done in 246ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5472592ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5472900ms] [LOG] [Fast Refresh] done in 408ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5473308ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5473437ms] [LOG] [Fast Refresh] done in 229ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5548312ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5548346ms] [LOG] [Fast Refresh] done in 134ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5574957ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5575671ms] [LOG] [Fast Refresh] done in 728ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5600326ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5600570ms] [LOG] [Fast Refresh] done in 345ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5602006ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5602012ms] [LOG] [Fast Refresh] done in 108ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5602830ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5602846ms] [LOG] [Fast Refresh] done in 118ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5603751ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5603779ms] [LOG] [Fast Refresh] done in 128ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5604615ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5604619ms] [LOG] [Fast Refresh] done in 104ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5605447ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5605448ms] [LOG] [Fast Refresh] done in 102ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5607404ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5607412ms] [LOG] [Fast Refresh] done in 109ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5608231ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5608240ms] [LOG] [Fast Refresh] done in 110ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5616083ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5616092ms] [LOG] [Fast Refresh] done in 110ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5624828ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5624831ms] [LOG] [Fast Refresh] done in 105ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5628410ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5628415ms] [LOG] [Fast Refresh] done in 105ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5630120ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5630250ms] [LOG] [Fast Refresh] done in 161ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5631825ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5631833ms] [LOG] [Fast Refresh] done in 110ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5637335ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5637339ms] [LOG] [Fast Refresh] done in 105ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5638145ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5638147ms] [LOG] [Fast Refresh] done in 103ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5640781ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5640793ms] [LOG] [Fast Refresh] done in 114ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5643366ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5643368ms] [LOG] [Fast Refresh] done in 104ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5644260ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5644260ms] [LOG] [Fast Refresh] done in 101ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5646036ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5646037ms] [LOG] [Fast Refresh] done in 104ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5646856ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5646877ms] [LOG] [Fast Refresh] done in 122ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5647790ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5647802ms] [LOG] [Fast Refresh] done in 112ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5648637ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5648657ms] [LOG] [Fast Refresh] done in 121ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5649520ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5649536ms] [LOG] [Fast Refresh] done in 117ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5650440ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5650455ms] [LOG] [Fast Refresh] done in 117ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5651261ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5651268ms] [LOG] [Fast Refresh] done in 109ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5653803ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5653817ms] [LOG] [Fast Refresh] done in 114ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5655695ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5655696ms] [LOG] [Fast Refresh] done in 103ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5695295ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5695298ms] [LOG] [Fast Refresh] done in 104ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5704489ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5704501ms] [LOG] [Fast Refresh] done in 112ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5803877ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5804085ms] [LOG] [Fast Refresh] done in 308ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431

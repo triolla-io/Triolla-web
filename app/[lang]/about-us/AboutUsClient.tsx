@@ -26,11 +26,8 @@ function getFragmentUrl(lang: string): string {
     : "/fragments/about-us-body.html";
 }
 
-function getAssetBase(lang: string): string {
-  return lang === "he" ? "/assets/about-us-he" : "/assets/triolla-io-about-us";
-}
-
 type SnapshotDeps = {
+  assetBase?: string;
   bodyClass: string;
   dataRsssl: string | null;
   css: string[];
@@ -41,6 +38,15 @@ type SnapshotDeps = {
 function depsForLang(lang: string): SnapshotDeps {
   if (lang === "he") return aboutUsDepsHe as SnapshotDeps;
   return aboutUsDepsEn as SnapshotDeps;
+}
+
+function assetBaseUrlForLang(lang: string): string {
+  const deps = depsForLang(lang);
+  const raw = deps.assetBase?.trim();
+  if (raw) {
+    return raw.replace(/\/$/, "");
+  }
+  return lang === "he" ? "/assets/about-us-he" : "/assets/triolla-io-about-us";
 }
 
 export function AboutUsClient({ lang }: { lang: string }) {
@@ -54,7 +60,7 @@ export function AboutUsClient({ lang }: { lang: string }) {
   useEffect(() => {
     let cancelled = false;
     const { css, js, pathEncoding } = depsForLang(lang);
-    const assetBaseUrl = getAssetBase(lang);
+    const assetBaseUrl = assetBaseUrlForLang(lang);
     const hrefFor = (file: string) => snapshotAssetUrl(assetBaseUrl, file, pathEncoding);
 
     (async () => {
@@ -173,8 +179,8 @@ export function AboutUsClient({ lang }: { lang: string }) {
               <code>_download_snapshot.py</code>
             </>
           ) : null}
-          . Ensure <code>public/assets/about-us{lang === "he" ? "-he" : ""}</code> and the matching
-          fragment exist.
+          . Ensure <code>public{assetBaseUrlForLang(lang)}</code> (from deps{" "}
+          <code>assetBase</code>) and the matching fragment exist.
         </div>
       )}
       <div

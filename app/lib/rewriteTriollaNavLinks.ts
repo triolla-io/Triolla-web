@@ -72,6 +72,15 @@ const HEBREW_WP_SERVICE_CHILD_TO_SLUG: Record<string, string> = {
   "עיצוב-מצגות": "presentations",
   /** WP uses motion-design2; app route is motion-design */
   "motion-design2": "motion-design",
+  /** Hebrew WP slugs missing from original map */
+  "קונספט-יצירתי": "creative-concept",
+  "יצירת-דיזיין-סיסטם-2": "design-system-creation",
+  "בדיקות-שמישות": "user-testing",
+  "מנהלי-מוצר-מובילים": "product-stars",
+  "עיצוב-לוגו": "logo-design",
+  "פיתוח-front-end": "front-end-dev",
+  "פרוטוטייפ": "prototyping",
+  "ai-ואוטומציה": "ai-automation",
 };
 
 /**
@@ -155,6 +164,13 @@ export function triollaPathnameToAppPath(pathname: string, currentLocale: "en" |
     const parts = path.split("/").filter(Boolean); // ["he", "סייבר", etc.]
     if (parts.length >= 2 && parts[0] === "he") {
       const slug = parts[1];
+      // Handle /he/services/<hebrew-child-slug> where the parent is already canonical English
+      if (slug === "services" && parts.length === 3 && /[\u0590-\u05FF]/.test(parts[2])) {
+        const canonicalChild = mapWordPressServiceChildToCanonicalSlug(parts[2]);
+        if (canonicalChild !== parts[2]) {
+          return `/he/services/${canonicalChild}`;
+        }
+      }
       // Check if this looks like Hebrew characters
       if (/[\u0590-\u05FF]/.test(slug)) {
         const mapped = mapHebrewSlugToRoute(slug);

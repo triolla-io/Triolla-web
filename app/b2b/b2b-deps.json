@@ -22,7 +22,7 @@
     "_shared/jquery.bez.min.js",
     "_shared/all.js"
   ],
-  "sharedFontsManifest": "/Users/ariell/html-to-react/public/assets/_shared/fonts/fonts.json",
+  "sharedFontsManifest": "/assets/_shared/fonts/fonts.json",
   "sharedFontsUrl": "/assets/_shared/fonts",
   "sharedFonts": {
     "registry": "/assets/_shared/fonts/fonts.json",

@@ -37,29 +37,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
       <head>
-        {/* Hebrew UI fonts (globals.css @font-face using SVG format); Latin UI uses next/font Geist above. */}
-        {/* Note: SVG fonts don't render text effectively — system fonts (Almoni fallback chain) provide actual rendering */}
-        <link
-          rel="preload"
-          href="/assets/_shared/fonts/AlmoniMLv5AAA-Regular.svg"
-          as="font"
-          type="font/svg"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          href="/assets/_shared/fonts/AlmoniMLv5AAA-Bold.svg"
-          as="font"
-          type="font/svg"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          href="/assets/_shared/fonts/AlmoniDLAAA-Bold.svg"
-          as="font"
-          type="font/svg"
-          crossOrigin="anonymous"
-        />
+        {/* Almoni loads via ../public/assets/_shared/fonts/fonts.css @font-face (no rel=preload: as=font + SVG is invalid in browsers). */}
       </head>
       <body>
         <JsonLd data={[organizationJsonLd(), websiteJsonLd()]} />
