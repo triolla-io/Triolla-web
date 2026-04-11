@@ -1,0 +1,20 @@
+/* Fix: Ensure company ticker carousel is visible on initial page load */
+/* The snapshot CSS has opacity: 0 by default, requiring .show class from JS */
+/* On client hydration, make ticker visible immediately while .show class animation works */
+
+.company_triker {
+  opacity: 1 !important;
+  visibility: visible !important;
+  bottom: 0px !important;
+}
+
+.company_triker.jctkr-wrapper {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Preserve the scroll reveal animation - it can still transition from off-screen */
+.company_triker:not(.show) {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
