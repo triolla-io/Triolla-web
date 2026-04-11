@@ -15,7 +15,7 @@
 .sec-fancy-title,
 .motion-content .contact-line .contact-text,
 .motion-content .contact-link a {
-    font-family: 'Almoni DL AAA';
+    font-family: 'Almoni DL AAA', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
 
 }
 
@@ -25,11 +25,11 @@
 }
 
 .motion-content .contact-line .line {
-    font-family: 'Almoni DL AAA';
+    font-family: 'Almoni DL AAA', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
     font-weight: 700;
 }
 .motion-content .contact-line .txt {
-    font-family: 'Almoni ML v5 AAA';
+    font-family: 'Almoni ML v5 AAA', 'Almoni DL AAA', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
     font-weight: 400;
 }
 
@@ -72,11 +72,11 @@
 .gform-footer input,
 .gform-footer input[type=submit],
 .gfield input {
-	 font-family: 'Almoni ML v5 AAA';
+	 font-family: 'Almoni ML v5 AAA', 'Almoni DL AAA', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
 }
 
 .contact_main_right_in .gfield input {
-	font-family: 'Almoni ML v5 AAA';
+	font-family: 'Almoni ML v5 AAA', 'Almoni DL AAA', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
 }
 
 .menutoggle a {

@@ -17,15 +17,15 @@
 .about_service {padding:153px 20px 134px 20px; background:#e7eaef;}
 .abservwrap {max-width:1200px; margin:0 auto;}
 .abservtop {text-align:center; max-width:788px; margin:0 auto; padding:0 0 20px 0;}
-.abservtop h3 { font-size:120px; line-height:100px; color:#000; font-family: 'Almoni ML v5 AAA'; font-weight:bold; margin:0 0 25px 0;}
+.abservtop h3 { font-size:120px; line-height:100px; color:#000; font-family: 'Almoni ML v5 AAA', 'Almoni DL AAA', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; font-weight:bold; margin:0 0 25px 0;}
 .abservtop p { font-size:32px; line-height:37px; color:#000; max-width:690px; margin:0 auto;}
 .abservlistdiv { padding:85px 0 75px 0; border-bottom: 1px solid #000000;}
-.abservllft {float:right; width:376px; font-size:68px; line-height:70px; color:#000; font-family: 'Almoni ML v5 AAA'; font-weight:bold; display:table;}
+.abservllft {float:right; width:376px; font-size:68px; line-height:70px; color:#000; font-family: 'Almoni ML v5 AAA', 'Almoni DL AAA', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; font-weight:bold; display:table;}
 .abservllft span {display:table-cell; vertical-align:middle; width:100%;}
 .abservlrgt {float:left; width:655px; display:table;}
 .abservlrgtin {display:table-cell; vertical-align:middle; width:100%;}
 .abservlrgt ul {display:block; margin:0px -10px; padding:0px; font-size:0px;}
-.abservlrgt ul li {display:inline-block; vertical-align:top; font-size:26px; line-height:1; color:#000; letter-spacing:-0.96px; font-family: 'Almoni ML v5 AAA'; font-weight:normal; border-left:2px solid #000; padding:0 10px; margin:0 0 10px 0;}
+.abservlrgt ul li {display:inline-block; vertical-align:top; font-size:26px; line-height:1; color:#000; letter-spacing:-0.96px; font-family: 'Almoni ML v5 AAA', 'Almoni DL AAA', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; font-weight:normal; border-left:2px solid #000; padding:0 10px; margin:0 0 10px 0;}
 .abservlrgt ul li a{ color:#000;}
 .abservlrgt ul li a:hover{ text-decoration:underline;}
 .abservlrgt ul li:last-child {border-left:0px;}
@@ -34,8 +34,8 @@
 .abthrebot ul.abmobile {display:none !important;} 
 .homemaintop {padding:265px 0px 0 0px; background:#fed324;}
 .homemaintopone {max-width:1550px; margin:0 auto; text-align:center;}
-.homemaintopone h1 { font-size:96px !important; line-height:90px !important; color:#000; font-family: 'Almoni ML v5 AAA'; font-weight:bold; margin:0 0 43px 0;position:relative; bottom:-30px; transition:0.5s; -moz-transition:0.5s; -webkit-transition:0.5s;opacity:0; padding:0px !important;}
-.homemaintopone p { font-size:17px; line-height:20px; color:#000; font-family: 'Almoni ML v5 AAA'; font-weight:normal;position:relative; bottom:-30px; transition:1s; -moz-transition:1s; -webkit-transition:1s;opacity:0;}
+.homemaintopone h1 { font-size:96px !important; line-height:90px !important; color:#000; font-family: 'Almoni ML v5 AAA', 'Almoni DL AAA', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; font-weight:bold; margin:0 0 43px 0;position:relative; bottom:-30px; transition:0.5s; -moz-transition:0.5s; -webkit-transition:0.5s;opacity:0; padding:0px !important;}
+.homemaintopone p { font-size:17px; line-height:20px; color:#000; font-family: 'Almoni ML v5 AAA', 'Almoni DL AAA', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; font-weight:normal;position:relative; bottom:-30px; transition:1s; -moz-transition:1s; -webkit-transition:1s;opacity:0;}
 .hometopborder { width:1px; height:112px; background:#000; margin:68px auto 0 auto;position:relative; bottom:-30px; transition:1s; -moz-transition:1s; -webkit-transition:1s;opacity:0;}
 .htopbut {text-align:center; margin:7px 0 0 0;position:relative; bottom:-30px; transition:1s; -moz-transition:1s; -webkit-transition:1s;opacity:0;}
 .homemaintopone.show h1, .homemaintopone.show p, .homemaintopone.show .hometopborder, .homemaintopone.show .htopbut{ opacity:1; bottom:0px;}
@@ -78,7 +78,7 @@
 .header_menu ul.menu li.bigmenu ul > li ul {padding:0px; opacity:1;transition:none;}
 .header_menu ul.menu li.bigmenu ul > li ul li { display:block; padding:0px; margin:0 0 0px 0; width:100%; text-align:right;}
 .header_menu ul.menu li.bigmenu ul > li ul li:last-child {margin-bottom:0px;}
-.header_menu ul.menu li.bigmenu ul > li ul li a { font-size:20px; color:#000; font-family: 'Almoni ML v5 AAA'; font-weight:normal; display:block; line-height:41px; padding:0px;}
+.header_menu ul.menu li.bigmenu ul > li ul li a { font-size:20px; color:#000; font-family: 'Almoni ML v5 AAA', 'Almoni DL AAA', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; font-weight:normal; display:block; line-height:41px; padding:0px;}
 .header_menu ul.menu li.bigmenu ul > li ul li a:hover, .header_menu ul.menu li.bigmenu ul > li ul li.current-menu-item a { color:#3088EF;}
 .header_menu ul.menu li:hover ul {display:block; pointer-events: all; opacity:1;}
 .header_menu ul.menu > li {padding-bottom:20px !important;}
@@ -410,7 +410,7 @@
 .hmenumobdiv {padding:0 29px 25px 29px;}
 .hmenumobdiv ul {display:block; margin:0px; padding:0px;}
 .hmenumobdiv ul li {display:block; margin:0px 0 16px 0; padding:0px;}
-.hmenumobdiv ul li a { font-size:50px; line-height:1; color:#000; font-family: 'Almoni ML v5 AAA'; font-weight:bold; display:inline-block; padding:0 0 0 22px; position:relative;}
+.hmenumobdiv ul li a { font-size:50px; line-height:1; color:#000; font-family: 'Almoni ML v5 AAA', 'Almoni DL AAA', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; font-weight:bold; display:inline-block; padding:0 0 0 22px; position:relative;}
 .hmenumobdiv ul li a:after {position:absolute; content:''; background:url(/images/mobmenuicon.svg) no-repeat center center; background-size:cover; width:14px; height:8px; top:50%; left:0px; margin-top:-1px; display:none; transition:0.3s; -webkit-transition:0.3s;}
 .hmenumobdiv ul li:hover a:after { transform:rotate(180deg); -webkit-transform:rotate(180deg);}
 .hmenumobdiv ul li.menu-item-has-children > a:after {display:block;}
@@ -427,10 +427,10 @@
 .hmobmenubot ul {display:block; margin:0px; padding:0 13px 23px 13px; border-bottom: 0.5px solid #000000;}
 .hmobmenubot ul li {display:block; padding:0px; margin:0 0 7px 0;}
 .hmobmenubot ul li:last-child {margin-bottom:0px;}
-.hmobmenubot ul li a { font-size:20px; line-height:1; color:#000; font-family: 'Almoni ML v5 AAA'; font-weight:normal;}
+.hmobmenubot ul li a { font-size:20px; line-height:1; color:#000; font-family: 'Almoni ML v5 AAA', 'Almoni DL AAA', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; font-weight:normal;}
 .hmobmbuts { padding:19px 16px 20px 16px;}
 .hmobbutlftb {float:right;}
-.hmobbutlftb a {display:inline-block; line-height:49px; background:#006BFF; border-radius:35px; -webkit-border-radius:35px; padding:0 30px; border: 1.17px solid #000000; font-size:18px; color:#fff; font-family: 'Almoni ML v5 AAA'; font-weight:normal;}
+.hmobbutlftb a {display:inline-block; line-height:49px; background:#006BFF; border-radius:35px; -webkit-border-radius:35px; padding:0 30px; border: 1.17px solid #000000; font-size:18px; color:#fff; font-family: 'Almoni ML v5 AAA', 'Almoni DL AAA', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; font-weight:normal;}
 .hmobbutlftb a img {display:inline-block; vertical-align:middle; margin:-5px 0 0 7px;}
 .hmobbutrsocl {float:left; font-size:0px;}
 .hmobbutrsocl a {display:inline-block; vertical-align:top; margin:0 0 0 16px;}
@@ -519,13 +519,13 @@
 
 .footer_top {display:none;}
 .footmobdiv {display:block; text-align:center; padding:0 0 25px 0; border-bottom: 1px solid rgba(255,255,255,0.3);}
-.footmobdiv h5 { font-size:24px; line-height:25px; color:#fff; font-family: 'Almoni ML v5 AAA'; font-weight:bold; margin:0 0 3px 0;}
+.footmobdiv h5 { font-size:24px; line-height:25px; color:#fff; font-family: 'Almoni ML v5 AAA', 'Almoni DL AAA', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; font-weight:bold; margin:0 0 3px 0;}
 .footmobdiv p { font-size:16px; line-height:1; color:#969696; margin:0;}
 .footmobdivin {margin:23px 0 0 0;}
 .fmobinlft {float:right; font-size:0px;}
 .fmobinlft a { display:inline-block; vertical-align:top; margin:0 0 0 3px;}
-.fmobinlft a.two {margin-right:0px; background:#FFDC56; line-height:37px; padding:0 12px; color:#000; font-family: 'Almoni ML v5 AAA';font-weight:normal; font-size:13px; border-radius:35px; -webkit-border-radius:35px;}
-.fmobinlft a.one { line-height:37px; background:#006BFF; border-radius:35px; -webkit-border-radius:35px; padding:0 22px; color:#fff; font-size:13px; font-family: 'Almoni ML v5 AAA'; font-weight:normal; margin:0 5px 0 0;}
+.fmobinlft a.two {margin-right:0px; background:#FFDC56; line-height:37px; padding:0 12px; color:#000; font-family: 'Almoni ML v5 AAA', 'Almoni DL AAA', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;font-weight:normal; font-size:13px; border-radius:35px; -webkit-border-radius:35px;}
+.fmobinlft a.one { line-height:37px; background:#006BFF; border-radius:35px; -webkit-border-radius:35px; padding:0 22px; color:#fff; font-size:13px; font-family: 'Almoni ML v5 AAA', 'Almoni DL AAA', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; font-weight:normal; margin:0 5px 0 0;}
 .fmobinlft a.one img {margin:0 0 0 2px; display:inline-block; vertical-align:middle;}
 .fmobinright {float:left; font-size:0px;}
 .fmobinright a.one { margin:0 0 0 9px; display:inline-block; vertical-align:top;}
@@ -629,7 +629,7 @@
 .portfolio_why ul li {display:block; width:100%; padding:0px; margin:0px;position:relative; bottom:-30px; opacity:0;}
 .portfolio_why .show ul li{ bottom:0px;opacity:1;}
 .portfolio_why ul li .port_cyber_con_new {border-radius:26px; -webkit-border-radius:26px; border: 0.53px solid #D5D5D5; padding:40px 23px;}
-.portfolio_why ul li h4 {font-family: 'Helvetica'; font-weight:bold; font-size:23px; line-height:22px; margin:0 0 16px 0;}
+.portfolio_why ul li h4 {font-family: 'Helvetica', -apple-system, BlinkMacSystemFont, Arial, sans-serif; font-weight:bold; font-size:23px; line-height:22px; margin:0 0 16px 0;}
 .portfolio_why ul li p {font-size:13px; line-height:16px;}
 .portolio_cyber_list {padding:0 28px 0 0;}
 .pmobile .owl-dots {text-align:center; padding:25px 0 0 0;}
@@ -674,7 +674,7 @@
 .faqtitle a:after {width:16px; height:16px; top:50%; margin-top:-8px;}
 .active .faqtitle a:after {width:16px; height:2px;}
 .faqdetail { padding:4px 0 24px 0;}
-.faqdetail p { font-size:16px; line-height:100%; font-family: 'Almoni ML v5 AAA'; font-weight:normal; padding:0px;}
+.faqdetail p { font-size:16px; line-height:100%; font-family: 'Almoni ML v5 AAA', 'Almoni DL AAA', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; font-weight:normal; padding:0px;}
 .port_gridimage_space {padding:100px 0 0 0;}
 .port_gridimage_sec_inner {/*min-height:1055px;*/}
 .gridimgs1 {width:32%; top:4%; right:-2%;}
@@ -696,8 +696,8 @@
 .blogmidbotrgt h4 br {display:none;}
 .blogmidbotrgmob {display: block; margin:0 0 20px 0; padding:0 32px 0 44px;}
 .blogmidbotrfrm {padding:0 32px 60px 44px;}
-.blogmidbotrgmob h5 { font-size:16px; line-height:21px; font-family: 'Almoni ML v5 AAA'; font-weight:bold;}
-.blogmidbotrgmob p {font-family: 'Almoni ML v5 AAA'; font-weight:normal;}
+.blogmidbotrgmob h5 { font-size:16px; line-height:21px; font-family: 'Almoni ML v5 AAA', 'Almoni DL AAA', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; font-weight:bold;}
+.blogmidbotrgmob p {font-family: 'Almoni ML v5 AAA', 'Almoni DL AAA', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; font-weight:normal;}
 .blogmtrusted.blogmtrustedmob {display: block; background:#e7eaef; padding:41px 24px 40px 19px; margin:0px;}
 .blogmtrusted.blogmtrusteddesk {display:none;}
 .blogfield input {height:30px; font-size:18px; color:#000;}
@@ -713,13 +713,13 @@
 
 .footer_top {display:none;}
 .footmobdiv {display:block; text-align:center; padding:0 0 25px 0; border-bottom: 1px solid rgba(255,255,255,0.3);}
-.footmobdiv h5 { font-size:24px; line-height:25px; color:#fff; font-family: 'Almoni ML v5 AAA'; font-weight:bold; margin:0 0 3px 0;}
+.footmobdiv h5 { font-size:24px; line-height:25px; color:#fff; font-family: 'Almoni ML v5 AAA', 'Almoni DL AAA', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; font-weight:bold; margin:0 0 3px 0;}
 .footmobdiv p { font-size:16px; line-height:1; color:#969696; margin:0;}
 .footmobdivin {margin:23px 0 0 0;}
 .fmobinlft {float:right; font-size:0px;}
 .fmobinlft a { display:inline-block; vertical-align:top; margin:0 0 0 3px;}
-.fmobinlft a.two {margin-left:0px; background:#FFDC56; line-height:37px; padding:0 12px; color:#000; font-family: 'Almoni ML v5 AAA'; font-weight:normal; font-size:13px; border-radius:35px; -webkit-border-radius:35px;}
-.fmobinlft a.one { line-height:37px; background:#006BFF; border-radius:35px; -webkit-border-radius:35px; padding:0 22px; color:#fff; font-size:13px; font-family: 'Almoni ML v5 AAA'; font-weight:normal; margin:0 5px 0 0;}
+.fmobinlft a.two {margin-left:0px; background:#FFDC56; line-height:37px; padding:0 12px; color:#000; font-family: 'Almoni ML v5 AAA', 'Almoni DL AAA', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; font-weight:normal; font-size:13px; border-radius:35px; -webkit-border-radius:35px;}
+.fmobinlft a.one { line-height:37px; background:#006BFF; border-radius:35px; -webkit-border-radius:35px; padding:0 22px; color:#fff; font-size:13px; font-family: 'Almoni ML v5 AAA', 'Almoni DL AAA', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; font-weight:normal; margin:0 5px 0 0;}
 .fmobinlft a.one img {margin:0 0 0 2px; display:inline-block; vertical-align:middle;}
 .fmobinright {float:left; font-size:0px;}
 .fmobinright a.one { margin:0 9px 0 0; display:inline-block; vertical-align:top;}
@@ -771,7 +771,7 @@
 .blogtoptxt p {font-size:20px; line-height:22px;}
 .blogmid ul.bot .blogtoptxt p {font-size:20px; line-height:22px;}
 .blogrmore {margin:10px 0 0 0;}
-.blogrmore a {line-height:37px; padding:0 15px; font-size:14px; font-family: 'Almoni ML v5 AAA'; font-weight:normal;}
+.blogrmore a {line-height:37px; padding:0 15px; font-size:14px; font-family: 'Almoni ML v5 AAA', 'Almoni DL AAA', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; font-weight:normal;}
 
 .blogrmore a>span{line-height:37px; font-size:14px;}
 
@@ -828,7 +828,7 @@
 .sevdevrgtdiv ul li a { font-size:14px; line-height:1;}
 .service_main .portfolio_banner {padding:140px 0 37px 0;}
 .portfolio_wrap {max-width:368px;}
-.carbantext p { font-size:16px; line-height:100%; font-family: 'Almoni ML v5 AAA'; font-weight:bold;}
+.carbantext p { font-size:16px; line-height:100%; font-family: 'Almoni ML v5 AAA', 'Almoni DL AAA', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; font-weight:bold;}
 .cargridmob1, .cargridmobr {display:block; width:100%;}
 .cargridmob1 {position:absolute; top:0px; right:0px;}
 .cargridmob1 img, .cargridmob2 img {width:100%;}
@@ -866,7 +866,7 @@
 .carjdet ul li {font-size:16px;}
 .carjdet ul li:after {top:6px;}
 .carjrgtmob {display: block; padding:22px 0 0 0;}
-.carjrgtmob a { display:inline-block; line-height:41px; border: 0.76px solid #000000; border-radius:35px; -webkit-border-radius:35px; padding:0 17px; font-size:16px; color:#000; font-family: 'Almoni ML v5 AAA'; font-weight:normal;}
+.carjrgtmob a { display:inline-block; line-height:41px; border: 0.76px solid #000000; border-radius:35px; -webkit-border-radius:35px; padding:0 17px; font-size:16px; color:#000; font-family: 'Almoni ML v5 AAA', 'Almoni DL AAA', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; font-weight:normal;}
 .carlistjdiv:last-child {border-bottom:0px;} 
 
 .article_content .portfolio_banner, .servdetail_content .portfolio_banner {padding:135px 0 0px 0; min-height:inherit;}
@@ -892,7 +892,7 @@
 .arfsub p {margin:0 !important;}
 .artbotblack {padding:20px 15px 25px 15px;}
 .browsallmob {display: block; padding:38px 0 0 0; text-align:center;}
-.browsallmob a {display:inline-block; font-size:17px; line-height:1; color:#fff; font-family: 'Almoni ML v5 AAA'; font-weight:bold;}
+.browsallmob a {display:inline-block; font-size:17px; line-height:1; color:#fff; font-family: 'Almoni ML v5 AAA', 'Almoni DL AAA', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; font-weight:bold;}
 .browsallmob a svg {display:inline-block; vertical-align:middle;}
 .browsallmob a svg path {fill:#fff;}
 .browsall {display:none;}
@@ -980,8 +980,8 @@
 .homemaintopone .portfolio_jump_1, .homemaintopone .portfolio_jump_2, .homemaintopone .portfolio_jump_3 {display:block;}
 .homeinmobtop {display: block; text-align:center; font-size:16px; line-height:25px; color:#000; margin:0 0 18px 0;}
 .homemaintopone h1 { font-size:42px !important; line-height:39px !important; margin:0 0 12px 0;}
-.homemaintopone h2 {font-family: 'Helvetica'; font-weight:normal; font-size:16px; line-height:100%;}
-.homemaintopone p {font-family: 'Almoni ML v5 AAA'; font-weight:normal; font-size:16px; line-height:100%;}
+.homemaintopone h2 {font-family: 'Helvetica', -apple-system, BlinkMacSystemFont, Arial, sans-serif; font-weight:normal; font-size:16px; line-height:100%;}
+.homemaintopone p {font-family: 'Almoni ML v5 AAA', 'Almoni DL AAA', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; font-weight:normal; font-size:16px; line-height:100%;}
 .hometopborder {height:64px; margin:17px auto 0 auto;}
 .htopbut {margin:17px 0 0 0;}
 .htopbut a {font-size:16px; line-height:1;}

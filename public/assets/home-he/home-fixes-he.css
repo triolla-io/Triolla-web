@@ -13,45 +13,45 @@
 /* 1. Hero section headings - Use Almoni for Hebrew */
 .homemaintopone h1,
 .homemaintopone h2 {
-  font-family: 'Almoni ML v5 AAA' !important;
+  font-family: 'Almoni ML v5 AAA', 'Almoni DL AAA', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif !important;
   font-weight: 700 !important;
 }
 
 /* 2. Unique design section - Use Almoni */
 .top_design_text p {
-  font-family: 'Almoni ML v5 AAA' !important;
+  font-family: 'Almoni ML v5 AAA', 'Almoni DL AAA', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif !important;
   font-weight: 400 !important;
 }
 
 /* 3. Global/Our Clients section - Use Almoni */
 .global_con h2,
 .global_con h3 {
-  font-family: 'Almoni ML v5 AAA' !important;
+  font-family: 'Almoni ML v5 AAA', 'Almoni DL AAA', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif !important;
   font-weight: 700 !important;
 }
 
 /* 4. Winners section - Use Almoni */
 .winners-title,
 .winners-subtitle {
-  font-family: 'Almoni ML v5 AAA' !important;
+  font-family: 'Almoni ML v5 AAA', 'Almoni DL AAA', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif !important;
   font-weight: 700 !important;
 }
 
 /* 5. Global h2 override - Use Almoni */
 h2 {
-  font-family: 'Almoni ML v5 AAA' !important;
+  font-family: 'Almoni ML v5 AAA', 'Almoni DL AAA', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif !important;
   font-weight: 700 !important;
 }
 
 /* 6. FAQ section text - Use Almoni */
 .faq_quest {
-  font-family: 'Almoni ML v5 AAA' !important;
+  font-family: 'Almoni ML v5 AAA', 'Almoni DL AAA', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif !important;
   font-weight: 400 !important;
 }
 
 .faqdetail,
 .faqdetail p {
-  font-family: 'Almoni ML v5 AAA' !important;
+  font-family: 'Almoni ML v5 AAA', 'Almoni DL AAA', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif !important;
   font-weight: 400 !important;
 }
 
@@ -81,7 +81,7 @@ h2 {
 .header_book a span,
 .header_whatsapp a,
 .header_whatsapp a span {
-  font-family: 'Almoni ML v5 AAA' !important;
+  font-family: 'Almoni ML v5 AAA', 'Almoni DL AAA', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif !important;
   font-weight: 500 !important;
 }
 
@@ -114,7 +114,7 @@ body * {
 }
 
 .circletxt {
-  font-family: 'Almoni ML v5 AAA' !important;
+  font-family: 'Almoni ML v5 AAA', 'Almoni DL AAA', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif !important;
 }
 
 /* VISIBILITY FIXES - Hide on initial load, show on scroll */

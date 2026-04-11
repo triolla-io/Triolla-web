@@ -14,9 +14,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 ol, li { margin:0px; padding:0px;}
 ul {padding:0 20px 0 0; margin:0px;}
 
-body {background: #E7EBF0;margin: 0;  font-family: 'SF Pro'; font-weight:normal; font-size: 18px; color:#000; direction:ltr;}
+body {background: #E7EBF0;margin: 0;  font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; font-weight:normal; font-size: 18px; color:#000; direction:ltr;}
 p, h1, h2, h3, h4, h5, h6, a {margin:0px; padding:0px;}
-h1, h2, h3, h4, h5, h6 { font-family: 'SF Pro'; font-weight:600;}
+h1, h2, h3, h4, h5, h6 { font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; font-weight:600;}
 stront, b{font-weight:600;}
 a{ text-decoration:none; cursor:pointer; transition:0.3s; -webkit-transition:0.3s;}
 a:focus { outline:auto;}
@@ -38,8 +38,8 @@ code { margin: 10px; }
 img {max-width: 100%; display: block; border: 0px; height:auto;}
 img a {border:none;}
 label {display:block;}
-input, select {  font-family: 'SF Pro'; font-weight:normal; width:100%; color:#6e6e6e; font-size:14px; height:25px; text-align:right; padding:5px; background:#ffffff; display:block; border:1px solid #222222;  border-radius:0px; outline:none;}
-textarea{  font-family: 'SF Pro'; font-weight:normal; width:100%; color:#6e6e6e; font-size:14px; height:65px; text-align:right; padding:5px; display:block; border:0px; border-radius:0px;border:1px solid #222222;outline:none; resize: none;}
+input, select {  font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; font-weight:normal; width:100%; color:#6e6e6e; font-size:14px; height:25px; text-align:right; padding:5px; background:#ffffff; display:block; border:1px solid #222222;  border-radius:0px; outline:none;}
+textarea{  font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; font-weight:normal; width:100%; color:#6e6e6e; font-size:14px; height:65px; text-align:right; padding:5px; display:block; border:0px; border-radius:0px;border:1px solid #222222;outline:none; resize: none;}
 a {cursor:pointer; color:#000;}
 
 select { box-shadow: none; background-image: none; cursor:pointer; padding:0 35px 0 5px;}
@@ -47,7 +47,7 @@ select:focus, input:focus {outline:none;}
 select::-ms-expand {display: none;}
 input[type=checkbox] {width:auto; height:auto; padding:0px; border:0px;}
 
-input[type=submit] {cursor:pointer; background:#790102; display:inline-block; width:125px; font-size:18px; color:#000;  font-family: 'SF Pro'; font-weight:normal; height:41px; padding:0 10px; border:0px; text-align:center; transition:0.3s; -webkit-transition:0.3s; -webkit-appearance: none; appearance:none; -moz-appearance:none;}
+input[type=submit] {cursor:pointer; background:#790102; display:inline-block; width:125px; font-size:18px; color:#000;  font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; font-weight:normal; height:41px; padding:0 10px; border:0px; text-align:center; transition:0.3s; -webkit-transition:0.3s; -webkit-appearance: none; appearance:none; -moz-appearance:none;}
 input[type=submit]:focus {outline:none;}
 
 .wow { visibility: hidden; }
@@ -91,7 +91,7 @@ div.wpcf7 .ajax-loader {display:none !important;}
     padding:7px 0px 0px 0px;
   }
 .header_contact{ float:right; text-align:center; width: 118.3px;}
-.header_contact a{ display:block;border: 1px solid #000000; text-align:center; border-radius:50px; -mborder-radius:50px; -webkit-border-radius:50px;font-family: 'SFProText';font-weight: 500;font-size: 16px;line-height:48px;letter-spacing: normal; color:#000; padding:0px 15px; position: relative; transition:0.3s; -moz-transition:0.3s; -webkit-transition:0.3s; overflow:hidden;}
+.header_contact a{ display:block;border: 1px solid #000000; text-align:center; border-radius:50px; -mborder-radius:50px; -webkit-border-radius:50px;font-family: 'SFProText', -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;font-weight: 500;font-size: 16px;line-height:48px;letter-spacing: normal; color:#000; padding:0px 15px; position: relative; transition:0.3s; -moz-transition:0.3s; -webkit-transition:0.3s; overflow:hidden;}
 .header_contact a:hover{ color:#FFF;}
 .header_contact a>span {align-items: center;border-radius:50px; -moz-border-radius:50px; -webkit-border-radius:50px;color: #000;display: flex;text-align:center;font-weight: 500;font-size: 16px;line-height:48px;letter-spacing: normal;justify-content: center;position: relative;transition: transform .3s ease, opacity .3s ease;width: 100%;}
 .header_contact a>span.default-text {color: #000;}
@@ -112,7 +112,7 @@ div.wpcf7 .ajax-loader {display:none !important;}
 }
 .header_whatsapp a { display:block;}
 .header_book{ float:right;}
-.header_book a{ display:block;border: 1px solid #000000; background:#006BFF; text-align:center; border-radius:50px; -mborder-radius:50px; -webkit-border-radius:50px;font-family: 'SFProText';font-weight: 500;font-size: 16px;line-height:48px;letter-spacing: normal; color:#FFF; padding:0px 23px; position: relative; transition:0.3s; -moz-transition:0.3s; -webkit-transition:0.3s; overflow:hidden;}
+.header_book a{ display:block;border: 1px solid #000000; background:#006BFF; text-align:center; border-radius:50px; -mborder-radius:50px; -webkit-border-radius:50px;font-family: 'SFProText', -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;font-weight: 500;font-size: 16px;line-height:48px;letter-spacing: normal; color:#FFF; padding:0px 23px; position: relative; transition:0.3s; -moz-transition:0.3s; -webkit-transition:0.3s; overflow:hidden;}
 .header_book a svg{display: inline-block;vertical-align: middle; margin-right:10px; margin-top:0px;}
 .header_book a svg * {fill: # FFF; transition:0.3s; -moz-transition:0.3s; -webkit-transition:0.3s;}
 .header_book a:hover *{fill: #FFF;}
@@ -137,7 +137,7 @@ div.wpcf7 .ajax-loader {display:none !important;}
 .footer_inner{ padding-left:34px;}
 .footer_wrap{ max-width:100%; margin:0px auto; padding:0px 28px;}
 .footer_top{border-bottom: 1px solid rgba(255,255,255,0.3); padding-bottom:30px;}
-.footer_logo_label{font-family: 'SFProText';font-weight: 500;font-size: 24px;line-height: 16px;letter-spacing: 0; color:rgba(255,255,255,.5); float:left;width:165px; padding:10px 0px 0px 0px;}
+.footer_logo_label{font-family: 'SFProText', -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;font-weight: 500;font-size: 24px;line-height: 16px;letter-spacing: 0; color:rgba(255,255,255,.5); float:left;width:165px; padding:10px 0px 0px 0px;}
 .footer_logos{ float:right; width:calc(100% - 180px); padding-right:0px; text-align:right;}
 .footer_logos ul{ padding:0px; margin:0px; font-size:0px; margin:0 -30px;}
 .footer_logos ul li{ display:inline-block; vertical-align:top; padding:0px 30px;}
@@ -150,13 +150,13 @@ div.wpcf7 .ajax-loader {display:none !important;}
 .footer_menu_col{ float:none; display:inline-block; vertical-align:top;}
 .footer_menu_col.footer_menu_1, .footer_menu_col.footer_menu_5 {width: /*245px*/21.05%;}
 .footer_menu_col.footer_menu_2, .footer_menu_col.footer_menu_3, .footer_menu_col.footer_menu_4 {width: /*224px*/19.278%;}
-.footer_all_menus h3 {font-family: 'SFProText';font-weight: bold;font-size: 24px;line-height: 25px;letter-spacing: 0;color: #FFF;display: table;width: 100%;min-height: 50px; padding:0px; margin:0px 0px 24px 0px; max-width:170px;pointer-events: none;}
+.footer_all_menus h3 {font-family: 'SFProText', -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;font-weight: bold;font-size: 24px;line-height: 25px;letter-spacing: 0;color: #FFF;display: table;width: 100%;min-height: 50px; padding:0px; margin:0px 0px 24px 0px; max-width:170px;pointer-events: none;}
 .footer_menu_col.footer_menu_4 h3 {max-width: 100px;}
 .footer_all_menus h3 span{ display:table-cell; vertical-align:bottom;}
 .footer_menu_col ul, .footer_socail ul{ margin:0px; padding:0px;}
 .footer_menu_col ul li, .footer_socail ul li{ display:block; margin:0px; padding:0px 0px 22px 0px;}
 .footer_menu_col ul li:last-child, .footer_socail ul li:last-child{ padding-bottom:0px;}
-.footer_menu_col ul li a, .footer_socail ul li a{ display:block; font-family: 'SFProText';font-weight: 500;font-size: 16px;line-height: 16px;letter-spacing: 0; color:rgba(255,255,255,0.5);}
+.footer_menu_col ul li a, .footer_socail ul li a{ display:block; font-family: 'SFProText', -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;font-weight: 500;font-size: 16px;line-height: 16px;letter-spacing: 0; color:rgba(255,255,255,0.5);}
 .footer_menu_col ul li a:hover, .footer_socail ul li a:hover{color:#FFF;}
 
 .footer_socail{ float:left; width:/*235px*/14.2%;}
@@ -164,15 +164,15 @@ div.wpcf7 .ajax-loader {display:none !important;}
 .footer_contact .foo_email{ font-weight: normal;font-size: 16px;line-height: 100%;letter-spacing: 0; color:rgba(255,255,255,0.5); padding-bottom:22px;}
 .footer_contact .foo_email a{ display:inline-block; color:rgba(255,255,255,0.5);}
 .footer_contact .foo_email a:hover{color:#fff;}
-.foo_office_no{font-family: 'SFProText';font-weight: bold;font-size: 16px;line-height: 100%;letter-spacing: 0; color:rgba(255,255,255,0.5); padding-bottom:22px;}
-.foo_office_no a{font-family: 'SF Pro'; font-weight:normal;color:rgba(255,255,255,0.5); display:block;}
+.foo_office_no{font-family: 'SFProText', -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;font-weight: bold;font-size: 16px;line-height: 100%;letter-spacing: 0; color:rgba(255,255,255,0.5); padding-bottom:22px;}
+.foo_office_no a{font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; font-weight:normal;color:rgba(255,255,255,0.5); display:block;}
 .foo_office_no a:hover{ color:#FFF;}
 .foo_book{width:156px; padding-top:10px;}
-/*.foo_book a {display: block;text-align: center;border-radius: 50px;-mborder-radius: 50px;-webkit-border-radius: 50px;font-family: 'SFProText';font-weight: 500;font-size: 16px;line-height: 44px;letter-spacing: normal;color: #FFF;padding: 0px 10px;background: #006BFF; transition:0.3s; -moz-transition:0.3s; -webkit-transition:0.3s;}
+/*.foo_book a {display: block;text-align: center;border-radius: 50px;-mborder-radius: 50px;-webkit-border-radius: 50px;font-family: 'SFProText', -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;font-weight: 500;font-size: 16px;line-height: 44px;letter-spacing: normal;color: #FFF;padding: 0px 10px;background: #006BFF; transition:0.3s; -moz-transition:0.3s; -webkit-transition:0.3s;}
 .foo_book a span {display: inline-block;vertical-align: middle;padding-right: 10px;margin-top: 0px; position:relative; top:2px;}
 .foo_book a:hover{ background:#FED125; color:#000;}
 .foo_book a:hover svg *{fill:#000;}*/
-.foo_book a{ display:block;border: 1px solid #000000; background:#006BFF; text-align:center; border-radius:50px; -mborder-radius:50px; -webkit-border-radius:50px;font-family: 'SFProText';font-weight: 500;font-size: 16px;line-height:44px;letter-spacing: normal; color:#FFF; padding:0px 0px; position: relative; transition:0.3s; -moz-transition:0.3s; -webkit-transition:0.3s; overflow:hidden;}
+.foo_book a{ display:block;border: 1px solid #000000; background:#006BFF; text-align:center; border-radius:50px; -mborder-radius:50px; -webkit-border-radius:50px;font-family: 'SFProText', -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;font-weight: 500;font-size: 16px;line-height:44px;letter-spacing: normal; color:#FFF; padding:0px 0px; position: relative; transition:0.3s; -moz-transition:0.3s; -webkit-transition:0.3s; overflow:hidden;}
 .foo_book a svg{display: inline-block;vertical-align: middle; margin-right:10px; margin-top:0px;}
 .foo_book a svg * {fill: #FFF; transition:0.3s; -moz-transition:0.3s; -webkit-transition:0.3s;}
 .foo_book a:hover svg *{fill: #000;}
@@ -189,11 +189,11 @@ div.wpcf7 .ajax-loader {display:none !important;}
 .footer_logo_site {float: left; padding:16px 0px 0px 0px; width:304px;}
 .footer_logo_site a{ display:inline-block;}
 .footer_copywright {float: left;width: calc(100% - 760px);text-align: center; padding-top:42px; font-size:0px;}
-.footer_copywright p{font-family: 'SFProText';font-weight: 510;font-size: 16px;line-height: 16px;letter-spacing: 0; color:rgba(255,255,255,0.5);}
+.footer_copywright p{font-family: 'SFProText', -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;font-weight: 510;font-size: 16px;line-height: 16px;letter-spacing: 0; color:rgba(255,255,255,0.5);}
 .footer_copywright p a{ display:inline-block;color:rgba(255,255,255,0.5); text-decoration:underline;}
 .footer_copywright p a:hover{text-decoration:none;}
 .footer_bot_socail {float: right; font-size:0px;}
-.footer_bot_socail .foo_bot_socail_label {display: inline-block;vertical-align:top;font-family: 'SFProText';font-weight: 500;font-size: 12px;line-height: 16px;letter-spacing: 0; color:rgba(255,255,255,0.5); padding-right:16px;}
+.footer_bot_socail .foo_bot_socail_label {display: inline-block;vertical-align:top;font-family: 'SFProText', -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;font-weight: 500;font-size: 12px;line-height: 16px;letter-spacing: 0; color:rgba(255,255,255,0.5); padding-right:16px;}
 .footer_bot_socail .foo_bot_socail_label a{color:rgba(255,255,255,0.5); }
 .footer_bot_socail .foo_bot_socail_label img{ display:block;}
 .footer_bot_socail ul{ display:inline-block; vertical-align:top;margin:0px; padding:8px 0px 0px 0px; font-size:0px;}
@@ -233,10 +233,10 @@ div.wpcf7 .ajax-loader {display:none !important;}
 .portfolio_wrap{width:1214px; margin:0px auto; position:relative;}
 .portfolio_text{ position:relative;top:0;}
 .portfolio_text h4{font-weight: normal; font-size: 22px;line-height: 25px;letter-spacing: 0; color:#000; text-align:center; margin:0px;; padding:0px 0px 32px 0px; position:relative; bottom:-30px; transition:0.3s; -moz-transition:0.3s; -webkit-transition:0.3s; opacity:0;}
-.portfolio_text h1{font-family: 'SFProText';font-weight: bold;font-size: 260px;line-height: 200px;letter-spacing: 0;text-align: center; color:#000; padding:0px 0px 70px 0px; margin:0px;position:relative; bottom:-30px; transition:0.5s; -moz-transition:0.5s; -webkit-transition:0.5s;opacity:0;}
+.portfolio_text h1{font-family: 'SFProText', -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;font-weight: bold;font-size: 260px;line-height: 200px;letter-spacing: 0;text-align: center; color:#000; padding:0px 0px 70px 0px; margin:0px;position:relative; bottom:-30px; transition:0.5s; -moz-transition:0.5s; -webkit-transition:0.5s;opacity:0;}
 .portfolio_con{}
-.portfolio_con_bold{font-family: 'SFProText';font-weight: bold;font-size: 32px;line-height: 37px;letter-spacing: -0.96px;text-align: center;vertical-align: middle; color:#000;position:relative; bottom:-30px; transition:0.9s; -moz-transition:0.9s; -webkit-transition:0.9s;opacity:0;}
-.portfolio_con p{font-weight:300; font-size: 32px;line-height: 37px;letter-spacing: -0.96px;text-align: center;vertical-align: middle; color:#000;font-family: 'SFProText';position:relative; bottom:-30px; transition:1.2s; -moz-transition:1.2s; -webkit-transition:1.2s;opacity:0;}
+.portfolio_con_bold{font-family: 'SFProText', -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;font-weight: bold;font-size: 32px;line-height: 37px;letter-spacing: -0.96px;text-align: center;vertical-align: middle; color:#000;position:relative; bottom:-30px; transition:0.9s; -moz-transition:0.9s; -webkit-transition:0.9s;opacity:0;}
+.portfolio_con p{font-weight:300; font-size: 32px;line-height: 37px;letter-spacing: -0.96px;text-align: center;vertical-align: middle; color:#000;font-family: 'SFProText', -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;position:relative; bottom:-30px; transition:1.2s; -moz-transition:1.2s; -webkit-transition:1.2s;opacity:0;}
 .portfolio_con a.ban_toggle_down{display:inline-block; padding-left:10px;opacity:0;}
 .portfolio_con a.ban_toggle_up{ display:inline-block;padding-left:10px;}
 .active.dotshave{ opacity:0; visibility:hidden;}
@@ -275,7 +275,7 @@ div.wpcf7 .ajax-loader {display:none !important;}
 
 .company_triker.jctkr-wrapper{ height:111px;border-bottom: 1px solid #CFCFCF; }
 .company_triker.jctkr-wrapper ul{ padding:31px 0px;}
-.company_triker.jctkr-wrapper ul li{font-family: 'SFProText';font-weight: 500;font-size: 36px;line-height: 48.68px;letter-spacing: 0px;vertical-align: middle; padding:0px 29px; color:#000;}
+.company_triker.jctkr-wrapper ul li{font-family: 'SFProText', -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;font-weight: 500;font-size: 36px;line-height: 48.68px;letter-spacing: 0px;vertical-align: middle; padding:0px 29px; color:#000;}
 .company_triker.jctkr-wrapper ul li span{ display:block; color:#000;}
 @keyframes animation1 {
 0% {transform: translate(0);}
@@ -313,7 +313,7 @@ to {transform: translate(0);}
 .portfoli_lists ul li .protolio_txt .portfolio_bold{ padding-bottom:28px;}
 .portfoli_lists ul li .protolio_txt .portfolio_bold p{font-weight: normal;font-size: 45px;line-height: 100%;letter-spacing: -1.4px; color:#000;}
 .portfoli_lists ul li .protolio_tags{ font-size:0px;position:relative; bottom:-30px; transition:1.7s; -moz-transition:1.7s; -webkit-transition:1.7s;opacity:0;}
-.portfoli_lists ul li .protolio_tags a{font-family: 'SFProText';font-weight: 500;font-size: 16px;line-height: 9.8px;letter-spacing: 0%;color: #736E6E; display:inline-block; vertical-align:top; padding-right:6px;pointer-events: none;}
+.portfoli_lists ul li .protolio_tags a{font-family: 'SFProText', -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;font-weight: 500;font-size: 16px;line-height: 9.8px;letter-spacing: 0%;color: #736E6E; display:inline-block; vertical-align:top; padding-right:6px;pointer-events: none;}
 .portfoli_lists ul li .protolio_gallery{ padding:34px 0px 0px 0px;position:relative; bottom:-30px; transition:2s; -moz-transition:2s; -webkit-transition:2s;opacity:0;}
 .portfoli_lists ul li .protolio_gallery a{ display:inline-block;font-weight: normal;font-size: 24px;line-height: 49px;letter-spacing: 0px; color:#000;}
 .portfoli_lists ul li .protolio_gallery a span{ margin-right:12px; width:49px; height:49px; border-radius:50%; -moz-border-radius:50%; -webkit-border-radius:50%;background: #FED125; border:1px solid #000; display:inline-block; text-align: center;}
@@ -348,12 +348,12 @@ to {transform: translate(0);}
 
 .portfolio_why{ background:#000; padding:157px 0px 129px 0px;}
 .why_wrap{ max-width:1600px; margin:0px auto;}
-.portfolio_why h3{font-family: 'SFProText';font-weight: bold;font-size: 160px;line-height: 96%;letter-spacing: 0%;text-transform: capitalize; color:#FFF; margin:0px; padding:0px 0px 36px 0px;position:relative; bottom:-30px; transition:1s; -moz-transition:1s; -webkit-transition:1s; opacity:0;}
+.portfolio_why h3{font-family: 'SFProText', -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;font-weight: bold;font-size: 160px;line-height: 96%;letter-spacing: 0%;text-transform: capitalize; color:#FFF; margin:0px; padding:0px 0px 36px 0px;position:relative; bottom:-30px; transition:1s; -moz-transition:1s; -webkit-transition:1s; opacity:0;}
 .portfolio_why ul{ font-size:0px; margin:0px -32px; padding:0px;}
 .portfolio_why ul li{display:inline-block; vertical-align:top;  width:25%; padding:32px;}
 .portfolio_why ul li .port_cyber_con{width:100%; }
 .portfolio_why ul li .port_cyber_con_new{ padding:66px 20px 57px 20px; display:block;border: 0.88px solid #D5D5D5; border-radius:44px; -moz-border-radius:44px; -webkit-border-radius:44px; transition:0.3s; -moz-transition:0.3s; -webkit-transition:0.3s; height:100%; }
-.portfolio_why ul li h4{font-family: 'SFProText';font-weight: bold;font-size: 39.34px;line-height: 38.03px;letter-spacing: 0px;text-align: center;vertical-align: middle;text-transform: capitalize; color:#FFF; padding:0px; margin:0px 0px 44px 0px; text-align:center;transition:0.3s; -moz-transition:0.3s; -webkit-transition:0.3s;}
+.portfolio_why ul li h4{font-family: 'SFProText', -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;font-weight: bold;font-size: 39.34px;line-height: 38.03px;letter-spacing: 0px;text-align: center;vertical-align: middle;text-transform: capitalize; color:#FFF; padding:0px; margin:0px 0px 44px 0px; text-align:center;transition:0.3s; -moz-transition:0.3s; -webkit-transition:0.3s;}
 .portfolio_why ul li p{font-weight: normal;font-size: 22px;line-height: 21.88px;letter-spacing: 0px;text-align: center; color:#FFF; text-align: center; padding:0px 36px;transition:0.3s; -moz-transition:0.3s; -webkit-transition:0.3s;}
 .portfolio_why ul li:hover h4, .portfolio_why ul li:hover p{ color:#000;}
 .portfolio_why ul li:hover .port_cyber_con_new{ background:#FED125;border: 0.88px solid #000;}
@@ -377,7 +377,7 @@ to {transform: translate(0);}
 .global_con{ display:table-cell; vertical-align:middle; padding-bottom:150px;}
 .global_wrap{max-width:1167px; margin:0px auto; }
 .global_con h2{ text-align:center;font-weight: normal;font-size: 48px;line-height: 80px;letter-spacing: 0; color:#000; margin:0px; padding:0px 0px 27px 0px;position:relative; bottom:-30px; transition:0.5s; -moz-transition:0.5s; -webkit-transition:0.5s; opacity:0;}
-.global_con h3{font-family: 'SFProText';font-weight: bold;font-size: 80px;line-height: 79px;letter-spacing: 0;text-align: center;text-transform: capitalize;color:#000; margin:0px; padding:0px;position:relative; bottom:-30px; transition:1s; -moz-transition:1s; -webkit-transition:1s; opacity:0;}
+.global_con h3{font-family: 'SFProText', -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;font-weight: bold;font-size: 80px;line-height: 79px;letter-spacing: 0;text-align: center;text-transform: capitalize;color:#000; margin:0px; padding:0px;position:relative; bottom:-30px; transition:1s; -moz-transition:1s; -webkit-transition:1s; opacity:0;}
 .global_but{ text-align:center; padding:53px 0px 0px 0px; width:250px; margin:0px auto;position:relative; bottom:-30px; transition:1.5s; -moz-transition:1.5s; -webkit-transition:1.5s; opacity:0;}
 .global_but a{ /*display: flex;*/ display:block;border-radius:50px; -moz-border-radius:50px; -webkit-border-radius:50px; line-height:76px; text-align:center;font-weight: normal;font-size: 22px;letter-spacing: 0; color:#FFF; background:#000; position:relative; transition:0.3s; overflow:hidden; border:1px solid #000;}
 .global_but a:hover{ /*transform:scale(1.1,1.1); -moz-transform:scale(1.1,1.1); -webkit-transform:scale(1.1,1.1);*/}
@@ -396,7 +396,7 @@ to {transform: translate(0);}
 .startani .design_layeramination{ width:0px;}
 .design_wrap{max-width:1652px; margin:0px auto;}
 .top_design_text{ padding:0px 0px 142px 0px;max-width:1128px; }
-.top_design_text h3{font-family: 'SFProText';font-weight: bold;font-size: 160px;line-height: 100%;letter-spacing: -10px;text-transform: capitalize; color:#000; margin:0px; padding:0px 0px 31px 0px;}
+.top_design_text h3{font-family: 'SFProText', -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;font-weight: bold;font-size: 160px;line-height: 100%;letter-spacing: -10px;text-transform: capitalize; color:#000; margin:0px; padding:0px 0px 31px 0px;}
 .top_design_text h3 span{background: linear-gradient(90.78deg, #EB43A8 0.67%, #FFD729 95.57%);-webkit-background-clip: text;-webkit-text-fill-color: transparent;}
 .top_design_text p{ font-weight:normal;font-size: 32px;line-height: 100%;letter-spacing: 0px;vertical-align: middle; color:#000;}
 .design_bullets{ position:relative;}
@@ -405,14 +405,14 @@ to {transform: translate(0);}
 .design_bullets ul li{ width:12.5%; display:inline-block; vertical-align:top; position:relative; padding:0px 95px; height:160px;}
 .design_bullets ul li span {background: #000;width: 29px;height: 29px;content: '';display: block;border-radius: 50%;top: -14px;position: absolute;}
 .design_bullets ul li p {font-weight: normal;font-size: 24px;text-align: left;line-height: 100%;letter-spacing: 0;color: #000;left: 33%; top:55px;position: absolute;width: 75%;}
-.design_bullets ul li:first-child p{ left:36%;font-family: 'SFProText';}
+.design_bullets ul li:first-child p{ left:36%;font-family: 'SFProText', -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;}
 .design_bullets ul li:last-child p {left: 30%;}
 .design_bullets.mobilebullets{ display:none;}
 
 .portfolio_faq{ background:#000; width:100%; padding:202px 0px 299px 50px;}
 .portfolio_faq_wrap{ max-width:1460px; margin:0px auto;}
 .port_faq_top{ padding:0px 0px 88px 0px;}
-.port_faq_top h3{font-family: 'SFProText';font-weight: 600;font-size: 120px;line-height: 100px;letter-spacing: -0.96px;text-align: center;vertical-align: middle;text-transform: capitalize; color:#FFF; margin:0px; padding:0px 0px 29px 0px;transition:1s; -moz-transition:1s; -webkit-transition:1s; opacity:0;position:relative; bottom:-30px; /*transform:translateY(50px); -webkit-transform:translateY(50px); -webkit-transform:translateY(50px);*/}
+.port_faq_top h3{font-family: 'SFProText', -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;font-weight: 600;font-size: 120px;line-height: 100px;letter-spacing: -0.96px;text-align: center;vertical-align: middle;text-transform: capitalize; color:#FFF; margin:0px; padding:0px 0px 29px 0px;transition:1s; -moz-transition:1s; -webkit-transition:1s; opacity:0;position:relative; bottom:-30px; /*transform:translateY(50px); -webkit-transform:translateY(50px); -webkit-transform:translateY(50px);*/}
 .port_faq_top p{font-size: 32px;line-height: 100%;letter-spacing: -0.96px;text-align: center;vertical-align: middle;color:#FFF;transition:1.5s; -moz-transition:1.5s; -webkit-transition:1.5s; opacity:0; position:relative; bottom:-30px;/*transform:translateY(50px); -webkit-transform:translateY(50px); -webkit-transform:translateY(50px);*/}
 .port_faq_box {border-top: 1px solid #404040;/*opacity:0;position:relative; bottom:-30px;*/ /*transform:translateY(50px); -webkit-transform:translateY(50px); -webkit-transform:translateY(50px);*/}
 
@@ -497,7 +497,7 @@ body.active{ overflow:hidden;}
 .footlangmenu svg { display:inline-block; vertical-align:middle; margin:0 7px 0 0;}
 .footlangmenu div {display:inline-block; vertical-align:middle;}
 .footlangmenu div ul {display:block; margin:0px; padding:0px; font-size:0px; direction:rtl;}
-.footlangmenu div ul li {display:inline-block; vertical-align:top; font-size:17px; line-height:22px; color:#808080; font-family: 'SFProText';font-weight: 500; padding:0 6px; border-left:1px solid #D8C7C773}
+.footlangmenu div ul li {display:inline-block; vertical-align:top; font-size:17px; line-height:22px; color:#808080; font-family: 'SFProText', -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;font-weight: 500; padding:0 6px; border-left:1px solid #D8C7C773}
 .footlangmenu div ul li a:hover {transform:none !important;}
 .footlangmenu div ul li a {color:#808080;}
 .footlangmenu div ul li:last-child {border-left:0px;}
@@ -519,7 +519,7 @@ body.active{ overflow:hidden;}
 .errorpage h1.ptitle span img {position: absolute;top: -17px;left: -56px;}
 .errorpage h1.ptitle span {display: inline;position: relative;}
 .errorbut {text-align:center; margin:0px auto;}
-.errorbut a{ display:inline-block;border: 1.24px solid #000000; text-align:center; border-radius:30px; -mborder-radius:30px; -webkit-border-radius:30px;font-family: 'SFProText';font-weight: 500;font-size: 24px;line-height:54px;letter-spacing: normal; color:#000; padding:0px 18px; position: relative; transition:0.3s; -moz-transition:0.3s; -webkit-transition:0.3s; overflow:hidden;}
+.errorbut a{ display:inline-block;border: 1.24px solid #000000; text-align:center; border-radius:30px; -mborder-radius:30px; -webkit-border-radius:30px;font-family: 'SFProText', -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;font-weight: 500;font-size: 24px;line-height:54px;letter-spacing: normal; color:#000; padding:0px 18px; position: relative; transition:0.3s; -moz-transition:0.3s; -webkit-transition:0.3s; overflow:hidden;}
 .errorbut a:hover{ color:#FFF;}
 .errorbut a>span {align-items: center;border-radius:30px; -moz-border-radius:30px; -webkit-border-radius:30px;color: #000;display: flex;text-align:center;font-weight: 500;font-size: 24px;line-height:54px;letter-spacing: normal;justify-content: center;position: relative;transition: transform .3s ease, opacity .3s ease;width: 100%;}
 .errorbut a>span.default-text {color: #000;}
@@ -537,13 +537,13 @@ body.active{ overflow:hidden;}
 .contact_main_right_in{ border-radius:20px; -moz-border-radius:20px; -webkit-border-radius:20px; padding:60px 48px 42px 48px; background:#000; transition:1s; -moz-transition:1s; -webkit-transition:1s;opacity:0; position:relative; bottom:-30px;}
 .show .contact_main_right_in{ opacity:1; bottom:0px;}
 .con_field { margin:0 0 20px 0; position: relative;}
-.con_field input {display:block; width:100%; padding:0px; border:0px; height:45px; border-bottom: 1px solid rgba(255,255,255,35%); font-size:20px; color:#FFF; font-family: 'SFProText'; font-weight:normal; background:none; text-align:left;}
+.con_field input {display:block; width:100%; padding:0px; border:0px; height:45px; border-bottom: 1px solid rgba(255,255,255,35%); font-size:20px; color:#FFF; font-family: 'SFProText', -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif; font-weight:normal; background:none; text-align:left;}
 .con_field label {position: absolute;top: 10px;left: 0px;transition: 0.4s;-webkit-transition: 0.4s;font-size:20px; color:#FFF;}
 .con_field.activefact label{top: -10px;opacity: 1;visibility: visible;z-index: 1; font-size:14px;}
 .con_fieldsub { margin:62px 0 0 0;}
-.con_fieldsub input {display:none; width:100%; padding:0 15px; height:44px; border-radius:50px; -webkit-border-radius:50px; background:#FED125; font-size:20px; color:#000; font-family: 'SFProText'; font-weight:bold; transition:0.3s; -moz-transition:0.3s; -webkit-transition:0.3s;}
+.con_fieldsub input {display:none; width:100%; padding:0 15px; height:44px; border-radius:50px; -webkit-border-radius:50px; background:#FED125; font-size:20px; color:#000; font-family: 'SFProText', -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif; font-weight:bold; transition:0.3s; -moz-transition:0.3s; -webkit-transition:0.3s;}
 .con_fieldsub input:hover{ /*transform:scale(1.1,1.1); -moz-transform:scale(1.1,1.1); -webkit-transform:scale(1.1,1.1);*/ background:#FED125; color:#000;}
-.con_fieldsub a{ display:block; width:auto; padding:0 2px; line-height:44px; border-radius:50px; -webkit-border-radius:50px; background:#FED125; font-size:20px; color:#000; font-family: 'SFProText'; font-weight:bold; /*transition:0.3s; -moz-transition:0.3s; -webkit-transition:0.3s;*/ position:relative; border:1px solid #FED125;}
+.con_fieldsub a{ display:block; width:auto; padding:0 2px; line-height:44px; border-radius:50px; -webkit-border-radius:50px; background:#FED125; font-size:20px; color:#000; font-family: 'SFProText', -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif; font-weight:bold; /*transition:0.3s; -moz-transition:0.3s; -webkit-transition:0.3s;*/ position:relative; border:1px solid #FED125;}
 .con_fieldsub a:hover{border:1px solid #FFF;}
 .con_fieldsub a>span {align-items: center;border-radius:50px; -moz-border-radius:50px; -webkit-border-radius:50px;color: #000;display: flex;line-height:44px; text-align:center;font-weight: bold;font-size: 20px;letter-spacing: 0;justify-content: center;position: relative;transition: transform .3s ease, opacity .3s ease;width: 100%;}
 .con_fieldsub a>span.default-text {color: #000;}
@@ -564,7 +564,7 @@ body.active{ overflow:hidden;}
 .contact_main_right div.wpcf7-response-output{ color:#FFF !important;}
 
 .contact_main_left{ float:left; width:calc(100% - 532px); position:relative; padding:100px 50px 0px 0px;}
-.contact_main_left h3{font-weight: 700;font-size: 130px;line-height: 110px;letter-spacing: 0;text-transform: capitalize; color:#000; margin-bottom:30px;ransition:1s; -moz-transition:1s; -webkit-transition:1s;opacity:0; position:relative; bottom:-30px; font-family:'SFProText';}
+.contact_main_left h3{font-weight: 700;font-size: 130px;line-height: 110px;letter-spacing: 0;text-transform: capitalize; color:#000; margin-bottom:30px;ransition:1s; -moz-transition:1s; -webkit-transition:1s;opacity:0; position:relative; bottom:-30px; font-family: 'SFProText', -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;}
 .contact_in_address p{font-weight: 400;font-size: 24px;line-height: 120%;letter-spacing: 0px;vertical-align: middle; color:#000;ransition:1.5s; -moz-transition:1.5s; -webkit-transition:1.5s;opacity:0; position:relative; bottom:-30px;}
 .show .contact_main_left h3, .show .contact_main_left p{ opacity:1; bottom:0px;}
 .contact_in_address p strong{font-weight: 700;}
@@ -601,15 +601,15 @@ body.active{ overflow:hidden;}
 .techmidonediv.even {margin-left:-10%;}
 .techmidonediv:last-child {margin-bottom:0px;}
 .techoneleft {float:left; width:44.3%; padding:160px 0 0 0;}
-.techoneleft h3 { font-size:80px; line-height:79px; color:#000; margin: 0 0 30px 0; font-family:'SFProText'; font-weight:bold;}
+.techoneleft h3 { font-size:80px; line-height:79px; color:#000; margin: 0 0 30px 0; font-family: 'SFProText', -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif; font-weight:bold;}
 .techoneleft p { font-size:24px; line-height:30px; color:#000; }
-.techtags { font-size:16px; line-height:1; color:#736E6E; font-family:'SFProText'; font-weight:500; margin:5px 0 0 0;}
+.techtags { font-size:16px; line-height:1; color:#736E6E; font-family: 'SFProText', -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif; font-weight:500; margin:5px 0 0 0;}
 .techoneright {float:right; width:53.7%;}
 .even .techoneleft {float:right; padding:0 20px 0 0;}
 .even .techoneright {float:left;}
 .techonelftdiv { margin:0 0 46px 0;}
 .techonebot {text-align:center;}
-.techonebot p { font-size:24px; line-height:30px; color:#000; font-family:'SFProText'; font-weight:normal; margin:0 0 25px 0; bottom:-30px; position:relative; transition:0.5s; -webkit-transition:0.5s; opacity:0;} 
+.techonebot p { font-size:24px; line-height:30px; color:#000; font-family: 'SFProText', -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif; font-weight:normal; margin:0 0 25px 0; bottom:-30px; position:relative; transition:0.5s; -webkit-transition:0.5s; opacity:0;} 
 .show.techonebot p, .show.techonebot a {opacity:1; bottom:0px;}
 .techonebot a{ /*display: flex;*/ display:inline-block;border-radius:50px; -moz-border-radius:50px; -webkit-border-radius:50px; text-align:center;font-weight: normal; letter-spacing: 0; color:#FFF; background: linear-gradient(90deg, #E7604D 0%, #5843DA 100%); position:relative; transition:0.3s; overflow:hidden; bottom:-30px; opacity:0;}
 .techonebot a>span {align-items: center;border-radius:50px; -moz-border-radius:50px; -webkit-border-radius:50px;color: #FFF;display: flex;line-height:77px; text-align:center;font-weight: normal;font-size: 27px;letter-spacing: 0;justify-content: center;position: relative;transition: transform .3s ease, opacity .3s ease;width: 100%; padding:0 35px;}
@@ -624,15 +624,15 @@ body.active{ overflow:hidden;}
 .technmidtwo {padding:170px 20px 134px 20px; background:#000;}
 .techmidtwowrap {max-width:1380px; margin:0 auto;}
 .techmidtwotitle {text-align:center;}
-.techmidtwotitle h3 { font-size:160px; line-height:130px; color:#fff; font-family:'SFProText'; position:relative; font-weight:bold; opacity:0; transition:0.5s; -webkit-transition:0.5s; bottom:-30px;}
+.techmidtwotitle h3 { font-size:160px; line-height:130px; color:#fff; font-family: 'SFProText', -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif; position:relative; font-weight:bold; opacity:0; transition:0.5s; -webkit-transition:0.5s; bottom:-30px;}
 .show .techmidtwotitle h3, .show .techmidtwotitle h4, .show .techmidtwotitle p, .show .techmidtwobot { opacity:1; bottom:0px;}
-.techmidtwotitle h4 {background: linear-gradient(94.64deg, #49C0B3 -0.94%, #8164E3 26.69%, #D1628E 48.87%, #FFA802 75.32%);  -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-size:160px; line-height:130px; font-family:'SFProText'; font-weight:bold; padding:0 0 56px 0; opacity:0; transition:0.5s; -webkit-transition:0.5s; bottom:-30px; position:relative;}
-.techmidtwotitle p { font-size:22px; line-height:150%; color:#fff; font-family:'SFProText'; font-weight:300; opacity:0; transition:0.5s; -webkit-transition:0.5s; bottom:-30px; position:relative;}
-.techmidtwotitle p strong {font-family:'SFProText'; font-weight:bold;}
+.techmidtwotitle h4 {background: linear-gradient(94.64deg, #49C0B3 -0.94%, #8164E3 26.69%, #D1628E 48.87%, #FFA802 75.32%);  -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-size:160px; line-height:130px; font-family: 'SFProText', -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif; font-weight:bold; padding:0 0 56px 0; opacity:0; transition:0.5s; -webkit-transition:0.5s; bottom:-30px; position:relative;}
+.techmidtwotitle p { font-size:22px; line-height:150%; color:#fff; font-family: 'SFProText', -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif; font-weight:300; opacity:0; transition:0.5s; -webkit-transition:0.5s; bottom:-30px; position:relative;}
+.techmidtwotitle p strong {font-family: 'SFProText', -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif; font-weight:bold;}
 .techmidtwobot {max-width:1025px; min-height:1025px; margin:0 auto; background:url(/images/oursteakblue.svg) no-repeat center center; background-size:cover; opacity:0; transition:0.5s; -webkit-transition:0.5s; bottom:-30px; position:relative;}
 .techmidtwobotcircle {max-width:706px; margin:0 auto; position:relative;}
 .circleimg img {width:100%}
-.circletxt {text-align:center; position:absolute; top:50%; transform:translateY(-50%); font-size:72px; line-height:110%; color:#fff; font-family:'SFProText'; font-weight:bold; left:0px; width:100%;}
+.circletxt {text-align:center; position:absolute; top:50%; transform:translateY(-50%); font-size:72px; line-height:110%; color:#fff; font-family: 'SFProText', -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif; font-weight:bold; left:0px; width:100%;}
 .techmidtwotitle {margin:0 0 160px 0;}
 .tmid {position:absolute;}
 .tmid1 {top:-36px; left:44%;}
@@ -658,15 +658,15 @@ body.active{ overflow:hidden;}
 
 .technmidthree { background:#371957; padding:116px 114px 246px 114px;}
 .techthretop { max-width:1116px; margin:0 auto; text-align:center;}
-.techthretop h4 { font-size:160px; font-family: 'SF Compact Display'; font-weight:bold; line-height:89%; color:#fff; position:relative; opacity:0; bottom:-30px; transition:0.5s; -webkit-transition:0.5s; margin:0 0 30px 0;}
-.techthretop p {font-family: 'SF Compact Display'; font-weight:normal; font-size:22px; line-height:110%; color:#fff; position:relative; opacity:0; bottom:-30px; transition:0.5s; -webkit-transition:0.5s;}
-.techthretop p strong {font-family: 'SF Compact Display'; font-weight:bold;}
+.techthretop h4 { font-size:160px; font-family: 'SF Compact Display', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; font-weight:bold; line-height:89%; color:#fff; position:relative; opacity:0; bottom:-30px; transition:0.5s; -webkit-transition:0.5s; margin:0 0 30px 0;}
+.techthretop p {font-family: 'SF Compact Display', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; font-weight:normal; font-size:22px; line-height:110%; color:#fff; position:relative; opacity:0; bottom:-30px; transition:0.5s; -webkit-transition:0.5s;}
+.techthretop p strong {font-family: 'SF Compact Display', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; font-weight:bold;}
 .techthremid ul {display:block; margin:0px -10px; padding:0px; font-size:0px; opacity:0; bottom:-30px; transition:0.5s; -webkit-transition:0.5s; position:relative;}
 .techthremidtwo {opacity:0; bottom:-30px; transition:0.5s; -webkit-transition:0.5s; position:relative;}
 .show .techthretop h4, .show .techthretop p, .show .techthremid ul, .show .techthremidtwo {opacity:1; bottom:0px;} 
 .techthremid ul li {display:inline-block; vertical-align:top; width:20%; padding:0 10px;}
-.technumber {float:left; width:43.89px; height:38.25px; background:url(/images/bigribbon.svg) no-repeat center center; background-size:cover; text-align:center; color:#fff; font-size:24px; color:#fff; font-family:'SFProText'; font-weight:bold; padding:4px 0 0 0;}
-.technmtxt {float:left; width:calc(100% - 44px); padding:0 0 0 20px; font-size:24px; line-height:100%; color:#fff; font-family: 'SF Compact Display'; font-weight:normal;}
+.technumber {float:left; width:43.89px; height:38.25px; background:url(/images/bigribbon.svg) no-repeat center center; background-size:cover; text-align:center; color:#fff; font-size:24px; color:#fff; font-family: 'SFProText', -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif; font-weight:bold; padding:4px 0 0 0;}
+.technmtxt {float:left; width:calc(100% - 44px); padding:0 0 0 20px; font-size:24px; line-height:100%; color:#fff; font-family: 'SF Compact Display', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; font-weight:normal;}
 .techthremid {padding:140px 0 46px 0;}
 .techstrip { border-radius:20px; -webkit-border-radius:20px; background:linear-gradient(90deg, #AD29FE 82.9%, rgba(173, 41, 254, 0) 94.69%); margin: 0 0 23px 0; padding:0 25px; line-height:42px; color:#fff; font-size:24px; font-weight:500;}
 .techstriptwo { margin:0 0 23px 0;}
