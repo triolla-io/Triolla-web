@@ -447,7 +447,7 @@ to {transform: translate(0);}
 
 
 .bottom_com_sec {
-  background: url(/assets/_shared/portfolio_grid_bg-old.png) top center no-repeat;
+  background: top center no-repeat;
   background-size: contain;
 
 }
@@ -1181,7 +1181,7 @@ body.active{ overflow:hidden;}
 
   #winners-section {
     padding: 102px 0;
-    background: url(/assets/_shared/win_bg.png) no-repeat;
+    background: no-repeat;
     background-size: cover;
 }
 
