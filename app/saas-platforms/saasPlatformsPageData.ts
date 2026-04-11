@@ -207,7 +207,7 @@ export const SAAS_PLATFORMS_PAGE_DATA_EN: PortfolioPageData = {
   },
   global: {
     title: "Our Clients",
-    subtitle: "From small to global, we have partnered with some great companies",
+    subtitle: "Trusted by leading SaaS innovators",
     logos: LOGOS,
     buttonText: "Let's Talk",
     buttonLink: "#contactus",
