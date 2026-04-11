@@ -3,12 +3,12 @@
   "bodyClass": "wp-singular page-template page-template-page-career page-template-page-career-php page page-id-21 wp-theme-triolla",
   "dataRsssl": "1",
   "css": [
-    "style.min.css_edabec9e.css"
+    "_shared/style.min.css.css"
   ],
   "js": [
-    "jquery-3.6.0.min.js_edabec9e.js",
-    "jquery.jConveyorTicker.min.js_edabec9e.js",
-    "TweenMax.min.js_edabec9e.js"
+    "_shared/jquery-3.6.0.min.js.js",
+    "_shared/jquery.jConveyorTicker.min.js.js",
+    "_shared/TweenMax.min.js.js"
   ],
   "sharedFontsManifest": "/Users/ariell/html-to-react/public/assets/_shared/fonts/fonts.json",
   "sharedFontsUrl": "/assets/_shared/fonts",

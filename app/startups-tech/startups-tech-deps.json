@@ -4,23 +4,23 @@
   "dataRsssl": "1",
   "css": [
     "_shared/style.css",
-    "cms-navigation-base.css",
-    "cms-navigation.css",
+    "_shared/cms-navigation-base.css.css",
+    "_shared/cms-navigation.css.css",
     "_shared/style-new.css",
     "_shared/responsive.css",
-    "animate.css_edabec9e.css",
-    "animation.css_2af44128.css",
-    "mlstyle.css_2af44128.css",
-    "ml-responsive.css_2af44128.css",
+    "_shared/animate.css.css",
+    "_shared/animation.css.css",
+    "_shared/mlstyle.css.css",
+    "_shared/ml-responsive.css.css",
     "_shared/fonts.css"
   ],
   "js": [
-    "jquery-3.6.0.min.js_edabec9e.js",
-    "metaview.js_edabec9e.js",
+    "_shared/jquery-3.6.0.min.js.js",
+    "_shared/metaview.js.js",
     "_shared/gsap.min.js",
     "_shared/ScrollTrigger.min.js",
-    "wow.js",
-    "all.js_a1459148.js"
+    "_shared/wow.js.js",
+    "_shared/all.js.js"
   ],
   "sharedFontsManifest": "/Users/ariell/html-to-react/public/assets/_shared/fonts/fonts.json",
   "sharedFontsUrl": "/assets/_shared/fonts",
