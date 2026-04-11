@@ -136,7 +136,7 @@
 @font-face {
   font-family: 'CoreNaraeProW01-Pro';
   src: url('/assets/_shared/fonts/CoreNaraeProW01-Pro.eot?#iefix') format('embedded-opentype'),
-       url('') format('svg');
+       ;
   font-weight: 400;
   font-style: normal;
 }
@@ -148,7 +148,7 @@
 @font-face {
   font-family: 'Helvetica';
   src: url('/assets/_shared/fonts/Helvetica.eot?#iefix') format('embedded-opentype'),
-       url('') format('svg');
+       ;
   font-weight: 400;
   font-style: normal;
 }
