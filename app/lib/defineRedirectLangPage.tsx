@@ -20,6 +20,10 @@ export function defineRedirectLangPage(opts: {
   i18n: RedirectLangPageI18n;
   Client: ComponentType<BilingualClientProps>;
 }) {
+  function generateStaticParams() {
+    return [{ lang: "he" }];
+  }
+
   async function generateMetadata({ params }: PageParams): Promise<Metadata> {
     const { lang } = await params;
     return {
@@ -36,5 +40,5 @@ export function defineRedirectLangPage(opts: {
     redirect(opts.canonicalPath);
   }
 
-  return { generateMetadata, Page };
+  return { generateStaticParams, generateMetadata, Page };
 }

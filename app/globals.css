@@ -9,24 +9,39 @@
    FONTS  (verbatim from triolla.io/wp-content/themes/triolla/fonts/fonts.css)
    ============================================================ */
 
-/* Hebrew fonts - SVG only (all available formats) */
+/* Hebrew fonts - All formats (woff2, woff, ttf, eot, svg) */
 @font-face {
   font-family: 'Almoni DL AAA';
-  src: url('/assets/_shared/fonts/AlmoniDLAAA-Bold.svg#almoni-dl-aaa-bold') format('svg');
+  src: url('/assets/_shared/AlmoniDLAAA-Bold.eot');
+  src: url('/assets/_shared/AlmoniDLAAA-Bold.eot?#iefix') format('embedded-opentype'),
+       url('/assets/_shared/AlmoniDLAAA-Bold.woff2') format('woff2'),
+       url('/assets/_shared/AlmoniDLAAA-Bold.woff') format('woff'),
+       url('/assets/_shared/AlmoniDLAAA-Bold.ttf') format('truetype'),
+       url('/assets/_shared/AlmoniDLAAA-Bold.svg#AlmoniDLAAA-Bold') format('svg');
   font-weight: 400 700 900;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Almoni ML v5 AAA';
-  src: url('/assets/_shared/fonts/AlmoniMLv5AAA-Regular.svg#almoni-ml-regular') format('svg');
+  src: url('/assets/_shared/AlmoniMLv5AAA-Regular.eot');
+  src: url('/assets/_shared/AlmoniMLv5AAA-Regular.eot?#iefix') format('embedded-opentype'),
+       url('/assets/_shared/AlmoniMLv5AAA-Regular.woff2') format('woff2'),
+       url('/assets/_shared/AlmoniMLv5AAA-Regular.woff') format('woff'),
+       url('/assets/_shared/AlmoniMLv5AAA-Regular.ttf') format('truetype'),
+       url('/assets/_shared/AlmoniMLv5AAA-Regular.svg#AlmoniMLv5AAA-Regular') format('svg');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Almoni ML v5 AAA';
-  src: url('/assets/_shared/fonts/AlmoniMLv5AAA-Bold.svg#almoni-ml-bold') format('svg');
+  src: url('/assets/_shared/AlmoniMLv5AAA-Bold.eot');
+  src: url('/assets/_shared/AlmoniMLv5AAA-Bold.eot?#iefix') format('embedded-opentype'),
+       url('/assets/_shared/AlmoniMLv5AAA-Bold.woff2') format('woff2'),
+       url('/assets/_shared/AlmoniMLv5AAA-Bold.woff') format('woff'),
+       url('/assets/_shared/AlmoniMLv5AAA-Bold.ttf') format('truetype'),
+       url('/assets/_shared/AlmoniMLv5AAA-Bold.svg#AlmoniMLv5AAA-Bold') format('svg');
   font-weight: 700 900;
   font-style: normal;
   font-display: swap;
@@ -34,11 +49,11 @@
 
 /* Hebrew: body uses Almoni DL AAA, headings use Almoni ML v5 AAA */
 :lang(he), [dir="rtl"] {
-  font-family: 'Almoni DL AAA', sans-serif;
+  font-family: 'Almoni DL AAA', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
 }
 :lang(he) h1, :lang(he) h2, :lang(he) h3,
 [dir="rtl"] h1, [dir="rtl"] h2, [dir="rtl"] h3 {
-  font-family: 'Almoni ML v5 AAA', sans-serif;
+  font-family: 'Almoni ML v5 AAA', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
 }
 
 @font-face {
@@ -328,7 +343,7 @@ body:not(:has([data-triolla-snapshot])) .headerticker .tickclose:hover { opacity
 [data-triolla-snapshot][dir="rtl"] .portfolio_why h3,
 [data-triolla-snapshot][dir="rtl"] .portfolio_why ul li h4 {
   text-transform: none !important;
-  font-family: "Almoni ML v5 AAA", system-ui, sans-serif !important;
+  font-family: "Almoni ML v5 AAA", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, system-ui, sans-serif !important;
 }
 
 [data-triolla-snapshot][dir="rtl"] .portfolio_why h3 {
@@ -1029,7 +1044,7 @@ header.site-header + .hmenumob .hmenumobclose button {
   font-family: 'SFProText', 'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 :lang(he) .hero-h1, [dir="rtl"] .hero-h1 {
-  font-family: 'Almoni ML v5 AAA', sans-serif;
+  font-family: 'Almoni ML v5 AAA', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
 }
 .hero-h2 {
   font-size: 32px;

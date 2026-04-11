@@ -9,4 +9,5 @@ const pageDef = defineRedirectLangPage({
 });
 
 export const generateMetadata = pageDef.generateMetadata;
+export const generateStaticParams = pageDef.generateStaticParams;
 export default pageDef.Page;

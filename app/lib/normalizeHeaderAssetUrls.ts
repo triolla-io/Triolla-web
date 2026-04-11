@@ -4,7 +4,7 @@ const SHARED_SNAPSHOT_SVGS =
 /** Triolla chrome SVGs mirrored once under public/assets/_shared; deps use varying assetBase slugs. */
 export function normalizeHeaderAssetUrls(html: string): string {
   return html
-    .replace(SHARED_SNAPSHOT_SVGS, "/assets/_shared/$1.svg")
+    .replace(SHARED_SNAPSHOT_SVGS, "/images/$1.svg")
     .replace(
       /\/assets\/[^"'\s]+\/logo_new\.png/gi,
       "/images/logo_new.png",

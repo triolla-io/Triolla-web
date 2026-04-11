@@ -39,7 +39,7 @@ export async function ensureJConveyorTickerPlugin(assetBase: string): Promise<vo
   const base = normalizeSnapshotAssetBase(assetBase);
   const candidates = [
     snapshotAssetUrl(base, CONVEYOR_BASENAME),
-    "/assets/_consolidated/jquery.jConveyorTicker.min.js_edabec9e.js",
+    "/assets/_shared/jquery.jConveyorTicker.min.js_edabec9e.js",
     "/assets/_shared/eb5e45d752068adfb4185f39ea2978f6_jquery.jConveyorTicker.min.js_edabec9e.js",
   ];
 

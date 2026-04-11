@@ -1,29 +1,28 @@
 {
-  "assetBase": "/assets/_consolidated/",
+  "assetBase": "/assets/_shared/",
   "bodyClass": "wp-singular page-template page-template-page-portfolio page-template-page-portfolio-php page page-id-1081 wp-theme-triolla",
   "dataRsssl": "1",
   "css": [
     "style.css",
-    "svgs-attachment.css",
-    "cms-navigation-base.css",
-    "cms-navigation.css",
+    "cms-navigation-base.css.css",
+    "cms-navigation.css.css",
     "style-new.css",
     "responsive.css",
-    "animate.css_edabec9e.css",
-    "animation.css_2af44128.css",
-    "/assets/_shared/jquery.jConveyorTicker.min.css_edabec9e.css",
-    "mlstyle.css_2af44128.css",
-    "ml-responsive.css_2af44128.css",
+    "animate.css.css",
+    "animation.css.css",
+    "/assets/_shared/jquery.jConveyorTicker.min.css.css",
+    "mlstyle.css.css",
+    "ml-responsive.css.css",
     "fonts.css",
     "/assets/home/home-fixes.css"
   ],
   "js": [
-    "jquery-3.6.0.min.js_edabec9e.js",
-    "/assets/_shared/eb5e45d752068adfb4185f39ea2978f6_jquery.jConveyorTicker.min.js_edabec9e.js",
-    "metaview.js_edabec9e.js",
+    "jquery-3.6.0.min.js.js",
+    "/assets/_shared/jquery.jConveyorTicker.min.js.js",
+    "metaview.js.js",
     "gsap.min.js",
     "ScrollTrigger.min.js",
     "wow.js",
-    "all.js_a1459148.js"
+    "all.js.js"
   ]
 }

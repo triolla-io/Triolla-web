@@ -46,7 +46,7 @@ import {
  * flatten paths that are not already under a named snapshot folder (other than `_consolidated`).
  */
 function isUnderNonConsolidatedAssetDir(pathname: string): boolean {
-  return /^\/assets\/(?!_consolidated)[^/]+\//.test(pathname);
+  return /^\/assets\/(?!_shared)[^/]+\//.test(pathname);
 }
 
 function rewriteAssetPaths(root: HTMLElement, consolidateStaticAssets: boolean): void {
@@ -58,7 +58,7 @@ function rewriteAssetPaths(root: HTMLElement, consolidateStaticAssets: boolean):
   if (consolidateStaticAssets) {
     const fontLink = document.createElement("link");
     fontLink.rel = "stylesheet";
-    fontLink.href = "/assets/_consolidated/fonts.css";
+    fontLink.href = "/assets/_shared/fonts.css";
     root.insertAdjacentElement("afterbegin", fontLink);
   }
 
@@ -73,7 +73,7 @@ function rewriteAssetPaths(root: HTMLElement, consolidateStaticAssets: boolean):
           /* keep /assets/technology/*, /assets/about-us/*, etc. */
         } else {
           const filename = src.split('/').pop()?.replace(/(_[a-f0-9]{8})+(\.[a-z0-9]+)?(?=[?#]|$)/gi, '$2') || '';
-          const rewritten = `/assets/_consolidated/${filename}`;
+          const rewritten = `/assets/_shared/${filename}`;
           if (rewritten !== src) el.setAttribute("src", rewritten);
         }
       } catch {
@@ -98,7 +98,7 @@ function rewriteAssetPaths(root: HTMLElement, consolidateStaticAssets: boolean):
         }
         const filename =
           urlPart.split('/').pop()?.replace(/(_[a-f0-9]{8})+(\.[a-z0-9]+)?(?=[?#]|$)/gi, '$2') || '';
-        return `/assets/_consolidated/${filename}${desc}`;
+        return `/assets/_shared/${filename}${desc}`;
       });
       const rewritten = rewrittenParts.join(", ");
       if (rewritten !== srcset) el.setAttribute("srcset", rewritten);
@@ -113,7 +113,7 @@ function rewriteAssetPaths(root: HTMLElement, consolidateStaticAssets: boolean):
           /* keep */
         } else {
           const filename = href.split('/').pop()?.replace(/(_[a-f0-9]{8})+(\.[a-z0-9]+)?(?=[?#]|$)/gi, '$2') || '';
-          const rewritten = `/assets/_consolidated/${filename}`;
+          const rewritten = `/assets/_shared/${filename}`;
           if (rewritten !== href) el.setAttribute("href", rewritten);
         }
       } catch {
@@ -204,7 +204,7 @@ export function TriollaBilingualPortfolioSnapshotClient({
         installSnapshotPluginStubs();
         const consolidateStaticAssets = snap.assetBase.includes("_consolidated");
         if (consolidateStaticAssets) {
-          await loadStylesheet("/assets/_consolidated/fonts.css");
+          await loadStylesheet("/assets/_shared/fonts.css");
         }
 
         await loadStylesheetsParallelOrdered(css.map((file) => hrefFor(file)));
