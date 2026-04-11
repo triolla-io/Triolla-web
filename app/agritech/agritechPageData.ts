@@ -144,6 +144,33 @@ const AGRITECH_WHY: PortfolioPageData["why"] = {
   ],
 };
 
+/** Hebrew “why” copy aligned with https://triolla.io/he/אגריטק/ (אגרוטק→אגריטק in body). */
+const AGRITECH_WHY_HE: PortfolioPageData["why"] = {
+  mainTitle: "למה <br />חברות אגריטק <br />בוחרות בנו?",
+  items: [
+    {
+      title: "אנחנו מדברים <br />בשפה שלך",
+      description:
+        "שליטה מלאה במונחים, בזרימות ובחשיבה של משתמשי אגריטק",
+    },
+    {
+      title: "ניסיון שנבחן בקרב",
+      description:
+        "מעל 50 פלטפורמות SaaS המיועדות לחברות אגריטק מובילות",
+    },
+    {
+      title: "בקצב מהיום הראשון",
+      description:
+        "אנחנו מבינים את העולם שלכם, אז אנחנו מתחילים לעבוד - מהר.",
+    },
+    {
+      title: "חשיבה ראשונה בטחונית",
+      description:
+        "חוויית המשתמש שלנו בנויה תוך התחשבות במשתמשים, בסיכונים ובתאימות לתקנות.",
+    },
+  ],
+};
+
 export const AGRITECH_PAGE_DATA_EN: PortfolioPageData = {
   dir: "ltr",
   bannerColor: "#fed125",
@@ -189,7 +216,7 @@ export const AGRITECH_PAGE_DATA_HE: PortfolioPageData = {
     ...ASSETS,
   },
   portfolioItems: AGRITECH_ITEMS_HE,
-  why: AGRITECH_WHY,
+  why: AGRITECH_WHY_HE,
   global: {
     title: "הלקוחות שלנו",
     subtitle:

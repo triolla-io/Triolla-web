@@ -168,6 +168,32 @@ const STARTUPS_WHY: PortfolioPageData["why"] = {
   ],
 };
 
+/** Hebrew “why” copy aligned with https://triolla.io/he/startups-tech/ */
+const STARTUPS_WHY_HE: PortfolioPageData["why"] = {
+  mainTitle: "למה <br />סטארטאפים & טק <br />בחרו בנו?",
+  items: [
+    {
+      title: "אנו דוברים <br />את השפה שלכם",
+      description: "שולטים במונחים, בזרימות ובחשיבה של סטרטאפיסטים",
+    },
+    {
+      title: "ניסיון שנבדק בשטח",
+      description:
+        "יותר מ-50 פלטפורמות שעוצבו עבור חברות סטרטאפ מהשורה הראשונה",
+    },
+    {
+      title: "מתקדמים בקצב מלא מהיום הראשון",
+      description:
+        "אנחנו מבינים את העולם שלכם, ולכן מתחילים לעבוד – במהירות.",
+    },
+    {
+      title: "חשיבה שמעדיפה אבטחה בראש ובראשונה",
+      description:
+        "ה-UX שלנו בנוי תוך התמקדות במשתמשים שלכם, בסיכונים ובהתאמה לרגולציה.",
+    },
+  ],
+};
+
 export const STARTUPS_TECH_PAGE_DATA_EN: PortfolioPageData = {
   dir: "ltr",
   bannerColor: "#fed125",
@@ -214,7 +240,7 @@ export const STARTUPS_TECH_PAGE_DATA_HE: PortfolioPageData = {
     ...STARTUPS_TECH_ASSETS,
   },
   portfolioItems: ITEMS_HE,
-  why: STARTUPS_WHY,
+  why: STARTUPS_WHY_HE,
   global: {
     title: "הלקוחות שלנו",
     subtitle:

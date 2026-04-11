@@ -190,6 +190,36 @@ const MEDICAL_WHY: PortfolioPageData["why"] = {
   ],
 };
 
+/**
+ * Hebrew cards 1–3 aligned with https://triolla.io/he/בריאות-ורפואה/; H3 corrected (live wrongly said “אגריטק”).
+ * Card 4 title matches EN “High end design”; live used wrong security-first wording and English body.
+ */
+const MEDICAL_WHY_HE: PortfolioPageData["why"] = {
+  mainTitle: "למה <br />חברות בריאות <br />בוחרות בנו?",
+  items: [
+    {
+      title: "אנחנו מדברים <br />בשפה שלך",
+      description:
+        "שולטים בשפה של הרפואה – מהתהליכים הקליניים ועד צרכי המטופלים והרגולציה.",
+    },
+    {
+      title: "ניסיון שנבחן בקרב",
+      description:
+        "יותר מ-70 פתרונות דיגיטליים שמקדמים את עולם הבריאות והרפואה",
+    },
+    {
+      title: "בקצב מהיום הראשון",
+      description:
+        "כשההיכרות עם התחום עמוקה – התוצאות מגיעות מהר ובדיוק למטרה.",
+    },
+    {
+      title: "עיצוב ברמה הגבוהה ביותר",
+      description:
+        "ה-UX שלנו מתמקד בנגישות ובהעצמת מטופלים ואנשי מקצוע כאחד.",
+    },
+  ],
+};
+
 export const MEDICAL_HEALTHCARE_PAGE_DATA_EN: PortfolioPageData = {
   dir: "ltr",
   bannerColor: "#fed125",
@@ -236,7 +266,7 @@ export const MEDICAL_HEALTHCARE_PAGE_DATA_HE: PortfolioPageData = {
     ...ASSETS,
   },
   portfolioItems: ITEMS_HE,
-  why: MEDICAL_WHY,
+  why: MEDICAL_WHY_HE,
   global: {
     title: "הלקוחות שלנו",
     subtitle:

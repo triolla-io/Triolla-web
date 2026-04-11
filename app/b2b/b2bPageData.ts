@@ -152,6 +152,30 @@ const B2B_WHY: PortfolioPageData["why"] = {
   ],
 };
 
+/** Hebrew “why” copy aligned with https://triolla.io/he/b2b/ */
+const B2B_WHY_HE: PortfolioPageData["why"] = {
+  mainTitle: "למה <br />חברות B2B <br />בוחרות בנו?",
+  items: [
+    {
+      title: "אנחנו מדברים <br />בשפה שלך",
+      description: "שולטים במונחים, בתהליכים ובחשיבה של משתמשי B2B",
+    },
+    {
+      title: "מומחיות B2B מוכחת",
+      description: "למעלה מ-50 פלטפורמות SaaS שעוצבו עבור חברות B2B מובילות",
+    },
+    {
+      title: "מוכנים לספק תוצאות מהיום הראשון",
+      description: "אנחנו מבינים את העסק שלך – ומתחילים לעבוד מיד",
+    },
+    {
+      title: "עיצוב מונחה עסקים",
+      description:
+        "חוויית המשתמש שלנו מותאמת למשתמשים, לתהליכים ולצרכים הארגוניים שלך",
+    },
+  ],
+};
+
 export const B2B_PAGE_DATA_EN: PortfolioPageData = {
   dir: "ltr",
   bannerColor: "#fed125",
@@ -198,8 +222,7 @@ export const B2B_PAGE_DATA_HE: PortfolioPageData = {
     ...ASSETS,
   },
   portfolioItems: ITEMS_HE,
-  /* triolla.io/he mirrors this block in English */
-  why: B2B_WHY,
+  why: B2B_WHY_HE,
   global: {
     title: "הלקוחות שלנו",
     subtitle:

@@ -177,6 +177,36 @@ const CYBER_WHY: PortfolioPageData["why"] = {
   ],
 };
 
+/**
+ * Hebrew body copy aligned with https://triolla.io/he/סייבר/ cards;
+ * mainTitle corrected (live H3 wrongly says “אגריטק”).
+ */
+const CYBER_WHY_HE: PortfolioPageData["why"] = {
+  mainTitle: "למה <br />חברות סייבר <br />בוחרות בנו?",
+  items: [
+    {
+      title: "אנחנו מדברים <br />בשפה שלך",
+      description:
+        "שליטה מלאה במונחים, בזרימות ובחשיבה של משתמשי סייבר",
+    },
+    {
+      title: "ניסיון שנבחן בקרב",
+      description:
+        "מעל 50 פלטפורמות SaaS המיועדות לחברות סייבר מובילות",
+    },
+    {
+      title: "בקצב מהיום הראשון",
+      description:
+        "אנחנו מבינים את העולם שלכם, אז אנחנו מתחילים לעבוד - מהר.",
+    },
+    {
+      title: "חשיבה ראשונה בטחונית",
+      description:
+        "חוויית המשתמש שלנו בנויה תוך התחשבות במשתמשים, בסיכונים ובתאימות לתקנות.",
+    },
+  ],
+};
+
 export const CYBER_SECURITY_PAGE_DATA_EN: PortfolioPageData = {
   dir: "ltr",
   /** Matches `style.css` / triolla snapshot (`.portfolio_banner`); `#000` made the hero override the theme and looked broken. */
@@ -225,7 +255,7 @@ export const CYBER_SECURITY_PAGE_DATA_HE: PortfolioPageData = {
     ...ASSETS_HE,
   },
   portfolioItems: ITEMS_HE,
-  why: CYBER_WHY,
+  why: CYBER_WHY_HE,
   global: {
     title: "הלקוחות שלנו",
     subtitle:

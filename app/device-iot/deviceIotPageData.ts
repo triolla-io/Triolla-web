@@ -203,6 +203,33 @@ const DEVICE_IOT_WHY: PortfolioPageData["why"] = {
   ],
 };
 
+/** Hebrew “why” copy aligned with https://triolla.io/he/מכשירים-iot-new/ */
+const DEVICE_IOT_WHY_HE: PortfolioPageData["why"] = {
+  mainTitle: "למה <br />חברות IoT <br />בוחרות בנו?",
+  items: [
+    {
+      title: "אנחנו מדברים <br />בשפה שלך",
+      description:
+        "שליטה מלאה במונחים, בזרימות ובחשיבה של משתמשי IoT",
+    },
+    {
+      title: "ניסיון שנבחן בקרב",
+      description:
+        "מעל 50 פלטפורמות SaaS המיועדות לחברות IoT מובילות",
+    },
+    {
+      title: "בקצב מהיום הראשון",
+      description:
+        "אנחנו מבינים את העולם שלכם, אז אנחנו מתחילים לעבוד - מהר.",
+    },
+    {
+      title: "חשיבה ראשונה בטחונית",
+      description:
+        "חוויית המשתמש שלנו בנויה תוך התחשבות במשתמשים, בסיכונים ובתאימות לתקנות.",
+    },
+  ],
+};
+
 export const DEVICE_IOT_PAGE_DATA_EN: PortfolioPageData = {
   dir: "ltr",
   bannerColor: "#fed125",
@@ -248,7 +275,7 @@ export const DEVICE_IOT_PAGE_DATA_HE: PortfolioPageData = {
     ...ASSETS,
   },
   portfolioItems: buildItems(ITEM_PATHS, ITEM_COPY_HE),
-  why: DEVICE_IOT_WHY,
+  why: DEVICE_IOT_WHY_HE,
   global: {
     title: "הלקוחות שלנו",
     subtitle:

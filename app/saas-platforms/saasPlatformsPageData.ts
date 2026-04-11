@@ -218,7 +218,7 @@ export const SAAS_PLATFORMS_PAGE_DATA_HE: PortfolioPageData = {
   ...SAAS_PLATFORMS_PAGE_DATA_EN,
   dir: "rtl",
   companyTicker: [...SAAS_COMPANY_TICKER],
-  partnerCount: "50+ SaaS platforms and counting",
+  partnerCount: "מעל 50 פלטפורמות SaaS, והן ממשיכות להגיע",
   header: {
     eyebrow: "עיצוב מוצר עבור",
     title: "פלטפורמות SaaS",
@@ -232,29 +232,29 @@ export const SAAS_PLATFORMS_PAGE_DATA_HE: PortfolioPageData = {
     ...ASSETS,
   },
   portfolioItems: ITEMS_HE,
+  /** Live https://triolla.io/he/saas-platforms/ still serves English in this block; Hebrew is a faithful translation of EN. */
   why: {
-    /* triolla.io/he/saas-platforms/ keeps this block in English */
-    mainTitle: "Why Do <br />SaaS companies <br />choose us?",
+    mainTitle: "למה <br />חברות SaaS <br />בוחרות בנו?",
     items: [
       {
-        title: "SaaS Expertise<br />Delivered",
+        title: "מומחיות SaaS <br />במימוש",
         description:
-          "We understand the unique challenges, workflows, and expectations of SaaS users.",
+          "אנחנו מבינים את האתגרים, זרימות העבודה והציפיות הייחודיות של משתמשי SaaS",
       },
       {
-        title: "Proven Results Across the Industry",
+        title: "תוצאות מוכחות בתעשייה",
         description:
-          "Our team has crafted high-performing SaaS platforms for top tech companies.",
+          "הצוות שלנו בנה פלטפורמות SaaS בביצועים גבוהים לחברות טכנולוגיה מובילות",
       },
       {
-        title: "Seamless Onboarding, Rapid Impact",
+        title: "קליטה חלקה, השפעה מהירה",
         description:
-          "We quickly align with your product vision and hit the ground running from day one.",
+          "מתיישרים במהירות לחזון המוצר ויוצאים לדרך כבר מהיום הראשון",
       },
       {
-        title: "UX That Drives Adoption and Growth",
+        title: "UX שמניע אימוץ וצמיחה",
         description:
-          "Our design approach puts your users, scalability, and business objectives at the center of every decision.",
+          "גישת העיצוב שלנו שמה במרכז את המשתמשים, הסקיילביליות ומטרות העסק בכל החלטה",
       },
     ],
   },

@@ -383,6 +383,31 @@ body:not(:has([data-triolla-snapshot])) .headerticker .tickclose:hover { opacity
   }
 }
 
+/*
+ * About “Learn. Explore. Grow.” (.learslider): navText is SVG-only inside Owl’s <button>.
+ * Theme (style-new.css) styles `.owl-nav button a`; mirror that for direct SVG children.
+ */
+[data-triolla-snapshot] .learslider .owl-nav button.owl-prev,
+[data-triolla-snapshot] .learslider .owl-nav button.owl-next {
+  width: 82px;
+  height: 82px;
+  border: 1px solid #c0bdbd;
+  background: #fff;
+  text-align: center;
+  border-radius: 50%;
+  padding: 23px 0 0;
+  margin: 0 5px;
+  box-sizing: border-box;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+[data-triolla-snapshot] .learslider .owl-nav button.owl-prev svg path,
+[data-triolla-snapshot] .learslider .owl-nav button.owl-next svg path {
+  fill: #ffb337;
+}
+
 /* Contact Us — React Header only (.site-header). Snapshots use Triolla theme (.default-text / .hover-text / .button-overlay). */
 .site-header .header_contact a {
   display: flex;
@@ -1819,12 +1844,33 @@ section.home-faq { background: #ffffff; }
    BOTTOM GRID  (.bottom_com_sec / .port_gridimage_sec)
    ============================================================ */
 .bottom_com_sec {
-  background: #E7EBF0 url(/assets/home/portfolio_grid_bg-old.png) no-repeat top center;
+  background: #e7eaef url(/images/portfolio_grid_bg.svg) no-repeat top center;
   background-size: contain;
 }
 /* Service detail pages: contact strip only — no gray / grid behind */
 .bottom_com_sec.bottom_com_sec--service {
   background: none;
+}
+/*
+ * Snapshot service-detail fragments still ship the parallax grid block; production /services/* pages
+ * omit it visually before #contactus. Scoped to snapshot root so React demos (e.g. ServicePrototyping)
+ * keep their grid. (If .blogmidbot is nested inside .bottom_com_sec due to a missing </div> in HTML,
+ * this rule would hide the contact strip — fragments now close .bottom_com_sec before #contactus.)
+ */
+[data-triolla-snapshot] .servdetail_content .bottom_com_sec {
+  display: none;
+}
+/*
+ * On WordPress, the contact strip often sits inside .bottom_com_sec (gray + blurred gradient SVG).
+ * Snapshot HTML closes .bottom_com_sec before .blogmidbot and we hide the grid wrapper — reapply
+ * the same background on the strip so it matches triolla.io.
+ */
+[data-triolla-snapshot] .servdetail_content .blogmidbot {
+  background-color: #e7eaef;
+  background-image: url(/images/portfolio_grid_bg.svg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: contain;
 }
 .port_gridimage_sec { position: relative; padding: 0; z-index: 1; overflow: visible; margin-bottom: 50px; width: 100%; }
 .port_gridimage_space { padding: 191px 0 0 0; }
@@ -1864,8 +1910,13 @@ section.home-faq { background: #ffffff; }
   position: relative;
   top: 0;
 }
-/* Scoped to industry/blog banners only — home hero uses .homemaintopone.portfolio_text and must follow theme responsive.css */
-.portfolio_banner .portfolio_text h1 {
+/*
+ * Large hero h1 (about-style). Exclude .servdetail_content / .article_content / .technology_content — theme
+ * responsive.css sets smaller titles on service/article; /technology uses white-on-dark `.technology_content` rules.
+ */
+.about_main .portfolio_banner .portfolio_text h1,
+.portfolio_main .portfolio_banner .portfolio_text h1,
+.inner_content:not(.servdetail_content):not(.article_content):not(.technology_content) .portfolio_banner .portfolio_text h1 {
   font-weight: bold;
   font-size: 260px;
   line-height: 200px;
@@ -1951,7 +2002,9 @@ section.home-faq { background: #ffffff; }
 
 /* ≤1440px — scale h1 down from 260px; add side padding */
 @media (max-width: 1440px) {
-  .portfolio_banner .portfolio_text h1 { font-size: 180px; line-height: 155px; }
+  .about_main .portfolio_banner .portfolio_text h1,
+  .portfolio_main .portfolio_banner .portfolio_text h1,
+  .inner_content:not(.servdetail_content):not(.article_content):not(.technology_content) .portfolio_banner .portfolio_text h1 { font-size: 180px; line-height: 155px; }
   .portfolio_wrap { padding: 0 150px; }
 }
 /* ≤1300px — fluid wrap */
@@ -1964,13 +2017,17 @@ section.home-faq { background: #ffffff; }
 }
 /* ≤1200px — intermediate h1 step; banner padding raised to clear fixed header (bottom ~147px) */
 @media (max-width: 1200px) {
-  .portfolio_banner .portfolio_text h1 { font-size: 138px; line-height: 144px; }
+  .about_main .portfolio_banner .portfolio_text h1,
+  .portfolio_main .portfolio_banner .portfolio_text h1,
+  .inner_content:not(.servdetail_content):not(.article_content):not(.technology_content) .portfolio_banner .portfolio_text h1 { font-size: 138px; line-height: 144px; }
   .portfolio_banner { padding: 170px 0 100px 0; }
 }
 /* ≤1199px — tablet: collapse wrap to narrow, scale text to mobile size; constrain jump SVG sizes */
 @media (max-width: 1199px) {
   .portfolio_wrap { max-width: 600px; padding: 0 20px; }
-  .portfolio_banner .portfolio_text h1 { font-size: 77px; line-height: 1.1; padding: 0 0 25px 0; }
+  .about_main .portfolio_banner .portfolio_text h1,
+  .portfolio_main .portfolio_banner .portfolio_text h1,
+  .inner_content:not(.servdetail_content):not(.article_content):not(.technology_content) .portfolio_banner .portfolio_text h1 { font-size: 77px; line-height: 1.1; padding: 0 0 25px 0; }
   .portfolio_con_bold { font-size: 16px; line-height: 100%; }
   .portfolio_con p { font-size: 16px; line-height: 100%; }
   .portfolio_jump_1 img,
@@ -1984,7 +2041,9 @@ section.home-faq { background: #ffffff; }
 /* 641px–1199px — tablet: proportional values between mobile and desktop */
 @media (min-width: 641px) and (max-width: 1199px) {
   .portfolio_wrap { max-width: 680px; padding: 0 30px; }
-  .portfolio_banner .portfolio_text h1 { font-size: 96px; line-height: 1.05; padding: 0 0 40px 0; }
+  .about_main .portfolio_banner .portfolio_text h1,
+  .portfolio_main .portfolio_banner .portfolio_text h1,
+  .inner_content:not(.servdetail_content):not(.article_content):not(.technology_content) .portfolio_banner .portfolio_text h1 { font-size: 96px; line-height: 1.05; padding: 0 0 40px 0; }
   .portfolio_con_bold { font-size: 22px; line-height: 1.3; }
   .portfolio_con p { font-size: 22px; line-height: 1.3; }
   .portfolio_jump_1 img,
@@ -2005,7 +2064,9 @@ section.home-faq { background: #ffffff; }
 }
 /* ≤640px — mobile: reduce h1; jump SVGs fixed artboard (design: 88×35) */
 @media (max-width: 640px) {
-  .portfolio_banner .portfolio_text h1 { font-size: 56px; }
+  .about_main .portfolio_banner .portfolio_text h1,
+  .portfolio_main .portfolio_banner .portfolio_text h1,
+  .inner_content:not(.servdetail_content):not(.article_content):not(.technology_content) .portfolio_banner .portfolio_text h1 { font-size: 56px; }
   .portfolio_jump_1 img,
   .portfolio_jump_2 img,
   .portfolio_jump_3 img {
@@ -2030,7 +2091,9 @@ section.home-faq { background: #ffffff; }
 }
 /* ≤375px — very small phones: tighter h1, pull jump_2 flush */
 @media (max-width: 375px) {
-  .portfolio_banner .portfolio_text h1 { font-size: 44px; }
+  .about_main .portfolio_banner .portfolio_text h1,
+  .portfolio_main .portfolio_banner .portfolio_text h1,
+  .inner_content:not(.servdetail_content):not(.article_content):not(.technology_content) .portfolio_banner .portfolio_text h1 { font-size: 44px; }
   .portfolio_jump_2 { right: -10px; }
 }
 

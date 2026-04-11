@@ -59,38 +59,47 @@ export function AboutUsClient() {
         setPhase("ready");
 
         try {
-          // Load scripts with smart ordering: critical dependencies first, rest in parallel
-          // jQuery and jquery plugins must load in sequence, but other scripts can load in parallel
-          const criticalScripts = [
-            js[2], // jquery.min.js (index 2)
-            ...js.slice(3, 7), // jquery plugins (indices 3-6)
-            js[20], // all.js (must load last)
-          ];
-          const parallelScripts = js.filter((_, i) => !criticalScripts.includes(js[i]));
+          const href = (file: string) => `${assetBase}/${file}`;
+          const jqueryIdx = js.findIndex((f) => String(f).includes("jquery-3.6.0"));
+          const allJsIdx = js.findIndex((f) => {
+            const s = String(f).replace(/\\/g, "/").toLowerCase();
+            return s.endsWith("/all.js") || s.endsWith("all.js");
+          });
 
-          // Load jQuery first
-          if (cancelled) return;
-          await loadScript(`${assetBase}/${js[2]}`);
-
-          // Load jquery plugins in parallel
-          if (cancelled) return;
-          await Promise.all(js.slice(3, 7).map((file) => loadScript(`${assetBase}/${file}`)));
-
-          // Load remaining scripts in parallel (except all.js)
-          if (cancelled) return;
-          await Promise.all(
-            parallelScripts.map((file) => {
-              const src = `${assetBase}/${file}`;
-              if (file === "lottie.min.js") {
-                return loadScript(src).then(() => initTriollaLottie(el));
+          if (jqueryIdx < 0) {
+            for (const file of js) {
+              if (cancelled) return;
+              const src = href(file);
+              if (file.includes("lottie")) {
+                await loadScript(src).then(() => initTriollaLottie(el));
+              } else {
+                await loadScript(src);
               }
-              return loadScript(src);
-            })
-          );
+            }
+          } else {
+            if (cancelled) return;
+            await loadScript(href(js[jqueryIdx]));
 
-          // Finally load all.js
-          if (cancelled) return;
-          await loadScript(`${assetBase}/${js[20]}`);
+            const beforeAll = js.filter((_, i) => i !== jqueryIdx && (allJsIdx < 0 || i < allJsIdx));
+            if (cancelled) return;
+            await Promise.all(
+              beforeAll.map((file) => {
+                const src = href(file);
+                if (file.includes("lottie")) {
+                  return loadScript(src).then(() => initTriollaLottie(el));
+                }
+                return loadScript(src);
+              }),
+            );
+
+            if (allJsIdx >= 0) {
+              if (cancelled) return;
+              await loadScript(href(js[allJsIdx]));
+              const afterAll = js.filter((_, i) => i > allJsIdx);
+              if (cancelled) return;
+              await Promise.all(afterAll.map((file) => loadScript(href(file))));
+            }
+          }
 
           const gsapWin = window as unknown as {
             gsap?: { registerPlugin?: (plugin: unknown) => void };

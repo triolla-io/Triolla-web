@@ -177,6 +177,32 @@ const FINTECH_WHY: PortfolioPageData["why"] = {
   ],
 };
 
+/** Hebrew “why” copy aligned with https://triolla.io/he/פינטק-ופיננסים/ */
+const FINTECH_WHY_HE: PortfolioPageData["why"] = {
+  mainTitle: "למה <br />חברות פינטק ופיננסים <br />בוחרות בנו?",
+  items: [
+    {
+      title: "אנחנו מדברים <br />בשפה שלך",
+      description:
+        "הבנה עמוקה בתהליכים פיננסיים, עמידה ברגולציה ובניית אמון עם המשתמשים.",
+    },
+    {
+      title: "ניסיון שנבחן בקרב",
+      description:
+        "רקורד מוכח ביצירת מוצרים דיגיטליים למותגים הגדולים בעולם הפיננסים.",
+    },
+    {
+      title: "בקצב מהיום הראשון",
+      description: "כשמכירים את התחום לעומק – הערך מגיע מהיום הראשון.",
+    },
+    {
+      title: "חשיבה ראשונה בטחונית",
+      description:
+        "ה-UX שלנו שם דגש על אבטחה, בהירות וחוויות פיננסיות נטולות חיכוך.",
+    },
+  ],
+};
+
 export const FINTECH_PAGE_DATA_EN: PortfolioPageData = {
   dir: "ltr",
   bannerColor: "#fed125",
@@ -224,7 +250,7 @@ export const FINTECH_PAGE_DATA_HE: PortfolioPageData = {
     ...ASSETS_HE,
   },
   portfolioItems: ITEMS_HE,
-  why: FINTECH_WHY,
+  why: FINTECH_WHY_HE,
   global: {
     title: "הלקוחות שלנו",
     subtitle:

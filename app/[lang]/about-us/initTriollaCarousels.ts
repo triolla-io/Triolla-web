@@ -17,13 +17,15 @@ export function initTriollaOwlCarousels(root: HTMLElement): void {
   const $root = $(root);
   const rtl = triollaSnapshotIsRtl(root);
 
-  const navPair = (prevSel: string, nextSel: string): [string, string] => {
-    const prev = root.querySelector(prevSel);
-    const next = root.querySelector(nextSel);
-    return [prev?.outerHTML ?? "‹", next?.outerHTML ?? "›"];
+  /** SVG only — Owl wraps navText in `<button>`; outer `<a>` caused invalid `button > a` and broke theme CSS. */
+  const learNavInner = (): [string, string] => {
+    const prev = root.querySelector(".le-prev");
+    const next = root.querySelector(".le-next");
+    const inner = (el: Element | null, fallback: string) => el?.innerHTML?.trim() || fallback;
+    return [inner(prev, "‹"), inner(next, "›")];
   };
 
-  const learNav = navPair(".le-prev", ".le-next");
+  const learNav = learNavInner();
 
   $root.find("ul.learslider.owl-carousel").each((_i: number, el: Element) => {
     const $el = $(el);

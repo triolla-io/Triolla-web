@@ -220,6 +220,31 @@ const B2C_WHY: PortfolioPageData["why"] = {
   ],
 };
 
+/** Hebrew “why” copy aligned with https://triolla.io/he/b2c/ */
+const B2C_WHY_HE: PortfolioPageData["why"] = {
+  mainTitle: "למה <br />חברות B2C <br />בוחרות בנו?",
+  items: [
+    {
+      title: "אנחנו מבינים <br />את הקהל שלך",
+      description: "מתואמים להרגלים, למסעות ולציפיות של משתמשי B2C",
+    },
+    {
+      title: "מומחיות ממוקדת צרכן",
+      description: "עשרות מוצרים דיגיטליים שעוצבו עבור מותגי B2C מובילים",
+    },
+    {
+      title: "יוצרים חיבור מהיר",
+      description:
+        "אנחנו מכירים את השוק שלך – ומייצרים השפעה מהיום הראשון",
+    },
+    {
+      title: "גישה ממוקדת חוויה",
+      description:
+        "חוויית המשתמש שלנו נבנית סביב הלקוחות שלך, הצרכים שלהם ואורח החיים שלהם",
+    },
+  ],
+};
+
 export const B2C_PAGE_DATA_EN: PortfolioPageData = {
   dir: "ltr",
   bannerColor: "#fed125",
@@ -266,7 +291,7 @@ export const B2C_PAGE_DATA_HE: PortfolioPageData = {
     ...B2C_ASSETS,
   },
   portfolioItems: B2C_ITEMS_HE,
-  why: B2C_WHY,
+  why: B2C_WHY_HE,
   global: {
     title: "הלקוחות שלנו",
     subtitle: "מחברות קטנות ועד גלובליות, שיתפנו פעולה עם כמה חברות מדהימות",

@@ -28,6 +28,18 @@ export async function injectSharedFaq(
     existingFaqBlock.remove();
   }
 
+  /**
+   * Service detail and blog/article templates on triolla.io do not include the global FAQ block
+   * (only hero + article + optional grid + contact strip + footer). Without this guard we inject
+   * `_shared-faq.html` and duplicate many images vs production.
+   */
+  if (
+    root.querySelector(".servdetail_content") != null ||
+    root.querySelector(".article_content") != null
+  ) {
+    return;
+  }
+
   try {
     const faqRes = await fetch(faqFragmentUrl);
     if (!faqRes.ok) return;

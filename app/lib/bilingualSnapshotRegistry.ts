@@ -9,6 +9,8 @@ import devDepsEn from "../dev/dev-deps.json";
 import devDepsHe from "../dev/dev-he-deps.json";
 import careersDepsEn from "../careers/careers-deps.json";
 import careersDepsHe from "../careers/careers-he-deps.json";
+import technologyDepsEn from "../technology/technology-deps.json";
+import technologyDepsHe from "../technology/technology-he-deps.json";
 import { DEPS_EN, DEPS_HE } from "./snapshotDeps";
 
 export type BilingualSnapshotRegistryEntry = {
@@ -326,9 +328,9 @@ export const bilingualSnapshotRegistry = {
       "triolla-io-technology",
       "triolla-io-technology-he",
     ),
-    /** Theme CSS/JS from consolidated mirror; page images live under `/assets/technology` (+ `-he`). */
-    depsEn: DEPS_EN,
-    depsHe: DEPS_HE,
+    /** Full theme chain under `/assets/_shared/` (see `technology-deps.json`). Images: `/assets/technology` (+ `-he`). */
+    depsEn: technologyDepsEn as TriollaPortfolioSnapshotDeps,
+    depsHe: technologyDepsHe as TriollaPortfolioSnapshotDeps,
     assetDirEn: "technology",
     assetDirHe: "technology-he",
   },
@@ -382,7 +384,7 @@ export const bilingualSnapshotRegistry = {
     "triolla-io-services-product-ux-ui-design",
   ),
   "services-user-testing": entry(
-    "User testing",
+    "User Testing",
     "/fragments/services-user-testing-body.html",
     "/fragments/services-user-testing-body.html",
     "triolla-io-services-user-testing",

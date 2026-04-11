@@ -1,0 +1,20 @@
+/* Technology page (/technology): hero uses .portfolio_text like industry pages, but is NOT .homemaintopone.
+   Global style.css sets h1 to "SF Pro" 600 — triolla.io uses SFProText for this display headline. */
+[data-triolla-snapshot] .technology_content .portfolio_text h1 {
+  font-family: "SFProText", -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial,
+    "Almoni ML v5 AAA", "Almoni DL AAA", sans-serif !important;
+  font-weight: 700 !important;
+}
+
+[data-triolla-snapshot] .technology_content .portfolio_con_bold {
+  font-family: "SFProText", -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial,
+    "Almoni ML v5 AAA", "Almoni DL AAA", sans-serif !important;
+  font-weight: 400 !important;
+}
+
+/* Mid-page blocks: h3 has SFProText in theme; paragraphs only set size/color and inherit body "SF Pro". */
+[data-triolla-snapshot] .technology_content .techoneleft p,
+[data-triolla-snapshot] .technology_content .techtags {
+  font-family: "SFProText", -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial,
+    "Almoni ML v5 AAA", "Almoni DL AAA", sans-serif !important;
+}

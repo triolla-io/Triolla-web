@@ -179,8 +179,9 @@ export const SERVICE_DETAILS = {
   },
   "user-testing": {
     metaEn: {
-      title: "User Testing Services | Triolla",
-      description: "User testing and validation to de-risk product decisions.",
+      title: "User Testing | Triolla",
+      description:
+        "User testing that reveals real insights, validates design decisions, and drives continuous improvement.",
     },
     hasHebrew: false,
     Client: ServicesUserTestingClient,

@@ -154,6 +154,33 @@ const MOBILE_WHY: PortfolioPageData["why"] = {
   ],
 };
 
+/** Hebrew “why” copy aligned with https://triolla.io/he/אפליקציות-מוביל/ */
+const MOBILE_WHY_HE: PortfolioPageData["why"] = {
+  mainTitle: "למה <br />חברות אפליקציות מובייל <br />בוחרות בנו?",
+  items: [
+    {
+      title: "אנחנו מדברים <br />בשפה שלך",
+      description:
+        "מכירים כל מחווה, כל זרימה – ואת מה שהופך חוויית מובייל לבלתי נשכחת.",
+    },
+    {
+      title: "ניסיון שנבחן בקרב",
+      description:
+        "רקורד מוכח ביצירת אפליקציות מובייל חכמות, קלות לשימוש ומלאות ערך.",
+    },
+    {
+      title: "בקצב מהיום הראשון",
+      description:
+        "כשמכירים את המשתמשים לעומק – הערך מורגש מהאינטראקציה הראשונה.",
+    },
+    {
+      title: "חשיבה ראשונה בטחונית",
+      description:
+        "UX מדויק שמבטיח שימוש חלק, תגובה מהירה וחוויה מותאמת לכל מסך.",
+    },
+  ],
+};
+
 export const MOBILE_APPS_PAGE_DATA_EN: PortfolioPageData = {
   dir: "ltr",
   bannerColor: "#fed125",
@@ -200,7 +227,7 @@ export const MOBILE_APPS_PAGE_DATA_HE: PortfolioPageData = {
     ...ASSETS,
   },
   portfolioItems: ITEMS_HE,
-  why: MOBILE_WHY,
+  why: MOBILE_WHY_HE,
   global: {
     title: "הלקוחות שלנו",
     subtitle:

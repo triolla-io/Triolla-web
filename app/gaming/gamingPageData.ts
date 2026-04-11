@@ -205,6 +205,33 @@ const GAMING_WHY: PortfolioPageData["why"] = {
   ],
 };
 
+/** Hebrew “why” copy aligned with https://triolla.io/he/גיימינג/ */
+const GAMING_WHY_HE: PortfolioPageData["why"] = {
+  mainTitle: "למה <br />חברות גיימינג <br />בוחרות בנו?",
+  items: [
+    {
+      title: "אנחנו מדברים <br />בשפה שלך",
+      description:
+        "שולטים במסלולי שחקן, במכניקות משחק וביצירת חוויות סוחפות.",
+    },
+    {
+      title: "ניסיון שנבחן בקרב",
+      description:
+        "ניסיון נרחב בעיצוב ממשקים לפלטפורמות הגיימינג והסטודיואים המובילים בתעשייה.",
+    },
+    {
+      title: "בקצב מהיום הראשון",
+      description:
+        "אנו מחוברים לתרבות הגיימינג, ויוצרים עולמות מרתקים שסוחפים את השחקנים מיד.",
+    },
+    {
+      title: "חשיבה ראשונה בטחונית",
+      description:
+        "אנו מתכננים את חווית המשתמש (UX) מתוך מטרה לעורר התרגשות, להגביר שימור ולספק אינטראקציית שחקן רציפה.",
+    },
+  ],
+};
+
 export const GAMING_PAGE_DATA_EN: PortfolioPageData = {
   dir: "ltr",
   bannerColor: "#fed125",
@@ -250,7 +277,7 @@ export const GAMING_PAGE_DATA_HE: PortfolioPageData = {
     ...GAMING_ASSETS,
   },
   portfolioItems: GAMING_ITEMS_HE,
-  why: GAMING_WHY,
+  why: GAMING_WHY_HE,
   global: {
     title: "הלקוחות שלנו",
     subtitle:
