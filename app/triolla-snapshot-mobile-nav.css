@@ -179,6 +179,21 @@
     flex: 0 0 auto !important;
   }
 
+  /* style.css @media(min-width:768px) sets height:44px, but below 768px there's no explicit height
+     and @media(max-width:1023px) forces line-height:14px on spans → button collapses to ~16px.
+     Restore proper pill height for mobile. */
+  [data-triolla-snapshot] .header_contact a {
+    height: 37px !important;
+    display: flex !important;
+    align-items: center !important;
+    padding: 0 14px !important;
+    box-sizing: border-box !important;
+  }
+
+  [data-triolla-snapshot] .header_contact a > span {
+    line-height: normal !important;
+  }
+
   [data-triolla-snapshot] .header_in > .menutoggle {
     position: absolute !important;
     top: 50% !important;

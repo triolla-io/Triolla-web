@@ -25,6 +25,16 @@ export function middleware(request: NextRequest) {
     return res;
   }
 
+  /** Hebrew WP slug for terms-of-use → canonical /he/terms-of-use. */
+  if (pathname === "/he/%D7%AA%D7%A0%D7%90%D7%99-%D7%A9%D7%99%D7%9E%D7%95%D7%A9" ||
+      pathname === "/he/%D7%AA%D7%A0%D7%90%D7%99-%D7%A9%D7%99%D7%9E%D7%95%D7%A9/" ||
+      pathname === "/he/תנאי-שימוש" ||
+      pathname === "/he/תנאי-שימוש/") {
+    const url = request.nextUrl.clone();
+    url.pathname = "/he/terms-of-use";
+    return NextResponse.redirect(url, 308);
+  }
+
   /** WordPress has no Hebrew URL for these; English-only pages. */
   if (pathname === "/he/portfolio-page" || pathname === "/he/portfolio-page/") {
     const url = request.nextUrl.clone();

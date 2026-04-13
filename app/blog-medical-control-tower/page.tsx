@@ -1,15 +1,9 @@
-import type { Metadata } from "next";
-import { generatePageMetadata } from "../lib/metadata";
-import { BlogMedicalControlTowerClient } from "./BlogMedicalControlTowerClient";
+import { permanentRedirect } from "next/navigation";
 
-export const metadata: Metadata = generatePageMetadata({
-  title: "Blog: Medical Control Tower | Triolla",
-  description: "Blog: Medical Control Tower - Professional services by Triolla",
-  path: "/blog/medical-control-tower",
-  lang: "en",
-  ogType: "website",
-});
-
+/**
+ * This blog post is Hebrew-only on triolla.io.
+ * triolla.io/blog/medical-control-tower/ → triolla.io/he/blog/medical-control-tower/
+ */
 export default function Page() {
-  return <BlogMedicalControlTowerClient />;
+  permanentRedirect("/he/blog/medical-control-tower");
 }

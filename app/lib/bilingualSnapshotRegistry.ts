@@ -198,17 +198,36 @@ export const bilingualSnapshotRegistry = {
   "terms-of-use": entry(
     "Terms of use",
     "/fragments/terms-of-use-body.html",
-    "/fragments/terms-of-use-body.html",
+    "/fragments/terms-of-use-he-body.html",
     "triolla-io-terms-of-use",
     "triolla-io-terms-of-use",
   ),
-  "services-motion-design": entry(
-    "Motion design",
-    "/fragments/services-motion-design-body.html",
-    "/fragments/services-motion-design-he-body.html",
-    "triolla-io-services-motion-design",
-    "triolla-io-services-motion-design-he",
-  ),
+  "services-motion-design": {
+    ...entry(
+      "Motion design",
+      "/fragments/services-motion-design-body.html",
+      "/fragments/services-motion-design-he-body.html",
+      "triolla-io-services-motion-design",
+      "triolla-io-services-motion-design-he",
+    ),
+    /**
+     * The Hebrew motion design page uses the custom `page-template-page-servicedetail-motion`
+     * template — CSS rules (list resets, layout) are scoped to this class.
+     */
+    depsHe: {
+      ...DEPS_HE,
+      bodyClass:
+        "rtl wp-singular page-template page-template-page-servicedetail-motion page-template-page-servicedetail-motion-php page page-id-17945 page-child parent-pageid-3163 wp-theme-triolla",
+    },
+    /**
+     * English motion design uses the same custom template class.
+     */
+    depsEn: {
+      ...DEPS_EN,
+      bodyClass:
+        "wp-singular page-template page-template-page-servicedetail-motion page-template-page-servicedetail-motion-php page page-id-4693 page-child parent-pageid-473 wp-theme-triolla",
+    },
+  },
   "services-prototyping": entry(
     "Prototyping",
     "/fragments/services-prototyping-body.html",

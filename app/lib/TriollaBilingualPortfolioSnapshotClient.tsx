@@ -324,6 +324,22 @@ export function TriollaBilingualPortfolioSnapshotClient({
 
           disposeRevealRef.current?.();
           disposeRevealRef.current = mountTriollaSnapshotRevealStack(el, revealPreset);
+
+          // #region debug-contactsection
+          // Failsafe: the contact strip (.blogmidbotwrap) gets opacity:0 on its children
+          // until .show is applied. The IntersectionObserver may miss it when margin-top:-500px
+          // shifts the element above the normal scroll zone. Force .show after a short delay.
+          window.setTimeout(() => {
+            if (cancelled) return;
+            const wrap = el?.querySelector(".blogmidbotwrap");
+            console.log("[debug-contact] failsafe check - .blogmidbotwrap hasShow:", wrap?.classList.contains("show"), "element:", !!wrap);
+            if (wrap && !wrap.classList.contains("show")) {
+              console.log("[debug-contact] failsafe: adding .show to .blogmidbotwrap");
+              wrap.classList.add("show");
+            }
+          }, 500);
+          // #endregion
+
           disposeHeaderPillRef.current?.();
           disposeHeaderPillRef.current = mountTriollaHeaderPill(el);
           disposeFaqRef.current?.();

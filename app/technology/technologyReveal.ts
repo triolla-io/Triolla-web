@@ -92,6 +92,11 @@ export function mountTechnologyReveal(root: HTMLElement): () => void {
     (entries) => {
       let added = false;
       for (const entry of entries) {
+        // #region debug-contactsection
+        if ((entry.target as HTMLElement).classList.contains("blogmidbotwrap")) {
+          console.log("[debug-contact] IO entry isIntersecting:", entry.isIntersecting, "rect:", entry.boundingClientRect);
+        }
+        // #endregion
         if (!entry.isIntersecting) continue;
         entry.target.classList.add("show");
         refreshAbmobileOwlInNode(entry.target);
@@ -113,6 +118,17 @@ export function mountTechnologyReveal(root: HTMLElement): () => void {
   for (const sel of SHOW_SELECTORS) {
     root.querySelectorAll(sel).forEach((node) => io.observe(node));
   }
+
+  // #region debug-contactsection
+  const blogmidbotwraps = root.querySelectorAll(".blogmidbotwrap");
+  console.log("[debug-contact] blogmidbotwrap count:", blogmidbotwraps.length);
+  blogmidbotwraps.forEach((el) => {
+    const r = (el as HTMLElement).getBoundingClientRect();
+    console.log("[debug-contact] blogmidbotwrap rect:", { top: r.top, bottom: r.bottom, height: r.height });
+    console.log("[debug-contact] page scrollHeight:", document.documentElement.scrollHeight, "innerHeight:", window.innerHeight);
+  });
+  // #endregion
+
   const flushAlreadyVisible = () => {
     let added = false;
     for (const sel of SHOW_SELECTORS) {

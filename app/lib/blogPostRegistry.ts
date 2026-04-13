@@ -102,3 +102,9 @@ export function hebrewBlogFragmentExists(slug: string): boolean {
     path.join(process.cwd(), "public", "fragments", `he-blog-${slug}-he-body.html`),
   );
 }
+
+export function englishBlogFragmentExists(slug: string): boolean {
+  return fs.existsSync(
+    path.join(process.cwd(), "public", "fragments", `blog-${slug}-body.html`),
+  );
+}

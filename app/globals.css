@@ -1862,18 +1862,22 @@ section.home-faq { background: #ffffff; }
   background: none;
 }
 /*
- * Snapshot service-detail fragments still ship the parallax grid block; production /services/* pages
- * omit it visually before #contactus. Scoped to snapshot root so React demos (e.g. ServicePrototyping)
- * keep their grid. (If .blogmidbot is nested inside .bottom_com_sec due to a missing </div> in HTML,
- * this rule would hide the contact strip — fragments now close .bottom_com_sec before #contactus.)
+ * Snapshot service-detail fragments still ship a parallax grid block (.port_gridimage_sec)
+ * inside .bottom_com_sec. Production /services/* pages omit it visually before #contactus.
+ * We hide only the grid images, NOT the whole .bottom_com_sec container, because some Hebrew
+ * fragments (e.g. services-creative-concept-he-body.html) have .blogmidbot *nested inside*
+ * .bottom_com_sec due to a missing </div>. Hiding all of .bottom_com_sec would also hide the
+ * contact strip. Hiding just .port_gridimage_sec is safe for both structures.
  */
 [data-triolla-snapshot] .servdetail_content .bottom_com_sec {
+  background: none;
+}
+[data-triolla-snapshot] .servdetail_content .bottom_com_sec .port_gridimage_sec {
   display: none;
 }
 /*
- * On WordPress, the contact strip often sits inside .bottom_com_sec (gray + blurred gradient SVG).
- * Snapshot HTML closes .bottom_com_sec before .blogmidbot and we hide the grid wrapper — reapply
- * the same background on the strip so it matches triolla.io.
+ * Reapply the contact-strip background whether .blogmidbot is a sibling of .bottom_com_sec
+ * (English fragments) or nested inside it (some Hebrew fragments).
  */
 [data-triolla-snapshot] .servdetail_content .blogmidbot {
   background-color: #e7eaef;
@@ -1935,6 +1939,13 @@ section.home-faq { background: #ffffff; }
   color: #000;
   padding: 0 0 70px 0;
   margin: 0;
+}
+/* style.css has a bare .portfolio_text h1 { 260px } that beats .artoptext h1 { 72px } from style-new.css via load order.
+   Higher specificity here restores the correct article/service title size at full-screen. */
+.article_content .portfolio_text h1,
+.servdetail_content .portfolio_text h1 {
+  font-size: 72px;
+  line-height: 71px;
 }
 .portfolio_con_bold {
   font-weight: bold;
@@ -2669,4 +2680,24 @@ section.home-faq { background: #ffffff; }
 [data-triolla-snapshot] .grid__item {
   margin: 0;
   padding: 0;
+}
+
+/*
+ * Contact strip (.blogmidbot) in service detail pages: theme CSS sets children to opacity:0
+ * until .blogmidbotwrap gets .show from all.js scroll handler or IntersectionObserver.
+ * In our snapshots the negative margin-top on .blogmidbot shifts the element's layout position,
+ * which can prevent the IO from firing at the expected scroll depth. Override opacity directly
+ * so the contact info is always visible on service pages without requiring a scroll trigger.
+ */
+[data-triolla-snapshot] .servdetail_content .blogmidbotwrap .blogmidbotlft h3,
+[data-triolla-snapshot] .servdetail_content .blogmidbotwrap .blogmidbotlftin h4,
+[data-triolla-snapshot] .servdetail_content .blogmidbotwrap .blogmidbotlftin p,
+[data-triolla-snapshot] .servdetail_content .blogmidbotwrap .blogmtrusted h5,
+[data-triolla-snapshot] .servdetail_content .blogmidbotwrap .blogmtrusted ul li,
+[data-triolla-snapshot] .servdetail_content .blogmidbotwrap .blogmidbotrgt h4,
+[data-triolla-snapshot] .servdetail_content .blogmidbotwrap .blogmidbotrgmob h5,
+[data-triolla-snapshot] .servdetail_content .blogmidbotwrap .blogmidbotrgmob p,
+[data-triolla-snapshot] .servdetail_content .blogmidbotwrap .blogmidbotrfrm {
+  opacity: 1 !important;
+  bottom: 0 !important;
 }

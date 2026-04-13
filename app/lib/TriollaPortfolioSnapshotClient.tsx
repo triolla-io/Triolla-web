@@ -168,6 +168,37 @@ export function TriollaPortfolioSnapshotClient({
         if (cancelled) return;
         setPhase("ready");
 
+        // #region agent log — h1 fix verification
+        (() => {
+          const h1 = el.querySelector('h1');
+          if (!h1) return;
+          const cs = window.getComputedStyle(h1);
+          fetch('http://127.0.0.1:7442/ingest/16494b4c-3094-42cb-81b5-aad92874073c',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'803122'},body:JSON.stringify({sessionId:'803122',location:'TriollaPortfolioSnapshotClient:ready',message:'h1 post-fix',data:{path:window.location.pathname,innerWidth:window.innerWidth,computedFontSize:cs.fontSize,runId:'post-fix'},timestamp:Date.now(),hypothesisId:'H-h1-fix'})}).catch(()=>{});
+        })();
+        // #endregion
+
+        // #region agent log — contact button audit
+        (() => {
+          // Look in the whole doc (chrome is injected into header, outside `el`)
+          const sel = '.header_contact a, .header_whatsapp a, .header_book a, [class*="contact"] a, a[href*="contact"]';
+          const btns = Array.from(document.querySelectorAll(sel)).slice(0, 6).map(b => {
+            const cs = window.getComputedStyle(b as Element);
+            const r = (b as Element).getBoundingClientRect();
+            return {
+              text: (b as Element).textContent?.trim().slice(0, 40),
+              class: (b as Element).className?.slice(0, 80),
+              parentClass: (b as Element).parentElement?.className?.slice(0, 60),
+              display: cs.display, visibility: cs.visibility, opacity: cs.opacity,
+              fontSize: cs.fontSize, color: cs.color, bg: cs.backgroundColor,
+              width: cs.width, height: cs.height,
+              rect: { top: Math.round(r.top), left: Math.round(r.left), w: Math.round(r.width), h: Math.round(r.height) },
+              overflow: cs.overflow, zIndex: cs.zIndex,
+            };
+          });
+          fetch('http://127.0.0.1:7442/ingest/16494b4c-3094-42cb-81b5-aad92874073c',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'803122'},body:JSON.stringify({sessionId:'803122',location:'TriollaPortfolioSnapshotClient:ready',message:'contact btn audit',data:{path:window.location.pathname,innerWidth:window.innerWidth,btns},timestamp:Date.now(),hypothesisId:'H-contact'})}).catch(()=>{});
+        })();
+        // #endregion
+
         try {
           for (const file of js) {
             if (cancelled) return;

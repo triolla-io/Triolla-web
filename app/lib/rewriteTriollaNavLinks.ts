@@ -60,6 +60,9 @@ const HEBREW_TO_ROUTE: Record<string, string> = {
   /** WP slug in footer/nav (triolla.io/he/צור-קשר/) */
   "צור-קשר": "contact-us",
   "צור קשר": "contact-us",
+  /** Hebrew terms-of-use WP slug (triolla.io/he/תנאי-שימוש/) */
+  "תנאי-שימוש": "terms-of-use",
+  "תנאי שימוש": "terms-of-use",
 };
 
 /**

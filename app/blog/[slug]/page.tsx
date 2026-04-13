@@ -1,11 +1,13 @@
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import type { Metadata } from "next";
 import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { JsonLd } from "../../components/JsonLd";
 import { BlogPostClient } from "../../lib/BlogPostClient";
 import {
   BLOG_SLUG_SEGMENT,
+  englishBlogFragmentExists,
   getBlogSlugs,
+  hebrewBlogFragmentExists,
   loadBlogDeps,
   slugToTitle,
 } from "../../lib/blogPostRegistry";
@@ -50,6 +52,11 @@ export default async function BlogPostPage({
   const deps = loadBlogDeps(slug);
   if (!deps) {
     notFound();
+  }
+
+  // If no English fragment exists but a Hebrew one does, redirect (Hebrew-only post).
+  if (!englishBlogFragmentExists(slug) && hebrewBlogFragmentExists(slug)) {
+    permanentRedirect(`/he/blog/${slug}`);
   }
 
   const title = slugToTitle(slug);
