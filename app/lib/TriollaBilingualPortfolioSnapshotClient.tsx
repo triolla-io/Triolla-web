@@ -136,6 +136,11 @@ export type TriollaBilingualPortfolioSnapshotClientProps = {
   assetDirHe: string;
   /** Passed to `mountTriollaSnapshotRevealStack` (default **technology**). */
   revealPreset?: TriollaSnapshotRevealPreset;
+  /**
+   * Force FAQ injection even when the fragment contains `servdetail_content` (e.g. branding-studio
+   * uses the WP service-detail template class but is a full marketing page with FAQ).
+   */
+  forceFaq?: boolean;
 };
 
 function depsForLang(
@@ -158,6 +163,7 @@ export function TriollaBilingualPortfolioSnapshotClient({
   assetDirEn,
   assetDirHe,
   revealPreset = "technology",
+  forceFaq = false,
 }: TriollaBilingualPortfolioSnapshotClientProps) {
   const rootRef = useRef<HTMLDivElement>(null);
   const disposeRevealRef = useRef<(() => void) | null>(null);
@@ -229,7 +235,7 @@ export function TriollaBilingualPortfolioSnapshotClient({
         el.innerHTML = html;
         el.setAttribute("dir", lang === "he" ? "rtl" : "ltr");
 
-        await injectSharedFaq(el, lang);
+        await injectSharedFaq(el, lang, { force: forceFaq });
         await injectSharedFooter(el, lang);
 
         rewriteAssetPaths(el, consolidateStaticAssets);

@@ -157,7 +157,9 @@
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
-  scrollbar-gutter: stable;
+  /* scrollbar-gutter: stable intentionally removed — it reduces clientWidth by ~15px,
+     causing snapshot theme JS to measure a narrower viewport and set element widths
+     ~15px smaller than triolla.io (which does not use scrollbar-gutter). */
 }
 img { max-width: 100%; display: block; height: auto; }
 .clr { clear: both; display: block; }
@@ -169,6 +171,7 @@ body {
   padding: 0;
   overflow-x: hidden;
 }
+
 
 /* ============================================================
    HEADER TICKER (React shell only — not snapshot [data-triolla-snapshot])
@@ -210,7 +213,7 @@ body:not(:has([data-triolla-snapshot])) .headerticker .tickclose {
 body:not(:has([data-triolla-snapshot])) .headerticker .tickclose:hover { opacity: 1; }
 
 /* ============================================================
-   HEADER TICKER FIX (Snapshot pages — fix X button alignment)
+   HEADER TICKER FIX (Snapshot pages — fix X button alignment + close behavior)
    ============================================================ */
 [data-triolla-snapshot] .headerticker .tickclose,
 [data-triolla-snapshot] .headerticker a.tickclose {
@@ -226,6 +229,14 @@ body:not(:has([data-triolla-snapshot])) .headerticker .tickclose:hover { opacity
 [data-triolla-snapshot] .headerticker .tickclose:hover,
 [data-triolla-snapshot] .headerticker a.tickclose:hover {
   opacity: 1 !important;
+}
+[data-triolla-snapshot] .headerticker {
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+[data-triolla-snapshot] .headerticker.is-hidden {
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
 }
 
 @media (max-width: 1199px) {
@@ -475,7 +486,7 @@ body:not(:has([data-triolla-snapshot])) .headerticker .tickclose:hover { opacity
   }
 }
 
-/* React pill CTAs: Banner, Portfolio, ContactForm, ModernContactClient (.default-text / .hover-text / .btn-overlay) */
+/* React pill CTAs: Banner, Portfolio, ContactForm (.default-text / .hover-text / .btn-overlay) */
 a.pill-btn,
 button.pill-btn {
   position: relative;
@@ -1039,48 +1050,6 @@ header.site-header + .hmenumob .hmenumobclose button {
    ============================================================ */
 
 /* ============================================================
-   HERO IMAGES  (.hometopimage1–9)
-   ============================================================ */
-.hometopimage { display: block; }
-.hometopimage4 img,
-.hometopimage5 img,
-.hometopimage7 img { display: inline-block; }
-.hometopimage7 img { position: relative; right: 22%; }
-
-.hometopimage1 { float: left;  width: 58%;    margin: 300px 0 0 60px; }
-.hometopimage2 { float: right; width: 22%;    margin: 170px 16% 0 0; }
-.hometopimage3 { float: left;  width: 48%;    margin: 20px 0 0 14%; }
-.hometopimage4 { float: right; width: 36.8%;  margin: 20px 0 0 0;   text-align: right; }
-.hometopimage5 { float: right; width: 22%;    margin: 20px 16% 0 0; text-align: right; }
-.hometopimage6 { float: left;  width: 69%;    margin: 20px 0 0 0; }
-.hometopimage7 { float: right; width: 25.7%;  margin: 20px 0 0 0;   text-align: right; }
-.hometopimage8 { float: left;  width: 29%;    margin: 20px 0 0 11%; }
-.hometopimage9 { float: right; width: 41%;    margin: 20px 9% 0 0; }
-
-@media (max-width: 1599px) {
-  .hometopimage2 { margin: 170px 9% 0 0; }
-}
-@media (max-width: 1199px) {
-  .hometopimage1 { margin: 250px 0 0 60px; }
-}
-@media (max-width: 900px) {
-  .hometopimage1 { margin: 170px 0 0 40px; }
-  .hometopimage2 { margin: 110px 9% 0 0; }
-  .hometopimage3 { margin: 20px 0 0 14%; }
-}
-@media (max-width: 767px) {
-  .hometopimage1 { width: 73%;    margin: 190px 0 0 -13%; }
-  .hometopimage2 { width: 35%;    margin: 120px 5% 0 0; }
-  .hometopimage3 { width: 56%;    margin: 20px 0 0 -4px; }
-  .hometopimage4 { width: 50.8%;  margin: 20px -6% 0 0; }
-  .hometopimage5 { width: 28%;    margin: 20px 0 0 0; }
-  .hometopimage6 { width: 73%;    margin: 20px 0 0 -14%; }
-  .hometopimage7 { width: 37.7%;  margin: 20px -5% 0 0; }
-  .hometopimage8 { width: 39%;    margin: 20px 0 0 -3%; }
-  .hometopimage9 { width: 57%;    margin: 20px 5% 0 0; }
-}
-
-/* ============================================================
    HERO BANNER  (.portfolio_banner)
    ============================================================ */
 .hero-banner {
@@ -1404,7 +1373,7 @@ section.home-hero { background: #FED125; }
 /* Winners — exact match from WP style.css */
 #winners-section {
   padding: 102px 0;
-  background: url(/assets/home/win_bg.png) no-repeat;
+  background: url(/assets/_shared/win_bg.png) no-repeat;
   background-size: cover;
 }
 .winners-content {
@@ -2671,13 +2640,17 @@ section.home-faq { background: #ffffff; }
  * Tailwind generates `display: grid` for `.grid` because it appears in JSX source files
  * (ServicePrototyping, OurClients, etc.). This overrides the Triolla theme's use of `.grid`
  * as a block container inside snapshot pages — breaking the portfolio grid layout.
- * Scoped to [data-triolla-snapshot] so it only affects injected HTML fragments.
+ *
+ * Using :where() drops specificity to 0 so snapshot CSS (e.g. responsive.css
+ * `.hometopimage1 { margin: 300px 0 0 60px }`) always wins over this reset.
+ * Without :where(), [data-triolla-snapshot] .grid__item has specificity 20 and beats
+ * any single-class snapshot rule (specificity 10), zeroing out float margins on every page.
  */
-[data-triolla-snapshot] .grid {
+:where([data-triolla-snapshot]) .grid {
   display: block;
   width: 100%;
 }
-[data-triolla-snapshot] .grid__item {
+:where([data-triolla-snapshot]) .grid__item {
   margin: 0;
   padding: 0;
 }

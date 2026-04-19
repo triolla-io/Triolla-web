@@ -87,6 +87,22 @@ export function HomeClient() {
         if (!el) return;
         el.innerHTML = html;
         el.setAttribute("dir", isHebrewHome ? "rtl" : "ltr");
+
+        // Wire ticker close button — all.js has no .tickclose handler (stripped inline script)
+        const tickCloseBtn = el.querySelector(".tickclose");
+        const headerTicker = el.querySelector(".headerticker") as HTMLElement | null;
+        if (tickCloseBtn && headerTicker) {
+          tickCloseBtn.addEventListener("click", (e) => {
+            e.preventDefault();
+            headerTicker.classList.add("is-hidden");
+            headerTicker.addEventListener(
+              "transitionend",
+              () => { headerTicker.style.display = "none"; },
+              { once: true },
+            );
+          });
+        }
+
         rewriteTriollaNavLinks(el);
         void waitForSnapshotFonts();
         await new Promise<void>((r) => requestAnimationFrame(() => r()));
@@ -176,8 +192,15 @@ export function HomeClient() {
 
           if (cancelled) return;
 
-          // Wait for CSS animations triggered by .loaded class to complete
-          // Most animations are 1.2s based on animation.css
+          // Nav shrink + FAQ do not need to wait for hero enter animations; portfolio pages mount these right after scripts.
+          disposeHeaderPillRef.current?.();
+          disposeHeaderPillRef.current = mountTriollaHeaderPill(el);
+          disposeFaqRef.current?.();
+          disposeFaqRef.current = mountTriollaFaqAccordion(el);
+          stripJQueryMenutoggleClickHandlers(el);
+          rewriteTriollaNavLinks(el);
+
+          // Reveal IO: delay so `.loaded`-driven CSS (often ~1.2s) settles before observing sections (see mountTriollaSnapshotRevealStack).
           await new Promise<void>((resolve) => {
             setTimeout(resolve, 1500);
           });
@@ -185,10 +208,6 @@ export function HomeClient() {
           if (cancelled) return;
           disposeRevealRef.current?.();
           disposeRevealRef.current = mountTriollaSnapshotRevealStack(el, "technology");
-          disposeHeaderPillRef.current?.();
-          disposeHeaderPillRef.current = mountTriollaHeaderPill(el);
-          disposeFaqRef.current?.();
-          disposeFaqRef.current = mountTriollaFaqAccordion(el);
           stripJQueryMenutoggleClickHandlers(el);
           rewriteTriollaNavLinks(el);
         } catch (deferredErr) {

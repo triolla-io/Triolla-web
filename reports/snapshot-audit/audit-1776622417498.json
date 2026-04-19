@@ -1,0 +1,2013 @@
+{
+  "timestamp": "2026-04-19T18:05:57.959Z",
+  "baseUrl": "http://localhost:3000",
+  "routeCount": 38,
+  "static": {},
+  "runtime": {
+    "/": {
+      "label": "Home EN",
+      "checks": [
+        {
+          "check": "snapshot_mounted",
+          "pass": true,
+          "detail": "[data-triolla-snapshot] count: 1"
+        },
+        {
+          "check": "page_height",
+          "pass": true,
+          "detail": "Page height: 15240px"
+        },
+        {
+          "check": "body_loaded_class",
+          "pass": true,
+          "detail": "body.loaded ✓"
+        },
+        {
+          "check": "footer_present",
+          "pass": true,
+          "detail": ".footer present ✓"
+        },
+        {
+          "check": "faq_present",
+          "pass": true,
+          "detail": "FAQ present ✓"
+        },
+        {
+          "check": "contact_strip_present",
+          "pass": true,
+          "detail": "Contact strip present ✓",
+          "isSoftWarning": false
+        },
+        {
+          "check": "show_elements",
+          "pass": true,
+          "detail": ".show elements: 1"
+        },
+        {
+          "check": "owl_carousels",
+          "pass": true,
+          "detail": ".owl-loaded: 2"
+        },
+        {
+          "check": "no_404s",
+          "pass": true,
+          "detail": "No 404s for critical assets"
+        },
+        {
+          "check": "no_console_errors",
+          "pass": true,
+          "detail": "No fatal console errors"
+        }
+      ]
+    },
+    "/he": {
+      "label": "Home HE",
+      "checks": [
+        {
+          "check": "snapshot_mounted",
+          "pass": true,
+          "detail": "[data-triolla-snapshot] count: 1"
+        },
+        {
+          "check": "page_height",
+          "pass": true,
+          "detail": "Page height: 14546px"
+        },
+        {
+          "check": "body_loaded_class",
+          "pass": true,
+          "detail": "body.loaded ✓"
+        },
+        {
+          "check": "footer_present",
+          "pass": true,
+          "detail": ".footer present ✓"
+        },
+        {
+          "check": "faq_present",
+          "pass": true,
+          "detail": "FAQ present ✓"
+        },
+        {
+          "check": "contact_strip_present",
+          "pass": true,
+          "detail": "Contact strip present ✓",
+          "isSoftWarning": false
+        },
+        {
+          "check": "show_elements",
+          "pass": true,
+          "detail": ".show elements: 1"
+        },
+        {
+          "check": "owl_carousels",
+          "pass": true,
+          "detail": ".owl-loaded: 2"
+        },
+        {
+          "check": "no_404s",
+          "pass": true,
+          "detail": "No 404s for critical assets"
+        },
+        {
+          "check": "no_console_errors",
+          "pass": true,
+          "detail": "No fatal console errors"
+        }
+      ]
+    },
+    "/about-us": {
+      "label": "About Us EN",
+      "checks": [
+        {
+          "check": "snapshot_mounted",
+          "pass": true,
+          "detail": "[data-triolla-snapshot] count: 1"
+        },
+        {
+          "check": "page_height",
+          "pass": true,
+          "detail": "Page height: 14425px"
+        },
+        {
+          "check": "body_loaded_class",
+          "pass": true,
+          "detail": "body.loaded ✓"
+        },
+        {
+          "check": "footer_present",
+          "pass": true,
+          "detail": ".footer present ✓"
+        },
+        {
+          "check": "faq_present",
+          "pass": true,
+          "detail": "FAQ present ✓"
+        },
+        {
+          "check": "contact_strip_present",
+          "pass": true,
+          "detail": "Contact strip present ✓",
+          "isSoftWarning": false
+        },
+        {
+          "check": "show_elements",
+          "pass": true,
+          "detail": ".show elements: 2"
+        },
+        {
+          "check": "owl_carousels",
+          "pass": true,
+          "detail": ".owl-loaded: 3"
+        },
+        {
+          "check": "no_404s",
+          "pass": true,
+          "detail": "No 404s for critical assets"
+        },
+        {
+          "check": "no_console_errors",
+          "pass": true,
+          "detail": "No fatal console errors"
+        }
+      ]
+    },
+    "/blog": {
+      "label": "Blog listing EN",
+      "checks": [
+        {
+          "check": "snapshot_mounted",
+          "pass": true,
+          "detail": "[data-triolla-snapshot] count: 1"
+        },
+        {
+          "check": "page_height",
+          "pass": true,
+          "detail": "Page height: 7313px"
+        },
+        {
+          "check": "body_loaded_class",
+          "pass": true,
+          "detail": "body.loaded ✓"
+        },
+        {
+          "check": "footer_present",
+          "pass": true,
+          "detail": ".footer present ✓"
+        },
+        {
+          "check": "contact_strip_present",
+          "pass": true,
+          "detail": "Contact strip present ✓",
+          "isSoftWarning": false
+        },
+        {
+          "check": "show_elements",
+          "pass": true,
+          "detail": ".show elements: 13"
+        },
+        {
+          "check": "no_404s",
+          "pass": true,
+          "detail": "No 404s for critical assets"
+        },
+        {
+          "check": "no_console_errors",
+          "pass": true,
+          "detail": "No fatal console errors"
+        }
+      ]
+    },
+    "/he/blog": {
+      "label": "Blog listing HE",
+      "checks": [
+        {
+          "check": "snapshot_mounted",
+          "pass": true,
+          "detail": "[data-triolla-snapshot] count: 1"
+        },
+        {
+          "check": "page_height",
+          "pass": true,
+          "detail": "Page height: 7288px"
+        },
+        {
+          "check": "body_loaded_class",
+          "pass": true,
+          "detail": "body.loaded ✓"
+        },
+        {
+          "check": "footer_present",
+          "pass": true,
+          "detail": ".footer present ✓"
+        },
+        {
+          "check": "contact_strip_present",
+          "pass": true,
+          "detail": "Contact strip present ✓",
+          "isSoftWarning": false
+        },
+        {
+          "check": "show_elements",
+          "pass": true,
+          "detail": ".show elements: 13"
+        },
+        {
+          "check": "no_404s",
+          "pass": true,
+          "detail": "No 404s for critical assets"
+        },
+        {
+          "check": "no_console_errors",
+          "pass": true,
+          "detail": "No fatal console errors"
+        }
+      ]
+    },
+    "/accessibility-statement": {
+      "label": "Accessibility EN",
+      "checks": [
+        {
+          "check": "snapshot_mounted",
+          "pass": true,
+          "detail": "[data-triolla-snapshot] count: 1"
+        },
+        {
+          "check": "page_height",
+          "pass": true,
+          "detail": "Page height: 3796px"
+        },
+        {
+          "check": "body_loaded_class",
+          "pass": true,
+          "detail": "body.loaded ✓"
+        },
+        {
+          "check": "footer_present",
+          "pass": true,
+          "detail": ".footer present ✓"
+        },
+        {
+          "check": "contact_strip_present",
+          "pass": false,
+          "detail": "Contact strip MISSING",
+          "isSoftWarning": false
+        },
+        {
+          "check": "show_elements",
+          "pass": true,
+          "detail": ".show elements: 4"
+        },
+        {
+          "check": "owl_carousels",
+          "pass": true,
+          "detail": ".owl-loaded: 0"
+        },
+        {
+          "check": "no_404s",
+          "pass": true,
+          "detail": "No 404s for critical assets"
+        },
+        {
+          "check": "no_console_errors",
+          "pass": true,
+          "detail": "No fatal console errors"
+        }
+      ]
+    },
+    "/privacy-policy": {
+      "label": "Privacy Policy EN",
+      "checks": [
+        {
+          "check": "snapshot_mounted",
+          "pass": true,
+          "detail": "[data-triolla-snapshot] count: 1"
+        },
+        {
+          "check": "page_height",
+          "pass": true,
+          "detail": "Page height: 4471px"
+        },
+        {
+          "check": "body_loaded_class",
+          "pass": true,
+          "detail": "body.loaded ✓"
+        },
+        {
+          "check": "footer_present",
+          "pass": true,
+          "detail": ".footer present ✓"
+        },
+        {
+          "check": "contact_strip_present",
+          "pass": false,
+          "detail": "Contact strip MISSING",
+          "isSoftWarning": false
+        },
+        {
+          "check": "show_elements",
+          "pass": true,
+          "detail": ".show elements: 3"
+        },
+        {
+          "check": "owl_carousels",
+          "pass": true,
+          "detail": ".owl-loaded: 0"
+        },
+        {
+          "check": "no_404s",
+          "pass": true,
+          "detail": "No 404s for critical assets"
+        },
+        {
+          "check": "no_console_errors",
+          "pass": true,
+          "detail": "No fatal console errors"
+        }
+      ]
+    },
+    "/branding-studio": {
+      "label": "Branding Studio EN",
+      "checks": [
+        {
+          "check": "snapshot_mounted",
+          "pass": true,
+          "detail": "[data-triolla-snapshot] count: 1"
+        },
+        {
+          "check": "page_height",
+          "pass": true,
+          "detail": "Page height: 3575px"
+        },
+        {
+          "check": "body_loaded_class",
+          "pass": true,
+          "detail": "body.loaded ✓"
+        },
+        {
+          "check": "footer_present",
+          "pass": true,
+          "detail": ".footer present ✓"
+        },
+        {
+          "check": "faq_present",
+          "pass": false,
+          "detail": "FAQ MISSING"
+        },
+        {
+          "check": "contact_strip_present",
+          "pass": true,
+          "detail": "Contact strip present ✓",
+          "isSoftWarning": false
+        },
+        {
+          "check": "show_elements",
+          "pass": true,
+          "detail": ".show elements: 5"
+        },
+        {
+          "check": "owl_carousels",
+          "pass": true,
+          "detail": ".owl-loaded: 0"
+        },
+        {
+          "check": "no_404s",
+          "pass": true,
+          "detail": "No 404s for critical assets"
+        },
+        {
+          "check": "no_console_errors",
+          "pass": true,
+          "detail": "No fatal console errors"
+        }
+      ]
+    },
+    "/careers": {
+      "label": "Careers EN",
+      "checks": [
+        {
+          "check": "snapshot_mounted",
+          "pass": true,
+          "detail": "[data-triolla-snapshot] count: 1"
+        },
+        {
+          "check": "page_height",
+          "pass": true,
+          "detail": "Page height: 17242px"
+        },
+        {
+          "check": "body_loaded_class",
+          "pass": true,
+          "detail": "body.loaded ✓"
+        },
+        {
+          "check": "footer_present",
+          "pass": true,
+          "detail": ".footer present ✓"
+        },
+        {
+          "check": "contact_strip_present",
+          "pass": true,
+          "detail": "Contact strip present ✓",
+          "isSoftWarning": false
+        },
+        {
+          "check": "show_elements",
+          "pass": true,
+          "detail": ".show elements: 2"
+        },
+        {
+          "check": "owl_carousels",
+          "pass": true,
+          "detail": ".owl-loaded: 0"
+        },
+        {
+          "check": "no_404s",
+          "pass": false,
+          "detail": "404: /assets/home/home-grid-base.css"
+        },
+        {
+          "check": "no_404s",
+          "pass": false,
+          "detail": "404: /assets/jquery-3.6.0.min.js_edabec9e.js"
+        },
+        {
+          "check": "no_404s",
+          "pass": false,
+          "detail": "404: /assets/TweenMax.min.js_edabec9e.js"
+        },
+        {
+          "check": "no_404s",
+          "pass": false,
+          "detail": "404: /assets/wow.js_edabec9e.js"
+        },
+        {
+          "check": "no_404s",
+          "pass": false,
+          "detail": "404: /assets/metaview.js_edabec9e.js"
+        },
+        {
+          "check": "no_404s",
+          "pass": false,
+          "detail": "404: /assets/ScrollMagic.min.js_edabec9e.js"
+        },
+        {
+          "check": "no_404s",
+          "pass": false,
+          "detail": "404: /assets/_shared/eb5e45d752068adfb4185f39ea2978f6_jquery.jConveyorTicker.min.js_edabec9e.js"
+        },
+        {
+          "check": "no_404s",
+          "pass": false,
+          "detail": "404: /assets/gsap.min.js"
+        },
+        {
+          "check": "no_404s",
+          "pass": false,
+          "detail": "404: /assets/ScrollTrigger.min.js"
+        },
+        {
+          "check": "no_404s",
+          "pass": false,
+          "detail": "404: /assets/jquery.bez.min.js_edabec9e.js"
+        },
+        {
+          "check": "no_404s",
+          "pass": false,
+          "detail": "404: /assets/all.js_edabec9e.js"
+        },
+        {
+          "check": "no_console_errors",
+          "pass": false,
+          "detail": "Console error: Failed to load resource: the server responded with a status of 404 (Not Found)"
+        },
+        {
+          "check": "no_console_errors",
+          "pass": false,
+          "detail": "Console error: Failed to load stylesheet: http://localhost:3000/assets/home/home-grid-base.css"
+        },
+        {
+          "check": "no_console_errors",
+          "pass": false,
+          "detail": "Console error: Failed to load resource: the server responded with a status of 404 (Not Found)"
+        },
+        {
+          "check": "no_console_errors",
+          "pass": false,
+          "detail": "Console error: Failed to load resource: the server responded with a status of 404 (Not Found)"
+        },
+        {
+          "check": "no_console_errors",
+          "pass": false,
+          "detail": "Console error: Failed to load resource: the server responded with a status of 404 (Not Found)"
+        },
+        {
+          "check": "no_console_errors",
+          "pass": false,
+          "detail": "Console error: Failed to load resource: the server responded with a status of 404 (Not Found)"
+        },
+        {
+          "check": "no_console_errors",
+          "pass": false,
+          "detail": "Console error: Failed to load resource: the server responded with a status of 404 (Not Found)"
+        },
+        {
+          "check": "no_console_errors",
+          "pass": false,
+          "detail": "Console error: Failed to load resource: the server responded with a status of 404 (Not Found)"
+        },
+        {
+          "check": "no_console_errors",
+          "pass": false,
+          "detail": "Console error: Failed to load resource: the server responded with a status of 404 (Not Found)"
+        },
+        {
+          "check": "no_console_errors",
+          "pass": false,
+          "detail": "Console error: Failed to load resource: the server responded with a status of 404 (Not Found)"
+        },
+        {
+          "check": "no_console_errors",
+          "pass": false,
+          "detail": "Console error: Failed to load resource: the server responded with a status of 404 (Not Found)"
+        },
+        {
+          "check": "no_console_errors",
+          "pass": false,
+          "detail": "Console error: Failed to load resource: the server responded with a status of 404 (Not Found)"
+        }
+      ]
+    },
+    "/contact-us": {
+      "label": "Contact Us EN",
+      "checks": [
+        {
+          "check": "snapshot_mounted",
+          "pass": false,
+          "detail": "NO snapshot/content container found"
+        },
+        {
+          "check": "page_height",
+          "pass": true,
+          "detail": "Page height: 1080px"
+        },
+        {
+          "check": "body_loaded_class",
+          "pass": false,
+          "detail": "body.loaded MISSING"
+        },
+        {
+          "check": "contact_strip_present",
+          "pass": false,
+          "detail": "Contact strip MISSING",
+          "isSoftWarning": false
+        },
+        {
+          "check": "show_elements",
+          "pass": false,
+          "detail": ".show elements: 0"
+        },
+        {
+          "check": "owl_carousels",
+          "pass": true,
+          "detail": ".owl-loaded: 0"
+        },
+        {
+          "check": "no_404s",
+          "pass": true,
+          "detail": "No 404s for critical assets"
+        },
+        {
+          "check": "no_console_errors",
+          "pass": true,
+          "detail": "No fatal console errors"
+        }
+      ]
+    },
+    "/dev": {
+      "label": "Dev EN",
+      "checks": [
+        {
+          "check": "snapshot_mounted",
+          "pass": true,
+          "detail": "[data-triolla-snapshot] count: 1"
+        },
+        {
+          "check": "page_height",
+          "pass": true,
+          "detail": "Page height: 13527px"
+        },
+        {
+          "check": "body_loaded_class",
+          "pass": true,
+          "detail": "body.loaded ✓"
+        },
+        {
+          "check": "footer_present",
+          "pass": true,
+          "detail": ".footer present ✓"
+        },
+        {
+          "check": "faq_present",
+          "pass": true,
+          "detail": "FAQ present ✓"
+        },
+        {
+          "check": "contact_strip_present",
+          "pass": true,
+          "detail": "Contact strip present ✓",
+          "isSoftWarning": false
+        },
+        {
+          "check": "show_elements",
+          "pass": true,
+          "detail": ".show elements: 4"
+        },
+        {
+          "check": "owl_carousels",
+          "pass": true,
+          "detail": ".owl-loaded: 2"
+        },
+        {
+          "check": "no_404s",
+          "pass": true,
+          "detail": "No 404s for critical assets"
+        },
+        {
+          "check": "no_console_errors",
+          "pass": true,
+          "detail": "No fatal console errors"
+        }
+      ]
+    },
+    "/b2b": {
+      "label": "B2B EN",
+      "checks": [
+        {
+          "check": "snapshot_mounted",
+          "pass": true,
+          "detail": "[data-triolla-snapshot] count: 1"
+        },
+        {
+          "check": "page_height",
+          "pass": true,
+          "detail": "Page height: 14778px"
+        },
+        {
+          "check": "body_loaded_class",
+          "pass": true,
+          "detail": "body.loaded ✓"
+        },
+        {
+          "check": "footer_present",
+          "pass": true,
+          "detail": ".footer present ✓"
+        },
+        {
+          "check": "faq_present",
+          "pass": true,
+          "detail": "FAQ present ✓"
+        },
+        {
+          "check": "contact_strip_present",
+          "pass": true,
+          "detail": "Contact strip present ✓",
+          "isSoftWarning": false
+        },
+        {
+          "check": "show_elements",
+          "pass": true,
+          "detail": ".show elements: 11"
+        },
+        {
+          "check": "owl_carousels",
+          "pass": true,
+          "detail": ".owl-loaded: 1"
+        },
+        {
+          "check": "no_404s",
+          "pass": true,
+          "detail": "No 404s for critical assets"
+        },
+        {
+          "check": "no_console_errors",
+          "pass": true,
+          "detail": "No fatal console errors"
+        }
+      ]
+    },
+    "/startups-tech": {
+      "label": "Startups Tech EN",
+      "checks": [
+        {
+          "check": "snapshot_mounted",
+          "pass": true,
+          "detail": "[data-triolla-snapshot] count: 1"
+        },
+        {
+          "check": "page_height",
+          "pass": true,
+          "detail": "Page height: 16220px"
+        },
+        {
+          "check": "body_loaded_class",
+          "pass": true,
+          "detail": "body.loaded ✓"
+        },
+        {
+          "check": "footer_present",
+          "pass": true,
+          "detail": ".footer present ✓"
+        },
+        {
+          "check": "faq_present",
+          "pass": true,
+          "detail": "FAQ present ✓"
+        },
+        {
+          "check": "contact_strip_present",
+          "pass": true,
+          "detail": "Contact strip present ✓",
+          "isSoftWarning": false
+        },
+        {
+          "check": "show_elements",
+          "pass": true,
+          "detail": ".show elements: 12"
+        },
+        {
+          "check": "owl_carousels",
+          "pass": true,
+          "detail": ".owl-loaded: 1"
+        },
+        {
+          "check": "no_404s",
+          "pass": true,
+          "detail": "No 404s for critical assets"
+        },
+        {
+          "check": "no_console_errors",
+          "pass": false,
+          "detail": "Console error: Failed to load resource: net::ERR_NETWORK_IO_SUSPENDED"
+        },
+        {
+          "check": "no_console_errors",
+          "pass": false,
+          "detail": "Console error: Failed to load resource: net::ERR_NETWORK_IO_SUSPENDED"
+        },
+        {
+          "check": "no_console_errors",
+          "pass": false,
+          "detail": "Console error: Failed to load resource: net::ERR_NETWORK_IO_SUSPENDED"
+        }
+      ]
+    },
+    "/saas-platforms": {
+      "label": "SaaS Platforms EN",
+      "checks": [
+        {
+          "check": "snapshot_mounted",
+          "pass": true,
+          "detail": "[data-triolla-snapshot] count: 1"
+        },
+        {
+          "check": "page_height",
+          "pass": true,
+          "detail": "Page height: 17373px"
+        },
+        {
+          "check": "body_loaded_class",
+          "pass": true,
+          "detail": "body.loaded ✓"
+        },
+        {
+          "check": "footer_present",
+          "pass": true,
+          "detail": ".footer present ✓"
+        },
+        {
+          "check": "faq_present",
+          "pass": true,
+          "detail": "FAQ present ✓"
+        },
+        {
+          "check": "contact_strip_present",
+          "pass": true,
+          "detail": "Contact strip present ✓",
+          "isSoftWarning": false
+        },
+        {
+          "check": "show_elements",
+          "pass": true,
+          "detail": ".show elements: 13"
+        },
+        {
+          "check": "owl_carousels",
+          "pass": true,
+          "detail": ".owl-loaded: 1"
+        },
+        {
+          "check": "no_404s",
+          "pass": true,
+          "detail": "No 404s for critical assets"
+        },
+        {
+          "check": "no_console_errors",
+          "pass": true,
+          "detail": "No fatal console errors"
+        }
+      ]
+    },
+    "/terms-of-use": {
+      "label": "Terms of Use EN",
+      "checks": [
+        {
+          "check": "snapshot_mounted",
+          "pass": true,
+          "detail": "[data-triolla-snapshot] count: 1"
+        },
+        {
+          "check": "page_height",
+          "pass": true,
+          "detail": "Page height: 7886px"
+        },
+        {
+          "check": "body_loaded_class",
+          "pass": true,
+          "detail": "body.loaded ✓"
+        },
+        {
+          "check": "footer_present",
+          "pass": true,
+          "detail": ".footer present ✓"
+        },
+        {
+          "check": "contact_strip_present",
+          "pass": false,
+          "detail": "Contact strip MISSING",
+          "isSoftWarning": false
+        },
+        {
+          "check": "show_elements",
+          "pass": true,
+          "detail": ".show elements: 3"
+        },
+        {
+          "check": "owl_carousels",
+          "pass": true,
+          "detail": ".owl-loaded: 0"
+        },
+        {
+          "check": "no_404s",
+          "pass": true,
+          "detail": "No 404s for critical assets"
+        },
+        {
+          "check": "no_console_errors",
+          "pass": true,
+          "detail": "No fatal console errors"
+        }
+      ]
+    },
+    "/services": {
+      "label": "Services EN",
+      "checks": [
+        {
+          "check": "snapshot_mounted",
+          "pass": true,
+          "detail": "[data-triolla-snapshot] count: 1"
+        },
+        {
+          "check": "page_height",
+          "pass": true,
+          "detail": "Page height: 12136px"
+        },
+        {
+          "check": "body_loaded_class",
+          "pass": true,
+          "detail": "body.loaded ✓"
+        },
+        {
+          "check": "footer_present",
+          "pass": true,
+          "detail": ".footer present ✓"
+        },
+        {
+          "check": "faq_present",
+          "pass": true,
+          "detail": "FAQ present ✓"
+        },
+        {
+          "check": "contact_strip_present",
+          "pass": true,
+          "detail": "Contact strip present ✓",
+          "isSoftWarning": false
+        },
+        {
+          "check": "show_elements",
+          "pass": true,
+          "detail": ".show elements: 4"
+        },
+        {
+          "check": "owl_carousels",
+          "pass": true,
+          "detail": ".owl-loaded: 0"
+        },
+        {
+          "check": "no_404s",
+          "pass": true,
+          "detail": "No 404s for critical assets"
+        },
+        {
+          "check": "no_console_errors",
+          "pass": true,
+          "detail": "No fatal console errors"
+        }
+      ]
+    },
+    "/technology": {
+      "label": "Technology EN",
+      "checks": [
+        {
+          "check": "snapshot_mounted",
+          "pass": true,
+          "detail": "[data-triolla-snapshot] count: 1"
+        },
+        {
+          "check": "page_height",
+          "pass": true,
+          "detail": "Page height: 13408px"
+        },
+        {
+          "check": "body_loaded_class",
+          "pass": true,
+          "detail": "body.loaded ✓"
+        },
+        {
+          "check": "footer_present",
+          "pass": true,
+          "detail": ".footer present ✓"
+        },
+        {
+          "check": "faq_present",
+          "pass": true,
+          "detail": "FAQ present ✓"
+        },
+        {
+          "check": "contact_strip_present",
+          "pass": true,
+          "detail": "Contact strip present ✓",
+          "isSoftWarning": false
+        },
+        {
+          "check": "show_elements",
+          "pass": true,
+          "detail": ".show elements: 4"
+        },
+        {
+          "check": "owl_carousels",
+          "pass": true,
+          "detail": ".owl-loaded: 0"
+        },
+        {
+          "check": "no_404s",
+          "pass": true,
+          "detail": "No 404s for critical assets"
+        },
+        {
+          "check": "no_console_errors",
+          "pass": true,
+          "detail": "No fatal console errors"
+        }
+      ]
+    },
+    "/accessibility-statement?lang=he": {
+      "label": "Accessibility HE",
+      "checks": [
+        {
+          "check": "snapshot_mounted",
+          "pass": true,
+          "detail": "[data-triolla-snapshot] count: 1"
+        },
+        {
+          "check": "page_height",
+          "pass": true,
+          "detail": "Page height: 3796px"
+        },
+        {
+          "check": "body_loaded_class",
+          "pass": true,
+          "detail": "body.loaded ✓"
+        },
+        {
+          "check": "footer_present",
+          "pass": true,
+          "detail": ".footer present ✓"
+        },
+        {
+          "check": "contact_strip_present",
+          "pass": false,
+          "detail": "Contact strip MISSING",
+          "isSoftWarning": false
+        },
+        {
+          "check": "show_elements",
+          "pass": true,
+          "detail": ".show elements: 4"
+        },
+        {
+          "check": "owl_carousels",
+          "pass": true,
+          "detail": ".owl-loaded: 0"
+        },
+        {
+          "check": "no_404s",
+          "pass": true,
+          "detail": "No 404s for critical assets"
+        },
+        {
+          "check": "no_console_errors",
+          "pass": true,
+          "detail": "No fatal console errors"
+        }
+      ]
+    },
+    "/privacy-policy?lang=he": {
+      "label": "Privacy Policy HE",
+      "checks": [
+        {
+          "check": "snapshot_mounted",
+          "pass": true,
+          "detail": "[data-triolla-snapshot] count: 1"
+        },
+        {
+          "check": "page_height",
+          "pass": true,
+          "detail": "Page height: 4471px"
+        },
+        {
+          "check": "body_loaded_class",
+          "pass": true,
+          "detail": "body.loaded ✓"
+        },
+        {
+          "check": "footer_present",
+          "pass": true,
+          "detail": ".footer present ✓"
+        },
+        {
+          "check": "contact_strip_present",
+          "pass": false,
+          "detail": "Contact strip MISSING",
+          "isSoftWarning": false
+        },
+        {
+          "check": "show_elements",
+          "pass": true,
+          "detail": ".show elements: 3"
+        },
+        {
+          "check": "owl_carousels",
+          "pass": true,
+          "detail": ".owl-loaded: 0"
+        },
+        {
+          "check": "no_404s",
+          "pass": true,
+          "detail": "No 404s for critical assets"
+        },
+        {
+          "check": "no_console_errors",
+          "pass": true,
+          "detail": "No fatal console errors"
+        }
+      ]
+    },
+    "/branding-studio?lang=he": {
+      "label": "Branding Studio HE",
+      "checks": [
+        {
+          "check": "snapshot_mounted",
+          "pass": true,
+          "detail": "[data-triolla-snapshot] count: 1"
+        },
+        {
+          "check": "page_height",
+          "pass": true,
+          "detail": "Page height: 3575px"
+        },
+        {
+          "check": "body_loaded_class",
+          "pass": true,
+          "detail": "body.loaded ✓"
+        },
+        {
+          "check": "footer_present",
+          "pass": true,
+          "detail": ".footer present ✓"
+        },
+        {
+          "check": "faq_present",
+          "pass": false,
+          "detail": "FAQ MISSING"
+        },
+        {
+          "check": "contact_strip_present",
+          "pass": true,
+          "detail": "Contact strip present ✓",
+          "isSoftWarning": false
+        },
+        {
+          "check": "show_elements",
+          "pass": true,
+          "detail": ".show elements: 5"
+        },
+        {
+          "check": "owl_carousels",
+          "pass": true,
+          "detail": ".owl-loaded: 0"
+        },
+        {
+          "check": "no_404s",
+          "pass": true,
+          "detail": "No 404s for critical assets"
+        },
+        {
+          "check": "no_console_errors",
+          "pass": true,
+          "detail": "No fatal console errors"
+        }
+      ]
+    },
+    "/b2b?lang=he": {
+      "label": "B2B HE",
+      "checks": [
+        {
+          "check": "snapshot_mounted",
+          "pass": true,
+          "detail": "[data-triolla-snapshot] count: 1"
+        },
+        {
+          "check": "page_height",
+          "pass": true,
+          "detail": "Page height: 14778px"
+        },
+        {
+          "check": "body_loaded_class",
+          "pass": true,
+          "detail": "body.loaded ✓"
+        },
+        {
+          "check": "footer_present",
+          "pass": true,
+          "detail": ".footer present ✓"
+        },
+        {
+          "check": "faq_present",
+          "pass": true,
+          "detail": "FAQ present ✓"
+        },
+        {
+          "check": "contact_strip_present",
+          "pass": true,
+          "detail": "Contact strip present ✓",
+          "isSoftWarning": false
+        },
+        {
+          "check": "show_elements",
+          "pass": true,
+          "detail": ".show elements: 11"
+        },
+        {
+          "check": "owl_carousels",
+          "pass": true,
+          "detail": ".owl-loaded: 1"
+        },
+        {
+          "check": "no_404s",
+          "pass": true,
+          "detail": "No 404s for critical assets"
+        },
+        {
+          "check": "no_console_errors",
+          "pass": true,
+          "detail": "No fatal console errors"
+        }
+      ]
+    },
+    "/services?lang=he": {
+      "label": "Services HE",
+      "checks": [
+        {
+          "check": "snapshot_mounted",
+          "pass": true,
+          "detail": "[data-triolla-snapshot] count: 1"
+        },
+        {
+          "check": "page_height",
+          "pass": true,
+          "detail": "Page height: 12136px"
+        },
+        {
+          "check": "body_loaded_class",
+          "pass": true,
+          "detail": "body.loaded ✓"
+        },
+        {
+          "check": "footer_present",
+          "pass": true,
+          "detail": ".footer present ✓"
+        },
+        {
+          "check": "faq_present",
+          "pass": true,
+          "detail": "FAQ present ✓"
+        },
+        {
+          "check": "contact_strip_present",
+          "pass": true,
+          "detail": "Contact strip present ✓",
+          "isSoftWarning": false
+        },
+        {
+          "check": "show_elements",
+          "pass": true,
+          "detail": ".show elements: 4"
+        },
+        {
+          "check": "owl_carousels",
+          "pass": true,
+          "detail": ".owl-loaded: 0"
+        },
+        {
+          "check": "no_404s",
+          "pass": true,
+          "detail": "No 404s for critical assets"
+        },
+        {
+          "check": "no_console_errors",
+          "pass": true,
+          "detail": "No fatal console errors"
+        }
+      ]
+    },
+    "/agritech": {
+      "label": "Agritech EN",
+      "checks": [
+        {
+          "check": "snapshot_mounted",
+          "pass": true,
+          "detail": "[data-triolla-snapshot] count: 1"
+        },
+        {
+          "check": "page_height",
+          "pass": true,
+          "detail": "Page height: 13525px"
+        },
+        {
+          "check": "body_loaded_class",
+          "pass": true,
+          "detail": "body.loaded ✓"
+        },
+        {
+          "check": "footer_present",
+          "pass": true,
+          "detail": ".footer present ✓"
+        },
+        {
+          "check": "faq_present",
+          "pass": true,
+          "detail": "FAQ present ✓"
+        },
+        {
+          "check": "contact_strip_present",
+          "pass": true,
+          "detail": "Contact strip present ✓",
+          "isSoftWarning": false
+        },
+        {
+          "check": "show_elements",
+          "pass": true,
+          "detail": ".show elements: 10"
+        },
+        {
+          "check": "owl_carousels",
+          "pass": true,
+          "detail": ".owl-loaded: 1"
+        },
+        {
+          "check": "no_404s",
+          "pass": true,
+          "detail": "No 404s for critical assets"
+        },
+        {
+          "check": "no_console_errors",
+          "pass": true,
+          "detail": "No fatal console errors"
+        }
+      ]
+    },
+    "/b2c": {
+      "label": "B2C EN",
+      "checks": [
+        {
+          "check": "snapshot_mounted",
+          "pass": true,
+          "detail": "[data-triolla-snapshot] count: 1"
+        },
+        {
+          "check": "page_height",
+          "pass": true,
+          "detail": "Page height: 19258px"
+        },
+        {
+          "check": "body_loaded_class",
+          "pass": true,
+          "detail": "body.loaded ✓"
+        },
+        {
+          "check": "footer_present",
+          "pass": true,
+          "detail": ".footer present ✓"
+        },
+        {
+          "check": "faq_present",
+          "pass": true,
+          "detail": "FAQ present ✓"
+        },
+        {
+          "check": "contact_strip_present",
+          "pass": true,
+          "detail": "Contact strip present ✓",
+          "isSoftWarning": false
+        },
+        {
+          "check": "show_elements",
+          "pass": true,
+          "detail": ".show elements: 15"
+        },
+        {
+          "check": "owl_carousels",
+          "pass": true,
+          "detail": ".owl-loaded: 1"
+        },
+        {
+          "check": "no_404s",
+          "pass": true,
+          "detail": "No 404s for critical assets"
+        },
+        {
+          "check": "no_console_errors",
+          "pass": true,
+          "detail": "No fatal console errors"
+        }
+      ]
+    },
+    "/cyber-security": {
+      "label": "Cyber Security EN",
+      "checks": [
+        {
+          "check": "snapshot_mounted",
+          "pass": true,
+          "detail": "[data-triolla-snapshot] count: 1"
+        },
+        {
+          "check": "page_height",
+          "pass": true,
+          "detail": "Page height: 13802px"
+        },
+        {
+          "check": "body_loaded_class",
+          "pass": true,
+          "detail": "body.loaded ✓"
+        },
+        {
+          "check": "footer_present",
+          "pass": true,
+          "detail": ".footer present ✓"
+        },
+        {
+          "check": "faq_present",
+          "pass": true,
+          "detail": "FAQ present ✓"
+        },
+        {
+          "check": "contact_strip_present",
+          "pass": true,
+          "detail": "Contact strip present ✓",
+          "isSoftWarning": false
+        },
+        {
+          "check": "show_elements",
+          "pass": true,
+          "detail": ".show elements: 10"
+        },
+        {
+          "check": "owl_carousels",
+          "pass": true,
+          "detail": ".owl-loaded: 1"
+        },
+        {
+          "check": "no_404s",
+          "pass": true,
+          "detail": "No 404s for critical assets"
+        },
+        {
+          "check": "no_console_errors",
+          "pass": true,
+          "detail": "No fatal console errors"
+        }
+      ]
+    },
+    "/device-iot": {
+      "label": "Device & IoT EN",
+      "checks": [
+        {
+          "check": "snapshot_mounted",
+          "pass": true,
+          "detail": "[data-triolla-snapshot] count: 1"
+        },
+        {
+          "check": "page_height",
+          "pass": true,
+          "detail": "Page height: 15957px"
+        },
+        {
+          "check": "body_loaded_class",
+          "pass": true,
+          "detail": "body.loaded ✓"
+        },
+        {
+          "check": "footer_present",
+          "pass": true,
+          "detail": ".footer present ✓"
+        },
+        {
+          "check": "faq_present",
+          "pass": true,
+          "detail": "FAQ present ✓"
+        },
+        {
+          "check": "contact_strip_present",
+          "pass": true,
+          "detail": "Contact strip present ✓",
+          "isSoftWarning": false
+        },
+        {
+          "check": "show_elements",
+          "pass": true,
+          "detail": ".show elements: 12"
+        },
+        {
+          "check": "owl_carousels",
+          "pass": true,
+          "detail": ".owl-loaded: 1"
+        },
+        {
+          "check": "no_404s",
+          "pass": true,
+          "detail": "No 404s for critical assets"
+        },
+        {
+          "check": "no_console_errors",
+          "pass": true,
+          "detail": "No fatal console errors"
+        }
+      ]
+    },
+    "/fintech-finance": {
+      "label": "Fintech EN",
+      "checks": [
+        {
+          "check": "snapshot_mounted",
+          "pass": true,
+          "detail": "[data-triolla-snapshot] count: 1"
+        },
+        {
+          "check": "page_height",
+          "pass": true,
+          "detail": "Page height: 13825px"
+        },
+        {
+          "check": "body_loaded_class",
+          "pass": true,
+          "detail": "body.loaded ✓"
+        },
+        {
+          "check": "footer_present",
+          "pass": true,
+          "detail": ".footer present ✓"
+        },
+        {
+          "check": "faq_present",
+          "pass": true,
+          "detail": "FAQ present ✓"
+        },
+        {
+          "check": "contact_strip_present",
+          "pass": true,
+          "detail": "Contact strip present ✓",
+          "isSoftWarning": false
+        },
+        {
+          "check": "show_elements",
+          "pass": true,
+          "detail": ".show elements: 10"
+        },
+        {
+          "check": "owl_carousels",
+          "pass": true,
+          "detail": ".owl-loaded: 1"
+        },
+        {
+          "check": "no_404s",
+          "pass": true,
+          "detail": "No 404s for critical assets"
+        },
+        {
+          "check": "no_console_errors",
+          "pass": true,
+          "detail": "No fatal console errors"
+        }
+      ]
+    },
+    "/gaming": {
+      "label": "Gaming EN",
+      "checks": [
+        {
+          "check": "snapshot_mounted",
+          "pass": true,
+          "detail": "[data-triolla-snapshot] count: 1"
+        },
+        {
+          "check": "page_height",
+          "pass": true,
+          "detail": "Page height: 18283px"
+        },
+        {
+          "check": "body_loaded_class",
+          "pass": true,
+          "detail": "body.loaded ✓"
+        },
+        {
+          "check": "footer_present",
+          "pass": true,
+          "detail": ".footer present ✓"
+        },
+        {
+          "check": "faq_present",
+          "pass": true,
+          "detail": "FAQ present ✓"
+        },
+        {
+          "check": "contact_strip_present",
+          "pass": true,
+          "detail": "Contact strip present ✓",
+          "isSoftWarning": false
+        },
+        {
+          "check": "show_elements",
+          "pass": true,
+          "detail": ".show elements: 14"
+        },
+        {
+          "check": "owl_carousels",
+          "pass": true,
+          "detail": ".owl-loaded: 1"
+        },
+        {
+          "check": "no_404s",
+          "pass": false,
+          "detail": "404: /images/cha-games-mobile.png"
+        },
+        {
+          "check": "no_404s",
+          "pass": false,
+          "detail": "404: /images/aspire-golobal-mobile.png"
+        },
+        {
+          "check": "no_404s",
+          "pass": false,
+          "detail": "404: /images/survivor-mobile.png"
+        },
+        {
+          "check": "no_console_errors",
+          "pass": false,
+          "detail": "Console error: Failed to load resource: the server responded with a status of 404 (Not Found)"
+        },
+        {
+          "check": "no_console_errors",
+          "pass": false,
+          "detail": "Console error: Failed to load resource: the server responded with a status of 404 (Not Found)"
+        },
+        {
+          "check": "no_console_errors",
+          "pass": false,
+          "detail": "Console error: Failed to load resource: the server responded with a status of 404 (Not Found)"
+        }
+      ]
+    },
+    "/medical-healthcare": {
+      "label": "Medical EN",
+      "checks": [
+        {
+          "check": "snapshot_mounted",
+          "pass": true,
+          "detail": "[data-triolla-snapshot] count: 1"
+        },
+        {
+          "check": "page_height",
+          "pass": true,
+          "detail": "Page height: 17331px"
+        },
+        {
+          "check": "body_loaded_class",
+          "pass": true,
+          "detail": "body.loaded ✓"
+        },
+        {
+          "check": "footer_present",
+          "pass": true,
+          "detail": ".footer present ✓"
+        },
+        {
+          "check": "faq_present",
+          "pass": true,
+          "detail": "FAQ present ✓"
+        },
+        {
+          "check": "contact_strip_present",
+          "pass": true,
+          "detail": "Contact strip present ✓",
+          "isSoftWarning": false
+        },
+        {
+          "check": "show_elements",
+          "pass": true,
+          "detail": ".show elements: 13"
+        },
+        {
+          "check": "owl_carousels",
+          "pass": true,
+          "detail": ".owl-loaded: 1"
+        },
+        {
+          "check": "no_404s",
+          "pass": false,
+          "detail": "404: /images/Soroka-mobile.png"
+        },
+        {
+          "check": "no_console_errors",
+          "pass": false,
+          "detail": "Console error: Failed to load resource: the server responded with a status of 404 (Not Found)"
+        }
+      ]
+    },
+    "/mobile-apps": {
+      "label": "Mobile Apps EN",
+      "checks": [
+        {
+          "check": "snapshot_mounted",
+          "pass": true,
+          "detail": "[data-triolla-snapshot] count: 1"
+        },
+        {
+          "check": "page_height",
+          "pass": true,
+          "detail": "Page height: 14899px"
+        },
+        {
+          "check": "body_loaded_class",
+          "pass": true,
+          "detail": "body.loaded ✓"
+        },
+        {
+          "check": "footer_present",
+          "pass": true,
+          "detail": ".footer present ✓"
+        },
+        {
+          "check": "faq_present",
+          "pass": true,
+          "detail": "FAQ present ✓"
+        },
+        {
+          "check": "contact_strip_present",
+          "pass": true,
+          "detail": "Contact strip present ✓",
+          "isSoftWarning": false
+        },
+        {
+          "check": "show_elements",
+          "pass": true,
+          "detail": ".show elements: 11"
+        },
+        {
+          "check": "owl_carousels",
+          "pass": true,
+          "detail": ".owl-loaded: 1"
+        },
+        {
+          "check": "no_404s",
+          "pass": true,
+          "detail": "No 404s for critical assets"
+        },
+        {
+          "check": "no_console_errors",
+          "pass": true,
+          "detail": "No fatal console errors"
+        }
+      ]
+    },
+    "/services/ux-research": {
+      "label": "Services: UX Research EN",
+      "checks": [
+        {
+          "check": "page_load",
+          "pass": false,
+          "detail": "Page load failed: page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"http://localhost:3000/services/ux-research\", waiting until \"networkidle\"\n"
+        }
+      ]
+    },
+    "/services-motion-design": {
+      "label": "Motion Design EN",
+      "checks": [
+        {
+          "check": "snapshot_mounted",
+          "pass": true,
+          "detail": "[data-triolla-snapshot] count: 1"
+        },
+        {
+          "check": "page_height",
+          "pass": true,
+          "detail": "Page height: 14704px"
+        },
+        {
+          "check": "body_loaded_class",
+          "pass": true,
+          "detail": "body.loaded ✓"
+        },
+        {
+          "check": "footer_present",
+          "pass": true,
+          "detail": ".footer present ✓"
+        },
+        {
+          "check": "contact_strip_present",
+          "pass": true,
+          "detail": "Contact strip present ✓",
+          "isSoftWarning": false
+        },
+        {
+          "check": "show_elements",
+          "pass": true,
+          "detail": ".show elements: 4"
+        },
+        {
+          "check": "no_404s",
+          "pass": true,
+          "detail": "No 404s for critical assets"
+        },
+        {
+          "check": "no_console_errors",
+          "pass": true,
+          "detail": "No fatal console errors"
+        }
+      ]
+    },
+    "/services-prototyping": {
+      "label": "Prototyping EN",
+      "checks": [
+        {
+          "check": "snapshot_mounted",
+          "pass": true,
+          "detail": "[data-triolla-snapshot] count: 1"
+        },
+        {
+          "check": "page_height",
+          "pass": true,
+          "detail": "Page height: 3496px"
+        },
+        {
+          "check": "body_loaded_class",
+          "pass": true,
+          "detail": "body.loaded ✓"
+        },
+        {
+          "check": "footer_present",
+          "pass": true,
+          "detail": ".footer present ✓"
+        },
+        {
+          "check": "contact_strip_present",
+          "pass": true,
+          "detail": "Contact strip present ✓",
+          "isSoftWarning": false
+        },
+        {
+          "check": "show_elements",
+          "pass": true,
+          "detail": ".show elements: 5"
+        },
+        {
+          "check": "no_404s",
+          "pass": true,
+          "detail": "No 404s for critical assets"
+        },
+        {
+          "check": "no_console_errors",
+          "pass": true,
+          "detail": "No fatal console errors"
+        }
+      ]
+    },
+    "/services-ui-design": {
+      "label": "UI Design EN",
+      "checks": [
+        {
+          "check": "snapshot_mounted",
+          "pass": true,
+          "detail": "[data-triolla-snapshot] count: 1"
+        },
+        {
+          "check": "page_height",
+          "pass": true,
+          "detail": "Page height: 4052px"
+        },
+        {
+          "check": "body_loaded_class",
+          "pass": true,
+          "detail": "body.loaded ✓"
+        },
+        {
+          "check": "footer_present",
+          "pass": true,
+          "detail": ".footer present ✓"
+        },
+        {
+          "check": "contact_strip_present",
+          "pass": true,
+          "detail": "Contact strip present ✓",
+          "isSoftWarning": false
+        },
+        {
+          "check": "show_elements",
+          "pass": true,
+          "detail": ".show elements: 5"
+        },
+        {
+          "check": "no_404s",
+          "pass": true,
+          "detail": "No 404s for critical assets"
+        },
+        {
+          "check": "no_console_errors",
+          "pass": true,
+          "detail": "No fatal console errors"
+        }
+      ]
+    },
+    "/blog-how-user-experience-design-drives-startup-success-tips-for-building-winning-digital-products": {
+      "label": "Blog: Startup Success EN",
+      "checks": [
+        {
+          "check": "snapshot_mounted",
+          "pass": true,
+          "detail": "[data-triolla-snapshot] count: 1"
+        },
+        {
+          "check": "page_height",
+          "pass": true,
+          "detail": "Page height: 5943px"
+        },
+        {
+          "check": "body_loaded_class",
+          "pass": true,
+          "detail": "body.loaded ✓"
+        },
+        {
+          "check": "footer_present",
+          "pass": true,
+          "detail": ".footer present ✓"
+        },
+        {
+          "check": "contact_strip_present",
+          "pass": true,
+          "detail": "Contact strip present ✓",
+          "isSoftWarning": false
+        },
+        {
+          "check": "show_elements",
+          "pass": true,
+          "detail": ".show elements: 3"
+        },
+        {
+          "check": "no_404s",
+          "pass": true,
+          "detail": "No 404s for critical assets"
+        },
+        {
+          "check": "no_console_errors",
+          "pass": true,
+          "detail": "No fatal console errors"
+        }
+      ]
+    },
+    "/blog-cybersecurity-design-ux-a-founder-playbook": {
+      "label": "Blog: Cyber UX EN",
+      "checks": [
+        {
+          "check": "page_load",
+          "pass": false,
+          "detail": "Page load failed: page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"http://localhost:3000/blog-cybersecurity-design-ux-a-founder-playbook\", waiting until \"networkidle\"\n"
+        }
+      ]
+    },
+    "/he/blog/he-blog-how-user-experience-design-drives-startup-success-tips-for-building-winning-digital-products": {
+      "label": "Blog: Startup Success HE",
+      "checks": [
+        {
+          "check": "snapshot_mounted",
+          "pass": false,
+          "detail": "NO snapshot/content container found"
+        },
+        {
+          "check": "page_height",
+          "pass": true,
+          "detail": "Page height: 1080px"
+        },
+        {
+          "check": "body_loaded_class",
+          "pass": false,
+          "detail": "body.loaded MISSING"
+        },
+        {
+          "check": "footer_present",
+          "pass": false,
+          "detail": ".footer MISSING"
+        },
+        {
+          "check": "contact_strip_present",
+          "pass": false,
+          "detail": "Contact strip MISSING",
+          "isSoftWarning": true
+        },
+        {
+          "check": "show_elements",
+          "pass": false,
+          "detail": ".show elements: 0"
+        },
+        {
+          "check": "no_404s",
+          "pass": true,
+          "detail": "No 404s for critical assets"
+        },
+        {
+          "check": "no_console_errors",
+          "pass": false,
+          "detail": "Console error: Failed to load resource: the server responded with a status of 404 (Not Found)"
+        }
+      ]
+    }
+  }
+}

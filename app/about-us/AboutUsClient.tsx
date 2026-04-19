@@ -12,11 +12,17 @@ import aboutDeps from "./about-us-deps.json";
 import { initTriollaOwlCarousels } from "./initTriollaCarousels";
 import { mountTriollaSnapshotRevealStack } from "../lib/mountTriollaSnapshotRevealStack";
 import { mountTriollaHeaderPill } from "./mountTriollaHeaderPill";
+import { mountTriollaFaqAccordion } from "../lib/mountTriollaFaqAccordion";
+import { mountTriollaFooterAccordion } from "../lib/mountTriollaFooterAccordion";
 import { initTriollaLottie } from "../lib/initTriollaLottie";
 import {
   mountTriollaMobileMenu,
   stripJQueryMenutoggleClickHandlers,
 } from "../lib/mountTriollaMobileMenu";
+import {
+  injectSharedFaq,
+  injectSharedFooter,
+} from "../lib/triollaSharedBodyInject";
 
 const FRAGMENT_URL = "/fragments/about-us-body.html";
 
@@ -24,6 +30,8 @@ export function AboutUsClient() {
   const rootRef = useRef<HTMLDivElement>(null);
   const disposeRevealRef = useRef<(() => void) | null>(null);
   const disposeHeaderPillRef = useRef<(() => void) | null>(null);
+  const disposeFaqRef = useRef<(() => void) | null>(null);
+  const disposeFooterAccordionRef = useRef<(() => void) | null>(null);
   const disposeMobileMenuRef = useRef<(() => void) | null>(null);
   const [phase, setPhase] = useState<"loading" | "ready" | "error">("loading");
   const { assetBase, bodyClass, dataRsssl, css, js } = aboutDeps;
@@ -44,6 +52,8 @@ export function AboutUsClient() {
         const el = rootRef.current;
         if (!el) return;
         el.innerHTML = html;
+        await injectSharedFaq(el, "en");
+        await injectSharedFooter(el, "en");
         rewriteTriollaNavLinks(el);
         await waitForSnapshotFonts();
         await new Promise<void>((r) =>
@@ -147,6 +157,10 @@ export function AboutUsClient() {
           disposeRevealRef.current = mountTriollaSnapshotRevealStack(el, "about");
           disposeHeaderPillRef.current?.();
           disposeHeaderPillRef.current = mountTriollaHeaderPill(el);
+          disposeFaqRef.current?.();
+          disposeFaqRef.current = mountTriollaFaqAccordion(el);
+          disposeFooterAccordionRef.current?.();
+          disposeFooterAccordionRef.current = mountTriollaFooterAccordion(el);
           stripJQueryMenutoggleClickHandlers(el);
           rewriteTriollaNavLinks(el);
         } catch (deferredErr) {
@@ -163,6 +177,10 @@ export function AboutUsClient() {
       disposeRevealRef.current = null;
       disposeHeaderPillRef.current?.();
       disposeHeaderPillRef.current = null;
+      disposeFaqRef.current?.();
+      disposeFaqRef.current = null;
+      disposeFooterAccordionRef.current?.();
+      disposeFooterAccordionRef.current = null;
       disposeMobileMenuRef.current?.();
       disposeMobileMenuRef.current = null;
     };

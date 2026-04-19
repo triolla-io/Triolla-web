@@ -14,11 +14,18 @@ import aboutUsDepsHe from "./about-us-he-deps.json";
 import { initTriollaOwlCarousels } from "./initTriollaCarousels";
 import { mountTriollaSnapshotRevealStack } from "../../lib/mountTriollaSnapshotRevealStack";
 import { mountTriollaHeaderPill } from "./mountTriollaHeaderPill";
+import { mountTriollaFaqAccordion } from "../../lib/mountTriollaFaqAccordion";
+import { mountTriollaFooterAccordion } from "../../lib/mountTriollaFooterAccordion";
 import { initTriollaLottie } from "../../lib/initTriollaLottie";
 import {
   mountTriollaMobileMenu,
   stripJQueryMenutoggleClickHandlers,
 } from "../../lib/mountTriollaMobileMenu";
+import {
+  injectSharedFaq,
+  injectSharedFooter,
+  localizeContactStripForHebrew,
+} from "../../lib/triollaSharedBodyInject";
 
 function getFragmentUrl(lang: string): string {
   return lang === "he"
@@ -53,6 +60,8 @@ export function AboutUsClient({ lang }: { lang: string }) {
   const rootRef = useRef<HTMLDivElement>(null);
   const disposeRevealRef = useRef<(() => void) | null>(null);
   const disposeHeaderPillRef = useRef<(() => void) | null>(null);
+  const disposeFaqRef = useRef<(() => void) | null>(null);
+  const disposeFooterAccordionRef = useRef<(() => void) | null>(null);
   const disposeMobileMenuRef = useRef<(() => void) | null>(null);
   const [phase, setPhase] = useState<"loading" | "ready" | "error">("loading");
   const { bodyClass, dataRsssl } = depsForLang(lang);
@@ -79,6 +88,11 @@ export function AboutUsClient({ lang }: { lang: string }) {
         if (!el) return;
         el.innerHTML = html;
         el.setAttribute("dir", lang === "he" ? "rtl" : "ltr");
+        await injectSharedFaq(el, lang === "he" ? "he" : "en");
+        await injectSharedFooter(el, lang === "he" ? "he" : "en");
+        if (lang === "he") {
+          localizeContactStripForHebrew(el);
+        }
         rewriteTriollaNavLinks(el);
         await waitForSnapshotFonts();
         await new Promise<void>((r) =>
@@ -115,6 +129,10 @@ export function AboutUsClient({ lang }: { lang: string }) {
           disposeRevealRef.current = mountTriollaSnapshotRevealStack(el, "about");
           disposeHeaderPillRef.current?.();
           disposeHeaderPillRef.current = mountTriollaHeaderPill(el);
+          disposeFaqRef.current?.();
+          disposeFaqRef.current = mountTriollaFaqAccordion(el);
+          disposeFooterAccordionRef.current?.();
+          disposeFooterAccordionRef.current = mountTriollaFooterAccordion(el);
           stripJQueryMenutoggleClickHandlers(el);
           rewriteTriollaNavLinks(el);
         } catch (deferredErr) {
@@ -131,6 +149,10 @@ export function AboutUsClient({ lang }: { lang: string }) {
       disposeRevealRef.current = null;
       disposeHeaderPillRef.current?.();
       disposeHeaderPillRef.current = null;
+      disposeFaqRef.current?.();
+      disposeFaqRef.current = null;
+      disposeFooterAccordionRef.current?.();
+      disposeFooterAccordionRef.current = null;
       disposeMobileMenuRef.current?.();
       disposeMobileMenuRef.current = null;
     };

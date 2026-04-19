@@ -1,0 +1,269 @@
+{
+  "timestamp": "2026-04-14T16:13:06.020Z",
+  "route": "/",
+  "urls": {
+    "live": "https://triolla.io",
+    "local": "http://localhost:3000"
+  },
+  "comparisons": [
+    {
+      "viewport": "mobile",
+      "width": 375,
+      "height": 7254,
+      "mismatchedPixels": 1882953,
+      "totalPixels": 2720250,
+      "mismatchPercentage": 69.22,
+      "diffPath": "diffs/diff-mobile-375x667.png",
+      "livePath": "live-375x667.png",
+      "localPath": "local-375x667.png",
+      "match": false,
+      "heightInfo": {
+        "cropped": true,
+        "heightDiff": 1368,
+        "heightDiffPercent": 15.87
+      }
+    },
+    {
+      "viewport": "tablet",
+      "width": 768,
+      "height": 11558,
+      "mismatchedPixels": 6884485,
+      "totalPixels": 8876544,
+      "mismatchPercentage": 77.56,
+      "diffPath": "diffs/diff-tablet-768x1024.png",
+      "livePath": "live-768x1024.png",
+      "localPath": "local-768x1024.png",
+      "match": false,
+      "heightInfo": {
+        "cropped": true,
+        "heightDiff": 1759,
+        "heightDiffPercent": 13.21
+      }
+    },
+    {
+      "viewport": "desktop",
+      "width": 1920,
+      "height": 15347,
+      "mismatchedPixels": 10199927,
+      "totalPixels": 29466240,
+      "mismatchPercentage": 34.62,
+      "diffPath": "diffs/diff-desktop-1920x1080.png",
+      "livePath": "live-1920x1080.png",
+      "localPath": "local-1920x1080.png",
+      "match": false,
+      "heightInfo": {
+        "cropped": true,
+        "heightDiff": 133,
+        "heightDiffPercent": 0.86
+      }
+    }
+  ],
+  "selectors": {
+    "live": {
+      ".homemaintopone": {
+        "description": "Hero section",
+        "exists": true,
+        "visible": true,
+        "boundingBox": {
+          "x": 185,
+          "y": 265,
+          "width": 1550,
+          "height": 433
+        }
+      },
+      ".top_design_text": {
+        "description": "Design section",
+        "exists": true,
+        "visible": true,
+        "boundingBox": {
+          "x": 134,
+          "y": 9375,
+          "width": 1128,
+          "height": 557
+        }
+      },
+      ".global_con": {
+        "description": "Global section",
+        "exists": true,
+        "visible": true,
+        "boundingBox": {
+          "x": 0,
+          "y": 7612,
+          "width": 1920,
+          "height": 1498
+        }
+      },
+      ".global_logos": {
+        "description": "Logos grid",
+        "exists": true,
+        "visible": false,
+        "boundingBox": {
+          "x": 0,
+          "y": 7612,
+          "width": 0,
+          "height": 0
+        }
+      },
+      ".winners-section": {
+        "description": "Winners section",
+        "exists": false,
+        "visible": false
+      },
+      ".faq_main": {
+        "description": "FAQ section",
+        "exists": false,
+        "visible": false
+      },
+      "header": {
+        "description": "Header",
+        "exists": false,
+        "visible": false
+      },
+      ".header_contact": {
+        "description": "Contact button",
+        "exists": true,
+        "visible": true,
+        "boundingBox": {
+          "x": 1523,
+          "y": 103,
+          "width": 118,
+          "height": 44
+        }
+      },
+      ".header_book": {
+        "description": "Book button",
+        "exists": true,
+        "visible": true,
+        "boundingBox": {
+          "x": 1709,
+          "y": 103,
+          "width": 142,
+          "height": 44
+        }
+      }
+    },
+    "local": {
+      ".homemaintopone": {
+        "description": "Hero section",
+        "exists": true,
+        "visible": true,
+        "boundingBox": {
+          "x": 185,
+          "y": 265,
+          "width": 1550,
+          "height": 433
+        }
+      },
+      ".top_design_text": {
+        "description": "Design section",
+        "exists": true,
+        "visible": true,
+        "boundingBox": {
+          "x": 134,
+          "y": 9242,
+          "width": 1128,
+          "height": 557
+        }
+      },
+      ".global_con": {
+        "description": "Global section",
+        "exists": true,
+        "visible": true,
+        "boundingBox": {
+          "x": 0,
+          "y": 7479,
+          "width": 1920,
+          "height": 1498
+        }
+      },
+      ".global_logos": {
+        "description": "Logos grid",
+        "exists": true,
+        "visible": true,
+        "boundingBox": {
+          "x": 0,
+          "y": 7479,
+          "width": 1920,
+          "height": 1498
+        }
+      },
+      ".winners-section": {
+        "description": "Winners section",
+        "exists": false,
+        "visible": false
+      },
+      ".faq_main": {
+        "description": "FAQ section",
+        "exists": false,
+        "visible": false
+      },
+      "header": {
+        "description": "Header",
+        "exists": false,
+        "visible": false
+      },
+      ".header_contact": {
+        "description": "Contact button",
+        "exists": true,
+        "visible": true,
+        "boundingBox": {
+          "x": 1523,
+          "y": 103,
+          "width": 118,
+          "height": 44
+        }
+      },
+      ".header_book": {
+        "description": "Book button",
+        "exists": true,
+        "visible": true,
+        "boundingBox": {
+          "x": 1709,
+          "y": 103,
+          "width": 142,
+          "height": 44
+        }
+      }
+    }
+  },
+  "heightIssues": {
+    "live": {},
+    "local": {}
+  },
+  "summary": {
+    "totalViewports": 3,
+    "matchedViewports": 0,
+    "mismatchedViewports": 3,
+    "averageMismatchPercentage": 60.47
+  },
+  "mismatchedSelectors": {
+    ".global_logos": {
+      "description": "Logos grid",
+      "issues": [
+        "visibility mismatch (live: false, local: true)"
+      ],
+      "live": {
+        "description": "Logos grid",
+        "exists": true,
+        "visible": false,
+        "boundingBox": {
+          "x": 0,
+          "y": 7612,
+          "width": 0,
+          "height": 0
+        }
+      },
+      "local": {
+        "description": "Logos grid",
+        "exists": true,
+        "visible": true,
+        "boundingBox": {
+          "x": 0,
+          "y": 7479,
+          "width": 1920,
+          "height": 1498
+        }
+      }
+    }
+  }
+}

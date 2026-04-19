@@ -1,0 +1,126 @@
+{
+  "timestamp": "2026-04-19T21:40:27.780Z",
+  "baseUrl": "http://localhost:3000",
+  "routeCount": 1,
+  "static": {
+    "_shared": {
+      "label": "Shared required files",
+      "checks": [
+        {
+          "check": "shared_file_exists",
+          "pass": true,
+          "detail": "OK: public/fragments/_shared-faq.html"
+        },
+        {
+          "check": "shared_file_exists",
+          "pass": true,
+          "detail": "OK: public/fragments/_shared-faq-he.html"
+        },
+        {
+          "check": "shared_file_exists",
+          "pass": true,
+          "detail": "OK: public/fragments/_shared-footer.html"
+        },
+        {
+          "check": "shared_file_exists",
+          "pass": true,
+          "detail": "OK: public/fragments/_shared-footer-he.html"
+        },
+        {
+          "check": "shared_file_exists",
+          "pass": true,
+          "detail": "OK: public/fragments/_portfolio-site-chrome-en.html"
+        },
+        {
+          "check": "shared_file_exists",
+          "pass": true,
+          "detail": "OK: public/fragments/_portfolio-site-chrome-he.html"
+        },
+        {
+          "check": "shared_file_exists",
+          "pass": true,
+          "detail": "OK: public/assets/_shared/style.css"
+        },
+        {
+          "check": "shared_file_exists",
+          "pass": true,
+          "detail": "OK: public/assets/_shared/style-new.css"
+        },
+        {
+          "check": "shared_file_exists",
+          "pass": true,
+          "detail": "OK: public/assets/_shared/responsive.css"
+        },
+        {
+          "check": "shared_file_exists",
+          "pass": true,
+          "detail": "OK: public/assets/_shared/fonts.css"
+        },
+        {
+          "check": "shared_file_exists",
+          "pass": true,
+          "detail": "OK: public/assets/_shared/animate.css"
+        },
+        {
+          "check": "shared_file_exists",
+          "pass": true,
+          "detail": "OK: public/assets/_shared/animation.css"
+        },
+        {
+          "check": "shared_file_exists",
+          "pass": true,
+          "detail": "OK: public/assets/_shared/jquery-3.6.0.min.js"
+        },
+        {
+          "check": "shared_file_exists",
+          "pass": true,
+          "detail": "OK: public/assets/_shared/all.js"
+        },
+        {
+          "check": "shared_file_exists",
+          "pass": true,
+          "detail": "OK: public/assets/_shared/owl.carousel.js"
+        },
+        {
+          "check": "shared_file_exists",
+          "pass": true,
+          "detail": "OK: public/assets/_shared/jquery.jConveyorTicker.min.js"
+        }
+      ]
+    },
+    "/contact-us": {
+      "label": "Contact Us EN",
+      "checks": [
+        {
+          "check": "fragment_size",
+          "pass": true,
+          "detail": "Fragment fragments/contact-us-body.html: 393 lines, 46KB"
+        },
+        {
+          "check": "fragment_has_footer",
+          "pass": false,
+          "detail": "NO .footer in fragment (may rely on injectSharedFooter)",
+          "isSoftWarning": true
+        },
+        {
+          "check": "fragment_has_faq",
+          "pass": false,
+          "detail": "NO FAQ in fragment (may rely on injectSharedFaq)",
+          "isSoftWarning": true
+        },
+        {
+          "check": "fragment_has_contact_strip",
+          "pass": true,
+          "detail": "Contact strip present",
+          "isSoftWarning": false
+        },
+        {
+          "check": "asset_refs_all_exist",
+          "pass": true,
+          "detail": "All 12 asset refs verified"
+        }
+      ]
+    }
+  },
+  "runtime": {}
+}

@@ -42,7 +42,7 @@ const GAMING_ITEMS_EN: PortfolioPageData["portfolioItems"] = [
   {
     logo: "/images/cha-games-min.png",
     desktopImg: "/images/Cha-game-sdesktop.png",
-    mobileImg: "/images/cha-games-mobile.png",
+    mobileImg: "/assets/_shared/cha-games-mobile.png",
     title:
       "Redefining social play—Cha Games unites players with user-first, interactive mini-games.",
     description:
@@ -72,7 +72,7 @@ const GAMING_ITEMS_EN: PortfolioPageData["portfolioItems"] = [
   {
     logo: "/images/Frame-2147223744-1.png",
     desktopImg: "/images/Aspire-global-desktop.png",
-    mobileImg: "/images/aspire-golobal-mobile.png",
+    mobileImg: "/assets/_shared/aspire-golobal-mobile.png",
     title:
       "Driving iGaming growth—Aspire Global powers operators with seamless, end-to-end platforms and services.",
     description:
@@ -82,7 +82,7 @@ const GAMING_ITEMS_EN: PortfolioPageData["portfolioItems"] = [
   {
     logo: "/images/Group-1410103797.png",
     desktopImg: "/images/Survivor-desktop.png",
-    mobileImg: "/images/survivor-mobile.png",
+    mobileImg: "/assets/_shared/survivor-mobile.png",
     title:
       "We created a real-time voting game for Survivor viewers, letting fans predict outcomes and vote on key moments, bringing the show's excitement to life on a second screen.",
     description:

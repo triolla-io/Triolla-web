@@ -98,7 +98,7 @@ const ITEMS_EN: PortfolioPageData["portfolioItems"] = [
   {
     logo: `${H}/soroka-min.png`,
     desktopImg: `${H}/Soroka-image-desktop.png`,
-    mobileImg: `${H}/Soroka-mobile.png`,
+    mobileImg: "/assets/_shared/Soroka-mobile.png",
     title: "Leading Healthcare Innovation in Israel's South – Soroka Medical Center",
     description:
       "We partnered with Soroka Medical Center to revolutionize their healthcare management systems. By implementing advanced data solutions and optimizing workflows, we enhanced patient care, streamlined administrative processes, and empowered their medical teams to focus on delivering exceptional health outcomes for the Negev community.",

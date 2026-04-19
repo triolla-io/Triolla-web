@@ -9,6 +9,7 @@ import { ensurePortfolioFaqWrapShown } from "./mountTriollaFaqAccordion";
 export async function injectSharedFaq(
   root: HTMLElement,
   lang: "en" | "he",
+  options?: { force?: boolean },
 ): Promise<void> {
   const faqFragmentUrl =
     lang === "he" ? "/fragments/_shared-faq-he.html" : "/fragments/_shared-faq.html";
@@ -32,10 +33,13 @@ export async function injectSharedFaq(
    * Service detail and blog/article templates on triolla.io do not include the global FAQ block
    * (only hero + article + optional grid + contact strip + footer). Without this guard we inject
    * `_shared-faq.html` and duplicate many images vs production.
+   * Pass `options.force = true` to override (e.g. branding-studio uses servdetail WP template
+   * class but is a full marketing page with FAQ).
    */
   if (
-    root.querySelector(".servdetail_content") != null ||
-    root.querySelector(".article_content") != null
+    !options?.force &&
+    (root.querySelector(".servdetail_content") != null ||
+      root.querySelector(".article_content") != null)
   ) {
     return;
   }

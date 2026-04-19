@@ -33,6 +33,7 @@ export function BilingualSnapshotByRegistryKey({
       assetDirEn={entry.assetDirEn}
       assetDirHe={heResolved.assetDirHe}
       revealPreset={entry.revealPreset}
+      forceFaq={entry.forceFaq}
     />
   );
 }

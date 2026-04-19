@@ -32,7 +32,10 @@
     "compare:visual": "node scripts/compare-visual-regression.js",
     "compare:visual:he": "node scripts/compare-visual-regression.js he",
     "inspect:lazy": "node scripts/inspect-lazy-loading.js",
-    "inspect:lazy:he": "node scripts/inspect-lazy-loading.js he"
+    "inspect:lazy:he": "node scripts/inspect-lazy-loading.js he",
+    "audit:snapshots": "node scripts/audit-snapshot-routes.js",
+    "audit:snapshots:static": "node scripts/audit-snapshot-routes.js --static-only",
+    "audit:snapshots:runtime": "node scripts/audit-snapshot-routes.js --runtime-only"
   },
   "dependencies": {
     "framer-motion": "^12.38.0",

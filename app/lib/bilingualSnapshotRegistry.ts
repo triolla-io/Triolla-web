@@ -26,6 +26,11 @@ export type BilingualSnapshotRegistryEntry = {
   landingSlugHe?: string;
   assetDirHe?: string;
   revealPreset?: TriollaSnapshotRevealPreset;
+  /**
+   * Force FAQ injection even on pages whose fragment has `servdetail_content` class
+   * (e.g. branding-studio which uses the service-detail WP template but is a full marketing page).
+   */
+  forceFaq?: boolean;
 };
 
 function entry(
@@ -52,23 +57,24 @@ function entry(
 }
 
 /** Same neutral rules as home: avoid CSS grid breaking theme float layout for `.careerimgs` under `.grid`. */
-const CAREERS_GRID_BASE_CSS = "/assets/home/home-grid-base.css";
+const CAREERS_GRID_BASE_CSS = "/assets/_shared/home-grid-base.css";
 
 /**
  * Careers `all.js` expects TweenMax, ScrollMagic, and jquery.bez before it (see `careers-deps.json` order).
  * Generic `DEPS_*` omit those and break parallax / interactions vs triolla.io.
+ * All files live in /assets/_shared/ (no careers-specific asset dir exists).
  */
 const CAREERS_SNAPSHOT_JS: string[] = [
-  "jquery-3.6.0.min.js_edabec9e.js",
-  "/assets/_shared/eb5e45d752068adfb4185f39ea2978f6_jquery.jConveyorTicker.min.js_edabec9e.js",
-  "TweenMax.min.js_edabec9e.js",
-  "ScrollMagic.min.js_edabec9e.js",
-  "metaview.js_edabec9e.js",
-  "wow.js_edabec9e.js",
-  "gsap.min.js",
-  "ScrollTrigger.min.js",
-  "jquery.bez.min.js_edabec9e.js",
-  "all.js_edabec9e.js",
+  "_shared/jquery-3.6.0.min.js",
+  "_shared/jquery.jConveyorTicker.min.js",
+  "_shared/TweenMax.min.js",
+  "_shared/ScrollMagic.min.js",
+  "_shared/metaview.js",
+  "_shared/wow.js",
+  "_shared/gsap.min.js",
+  "_shared/ScrollTrigger.min.js",
+  "_shared/jquery.bez.min.js",
+  "_shared/all.js",
 ];
 
 function careersCssWithGridBase(css: string[]): string[] {
@@ -116,13 +122,16 @@ export const bilingualSnapshotRegistry = {
     "triolla-io-privacy-policy",
     "triolla-io-he-privacy-policy",
   ),
-  "branding-studio": entry(
-    "Branding studio",
-    "/fragments/branding-studio-body.html",
-    "/fragments/branding-studio-he-body.html",
-    "triolla-io-branding-studio",
-    "triolla-io-he-branding-studio",
-  ),
+  "branding-studio": {
+    ...entry(
+      "Branding studio",
+      "/fragments/branding-studio-body.html",
+      "/fragments/branding-studio-he-body.html",
+      "triolla-io-branding-studio",
+      "triolla-io-he-branding-studio",
+    ),
+    forceFaq: true,
+  },
   careers: {
     ...entry(
       "Careers",
@@ -455,6 +464,55 @@ export const bilingualSnapshotRegistry = {
     assetDirEn: "service-detail",
     assetDirHe: "service-detail",
   },
+  "blog-six-things-you-need-to-check-before-hiring-a-ux-ui-agency": entry(
+    "Blog Six Things You Need To Check Before Hiring A Ux Ui Agency",
+    "/fragments/blog-six-things-you-need-to-check-before-hiring-a-ux-ui-agency-body.html",
+    "/fragments/blog-six-things-you-need-to-check-before-hiring-a-ux-ui-agency-he-body.html",
+    "triolla-io-blog-six-things-you-need-to-check-before-hiring-a-ux-ui-agency",
+    "triolla-io-he-blog-six-things-you-need-to-check-before-hiring-a-ux-ui-agency",
+  ),
+  "blog-triollas-mobile-app-ux-mastery-will-make-your-app-a-sensation": entry(
+    "Blog Triollas Mobile App Ux Mastery Will Make Your App A Sensation",
+    "/fragments/blog-triollas-mobile-app-ux-mastery-will-make-your-app-a-sensation-body.html",
+    "/fragments/blog-triollas-mobile-app-ux-mastery-will-make-your-app-a-sensation-he-body.html",
+    "triolla-io-blog-triollas-mobile-app-ux-mastery-will-make-your-app-a-sensation",
+    "triolla-io-he-blog-triollas-mobile-app-ux-mastery-will-make-your-app-a-sensation",
+  ),
+  "blog-unleash-the-power-of-your-mvp-to-accelerate-your-growth-ux-design-for-startups": entry(
+    "Blog Unleash The Power Of Your Mvp To Accelerate Your Growth Ux Design For Startups",
+    "/fragments/blog-unleash-the-power-of-your-mvp-to-accelerate-your-growth-ux-design-for-startups-body.html",
+    "/fragments/blog-unleash-the-power-of-your-mvp-to-accelerate-your-growth-ux-design-for-startups-he-body.html",
+    "triolla-io-blog-unleash-the-power-of-your-mvp-to-accelerate-your-growth-ux-design-for-startups",
+    "triolla-io-he-blog-unleash-the-power-of-your-mvp-to-accelerate-your-growth-ux-design-for-startups",
+  ),
+  "blog-the-essential-guide-to-designing-a-top-performing-cyber-app-mastering-cyber-ux": entry(
+    "Blog The Essential Guide To Designing A Top Performing Cyber App Mastering Cyber Ux",
+    "/fragments/blog-the-essential-guide-to-designing-a-top-performing-cyber-app-mastering-cyber-ux-body.html",
+    "/fragments/blog-the-essential-guide-to-designing-a-top-performing-cyber-app-mastering-cyber-ux-he-body.html",
+    "triolla-io-blog-the-essential-guide-to-designing-a-top-performing-cyber-app-mastering-cyber-ux",
+    "triolla-io-he-blog-the-essential-guide-to-designing-a-top-performing-cyber-app-mastering-cyber-ux",
+  ),
+  "blog-why-every-modern-company-needs-a-stellar-dashboard-ui-insights-from-triolla": entry(
+    "Blog Why Every Modern Company Needs A Stellar Dashboard Ui Insights From Triolla",
+    "/fragments/blog-why-every-modern-company-needs-a-stellar-dashboard-ui-insights-from-triolla-body.html",
+    "/fragments/blog-why-every-modern-company-needs-a-stellar-dashboard-ui-insights-from-triolla-he-body.html",
+    "triolla-io-blog-why-every-modern-company-needs-a-stellar-dashboard-ui-insights-from-triolla",
+    "triolla-io-he-blog-why-every-modern-company-needs-a-stellar-dashboard-ui-insights-from-triolla",
+  ),
+  "blog-navigating-the-future-of-ux-design-2": entry(
+    "Blog Navigating The Future Of Ux Design 2",
+    "/fragments/blog-navigating-the-future-of-ux-design-2-body.html",
+    "/fragments/blog-navigating-the-future-of-ux-design-2-he-body.html",
+    "triolla-io-blog-navigating-the-future-of-ux-design-2",
+    "triolla-io-he-blog-navigating-the-future-of-ux-design-2",
+  ),
+  "blog-custom-ux-ui-design-for-power-bi-tableau-qlik-sap-oracle-bi": entry(
+    "Blog Custom Ux Ui Design For Power Bi Tableau Qlik Sap Oracle Bi",
+    "/fragments/blog-custom-ux-ui-design-for-power-bi-tableau-qlik-sap-oracle-bi-body.html",
+    "/fragments/blog-custom-ux-ui-design-for-power-bi-tableau-qlik-sap-oracle-bi-he-body.html",
+    "triolla-io-blog-custom-ux-ui-design-for-power-bi-tableau-qlik-sap-oracle-bi",
+    "triolla-io-he-blog-custom-ux-ui-design-for-power-bi-tableau-qlik-sap-oracle-bi",
+  ),
 };
 
 export type BilingualSnapshotRegistryKey = keyof typeof bilingualSnapshotRegistry;
