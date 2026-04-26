@@ -1,10 +1,18 @@
 import { readFileSync } from "fs";
 import { join } from "path";
-// Runtime read avoids Turbopack/webpack trying to statically bundle a large JSON file.
+
+// Lazy load: deferring the readFileSync keeps the 21 MB JSON out of any
+// serverless function bundle that imports types/helpers from this file but
+// doesn't actually call getEntry/getAllSlugs at runtime.
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const registryData: any[] = JSON.parse(
-  readFileSync(join(process.cwd(), "lib", "snapshotRegistry.json"), "utf-8"),
-);
+let _registryCache: any[] | null = null;
+function _loadRegistry(): SnapshotEntry[] {
+  if (_registryCache) return _registryCache as SnapshotEntry[];
+  _registryCache = JSON.parse(
+    readFileSync(join(process.cwd(), "lib", "snapshotRegistry.json"), "utf-8"),
+  );
+  return _registryCache as SnapshotEntry[];
+}
 
 export interface SnapshotHeadMeta {
   name?: string;
@@ -58,14 +66,15 @@ export interface SnapshotEntry {
   jsDefer?: string[];
 }
 
-const registry: SnapshotEntry[] = registryData as SnapshotEntry[];
-
 /**
  * Compute the common slug prefix shared by all entries (e.g. "triolla-io-").
  * Used as a fallback so URL paths like "about-us" resolve to "triolla-io-about-us".
  */
-function _computeDomainPrefix(): string {
-  if (registry.length < 2) return "";
+let _domainPrefixCache: string | null = null;
+function _getDomainPrefix(): string {
+  if (_domainPrefixCache !== null) return _domainPrefixCache;
+  const registry = _loadRegistry();
+  if (registry.length < 2) return (_domainPrefixCache = "");
   let prefix = registry[0].slug;
   for (const entry of registry) {
     while (prefix && !entry.slug.startsWith(prefix)) {
@@ -77,12 +86,11 @@ function _computeDomainPrefix(): string {
     }
     if (!prefix) break;
   }
-  return prefix.endsWith("-") ? prefix : "";
+  return (_domainPrefixCache = prefix.endsWith("-") ? prefix : "");
 }
 
-const DOMAIN_PREFIX = _computeDomainPrefix();
-
 export function getEntry(slug: string, locale: string): SnapshotEntry | null {
+  const registry = _loadRegistry();
   // Exact match
   const exact =
     registry.find((e) => e.slug === slug && e.locale === locale) ??
@@ -90,8 +98,9 @@ export function getEntry(slug: string, locale: string): SnapshotEntry | null {
   if (exact) return exact;
 
   // Fallback: try with domain prefix (e.g. "home" → "triolla-io-home")
-  if (DOMAIN_PREFIX) {
-    const prefixed = `${DOMAIN_PREFIX}${slug}`;
+  const domainPrefix = _getDomainPrefix();
+  if (domainPrefix) {
+    const prefixed = `${domainPrefix}${slug}`;
     return (
       registry.find((e) => e.slug === prefixed && e.locale === locale) ??
       registry.find((e) => e.slug === prefixed) ??
@@ -103,14 +112,15 @@ export function getEntry(slug: string, locale: string): SnapshotEntry | null {
 }
 
 export function getAllSlugs(): Array<{ slug: string; locale: string }> {
-  return registry.map((e) => ({ slug: e.slug, locale: e.locale }));
+  return _loadRegistry().map((e) => ({ slug: e.slug, locale: e.locale }));
 }
 
 export function getAllLocales(): string[] {
-  return [...new Set(registry.map((e) => e.locale))];
+  return [...new Set(_loadRegistry().map((e) => e.locale))];
 }
 
 export function getDefaultLocale(): string {
+  const registry = _loadRegistry();
   const entry = registry.find((e) => e.locale === "en") ?? registry[0];
   return entry?.locale ?? "en";
 }
@@ -145,7 +155,7 @@ function hePathKeys(p: string): string[] {
  */
 export function matchHebrewRegistryPath(pathname: string): SnapshotEntry | null {
   const want = new Set(hePathKeys(pathname));
-  for (const e of registry) {
+  for (const e of _loadRegistry()) {
     if (e.locale !== "he" || !e.path) continue;
     for (const k of hePathKeys(e.path)) {
       if (want.has(k)) return e;
@@ -165,7 +175,7 @@ export function heSegmentsToPathname(segments: string[]): string {
 export function getHeStaticSegmentParams(): { segments: string[] }[] {
   const seen = new Set<string>();
   const out: { segments: string[] }[] = [];
-  for (const e of registry) {
+  for (const e of _loadRegistry()) {
     if (e.locale !== "he" || !e.path) continue;
     const n = normalizeHePublicPath(e.path);
     if (n === "/he/") continue;

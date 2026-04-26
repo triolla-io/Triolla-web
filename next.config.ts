@@ -16,6 +16,27 @@ const nextConfig: NextConfig = {
     root: path.resolve(__dirname),
   },
 
+  // Keep huge static asset trees out of every serverless function bundle.
+  // These directories contain CSS/JS/font/image/markdown content served straight
+  // from public/, never imported into server code — but Vercel's file tracer
+  // would otherwise sweep them in and inflate Lambda bundles.
+  // NOTE: `public/fragments/**` and `lib/widgetProps/**` ARE read by server
+  // code (loadSnapshot) so they MUST stay in the trace.
+  outputFileTracingExcludes: {
+    "*": [
+      "public/assets/**",
+      "public/wp-content/**",
+      "public/llms-content/**",
+      "public/llms-full.txt",
+      "public/llms.txt",
+      "public/cdn-cgi/**",
+      "public/*.md",
+      ".pipeline/**",
+      ".cursor/**",
+      "scripts/_he-snap.mjs",
+    ],
+  },
+
   // NOTE: i18n config is intentionally absent. The `i18n` key is Pages Router-only;
   // in App Router it causes Next.js to intercept locale-prefixed paths (e.g. /he/...)
   // as locale redirects before file-system routing resolves them, producing 404s.
