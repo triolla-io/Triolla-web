@@ -1,0 +1,497 @@
+10 UX/UI Design Rules You Should Never Break - Triolla
+
+- Pitangoux is now Triolla – We’ve rebranded! Hello and welcome!
+
+
+Formally Pitangoux
+
+
+- Portfolio
+
+test
+
+Cybersecurity
+
+- Digital Health
+
+- Fintech & Finance
+
+- Gaming
+
+- Agritech
+
+- B2C
+
+
+- test
+
+Devices & IoT
+
+- Startups & Tech
+
+- Mobile Apps
+
+- SaaS Platforms
+
+- B2B
+
+- Dev
+
+
+- Services
+
+- Technology
+
+- The Company
+
+
+Contact Us
+Contact Us
+
+
+[](https://api.whatsapp.com/send/?phone=+972525956644&text=שלום, הייתי רוצה לשמוע עוד פרטים... &app_absent=0)
+
+
+Book a Call
+
+
+Book a Call
+
+
+- Portfolio
+
+test
+
+Cybersecurity
+
+- Digital Health
+
+- Fintech & Finance
+
+- Gaming
+
+- Agritech
+
+- B2C
+
+
+- test
+
+Devices & IoT
+
+- Startups & Tech
+
+- Mobile Apps
+
+- SaaS Platforms
+
+- B2B
+
+- Dev
+
+
+- Services
+
+- Technology
+
+- The Company
+
+
+- Heb
+
+- Blog
+
+- Career
+
+
+Book a Call
+
+
+[](tel:+972-73-744-3322)
+
+[](https://wa.me/+972525956644?text=שלום, הייתי רוצה לשמוע עוד פרטים... )
+
+
+![Triolla]
+
+
+Back
+
+
+10 UX/UI Design Rules You Should Never Break
+
+
+Just like in life, there are essential rules in user interface (UI) and user experience (UX) design that every designer must know and follow. Understanding and adhering to these principles will help users navigate your product with ease, foster better interaction, and ultimately turn them into loyal customers.
+
+
+1. Keep Users Informed
+
+
+Users want to know where they stand at any given moment, how long an action will take, and what comes next. Always keep users updated about what’s happening in the system by providing timely and relevant feedback. Let users know which stage they’re at, what the next step is, and confirm actions such as “item added to cart,” “changes saved,” or “order status updated.” This transparency builds trust and confidence in your product.
+
+
+2. Match the System to the Real World
+
+
+Your product should speak the user’s language—using words, phrases, icons, and concepts that are familiar to them, not system-oriented jargon. The meaning of every word or icon should be clear and intuitive. The biggest leap in technology came with the introduction of the graphical user interface (GUI), which replaced text commands with visual metaphors like folders, files, and hand cursors—symbols users instantly understood because they mirrored the real world.
+
+
+3. Consistency in the User Interface
+
+
+Consistency prevents confusion and helps users complete tasks quickly and efficiently. There are two types of consistency: internal and external.
+Internal consistency refers to patterns within your own product, such as keeping links the same color across all pages or using the same icon for the same concept (e.g., HOME) everywhere.
+External consistency refers to conventions users are already familiar with from other products. For example, most users know how a shopping cart works—don’t reinvent the wheel or you risk making simple tasks unnecessarily complicated.
+
+
+4. Always Provide an “Exit” Option
+
+
+Users sometimes make mistakes and need a clearly marked “emergency exit” to leave an unwanted state. Your system should support undo and redo actions. Never force users to complete an action they don’t want or lead them into a dead end. For example, during checkout, allow users to continue shopping or cancel the purchase if they change their mind at the last minute.
+
+
+5. Prevent Errors
+
+
+The best error message is one that never appears. Design your system to prevent problems before they occur by clearly presenting the conditions for each action. For sensitive or critical actions—like deleting files, renewing subscriptions, or sending messages to thousands—always provide a warning or confirmation. Give users clear information about what will happen before they commit, reducing the risk of mistakes and building trust.
+
+
+6. Clear Instructions and Guidance
+
+
+Reduce users’ memory load by making objects, actions, and options visible. Users shouldn’t have to remember information from one part of the interface to another. Instructions should be easily accessible whenever needed. As UI designers, our goal is to minimize cognitive load. Rely on recognizable buttons and icons, like a house for “home” or a pencil for “edit.” If you introduce new icons, always add a text label to clarify their meaning.
+
+
+7. Flexibility and Efficiency of Use
+
+
+Design for both novice and expert users by allowing customization and shortcuts for frequent actions. For example, enable swipe gestures to save or delete items from a list, giving users the choice between traditional and accelerated workflows. Accelerators like keyboard shortcuts or gestures make the system efficient for power users while remaining accessible to beginners.
+
+
+8. Minimalist and Aesthetic Design
+
+
+Keep interfaces focused on the essentials. Every extra element competes for users’ attention and can reduce usability. Prioritize user interaction and strive for the simplest, most intuitive experience. Minimalist design, with clear content and imagery, helps users stay focused on their tasks without unnecessary distractions.
+
+
+9. Error Recovery
+
+
+When errors do occur, use plain language to explain the problem and offer solutions. Mistakes are inevitable, but how you help users recover is what matters. Design error pages and alerts that provide actionable options. For example, instead of a generic 404 page, explain: “Sorry, we couldn’t find the page you’re looking for. Here are some helpful links to similar content.”
+
+
+10. Help and Documentation
+
+
+Many products require help and documentation. Make this information easy to find, focused on the user’s task, and provide clear, actionable steps. Place help resources prominently in the main navigation or header. When users encounter issues, guide them to solutions—such as a comprehensive FAQ page or direct access to customer support.
+
+
+More Posts
+
+
+Browse all
+
+
+- Cybersecurity Design UX: Founder Playbook to Ship Products Users Love and Adversaries Hate
+
+- Triolla is certified iso 27001-017
+
+
+Browse all
+
+
+Wanna Chat? Get In Touch
+
+
+Give us a call:
+
+TLV +972-73-744-3322
+
+NY & SF +1408-627-7350
+
+
+Mail:
+
+[[email protected]](/cdn-cgi/l/email-protection#97d1e2f9d7e3e5fef8fbfbf6b9fef8)
+
+HQ Address: Zarchin St. 2, Ranana
+
+
+Trusted by 1000+ companies:
+
+
+-
+
+-
+
+-
+
+-
+
+
+Schedule a Free Consultation
+
+
+Give us a call:
+
+TLV
++972-73-744-3322
+
+
+Comments
+
+
+This field is for validation purposes and should be left unchanged.
+
+
+Full Name(Required)
+
+
+Phone(Required)
+
+
+Email(Required)
+
+
+Trusted by 1000+ companies:
+
+
+-
+
+-
+
+-
+
+-
+
+
+/blog/10-ux-ui-design-rules-you-should-never-break/
+
+
+/blog/10-ux-ui-design-rules-you-should-never-break/
+
+
+Talk to us
+
+
+Book a Call
+Contact Us
+
+
+[](https://wa.me/+972525956644?text=שלום, הייתי רוצה לשמוע עוד פרטים... )
+[](tel:+972-73-744-3322)
+
+
+Mentions:
+
+
+- [](https://13tv.co.il/item/special/recommended/economy/k2fy3-902776824/)
+
+- [](https://www.bizportal.co.il/BizTech/news/article/20015580)
+
+- [](https://www.themarker.com/labels/2021-04-05/ty-article-labels/0000017f-f88a-d044-adff-fbfb48ad0000)
+
+- [](https://www.globes.co.il/news/article.aspx?did=1001450720)
+
+- [](https://www.pc.co.il/featured/420350/)
+
+- [](https://www.mako.co.il/special-articles/Article-c2a83bbe7224d71026.htm)
+
+
+Product Design
+
+
+- Product UX & UI Design
+
+- UX Research
+
+- Prototype
+
+- Digital Branding
+
+- Front End Development
+
+
+Case studies
+
+
+- Mobile Apps
+
+- Fintech & Finance
+
+- IOT & Devices
+
+- SaaS
+
+- Gaming
+
+- Medical
+
+- Agritech
+
+
+Technology
+
+
+- Dev & Technology
+
+- Front End
+
+- React.js
+
+- Vue.js
+
+- Back End
+
+- Node. Js
+
+
+About
+
+
+- About us
+
+- Careers
+
+- Our Services
+
+- Talk to us
+
+- Press
+
+- Accessibility Statement
+
+
+Our Blog
+
+
+- All Blogs
+
+- Fintech & Finance
+
+- IOT & Devices
+
+- SaaS
+
+- Gaming
+
+- Medical
+
+- Agritech
+
+
+Social
+
+
+- Facebook
+
+- Linkedin
+
+- Instargram
+
+- Tiktok
+
+- Driblle
+
+- BeHnace
+
+
+Talk to us
+
+
+Mail: [[email protected]](/cdn-cgi/l/email-protection#aee8dbc0eedadcc7c1c2c2cf80c7c1)
+
+
+TLV Offices: +972-73-744-3322
+
+NY Offices: +1408-627-7350
+
+Book a Call
+
+
+Book a Call
+
+
+- [](https://13tv.co.il/item/special/recommended/economy/k2fy3-902776824/)
+
+- [](https://www.bizportal.co.il/BizTech/news/article/20015580)
+
+- [](https://www.themarker.com/labels/2021-04-05/ty-article-labels/0000017f-f88a-d044-adff-fbfb48ad0000)
+
+- [](https://www.globes.co.il/news/article.aspx?did=1001450720)
+
+- [](https://www.pc.co.il/featured/420350/)
+
+- [](https://www.mako.co.il/special-articles/Article-c2a83bbe7224d71026.htm)
+
+
+[](/)
+
+
+All rights reserved to Triolla LTD | Privacy Policy | Terms Of Use
+
+
+- [](https://www.tiktok.com/@triolla.io)
+
+- [](https://www.instagram.com/triollaofficial/)
+
+- [](https://www.facebook.com/triollaofficial)
+
+
+- Eng
+
+- Heb
+
+
+Part of
+
+
+- [](https://www.linkedin.com/company/triolla-official/)
+
+- [](https://www.tiktok.com/@triolla.io)
+
+- [](https://www.instagram.com/triollaofficial/)
+
+- [](https://www.facebook.com/triollaofficial)
+
+
+Close GDPR Cookie Settings
+
+
+![Triolla]
+
+
+- Privacy Overview
+
+
+- Strictly Necessary Cookies
+
+
+Powered by  GDPR Cookie Compliance
+
+
+Privacy Overview
+
+
+This website uses cookies so that we can provide you with the best user experience possible. Cookie information is stored in your browser and performs functions such as recognising you when you return to our website and helping our team to understand which sections of the website you find most interesting and useful.
+
+
+Strictly Necessary Cookies
+
+
+Strictly Necessary Cookie should be enabled at all times so that we can save your preferences for cookie settings.
+
+
+Enable or Disable Cookies
+
+
+Enabled
+Disabled
+
+
+Enable All
+Reject All
+Save Changes
+
+
+This site is registered on wpml.org as a development site. Switch to a production site key to remove this banner.

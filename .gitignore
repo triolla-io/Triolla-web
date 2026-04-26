@@ -1,0 +1,37 @@
+# dependencies
+node_modules
+.pnp
+.pnp.js
+
+# next
+.next
+out
+
+# env (do not commit secrets)
+.env
+.env*.local
+
+# editor drafts (local)
+data/drafts/*.json
+
+# misc
+.DS_Store
+*.log
+
+# typescript build cache
+*.tsbuildinfo
+next-env.d.ts
+
+# vercel
+.vercel
+
+# editor / IDE / agent caches
+.cursor/
+.vscode/
+.idea/
+
+# local-only helper scripts (created during debugging)
+scripts/_he-snap.mjs
+
+# snapshot pipeline artifacts (build-time QA outputs, not runtime)
+.pipeline/

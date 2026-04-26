@@ -1,0 +1,500 @@
+<!-- lang: en-US -->
+
+# F35 UX Vertigo - Triolla
+
+- Pitangoux is now Triolla – We’ve rebranded! Hello and welcome!
+
+
+[Formally Pitangoux](/)
+
+
+- Portfolio
+
+test
+
+[Cybersecurity](/cyber-security/)
+
+- [Digital Health](/medical-healthcare/)
+
+- [Fintech & Finance](/fintech-finance/)
+
+- [Gaming](/gaming/)
+
+- [Agritech](/agritech/)
+
+- [B2C](/b2c/)
+
+
+- test
+
+[Devices & IoT](/device-iot/)
+
+- [Startups & Tech](/startups-tech/)
+
+- [Mobile Apps](/mobile-apps/)
+
+- [SaaS Platforms](/saas-platforms/)
+
+- [B2B](/b2b/)
+
+- [Dev](/dev/)
+
+
+- [Services](/services/)
+
+- [Technology](/technology/)
+
+- [The Company](/about-us/)
+
+
+[Contact Us
+Contact Us](/contact-us/)
+
+
+[](https://api.whatsapp.com/send/?phone=+972525956644&text=שלום, הייתי רוצה לשמוע עוד פרטים... &app_absent=0)
+
+
+[Book a Call
+
+
+Book a Call](https://calendly.com/triolla/pitangoux-introductory-meeting-clone)
+
+
+- Portfolio
+
+test
+
+[Cybersecurity](/cyber-security/)
+
+- [Digital Health](/medical-healthcare/)
+
+- [Fintech & Finance](/fintech-finance/)
+
+- [Gaming](/gaming/)
+
+- [Agritech](/agritech/)
+
+- [B2C](/b2c/)
+
+
+- test
+
+[Devices & IoT](/device-iot/)
+
+- [Startups & Tech](/startups-tech/)
+
+- [Mobile Apps](/mobile-apps/)
+
+- [SaaS Platforms](/saas-platforms/)
+
+- [B2B](/b2b/)
+
+- [Dev](/dev/)
+
+
+- [Services](/services/)
+
+- [Technology](/technology/)
+
+- [The Company](/about-us/)
+
+
+- [Heb](/he/blog/f35-ux-vertigo/)
+
+- [Blog](/blog/)
+
+- [Career](/careers/)
+
+
+[Book a Call](https://calendly.com/triolla/pitangoux-introductory-meeting-clone)
+
+
+[](tel:+972-73-744-3322)
+
+[](https://wa.me/+972525956644?text=שלום, הייתי רוצה לשמוע עוד פרטים... )
+
+
+![Triolla]
+
+
+[Back](/blog/)
+
+
+# F35 UX Vertigo
+
+
+How the world's most advanced fighter jet's UX was designed and how it should be fixed.
+
+
+[Itay Racz](https://www.linkedin.com/in/itay-racz/) *, former WSO, Israeli Air Force.*
+
+
+No doubt the fifth-generation [Lockheed Martin F-35](https://en.wikipedia.org/wiki/Lockheed_Martin_F-35_Lightning_II) is an impressive machine. The cockpit, too, makes a striking first impression thanks to its touch screen interface, a first for combat aircraft. With a spatial full 360-degree display helmet one gets the feeling that this aircraft was built around humans, with user experience at the top of the considerations. Or was it?
+
+
+As a former F 16 Fighter Falcon WSO and in my role leading the Israeli Air Force UX deparment I had very high expectations from the IAF newest addition – The F35 Lightning II. The airplance I used to fly, the F16, was designed in the 80’s. I couldn’t wait to see how far we have come with the most important point in any system – the connection (and pain) point between a human and a machine.
+
+
+Lockheed Martin thought they figured it out. The logic was perfect – why ask UX “designers” to design a cockpit when you can ask pilots. The pilots that were asked were veterans, experienced pilots. What could possibly go wrong? Just about everything. “DESIGNED BY PILOTS FOR PILOTS” makes as much sense as “cooked by diners for diners”. Pilots know how to fly a plane, the way they are used to fly a plane. They don’t know a better way, they don’t know what don’t they know. Additionally, the TTM of an airborne tech is measured in decades. The pilots gave it their best about 20 years ago. [UX has come a long way since](https://www.pitangoux.com/), and today’s pilots were raised by iPhones. They don’t know and don’t care how things were in the past.
+
+
+### Main Displays:
+
+
+The cockpit features large touch screens that have replaced the gauges, buttons, and switches of previous generations. However, these are “TOUCH” screens rather than “MULTI-TOUCH” screens. Unlike the multi-touch screens we use daily on our phones, these touch screens offer limited gestures and inputs (such as zooming with two fingers or swiping), increasing the pilot’s cognitive load.
+
+
+### Information Arrangement in the PCD (Pilot Combat Display)
+
+
+The scattered arrangement of buttons is a holdover from older screens where buttons (OSBs) were placed around the screen. Those were “soft buttons” that change their function according to the changing label next to it. It worked quite well at the time but the F35 solution – leave the arrangement and change the input method basically takes the worst of the two worlds – it doesn’t use the old method clarity and tactile feedback and doesn’t use the touch screen’s main advantage – WYSIWYG (What you see is what you get). Additionally, with touch screens our eyes scan the screen—top to bottom, then left to right, just like in a book. New pilots are not used to look for things around the screen and this layout cannot support logical hierarchy and flow within the screen.
+
+
+### HMD (Helmet Mounted Display):
+
+
+The 360-degree view using six cameras around the plane is a [remarkable feature](https://<a href="/service-page/">Services</a>) but has a significant drawback. The lack of static objects, such as the plane’s wing or body, which would typically interfere with the world view, affects spatial orientation. The pilot expect to see a wing when he looks to his side. He can look at the wing and orient himself according to its movement relative to the background. If a pilot see a moon rises over the tip of the right wing he knows the wing is dipping, and he’s probably turning right. When there is no wing, there’s no way to judge the aircraft speed and orientation relative the background. This is expecially vital in bad weather,  and night missions.
+
+
+[contact-form-7 id=”958e338″ title=”Post Contact Form”]
+
+
+### HUD (Head-Up Display)
+
+
+The HUD in the F35 is virtual. There’s no piece of glass mounted on top of the dashboard. Instead it’s presented by the helmet, but only when looking forward. When looking sideways, there’s no clear and easy way to know the plane’s pitch and roll.
+
+
+### Knobs, handles, levers:
+
+
+Traditional knobs and handles were designed to have exceptional tactile feedback. So much so that they are designed to look like their function. The landing gear lever is shaped like a landing gear, including the wheel. The flaps handles are flat, the engine throttle is round. All these were replaced with purely digital functions. An extreme examples is the refueling port hatch.
+
+
+Midair refueling is a critical mission and a dangerous one. The pilot has to manage a mid air collision safely, the process requires a series of actions that need to be done in time and on time. The very last thing that the pilot needs to do is open the refueling port hatch.
+
+
+This should be done quickly, as late as possible so a dedicated lever was designed to look like a flat hatch so it’s easy to find and operate under a stressful refueling manouver. In the F35 there isn’t a physical hatch latch anymore. The process now requires three clicks on 3 different areas of the touch screen.
+
+
+### After Action Review:
+
+
+The sleek design of the F-35 cockpit falls short of expectations due to a lack of understanding of modern digital displays and user experience principles. The attempt to mimic physical levers and handles on screen didn’t work, and on the other hand, a lot of old habits were applied to the new architecture, whereas the same technology could have allowed for a much easier, streamlined operation. In the air, in an expensive machine flying hundreds of miles an hour, UX is crucial and needs to be rethought and redesigned on the F35 Lightening II.
+
+
+[#uxdesign](https://www.linkedin.com/feed/hashtag/?keywords=uxdesign&highlightedUpdateUrns=urn%3Ali%3Aactivity%3A7213930008191373312) [#userexperience](https://www.linkedin.com/feed/hashtag/?keywords=userexperience&highlightedUpdateUrns=urn%3Ali%3Aactivity%3A7213930008191373312&lipi=urn%3Ali%3Apage%3Ad_flagship3_company_admin%3BcVO9Np07TySEHAPj3dmGIQ%3D%3D) [#humanengineering](https://www.linkedin.com/feed/hashtag/?keywords=humanengineering&highlightedUpdateUrns=urn%3Ali%3Aactivity%3A7213930008191373312) [#aviationtechnology](https://www.linkedin.com/feed/hashtag/?keywords=aviationtechnology&highlightedUpdateUrns=urn%3Ali%3Aactivity%3A7213930008191373312)
+
+
+[#uxfail](https://www.linkedin.com/feed/hashtag/?keywords=aviationtechnology&highlightedUpdateUrns=urn%3Ali%3Aactivity%3A7213930008191373312)
+
+
+More Posts
+
+
+[Browse all](/blog/)
+
+
+- [Cybersecurity Design UX: Founder Playbook to Ship Products Users Love and Adversaries Hate](/blog/cybersecurity-design-ux-a-founder-playbook/)
+
+- [Triolla is certified iso 27001-017](/blog/iso-27001-2025-2026/)
+
+
+[Browse all](/blog/)
+
+
+### Wanna Chat? Get In Touch
+
+
+#### Give us a call:
+
+TLV [+972-73-744-3322](tel:+972-73-744-3322)
+
+NY & SF [+1408-627-7350](tel:+1408-627-7350)
+
+
+#### Mail:
+
+[[email protected]](/cdn-cgi/l/email-protection#3c7a49527c484e555350505d125553)
+
+**HQ Address:** Zarchin St. 2, Ranana
+
+
+##### Trusted by 1000+ companies:
+
+
+-
+
+-
+
+-
+
+-
+
+
+#### Schedule a Free Consultation
+
+
+##### Give us a call:
+
+TLV
+[+972-73-744-3322](tel:+972-73-744-3322)
+
+
+Comments
+
+
+This field is for validation purposes and should be left unchanged.
+
+
+Full Name(Required)
+
+
+Phone(Required)
+
+
+Email(Required)
+
+
+##### Trusted by 1000+ companies:
+
+
+-
+
+-
+
+-
+
+-
+
+
+/blog/f35-ux-vertigo/
+
+
+/blog/f35-ux-vertigo/
+
+
+##### Talk to us
+
+
+[Book a Call](https://calendly.com/triolla/pitangoux-introductory-meeting-clone)
+[Contact Us](/contact-us/)
+
+
+[](https://wa.me/+972525956644?text=שלום, הייתי רוצה לשמוע עוד פרטים... )
+[](tel:+972-73-744-3322)
+
+
+Mentions:
+
+
+- [](https://13tv.co.il/item/special/recommended/economy/k2fy3-902776824/)
+
+- [](https://www.bizportal.co.il/BizTech/news/article/20015580)
+
+- [](https://www.themarker.com/labels/2021-04-05/ty-article-labels/0000017f-f88a-d044-adff-fbfb48ad0000)
+
+- [](https://www.globes.co.il/news/article.aspx?did=1001450720)
+
+- [](https://www.pc.co.il/featured/420350/)
+
+- [](https://www.mako.co.il/special-articles/Article-c2a83bbe7224d71026.htm)
+
+
+### Product Design
+
+
+- [Product UX & UI Design](/services/product-ux-ui-design/)
+
+- [UX Research](/services/ux-research/)
+
+- [Prototype](/services/prototyping/)
+
+- [Digital Branding](/branding-studio/)
+
+- [Front End Development](/services/front-end-dev/)
+
+
+### Case studies
+
+
+- [Mobile Apps](/mobile-apps/)
+
+- [Fintech & Finance](/fintech-finance/)
+
+- [IOT & Devices](/device-iot/)
+
+- [SaaS](/saas-platforms/)
+
+- [Gaming](/gaming/)
+
+- [Medical](/medical-healthcare/)
+
+- [Agritech](/agritech/)
+
+
+### Technology
+
+
+- [Dev & Technology](/technology/)
+
+- [Front End](/services/front-end-dev/)
+
+- [React.js](/services/front-end-dev/)
+
+- [Vue.js](/services/front-end-dev/)
+
+- [Back End](/services/back-end-dev/)
+
+- [Node. Js](/services/back-end-dev/)
+
+
+### About
+
+
+- [About us](/about-us/)
+
+- [Careers](/careers/)
+
+- [Our Services](/services/)
+
+- [Talk to us](/contact-us/)
+
+- [Press](https://www.themarker.com/labels/2021-04-05/ty-article-labels/0000017f-f88a-d044-adff-fbfb48ad0000)
+
+- [Accessibility Statement](/accessibility-statement/)
+
+
+### Our Blog
+
+
+- [All Blogs](/blog)
+
+- [Fintech & Finance](/blog/the-fintech-ux-playbook/)
+
+- [IOT & Devices](/blog/designing-intuitive-and-secure-iot-products-for-the-future/)
+
+- [SaaS](/blog/the-3-most-common-pain-points-when-hiring-ui-ux-agency-for-a-saas-product/)
+
+- [Gaming](/blog/level-up-your-gaming-app-with-triollas-expert-ux-tips-boost-user-engagement-and-retention/)
+
+- [Medical](/blog/ux-in-medtech-when-trust-is-a-matter-of-life-and-death/)
+
+- [Agritech](/blog/designing-an-engaging-and-effective-agritech-app/)
+
+
+### Social
+
+
+- [Facebook](https://www.facebook.com/triollaofficial)
+
+- [Linkedin](https://www.linkedin.com/company/triolla-official/)
+
+- [Instargram](https://www.instagram.com/triollaofficial/)
+
+- [Tiktok](https://www.tiktok.com/@triolla.io)
+
+- [Driblle](https://dribbble.com/Triolla)
+
+- [BeHnace](https://www.behance.net/asaf8ac9)
+
+
+### Talk to us
+
+
+Mail: [[email protected]](/cdn-cgi/l/email-protection#6e281b002e1a1c070102020f400701)
+
+
+TLV Offices: [+972-73-744-3322](tel:+972-73-744-3322)
+
+NY Offices: [+1408-627-7350](tel:+1408-627-7350)
+
+[Book a Call
+
+
+Book a Call](https://calendly.com/triolla/pitangoux-introductory-meeting-clone)
+
+
+- [](https://13tv.co.il/item/special/recommended/economy/k2fy3-902776824/)
+
+- [](https://www.bizportal.co.il/BizTech/news/article/20015580)
+
+- [](https://www.themarker.com/labels/2021-04-05/ty-article-labels/0000017f-f88a-d044-adff-fbfb48ad0000)
+
+- [](https://www.globes.co.il/news/article.aspx?did=1001450720)
+
+- [](https://www.pc.co.il/featured/420350/)
+
+- [](https://www.mako.co.il/special-articles/Article-c2a83bbe7224d71026.htm)
+
+
+[](/)
+
+
+All rights reserved to Triolla LTD | [Privacy Policy](/privacy-policy/) | [Terms Of Use](/terms-of-use/)
+
+
+- [](https://www.tiktok.com/@triolla.io)
+
+- [](https://www.instagram.com/triollaofficial/)
+
+- [](https://www.facebook.com/triollaofficial)
+
+
+- [Eng](/blog/f35-ux-vertigo/)
+
+- [Heb](/he/blog/f35-ux-vertigo/)
+
+
+[Part of](https://www.sqlink.com/)
+
+
+- [](https://www.linkedin.com/company/triolla-official/)
+
+- [](https://www.tiktok.com/@triolla.io)
+
+- [](https://www.instagram.com/triollaofficial/)
+
+- [](https://www.facebook.com/triollaofficial)
+
+
+Close GDPR Cookie Settings
+
+
+![Triolla]
+
+
+- Privacy Overview
+
+
+- Strictly Necessary Cookies
+
+
+[Powered by  GDPR Cookie Compliance](https://wordpress.org/plugins/gdpr-cookie-compliance/)
+
+
+Privacy Overview
+
+
+This website uses cookies so that we can provide you with the best user experience possible. Cookie information is stored in your browser and performs functions such as recognising you when you return to our website and helping our team to understand which sections of the website you find most interesting and useful.
+
+
+Strictly Necessary Cookies
+
+
+Strictly Necessary Cookie should be enabled at all times so that we can save your preferences for cookie settings.
+
+
+Enable or Disable Cookies
+
+
+Enabled
+Disabled
+
+
+Enable All
+Reject All
+Save Changes
+
+
+This site is registered on [wpml.org](https://wpml.org) as a development site. Switch to a production site key to [remove this banner](https://wpml.org/faq/how-to-remove-the-this-site-is-registered-on-wpml-org-as-a-development-site-notice/?utm_source=plugin&utm_medium=gui&utm_campaign=wpml-core&utm_term=footer-notice).

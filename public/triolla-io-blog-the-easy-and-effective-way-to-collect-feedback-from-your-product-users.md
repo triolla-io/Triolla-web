@@ -1,0 +1,655 @@
+<!-- lang: en-US -->
+
+# The Easy and Effective Way to Collect Feedback from Your Product Users - Triolla
+
+- Pitangoux is now Triolla – We’ve rebranded! Hello and welcome!
+
+
+[Formally Pitangoux](/)
+
+
+- Portfolio
+
+test
+
+[Cybersecurity](/cyber-security/)
+
+- [Digital Health](/medical-healthcare/)
+
+- [Fintech & Finance](/fintech-finance/)
+
+- [Gaming](/gaming/)
+
+- [Agritech](/agritech/)
+
+- [B2C](/b2c/)
+
+
+- test
+
+[Devices & IoT](/device-iot/)
+
+- [Startups & Tech](/startups-tech/)
+
+- [Mobile Apps](/mobile-apps/)
+
+- [SaaS Platforms](/saas-platforms/)
+
+- [B2B](/b2b/)
+
+- [Dev](/dev/)
+
+
+- [Services](/services/)
+
+- [Technology](/technology/)
+
+- [The Company](/about-us/)
+
+
+[Contact Us
+Contact Us](/contact-us/)
+
+
+[](https://api.whatsapp.com/send/?phone=+972525956644&text=שלום, הייתי רוצה לשמוע עוד פרטים... &app_absent=0)
+
+
+[Book a Call
+
+
+Book a Call](https://calendly.com/triolla/pitangoux-introductory-meeting-clone)
+
+
+- Portfolio
+
+test
+
+[Cybersecurity](/cyber-security/)
+
+- [Digital Health](/medical-healthcare/)
+
+- [Fintech & Finance](/fintech-finance/)
+
+- [Gaming](/gaming/)
+
+- [Agritech](/agritech/)
+
+- [B2C](/b2c/)
+
+
+- test
+
+[Devices & IoT](/device-iot/)
+
+- [Startups & Tech](/startups-tech/)
+
+- [Mobile Apps](/mobile-apps/)
+
+- [SaaS Platforms](/saas-platforms/)
+
+- [B2B](/b2b/)
+
+- [Dev](/dev/)
+
+
+- [Services](/services/)
+
+- [Technology](/technology/)
+
+- [The Company](/about-us/)
+
+
+- [Heb](/he/blog/%d7%94%d7%93%d7%a8%d7%9a-%d7%94%d7%a7%d7%9c%d7%94-%d7%95%d7%94%d7%a4%d7%a9%d7%95%d7%98%d7%94-%d7%9c%d7%a7%d7%91%d7%9c-%d7%9e%d7%a9%d7%95%d7%91-%d7%9e%d7%9e%d7%a9%d7%aa%d7%9e%d7%a9%d7%99-%d7%94%d7%9e/)
+
+- [Blog](/blog/)
+
+- [Career](/careers/)
+
+
+[Book a Call](https://calendly.com/triolla/pitangoux-introductory-meeting-clone)
+
+
+[](tel:+972-73-744-3322)
+
+[](https://wa.me/+972525956644?text=שלום, הייתי רוצה לשמוע עוד פרטים... )
+
+
+![Triolla]
+
+
+[Back](/blog/)
+
+
+# The Easy and Effective Way to Collect Feedback from Your Product Users
+
+
+Effective communication is an essential skill for product managers. We spend a lot of time thinking about the best way to deliver a user experience that is convenient, accessible, and effective—one that helps the product succeed. In a perfect world, we’d be able to sit down and talk to every user about their personal experience, but in reality, this model is simply not feasible. In the real world, the communication tool we use most frequently is email.
+
+
+Product managers cannot do their jobs effectively without understanding customer needs and gauging their satisfaction with the current offering. By reaching out to customers via email at specific moments along the customer journey, product managers can connect with what users are feeling while the experience is still fresh in their minds.
+
+
+Customer feedback reveals exciting opportunities as well as painful truths. But if your emails don’t elicit a response, you’ll never know what you’re missing, you won’t learn what customers really think about their experience with your product, and you won’t be able to focus or adapt your product strategy. Leveraging feedback data enables more effective product feature prioritization. In other words, collecting feedback ensures that organizations build or change products with a clear understanding of their impact on users, taking into account their thoughts, feelings, experiences, and needs. This is especially important for product managers, who must truly understand users’ problems before they can deliver meaningful solutions.
+
+
+The main goal of a feedback email is to teach us what we’re doing well and what needs improvement. Remember: satisfied customers are loyal customers who contribute to business growth, and a feedback email will help with both retention and expansion. Now that the strategic advantage of feedback emails is clear, here are some great tips for writing and designing feedback emails that will persuade people to participate and provide you with valuable insights for your business.
+
+
+**Tips for Collecting Valuable Customer Feedback via Email:**
+
+
+**1.Stick to a Simple, Focused Design**
+
+
+Keeping feedback emails simple and focused is the key to receiving more relevant information. The Marketing Experiments team has a mantra: “Clarity trumps persuasion.” And they have the data to back it up. Based on this principle, we sent the following feedback email to some of our customers:
+
+
+[Source](https://www.campaignmonitor.com/blog/email-marketing/collect-customer-feedback-via-email/)
+
+
+No unnecessary images or headlines—just a message and a call-to-action button. This soft format generated a strong response from engaged readers, as the simplicity of the message and design helped focus the recipient’s attention on the main message and the primary conversion action we wanted: clicking the button and participating in the survey.
+
+
+**2. Lead with Intent**
+
+
+Be clear and concise—this is one of the foundations of a successful feedback email. Tell the customer why you’re reaching out—did they just try a new feature? Has it been a while since they last used the product? This way, the customer doesn’t feel like they’re receiving generic “spam” sent to every user.
+
+
+**3. Tell Users What You Want, Simply**
+
+
+An open-ended request for feedback may seem the least intrusive, but users who don’t typically provide input may be put off or flood you with irrelevant comments. Be specific without being too leading in your request (think “We’d love to hear about your experience” rather than “Tell us what we should do better”).
+
+
+**4. Respect the User’s Time**
+
+
+If your email asks the customer to join a call, webinar, or follow-up meeting, let them know exactly how much time you’re asking for. “Less is more” in this case, so design your feedback session efficiently, keeping it focused and as brief as possible. Telling users you’ll only need, for example, 15 minutes of their time should increase response rates and be less of a burden on both sides.
+
+
+**Key Elements of an Effective Customer Feedback Email**
+
+
+Since the customer didn’t ask you for your opinion, you need to make the email valuable for them. If you include each of the following elements in your email template, you’ll increase both the response rate and the quality of the information you receive.
+
+
+**1. Write a Compelling Subject Line**
+
+
+Once you’ve built the perfect survey, one thing stands between you and your recipients: a great subject line! It should be persuasive and stand out in a crowded inbox. A strong subject line is the key to higher open rates and better survey participation. Above all, a great feedback email subject line should be relevant and connect with the recipient by referencing something they did or purchased. Mentioning your brand can also help jog the user’s memory!
+
+
+**2. Use Personalization**
+
+
+According to the “Bystander Effect,” the likelihood that someone will help you is inversely proportional to the number of bystanders. The more people involved in a specific situation (like receiving a feedback email), the less likely any one of them is to respond, as recipients assume someone else will provide the help being sought.
+
+
+To overcome this effect, use personalization tags to address each recipient directly. A touch of personalization helps them feel the email was sent specifically to them and that you genuinely want their feedback, increasing the chances of a response. At a minimum, use personalization tags in the opening line—“Hi John” instead of “Dear valued customer.”
+
+
+Furthermore, if you have other information about the user (such as their city), try to include it in your email. This will elevate your feedback email’s personalization beyond the common first-name standard, further increasing your chances of getting a response.
+
+
+**3. Add a Clear Call to Action**
+
+
+Like any email that requires recipients to take action, a feedback email should make it clear what they need to do with a single, prominent call to action—either as a URL or a CTA button.
+
+
+Pay close attention to the CTA button text: it should motivate people to act now, rather than move on to the next email in their inbox! Here are some CTA button labels for inspiration:
+
+
+- Start the survey
+
+- Take the survey now
+
+- Click here to get started!
+
+- Join our quick survey
+
+- Click here to enter the survey
+
+
+No matter which method you choose to collect feedback (survey, call, etc.), always include a very clear call to action so the recipient knows exactly what the next step is. In the earlier feedback email example, we asked recipients to fill out a survey with a few questions. Since this was our chosen feedback method, we included a very clear CTA button linking to the survey. In our tests, we found that including a CTA button increased conversion by 28%, so by adding the button, we clarified the next step and got more people to click and provide feedback.
+
+
+**4. Be Authentic**
+
+
+Remember: you’re asking users for a favor—they don’t owe you anything! Use natural language and avoid sounding pushy or demanding. The more human and genuine you come across, the more likely users are to respond.
+
+
+**5. Consider the Entire User Experience**
+
+
+After you send the email, there are several steps a user must take before you receive their valuable feedback. If you don’t make these steps easy, you’ll get fewer responses and, as a result, fewer insights.
+
+
+**Customer Feedback Email Templates**
+
+
+Here are some basic templates for four different types of requests to help you on your journey to creating useful feedback messages. Use them as starting points and adapt them to your product, what you know about your customers, and the specific context of your “ask.” These templates request a call or meeting, but they can easily be adapted for survey requests or feedback via email reply. Remember, anything you can do to make the interaction feel personal—not like an automated system message—will improve your response rates.
+
+
+**Request for Feedback on a New Feature**
+
+
+“Hi [Customer’s First Name],
+
+
+I see you recently tried [Feature Name]. I’d love to hear how your experience was with [Feature-Specific Topic]. Would you be able to spare 5 minutes for a quick call next week?
+
+
+Thank you so much, looking forward to your reply,
+
+
+[Your Name]
+[Your Title @ Company Name]”
+
+
+**Customer Experience Conversation**
+
+
+“Hi [Customer’s First Name],
+
+
+Thank you for recently purchasing [Product Name]. We’re curious to learn more about the process that led you to buy the product and your experience so far. In particular, we’d love your thoughts on [Specific Topic]. Would you be able to spare 5 minutes for a quick chat next week?
+
+
+Thank you so much, looking forward to your reply,
+
+
+[Your Name]
+[Your Title @ Company Name]”
+
+
+**Feature Validation Meeting**
+
+
+“Hi [Customer’s First Name],
+
+
+I see you’re using [Specific Features]. Based on your experience, I’d love to get your feedback on a potential new feature we’re considering adding. Would you have time for a call next week? It would be great if you could spare 5 minutes so I can review the new feature with you.
+
+
+Thank you so much, looking forward to your reply,
+
+
+[Your Name]
+[Your Title @ Company Name]”
+
+
+**Service Experience Review**
+
+
+“Hi [Customer’s First Name],
+
+
+I noticed you recently contacted our customer service team regarding an issue with [Specific Topic]. I’d love to get your feedback on the service experience you received and make sure the issue was fully resolved.
+
+
+It would be great if you could spare 5 minutes for a quick call next week.
+
+
+Thank you so much, looking forward to your reply,
+
+
+[Your Name]
+[Your Title @ Company Name]”
+
+
+**Prepare for the Response**
+
+
+**Discovery Feedback**
+
+
+“Hi [Customer’s First Name],
+
+
+Thank you for recently purchasing [Product Name]. We’re curious to understand more about your decision process and hear about your experience so far—especially how you find [Topic B]. Would you have time for a quick, informal 5-minute call next week?
+
+
+Thank you, looking forward to hearing from you,
+
+
+[Your Name]
+[Your Title @ Company Name]”
+
+
+**Feature Validation Activation**
+
+
+“Hi [Customer’s First Name],
+
+
+I see you’re using [ABC, a specific product feature, or you’re a specific type of user]. Based on your experience, I’d love to get your feedback on a potential new feature we’re considering. Would you have time for a call next week? It would be great if you could spare 5–60 minutes.
+
+
+Thank you, looking forward to hearing from you,
+
+
+[Your Name]
+[Your Title @ Company Name]”
+
+
+By relying on templates, automated workflows, and routine actions, product managers can create a continuous feedback loop that encourages customers to provide their input. Since the goal is for customers to respond and agree to provide feedback, make sure your calendar has enough slots for feedback calls before sending the emails (and don’t send too many at once, or you won’t be able to handle all the responses).
+
+
+In summary, these are the principles of a successful feedback email. If you stick to them, you’ll gain tremendous value from the feedback you receive from users and customers. Feedback may lead to surprising insights and sometimes painful realizations, but also to constructive and helpful criticism—provided you ask great questions. The more perspectives and experiences you listen to, the more informed your decisions will be. To avoid overreacting to every piece of feedback, it’s wise to set up a system in advance to properly process what you hear.
+
+
+And one more thing: never forget to close the loop with customers who took the time to provide feedback. Let them know when their requests have been addressed—and even when they haven’t. It’s the least you can do to thank them for their cooperation.
+
+
+More Posts
+
+
+[Browse all](/blog/)
+
+
+- [Cybersecurity Design UX: Founder Playbook to Ship Products Users Love and Adversaries Hate](/blog/cybersecurity-design-ux-a-founder-playbook/)
+
+- [Triolla is certified iso 27001-017](/blog/iso-27001-2025-2026/)
+
+
+[Browse all](/blog/)
+
+
+### Wanna Chat? Get In Touch
+
+
+#### Give us a call:
+
+TLV [+972-73-744-3322](tel:+972-73-744-3322)
+
+NY & SF [+1408-627-7350](tel:+1408-627-7350)
+
+
+#### Mail:
+
+[[email protected]](/cdn-cgi/l/email-protection#7f390a113f0b0d161013131e511610)
+
+**HQ Address:** Zarchin St. 2, Ranana
+
+
+##### Trusted by 1000+ companies:
+
+
+-
+
+-
+
+-
+
+-
+
+
+#### Schedule a Free Consultation
+
+
+##### Give us a call:
+
+TLV
+[+972-73-744-3322](tel:+972-73-744-3322)
+
+
+Instagram
+
+
+This field is for validation purposes and should be left unchanged.
+
+
+Full Name(Required)
+
+
+Phone(Required)
+
+
+Email(Required)
+
+
+##### Trusted by 1000+ companies:
+
+
+-
+
+-
+
+-
+
+-
+
+
+/blog/the-easy-and-effective-way-to-collect-feedback-from-your-product-users/
+
+
+/blog/the-easy-and-effective-way-to-collect-feedback-from-your-product-users/
+
+
+##### Talk to us
+
+
+[Book a Call](https://calendly.com/triolla/pitangoux-introductory-meeting-clone)
+[Contact Us](/contact-us/)
+
+
+[](https://wa.me/+972525956644?text=שלום, הייתי רוצה לשמוע עוד פרטים... )
+[](tel:+972-73-744-3322)
+
+
+Mentions:
+
+
+- [](https://13tv.co.il/item/special/recommended/economy/k2fy3-902776824/)
+
+- [](https://www.bizportal.co.il/BizTech/news/article/20015580)
+
+- [](https://www.themarker.com/labels/2021-04-05/ty-article-labels/0000017f-f88a-d044-adff-fbfb48ad0000)
+
+- [](https://www.globes.co.il/news/article.aspx?did=1001450720)
+
+- [](https://www.pc.co.il/featured/420350/)
+
+- [](https://www.mako.co.il/special-articles/Article-c2a83bbe7224d71026.htm)
+
+
+### Product Design
+
+
+- [Product UX & UI Design](/services/product-ux-ui-design/)
+
+- [UX Research](/services/ux-research/)
+
+- [Prototype](/services/prototyping/)
+
+- [Digital Branding](/branding-studio/)
+
+- [Front End Development](/services/front-end-dev/)
+
+
+### Case studies
+
+
+- [Mobile Apps](/mobile-apps/)
+
+- [Fintech & Finance](/fintech-finance/)
+
+- [IOT & Devices](/device-iot/)
+
+- [SaaS](/saas-platforms/)
+
+- [Gaming](/gaming/)
+
+- [Medical](/medical-healthcare/)
+
+- [Agritech](/agritech/)
+
+
+### Technology
+
+
+- [Dev & Technology](/technology/)
+
+- [Front End](/services/front-end-dev/)
+
+- [React.js](/services/front-end-dev/)
+
+- [Vue.js](/services/front-end-dev/)
+
+- [Back End](/services/back-end-dev/)
+
+- [Node. Js](/services/back-end-dev/)
+
+
+### About
+
+
+- [About us](/about-us/)
+
+- [Careers](/careers/)
+
+- [Our Services](/services/)
+
+- [Talk to us](/contact-us/)
+
+- [Press](https://www.themarker.com/labels/2021-04-05/ty-article-labels/0000017f-f88a-d044-adff-fbfb48ad0000)
+
+- [Accessibility Statement](/accessibility-statement/)
+
+
+### Our Blog
+
+
+- [All Blogs](/blog)
+
+- [Fintech & Finance](/blog/the-fintech-ux-playbook/)
+
+- [IOT & Devices](/blog/designing-intuitive-and-secure-iot-products-for-the-future/)
+
+- [SaaS](/blog/the-3-most-common-pain-points-when-hiring-ui-ux-agency-for-a-saas-product/)
+
+- [Gaming](/blog/level-up-your-gaming-app-with-triollas-expert-ux-tips-boost-user-engagement-and-retention/)
+
+- [Medical](/blog/ux-in-medtech-when-trust-is-a-matter-of-life-and-death/)
+
+- [Agritech](/blog/designing-an-engaging-and-effective-agritech-app/)
+
+
+### Social
+
+
+- [Facebook](https://www.facebook.com/triollaofficial)
+
+- [Linkedin](https://www.linkedin.com/company/triolla-official/)
+
+- [Instargram](https://www.instagram.com/triollaofficial/)
+
+- [Tiktok](https://www.tiktok.com/@triolla.io)
+
+- [Driblle](https://dribbble.com/Triolla)
+
+- [BeHnace](https://www.behance.net/asaf8ac9)
+
+
+### Talk to us
+
+
+Mail: [[email protected]](/cdn-cgi/l/email-protection#e5a3908ba591978c8a898984cb8c8a)
+
+
+TLV Offices: [+972-73-744-3322](tel:+972-73-744-3322)
+
+NY Offices: [+1408-627-7350](tel:+1408-627-7350)
+
+[Book a Call
+
+
+Book a Call](https://calendly.com/triolla/pitangoux-introductory-meeting-clone)
+
+
+- [](https://13tv.co.il/item/special/recommended/economy/k2fy3-902776824/)
+
+- [](https://www.bizportal.co.il/BizTech/news/article/20015580)
+
+- [](https://www.themarker.com/labels/2021-04-05/ty-article-labels/0000017f-f88a-d044-adff-fbfb48ad0000)
+
+- [](https://www.globes.co.il/news/article.aspx?did=1001450720)
+
+- [](https://www.pc.co.il/featured/420350/)
+
+- [](https://www.mako.co.il/special-articles/Article-c2a83bbe7224d71026.htm)
+
+
+[](/)
+
+
+All rights reserved to Triolla LTD | [Privacy Policy](/privacy-policy/) | [Terms Of Use](/terms-of-use/)
+
+
+- [](https://www.tiktok.com/@triolla.io)
+
+- [](https://www.instagram.com/triollaofficial/)
+
+- [](https://www.facebook.com/triollaofficial)
+
+
+- [Eng](/blog/the-easy-and-effective-way-to-collect-feedback-from-your-product-users/)
+
+- [Heb](/he/blog/%d7%94%d7%93%d7%a8%d7%9a-%d7%94%d7%a7%d7%9c%d7%94-%d7%95%d7%94%d7%a4%d7%a9%d7%95%d7%98%d7%94-%d7%9c%d7%a7%d7%91%d7%9c-%d7%9e%d7%a9%d7%95%d7%91-%d7%9e%d7%9e%d7%a9%d7%aa%d7%9e%d7%a9%d7%99-%d7%94%d7%9e/)
+
+
+[Part of](https://www.sqlink.com/)
+
+
+- [](https://www.linkedin.com/company/triolla-official/)
+
+- [](https://www.tiktok.com/@triolla.io)
+
+- [](https://www.instagram.com/triollaofficial/)
+
+- [](https://www.facebook.com/triollaofficial)
+
+
+Close GDPR Cookie Settings
+
+
+![Triolla]
+
+
+- Privacy Overview
+
+
+- Strictly Necessary Cookies
+
+
+[Powered by  GDPR Cookie Compliance](https://wordpress.org/plugins/gdpr-cookie-compliance/)
+
+
+Privacy Overview
+
+
+This website uses cookies so that we can provide you with the best user experience possible. Cookie information is stored in your browser and performs functions such as recognising you when you return to our website and helping our team to understand which sections of the website you find most interesting and useful.
+
+
+Strictly Necessary Cookies
+
+
+Strictly Necessary Cookie should be enabled at all times so that we can save your preferences for cookie settings.
+
+
+Enable or Disable Cookies
+
+
+Enabled
+Disabled
+
+
+Enable All
+Reject All
+Save Changes
+
+
+This site is registered on [wpml.org](https://wpml.org) as a development site. Switch to a production site key to [remove this banner](https://wpml.org/faq/how-to-remove-the-this-site-is-registered-on-wpml-org-as-a-development-site-notice/?utm_source=plugin&utm_medium=gui&utm_campaign=wpml-core&utm_term=footer-notice).

@@ -1,0 +1,635 @@
+Saas product tour trends: how great companies onboard users in 2018 - Triolla
+
+- Pitangoux is now Triolla – We’ve rebranded! Hello and welcome!
+
+
+Formally Pitangoux
+
+
+- Portfolio
+
+test
+
+Cybersecurity
+
+- Digital Health
+
+- Fintech & Finance
+
+- Gaming
+
+- Agritech
+
+- B2C
+
+
+- test
+
+Devices & IoT
+
+- Startups & Tech
+
+- Mobile Apps
+
+- SaaS Platforms
+
+- B2B
+
+- Dev
+
+
+- Services
+
+- Technology
+
+- The Company
+
+
+Contact Us
+Contact Us
+
+
+[](https://api.whatsapp.com/send/?phone=+972525956644&text=שלום, הייתי רוצה לשמוע עוד פרטים... &app_absent=0)
+
+
+Book a Call
+
+
+Book a Call
+
+
+- Portfolio
+
+test
+
+Cybersecurity
+
+- Digital Health
+
+- Fintech & Finance
+
+- Gaming
+
+- Agritech
+
+- B2C
+
+
+- test
+
+Devices & IoT
+
+- Startups & Tech
+
+- Mobile Apps
+
+- SaaS Platforms
+
+- B2B
+
+- Dev
+
+
+- Services
+
+- Technology
+
+- The Company
+
+
+- Heb
+
+- Blog
+
+- Career
+
+
+Book a Call
+
+
+[](tel:+972-73-744-3322)
+
+[](https://wa.me/+972525956644?text=שלום, הייתי רוצה לשמוע עוד פרטים... )
+
+
+![Triolla]
+
+
+Back
+
+
+Saas product tour trends: how great companies onboard users in 2018
+
+
+Are you up to improve your sales conversions? Decrease user retention? Cut bounce rates? A skillfully crafted product tour can contribute to any of these goals. But what makes an onboarding experience great?
+
+
+We can all agree that creating a product tour is very contextual. There’s no single all-embracing tendency, no absolute right or wrong decisions when it comes to the onboarding experience. There’s something that either works or doesn’t for each tool.
+
+
+“A product tour can improve sales conversions by 20-100%.”
+
+
+Our team analyzed dozens of product tours, considering mostly web versions of apps, and we’d love to share what we found.
+
+
+1. Less is more. Minimalism is of the essence.
+
+
+Clear, simple, non-invasive. Product tours are easy to understand and perform.
+Well, at least they’re supposed to be.
+
+
+Information overload of any kind just doesn’t fly. Microsoft Office 365 sets up a clear example of this “less is more” principle.
+
+
+Microsoft Office 365’s modal window that pops up after signing up
+
+
+Simplicity embraces each element of product tours—graphics, typography, illustration, and content. A skillful onboarding experience doesn’t feel like a burden—it guides users to an “aha” moment.
+
+
+Sometimes an emotion is added—uplifting, but not sappy. Check out the greeting from Skype as an example.
+
+
+Skype’s welcome message
+
+
+The challenge of simplicity is also about written content. Short, refreshing, laconic copy prevails. The conversational and friendly voice, tone, and style are essential.
+
+
+Also, it’s better to be brief than explain everything in detail, so keep things short and sweet—but give people a way to read more details if they want.
+
+
+Dropbox seems quite laconic in its messages
+
+
+Sometimes if you have a product with many features, you have no choice but be complicated. The challenge of simplicity, then, is to make the complicated as simple as possible. This may require breaking up text-heavy pages, writing bite-sized paragraphs, and using smart typography and stylized images.
+
+
+2. Brevity is the soul of wit
+
+
+In our fast-moving world, everyone strives to be brief. So most product tours consist of minimum steps: 3-5 stages only, as long as it’s not a persona-based onboarding (we’ll get back to that later).
+
+
+Most users are eager to accomplish a tour quickly. They want it all, and they want it now. It’s important for visitors to keep track on their way of a product tour—and that’s why progress bars and checklists are commonplace.
+
+
+GoToMeeting uses checklists to facilitate the user’s experience
+
+
+Brevity also implies that users can start and quit a product tour at any point, or to get back to it later. This is actually a rare feature. Most product tours appear only once after registering the account, then you can’t restart them.
+
+
+OneDrive provides “FINISH LATER” option within its short onboarding experience
+
+
+3. Multiple UI-patterns—one goal
+
+
+There are plenty of UI patterns used in product tours. Modal windows are probably the oldest tools to greet and guide users. But the popularity of modals seems to be decreasing lately, as they become quite invasive. Modals may take over a full screen or have a transparent background.
+
+
+Here’s how Box found their way of using modals.
+
+
+Box chooses a modal window as a design pattern in their product tour
+
+
+Most product tours come in the form of tooltips. These are boxes with pointers that call out and specify certain elements within a product. Tooltips are popular because they give visitors a first-hand experience performing every action.
+
+
+Salesforce is using tooltips to guide visitors
+
+
+Hotspots are relatively new tools that became commonplace just recently. These small icons, often in the form of circles, hint on more information behind a certain element. Hotspots are popular because they’re seeming less invasive to a user than other instruments. They also come in different forms—still, blinking, radiating, etc.
+
+
+Dropbox uses hotspots in its product tour
+
+
+Sometimes coach marks are nearly enough for a product tour. Unlike tooltips, coach marks have a gradient behind them. Most coach marks are designed with a font and arrow that simulates handwriting.
+
+
+Toggl’s using coach marks in its product tour
+
+
+All elements listed above often get mixed and combined in product tours. Modals, tooltips, hotspots, and coach marks are supposed to serve a single goal: explain a product’s value to users.
+
+
+4. A little more action. Interactivity as the main feature.
+
+
+It’s all about interactivity in 2018—whether we’re talking about web, design, content, or the tech industry in general. Product tours are becoming personalized experiences. It’s getting more and more important to find out visitors’ needs and preferences before dropping them onto an app bar.
+
+
+Jira’s onboarding experience includes filling in gaps by a visitor
+
+
+This approach is called persona-based onboarding. Users answer specific questions so they can get a more relevant first-run experience. That should lead to higher engagement rates.
+
+
+Related: Are personas ruining your product?
+
+
+5. Flat and semi-flat design prevails, but it’s evolving
+
+
+Most product tours are designed to look gorgeous.
+
+
+Illustration, graphics, and typography are the key features of an onboarding experience. For now, flat design (and its elements) dominate in product tours. Creating in this style allows you to place a higher focus on the content while eliminating the distractions from UI elements. Hardly anyone puts a shine on every button nowadays.
+
+
+Google Hangouts’ welcome message, with elements of flat design
+
+
+But there’s a slight shift from flat design happening. Sometimes more depth is added to the picture, which leads to so-called semi-flat design and its variations.
+
+
+[contact-form-7 id=”958e338″ title=”Post Contact Form”]
+
+
+Bitbucket’s persona-based onboarding experience
+
+
+Also, gradients are making a comeback.
+
+
+Canva is using gradients in its persona-based product tour
+
+
+The color layout is another important feature of the product tours. We could probably say that bold colors are currently a trend. Bright, strong, or saturated tones are used in most cases.
+
+
+Related: How Salesforce studied color to make a better user experience
+
+
+6. Animation and video
+
+
+In 2018, animation is on the rise when it comes to creating product tours. It may be used as an extra to modal windows or tooltips, communicating with users.Video Player00:0000:08
+
+
+Slack uses animation in their product tour
+
+
+Sometimes there are animated fictional characters guiding a visitor through the whole process. This is quite a new approach to a product tour, implemented by us at Chanty.
+
+
+At Chanty we use Rufus, an animated character, to guide users
+
+
+Video content seems to be more widely used for training visitors or their turning to a knowledge base. Occasionally, it’s also used in product tours.
+
+
+Google Drive uses video tutorial on the final stage of its guide tour
+
+
+But sometimes visual content just goes aside. For example, the time-tracking tool HiveDesk won’t treat you with illustration or animation, offering a comprehensive guide tour using short tips. No frills.
+
+
+HiveDesk modal window isn’t enriched by any illustrations
+
+
+What all SaaS products have in common is a powerful support center where visitors can get help any time after going on a product tour.
+
+
+Conclusion:
+
+
+The product tour is definitely a must-have for SaaS products. Its main goal is to welcome new visitors and guide them to the values of a particular tool. Any onboarding experience is supposed to bring visitors from not having a clue how a product works to valuable insights on how to benefit from it.
+
+
+The key product tour trends of 2018 deal with:
+
+
+- Simplicity and minimalism. To avoid information overload, only articulate and explain the main things.
+
+- Brevity. Most visitors want to get the product tour over with as quickly as possible or even skip it. Progress bars and checklists might help them feel in control of their timing.
+
+- Using multiple UI patterns. Modals, toolboxes, hotspots, and coach marks are the tools to create the most relevant experience for a visitor.
+
+- Interactivity. Persona-based onboarding is growing in popularity. It helps customize the user experience to their needs and requests.
+
+- Flat design. Minimalistic and simple style prevails with slight deviations. Gradients step into the game with bold colors being the most popular.
+
+- Visual appeal. As we live in visual culture, it’s important for a product tour to look attractive and engaging. Animation is becoming more popular. Occasionally, videos are used to explain key values of the product.
+
+
+A great onboarding experience might work miracles for a SaaS product. According to experts, a product tour can improve sales conversions 20-100 percent, decreasing user retention and minimizing bounce rates.
+
+
+Have I missed something? Feel free to share your take on product tour trends SaaS companies should follow in 2018. Original article found at InVision blog, posted by Aleksey Chepalov on May 21, 2018.
+
+
+More Posts
+
+
+Browse all
+
+
+- Cybersecurity Design UX: Founder Playbook to Ship Products Users Love and Adversaries Hate
+
+- Triolla is certified iso 27001-017
+
+
+Browse all
+
+
+Wanna Chat? Get In Touch
+
+
+Give us a call:
+
+TLV +972-73-744-3322
+
+NY & SF +1408-627-7350
+
+
+Mail:
+
+[[email protected]](/cdn-cgi/l/email-protection#bff9cad1ffcbcdd6d0d3d3de91d6d0)
+
+HQ Address: Zarchin St. 2, Ranana
+
+
+Trusted by 1000+ companies:
+
+
+-
+
+-
+
+-
+
+-
+
+
+Schedule a Free Consultation
+
+
+Give us a call:
+
+TLV
++972-73-744-3322
+
+
+Company
+
+
+This field is for validation purposes and should be left unchanged.
+
+
+Full Name(Required)
+
+
+Phone(Required)
+
+
+Email(Required)
+
+
+Trusted by 1000+ companies:
+
+
+-
+
+-
+
+-
+
+-
+
+
+/blog/saas-product-tour-trends-how-great-companies-onboard-users-in-2018/
+
+
+/blog/saas-product-tour-trends-how-great-companies-onboard-users-in-2018/
+
+
+Talk to us
+
+
+Book a Call
+Contact Us
+
+
+[](https://wa.me/+972525956644?text=שלום, הייתי רוצה לשמוע עוד פרטים... )
+[](tel:+972-73-744-3322)
+
+
+Mentions:
+
+
+- [](https://13tv.co.il/item/special/recommended/economy/k2fy3-902776824/)
+
+- [](https://www.bizportal.co.il/BizTech/news/article/20015580)
+
+- [](https://www.themarker.com/labels/2021-04-05/ty-article-labels/0000017f-f88a-d044-adff-fbfb48ad0000)
+
+- [](https://www.globes.co.il/news/article.aspx?did=1001450720)
+
+- [](https://www.pc.co.il/featured/420350/)
+
+- [](https://www.mako.co.il/special-articles/Article-c2a83bbe7224d71026.htm)
+
+
+Product Design
+
+
+- Product UX & UI Design
+
+- UX Research
+
+- Prototype
+
+- Digital Branding
+
+- Front End Development
+
+
+Case studies
+
+
+- Mobile Apps
+
+- Fintech & Finance
+
+- IOT & Devices
+
+- SaaS
+
+- Gaming
+
+- Medical
+
+- Agritech
+
+
+Technology
+
+
+- Dev & Technology
+
+- Front End
+
+- React.js
+
+- Vue.js
+
+- Back End
+
+- Node. Js
+
+
+About
+
+
+- About us
+
+- Careers
+
+- Our Services
+
+- Talk to us
+
+- Press
+
+- Accessibility Statement
+
+
+Our Blog
+
+
+- All Blogs
+
+- Fintech & Finance
+
+- IOT & Devices
+
+- SaaS
+
+- Gaming
+
+- Medical
+
+- Agritech
+
+
+Social
+
+
+- Facebook
+
+- Linkedin
+
+- Instargram
+
+- Tiktok
+
+- Driblle
+
+- BeHnace
+
+
+Talk to us
+
+
+Mail: [[email protected]](/cdn-cgi/l/email-protection#a4e2d1cae4d0d6cdcbc8c8c58acdcb)
+
+
+TLV Offices: +972-73-744-3322
+
+NY Offices: +1408-627-7350
+
+Book a Call
+
+
+Book a Call
+
+
+- [](https://13tv.co.il/item/special/recommended/economy/k2fy3-902776824/)
+
+- [](https://www.bizportal.co.il/BizTech/news/article/20015580)
+
+- [](https://www.themarker.com/labels/2021-04-05/ty-article-labels/0000017f-f88a-d044-adff-fbfb48ad0000)
+
+- [](https://www.globes.co.il/news/article.aspx?did=1001450720)
+
+- [](https://www.pc.co.il/featured/420350/)
+
+- [](https://www.mako.co.il/special-articles/Article-c2a83bbe7224d71026.htm)
+
+
+[](/)
+
+
+All rights reserved to Triolla LTD | Privacy Policy | Terms Of Use
+
+
+- [](https://www.tiktok.com/@triolla.io)
+
+- [](https://www.instagram.com/triollaofficial/)
+
+- [](https://www.facebook.com/triollaofficial)
+
+
+- Eng
+
+- Heb
+
+
+Part of
+
+
+- [](https://www.linkedin.com/company/triolla-official/)
+
+- [](https://www.tiktok.com/@triolla.io)
+
+- [](https://www.instagram.com/triollaofficial/)
+
+- [](https://www.facebook.com/triollaofficial)
+
+
+Close GDPR Cookie Settings
+
+
+![Triolla]
+
+
+- Privacy Overview
+
+
+- Strictly Necessary Cookies
+
+
+Powered by  GDPR Cookie Compliance
+
+
+Privacy Overview
+
+
+This website uses cookies so that we can provide you with the best user experience possible. Cookie information is stored in your browser and performs functions such as recognising you when you return to our website and helping our team to understand which sections of the website you find most interesting and useful.
+
+
+Strictly Necessary Cookies
+
+
+Strictly Necessary Cookie should be enabled at all times so that we can save your preferences for cookie settings.
+
+
+Enable or Disable Cookies
+
+
+Enabled
+Disabled
+
+
+Enable All
+Reject All
+Save Changes
+
+
+This site is registered on wpml.org as a development site. Switch to a production site key to remove this banner.

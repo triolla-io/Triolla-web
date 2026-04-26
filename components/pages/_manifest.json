@@ -1,0 +1,21 @@
+{
+  "byRegistrySlug": {
+    "triolla-io-home": {
+      "component": "Home",
+      "importPath": "@/components/pages/Home"
+    },
+    "triolla-io-about-us": {
+      "component": "AboutUs",
+      "importPath": "@/components/pages/AboutUs"
+    },
+    "triolla-io-he": {
+      "component": "He",
+      "importPath": "@/components/pages/He"
+    },
+    "triolla-io-he-about-us": {
+      "component": "HeAboutUs",
+      "importPath": "@/components/pages/HeAboutUs"
+    }
+  },
+  "failed": []
+}

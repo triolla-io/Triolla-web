@@ -1,0 +1,575 @@
+<!-- lang: en-US -->
+
+# The Guide: Product Roadmap - Triolla
+
+- Pitangoux is now Triolla – We’ve rebranded! Hello and welcome!
+
+
+[Formally Pitangoux](/)
+
+
+- Portfolio
+
+test
+
+[Cybersecurity](/cyber-security/)
+
+- [Digital Health](/medical-healthcare/)
+
+- [Fintech & Finance](/fintech-finance/)
+
+- [Gaming](/gaming/)
+
+- [Agritech](/agritech/)
+
+- [B2C](/b2c/)
+
+
+- test
+
+[Devices & IoT](/device-iot/)
+
+- [Startups & Tech](/startups-tech/)
+
+- [Mobile Apps](/mobile-apps/)
+
+- [SaaS Platforms](/saas-platforms/)
+
+- [B2B](/b2b/)
+
+- [Dev](/dev/)
+
+
+- [Services](/services/)
+
+- [Technology](/technology/)
+
+- [The Company](/about-us/)
+
+
+[Contact Us
+Contact Us](/contact-us/)
+
+
+[](https://api.whatsapp.com/send/?phone=+972525956644&text=שלום, הייתי רוצה לשמוע עוד פרטים... &app_absent=0)
+
+
+[Book a Call
+
+
+Book a Call](https://calendly.com/triolla/pitangoux-introductory-meeting-clone)
+
+
+- Portfolio
+
+test
+
+[Cybersecurity](/cyber-security/)
+
+- [Digital Health](/medical-healthcare/)
+
+- [Fintech & Finance](/fintech-finance/)
+
+- [Gaming](/gaming/)
+
+- [Agritech](/agritech/)
+
+- [B2C](/b2c/)
+
+
+- test
+
+[Devices & IoT](/device-iot/)
+
+- [Startups & Tech](/startups-tech/)
+
+- [Mobile Apps](/mobile-apps/)
+
+- [SaaS Platforms](/saas-platforms/)
+
+- [B2B](/b2b/)
+
+- [Dev](/dev/)
+
+
+- [Services](/services/)
+
+- [Technology](/technology/)
+
+- [The Company](/about-us/)
+
+
+- [Heb](/he/blog/%d7%94%d7%9e%d7%93%d7%a8%d7%99%d7%9a-product-roadmap/)
+
+- [Blog](/blog/)
+
+- [Career](/careers/)
+
+
+[Book a Call](https://calendly.com/triolla/pitangoux-introductory-meeting-clone)
+
+
+[](tel:+972-73-744-3322)
+
+[](https://wa.me/+972525956644?text=שלום, הייתי רוצה לשמוע עוד פרטים... )
+
+
+![Triolla]
+
+
+[Back](/blog/)
+
+
+# The Guide: Product Roadmap
+
+
+Product managers understand the importance of building a Product Roadmap to better support and manage product development. Accordingly, this guide was created to prepare you for planning, building, and sharing an outstanding product roadmap—one that will optimally present your team’s progress and vision.
+
+
+**What is a Product Roadmap?**
+
+
+A product roadmap is a visual communication tool that aligns an organization around high-level product strategy. Depending on the type of organization, roadmaps can include upcoming features and technical considerations, and often demonstrate how a product will evolve over time. Roadmaps communicate the purpose of what the customer and the planned business outcomes are expected to achieve within a specific timeframe.
+
+
+The product roadmap is also a coordination tool: it provides stakeholders and team members with the information they need to focus on their goals and priorities. Roadmaps offer visibility into all the moving parts that help product teams coordinate their efforts, including scope, resource allocation, and the “why” behind these decisions. The roadmap is the asset that communicates how all these pieces form the strategy in a way that is understandable to every stakeholder.
+
+
+“A product roadmap is about communicating the why. It’s about the ultimate destination (the vision) and the major steps that the team intends to take along the way (goals to be reached, problems to be solved). A roadmap should not delve deeply into the what and the when. It should stay at the why level. It should inspire your teams to then develop a release plan, a delivery plan, or a project plan for how to deliver that vision.”
+
+
+— Bruce McCarthy, author of Product Roadmaps Relaunched
+
+
+**Why Are Roadmaps Important?**
+
+
+When product managers establish a healthy process and culture for product roadmap development within the organization, it helps them achieve several things:
+
+
+Roadmaps help align and generate excitement around product strategy. A product roadmap is the perfect tool for building organizational literacy about product strategy (and it’s the ideal way to demonstrate a firm grip on the strategic wheel to stakeholders!). When your teams have this foundational understanding of what matters to the business and to customers, their internal compass for tactical decision-making will be anchored in the plan and direction outlined at a high level.
+
+
+This visibility works in the product manager’s favor in every aspect. An excellent product roadmap gives executives and other stakeholders full transparency into everything happening, changing, or progressing on the strategic front. The goal is to create confidence, so your stakeholders feel good about the company’s progress toward solving customer problems that will drive the greatest business impact.
+
+
+Roadmaps simplify coordination and clarity in cross-functional collaboration around set priorities. The product prioritization process is as complex as roadmap development itself and requires ongoing, collaborative dialogue between teams and stakeholders. A product roadmap encourages teams to narrow their focus to problems that can be solved with available resources—a prioritization exercise in itself.
+
+
+A product roadmap is a powerful communication channel. The ongoing conversation—about the “why,” the “how,” and the “who” of the work to be done—creates a culture of alignment and a deep understanding of the product vision and direction.
+
+
+**How to Plan What Goes Into the Roadmap**
+
+
+Planning a product roadmap is challenging, but with focus and strict prioritization, you can manage most of the issues and difficulties that come with the process. Narrow down the priorities you intend to address within a given timeframe, define outcome-focused goals (not just feature delivery dates), and set the success metrics and KPIs you’ll use.
+
+
+Roadmap planning starts with these puzzle pieces. Commit to doing them right and communicating them to your teams. This will set you on the right path for successful roadmapping.
+
+
+**Set the Goal(s) for a Defined Time Period**
+
+
+As mentioned earlier, ideally you’re planning a roadmap for several months or quarters ahead. Rarely do product managers know what will happen a year from now (market changes, discovery of new user needs), so planning a year-long timeline is rarely practical. The details you need are about the who, why, and how of the coming month or quarter, focusing on working toward one or two high-level goals (for agile teams and startups, even this timeframe may be too long!).
+
+
+How do you determine what the product goals should be for the quarter? No matter where you are in the company’s lifecycle—whether you’re a 20-person startup or a 2,000-employee enterprise—it all starts with the product vision.
+
+
+What are your business goals? You need to know if the company’s top priority is to drive acquisition metrics (expand in the market and gain new customers) or to serve existing users (reduce churn and improve retention). Once you know the business goals, you can skillfully design product goals and KPIs in the same direction.
+
+
+**2. Identify Problems You Can Solve**
+
+
+Once your business goals are clear and you have a product strategy anchored in measurable metrics and improvements tied to those goals, it’s time to move to the problem discovery stage. What user problems can you solve to impact the metrics you’ve defined? Look for the problems whose solutions will have the greatest impact on your business goals. You can filter out a lot of noise by focusing on signals from the following channels:
+
+
+Customer feedback: You must talk to your users regularly. This advice can’t be overstated! Feature requests from sales, CS/CX messages, and team meetings can all be informative channels for understanding customer problems, but as a product manager, you need to be deeply involved in user conversations. Look for the biggest problems that can realistically be solved within your roadmap’s timeframe.
+
+
+Usage data: This is where you discover exactly how your users interact with the product and its features. Look for problems, barriers, and behavioral trends that have the potential to be solved.
+
+
+Competitive product analysis: It’s important to keep a finger on the pulse of the problems your competitors are solving, even if you’re not aggressively chasing them. You need to experience competing products to get a comprehensive reference point for where your product stands in the market. Conduct in-depth analysis, measure the experiences, and compare them to your own product.
+
+
+This level of research and problem discovery during the roadmap planning stage is essential for understanding the right problems to commit to solving in the defined period. This research is the evidence you’ll use during alignment discussions to justify the inclusion of certain features and initiatives in the roadmap.
+
+
+**3. Align with Your Teams and Internal Stakeholders**
+
+
+Roadmap planning should be collaborative from start to finish. To paraphrase Teresa Torres, a master of the Continuous Discovery mindset, any team focused on solving customer problems should gather to brainstorm possible paths to achieve outcomes (a path = potential product goals for a given quarter).
+
+
+Customer-facing teams are invaluable touchpoints for product managers during the roadmap planning process. Think of it this way: having your finger on the pulse of customer needs is critical to making market-driven decisions. More than 70% of respondents to a 2019 Pragmatic Institute survey said they spend less than five hours a month processing customer feedback. Most product managers don’t have time for ongoing, comprehensive user research, which is a major hurdle to identifying the problems worth solving.
+
+
+How can you build these relationships with teams during the roadmap planning stage? It starts with ongoing, regular conversations with customers and customer-facing teams. These discussions can be weekly or quarterly, depending on how many check-ins you need during the planning process. Be curious about their input on the proposed solution: when you talk to them, try to identify trends in problems and feature requests so you can anchor your plans in real feedback.
+
+
+The best way to build these relationships during product roadmap planning is to focus on the biggest problems that can be solved the fastest. Remember, alignment through the roadmap should be an ongoing, routine exercise. The starting point is the early days of drafting the roadmap and planning the strategy.
+
+
+Product roadmap planning isn’t about saying, “Here’s what’s in my head, and I’m just keeping you informed,” but about bringing teams into conversations where their involvement is greater. Lead your touchpoints with customer-facing teams by asking questions like:
+
+
+What problems do you feel are urgent? Can you explain why?
+What evidence are you basing this on?
+What do you think will be the impact of acting or not acting on this specific feedback?
+
+
+**4. Define Success Metrics and KPIs for Roadmap Initiatives**
+
+
+What’s the best way to quantify the impact of the goals to be achieved and the problems to be solved in the given timeframe? By ensuring the roadmap is tied to well-defined KPIs.
+
+
+What will our long-term impact be?
+How will we measure if this impact has been achieved?
+What is the process for updating and communicating progress on this impact?
+
+
+One of the most popular methods that helps product teams answer these questions is OKRs (Objectives and Key Results). OKRs are an excellent goal-setting framework because they take a high-level vision and break it down into manageable objectives. OKRs are time-bound, actionable, and inspiring—they motivate the team to roll up their sleeves and independently execute on the goals. Key Results, on the other hand, take the qualitative aspect of the objectives and turn it into measurable milestones.
+
+
+Objective: Triple the average weekly mobile sessions by the end of February
+
+
+Key Results:
+
+
+KR1: QA for all mobile functions
+KR2: Improve load time by 40%
+KR3: Add a new integration to the mobile version
+
+
+**5. How to Prioritize the Product Roadmap**
+
+
+Great product decisions come from a deep understanding of user needs, combined with an equally deep understanding of what can be achieved with the company’s available resources.
+
+
+This is where prioritization frameworks come into play during roadmap planning. Start by asking: Which initiatives will create the greatest impact? What is the most urgent need to address? What is our resource scope (time, effort, technology)? From there, move on to ways to quantify these answers so you can use them for prioritization decisions. Two recommended weighted scoring methods to help measure potential epics or features against product goals are:
+
+
+RICE – Reach, Impact, Confidence, and Effort. This is a weighted scoring method for quantifying the potential value of features, project ideas, and initiatives. The RICE score helps product managers quantify the estimated value of a feature or project idea so it’s easy to rank when it’s time to decide on execution order. Sean McBride, co-creator of RICE prioritization at Intercom, explains the best way to use this method here.
+
+
+Value VS Effort – A popular and simple way to start prioritizing ideas is to compare the value gained from an idea against the effort required to complete it. By using a standard score from 1 to 5, a product manager or team can make decisions quickly and easily. Here you can find a breakdown of the factors that define value and effort.
+
+
+Advance planning and building a roadmap for planning, developing, and improving your product will help you manage and control the process, rally your team around a single goal, and focus your product’s value proposition.
+
+
+More Posts
+
+
+[Browse all](/blog/)
+
+
+- [Cybersecurity Design UX: Founder Playbook to Ship Products Users Love and Adversaries Hate](/blog/cybersecurity-design-ux-a-founder-playbook/)
+
+- [Triolla is certified iso 27001-017](/blog/iso-27001-2025-2026/)
+
+
+[Browse all](/blog/)
+
+
+### Wanna Chat? Get In Touch
+
+
+#### Give us a call:
+
+TLV [+972-73-744-3322](tel:+972-73-744-3322)
+
+NY & SF [+1408-627-7350](tel:+1408-627-7350)
+
+
+#### Mail:
+
+[[email protected]](/cdn-cgi/l/email-protection#5117243f112523383e3d3d307f383e)
+
+**HQ Address:** Zarchin St. 2, Ranana
+
+
+##### Trusted by 1000+ companies:
+
+
+-
+
+-
+
+-
+
+-
+
+
+#### Schedule a Free Consultation
+
+
+##### Give us a call:
+
+TLV
+[+972-73-744-3322](tel:+972-73-744-3322)
+
+
+Comments
+
+
+This field is for validation purposes and should be left unchanged.
+
+
+Full Name(Required)
+
+
+Phone(Required)
+
+
+Email(Required)
+
+
+##### Trusted by 1000+ companies:
+
+
+-
+
+-
+
+-
+
+-
+
+
+/blog/the-guide-product-roadmap/
+
+
+/blog/the-guide-product-roadmap/
+
+
+##### Talk to us
+
+
+[Book a Call](https://calendly.com/triolla/pitangoux-introductory-meeting-clone)
+[Contact Us](/contact-us/)
+
+
+[](https://wa.me/+972525956644?text=שלום, הייתי רוצה לשמוע עוד פרטים... )
+[](tel:+972-73-744-3322)
+
+
+Mentions:
+
+
+- [](https://13tv.co.il/item/special/recommended/economy/k2fy3-902776824/)
+
+- [](https://www.bizportal.co.il/BizTech/news/article/20015580)
+
+- [](https://www.themarker.com/labels/2021-04-05/ty-article-labels/0000017f-f88a-d044-adff-fbfb48ad0000)
+
+- [](https://www.globes.co.il/news/article.aspx?did=1001450720)
+
+- [](https://www.pc.co.il/featured/420350/)
+
+- [](https://www.mako.co.il/special-articles/Article-c2a83bbe7224d71026.htm)
+
+
+### Product Design
+
+
+- [Product UX & UI Design](/services/product-ux-ui-design/)
+
+- [UX Research](/services/ux-research/)
+
+- [Prototype](/services/prototyping/)
+
+- [Digital Branding](/branding-studio/)
+
+- [Front End Development](/services/front-end-dev/)
+
+
+### Case studies
+
+
+- [Mobile Apps](/mobile-apps/)
+
+- [Fintech & Finance](/fintech-finance/)
+
+- [IOT & Devices](/device-iot/)
+
+- [SaaS](/saas-platforms/)
+
+- [Gaming](/gaming/)
+
+- [Medical](/medical-healthcare/)
+
+- [Agritech](/agritech/)
+
+
+### Technology
+
+
+- [Dev & Technology](/technology/)
+
+- [Front End](/services/front-end-dev/)
+
+- [React.js](/services/front-end-dev/)
+
+- [Vue.js](/services/front-end-dev/)
+
+- [Back End](/services/back-end-dev/)
+
+- [Node. Js](/services/back-end-dev/)
+
+
+### About
+
+
+- [About us](/about-us/)
+
+- [Careers](/careers/)
+
+- [Our Services](/services/)
+
+- [Talk to us](/contact-us/)
+
+- [Press](https://www.themarker.com/labels/2021-04-05/ty-article-labels/0000017f-f88a-d044-adff-fbfb48ad0000)
+
+- [Accessibility Statement](/accessibility-statement/)
+
+
+### Our Blog
+
+
+- [All Blogs](/blog)
+
+- [Fintech & Finance](/blog/the-fintech-ux-playbook/)
+
+- [IOT & Devices](/blog/designing-intuitive-and-secure-iot-products-for-the-future/)
+
+- [SaaS](/blog/the-3-most-common-pain-points-when-hiring-ui-ux-agency-for-a-saas-product/)
+
+- [Gaming](/blog/level-up-your-gaming-app-with-triollas-expert-ux-tips-boost-user-engagement-and-retention/)
+
+- [Medical](/blog/ux-in-medtech-when-trust-is-a-matter-of-life-and-death/)
+
+- [Agritech](/blog/designing-an-engaging-and-effective-agritech-app/)
+
+
+### Social
+
+
+- [Facebook](https://www.facebook.com/triollaofficial)
+
+- [Linkedin](https://www.linkedin.com/company/triolla-official/)
+
+- [Instargram](https://www.instagram.com/triollaofficial/)
+
+- [Tiktok](https://www.tiktok.com/@triolla.io)
+
+- [Driblle](https://dribbble.com/Triolla)
+
+- [BeHnace](https://www.behance.net/asaf8ac9)
+
+
+### Talk to us
+
+
+Mail: [[email protected]](/cdn-cgi/l/email-protection#783e0d16380c0a1117141419561117)
+
+
+TLV Offices: [+972-73-744-3322](tel:+972-73-744-3322)
+
+NY Offices: [+1408-627-7350](tel:+1408-627-7350)
+
+[Book a Call
+
+
+Book a Call](https://calendly.com/triolla/pitangoux-introductory-meeting-clone)
+
+
+- [](https://13tv.co.il/item/special/recommended/economy/k2fy3-902776824/)
+
+- [](https://www.bizportal.co.il/BizTech/news/article/20015580)
+
+- [](https://www.themarker.com/labels/2021-04-05/ty-article-labels/0000017f-f88a-d044-adff-fbfb48ad0000)
+
+- [](https://www.globes.co.il/news/article.aspx?did=1001450720)
+
+- [](https://www.pc.co.il/featured/420350/)
+
+- [](https://www.mako.co.il/special-articles/Article-c2a83bbe7224d71026.htm)
+
+
+[](/)
+
+
+All rights reserved to Triolla LTD | [Privacy Policy](/privacy-policy/) | [Terms Of Use](/terms-of-use/)
+
+
+- [](https://www.tiktok.com/@triolla.io)
+
+- [](https://www.instagram.com/triollaofficial/)
+
+- [](https://www.facebook.com/triollaofficial)
+
+
+- [Eng](/blog/the-guide-product-roadmap/)
+
+- [Heb](/he/blog/%d7%94%d7%9e%d7%93%d7%a8%d7%99%d7%9a-product-roadmap/)
+
+
+[Part of](https://www.sqlink.com/)
+
+
+- [](https://www.linkedin.com/company/triolla-official/)
+
+- [](https://www.tiktok.com/@triolla.io)
+
+- [](https://www.instagram.com/triollaofficial/)
+
+- [](https://www.facebook.com/triollaofficial)
+
+
+Close GDPR Cookie Settings
+
+
+![Triolla]
+
+
+- Privacy Overview
+
+
+- Strictly Necessary Cookies
+
+
+[Powered by  GDPR Cookie Compliance](https://wordpress.org/plugins/gdpr-cookie-compliance/)
+
+
+Privacy Overview
+
+
+This website uses cookies so that we can provide you with the best user experience possible. Cookie information is stored in your browser and performs functions such as recognising you when you return to our website and helping our team to understand which sections of the website you find most interesting and useful.
+
+
+Strictly Necessary Cookies
+
+
+Strictly Necessary Cookie should be enabled at all times so that we can save your preferences for cookie settings.
+
+
+Enable or Disable Cookies
+
+
+Enabled
+Disabled
+
+
+Enable All
+Reject All
+Save Changes
+
+
+This site is registered on [wpml.org](https://wpml.org) as a development site. Switch to a production site key to [remove this banner](https://wpml.org/faq/how-to-remove-the-this-site-is-registered-on-wpml-org-as-a-development-site-notice/?utm_source=plugin&utm_medium=gui&utm_campaign=wpml-core&utm_term=footer-notice).

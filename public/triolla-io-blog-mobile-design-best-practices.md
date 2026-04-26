@@ -1,0 +1,569 @@
+<!-- lang: en-US -->
+
+# Mobile Design Best Practices - Triolla
+
+- Pitangoux is now Triolla – We’ve rebranded! Hello and welcome!
+
+
+[Formally Pitangoux](/)
+
+
+- Portfolio
+
+test
+
+[Cybersecurity](/cyber-security/)
+
+- [Digital Health](/medical-healthcare/)
+
+- [Fintech & Finance](/fintech-finance/)
+
+- [Gaming](/gaming/)
+
+- [Agritech](/agritech/)
+
+- [B2C](/b2c/)
+
+
+- test
+
+[Devices & IoT](/device-iot/)
+
+- [Startups & Tech](/startups-tech/)
+
+- [Mobile Apps](/mobile-apps/)
+
+- [SaaS Platforms](/saas-platforms/)
+
+- [B2B](/b2b/)
+
+- [Dev](/dev/)
+
+
+- [Services](/services/)
+
+- [Technology](/technology/)
+
+- [The Company](/about-us/)
+
+
+[Contact Us
+Contact Us](/contact-us/)
+
+
+[](https://api.whatsapp.com/send/?phone=+972525956644&text=שלום, הייתי רוצה לשמוע עוד פרטים... &app_absent=0)
+
+
+[Book a Call
+
+
+Book a Call](https://calendly.com/triolla/pitangoux-introductory-meeting-clone)
+
+
+- Portfolio
+
+test
+
+[Cybersecurity](/cyber-security/)
+
+- [Digital Health](/medical-healthcare/)
+
+- [Fintech & Finance](/fintech-finance/)
+
+- [Gaming](/gaming/)
+
+- [Agritech](/agritech/)
+
+- [B2C](/b2c/)
+
+
+- test
+
+[Devices & IoT](/device-iot/)
+
+- [Startups & Tech](/startups-tech/)
+
+- [Mobile Apps](/mobile-apps/)
+
+- [SaaS Platforms](/saas-platforms/)
+
+- [B2B](/b2b/)
+
+- [Dev](/dev/)
+
+
+- [Services](/services/)
+
+- [Technology](/technology/)
+
+- [The Company](/about-us/)
+
+
+- [Heb](/he/blog/%d7%a9%d7%99%d7%98%d7%95%d7%aa-%d7%a2%d7%91%d7%95%d7%93%d7%94-%d7%9e%d7%95%d7%9e%d7%9c%d7%a6%d7%95%d7%aa-%d7%9c%d7%a2%d7%99%d7%a6%d7%95%d7%91-%d7%9e%d7%95%d7%91%d7%99%d7%99%d7%9c/)
+
+- [Blog](/blog/)
+
+- [Career](/careers/)
+
+
+[Book a Call](https://calendly.com/triolla/pitangoux-introductory-meeting-clone)
+
+
+[](tel:+972-73-744-3322)
+
+[](https://wa.me/+972525956644?text=שלום, הייתי רוצה לשמוע עוד פרטים... )
+
+
+![Triolla]
+
+
+[Back](/blog/)
+
+
+# Mobile Design Best Practices
+
+
+Here are 7 UX design tips that I think are key for creating really great mobile user experiences.
+
+
+[Apps](https://<a href="/">Home</a>) are now a mainstream, trusted way to deliver content and services. But in a crowded market, how does a mobile app become useful, relevant, and valued so it delights and retains users?
+
+
+### 1. One Screen, One Task
+
+
+*Reduce the effort users have to put in to get what the want*
+
+
+Every screen you design for the app should support *a single action of real value*to the person using it. Design each screen for one thing and one thing only, with no more than 1 call-to-action. This makes it easier to learn, easier to use, and easier to add to or build on when necessary.
+
+
+Take Uber, for instance. Uber knows that the goal of the user who uses the app is to take a cab. App does not overwhelm the user with too much of information: it automatically detects users location based on GEO data and the only thing users have to do is to select a pickup location.
+
+
+### 2. Invisible User Interface
+
+
+*Content becomes an interface*
+
+
+Focus on the content and remove unnecessary elements that does not support user tasks. Thanks to the reduced attention span, users should be guided to the content they’re looking for, quickly. *Content becomes an interface. *Google Maps is a great example — during a redesign phase Google removed all the unnecessary panels and buttons and Google said that *the map is the interface*.
+
+
+### 3. Breathing Space
+
+
+*Use negative space to draw attention to important content*
+
+
+White space or “negative space”, referring to the empty space between and around elements of a [design](https://<a href="/service-page/">Services</a>) or page layout, is often overlooked and neglected. Although many designers may consider it a waste of valuable screen estate, white space is an *essential *element in mobile design.
+
+
+“*White space is to be regarded as an active element, not a passive background*,” — Jan Tschichold
+
+
+Not only is white space responsible for readability and content prioritization, it also plays an important role in the visual layout. Thus, it can simplify UI and improve UX.
+
+
+Follow “less is more” principle in your designs. Image credit: Material Design
+
+
+### 4. Navigation Made Simple
+
+
+*Make navigation self-evident*
+
+
+Helping users navigate should be a high priority for every app. Mobile navigation must be discoverable, accessible, and take little screen space. However, making navigation accessible is a challenge on mobile due to the limitations of the small screen and to the need of prioritizing the content over chrome.
+
+
+Tab bars and navigation bars are well suited for apps with relatively few navigation options. They are great because they display all major navigation options and with one simple tap user can instantly go from one page to another.
+
+
+######
+
+
+Tab bar navigation in Apple AppStore
+
+
+[contact-form-7 id=”958e338″ title=”Post Contact Form”]
+
+
+### 5. One Hand Operation
+
+
+*Adapt your design to the bigger screens*
+
+
+With the release of the iPhone 6 and 6 Plus it’s become clear that screen sizes are going to keep expanding.
+
+
+Here are three basic ways of how people are holding their phones:
+
+
+Basic ways of how people are holding their phones. Research by Steven Hoober
+
+
+85% of observed users working with their phones using one hand. The following heat map shows sorts of the thumb zones applied to every iPhone display size since 2007. *You can see that the bigger the display is, the less easily-accessible zone is.*
+
+
+Thumb zones. According to the observation by Scott Hurff
+
+
+It’s necessary to adapt a design to improve the user experience. Try to make sure that your app can be easily (and fully) be used on a large screen (such as iPhone 6 or 7) with one hand. Place navigation options within the thumb’s reach.
+
+
+Pocket app for iOS. All the navigation controls are in the footer. They can be easily reached in case you hold your phone normally. Image credit: Dmitry Kovalenko
+
+
+### 6. Make App Appear Fast
+
+
+*Don’t make users wait for content*
+
+
+Try as much as possible to make the app fast and responsive. Do things in the background to make it look like actions are fast. Actions which are packed into background operations have two benefits — they are invisible to the user and happen *before* the user actually ask for them. A good example of this is uploading pictures on Instagram. As soon as the user chooses a picture to share, it starts uploading.
+
+
+Instagram invites the user to add tags as the picture uploads in the background. By the time when users’ll be ready to press a share button, upload will be completed and it’ll be possible to share their picture *instantly*.
+
+
+### 7. Use Push Notifications Wisely
+
+
+*Think twice before sending a message*
+
+
+Everyday, users are bombarded with useless notifications that distract them from their day-to-day activities and it gets downright annoying. **Annoying notifications is the #1 reason people uninstall mobile apps (71% of respondents).**
+
+
+*Mobile is all about making every message count. *Don’t send notifications “for the sake of engaging them”. Send them if and only if you think they are valuable to the user.
+
+
+**Tips: **The best way to establish an effective mobile app messaging strategy is to use different message types — push notifications, email, in-app notifications, and news feed messaging. Diversify your messaging — your messages should work together in perfect harmony to create a great user experience.
+
+
+Select proper notification type based on urgency and content. Source: Appboy
+
+
+### Conclusion
+
+
+The most important thing to keep in mind when designing a mobile app is to make sure it is both *useful* and *intuitive*. If the app is not useful, it has no practical value for user and no one has any reason to use it. If app is useful but requires a lot of time and effort, people won’t bother learning how to use it. Good UI and UX design addresses both design problems.
+
+
+Thank you!
+
+
+Original article found at [UX Planet](https://uxplanet.org/mobile-design-best-practices-2d16d37ecfe), posted by Nick Babich
+
+
+More Posts
+
+
+[Browse all](/blog/)
+
+
+- [Cybersecurity Design UX: Founder Playbook to Ship Products Users Love and Adversaries Hate](/blog/cybersecurity-design-ux-a-founder-playbook/)
+
+- [Triolla is certified iso 27001-017](/blog/iso-27001-2025-2026/)
+
+
+[Browse all](/blog/)
+
+
+### Wanna Chat? Get In Touch
+
+
+#### Give us a call:
+
+TLV [+972-73-744-3322](tel:+972-73-744-3322)
+
+NY & SF [+1408-627-7350](tel:+1408-627-7350)
+
+
+#### Mail:
+
+[[email protected]](/cdn-cgi/l/email-protection#a0e6d5cee0d4d2c9cfccccc18ec9cf)
+
+**HQ Address:** Zarchin St. 2, Ranana
+
+
+##### Trusted by 1000+ companies:
+
+
+-
+
+-
+
+-
+
+-
+
+
+#### Schedule a Free Consultation
+
+
+##### Give us a call:
+
+TLV
+[+972-73-744-3322](tel:+972-73-744-3322)
+
+
+LinkedIn
+
+
+This field is for validation purposes and should be left unchanged.
+
+
+Full Name(Required)
+
+
+Phone(Required)
+
+
+Email(Required)
+
+
+##### Trusted by 1000+ companies:
+
+
+-
+
+-
+
+-
+
+-
+
+
+/blog/mobile-design-best-practices/
+
+
+/blog/mobile-design-best-practices/
+
+
+##### Talk to us
+
+
+[Book a Call](https://calendly.com/triolla/pitangoux-introductory-meeting-clone)
+[Contact Us](/contact-us/)
+
+
+[](https://wa.me/+972525956644?text=שלום, הייתי רוצה לשמוע עוד פרטים... )
+[](tel:+972-73-744-3322)
+
+
+Mentions:
+
+
+- [](https://13tv.co.il/item/special/recommended/economy/k2fy3-902776824/)
+
+- [](https://www.bizportal.co.il/BizTech/news/article/20015580)
+
+- [](https://www.themarker.com/labels/2021-04-05/ty-article-labels/0000017f-f88a-d044-adff-fbfb48ad0000)
+
+- [](https://www.globes.co.il/news/article.aspx?did=1001450720)
+
+- [](https://www.pc.co.il/featured/420350/)
+
+- [](https://www.mako.co.il/special-articles/Article-c2a83bbe7224d71026.htm)
+
+
+### Product Design
+
+
+- [Product UX & UI Design](/services/product-ux-ui-design/)
+
+- [UX Research](/services/ux-research/)
+
+- [Prototype](/services/prototyping/)
+
+- [Digital Branding](/branding-studio/)
+
+- [Front End Development](/services/front-end-dev/)
+
+
+### Case studies
+
+
+- [Mobile Apps](/mobile-apps/)
+
+- [Fintech & Finance](/fintech-finance/)
+
+- [IOT & Devices](/device-iot/)
+
+- [SaaS](/saas-platforms/)
+
+- [Gaming](/gaming/)
+
+- [Medical](/medical-healthcare/)
+
+- [Agritech](/agritech/)
+
+
+### Technology
+
+
+- [Dev & Technology](/technology/)
+
+- [Front End](/services/front-end-dev/)
+
+- [React.js](/services/front-end-dev/)
+
+- [Vue.js](/services/front-end-dev/)
+
+- [Back End](/services/back-end-dev/)
+
+- [Node. Js](/services/back-end-dev/)
+
+
+### About
+
+
+- [About us](/about-us/)
+
+- [Careers](/careers/)
+
+- [Our Services](/services/)
+
+- [Talk to us](/contact-us/)
+
+- [Press](https://www.themarker.com/labels/2021-04-05/ty-article-labels/0000017f-f88a-d044-adff-fbfb48ad0000)
+
+- [Accessibility Statement](/accessibility-statement/)
+
+
+### Our Blog
+
+
+- [All Blogs](/blog)
+
+- [Fintech & Finance](/blog/the-fintech-ux-playbook/)
+
+- [IOT & Devices](/blog/designing-intuitive-and-secure-iot-products-for-the-future/)
+
+- [SaaS](/blog/the-3-most-common-pain-points-when-hiring-ui-ux-agency-for-a-saas-product/)
+
+- [Gaming](/blog/level-up-your-gaming-app-with-triollas-expert-ux-tips-boost-user-engagement-and-retention/)
+
+- [Medical](/blog/ux-in-medtech-when-trust-is-a-matter-of-life-and-death/)
+
+- [Agritech](/blog/designing-an-engaging-and-effective-agritech-app/)
+
+
+### Social
+
+
+- [Facebook](https://www.facebook.com/triollaofficial)
+
+- [Linkedin](https://www.linkedin.com/company/triolla-official/)
+
+- [Instargram](https://www.instagram.com/triollaofficial/)
+
+- [Tiktok](https://www.tiktok.com/@triolla.io)
+
+- [Driblle](https://dribbble.com/Triolla)
+
+- [BeHnace](https://www.behance.net/asaf8ac9)
+
+
+### Talk to us
+
+
+Mail: [[email protected]](/cdn-cgi/l/email-protection#d294a7bc92a6a0bbbdbebeb3fcbbbd)
+
+
+TLV Offices: [+972-73-744-3322](tel:+972-73-744-3322)
+
+NY Offices: [+1408-627-7350](tel:+1408-627-7350)
+
+[Book a Call
+
+
+Book a Call](https://calendly.com/triolla/pitangoux-introductory-meeting-clone)
+
+
+- [](https://13tv.co.il/item/special/recommended/economy/k2fy3-902776824/)
+
+- [](https://www.bizportal.co.il/BizTech/news/article/20015580)
+
+- [](https://www.themarker.com/labels/2021-04-05/ty-article-labels/0000017f-f88a-d044-adff-fbfb48ad0000)
+
+- [](https://www.globes.co.il/news/article.aspx?did=1001450720)
+
+- [](https://www.pc.co.il/featured/420350/)
+
+- [](https://www.mako.co.il/special-articles/Article-c2a83bbe7224d71026.htm)
+
+
+[](/)
+
+
+All rights reserved to Triolla LTD | [Privacy Policy](/privacy-policy/) | [Terms Of Use](/terms-of-use/)
+
+
+- [](https://www.tiktok.com/@triolla.io)
+
+- [](https://www.instagram.com/triollaofficial/)
+
+- [](https://www.facebook.com/triollaofficial)
+
+
+- [Eng](/blog/mobile-design-best-practices/)
+
+- [Heb](/he/blog/%d7%a9%d7%99%d7%98%d7%95%d7%aa-%d7%a2%d7%91%d7%95%d7%93%d7%94-%d7%9e%d7%95%d7%9e%d7%9c%d7%a6%d7%95%d7%aa-%d7%9c%d7%a2%d7%99%d7%a6%d7%95%d7%91-%d7%9e%d7%95%d7%91%d7%99%d7%99%d7%9c/)
+
+
+[Part of](https://www.sqlink.com/)
+
+
+- [](https://www.linkedin.com/company/triolla-official/)
+
+- [](https://www.tiktok.com/@triolla.io)
+
+- [](https://www.instagram.com/triollaofficial/)
+
+- [](https://www.facebook.com/triollaofficial)
+
+
+Close GDPR Cookie Settings
+
+
+![Triolla]
+
+
+- Privacy Overview
+
+
+- Strictly Necessary Cookies
+
+
+[Powered by  GDPR Cookie Compliance](https://wordpress.org/plugins/gdpr-cookie-compliance/)
+
+
+Privacy Overview
+
+
+This website uses cookies so that we can provide you with the best user experience possible. Cookie information is stored in your browser and performs functions such as recognising you when you return to our website and helping our team to understand which sections of the website you find most interesting and useful.
+
+
+Strictly Necessary Cookies
+
+
+Strictly Necessary Cookie should be enabled at all times so that we can save your preferences for cookie settings.
+
+
+Enable or Disable Cookies
+
+
+Enabled
+Disabled
+
+
+Enable All
+Reject All
+Save Changes
+
+
+This site is registered on [wpml.org](https://wpml.org) as a development site. Switch to a production site key to [remove this banner](https://wpml.org/faq/how-to-remove-the-this-site-is-registered-on-wpml-org-as-a-development-site-notice/?utm_source=plugin&utm_medium=gui&utm_campaign=wpml-core&utm_term=footer-notice).

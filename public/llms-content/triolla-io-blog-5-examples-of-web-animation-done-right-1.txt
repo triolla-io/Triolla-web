@@ -1,0 +1,528 @@
+5 examples of web animation done right - Triolla
+
+- Pitangoux is now Triolla – We’ve rebranded! Hello and welcome!
+
+
+Formally Pitangoux
+
+
+- Portfolio
+
+test
+
+Cybersecurity
+
+- Digital Health
+
+- Fintech & Finance
+
+- Gaming
+
+- Agritech
+
+- B2C
+
+
+- test
+
+Devices & IoT
+
+- Startups & Tech
+
+- Mobile Apps
+
+- SaaS Platforms
+
+- B2B
+
+- Dev
+
+
+- Services
+
+- Technology
+
+- The Company
+
+
+Contact Us
+Contact Us
+
+
+[](https://api.whatsapp.com/send/?phone=+972525956644&text=שלום, הייתי רוצה לשמוע עוד פרטים... &app_absent=0)
+
+
+Book a Call
+
+
+Book a Call
+
+
+- Portfolio
+
+test
+
+Cybersecurity
+
+- Digital Health
+
+- Fintech & Finance
+
+- Gaming
+
+- Agritech
+
+- B2C
+
+
+- test
+
+Devices & IoT
+
+- Startups & Tech
+
+- Mobile Apps
+
+- SaaS Platforms
+
+- B2B
+
+- Dev
+
+
+- Services
+
+- Technology
+
+- The Company
+
+
+- Heb
+
+- Blog
+
+- Career
+
+
+Book a Call
+
+
+[](tel:+972-73-744-3322)
+
+[](https://wa.me/+972525956644?text=שלום, הייתי רוצה לשמוע עוד פרטים... )
+
+
+![Triolla]
+
+
+Back
+
+
+5 examples of web animation done right
+
+
+Animation is a big part of user experience. It can be a visual cue to let a user know something is happening, it can add in unexpected delight, and so much more.
+
+
+But it’s way too easy to go overboard with animation and wind up with something that just confuses or overwhelms users.
+
+
+Let’s take a look at 5 examples of web animation done right and the biggest lesson we can learn from each one.
+
+
+Don’t animate several elements at once
+
+
+Here’s an example: You may want to animate a really awesome hero design that includes text, illustrations, and a call to action.
+
+
+Well, the worst thing you can do is totally distract your user by animating too many elements in that hero. With too much going on, people won’t know where to go next. Except somewhere else.
+
+
+Related: Animation principles in UI
+
+
+Think of each animation as a story—it should be easily digestible and guide the user to elements you want them to see in a certain order.
+
+
+I suggest animating one element at a time and adding .5–1 second of separation between animations.
+
+
+In this killer example from InVision’s Anton Aheichanka for Craft, we can see how to animate several elements without going overboard:
+
+
+Master Sketch with these free video tutorials by Anton Aheichanka
+
+
+Make it meaningful
+
+
+Random animation with no purpose? Nope.
+
+
+Be mindful of the product or service you’re trying to promote. Sadly, the perfect illustration we designers tend to come up with isn’t actually what our client is trying to promote—it just looks beautiful, and that’s it.
+
+
+“Just say no to meaningless animation.”
+
+
+So, when animating something, ask yourself if you’re keeping your client’s objective in mind. Just as important: Ask whether you have your user’s best interest in mind.
+
+
+This fun animation by Sergey Valiukh has purpose and then some—most notably, the transition from AM to PM. Static graphics would have the same effect but wouldn’t be as dynamic.
+
+
+GIF for the Timeline App, by Sergey Valiukh
+
+
+[contact-form-7 id=”958e338″ title=”Post Contact Form”]
+
+
+Watch the time
+
+
+Keep animations short and purposeful. The last thing someone wants is to have to wait for your fancy button to animate before they can click on it.
+
+
+Here’s an example illustrating a quick snapping button transition that also has purpose.
+
+
+Open, by Joe Jordan
+
+
+Just say no to boring linear animation
+
+
+Motion with just a simple A-to-B path with no easing feels robotic, so try adding different easing animations.  Motion should also follow forces similar to those of the real world, like gravity.
+
+
+Remix Jobs is great at keeping animations interesting without overdoing it. Nice, smooth transitions using the material design methodology.
+
+
+Event Website Design, by Julien Renvoye
+
+
+When you’re creating sketches or wireframes, think about how your elements will be animated. To make meaningful animations, you need to take time at the beginning of a project to really think about how they’ll fit into the user experience.
+
+
+The Ramotion team shows us a nice example of thinking about animation/transitions during the wireframing stage.
+
+
+Pull Down to Refresh, by Ramotion
+
+
+Like design, animation can be subjective and personal. It’s so important to think about the people who will interact with the animations you create—every element should be carefully thought out so it adds to the overall user experience.
+
+
+Original article found at InVision blog, posted by Joe Jordan on February 12, 2018
+
+
+More Posts
+
+
+Browse all
+
+
+- Cybersecurity Design UX: Founder Playbook to Ship Products Users Love and Adversaries Hate
+
+- Triolla is certified iso 27001-017
+
+
+Browse all
+
+
+Wanna Chat? Get In Touch
+
+
+Give us a call:
+
+TLV +972-73-744-3322
+
+NY & SF +1408-627-7350
+
+
+Mail:
+
+[[email protected]](/cdn-cgi/l/email-protection#195f6c77596d6b7076757578377076)
+
+HQ Address: Zarchin St. 2, Ranana
+
+
+Trusted by 1000+ companies:
+
+
+-
+
+-
+
+-
+
+-
+
+
+Schedule a Free Consultation
+
+
+Give us a call:
+
+TLV
++972-73-744-3322
+
+
+LinkedIn
+
+
+This field is for validation purposes and should be left unchanged.
+
+
+Full Name(Required)
+
+
+Phone(Required)
+
+
+Email(Required)
+
+
+Trusted by 1000+ companies:
+
+
+-
+
+-
+
+-
+
+-
+
+
+/blog/5-examples-of-web-animation-done-right/
+
+
+/blog/5-examples-of-web-animation-done-right/
+
+
+Talk to us
+
+
+Book a Call
+Contact Us
+
+
+[](https://wa.me/+972525956644?text=שלום, הייתי רוצה לשמוע עוד פרטים... )
+[](tel:+972-73-744-3322)
+
+
+Mentions:
+
+
+- [](https://13tv.co.il/item/special/recommended/economy/k2fy3-902776824/)
+
+- [](https://www.bizportal.co.il/BizTech/news/article/20015580)
+
+- [](https://www.themarker.com/labels/2021-04-05/ty-article-labels/0000017f-f88a-d044-adff-fbfb48ad0000)
+
+- [](https://www.globes.co.il/news/article.aspx?did=1001450720)
+
+- [](https://www.pc.co.il/featured/420350/)
+
+- [](https://www.mako.co.il/special-articles/Article-c2a83bbe7224d71026.htm)
+
+
+Product Design
+
+
+- Product UX & UI Design
+
+- UX Research
+
+- Prototype
+
+- Digital Branding
+
+- Front End Development
+
+
+Case studies
+
+
+- Mobile Apps
+
+- Fintech & Finance
+
+- IOT & Devices
+
+- SaaS
+
+- Gaming
+
+- Medical
+
+- Agritech
+
+
+Technology
+
+
+- Dev & Technology
+
+- Front End
+
+- React.js
+
+- Vue.js
+
+- Back End
+
+- Node. Js
+
+
+About
+
+
+- About us
+
+- Careers
+
+- Our Services
+
+- Talk to us
+
+- Press
+
+- Accessibility Statement
+
+
+Our Blog
+
+
+- All Blogs
+
+- Fintech & Finance
+
+- IOT & Devices
+
+- SaaS
+
+- Gaming
+
+- Medical
+
+- Agritech
+
+
+Social
+
+
+- Facebook
+
+- Linkedin
+
+- Instargram
+
+- Tiktok
+
+- Driblle
+
+- BeHnace
+
+
+Talk to us
+
+
+Mail: [[email protected]](/cdn-cgi/l/email-protection#7432011a3400061d1b1818155a1d1b)
+
+
+TLV Offices: +972-73-744-3322
+
+NY Offices: +1408-627-7350
+
+Book a Call
+
+
+Book a Call
+
+
+- [](https://13tv.co.il/item/special/recommended/economy/k2fy3-902776824/)
+
+- [](https://www.bizportal.co.il/BizTech/news/article/20015580)
+
+- [](https://www.themarker.com/labels/2021-04-05/ty-article-labels/0000017f-f88a-d044-adff-fbfb48ad0000)
+
+- [](https://www.globes.co.il/news/article.aspx?did=1001450720)
+
+- [](https://www.pc.co.il/featured/420350/)
+
+- [](https://www.mako.co.il/special-articles/Article-c2a83bbe7224d71026.htm)
+
+
+[](/)
+
+
+All rights reserved to Triolla LTD | Privacy Policy | Terms Of Use
+
+
+- [](https://www.tiktok.com/@triolla.io)
+
+- [](https://www.instagram.com/triollaofficial/)
+
+- [](https://www.facebook.com/triollaofficial)
+
+
+- Eng
+
+- Heb
+
+
+Part of
+
+
+- [](https://www.linkedin.com/company/triolla-official/)
+
+- [](https://www.tiktok.com/@triolla.io)
+
+- [](https://www.instagram.com/triollaofficial/)
+
+- [](https://www.facebook.com/triollaofficial)
+
+
+Close GDPR Cookie Settings
+
+
+![Triolla]
+
+
+- Privacy Overview
+
+
+- Strictly Necessary Cookies
+
+
+Powered by  GDPR Cookie Compliance
+
+
+Privacy Overview
+
+
+This website uses cookies so that we can provide you with the best user experience possible. Cookie information is stored in your browser and performs functions such as recognising you when you return to our website and helping our team to understand which sections of the website you find most interesting and useful.
+
+
+Strictly Necessary Cookies
+
+
+Strictly Necessary Cookie should be enabled at all times so that we can save your preferences for cookie settings.
+
+
+Enable or Disable Cookies
+
+
+Enabled
+Disabled
+
+
+Enable All
+Reject All
+Save Changes
+
+
+This site is registered on wpml.org as a development site. Switch to a production site key to remove this banner.

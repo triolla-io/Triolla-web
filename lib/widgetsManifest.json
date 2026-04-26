@@ -1,0 +1,29 @@
+{
+  "pages": {
+    "triolla-io-home-en": [
+      "ContactForm"
+    ],
+    "triolla-io-about-us-en": [
+      "ContactForm"
+    ],
+    "triolla-io-he-he": [
+      "ContactForm"
+    ],
+    "triolla-io-he-about-us-he": [
+      "ContactForm"
+    ]
+  },
+  "widgetsUsed": [
+    "ContactForm"
+  ],
+  "allWidgetsAvailable": [
+    "Carousel",
+    "Accordion",
+    "FAQ",
+    "ContactForm",
+    "Ticker"
+  ],
+  "totalMatches": 4,
+  "pagesTouched": 4,
+  "legacyJsPruned": 0
+}

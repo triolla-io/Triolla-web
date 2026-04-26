@@ -1,0 +1,198 @@
+import type { ReactNode } from "react";
+
+const DEFAULT_LOCALE = process.env.SITE_DEFAULT_LOCALE ?? "en";
+const RTL_LOCALES = new Set(["ar", "fa", "he", "ur"]);
+const IS_RTL = RTL_LOCALES.has(DEFAULT_LOCALE.toLowerCase());
+
+// Scrollbar styling from the real site — these rules only appear in some per-page CSS
+// bundles so they'd be missing on most pages without this global injection.
+const SCROLLBAR_FIX = `
+::-webkit-scrollbar-track{-webkit-box-shadow:inset 0 0 6px rgba(255,255,255,.5);background-color:transparent;border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px;overflow:hidden}
+::-webkit-scrollbar{width:16px;padding:5px;background-clip:content-box;background-color:transparent;border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px;overflow:hidden}
+::-webkit-scrollbar-thumb{background:rgba(0,0,0,.1);width:6px;border:5px solid #fff;padding:0;background-clip:content-box;border-radius:8px;-moz-border-radius:8px;-webkit-border-radius:8px}
+::-webkit-scrollbar{width:6px;padding:0;-webkit-box-shadow:none;box-shadow:none}
+::-webkit-scrollbar-track{background:0 0}
+::-webkit-scrollbar-thumb{border:none;background:rgba(0,0,0,.6)}
+`;
+
+// NAV_DROPDOWN_FIX
+// ─────────────────────────────────────────────────────────────────────────────
+// 1) Header JS gives .header_menu a transform — position:fixed children clip.
+//    NAV_HOVER_SCRIPT portals .bigmenu>ul to <body>.
+// 2) Visuals match the home bundle stylesheet
+//    public/assets/_cas/50400963873c627d18fff6285922768737140a6b22f9a742e17fddbdc43561e8.css
+//    (bigmenu: width 843px, padding 20px 390px 23px 36px, promo ::after, etc.)
+// 3) Geometry is applied in JS: top = li.top + 68px, left = li.left − 333
+//    (or −202px at viewport ≤ 1365px) — same as theme absolute offsets.
+// ─────────────────────────────────────────────────────────────────────────────
+const NAV_DROPDOWN_FIX = `
+@media only screen and (min-width:1200px){
+  .header{z-index:100!important}
+  .header_menu .bigmenu>ul{display:none}
+
+  /* Portal — copied from .header_menu ul.menu li.bigmenu>ul + children rules */
+  .nav-dropdown-portal{
+    position:fixed;box-sizing:border-box;
+    width:843px;max-width:min(843px,100vw - 16px);
+    box-shadow:0 32px 28.8px 0 #00000040;
+    -webkit-box-shadow:0 32px 28.8px 0 #00000040;
+    /* Base fill + right promo (theme: .bigmenu>ul::after — 380px photo). Stacked
+       backgrounds on the <ul> keep valid HTML (no div inside <ul>) and work
+       after portaling, unlike ::after in some cascade edge cases. */
+    /* !important: beat any theme ul/sub-menu background reset after the panel moves to body */
+    background-color:#fff !important;
+    background-image:url(/wp-content/uploads/2025/06/menu-image2.png) !important;
+    background-repeat:no-repeat !important;
+    background-position:right top !important;
+    background-size:380px 100% !important;
+    background-clip:padding-box !important;
+    border-radius:15px;
+    -webkit-border-radius:15px;
+    z-index:99;
+    padding:20px 390px 23px 36px;
+    font-size:0;
+    overflow:hidden;
+    opacity:0;
+    pointer-events:none;
+    /* Snappy open/close (theme used .3s — feels slow on local dev) */
+    transition:opacity .1s ease-out;
+    -webkit-transition:opacity .1s ease-out;
+  }
+  /* RTL mirror: image moves to the left, padding flips so the 390px reserve is on the left. */
+  html[dir="rtl"] .nav-dropdown-portal,
+  .rtl .nav-dropdown-portal{
+    background-image:url(/wp-content/uploads/2025/05/menuimg.jpg) !important;
+    background-position:left top !important;
+    padding:20px 36px 23px 390px;
+    direction:rtl;
+  }
+  html[dir="rtl"] .nav-dropdown-portal>li,
+  .rtl .nav-dropdown-portal>li{
+    padding:0 0 0 10px;
+  }
+  html[dir="rtl"] .nav-dropdown-portal>li:last-child,
+  .rtl .nav-dropdown-portal>li:last-child{
+    padding:0;
+  }
+  html[dir="rtl"] .nav-dropdown-portal>li>ul>li,
+  .rtl .nav-dropdown-portal>li>ul>li{
+    text-align:right;
+  }
+  .nav-dropdown-portal.open{opacity:1;pointer-events:all}
+  .nav-dropdown-portal::before{
+    content:'';width:100%;height:46px;background:0 0;display:block;
+    left:0;position:absolute;top:-40px;
+  }
+
+  .nav-dropdown-portal>li{
+    display:inline-block;vertical-align:top;
+    width:234px;padding:0 10px 0 0;position:relative;z-index:1;
+  }
+  .nav-dropdown-portal>li:last-child{width:182px;padding:0}
+  .nav-dropdown-portal>li>a{display:none}
+  .nav-dropdown-portal>li>ul{
+    margin:0;padding:0;list-style:none;opacity:1;transition:none;
+  }
+  .nav-dropdown-portal>li>ul>li{
+    display:block;padding:0;margin:0;width:100%;text-align:left;
+  }
+  .nav-dropdown-portal>li>ul>li:last-child{margin-bottom:0}
+  .nav-dropdown-portal>li>ul>li>a{
+    font-size:20px;color:#000;font-family:SFProText,-apple-system,BlinkMacSystemFont,sans-serif;
+    font-weight:510;line-height:41px;padding:0;display:block;text-decoration:none;
+  }
+  .nav-dropdown-portal>li>ul>li>a:hover{color:#3088ef}
+}
+`;
+
+// Portal-based dropdown script.
+//
+// .header_menu gets transform:scale(1) from the header JS, making it a CSS
+// containing block for position:fixed. To escape that, we move the dropdown
+// panel to document.body (portal pattern) and position it with JS each time
+// the dropdown opens, so it always sits exactly below the nav pill regardless
+// of viewport size or scroll state.
+const NAV_HOVER_SCRIPT = `(function(){
+  function log(msg,data,hyp){
+    fetch('/api/dbg/',{method:'POST',headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({sessionId:'1accee',location:'layout.tsx:NAV_HOVER_SCRIPT',message:msg,data:data,hypothesisId:hyp,timestamp:Date.now()})}).catch(function(){});
+  }
+
+  function init(){
+    var bigmenu=document.querySelector('.header_menu ul.menu>li.bigmenu');
+    var panel=bigmenu&&bigmenu.querySelector(':scope>ul');
+    if(!bigmenu||!panel)return;
+
+    document.body.appendChild(panel);
+    panel.classList.add('nav-dropdown-portal');
+
+    var t,logged=false;
+    var W=843;
+    function leftNudge(){
+      return window.innerWidth<=1365?202:333;
+    }
+    function place(){
+      var r=bigmenu.getBoundingClientRect();
+      var n=leftNudge();
+      var l=r.left-n;
+      l=Math.max(8,Math.min(l,window.innerWidth-W-8));
+      panel.style.left=l+'px';
+      panel.style.top=(r.top+68)+'px';
+      panel.style.right='auto';
+      panel.style.transform='none';
+    }
+    function show(){
+      clearTimeout(t);
+      place();
+      panel.classList.add('open');
+      if(!logged){
+        logged=true;
+        log('portal 1:1 place()',{
+          leftNudge:leftNudge(),
+          innerWidth: window.innerWidth,
+          rect: {l:Math.round(bigmenu.getBoundingClientRect().left),t:Math.round(bigmenu.getBoundingClientRect().top)},
+          panel: {l:panel.style.left,t:panel.style.top},
+          panelBgImage: window.getComputedStyle(panel).backgroundImage,
+          openTransition: window.getComputedStyle(panel).transitionDuration,
+          hideDelayMs: 80
+        },'PERF');
+      }
+    }
+    function hide(){t=setTimeout(function(){panel.classList.remove('open');},80);}
+    function onMove(){if(panel.classList.contains('open'))place();}
+    bigmenu.addEventListener('mouseenter',show);
+    bigmenu.addEventListener('mouseleave',hide);
+    panel.addEventListener('mouseenter',show);
+    panel.addEventListener('mouseleave',hide);
+    window.addEventListener('resize',onMove,{passive:true});
+    window.addEventListener('scroll',onMove,{passive:true});
+  }
+  if(document.querySelector('.header_menu ul.menu>li.bigmenu')){init();}
+  else{var mo=new MutationObserver(function(){
+    if(document.querySelector('.header_menu ul.menu>li.bigmenu')){mo.disconnect();init();}
+  });mo.observe(document.body||document.documentElement,{childList:true,subtree:true});}
+})();`;
+
+export default function RootLayout({ children }: { children: ReactNode }) {
+  return (
+    <html lang={DEFAULT_LOCALE} dir={IS_RTL ? "rtl" : "ltr"}>
+      <head>
+        {/* Preload portfolio promo image (LTR default — RTL site preloads via CSS). */}
+        <link
+          rel="preload"
+          as="image"
+          href={IS_RTL ? "/wp-content/uploads/2025/05/menuimg.jpg" : "/wp-content/uploads/2025/06/menu-image2.png"}
+        />
+        {/* eslint-disable-next-line react/no-danger */}
+        <style dangerouslySetInnerHTML={{ __html: NAV_DROPDOWN_FIX }} />
+        {/* eslint-disable-next-line react/no-danger */}
+        <style dangerouslySetInnerHTML={{ __html: SCROLLBAR_FIX }} />
+      </head>
+      <body>
+        {children}
+        {/* eslint-disable-next-line react/no-danger */}
+        <script dangerouslySetInnerHTML={{ __html: NAV_HOVER_SCRIPT }} />
+      </body>
+    </html>
+  );
+}

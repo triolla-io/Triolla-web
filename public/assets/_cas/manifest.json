@@ -1,0 +1,4064 @@
+{
+  "b3448833be8053de28454fe3bf9fce9f0b42c660dd14589fc7628b8da5303461": {
+    "originalUrl": "https://triolla.io/wp-content/cache/min/1/wp-content/plugins/sitepress-multilingual-cms/res/js/cookies/language-cookie.js?ver=1776750935",
+    "originalName": "language-cookie.js",
+    "size": 256,
+    "ext": ".js"
+  },
+  "80f04717f32ea0320c5e8618fbacedd1fee3a8775ad8292140a6113551d4b5b0": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/js/jquery-3.6.0.min.js?ver=8cfadd0d8ff1eb73c5e348a101c377e6",
+    "originalName": "jquery-3.6.0.min.js",
+    "size": 89500,
+    "ext": ".js"
+  },
+  "a4e1299c636d1878a7ba2dc261638458c930a12367300bfc7cbc6b4b2adddcd6": {
+    "originalUrl": "https://triolla.io/wp-content/plugins/svg-support/vendor/DOMPurify/DOMPurify.min.js?ver=2.5.8",
+    "originalName": "DOMPurify.min.js",
+    "size": 22392,
+    "ext": ".js"
+  },
+  "cb6f2d32c49d1c2b25e9ffc9aaafa3f83075346c01bcd4ae6eb187392a4292cf": {
+    "originalUrl": "https://triolla.io/wp-includes/js/jquery/jquery.min.js?ver=3.7.1",
+    "originalName": "jquery.min.js",
+    "size": 87553,
+    "ext": ".js"
+  },
+  "06ef3a491903e89570ca974ceef1d833b444ea8e9007e44bdd543c6f3509e193": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/js/jquery.jConveyorTicker.min.js?ver=8cfadd0d8ff1eb73c5e348a101c377e6",
+    "originalName": "jquery.jConveyorTicker.min.js",
+    "size": 2543,
+    "ext": ".js"
+  },
+  "1249c9b625950bf8b11dc93d3b88e28dbe0598a32964139921c74c524e8a56d4": {
+    "originalUrl": "https://triolla.io/wp-content/cache/min/1/wp-content/themes/triolla/js/owl/owl.carousel.js?ver=1776750935",
+    "originalName": "owl.carousel.js",
+    "size": 55243,
+    "ext": ".js"
+  },
+  "a8f5fb60b324c326a574ae9ac7571d551b94dec7ee1cd3d57d2e2fb1c5320001": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/js/TweenMax.min.js?ver=8cfadd0d8ff1eb73c5e348a101c377e6",
+    "originalName": "TweenMax.min.js",
+    "size": 223226,
+    "ext": ".js"
+  },
+  "81be3931dc14f4f41228b7318370325f996f897b02141d2282a89ccf03238fb3": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/js/ScrollMagic.min.js?ver=8cfadd0d8ff1eb73c5e348a101c377e6",
+    "originalName": "ScrollMagic.min.js",
+    "size": 31706,
+    "ext": ".js"
+  },
+  "82db46eae7a9d8b46eeca7f3cd79d888ebea66db1f3995dccae9ac03f39f89ff": {
+    "originalUrl": "https://triolla.io/wp-content/cache/min/1/wp-content/themes/triolla/js/metaview.js?ver=1776750935",
+    "originalName": "metaview.js",
+    "size": 2068,
+    "ext": ".js"
+  },
+  "ff831a9611197a461e1da89256f0418d39f279130792d755db5c39d1b07a78a3": {
+    "originalUrl": "https://triolla.io/wp-content/plugins/svg-support/js/min/svgs-inline-min.js",
+    "originalName": "svgs-inline-min.js",
+    "size": 1744,
+    "ext": ".js"
+  },
+  "4726ac0e14c6d0b3e9ca996819e656eeb9209e7d2bead02c8b42cd7657c03e4d": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/images/tickerxlose.svg",
+    "originalName": "tickerxlose.svg",
+    "size": 1085,
+    "ext": ".svg"
+  },
+  "a7dceef86d04b3347b53f4a869ce84b072cf8ef6d221dc53edaf4fe9308bcf17": {
+    "originalUrl": "https://triolla.io/wp-content/cache/min/1/ajax/libs/bodymovin/5.12.2/lottie.min.js?ver=1776750935",
+    "originalName": "lottie.min.js",
+    "size": 305541,
+    "ext": ".js"
+  },
+  "5274f11e6fb32ae0cf2dfb9f8043272865c397a7c4223b4cfa7d50ea52fbde89": {
+    "originalUrl": "https://triolla.io/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1",
+    "originalName": "jquery-migrate.min.js",
+    "size": 13577,
+    "ext": ".js"
+  },
+  "3d3a689ab2065883e87f94a61e593da141c0f6adc839c6d439750f554bff713c": {
+    "originalUrl": "https://triolla.io/wp-content/cache/min/1/widget.js?ver=1776750936",
+    "originalName": "widget.js",
+    "size": 132383,
+    "ext": ".js"
+  },
+  "f4c06dfe46ebc1aa4e5f140433e84544500fe4bf67abda9594f870a542c5dc13": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/images/hamburger_white.svg",
+    "originalName": "hamburger_white.svg",
+    "size": 280,
+    "ext": ".svg"
+  },
+  "f96f51ee771353cd92b1cce5c9ddc9a3eab76177a074e650d32df124317b37f9": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/images/logo_new.png",
+    "originalName": "logo_new.png",
+    "size": 1047,
+    "ext": ".png",
+    "width": 79,
+    "height": 38
+  },
+  "f242f92bc1304f3ed302c7f5058ebaaf0b5b04e11f1d6fd1ec03d878c3502735": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/images/hamburger.svg",
+    "originalName": "hamburger.svg",
+    "size": 796,
+    "ext": ".svg"
+  },
+  "e4d669acf86e1f19223c90437c5412ce3ad15ab5a73583ddd4ab947e218ec50f": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/images/calenderimg.svg",
+    "originalName": "calenderimg.svg",
+    "size": 4424,
+    "ext": ".svg"
+  },
+  "3078356e5fa0f91d8012f53a13f699480b77a85cc873e7d364bd3576fadb6215": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/images/togleclose.svg",
+    "originalName": "togleclose.svg",
+    "size": 692,
+    "ext": ".svg"
+  },
+  "bcdd049653c64e194e8c97950526460ee00c85a8a721e9661cdf928139fd003f": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/images/phmobicon.svg",
+    "originalName": "phmobicon.svg",
+    "size": 1633,
+    "ext": ".svg"
+  },
+  "aec1e1190f3cea9b03b6422f5f5e24fb98f171390d8d0259fd5aa5f8db4d9b04": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/images/whatmobicon.svg",
+    "originalName": "whatmobicon.svg",
+    "size": 2383,
+    "ext": ".svg"
+  },
+  "4ef0569f809629c3e2a0f04e359ac9d5cd08dd4d12bfb77f95809b7b559970cd": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/images/homeecla1.svg",
+    "originalName": "homeecla1.svg",
+    "size": 614,
+    "ext": ".svg"
+  },
+  "4c3902e593252ff95820a30df92fd47480e6b4c0611d2b26e13fc16822cdf82a": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/images/homeecla2.svg",
+    "originalName": "homeecla2.svg",
+    "size": 610,
+    "ext": ".svg"
+  },
+  "b01fe1033998d549a717476b217e996cee12a68bf1e77b395d752e4161a8f198": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/1.png",
+    "originalName": "1.png",
+    "size": 211181,
+    "ext": ".png",
+    "width": 419,
+    "height": 750
+  },
+  "b9d0ce99f3dd1aaa5d585e0346a72da13696d666f56d3506310298f8fbc48a28": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/jumping_3-1.svg",
+    "originalName": "jumping_3-1.svg",
+    "size": 570681,
+    "ext": ".svg"
+  },
+  "ea54d41f480c438d81e5870a5d2dd48bca3fcdfbea532135f4881de1204c0267": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/jumping_2-1.svg",
+    "originalName": "jumping_2-1.svg",
+    "size": 871409,
+    "ext": ".svg"
+  },
+  "dbafd28f5c215be69c2e9df8d5082b2305fdbdb9b7ef57d0ba501f15f1b5e4d9": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/2.png",
+    "originalName": "2.png",
+    "size": 482026,
+    "ext": ".png",
+    "width": 1124,
+    "height": 750
+  },
+  "2a0c99244b1ec517c3f418fa6c3538d265a5407e835010b876fb907a1b0b5834": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/medicak-ipad.png",
+    "originalName": "medicak-ipad.png",
+    "size": 210373,
+    "ext": ".png",
+    "width": 951,
+    "height": 1234
+  },
+  "55f6613ba859efb19c13690ecc9d532bab6d999e5d3763d154aee3a4f8620661": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/3.png",
+    "originalName": "3.png",
+    "size": 173380,
+    "ext": ".png",
+    "width": 723,
+    "height": 979
+  },
+  "7025e36ac63a538399742e0db8c9ff5f24c3e911093fec7e69fa1478d9aa65fb": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/final_watch6.svg",
+    "originalName": "final_watch6.svg",
+    "size": 96228,
+    "ext": ".svg"
+  },
+  "c12200bbaef70d6c4172232af406c8c65a51b6a6ed0fb25336bebf2c82202c3e": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/jumping_1-1.svg",
+    "originalName": "jumping_1-1.svg",
+    "size": 905411,
+    "ext": ".svg"
+  },
+  "71dfdd689e0c8ea6e59a8436c7d00cc0ebcf61d9a45dd296a08aff4c73b386d8": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/6.png",
+    "originalName": "6.png",
+    "size": 659058,
+    "ext": ".png",
+    "width": 1307,
+    "height": 964
+  },
+  "fc331e9bd78e5c905431f7526a746d848b1a6b8dd33d18e7aa8b589a44c7ed10": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/88.png",
+    "originalName": "88.png",
+    "size": 72144,
+    "ext": ".png",
+    "width": 548,
+    "height": 1025
+  },
+  "95135aff037bb07b8c045fe0241334d45e2a534fd336f5ab0538899cd9eb4f2e": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Front-cloean-1.png",
+    "originalName": "Front-cloean-1.png",
+    "size": 666439,
+    "ext": ".png",
+    "width": 533,
+    "height": 1003
+  },
+  "85115162e85e6b306273c819692fd597d4823f4fd470dc6ee0e7a47e7e9268c1": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/White-1.png",
+    "originalName": "White-1.png",
+    "size": 184368,
+    "ext": ".png",
+    "width": 830,
+    "height": 1192
+  },
+  "d39c84b6ba3b658ab44dcf8808504bacd111c0a00775b55c2a8f594481ffedee": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Triola_anim_-44444.svg",
+    "originalName": "Triola_anim_-44444.svg",
+    "size": 11197,
+    "ext": ".svg"
+  },
+  "4be177d98f2f20a4fc1f749b154f4f2e1a88d73ee2aefcb073fde372765700d1": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Triola_anim_-111111.svg",
+    "originalName": "Triola_anim_-111111.svg",
+    "size": 10976,
+    "ext": ".svg"
+  },
+  "6437fb8d80773a14441b5f5b82195b7d0debc3629e41d613dc042b1c4e35a943": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Triola_anim_-33333.svg",
+    "originalName": "Triola_anim_-33333.svg",
+    "size": 10934,
+    "ext": ".svg"
+  },
+  "84e59eab2c57c01212bb32a80dc8c6a9f1a14cb8b420d7a55e37e20d5b4cb295": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/09/Group-1410103661.png",
+    "originalName": "Group-1410103661.png",
+    "size": 74433,
+    "ext": ".png",
+    "width": 295,
+    "height": 258
+  },
+  "ebf72d2cfa95509bb0b9ed3fab52ca74b3093ba1cb1fef9fdda441e8061c18f9": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Triola_anim_-2222.svg",
+    "originalName": "Triola_anim_-2222.svg",
+    "size": 11083,
+    "ext": ".svg"
+  },
+  "64bbd4f0e5fe594ef4247ab48ae84d8c6f91e4503ddb9627de01bd71819b7d6c": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/09/Group-1410103660.png",
+    "originalName": "Group-1410103660.png",
+    "size": 74563,
+    "ext": ".png",
+    "width": 294,
+    "height": 257
+  },
+  "547400c2f81b1884353a77fe42556c27536bd5b169405cea50c8b776285dae4f": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/09/Group-1410103662.png",
+    "originalName": "Group-1410103662.png",
+    "size": 75170,
+    "ext": ".png",
+    "width": 295,
+    "height": 258
+  },
+  "65fcb0bbdc5f5f07a3390c31cade74291dedd17a093d0ae75cc1ed135ccfe0db": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/passport_cart_global.svg",
+    "originalName": "passport_cart_global.svg",
+    "size": 11244,
+    "ext": ".svg"
+  },
+  "58d5a78086d8986e55bf5b822d073c5df7da06a7db674692a28bff8e23d15fc4": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/human_global.svg",
+    "originalName": "human_global.svg",
+    "size": 101986,
+    "ext": ".svg"
+  },
+  "59efc7a392c48c8f5aa66ace2a95c2c6ce7955e5284494e9d4a0158597106e21": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/microsoft_global.svg",
+    "originalName": "microsoft_global.svg",
+    "size": 88644,
+    "ext": ".svg"
+  },
+  "5a391c10ae2c9eb14349afe8a55a72374c2a017dc9b8fd8faada2f6a67675d19": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/american_express_global.svg",
+    "originalName": "american_express_global.svg",
+    "size": 220990,
+    "ext": ".svg"
+  },
+  "c2a1a6a14b3e36a6a6fa14d47f21689b9d3291383131d62f9a8467a187912c0f": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/n_gloabl.svg",
+    "originalName": "n_gloabl.svg",
+    "size": 222915,
+    "ext": ".svg"
+  },
+  "8cc3deee2d05893e5a83e713f887165c2dadb63eeda4a389d9a13ef00e0b3db1": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/jfrog_global.svg",
+    "originalName": "jfrog_global.svg",
+    "size": 30447,
+    "ext": ".svg"
+  },
+  "7517bfb3ce4bf649ab341ece897e8c3d403b88e07d8ab66cc08d5e2360b65dba": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/alam_global.svg",
+    "originalName": "alam_global.svg",
+    "size": 22128,
+    "ext": ".svg"
+  },
+  "85088cb00916486b8b9832cfd9976551a75edf5463e59c828d400c0a9d525bc8": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/taboola_global.svg",
+    "originalName": "taboola_global.svg",
+    "size": 26538,
+    "ext": ".svg"
+  },
+  "5a5553bfc77d52799df13c39185a861e10eb4bf089357d0638bdbd210322d773": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/is_global.svg",
+    "originalName": "is_global.svg",
+    "size": 26580,
+    "ext": ".svg"
+  },
+  "1c705ab298bba64abb14cedee1fb73e37e9fed1f8373fcd1cacae457160feb9e": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/finaro_global.svg",
+    "originalName": "finaro_global.svg",
+    "size": 19501,
+    "ext": ".svg"
+  },
+  "f72271e9c75ddf7934e71dcb8a6cd2c18e8aa9255e01de92033e9bccee8bf814": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/playtika_global.svg",
+    "originalName": "playtika_global.svg",
+    "size": 13790,
+    "ext": ".svg"
+  },
+  "b4f76030e607c49ea327bdadd2a8af13703806d99d11344c8df2b4261ba2b2e5": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/faq_q1.png",
+    "originalName": "faq_q1.png",
+    "size": 6156,
+    "ext": ".png",
+    "width": 50,
+    "height": 50
+  },
+  "7bb737ebbf475d7f00c0fbf860a737d9e7f2d382cfc3ffde9153a268532ae85f": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/star_global.svg",
+    "originalName": "star_global.svg",
+    "size": 165916,
+    "ext": ".svg"
+  },
+  "ede14bdc07a876ed008a4a7e84463b986087680a934ac556e8df159917a728db": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/faq_q2.png",
+    "originalName": "faq_q2.png",
+    "size": 5216,
+    "ext": ".png",
+    "width": 50,
+    "height": 50
+  },
+  "a4b042ce0df35c6735103eff834ab2a7ebdec7e26004003423622192646dd18a": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/faq_q3.png",
+    "originalName": "faq_q3.png",
+    "size": 6084,
+    "ext": ".png",
+    "width": 50,
+    "height": 50
+  },
+  "a2d3a38156057344dc32e478d71180185949eb35cb19efb7f26cb14ecbc418bd": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/faq_q4.png",
+    "originalName": "faq_q4.png",
+    "size": 5787,
+    "ext": ".png",
+    "width": 50,
+    "height": 50
+  },
+  "3db72174c6801b4c463b4d7b49cba7472426b946ddb86a06d32d26ced92b4e97": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/faq_q5.png",
+    "originalName": "faq_q5.png",
+    "size": 6043,
+    "ext": ".png",
+    "width": 50,
+    "height": 50
+  },
+  "5b1811d11840370492e74bcdc239ab4de1e589eac7d479c8add8e0ac31474e64": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/faq_q7.png",
+    "originalName": "faq_q7.png",
+    "size": 6252,
+    "ext": ".png",
+    "width": 50,
+    "height": 50
+  },
+  "14c4b97b073f44a7ac8ff3aca7f5790c2c3e0f18a3c865b0f2f798162a691e74": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/faq_q6.png",
+    "originalName": "faq_q6.png",
+    "size": 5781,
+    "ext": ".png",
+    "width": 50,
+    "height": 50
+  },
+  "17ee25ebf1589d73fded870af0abe7dd13a145c620310db592260e422ab77a9f": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/aivatar_cir_32.png",
+    "originalName": "aivatar_cir_32.png",
+    "size": 75116,
+    "ext": ".png",
+    "width": 200,
+    "height": 200
+  },
+  "d13db76be3ccd06b0ec734cf177f4f23d5b8fd684dc16fb268c12f200b143d5e": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2026/01/image-740.png",
+    "originalName": "image-740.png",
+    "size": 3801,
+    "ext": ".png",
+    "width": 126,
+    "height": 35
+  },
+  "2f860cb954ae35aa69d5ad9bd316614fecac371dac3c050562d4dff5cd6d94ed": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/aivatar_cir_05.png",
+    "originalName": "aivatar_cir_05.png",
+    "size": 78693,
+    "ext": ".png",
+    "width": 200,
+    "height": 200
+  },
+  "2595496fe48df6fcf9b1bc57c29a744c121eb4dd11566466bc13d2e52e6bbcc8": {
+    "originalUrl": "https://triolla.io/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js",
+    "originalName": "email-decode.min.js",
+    "size": 1239,
+    "ext": ".js"
+  },
+  "9618268c6a57af5399732af96bcbad967e73b9b9aa3cf2fad5dd57e7f337dc0c": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2026/01/image-741.png",
+    "originalName": "image-741.png",
+    "size": 2892,
+    "ext": ".png",
+    "width": 90,
+    "height": 22
+  },
+  "49b78fea2eeb454fc607bd0984da899643ea02294274b9a0b3fabee28b918989": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2026/01/image-745.png",
+    "originalName": "image-745.png",
+    "size": 3759,
+    "ext": ".png",
+    "width": 97,
+    "height": 29
+  },
+  "c705158ea24cd2b2afb00bdd3534f9e20d69788e77488221ea9ab6c15408740c": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2026/01/image-744.png",
+    "originalName": "image-744.png",
+    "size": 3234,
+    "ext": ".png",
+    "width": 87,
+    "height": 29
+  },
+  "05d85956d906bbdfa4bf23a67408591271dfa48f7a17a420e03df0db400c9320": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/images/footerwhatsmob.svg",
+    "originalName": "footerwhatsmob.svg",
+    "size": 2375,
+    "ext": ".svg"
+  },
+  "3943e241a417dea97d2372184b32cd4d537b08c6ae0b2fb7caa201369278fa1c": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/images/footerphmob.svg",
+    "originalName": "footerphmob.svg",
+    "size": 1397,
+    "ext": ".svg"
+  },
+  "89c1177b32a575875c84fb25505888855a1cbb03e867ef4b05ec3f86c65879f5": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/logo_736.svg",
+    "originalName": "logo_736.svg",
+    "size": 2867,
+    "ext": ".svg"
+  },
+  "0b8d98c4b7aba6fb6c68a9ceac7b7f9124f18838237422f3afec6e5fb3acd682": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/logo_biz_735.svg",
+    "originalName": "logo_biz_735.svg",
+    "size": 87637,
+    "ext": ".svg"
+  },
+  "e4a05a471816fd2bd3aab68a99cb89e3752484a145cdadac302803da2bd44707": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/logo_733.svg",
+    "originalName": "logo_733.svg",
+    "size": 4610,
+    "ext": ".svg"
+  },
+  "390e110ce3cf5f6f81e18df7c223701174955922e3d63cc5f2ae7526bbb7628e": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/logo_732.svg",
+    "originalName": "logo_732.svg",
+    "size": 73831,
+    "ext": ".svg"
+  },
+  "0ae3d60c9ddcadfd85657129ba7471905c45aad590cab732bcdaf043f759a609": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/logo_marker_731.svg",
+    "originalName": "logo_marker_731.svg",
+    "size": 111119,
+    "ext": ".svg"
+  },
+  "a770dc3da1de171b80d60b8d4a25e86c489cf23cdab9aaf34eccbf807f98ecf3": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/triolla.svg",
+    "originalName": "triolla.svg",
+    "size": 4918,
+    "ext": ".svg"
+  },
+  "7bd22c978cc5e9ddd083f62debfbe9479c04bd8f6c20d66e91e05c9a90bf0103": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/logo_mako_734.svg",
+    "originalName": "logo_mako_734.svg",
+    "size": 20152,
+    "ext": ".svg"
+  },
+  "7b5a288e31c34edb93c2580dde1486efaed118eb708ce6c61522c67f6444c433": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/images/instagram.svg",
+    "originalName": "instagram.svg",
+    "size": 4270,
+    "ext": ".svg"
+  },
+  "fc3cb2aa2ae2cae37bd01816656d35d98ce13a85795c3d451aebd88eae052ebb": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/images/sqlink_icon.png",
+    "originalName": "sqlink_icon.png",
+    "size": 1961,
+    "ext": ".png",
+    "width": 94,
+    "height": 25
+  },
+  "e73c683e791dc6248cd3c6e6054d90e0c46bb35435327c1771a2ec808204569e": {
+    "originalUrl": "https://triolla.io/wp-content/cache/min/1/5905093.js?ver=1776750936",
+    "originalName": "5905093.js",
+    "size": 1988,
+    "ext": ".js"
+  },
+  "eb981c6b4e8afe916d3c7d508348551c86e02c37bd84dcda8dba2ebcac34e346": {
+    "originalUrl": "https://triolla.io/wp-content/cache/min/1/wp-content/themes/triolla/js/wow.js?ver=1776750936",
+    "originalName": "wow.js",
+    "size": 10806,
+    "ext": ".js"
+  },
+  "eeb55d272dc092678e5571233fbaef0d02b126648705fa215f0312b9db74eecf": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/js/isotope.pkgd.min.js?ver=8cfadd0d8ff1eb73c5e348a101c377e6",
+    "originalName": "isotope.pkgd.min.js",
+    "size": 82438,
+    "ext": ".js"
+  },
+  "6ca18346b22b3b3df0889dd95c1fe259ff2f2f6a963d2284013002ab7ee869b9": {
+    "originalUrl": "https://triolla.io/wp-content/cache/min/1/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js?ver=1776750936",
+    "originalName": "ScrollTrigger.min.js",
+    "size": 42660,
+    "ext": ".js"
+  },
+  "ec8c807282b5368bdeab3fee22207d7eb96b3218a5639f66e31c9fb6e384ffb6": {
+    "originalUrl": "https://triolla.io/wp-content/cache/min/1/ajax/libs/gsap/3.12.2/gsap.min.js?ver=1776750936",
+    "originalName": "gsap.min.js",
+    "size": 71513,
+    "ext": ".js"
+  },
+  "3aae2328923be964973dd33a6aac41f7d80a013ac026f04afa5ad52909b566be": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/grid_all.png",
+    "originalName": "grid_all.png",
+    "size": 3606014,
+    "ext": ".png",
+    "width": 1920,
+    "height": 1912
+  },
+  "f8ed4a34f0f323cb0b97828073f856baa71de4e93acf75b8d9a2c6a9e09a5812": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/js/jquery.bez.min.js?ver=8cfadd0d8ff1eb73c5e348a101c377e6",
+    "originalName": "jquery.bez.min.js",
+    "size": 1759,
+    "ext": ".js"
+  },
+  "0415512b09fadb2ac06a7452e58bfe1478a25c82785313873e455298ca72d47f": {
+    "originalUrl": "https://triolla.io/wp-content/cache/min/1/wp-content/themes/triolla/js/all.js?ver=1776750936",
+    "originalName": "all.js",
+    "size": 7727,
+    "ext": ".js"
+  },
+  "cf1aa9163953fb477fe5cf452229042578738fa9e600c6ef64c47e4635ba78c2": {
+    "originalUrl": "https://triolla.io/wp-includes/js/dist/a11y.min.js?ver=3156534cc54473497e14",
+    "originalName": "a11y.min.js",
+    "size": 2358,
+    "ext": ".js"
+  },
+  "9a1e0d38b691f1d22a92cff65ec0439b428170ac39a4493c7ecb06d5585f56a3": {
+    "originalUrl": "https://triolla.io/wp-includes/js/dist/hooks.min.js?ver=4d63a3d491d11ffd8ac6",
+    "originalName": "hooks.min.js",
+    "size": 4776,
+    "ext": ".js"
+  },
+  "f313d12ea6124bd28fc4a6b7163d253bb83d5aeab5edce594880c5c3df475cbc": {
+    "originalUrl": "https://triolla.io/wp-includes/js/dist/i18n.min.js?ver=5e580eb46a90c2b997e6",
+    "originalName": "i18n.min.js",
+    "size": 9141,
+    "ext": ".js"
+  },
+  "5a43a22e48f94b7a45a9a9b1a107f197213b73307fdfa2e6b2daadab264f94d2": {
+    "originalUrl": "https://triolla.io/wp-includes/js/dist/dom-ready.min.js?ver=f77871ff7694fffea381",
+    "originalName": "dom-ready.min.js",
+    "size": 457,
+    "ext": ".js"
+  },
+  "e69e105da7cc64339ff034d4d301e96d2dac1016babb973945e0caed35879e84": {
+    "originalUrl": "https://triolla.io/wp-content/cache/min/1/wp-content/plugins/gdpr-cookie-compliance/dist/scripts/main.js?ver=1776750936",
+    "originalName": "main.js",
+    "size": 72677,
+    "ext": ".js"
+  },
+  "0b8ffaa7c45831d22e7f5fbafbf6f9492625eff743a65e28f6aacffa41b3273b": {
+    "originalUrl": "https://triolla.io/wp-content/plugins/gravityforms/js/jquery.json.min.js?ver=2.9.23.1",
+    "originalName": "jquery.json.min.js",
+    "size": 1823,
+    "ext": ".js"
+  },
+  "9a7c35457282c3f780c8cb3eb30b7e94f5e251d60334b28bae490bf88dcc2534": {
+    "originalUrl": "https://triolla.io/wp-content/plugins/gravityforms/js/gravityforms.min.js?ver=2.9.23.1",
+    "originalName": "gravityforms.min.js",
+    "size": 45287,
+    "ext": ".js"
+  },
+  "d62a7b7ec5313469ebff5c006b9068dc44d6d1c122cf787ffa29a10113b34060": {
+    "originalUrl": "https://triolla.io/wp-content/plugins/gravityforms/js/placeholders.jquery.min.js?ver=2.9.23.1",
+    "originalName": "placeholders.jquery.min.js",
+    "size": 4639,
+    "ext": ".js"
+  },
+  "2d91c5b43406f8e7f61aca23cec58ee76a8e9a9d4b9a7c96cc9700a3376ca42b": {
+    "originalUrl": "https://triolla.io/wp-content/plugins/gdpr-cookie-compliance/dist/images/gdpr-logo.png",
+    "originalName": "gdpr-logo.png",
+    "size": 1475,
+    "ext": ".png",
+    "width": 350,
+    "height": 233
+  },
+  "2401a67c4cb1c1300579063dd124eed561f4d010a348c0611dcf01c7a09102e6": {
+    "originalUrl": "https://triolla.io/wp-content/plugins/gravityforms/assets/js/dist/scripts-theme.min.js?ver=96b168b3a480baf99058dabf9338533b",
+    "originalName": "scripts-theme.min.js",
+    "size": 36947,
+    "ext": ".js"
+  },
+  "a3716da01260b91cfbe34a7dbcf5b765fd380f83c983bfa116410d15ff264479": {
+    "originalUrl": "https://triolla.io/wp-content/plugins/gravityforms/assets/js/dist/vendor-theme.min.js?ver=8673c9a2ff188de55f9073009ba56f5e",
+    "originalName": "vendor-theme.min.js",
+    "size": 20047,
+    "ext": ".js"
+  },
+  "8bd1f0a3f2159febb309b0e3b3730623b07042115ad8583d176b89e09fe9dbab": {
+    "originalUrl": "https://triolla.io/wp-content/plugins/gravityforms/assets/js/dist/utils.min.js?ver=380b7a5ec0757c78876bc8a59488f2f3",
+    "originalName": "utils.min.js",
+    "size": 60180,
+    "ext": ".js"
+  },
+  "f40767552e5e94b2d5f9a65d7f640cfa7d225298023dbd682095e040809a3d1a": {
+    "originalUrl": "https://triolla.io/wp-content/plugins/wp-rocket/assets/js/lazyload/17.8.3/lazyload.min.js",
+    "originalName": "lazyload.min.js",
+    "size": 8892,
+    "ext": ".js"
+  },
+  "8d5c8acf6524c61f19a5a3098d0c2aa71d4ae42889de4fd94b55fbee6aa89bf6": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/images/global_layer.svg",
+    "originalName": "global_layer.svg",
+    "size": 722,
+    "ext": ".svg"
+  },
+  "9b35397582fb4ff1eeb21276a52ad933654096db06b08f49b6ab04f16ed4014e": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/favicon.ico",
+    "originalName": "favicon.ico",
+    "size": 15086,
+    "ext": ".ico"
+  },
+  "06ac6e2d861b3db17bc93519b72f3544124937ef2ab15699c884a5642d4a0f0f": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/images/faq_minus.svg",
+    "originalName": "faq_minus.svg",
+    "size": 573,
+    "ext": ".svg"
+  },
+  "42c7a5166e9e9d5f0cda10d19e63e28aadb782f7e15e27c8d18d4fa85b51efdf": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/images/faq_plus.svg",
+    "originalName": "faq_plus.svg",
+    "size": 653,
+    "ext": ".svg"
+  },
+  "3ecb4d6a9d92b6a3f80131012d394a934ed7f2bb248bf649aa8e68fcab6283d8": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/fonts/SFPro-Regular.woff2",
+    "originalName": "SFPro-Regular.woff2",
+    "size": 815740,
+    "ext": ".woff2"
+  },
+  "4972184c0dc7a759ac5aedd30f2e775c94d7c7703301d88a71ed9cc991b669c7": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/images/win_bg.png",
+    "originalName": "win_bg.png",
+    "size": 226352,
+    "ext": ".png",
+    "width": 1921,
+    "height": 1144
+  },
+  "b1ff883f74d010ff410aa39daa0ea852c288317e00d6ca55d386e6907cec96b2": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/images/menutogbg.png",
+    "originalName": "menutogbg.png",
+    "size": 2767,
+    "ext": ".png",
+    "width": 393,
+    "height": 809
+  },
+  "88d657ebc10a6d059e9f8293b0e1e75a3233e61797d0ba4e883bd99b49b58ac2": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/images/menuarowdesk.svg",
+    "originalName": "menuarowdesk.svg",
+    "size": 458,
+    "ext": ".svg"
+  },
+  "e90f26e1eec05aeac3e9e9b88bebeeaacd999aff9b875f0236996263dae9dd90": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/images/footmearow.svg",
+    "originalName": "footmearow.svg",
+    "size": 807,
+    "ext": ".svg"
+  },
+  "656c41794a4d6dac420368a8732e29127c7b49e2acebeffa825927bc8a854dff": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/images/mobmenuicon.svg",
+    "originalName": "mobmenuicon.svg",
+    "size": 444,
+    "ext": ".svg"
+  },
+  "2ae4ffbe11229a3b4a7a922b0203b29ca338e1050157b1e61c81ac6da619f393": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/fonts/SFProText-Medium.woff2",
+    "originalName": "SFProText-Medium.woff2",
+    "size": 985716,
+    "ext": ".woff2"
+  },
+  "71718dbde8a50716e1acc0dae59437817ab73210516d98d04737b29aa93d6bf8": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/fonts/SFProText-Medium.eot",
+    "originalName": "SFProText-Medium.eot",
+    "size": 3543040,
+    "ext": ".eot"
+  },
+  "c520759ef3139c35640cb1a1b4eb7308e09bbd65cc9d4b4e67ea9450886c2190": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/fonts/SFProText-Medium.woff",
+    "originalName": "SFProText-Medium.woff",
+    "size": 1577464,
+    "ext": ".woff"
+  },
+  "a9d6c44104856cedad416830281f2fe3ef72196bcd8ee816ea70ba1ac189e2c2": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/fonts/SFProText-Regular.eot",
+    "originalName": "SFProText-Regular.eot",
+    "size": 3513356,
+    "ext": ".eot"
+  },
+  "502ccb46a70eda79e95f9da9aeeeb2b80c5e65e111d0f3dc9fcf896c54dbba43": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/fonts/SFProText-Medium.ttf",
+    "originalName": "SFProText-Medium.ttf",
+    "size": 3542836,
+    "ext": ".ttf"
+  },
+  "236d392fad7719ee4ecf57379fdea04b604a9f1b6a119f67e46cbfffd8715f4b": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/images/portfolio_grid_bg-old.png",
+    "originalName": "portfolio_grid_bg-old.png",
+    "size": 6999555,
+    "ext": ".png",
+    "width": 5394,
+    "height": 3823
+  },
+  "b3b1bf129ae240ee38e98573b0adb4c6e52f0363bb943fecd1b36bbcfe493bda": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/fonts/SFProText-Regular.woff2",
+    "originalName": "SFProText-Regular.woff2",
+    "size": 940564,
+    "ext": ".woff2"
+  },
+  "dc0a5c9b9ba18d33339d9844d8d9b2884a7007ba974cd16adb0489b275595311": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/fonts/SFPro-Regular.eot",
+    "originalName": "SFPro-Regular.eot",
+    "size": 2974580,
+    "ext": ".eot"
+  },
+  "c28a7f85d974e11acecc11a38c06fac2423500647239b776556bcc6ade663208": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/fonts/SFProText-Regular.woff",
+    "originalName": "SFProText-Regular.woff",
+    "size": 1527868,
+    "ext": ".woff"
+  },
+  "a33f5ea44800728de25330926c6c1cffdac754e80e9274516ea53fc7b1cf0128": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/fonts/SFProText-Regular.ttf",
+    "originalName": "SFProText-Regular.ttf",
+    "size": 3513148,
+    "ext": ".ttf"
+  },
+  "3f973f1cafdf7a16093dc89e61e2fd290317e41bfb94e574d51181a351c74eb7": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/fonts/SFPro-Regular.woff",
+    "originalName": "SFPro-Regular.woff",
+    "size": 1186452,
+    "ext": ".woff"
+  },
+  "fa5946e4e5eef330907757932e65e424123097ffd5f3b1d5d66b93b097406032": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/fonts/SFPro-Regular.ttf",
+    "originalName": "SFPro-Regular.ttf",
+    "size": 2974408,
+    "ext": ".ttf"
+  },
+  "8c09a2bb4a2eaf8ef37bf71a6cc875c631817138b97e1e555396e9ea994894dd": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/fonts/SFProText-Medium.svg",
+    "originalName": "SFProText-Medium.svg",
+    "size": 10877720,
+    "ext": ".svg"
+  },
+  "7889ba6acd5eccb51500ba8a63943c543283e2d6b2e2ee60480790f5fae2caf8": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/fonts/SFProText-Semibold.woff2",
+    "originalName": "SFProText-Semibold.woff2",
+    "size": 990988,
+    "ext": ".woff2"
+  },
+  "f1c96ac19c8fe544dc56164c68da6dd6a0381bd652fd6c2a6918fbf0c95083a4": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/fonts/SFProText-Semibold.eot",
+    "originalName": "SFProText-Semibold.eot",
+    "size": 3528816,
+    "ext": ".eot"
+  },
+  "c35038a5c5d85aeb778ed0edfa399af9068e2ea973af4f1d675326b6898fdc2e": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/fonts/SFProText-Regular.svg",
+    "originalName": "SFProText-Regular.svg",
+    "size": 10220187,
+    "ext": ".svg"
+  },
+  "a7018790f7986709a7a7c0819afab6621c80179e964100093cf0bed534c2321f": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/fonts/SFProText-Semibold.woff",
+    "originalName": "SFProText-Semibold.woff",
+    "size": 1580636,
+    "ext": ".woff"
+  },
+  "1d6ce4cc7645cb162dc46a840891aa1b253d67b991aaf47ff2c177d7a081a6b4": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/fonts/SFProText-Semibold.ttf",
+    "originalName": "SFProText-Semibold.ttf",
+    "size": 3528604,
+    "ext": ".ttf"
+  },
+  "89524ef61dc5ed27841c2da9d595dae72eea75b0ed9dd5af33f1f1aad93f653e": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/fonts/SFProText-Bold.eot",
+    "originalName": "SFProText-Bold.eot",
+    "size": 3531764,
+    "ext": ".eot"
+  },
+  "d5bad643ecf724f1caf1932c28a59b2d5027e4d9cda07f182d05c84315a7fe3e": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/fonts/Helvetica-Bold.eot",
+    "originalName": "Helvetica-Bold.eot",
+    "size": 308816,
+    "ext": ".eot"
+  },
+  "a063a162d9148d32291b6196a792fba4d6786c3e7cc4226be9eb266a4b3269b7": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/fonts/SFProText-Bold.woff2",
+    "originalName": "SFProText-Bold.woff2",
+    "size": 983596,
+    "ext": ".woff2"
+  },
+  "d9588ff8009d34d3952413246a62ca17901e97eeae6316a472884e29fd49d6a7": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/fonts/SFProText-Bold.woff",
+    "originalName": "SFProText-Bold.woff",
+    "size": 1569860,
+    "ext": ".woff"
+  },
+  "bd647d80364b90578ca689bfe758b04859f61ddcf33caca9ccbb9ecd2a1415b2": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/fonts/Helvetica-Bold.woff2",
+    "originalName": "Helvetica-Bold.woff2",
+    "size": 108556,
+    "ext": ".woff2"
+  },
+  "e81a8b36bae864673a7c050a3718c7b3643919ac1b6cc6f7ce09992645093889": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/fonts/SFPro-Regular.svg",
+    "originalName": "SFPro-Regular.svg",
+    "size": 11334220,
+    "ext": ".svg"
+  },
+  "42a5ce6fbd2262e745369639aebdeb75bfcd5e63eda9629c4d407f1a4a708e9d": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/fonts/Helvetica-Bold.woff",
+    "originalName": "Helvetica-Bold.woff",
+    "size": 161300,
+    "ext": ".woff"
+  },
+  "a15a7826be54a6e5d36ccac36e982f8bca68c819383374b37c4b956d57e97190": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/fonts/SFProText-Semibold.svg",
+    "originalName": "SFProText-Semibold.svg",
+    "size": 10852018,
+    "ext": ".svg"
+  },
+  "bc68b1a57b85e6d37791d501076dba25d05630af277ca89c0790584b253affb0": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/fonts/SFProText-Bold.ttf",
+    "originalName": "SFProText-Bold.ttf",
+    "size": 3531568,
+    "ext": ".ttf"
+  },
+  "9f864a83cb5ec440a32eb1e074e147f526b6b9d5a12df6c94867153df653ecaf": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/fonts/Helvetica-Bold.ttf",
+    "originalName": "Helvetica-Bold.ttf",
+    "size": 308628,
+    "ext": ".ttf"
+  },
+  "00ab4feedfa99ffe06a01da43ef07a6fb443155367ef9d66d8c8006767d08b12": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/fonts/Helvetica-Bold.svg",
+    "originalName": "Helvetica-Bold.svg",
+    "size": 714476,
+    "ext": ".svg"
+  },
+  "4e3b3ac68f2a20af3415af19f65b41b38a2ee0c2d44e845e5aa1d79b27162501": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/menu-image2.png",
+    "originalName": "menu-image2.png",
+    "size": 8432,
+    "ext": ".png",
+    "width": 380,
+    "height": 340
+  },
+  "c078daa6a6168e4889535f30ad90b36cc470d3bb0c5aacf4ea066d0a0be5712b": {
+    "originalUrl": "https://triolla.io/wp-content/plugins/sitepress-multilingual-cms/vendor/otgs/installer//res/img/icon-wpml-info-white.svg",
+    "originalName": "icon-wpml-info-white.svg",
+    "size": 607,
+    "ext": ".svg"
+  },
+  "8b776bdd6308531ab6b9e52bde81ffaa220e2cb2808037df4b384a053b281475": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/fonts/SFProText-Bold.svg",
+    "originalName": "SFProText-Bold.svg",
+    "size": 10842778,
+    "ext": ".svg"
+  },
+  "5ddb217d172e57eb7a038ad1d83f266e438aa46b369741df58a9c11e44af1dcc": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/images/banner_grid.svg",
+    "originalName": "banner_grid.svg",
+    "size": 3783,
+    "ext": ".svg"
+  },
+  "a9d92b491c2707171dd529b692a633df660b16be54365b7deca810b6ca0ff157": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/ablogo1.svg",
+    "originalName": "ablogo1.svg",
+    "size": 5237,
+    "ext": ".svg"
+  },
+  "0490b6dd43459787504a930807913d79da745430f52e1c4529ec771792fd936b": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/ab3.png",
+    "originalName": "ab3.png",
+    "size": 82862,
+    "ext": ".png",
+    "width": 231,
+    "height": 236
+  },
+  "f14c92100f06c8141a9ebe610d712e2adeb1a6f6a2c180ccfe1791ec852231d7": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/ab1.png",
+    "originalName": "ab1.png",
+    "size": 965178,
+    "ext": ".png",
+    "width": 703,
+    "height": 690
+  },
+  "1ceb699605df85cdab211c374c21bccdb77e5886c6b4eb362bd5f353934295c3": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/ab2.png",
+    "originalName": "ab2.png",
+    "size": 277317,
+    "ext": ".png",
+    "width": 383,
+    "height": 382
+  },
+  "2a8380aa56f7e37d5f1be90d145171181a8e9486287cb6692f7e5d02b96d6099": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/One.svg",
+    "originalName": "One.svg",
+    "size": 10628,
+    "ext": ".svg"
+  },
+  "808a5ba82fa75288bda41a234cf0ef66b9228344687e277153737fc7e52602ce": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/ablogo2.png",
+    "originalName": "ablogo2.png",
+    "size": 13892,
+    "ext": ".png",
+    "width": 362,
+    "height": 54
+  },
+  "7550a54b5cf87dbfda3f9142b49be2ccbaf44b384e389ff9a30264af4d55d79b": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Two.svg",
+    "originalName": "Two.svg",
+    "size": 10365,
+    "ext": ".svg"
+  },
+  "7b25890da5b321a242fb0ce32af0f2db302354c52c61e05099a1f1eb2ec7623a": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Three.svg",
+    "originalName": "Three.svg",
+    "size": 10514,
+    "ext": ".svg"
+  },
+  "77266b0738ccad66fd3ff06945e00e109281210fca823b0410750da1bb34a3ae": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Four.svg",
+    "originalName": "Four.svg",
+    "size": 10407,
+    "ext": ".svg"
+  },
+  "6eaa1705c7b2ee5843fb911ba15d7ac4c65092e3d79c90377dfa47150863a179": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/learn2.png",
+    "originalName": "learn2.png",
+    "size": 593601,
+    "ext": ".png",
+    "width": 387,
+    "height": 709
+  },
+  "fce82869c8477dc61de83fd5d4fd2ea5d3f6cf124f77175b1db6e82f86b0d732": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/learn1.png",
+    "originalName": "learn1.png",
+    "size": 574556,
+    "ext": ".png",
+    "width": 387,
+    "height": 709
+  },
+  "88c4770b15c46af525d7f89db4d02785d6972d0ec62792b44d31ed3e282b12f3": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/learn4.png",
+    "originalName": "learn4.png",
+    "size": 586929,
+    "ext": ".png",
+    "width": 387,
+    "height": 709
+  },
+  "b530f61916cf1dc8e7a81601fae93258589a5dbdb8e415124f5b6c0e2a9390be": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/learn3.png",
+    "originalName": "learn3.png",
+    "size": 587207,
+    "ext": ".png",
+    "width": 387,
+    "height": 709
+  },
+  "bbfaf6067f5e28dbd76d95a68cf6e4dd7c15595ff72676e71b97b4af267346dd": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/fonts/SFProText-Light.woff2",
+    "originalName": "SFProText-Light.woff2",
+    "size": 960908,
+    "ext": ".woff2"
+  },
+  "c856686478d90d52eb6466fc6e944f9e170a9bcd50f8ab7feb057a4dd5d782b3": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/fonts/SFProText-Light.eot",
+    "originalName": "SFProText-Light.eot",
+    "size": 3525720,
+    "ext": ".eot"
+  },
+  "429c4fc89edca93048849ecfd3a01161b69e3ab9e9391735aadb8a0331859314": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/fonts/SFProText-Light.woff",
+    "originalName": "SFProText-Light.woff",
+    "size": 1554244,
+    "ext": ".woff"
+  },
+  "de685b52eea932c9ea0a7939a150cae013125ff238d87316dc66ed77294555d4": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/fonts/SFProText-Light.ttf",
+    "originalName": "SFProText-Light.ttf",
+    "size": 3525520,
+    "ext": ".ttf"
+  },
+  "6680c3c006e58d15a47ba47fb8dea968635ec196e7e0fda43ea40b188984ca4a": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/fonts/SFProText-Light.svg",
+    "originalName": "SFProText-Light.svg",
+    "size": 10590012,
+    "ext": ".svg"
+  },
+  "84fa00de30342e9a5622ac89e4b5817bc9609319ccb638eb35e749904fc9e97b": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/fonts/Helvetica.woff2",
+    "originalName": "Helvetica.woff2",
+    "size": 104532,
+    "ext": ".woff2"
+  },
+  "99099314b62f9a779c7def85683427e2bacd6823a074b88b4481688542f3d6c1": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/fonts/Helvetica.eot",
+    "originalName": "Helvetica.eot",
+    "size": 318150,
+    "ext": ".eot"
+  },
+  "29fbb93ddd313dbbee0fd76e9401dfc5a865f0bdd308c1ff5a8ee4c1a6fbc414": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/fonts/Helvetica.woff",
+    "originalName": "Helvetica.woff",
+    "size": 152216,
+    "ext": ".woff"
+  },
+  "b59bd7341705dc6760cf075e92dd067dfa7724afb1d564b3299e4ce57906b433": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/portolio_layer.svg",
+    "originalName": "portolio_layer.svg",
+    "size": 841,
+    "ext": ".svg"
+  },
+  "521fd704a9e6e0a79dd7d16aef7aa5040d7e93de5357d4a08029e28f4013a380": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/fonts/Helvetica.ttf",
+    "originalName": "Helvetica.ttf",
+    "size": 317968,
+    "ext": ".ttf"
+  },
+  "f22c0d7484bdce3da52f716bcf608e2cf41d4066266fb7ed2c48825474ee58a0": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/fonts/Helvetica.svg",
+    "originalName": "Helvetica.svg",
+    "size": 727042,
+    "ext": ".svg"
+  },
+  "63bc14bc1172718329bf78ebe15474622219209fc1a1eff7155e4c3c90d4035b": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/startup1.png",
+    "originalName": "startup1.png",
+    "size": 10471,
+    "ext": ".png",
+    "width": 90,
+    "height": 90
+  },
+  "12f900f44e8a9f196492b3fddb23aa16a4080f0ce3db64709377bd36413110e2": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/startup2.png",
+    "originalName": "startup2.png",
+    "size": 17774,
+    "ext": ".png",
+    "width": 154,
+    "height": 90
+  },
+  "fe41a42c7b0fd9be231e5a5ff2c5451408eb223df0034153ecd7d0abb6b5e745": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/startup3.png",
+    "originalName": "startup3.png",
+    "size": 15169,
+    "ext": ".png",
+    "width": 140,
+    "height": 93
+  },
+  "ed3800092ebe342871638dc3989a5c93dba3c049874db3dedb4dea719c1a3771": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/startup4.png",
+    "originalName": "startup4.png",
+    "size": 18130,
+    "ext": ".png",
+    "width": 91,
+    "height": 154
+  },
+  "f176feb974003bc6b602ee8dfc65d5dc69ab6a32514d715d7a44d235d0a1df6b": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/fonts/AlmoniMLv5AAA-Regular.woff2",
+    "originalName": "AlmoniMLv5AAA-Regular.woff2",
+    "size": 66772,
+    "ext": ".woff2"
+  },
+  "ea73cec459985f5153c843a73e1175c383019c0eebac2580ac15703c7662760c": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/fonts/almoni-dl-aaa-400.ttf",
+    "originalName": "almoni-dl-aaa-400.ttf",
+    "size": 107416,
+    "ext": ".ttf"
+  },
+  "33d8f67adce5bb58d217939a15ce651f25e4e3660968945a6cc86077fa7601cb": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/fonts/almoni-dl-aaa-400.eot",
+    "originalName": "almoni-dl-aaa-400.eot",
+    "size": 54182,
+    "ext": ".eot"
+  },
+  "8620438dda6bfbd0e298959e068c9a4d79736d695d2337e634f709de605acc78": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/fonts/almoni-dl-aaa-900.eot",
+    "originalName": "almoni-dl-aaa-900.eot",
+    "size": 54408,
+    "ext": ".eot"
+  },
+  "1abbb636d84d76ee6cbdb4f7d9a810455d832bfba635f6c08fd36476f4f579e0": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/fonts/almoni-dl-aaa-400.woff",
+    "originalName": "almoni-dl-aaa-400.woff",
+    "size": 63104,
+    "ext": ".woff"
+  },
+  "18d0cc908998f5ed78b249e2a475e22d614c54ec44f49c9ac93ee7919fba5a66": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/fonts/almoni-dl-aaa-900.woff",
+    "originalName": "almoni-dl-aaa-900.woff",
+    "size": 63568,
+    "ext": ".woff"
+  },
+  "a55d501fcd83b0353f874b093ae56bd2e20d23be4d2b70117a6391c0aaa339eb": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/fonts/almoni-dl-aaa-900.ttf",
+    "originalName": "almoni-dl-aaa-900.ttf",
+    "size": 111284,
+    "ext": ".ttf"
+  },
+  "2a183dc048ccf3df00e28ed52be8d40da1cc2b635eab20a01fd15223a027042c": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/fonts/AlmoniDLAAA-Bold.eot",
+    "originalName": "AlmoniDLAAA-Bold.eot",
+    "size": 72742,
+    "ext": ".eot"
+  },
+  "1725b0b02d21de06349bcd51c3e5aecff4bb0dab4916f1b90d9a086dd007d58c": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/fonts/AlmoniDLAAA-Bold.woff2",
+    "originalName": "AlmoniDLAAA-Bold.woff2",
+    "size": 28888,
+    "ext": ".woff2"
+  },
+  "3975f7702ccacdc4625b2208e7f614c6a1fce0587de11982d39da69035406296": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/fonts/AlmoniDLAAA-Bold.woff",
+    "originalName": "AlmoniDLAAA-Bold.woff",
+    "size": 41376,
+    "ext": ".woff"
+  },
+  "f57d14728f8cb3dbebd603a58ee466b1c81139bef45782e5e1cea803e4a74c8b": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/fonts/AlmoniDLAAA-Bold.ttf",
+    "originalName": "AlmoniDLAAA-Bold.ttf",
+    "size": 72540,
+    "ext": ".ttf"
+  },
+  "ed3a88a336861420e0c9ec473c28138b4494ff5d8356b60e18547e3b33e6df56": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/fonts/AlmoniDLAAA-Bold.svg",
+    "originalName": "AlmoniDLAAA-Bold.svg",
+    "size": 153718,
+    "ext": ".svg"
+  },
+  "505503c12d570d3c9f5ca356b8306fc73c0c6d4d1bc0a80d854fe64049af163f": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/fonts/AlmoniMLv5AAA-Regular.eot?",
+    "originalName": "AlmoniMLv5AAA-Regular.eot",
+    "size": 201896,
+    "ext": ".eot"
+  },
+  "78a69e83b55479c94ace9ea4e39f0ace7054639eb588fc07c7eb21e7dd87194e": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/fonts/AlmoniMLv5AAA-Regular.woff",
+    "originalName": "AlmoniMLv5AAA-Regular.woff",
+    "size": 91676,
+    "ext": ".woff"
+  },
+  "fdad94e1b5534789cc79960b7b6fb2e59e858714bc03a576ba7b8d2db66d49af": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/fonts/AlmoniMLv5AAA-Bold.eot?",
+    "originalName": "AlmoniMLv5AAA-Bold.eot",
+    "size": 201360,
+    "ext": ".eot"
+  },
+  "919414f4a9f2b649f2eda76c2b978cfd87231cf775f8cab039af2aa1e2061d07": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/fonts/AlmoniMLv5AAA-Regular.ttf",
+    "originalName": "AlmoniMLv5AAA-Regular.ttf",
+    "size": 201676,
+    "ext": ".ttf"
+  },
+  "4c55cbef2aec8f5e240be3c3b5d5f700a21749c2014e34d3a3a96a639b8f0b90": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/fonts/AlmoniMLv5AAA-Regular.svg",
+    "originalName": "AlmoniMLv5AAA-Regular.svg",
+    "size": 774758,
+    "ext": ".svg"
+  },
+  "86ae126b5aefb7c58c77fa6717e10aed6760591c163c725c52a9e09532350ac9": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/fonts/AlmoniMLv5AAA-Bold.woff2",
+    "originalName": "AlmoniMLv5AAA-Bold.woff2",
+    "size": 66384,
+    "ext": ".woff2"
+  },
+  "ef22a155765c7d7ba73a0ee2ac950ce1d4489ce751d8842bf3f7ba1c62f7a4a9": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/fonts/AlmoniMLv5AAA-Bold.woff",
+    "originalName": "AlmoniMLv5AAA-Bold.woff",
+    "size": 91312,
+    "ext": ".woff"
+  },
+  "62e82dc70fc8113d75995f4160e8f6e0112b3bfc8a43be4154749e61c314e155": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/fonts/AlmoniMLv5AAA-Bold.ttf",
+    "originalName": "AlmoniMLv5AAA-Bold.ttf",
+    "size": 201152,
+    "ext": ".ttf"
+  },
+  "d36a5996d47ce6e9e7d8a9411c6c46d2c8e06fdc48899542c2ab8849e499a302": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/fonts/AlmoniMLv5AAA-Bold.svg",
+    "originalName": "AlmoniMLv5AAA-Bold.svg",
+    "size": 773342,
+    "ext": ".svg"
+  },
+  "56dafc8a2831b11d3428645980299a62ab61a89e32770696c649d01e42ad6b68": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/menuimg.jpg",
+    "originalName": "menuimg.jpg",
+    "size": 100696,
+    "ext": ".jpg",
+    "width": 380,
+    "height": 340
+  },
+  "a0c371370ae9c52a6cb85ed70d053e8f8ce08f6f3845ab6732d62f33a59d4b5a": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Armis-mobile.png",
+    "originalName": "Armis-mobile.png",
+    "size": 15032,
+    "ext": ".png",
+    "width": 350,
+    "height": 270
+  },
+  "e0a3ce4c1901847c27162a6c902a8aeb1efea590a34c5a644bf2d2834384276c": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Suridata-mobile.png",
+    "originalName": "Suridata-mobile.png",
+    "size": 14848,
+    "ext": ".png",
+    "width": 350,
+    "height": 270
+  },
+  "77548570b9bfe39261d1161ed9b52cca600dbf542d515106a4ae44571acad7a7": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/armis-min.png",
+    "originalName": "armis-min.png",
+    "size": 3235,
+    "ext": ".png",
+    "width": 221,
+    "height": 100
+  },
+  "f2924125626477629d8f6d391a9847994695cec8971aca4628fad3830e1fee4f": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Armis-desktop.png",
+    "originalName": "Armis-desktop.png",
+    "size": 86446,
+    "ext": ".png",
+    "width": 1000,
+    "height": 980
+  },
+  "0ae70738f2eacd9798961b774430d5b0f5b50348c3dcbcb5301a75255ce3d642": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Suridata-desktop.png",
+    "originalName": "Suridata-desktop.png",
+    "size": 73471,
+    "ext": ".png",
+    "width": 1000,
+    "height": 980
+  },
+  "29995a64afbb7b9dde12b8655894188ac09be1fbeea35665db752b8e13fd559d": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Okta-desktop.png",
+    "originalName": "Okta-desktop.png",
+    "size": 97699,
+    "ext": ".png",
+    "width": 1000,
+    "height": 980
+  },
+  "3be88a5ccf13eee80ca57daaa4029aef9b814144d41022b72e8ad495d5fe5bb0": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/suridata_logo.svg",
+    "originalName": "suridata_logo.svg",
+    "size": 61347,
+    "ext": ".svg"
+  },
+  "9eb891a31e467c94bd906a10ae71c8b42bd4aa42c7b77d8ea0e218ad9e9da756": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/image-737-e1747318738468.png",
+    "originalName": "image-737-e1747318738468.png",
+    "size": 4473,
+    "ext": ".png",
+    "width": 193,
+    "height": 64
+  },
+  "3ee5d083d14bcb59975faea75a2bc072cea7ffc8f97919ae2b880f50272d915b": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Okta-mobile.png",
+    "originalName": "Okta-mobile.png",
+    "size": 16905,
+    "ext": ".png",
+    "width": 350,
+    "height": 270
+  },
+  "e4c46094fdac68aae6787a34da46fa85812d0d3620507dbf75b9ebb99d1cd602": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Safebridge-desktop.png",
+    "originalName": "Safebridge-desktop.png",
+    "size": 62184,
+    "ext": ".png",
+    "width": 1000,
+    "height": 980
+  },
+  "c28f30158b0f9b1ee9a45242b20c630b84902954d684cb2690c05af001c5237c": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Safebridge-mobile.png",
+    "originalName": "Safebridge-mobile.png",
+    "size": 15264,
+    "ext": ".png",
+    "width": 350,
+    "height": 270
+  },
+  "748ded143fd976a08ac192b688479161432a41f266a9564b758a20536212f4b0": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/saf_breach_logo.svg",
+    "originalName": "saf_breach_logo.svg",
+    "size": 53638,
+    "ext": ".svg"
+  },
+  "7bab2777987a80da1a3fbd5b2204f77c34e91188d27fe36baaea30dab82fb92e": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Cyngular-mobile.png",
+    "originalName": "Cyngular-mobile.png",
+    "size": 11546,
+    "ext": ".png",
+    "width": 350,
+    "height": 270
+  },
+  "ec85560139f2c017b96aa8769d04c6de5e61b4f215a1dc466ec17457f113d9ee": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/cyngular_logo.svg",
+    "originalName": "cyngular_logo.svg",
+    "size": 81307,
+    "ext": ".svg"
+  },
+  "35f4c4b0d030ac23d61ed47ea01e38127bed6a7cbb68acf9d156b800021cd73e": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Cyngular-desktop.png",
+    "originalName": "Cyngular-desktop.png",
+    "size": 105980,
+    "ext": ".png",
+    "width": 1000,
+    "height": 980
+  },
+  "c7cfdd8f7a84325b9e947a2a6ce23374ef1f5c8f6cbfa299fb5f5ce26f22e538": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/Frame-2147224235.png",
+    "originalName": "Frame-2147224235.png",
+    "size": 280847,
+    "ext": ".png",
+    "width": 1278,
+    "height": 660
+  },
+  "9ceb008c9257dde0909fa3287ccbcd3b4ef55010facb76b38fdb663cfa8447cf": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/10/Screenshot-2025-10-21-at-11.15.11-300x223.png",
+    "originalName": "Screenshot-2025-10-21-at-11.15.11-300x223.png",
+    "size": 56015,
+    "ext": ".png",
+    "width": 300,
+    "height": 223
+  },
+  "632102d9b4df7cd91964f86a1c9aaac9d8a9aa852d78ed6ccf1746847b4c6849": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/10/Screenshot-2025-10-21-at-11.15.11-1024x761.png",
+    "originalName": "Screenshot-2025-10-21-at-11.15.11-1024x761.png",
+    "size": 381402,
+    "ext": ".png",
+    "width": 1024,
+    "height": 761
+  },
+  "fa1c547cf816bea659849280446db62e0584d14d451dfe67a042aab3daff00f7": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/10/Screenshot-2025-10-21-at-11.15.11-2048x1523.png",
+    "originalName": "Screenshot-2025-10-21-at-11.15.11-2048x1523.png",
+    "size": 1089287,
+    "ext": ".png",
+    "width": 2048,
+    "height": 1523
+  },
+  "bb880aa2245dfa9a5b65caf03745bf1940cfcad354b9ef77b9771058bdb858b0": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/10/Screenshot-2025-10-21-at-11.15.11-768x571.png",
+    "originalName": "Screenshot-2025-10-21-at-11.15.11-768x571.png",
+    "size": 244239,
+    "ext": ".png",
+    "width": 768,
+    "height": 571
+  },
+  "86e1d5b45563a0beb0552028b3a4ed4ebcdf60c5ecef15ed2e26bab7c0eeb1d9": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/10/Screenshot-2025-10-21-at-11.15.11-1536x1142.png",
+    "originalName": "Screenshot-2025-10-21-at-11.15.11-1536x1142.png",
+    "size": 709602,
+    "ext": ".png",
+    "width": 1536,
+    "height": 1142
+  },
+  "ed72eaa5f3b1a6e47b25580d114563c4fa98dab2a7c300b165b2536afa033656": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/Frame-213673.jpg",
+    "originalName": "Frame-213673.jpg",
+    "size": 395725,
+    "ext": ".jpg",
+    "width": 1278,
+    "height": 660
+  },
+  "c887b51ed880800ad5057329aa53b8a55d31e34cc6e8406791c1e497355d4bd8": {
+    "originalUrl": "https://triolla.io/wp-content/plugins/wp-rocket/assets/js/wpr-beacon.min.js",
+    "originalName": "wpr-beacon.min.js",
+    "size": 26004,
+    "ext": ".js"
+  },
+  "d50a47074a6ee2e9370cd1cf2dae8107c4c0b661c97b61ce445b1e0ac6cad603": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/images/logo-black.svg",
+    "originalName": "logo-black.svg",
+    "size": 4853,
+    "ext": ".svg"
+  },
+  "5331590a37442f794f2c7cc658e44d2d826b8331ba2ab162d1873dfea3a35a00": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/10/Scene-10.mp4",
+    "originalName": "Scene-10.mp4",
+    "size": 1045126,
+    "ext": ".mp4"
+  },
+  "ce01387f05601bdb2a6c61222fe3aa707e89c48c7dfe09f453ab80c8018ac2b7": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/10/Scene-8.mp4",
+    "originalName": "Scene-8.mp4",
+    "size": 2808799,
+    "ext": ".mp4"
+  },
+  "0280a333e5d10687fd16b209d1fd2b323eb7108f00b6b7d60ff7c19f7cbc421b": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/10/Scene-9.mp4",
+    "originalName": "Scene-9.mp4",
+    "size": 958196,
+    "ext": ".mp4"
+  },
+  "fbf7cb8e1dda89ae1fc6968892c24bf2a76c0df7a0db26ac9523e16eb6bd02e1": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/10/Scene-1.mp4",
+    "originalName": "Scene-1.mp4",
+    "size": 1198082,
+    "ext": ".mp4"
+  },
+  "ec27e0e2c68d7cb9bbfc3fce63ad75b56158a61bb657db5f9d58a99dbc6d36fe": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/10/Scene-6.mp4",
+    "originalName": "Scene-6.mp4",
+    "size": 1026296,
+    "ext": ".mp4"
+  },
+  "e8441e034ec323d53511d828202d294210c8d7ba4143f463e9a3d92badcf5d14": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/10/Scene-7.mp4",
+    "originalName": "Scene-7.mp4",
+    "size": 1355763,
+    "ext": ".mp4"
+  },
+  "d8baaa13c8a2e82d3fe9e0bdb7526d0d2328243ab289ea85d066d17bf7414e46": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/10/Scene-2.mp4",
+    "originalName": "Scene-2.mp4",
+    "size": 1381628,
+    "ext": ".mp4"
+  },
+  "fd3eca2c13fdf055f9972d726febf1accfb2aef765ae51188682bda36faf22c4": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/10/Scene-4.mp4",
+    "originalName": "Scene-4.mp4",
+    "size": 2279450,
+    "ext": ".mp4"
+  },
+  "2da8db046c2d4f86cf14da768767bc0701fd9a131fae1833b318038de7aaabee": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/10/Scene-5.mp4",
+    "originalName": "Scene-5.mp4",
+    "size": 2232439,
+    "ext": ".mp4"
+  },
+  "4416a9b767d6c9a4398fdfc98b567c97570013fc8523ea5c67bc28c9997b7f10": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/images/bracket.png",
+    "originalName": "bracket.png",
+    "size": 788,
+    "ext": ".png",
+    "width": 14,
+    "height": 37
+  },
+  "e6455bb1f0b0645128236be1f5bf65885d53a32aa14b901fc0716a7b8b87c360": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/images/bracket-r.png",
+    "originalName": "bracket-r.png",
+    "size": 3445,
+    "ext": ".png",
+    "width": 14,
+    "height": 37
+  },
+  "31dfb9373af8e4636b6c7a1cff2f5c1f099b05f8a5a5cca4522eb2e1d3e53dc7": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/images/plan_bg.png",
+    "originalName": "plan_bg.png",
+    "size": 2392712,
+    "ext": ".png",
+    "width": 7684,
+    "height": 3852
+  },
+  "ce5c2d7281fa23ec4db5b62cce57bf935a89fa30ddacde3e7941d237534dabc9": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Sweetch-mobile-2-1.png",
+    "originalName": "Sweetch-mobile-2-1.png",
+    "size": 10563,
+    "ext": ".png",
+    "width": 350,
+    "height": 270
+  },
+  "5b9b7902d874e6dd612dd3e19ac5c5f95bf326da70ce996e5c3b9861361e63c8": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Tadiran-mobile-1.png",
+    "originalName": "Tadiran-mobile-1.png",
+    "size": 13174,
+    "ext": ".png",
+    "width": 350,
+    "height": 270
+  },
+  "a17c2c5ac7a774781c0b39f5899910dcdf8f4178091fb0b2d16351bf8c719b9a": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Sweetch-image-desktop-1.png",
+    "originalName": "Sweetch-image-desktop-1.png",
+    "size": 70469,
+    "ext": ".png",
+    "width": 1000,
+    "height": 980
+  },
+  "3a87e96c8d7db9ad29cc42baee9c4b6d6097e5c85b9023d49c69923da4870ca1": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Tadiran-1.png",
+    "originalName": "Tadiran-1.png",
+    "size": 3578,
+    "ext": ".png",
+    "width": 272,
+    "height": 71
+  },
+  "3603f7988c41b21bb25db4b213c1e06369acea411eb839639d9a8872b36724ac": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Tadiran.png",
+    "originalName": "Tadiran.png",
+    "size": 89130,
+    "ext": ".png",
+    "width": 990,
+    "height": 764
+  },
+  "a079782c2a4ccc39b95348c71c7f2e900bd95fe3e983ef30aa2c3b2d3eaa2b21": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Sweetch-min.png",
+    "originalName": "Sweetch-min.png",
+    "size": 5219,
+    "ext": ".png",
+    "width": 239,
+    "height": 79
+  },
+  "9966860b3ca62a09f89bf194453e6ccce4ccf8bed3c2cb17d32ee8e72e28625d": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/melingo-mobile-1.png",
+    "originalName": "melingo-mobile-1.png",
+    "size": 13410,
+    "ext": ".png",
+    "width": 350,
+    "height": 270
+  },
+  "4791fd907beb8c49e7df972d8cb48c245908d24348f95aa80022fb5c103330d8": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/melingo-desktop-1.png",
+    "originalName": "melingo-desktop-1.png",
+    "size": 78142,
+    "ext": ".png",
+    "width": 1000,
+    "height": 980
+  },
+  "dd604b51af44e7e4a4c3f2fb882c921e4412b0eeb375aee5ee7f5e252d1d54d2": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/melingo-min.png",
+    "originalName": "melingo-min.png",
+    "size": 5259,
+    "ext": ".png",
+    "width": 208,
+    "height": 100
+  },
+  "e6bc8285d1fd83a748c6c04546e15ea1dc3471d7db19338f9ace0f23aa53cedb": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Passport-card-desktop-1-1.png",
+    "originalName": "Passport-card-desktop-1-1.png",
+    "size": 39839,
+    "ext": ".png",
+    "width": 1000,
+    "height": 980
+  },
+  "0255950700096f8a3da97c69c9af86d59c67035f830c2503e64f91915409288c": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Passport-card-mobile-1.png",
+    "originalName": "Passport-card-mobile-1.png",
+    "size": 6549,
+    "ext": ".png",
+    "width": 350,
+    "height": 270
+  },
+  "3eba90103f3869e0c1c015e369d2950744f06f2d408ee963a245e8a23edd4ec5": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Passport-card-1.png",
+    "originalName": "Passport-card-1.png",
+    "size": 5457,
+    "ext": ".png",
+    "width": 257,
+    "height": 76
+  },
+  "47b3037633161cdcbf35b04cbf89d6afbd195c5ab726eef5ce34759c66dc2c34": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Hot-desktop.png",
+    "originalName": "Hot-desktop.png",
+    "size": 57359,
+    "ext": ".png",
+    "width": 1000,
+    "height": 980
+  },
+  "19bb28e6601011d8e19e2ed3e14b5ce836a7b406627f61a7b102fb75fef6fa4e": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Hot-mobile.png",
+    "originalName": "Hot-mobile.png",
+    "size": 9424,
+    "ext": ".png",
+    "width": 350,
+    "height": 270
+  },
+  "31d16f654af930c5a074dbe5cee3ba7cfb05d34bf0bccc4244622cb9d162eabf": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/image-857.png",
+    "originalName": "image-857.png",
+    "size": 7412,
+    "ext": ".png",
+    "width": 292,
+    "height": 198
+  },
+  "328d631135522fd2f77b8d9fae85258c1c50bd417bbd31e0dd252ca34f37640b": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Ichilov-image-desktop.png",
+    "originalName": "Ichilov-image-desktop.png",
+    "size": 82896,
+    "ext": ".png",
+    "width": 1000,
+    "height": 980
+  },
+  "c23d4190f9ba3b0a02c7b90a2461948194686a3c4734fb8d6e139e666f81d61f": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Ichilov-mobile.png",
+    "originalName": "Ichilov-mobile.png",
+    "size": 20087,
+    "ext": ".png",
+    "width": 350,
+    "height": 270
+  },
+  "6b1b4f16c728db4bb638424d58b2a3cb1bf03b1c881924ec30b22cec1938f6d7": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/image-740-e1747734643708.png",
+    "originalName": "image-740-e1747734643708.png",
+    "size": 60145,
+    "ext": ".png",
+    "width": 386,
+    "height": 122
+  },
+  "86410b9e83ae715f2f603dacaf32354b3b3e1d50a1b1313944cd78bcb8e9b0dd": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Sweetch-mobile-1.png",
+    "originalName": "Sweetch-mobile-1.png",
+    "size": 12938,
+    "ext": ".png",
+    "width": 350,
+    "height": 270
+  },
+  "72d1fb219b93f978a2f858bafac9ebfd089330f9c19c33756c41de38d23b63a2": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/image-856.png",
+    "originalName": "image-856.png",
+    "size": 12842,
+    "ext": ".png",
+    "width": 552,
+    "height": 178
+  },
+  "079af688b2d3e64c4236994987282ddc7459e0f3280f818cb0125fc62eb2ed2b": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Edwards-image-desktop.png",
+    "originalName": "Edwards-image-desktop.png",
+    "size": 87722,
+    "ext": ".png",
+    "width": 1000,
+    "height": 980
+  },
+  "6df5bb07760c9a4f728ceab2c65aa218b557c5594b995928d646a6991c76bd0f": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Edwards-mobile.png",
+    "originalName": "Edwards-mobile.png",
+    "size": 16466,
+    "ext": ".png",
+    "width": 350,
+    "height": 270
+  },
+  "2921e399e8123b6bf5a4e5fc11b86a378b42093af03a5975ea532dea44183a2c": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/image-743-e1747734857626.png",
+    "originalName": "image-743-e1747734857626.png",
+    "size": 10656,
+    "ext": ".png",
+    "width": 347,
+    "height": 123
+  },
+  "88fab3522cbecb04f0a25207460f47aecd19026fc81586bb28b045facaf3bb7d": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Elastimed-mobile.png",
+    "originalName": "Elastimed-mobile.png",
+    "size": 15248,
+    "ext": ".png",
+    "width": 350,
+    "height": 270
+  },
+  "9be374bbdf2d3068d66743ba26c054719838f062d2991a4e9dabe5aa4c2a196d": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Elasitmed-image-desktop.png",
+    "originalName": "Elasitmed-image-desktop.png",
+    "size": 110164,
+    "ext": ".png",
+    "width": 1000,
+    "height": 980
+  },
+  "5a07635b51760918813125db6c707cca580b9889775b7ea6d23df4ac5a3b8487": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/Left-section-e1747734894379.png",
+    "originalName": "Left-section-e1747734894379.png",
+    "size": 9273,
+    "ext": ".png",
+    "width": 289,
+    "height": 64
+  },
+  "6d600380b4028fcdbc4822448d6b91fd7efa166701f2cec52fe65332a5608dd9": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/image-744-e1747734924717.png",
+    "originalName": "image-744-e1747734924717.png",
+    "size": 8884,
+    "ext": ".png",
+    "width": 293,
+    "height": 128
+  },
+  "945674c1bc94c8dd82f6a1b36463d67e9df173f6404ecf64301e828d9ec09816": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Twist-mobile.png",
+    "originalName": "Twist-mobile.png",
+    "size": 13949,
+    "ext": ".png",
+    "width": 350,
+    "height": 270
+  },
+  "e2167028b7c5c9534f811b22dd776b6e4a436926c8b34f30b54670b2f52320bb": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Digitalowl-image-desktop.png",
+    "originalName": "Digitalowl-image-desktop.png",
+    "size": 110689,
+    "ext": ".png",
+    "width": 1000,
+    "height": 980
+  },
+  "3c2013c7f40f58988bc47ebf2a441a24b1caa5e33b9da4716db7e46a795d6973": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Twist-image-desktop.png",
+    "originalName": "Twist-image-desktop.png",
+    "size": 115007,
+    "ext": ".png",
+    "width": 1000,
+    "height": 980
+  },
+  "c38f72d8fbd62388c1a5bfe1ad686016304024bc1e6c21c21c655f7396a51a5d": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Digitalowl-mobile.png",
+    "originalName": "Digitalowl-mobile.png",
+    "size": 15640,
+    "ext": ".png",
+    "width": 350,
+    "height": 270
+  },
+  "84de263dfa417257cec9a98be41ff75683552784ff54029bddc38c6a94269570": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/Group-1261158763.png",
+    "originalName": "Group-1261158763.png",
+    "size": 20796,
+    "ext": ".png",
+    "width": 307,
+    "height": 60
+  },
+  "6c6352882ee124fc17b0b3de7215f2c54f0d7f6cddf2c4df401034996a461481": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Soroka-image-desktop.png",
+    "originalName": "Soroka-image-desktop.png",
+    "size": 52684,
+    "ext": ".png",
+    "width": 1000,
+    "height": 980
+  },
+  "0e8caa37c6a4430d640aad2c88748e0293a12d1e6e05a14e71097899f2180b2a": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Sweetch-desktop.png",
+    "originalName": "Sweetch-desktop.png",
+    "size": 80957,
+    "ext": ".png",
+    "width": 1000,
+    "height": 980
+  },
+  "793bd8ca44ae7ff43b2f019a9d246a4da671221b665e0a32dd60389721763308": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Soroka-mobile.png",
+    "originalName": "Soroka-mobile.png",
+    "size": 8466,
+    "ext": ".png",
+    "width": 350,
+    "height": 270
+  },
+  "d6b30b68b981e01e08a1b99275a22e2ef268c44a782dcb0bb68c67eeefff54e1": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/image-750.png",
+    "originalName": "image-750.png",
+    "size": 48474,
+    "ext": ".png",
+    "width": 408,
+    "height": 127
+  },
+  "585ae85bcf51b033ec1a6f117d232f4bc9ef2d213495db8b9d7bd4937edc1ecb": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Playtika-mobile.png",
+    "originalName": "Playtika-mobile.png",
+    "size": 10392,
+    "ext": ".png",
+    "width": 350,
+    "height": 270
+  },
+  "73be6cfd193a548171c439dbec2b7e226c83231f6814a53ddad32275e9c14a4e": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Playtika-desktop.png",
+    "originalName": "Playtika-desktop.png",
+    "size": 68301,
+    "ext": ".png",
+    "width": 1000,
+    "height": 980
+  },
+  "c0752cfa2fbe064c707a0b2b243453c119c0035e0a7272ec6d03ee5f09469591": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/image-e1747836179475.png",
+    "originalName": "image-e1747836179475.png",
+    "size": 6689,
+    "ext": ".png",
+    "width": 244,
+    "height": 86
+  },
+  "5e0403c2de907ebb9f06c0fcc504202db0f935828932bd5982f7d5c2e3e9025e": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Eternal-overwolf-desktop.png",
+    "originalName": "Eternal-overwolf-desktop.png",
+    "size": 230765,
+    "ext": ".png",
+    "width": 1000,
+    "height": 980
+  },
+  "b2734c45b992ff82e1b72679f76dbea5324070c543fcaff882289c861d3de255": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Eternal-overwolf-mobile.png",
+    "originalName": "Eternal-overwolf-mobile.png",
+    "size": 29050,
+    "ext": ".png",
+    "width": 350,
+    "height": 270
+  },
+  "52f86b9edf9753f2d17b036060204544dc426409c89c9129badcfff14ef70fd0": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/image-1-e1747837261695.png",
+    "originalName": "image-1-e1747837261695.png",
+    "size": 4656,
+    "ext": ".png",
+    "width": 291,
+    "height": 67
+  },
+  "afc95ac22778975a4a56da46339ce7073245dea7a25a356fafb8dd2eb616d935": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/spring-game-mobile-1.png",
+    "originalName": "spring-game-mobile-1.png",
+    "size": 15469,
+    "ext": ".png",
+    "width": 350,
+    "height": 270
+  },
+  "9e307b0966ea91c4fd22abb68021ec61474657478020c918bcde910494f7b9ce": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/spring-game-desktop-1.png",
+    "originalName": "spring-game-desktop-1.png",
+    "size": 104040,
+    "ext": ".png",
+    "width": 1000,
+    "height": 980
+  },
+  "38f45cc59d7feaaec63593369434419f0190d02f1c6283006162aa49b02fbb56": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/spring-games-min.png",
+    "originalName": "spring-games-min.png",
+    "size": 8535,
+    "ext": ".png",
+    "width": 191,
+    "height": 93
+  },
+  "551861be0fef768d2704070802716605ed93ab3593643744657eab09d88f270f": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Cha-game-sdesktop.png",
+    "originalName": "Cha-game-sdesktop.png",
+    "size": 127647,
+    "ext": ".png",
+    "width": 1000,
+    "height": 980
+  },
+  "174193ae776a89ce387d10ee8c72095b37bc5ea294714d8a2f8d799cb928f221": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/cha-games-mobile.png",
+    "originalName": "cha-games-mobile.png",
+    "size": 18126,
+    "ext": ".png",
+    "width": 350,
+    "height": 270
+  },
+  "645aa58362c79c1e1cc8f7bd9f5ec7d108a41d8a435a4dcaed18439d184e4369": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/image-737-1-e1747836501856.png",
+    "originalName": "image-737-1-e1747836501856.png",
+    "size": 13271,
+    "ext": ".png",
+    "width": 109,
+    "height": 104
+  },
+  "2f388274db394abab2cfce99669c323e5b94eedaaf0402a5af828128e59d1bf6": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/my-town-desktop.png",
+    "originalName": "my-town-desktop.png",
+    "size": 105357,
+    "ext": ".png",
+    "width": 1000,
+    "height": 980
+  },
+  "b2a0c91ef2e55f6089849c59283a7c36ce7e194268d6869bf178db4e026e10e9": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/my-town-mobile.png",
+    "originalName": "my-town-mobile.png",
+    "size": 19047,
+    "ext": ".png",
+    "width": 350,
+    "height": 270
+  },
+  "ad56f59f14f1df67df745c2f9ed5e708af509c49b0886c1558a616c9521c7559": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/image-738-e1747836523634.png",
+    "originalName": "image-738-e1747836523634.png",
+    "size": 20035,
+    "ext": ".png",
+    "width": 169,
+    "height": 114
+  },
+  "ed6d3b5b52493c60e6a15770e93aeb6b5f5fecc0f23b2964ac3a118d96facc30": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/BabyTV-desktop.png",
+    "originalName": "BabyTV-desktop.png",
+    "size": 110358,
+    "ext": ".png",
+    "width": 1000,
+    "height": 980
+  },
+  "8844980be1050d83dc073ad70a722f5fb055483a6bd9b24879de6d59cb7f90a1": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/BabyTV-mobile.png",
+    "originalName": "BabyTV-mobile.png",
+    "size": 16885,
+    "ext": ".png",
+    "width": 350,
+    "height": 270
+  },
+  "9c73e80c3f723a4b59f478830901f6052ffed23bbe8702e2f4699595aab119fb": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/Frame-2147223744-e1747836676565.png",
+    "originalName": "Frame-2147223744-e1747836676565.png",
+    "size": 16544,
+    "ext": ".png",
+    "width": 389,
+    "height": 80
+  },
+  "5676eada4e2b05652dfdbb258e0b23d2aece8c68421f3372cd554ce31a152ba0": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Aspire-global-desktop.png",
+    "originalName": "Aspire-global-desktop.png",
+    "size": 96169,
+    "ext": ".png",
+    "width": 1000,
+    "height": 980
+  },
+  "c83365f40ce9853eeece80ecdff9ebaa3f31b6762b14f872addef1ba10bc10e1": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/aspire-golobal-mobile.png",
+    "originalName": "aspire-golobal-mobile.png",
+    "size": 15989,
+    "ext": ".png",
+    "width": 350,
+    "height": 270
+  },
+  "8b7e493974b6bbe08ffcc90b7f2eb4506b01b3fdf834bc12bde9730875ea2987": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/survivor-mobile.png",
+    "originalName": "survivor-mobile.png",
+    "size": 23282,
+    "ext": ".png",
+    "width": 350,
+    "height": 270
+  },
+  "ebe0736db3a1a54cee1211ecbed83a9d2eb7fb3ee352a90a1e4cd42c2b6d992e": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/Frame-2147223744-1.png",
+    "originalName": "Frame-2147223744-1.png",
+    "size": 19144,
+    "ext": ".png",
+    "width": 360,
+    "height": 90
+  },
+  "76694181aaaba0d122bba8296a505d13cdd8b06c92f8fa41942e885e27d540c2": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Survivor-desktop.png",
+    "originalName": "Survivor-desktop.png",
+    "size": 154137,
+    "ext": ".png",
+    "width": 1000,
+    "height": 980
+  },
+  "68485401348096190117a544fe92a48cc0f41cc6d4b1543ed972e56fef0a5051": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Group-1410103797.png",
+    "originalName": "Group-1410103797.png",
+    "size": 24381,
+    "ext": ".png",
+    "width": 755,
+    "height": 96
+  },
+  "f28eb91156b05d6a2c07e39b59aabde2c532639a8fab0243473bf3daa4731b30": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Frame-2147224063-1.png",
+    "originalName": "Frame-2147224063-1.png",
+    "size": 154733,
+    "ext": ".png",
+    "width": 1000,
+    "height": 980
+  },
+  "d27b246907c88a7b550f9ae9337272ab32327ca5128869ddfc024a881be5d2a3": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/supplant-min.png",
+    "originalName": "supplant-min.png",
+    "size": 6176,
+    "ext": ".png",
+    "width": 229,
+    "height": 72
+  },
+  "895e372ffdf12bf5d9a6c4462234283a87d67db57ef0f97d4dace8e02935e021": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Frame-2147224067-3.png",
+    "originalName": "Frame-2147224067-3.png",
+    "size": 27598,
+    "ext": ".png",
+    "width": 351,
+    "height": 270
+  },
+  "6764bb9d8c3feaccf73daa59809f7fbc09b10614388e25a1a312627b8fe6ff4b": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Frame-2147224064-1.png",
+    "originalName": "Frame-2147224064-1.png",
+    "size": 114232,
+    "ext": ".png",
+    "width": 880,
+    "height": 980
+  },
+  "5c88b9f09702b5f8834b07f379b743e73ee26720a60c7e8e76c348d429b5a3f8": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Frame-2147224068.png",
+    "originalName": "Frame-2147224068.png",
+    "size": 14061,
+    "ext": ".png",
+    "width": 351,
+    "height": 270
+  },
+  "fd2abf6d6e371c587941a75082fa7d930cf2218bc32ec3a4b611bfc2a3626401": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/rivulis-min.png",
+    "originalName": "rivulis-min.png",
+    "size": 3707,
+    "ext": ".png",
+    "width": 215,
+    "height": 72
+  },
+  "a1737a5acc4800e21dbdf6c01dabea64b9f7f467225df014a7d5a6c3f32e976d": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Frame-2147224065-1.png",
+    "originalName": "Frame-2147224065-1.png",
+    "size": 109034,
+    "ext": ".png",
+    "width": 1000,
+    "height": 980
+  },
+  "e5823e598c3de2521bd649ca422f8e161eaa41fced3b15945444a9eab13b52fd": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Frame-2147224069.png",
+    "originalName": "Frame-2147224069.png",
+    "size": 20787,
+    "ext": ".png",
+    "width": 351,
+    "height": 270
+  },
+  "d8e9142af2f9280a0e8e4ab52cbfe5889fc6d779cc832aa30a7382116cfd105d": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/beewise-min.png",
+    "originalName": "beewise-min.png",
+    "size": 5117,
+    "ext": ".png",
+    "width": 258,
+    "height": 82
+  },
+  "53bd3bb63e845c06e608c083407975681bae902f3e9ff50cd6911acbaf86e44e": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Frame-2147224066-1.png",
+    "originalName": "Frame-2147224066-1.png",
+    "size": 110918,
+    "ext": ".png",
+    "width": 1000,
+    "height": 980
+  },
+  "80a8c16bb9a91f7adf9be97f41e960365c292520c11ab0fb2540c097ba73ca3f": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Frame-2147224065-2.png",
+    "originalName": "Frame-2147224065-2.png",
+    "size": 22340,
+    "ext": ".png",
+    "width": 351,
+    "height": 270
+  },
+  "8f53ce31c7b7d7809cdec9959a97f16ea8e7b786450c6b9160d7028529e1207d": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/solar-edge-min.png",
+    "originalName": "solar-edge-min.png",
+    "size": 4287,
+    "ext": ".png",
+    "width": 252,
+    "height": 51
+  },
+  "1f815d009a9b4d2fea35b02128670abd1dff84064cae5149a259c4a3b8da4b2a": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Frame-2147224067-2.png",
+    "originalName": "Frame-2147224067-2.png",
+    "size": 213631,
+    "ext": ".png",
+    "width": 1000,
+    "height": 980
+  },
+  "a3436974213fc46ee37b74e24d29d2378b364b1b1a823807f745d6a535e68396": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Frame-2147224066-2.png",
+    "originalName": "Frame-2147224066-2.png",
+    "size": 26337,
+    "ext": ".png",
+    "width": 351,
+    "height": 270
+  },
+  "8d0b89da9b34412c3b211beba52be11b8de694da621e4431605fe424c5e60232": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/bermad-min.png",
+    "originalName": "bermad-min.png",
+    "size": 5238,
+    "ext": ".png",
+    "width": 248,
+    "height": 68
+  },
+  "c8950be2dd8c06a281720137a02101123d5d81e5498cc24d3330f963be4a1dd3": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/Frame-2147224235-836x432.png",
+    "originalName": "Frame-2147224235-836x432.png",
+    "size": 153889,
+    "ext": ".png",
+    "width": 836,
+    "height": 432
+  },
+  "4a14b60e0695f62f1d3b101c3d2f24114a5ed664fd5183051825b230008d0e62": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/Frame-2147224235-539x329.png",
+    "originalName": "Frame-2147224235-539x329.png",
+    "size": 87866,
+    "ext": ".png",
+    "width": 539,
+    "height": 329
+  },
+  "00b5a2dc3eedc67160d704bc831a79254583fc592da3f5505c6743fec87849b9": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Frame-2147224231-836x432.png",
+    "originalName": "Frame-2147224231-836x432.png",
+    "size": 82300,
+    "ext": ".png",
+    "width": 836,
+    "height": 432
+  },
+  "7eeed8168460e572360c21da5692c43721206168fdd26cdee9e36cff9a45a528": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Frame-2147224231-539x329.png",
+    "originalName": "Frame-2147224231-539x329.png",
+    "size": 43510,
+    "ext": ".png",
+    "width": 539,
+    "height": 329
+  },
+  "02855282ed6b83633d7f3218ed777f8aa262e594e9e1da409f4767425ec32903": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/07/Frame-2147224241-539x329.png",
+    "originalName": "Frame-2147224241-539x329.png",
+    "size": 331563,
+    "ext": ".png",
+    "width": 539,
+    "height": 329
+  },
+  "9da7348820b9b8f5b2c8cb3086946717c55874676d75ea51b84f3b7f89f93ed5": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/07/Frame-2147224242-539x329.png",
+    "originalName": "Frame-2147224242-539x329.png",
+    "size": 119338,
+    "ext": ".png",
+    "width": 539,
+    "height": 329
+  },
+  "8658cfb1bdc37213b5e81696bb01c391195fcac62950def38f3aa933bbabfa2e": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Frame-2147224216-539x329.png",
+    "originalName": "Frame-2147224216-539x329.png",
+    "size": 55649,
+    "ext": ".png",
+    "width": 539,
+    "height": 329
+  },
+  "4b9ec4c1b84c1d33eb3b9f4b604123533dd415190ae19865a6c7c9b1c3b3a151": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/07/Frame-2147224249-539x329.png",
+    "originalName": "Frame-2147224249-539x329.png",
+    "size": 207499,
+    "ext": ".png",
+    "width": 539,
+    "height": 329
+  },
+  "2a80b87bb0cdd67aa5293d00c87e558d096c27bec057c423ac2dfd938c2d7a10": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Frame-2147224204-539x329.png",
+    "originalName": "Frame-2147224204-539x329.png",
+    "size": 12684,
+    "ext": ".png",
+    "width": 539,
+    "height": 329
+  },
+  "c710cc265abbae0dd5aa2a25c90a895bebeec6a5d94ff222b8a3ea4a6025ee61": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Frame-2147224218-539x329.png",
+    "originalName": "Frame-2147224218-539x329.png",
+    "size": 99482,
+    "ext": ".png",
+    "width": 539,
+    "height": 329
+  },
+  "259947ad370123d2c089fdc76b824c1a5aa5425523273288e8ae157da48ee400": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/07/Frame-2147224250-539x329.png",
+    "originalName": "Frame-2147224250-539x329.png",
+    "size": 94069,
+    "ext": ".png",
+    "width": 539,
+    "height": 329
+  },
+  "50098ffe5fef5b59e60e7f25aa7632978c78f2fa3e68622eab57b69f51d32708": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Frame-2147224226-539x329.png",
+    "originalName": "Frame-2147224226-539x329.png",
+    "size": 97418,
+    "ext": ".png",
+    "width": 539,
+    "height": 329
+  },
+  "31eecad12319dbeb5d87e82ad960c581abf35263a4c2d8ca639905e017f1358e": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/07/Frame-2147224243-539x329.png",
+    "originalName": "Frame-2147224243-539x329.png",
+    "size": 140136,
+    "ext": ".png",
+    "width": 539,
+    "height": 329
+  },
+  "f07d7693649b96c7748bd1c78330018ce09b7617aee77a1a300cfc79ff08eb32": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Frame-2147224201-539x329.png",
+    "originalName": "Frame-2147224201-539x329.png",
+    "size": 64771,
+    "ext": ".png",
+    "width": 539,
+    "height": 329
+  },
+  "3841e9a305075188602c89c5f2ea844d015fd2a825b5efe9940805a0663a840a": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/07/Frame-2147224251-539x329.png",
+    "originalName": "Frame-2147224251-539x329.png",
+    "size": 100455,
+    "ext": ".png",
+    "width": 539,
+    "height": 329
+  },
+  "afa79f4556266a99a444f5c4bf3a3c2329fff1c522176fb0148ef4ed718f8a99": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Frame-2147224214-539x329.png",
+    "originalName": "Frame-2147224214-539x329.png",
+    "size": 117531,
+    "ext": ".png",
+    "width": 539,
+    "height": 329
+  },
+  "0adfa25ca7faccbcb01d6c6fd3462ed92799659f9503aa59aff3ec21328d533b": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Frame-2147224227-539x329.png",
+    "originalName": "Frame-2147224227-539x329.png",
+    "size": 25751,
+    "ext": ".png",
+    "width": 539,
+    "height": 329
+  },
+  "55f41ca8b27b7d18aeaa7ed9b25e331227ced186fa30d56b33b4fc0ace1da01e": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Frame-2147224203-539x329.png",
+    "originalName": "Frame-2147224203-539x329.png",
+    "size": 52204,
+    "ext": ".png",
+    "width": 539,
+    "height": 329
+  },
+  "e5fbc63edf5291dca3cb6290fad476ec6aa6c98808ad9910cecd9dd0c2790e65": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Frame-2147224225-539x329.png",
+    "originalName": "Frame-2147224225-539x329.png",
+    "size": 21050,
+    "ext": ".png",
+    "width": 539,
+    "height": 329
+  },
+  "b749e98a7e151b8a2b96bca451cd2c8e36b64b2b9c7e718052f3bde2eaa2f3d7": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Frame-2147224233-539x329.png",
+    "originalName": "Frame-2147224233-539x329.png",
+    "size": 22006,
+    "ext": ".png",
+    "width": 539,
+    "height": 329
+  },
+  "d762f6dfb6e285385bb4c9724908d51b36db8ff653de341fbf435516c7a2ba2d": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/07/Frame-2147224239-539x329.png",
+    "originalName": "Frame-2147224239-539x329.png",
+    "size": 110731,
+    "ext": ".png",
+    "width": 539,
+    "height": 329
+  },
+  "56b22e1b200769482073df1b676dcea761e7e74154a71ee323e70c194999e240": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/07/Frame-2147224246-539x329.png",
+    "originalName": "Frame-2147224246-539x329.png",
+    "size": 268084,
+    "ext": ".png",
+    "width": 539,
+    "height": 329
+  },
+  "97cbd01f236011b5e18d0e2358f981a321814c0bb006022e71f8a6a408ff00d5": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/07/Frame-2147224247-539x329.png",
+    "originalName": "Frame-2147224247-539x329.png",
+    "size": 184428,
+    "ext": ".png",
+    "width": 539,
+    "height": 329
+  },
+  "e5211b115fe0ba7764ac569d5e3e9e4cca1875b332695e4522b32fe8c292f21b": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/07/Frame-2147224238-539x329.png",
+    "originalName": "Frame-2147224238-539x329.png",
+    "size": 62876,
+    "ext": ".png",
+    "width": 539,
+    "height": 329
+  },
+  "91225c3585ead1518da335b7e74ae45948948ee7fba3a2b4806e28c137b57e83": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/07/Frame-2147224253-539x329.png",
+    "originalName": "Frame-2147224253-539x329.png",
+    "size": 314795,
+    "ext": ".png",
+    "width": 539,
+    "height": 329
+  },
+  "5779295c6dc567eb09f5bcda16cb5c3a044f0f1856402e75d1e7b595ec85a0fd": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/07/Frame-2147224254-539x329.png",
+    "originalName": "Frame-2147224254-539x329.png",
+    "size": 166448,
+    "ext": ".png",
+    "width": 539,
+    "height": 329
+  },
+  "a63ce715035b759e682ad2b6b03978f9fc66571f20bb748a26225281be52e29b": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/07/Frame-2147224245-539x329.png",
+    "originalName": "Frame-2147224245-539x329.png",
+    "size": 276531,
+    "ext": ".png",
+    "width": 539,
+    "height": 329
+  },
+  "a96f0aedb6dd156480f5b3918bcf9a4bd91c0dd3e3e35ba86811481dfb96a842": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/07/Frame-2147224244-539x329.png",
+    "originalName": "Frame-2147224244-539x329.png",
+    "size": 170370,
+    "ext": ".png",
+    "width": 539,
+    "height": 329
+  },
+  "ab787efd32ce71bdda07449f55bf4401ba4ef45db59da6b9ff2e0d3fe3daacf3": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/07/Frame-2147224252-539x329.png",
+    "originalName": "Frame-2147224252-539x329.png",
+    "size": 257216,
+    "ext": ".png",
+    "width": 539,
+    "height": 329
+  },
+  "7987c3ebe92e6c0e807a03ceaa2c48d8931ff6f9c1f444e5a9b4718b32695dcf": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Frame-2147224206-539x329.png",
+    "originalName": "Frame-2147224206-539x329.png",
+    "size": 15028,
+    "ext": ".png",
+    "width": 539,
+    "height": 329
+  },
+  "13992ee237050ab238628e4cede8ff0eb2934297bd995d10b8ce410c68a81348": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Frame-2147224212-539x329.png",
+    "originalName": "Frame-2147224212-539x329.png",
+    "size": 21959,
+    "ext": ".png",
+    "width": 539,
+    "height": 329
+  },
+  "f4a6d8ce22693bd82cb6384bd5d6d07507075bcfed517fa49b90b1139aedd46b": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/Frame-2147224211222-539x329.png",
+    "originalName": "Frame-2147224211222-539x329.png",
+    "size": 92195,
+    "ext": ".png",
+    "width": 539,
+    "height": 329
+  },
+  "d19e64e36afe1a15487e3b00927bf8c5d83df25b9631c73f8a385710af682eb6": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Frame-2147224221-539x329.png",
+    "originalName": "Frame-2147224221-539x329.png",
+    "size": 68337,
+    "ext": ".png",
+    "width": 539,
+    "height": 329
+  },
+  "44e3518c2760aa61000569d94bd15a28b4408886582adf4c1174be846c849a1e": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Frame-2147224223-539x329.png",
+    "originalName": "Frame-2147224223-539x329.png",
+    "size": 108207,
+    "ext": ".png",
+    "width": 539,
+    "height": 329
+  },
+  "489c7e2e38c1b1f02f9ab605c250c79761d73fe8a0c8c9a11ad2929947404785": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Frame-2147224232-539x329.png",
+    "originalName": "Frame-2147224232-539x329.png",
+    "size": 53660,
+    "ext": ".png",
+    "width": 539,
+    "height": 329
+  },
+  "2f1a2aef5d4c15b144f2b48e29200eac8ee1b8b08427fa82a851178e69379a3c": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Frame-2147224208.png",
+    "originalName": "Frame-2147224208.png",
+    "size": 270382,
+    "ext": ".png",
+    "width": 1278,
+    "height": 660
+  },
+  "23c8aecd3f86da25b3969b3cc053aa8b6b7fd335a8482d554d307aa7f74ca6c9": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Frame-2147224215-539x329.png",
+    "originalName": "Frame-2147224215-539x329.png",
+    "size": 73961,
+    "ext": ".png",
+    "width": 539,
+    "height": 329
+  },
+  "0c18493a595afc810a583a94d57a679b9bdcecf57a1104b08d5847947faad0d9": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Frame-2147224202-539x329.png",
+    "originalName": "Frame-2147224202-539x329.png",
+    "size": 97615,
+    "ext": ".png",
+    "width": 539,
+    "height": 329
+  },
+  "4ca050134a039b1503706c3e53979f5915d0e0147b90ecf33cc4d03dadcff5c3": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Frame-2147224217-539x329.png",
+    "originalName": "Frame-2147224217-539x329.png",
+    "size": 119470,
+    "ext": ".png",
+    "width": 539,
+    "height": 329
+  },
+  "8695a4f6536e1163ecbe572a31cce1ca9a522c2011a9f179d6607204be87b0c1": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Frame-2147224209-539x329.png",
+    "originalName": "Frame-2147224209-539x329.png",
+    "size": 33288,
+    "ext": ".png",
+    "width": 539,
+    "height": 329
+  },
+  "3fd7d10a1de8f681600919d295407a33ee577b95b7423313a01e4172e3cb4b2d": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Frame-2147224210-539x329.png",
+    "originalName": "Frame-2147224210-539x329.png",
+    "size": 14390,
+    "ext": ".png",
+    "width": 539,
+    "height": 329
+  },
+  "ac01727915d52d980a0bd05f04a08bfea424edffa3b29acaad7479bce1ee21e4": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Frame-2147224211-539x329.png",
+    "originalName": "Frame-2147224211-539x329.png",
+    "size": 83859,
+    "ext": ".png",
+    "width": 539,
+    "height": 329
+  },
+  "823f1851c09e76d778ea954aaa939ef93209ebd5622e371d39cd73cab6299de0": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Frame-2147224228-539x329.png",
+    "originalName": "Frame-2147224228-539x329.png",
+    "size": 91561,
+    "ext": ".png",
+    "width": 539,
+    "height": 329
+  },
+  "988d57e518e5f6f6114ef2e3e09744770ef5fd04c170eb88ce9f30a3dca224ef": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Frame-2147224205-539x329.png",
+    "originalName": "Frame-2147224205-539x329.png",
+    "size": 127222,
+    "ext": ".png",
+    "width": 539,
+    "height": 329
+  },
+  "a8b825b2a2abc581e0ebba32fd03200f66b23c2a20368a0cac1f91d24d758067": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Frame-2147224229-539x329.png",
+    "originalName": "Frame-2147224229-539x329.png",
+    "size": 109766,
+    "ext": ".png",
+    "width": 539,
+    "height": 329
+  },
+  "fe62c480572d863464e6eb8177348bf6ee8aec7f1a35ac610c4ec0412de96142": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Frame-2147224234-539x329.png",
+    "originalName": "Frame-2147224234-539x329.png",
+    "size": 32027,
+    "ext": ".png",
+    "width": 539,
+    "height": 329
+  },
+  "654420edcf6442063d91e93d94b5dbf6a25cb435ba7a12ca679ce9b7a09077c1": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/RADIO-539x329.png",
+    "originalName": "RADIO-539x329.png",
+    "size": 46151,
+    "ext": ".png",
+    "width": 539,
+    "height": 329
+  },
+  "44f8e2dfae48a968d2cd4ab885c5b0e1484e3f780cf76727e4d104a8eacd85a7": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/Frame-213673-539x329.jpg",
+    "originalName": "Frame-213673-539x329.jpg",
+    "size": 23571,
+    "ext": ".jpg",
+    "width": 539,
+    "height": 329
+  },
+  "41101c07a3e858ad797ebd2013149cbfe165c49a4723f8f5f1bc24609a8792c6": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Frame-2147224213-539x329.png",
+    "originalName": "Frame-2147224213-539x329.png",
+    "size": 65700,
+    "ext": ".png",
+    "width": 539,
+    "height": 329
+  },
+  "34cc212d67bb348ab0c47fe39fab360ef5101f632a78e94b5fe1d4e3c7d097d3": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Frame-2147224207-539x329.png",
+    "originalName": "Frame-2147224207-539x329.png",
+    "size": 126504,
+    "ext": ".png",
+    "width": 539,
+    "height": 329
+  },
+  "f5142f1b46aa38ec419cb0f469d9da49daf67ee7b73d33b60fe986a56e1b49ba": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/07/Instagram-post-4.png",
+    "originalName": "Instagram-post-4.png",
+    "size": 2272020,
+    "ext": ".png",
+    "width": 3200,
+    "height": 1800
+  },
+  "4a756fdf85bf0edc8264d63ef1fd1c62078a15aef530f8dbeec45638cc561530": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/Frame-2147223673-2-1-539x329.jpg",
+    "originalName": "Frame-2147223673-2-1-539x329.jpg",
+    "size": 34780,
+    "ext": ".jpg",
+    "width": 539,
+    "height": 329
+  },
+  "372fd86ea40b9e84a6599d1f4334eb301324433e6541c6af1ed9a9dac4f03f83": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Frame-2147224220-539x329.png",
+    "originalName": "Frame-2147224220-539x329.png",
+    "size": 57867,
+    "ext": ".png",
+    "width": 539,
+    "height": 329
+  },
+  "2c0d3beaeb9fed4176537df2a779006ce49acd77222f98d26b3c59d9a2d5cc6f": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/Temp20-2-539x329.jpg",
+    "originalName": "Temp20-2-539x329.jpg",
+    "size": 39885,
+    "ext": ".jpg",
+    "width": 539,
+    "height": 329
+  },
+  "926a3701c6dee88443a01b924edbe1bec9b0cc7b80a9bf56cd26cc680254ea4d": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Frame-2147224219-539x329.png",
+    "originalName": "Frame-2147224219-539x329.png",
+    "size": 86242,
+    "ext": ".png",
+    "width": 539,
+    "height": 329
+  },
+  "8df10e5244b94b5c4e0dba72de09ff4b9df95c0b80b85864fd2b36a34c3666ad": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/Temp12-2-539x329.jpg",
+    "originalName": "Temp12-2-539x329.jpg",
+    "size": 35893,
+    "ext": ".jpg",
+    "width": 539,
+    "height": 329
+  },
+  "9017c28df0d283d43150d8911fe4cefd5ff59bae3ab84fd9ef7035b5e1693977": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/Temp11-2-539x329.jpg",
+    "originalName": "Temp11-2-539x329.jpg",
+    "size": 22124,
+    "ext": ".jpg",
+    "width": 539,
+    "height": 329
+  },
+  "e81fdb6bf44b85f8a610180dc9a7365412a3edb5eb10415bb572bfd9e459cde1": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/Temp9-2-539x329.jpg",
+    "originalName": "Temp9-2-539x329.jpg",
+    "size": 36746,
+    "ext": ".jpg",
+    "width": 539,
+    "height": 329
+  },
+  "8b717970fd7f28d889014063e87571ca88c51919e598acb83b964d5a67d6f792": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/Temp8-2-1-539x329.jpg",
+    "originalName": "Temp8-2-1-539x329.jpg",
+    "size": 29999,
+    "ext": ".jpg",
+    "width": 539,
+    "height": 329
+  },
+  "1d76b1f80e7fe438dfe28543b2811d382c2054649de6bd265f7f2801b2e6c545": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/Temp8-2-539x329.jpg",
+    "originalName": "Temp8-2-539x329.jpg",
+    "size": 47823,
+    "ext": ".jpg",
+    "width": 539,
+    "height": 329
+  },
+  "dd33128965710ad3b0fae78a78d2e0775410d080a59890b32414d500f142eb64": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/Temp7-539x329.jpg",
+    "originalName": "Temp7-539x329.jpg",
+    "size": 26889,
+    "ext": ".jpg",
+    "width": 539,
+    "height": 329
+  },
+  "29862961aaf40dc370e7b5ed4ea2e4a495cac80d8ad73bd5efff2a8414b1f38f": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/Temp6-539x329.jpg",
+    "originalName": "Temp6-539x329.jpg",
+    "size": 20913,
+    "ext": ".jpg",
+    "width": 539,
+    "height": 329
+  },
+  "ba440bfb35fbe9490401bd2360ff468571d383d9f98ff7f16c37b224482db361": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/Temp-2-2-539x329.jpg",
+    "originalName": "Temp-2-2-539x329.jpg",
+    "size": 19257,
+    "ext": ".jpg",
+    "width": 539,
+    "height": 329
+  },
+  "1062e858d306a82a15e16cac57b219ca9d5cd33ab93721f4427db66b26b9a162": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/Temp-2-1-539x329.jpg",
+    "originalName": "Temp-2-1-539x329.jpg",
+    "size": 29298,
+    "ext": ".jpg",
+    "width": 539,
+    "height": 329
+  },
+  "93ad0655ec17737528b04de418679921da88fd71be1fab6c97874a9f9cebf82a": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/Temp3-539x329.jpg",
+    "originalName": "Temp3-539x329.jpg",
+    "size": 19304,
+    "ext": ".jpg",
+    "width": 539,
+    "height": 329
+  },
+  "5e24ca51c897da0c1611ae75046657f0ea1ded9a2398943aed2240c55db0e03b": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/Temp2-2-539x329.jpg",
+    "originalName": "Temp2-2-539x329.jpg",
+    "size": 18598,
+    "ext": ".jpg",
+    "width": 539,
+    "height": 329
+  },
+  "baff42826cfa66456c991226a29006b5e5336eeac65d93427aa65761e571d0f3": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/Frame-2147223673-3-539x329.jpg",
+    "originalName": "Frame-2147223673-3-539x329.jpg",
+    "size": 13622,
+    "ext": ".jpg",
+    "width": 539,
+    "height": 329
+  },
+  "ebfbf2baecf27a9c23767df47d6fbcb5e085323b76ca2ece134c4f56f95aab23": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/Temp-2-539x329.jpg",
+    "originalName": "Temp-2-539x329.jpg",
+    "size": 45125,
+    "ext": ".jpg",
+    "width": 539,
+    "height": 329
+  },
+  "5a6a22a306fd8cc630dcf72b3c7e70ddb17cdf1ac44fe625ca600a3d893ed087": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/4-2-539x329.jpg",
+    "originalName": "4-2-539x329.jpg",
+    "size": 51838,
+    "ext": ".jpg",
+    "width": 539,
+    "height": 329
+  },
+  "6828032bb425376fde7f0055f5be3b89e3eaa37d9fbf8c3cd9b7d4e966131cc7": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/Frame-2147223673-2-539x329.jpg",
+    "originalName": "Frame-2147223673-2-539x329.jpg",
+    "size": 40984,
+    "ext": ".jpg",
+    "width": 539,
+    "height": 329
+  },
+  "01eab72c94caf691b74d990f819bc7a5e309c545994dc246de45099937da6378": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/Mask-group-539x329.jpg",
+    "originalName": "Mask-group-539x329.jpg",
+    "size": 25827,
+    "ext": ".jpg",
+    "width": 539,
+    "height": 329
+  },
+  "04b12813d984bdc2c226ff51807c16a646970e92d54dfc73bd8f7495f24bbf22": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/2-2-539x329.jpg",
+    "originalName": "2-2-539x329.jpg",
+    "size": 25555,
+    "ext": ".jpg",
+    "width": 539,
+    "height": 329
+  },
+  "5e347fc374e7adf6737b49a5f2c30f0cbe19bcc26fa0fe7720d4d1b171770b97": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/1-2-539x329.jpg",
+    "originalName": "1-2-539x329.jpg",
+    "size": 34301,
+    "ext": ".jpg",
+    "width": 539,
+    "height": 329
+  },
+  "7d0de9d793bad2bb338631b60c544e123284fab1f618ba75a9f736979e556eac": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/blog3-539x329.jpg",
+    "originalName": "blog3-539x329.jpg",
+    "size": 28509,
+    "ext": ".jpg",
+    "width": 539,
+    "height": 329
+  },
+  "5cd61781f2014416f1608c6dbc02d9bfe461cd200b2a10e49fe7a522f3276f87": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Frame-2147224203.png",
+    "originalName": "Frame-2147224203.png",
+    "size": 220397,
+    "ext": ".png",
+    "width": 1278,
+    "height": 660
+  },
+  "07aae87541cd067c1834ca02e1e6ff65f4bf5de32c400e74a243c8e87e1392cf": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Frame-2147224209.png",
+    "originalName": "Frame-2147224209.png",
+    "size": 112258,
+    "ext": ".png",
+    "width": 1278,
+    "height": 660
+  },
+  "55a8f0749815cf7ebf2cd108bc997f1222a151abc1f7a53fe8843e9fca43136c": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Frame-2147224212.png",
+    "originalName": "Frame-2147224212.png",
+    "size": 71684,
+    "ext": ".png",
+    "width": 1278,
+    "height": 660
+  },
+  "6f8475dd796de2d83e5a002e110b9dc30fe461f9f06f61b9b74953b7260216ad": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Frame-2147224224.png",
+    "originalName": "Frame-2147224224.png",
+    "size": 57451,
+    "ext": ".png",
+    "width": 1278,
+    "height": 660
+  },
+  "4d625f25fd7ce7cbc6184fdc51e5596a45fec3f52fcfc45ad8fc5152f88e98d5": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Frame-2147224205.png",
+    "originalName": "Frame-2147224205.png",
+    "size": 479748,
+    "ext": ".png",
+    "width": 1278,
+    "height": 660
+  },
+  "6ab1eedd3e1382e7451f6e34c54042d3980fcc5ff87e7641a72e2cf08c538811": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Frame-2147224219.png",
+    "originalName": "Frame-2147224219.png",
+    "size": 214950,
+    "ext": ".png",
+    "width": 1278,
+    "height": 660
+  },
+  "a2db0c1fa8c42c894c566dbf87e2f187664dff39db7eb73860660f5d1c1bcd49": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Frame-2147224231.png",
+    "originalName": "Frame-2147224231.png",
+    "size": 104667,
+    "ext": ".png",
+    "width": 1278,
+    "height": 660
+  },
+  "74a340329f25b98314f0327f6a7243a71be63192e7f1360dfa4cf35e2952c033": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Frame-2147224220.png",
+    "originalName": "Frame-2147224220.png",
+    "size": 170093,
+    "ext": ".png",
+    "width": 1278,
+    "height": 660
+  },
+  "fc4b8a41dc699ab039f0ed784c25ae93969d984290f40ee78530d84f0be0cbc3": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Frame-2147224228.png",
+    "originalName": "Frame-2147224228.png",
+    "size": 343084,
+    "ext": ".png",
+    "width": 1278,
+    "height": 660
+  },
+  "5597a579313cf9c9dd12f222952af3c4fe086922c4d5555307b36755f14c2269": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Frame-2147224217.png",
+    "originalName": "Frame-2147224217.png",
+    "size": 294402,
+    "ext": ".png",
+    "width": 1278,
+    "height": 660
+  },
+  "19c0d11811e36a4f1071461c948765757ded260ee622582a90a80271bf46cdd0": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/proddes2.png",
+    "originalName": "proddes2.png",
+    "size": 56857,
+    "ext": ".png",
+    "width": 413,
+    "height": 292
+  },
+  "9881e668e1ecf840659d32b937c34f716d48dc9950b052e4dface949a5d36391": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/proddes1.png",
+    "originalName": "proddes1.png",
+    "size": 30041,
+    "ext": ".png",
+    "width": 330,
+    "height": 170
+  },
+  "81a3cd6bf345e3818d5b40a6eb703831ae14977b9ed5abfa0d7899116ddcd48b": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/images/portolio_layer.svg",
+    "originalName": "portolio_layer.svg",
+    "size": 721,
+    "ext": ".svg"
+  },
+  "8e1eee0118a616322197cb0b82b346ecf24ffcfa4277155b1b5f9f1507ef8234": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/proddes3.png",
+    "originalName": "proddes3.png",
+    "size": 14316,
+    "ext": ".png",
+    "width": 424,
+    "height": 312
+  },
+  "bae7b80228f36a34172683e0473047c355699d654363a72797f7aba557f56fe3": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/proddes4.png",
+    "originalName": "proddes4.png",
+    "size": 43377,
+    "ext": ".png",
+    "width": 282,
+    "height": 107
+  },
+  "a927d050b7b23a1fd5548fd1bdf8db56a8315a489c6451dffa9bc8fd47dfc25f": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/proddes5.png",
+    "originalName": "proddes5.png",
+    "size": 88382,
+    "ext": ".png",
+    "width": 293,
+    "height": 246
+  },
+  "6da97c43dd1c9a9c71893862eb6af93ceb92c5731f056c813f6636b1d03b1b99": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/proddes9.png",
+    "originalName": "proddes9.png",
+    "size": 6647,
+    "ext": ".png",
+    "width": 101,
+    "height": 101
+  },
+  "9c9d2d9a7cd44bac6ff66f6b31bc5de8d74ee450cb030e8cce3be88d608ead5d": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/proddes6.png",
+    "originalName": "proddes6.png",
+    "size": 9912,
+    "ext": ".png",
+    "width": 409,
+    "height": 155
+  },
+  "ecf33d72f0f6ec717d9751bd7613e73de4b355bc70bf0f988500859e7f8e69d6": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/proddes8.png",
+    "originalName": "proddes8.png",
+    "size": 4231,
+    "ext": ".png",
+    "width": 100,
+    "height": 101
+  },
+  "57fbc315f203ee3f789337283a65339aadf8575ed1a1e75b4065e61e7c571bb5": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/proddes7.png",
+    "originalName": "proddes7.png",
+    "size": 5877,
+    "ext": ".png",
+    "width": 101,
+    "height": 101
+  },
+  "5a9d69913a7aa3120add6ea417d43ac9e914aded8249e697f2508f4f67c33ce3": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/branding1.png",
+    "originalName": "branding1.png",
+    "size": 146718,
+    "ext": ".png",
+    "width": 334,
+    "height": 462
+  },
+  "99992afe5ea5b7f04963053772efb48c304a5677f6dd0ad58982f3e83a7cbdee": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/branding4.png",
+    "originalName": "branding4.png",
+    "size": 25153,
+    "ext": ".png",
+    "width": 259,
+    "height": 274
+  },
+  "cc17bd86ceeb2f747be58c23ef22a916107511f300cc700847bada443997d5ce": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/branding2.png",
+    "originalName": "branding2.png",
+    "size": 8212,
+    "ext": ".png",
+    "width": 162,
+    "height": 161
+  },
+  "9232c2097b4d9e4a01d3e98426d3274ebcff5831f0798b101a035a3d9bd65461": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/branding3.png",
+    "originalName": "branding3.png",
+    "size": 200516,
+    "ext": ".png",
+    "width": 608,
+    "height": 363
+  },
+  "8ac7a76844de570b73f7865adb521616d301c4ff8473262b7a0218b01178fa92": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/branding6.png",
+    "originalName": "branding6.png",
+    "size": 352728,
+    "ext": ".png",
+    "width": 338,
+    "height": 425
+  },
+  "be33eca529ece1a2566f1b449786e8069a3cd07a5d1f80028fba5a9e59b9b4bc": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/images/gloab_logo.png",
+    "originalName": "gloab_logo.png",
+    "size": 23238,
+    "ext": ".png",
+    "width": 120,
+    "height": 121
+  },
+  "aeddc619be8b40b71c0ac7050e471cf64903f795147d03d2f3806ab1a28dfb8f": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/branding5.png",
+    "originalName": "branding5.png",
+    "size": 11190,
+    "ext": ".png",
+    "width": 339,
+    "height": 341
+  },
+  "8c9031c5ab8ac5cdd1cc5134a5d138924fa15bf22b2f6eb020cfbe30a7a282c1": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/dev1.png",
+    "originalName": "dev1.png",
+    "size": 296757,
+    "ext": ".png",
+    "width": 1035,
+    "height": 824
+  },
+  "700b601ff65181a3b44fb77949e4cd3ffdff319fb4dc1190104c43c6fffdbe59": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/images/arrow_logo.png",
+    "originalName": "arrow_logo.png",
+    "size": 16213,
+    "ext": ".png",
+    "width": 115,
+    "height": 117
+  },
+  "373e011969f09471c8e5672ad401d280ceca1d1a19f05a5fe7d710c09a4686fa": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/images/v_logo.png",
+    "originalName": "v_logo.png",
+    "size": 19462,
+    "ext": ".png",
+    "width": 114,
+    "height": 115
+  },
+  "31fb935525b4cceaf0536e327e76facd23a01bcd1eae5c0b12b782ee86adf0c0": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/images/ts_logo.png",
+    "originalName": "ts_logo.png",
+    "size": 14580,
+    "ext": ".png",
+    "width": 105,
+    "height": 106
+  },
+  "e129c1fd9989b272ee7746cdaabf3f7c61679918bc458fd0fb530e2f9f77734b": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/images/service_braning.png",
+    "originalName": "service_braning.png",
+    "size": 78705,
+    "ext": ".png",
+    "width": 1912,
+    "height": 1052
+  },
+  "25e2a7aab80793bec2127e91476e6406d5106901a0101f655c9b4582974c6ac8": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/images/development_bg_mob.png",
+    "originalName": "development_bg_mob.png",
+    "size": 328798,
+    "ext": ".png",
+    "width": 393,
+    "height": 612
+  },
+  "9fc3d2a1553f9fa3f40941622f6c7ecc1d6ff7b20918e80244cfb8edc503a3ff": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/images/development_bg.png",
+    "originalName": "development_bg.png",
+    "size": 1256450,
+    "ext": ".png",
+    "width": 1920,
+    "height": 1579
+  },
+  "ea58b3d3fd5d920de1c72027a208b4899ea9a8d623cb73ed1b5a1fd22ea8a5bb": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Frame-2147224234.png",
+    "originalName": "Frame-2147224234.png",
+    "size": 93890,
+    "ext": ".png",
+    "width": 1278,
+    "height": 660
+  },
+  "30ad468cacbabd7f4da7407c6fc9eab7ec2d7afe5484839755096b5734dacac2": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Frame-2147224207.png",
+    "originalName": "Frame-2147224207.png",
+    "size": 302905,
+    "ext": ".png",
+    "width": 1278,
+    "height": 660
+  },
+  "f23986ea65a482f1e80350be57b507da0a4b51cd8f4497fce1578e743ba7e899": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/10/Main-screen-1.gif",
+    "originalName": "Main-screen-1.gif",
+    "size": 9366743,
+    "ext": ".gif",
+    "width": 1152,
+    "height": 864
+  },
+  "877393b401986589b14035dbbf7f585f3d001cbcf40e7958447f396bd05ea437": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Frame-2147224066-3.png",
+    "originalName": "Frame-2147224066-3.png",
+    "size": 26156,
+    "ext": ".png",
+    "width": 351,
+    "height": 270
+  },
+  "eafc1f3f237e18b46b3ea1e05b8b79adfeac7b2026117d0909f8c067c0a0fedf": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Essence-desktop-1.png",
+    "originalName": "Essence-desktop-1.png",
+    "size": 54087,
+    "ext": ".png",
+    "width": 1000,
+    "height": 980
+  },
+  "2e658e6d4ce37a2c9c9f900a736dd8c301339e431aad160897d444dbc6ced637": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Essence-mobile.png",
+    "originalName": "Essence-mobile.png",
+    "size": 14410,
+    "ext": ".png",
+    "width": 350,
+    "height": 270
+  },
+  "09f34ee85f717eafe6b60709884de0d4b0ad4438322d6ea016dbc7656148d9f7": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Esences.png",
+    "originalName": "Esences.png",
+    "size": 4304,
+    "ext": ".png",
+    "width": 194,
+    "height": 90
+  },
+  "5f46ce4bfed9949503fde261c5085460880d11490f594a0bb2ad5e504b115f32": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Tadiran-mobile-1-1.png",
+    "originalName": "Tadiran-mobile-1-1.png",
+    "size": 14834,
+    "ext": ".png",
+    "width": 350,
+    "height": 270
+  },
+  "4f1b6afdeec82f4c0f17d2f02d6252b312bbb2c3e5ddae9fe970f282457bf47d": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Novetto-desktop-1.png",
+    "originalName": "Novetto-desktop-1.png",
+    "size": 68763,
+    "ext": ".png",
+    "width": 1000,
+    "height": 980
+  },
+  "79b902598c1ffb77d5d993c3909c8cb0c6520cb24c56cd0851ebcf258b356d93": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Novetto-mobile.png",
+    "originalName": "Novetto-mobile.png",
+    "size": 16206,
+    "ext": ".png",
+    "width": 350,
+    "height": 270
+  },
+  "8c0d25cfc872e1ab7e7211b2c1a2cd400fbedff2d3bcd7f71f1dd37349a9f31b": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/noveto-min.png",
+    "originalName": "noveto-min.png",
+    "size": 1566,
+    "ext": ".png",
+    "width": 223,
+    "height": 44
+  },
+  "eff67043f7d6d63530d3276532f1ddd8c20c81c0c34a6af175a2e122e18f4ac5": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Ayyeka-desktop-1.png",
+    "originalName": "Ayyeka-desktop-1.png",
+    "size": 90934,
+    "ext": ".png",
+    "width": 1000,
+    "height": 980
+  },
+  "dc2c21e5040e4bcfa290fa81dfc336812b551ea7a2fbf6273ac3d79bda68cae8": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Ayyeka-mobile.png",
+    "originalName": "Ayyeka-mobile.png",
+    "size": 15524,
+    "ext": ".png",
+    "width": 350,
+    "height": 270
+  },
+  "59c0c19c4746c3ea27eae400dcca52ac24ba7ff781c0f7970927230a2ae17a9d": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/ayyeka-min.png",
+    "originalName": "ayyeka-min.png",
+    "size": 4095,
+    "ext": ".png",
+    "width": 207,
+    "height": 60
+  },
+  "bca017860adcc5291bc396513e7d3caa596c8756d086360b880579934d60e367": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Arkit-desktop-1.png",
+    "originalName": "Arkit-desktop-1.png",
+    "size": 97875,
+    "ext": ".png",
+    "width": 1000,
+    "height": 980
+  },
+  "c11d3d48ca8e9926f7d7dee82dc9c071105d52a7c00e021473eb1fc2a4462d27": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Arkit-mobile-1.png",
+    "originalName": "Arkit-mobile-1.png",
+    "size": 14547,
+    "ext": ".png",
+    "width": 350,
+    "height": 270
+  },
+  "f571f3518374c0cd001adc65dcf654ac0cb87a7516611e5fab7aa51813c88a5e": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/arkit-min.png",
+    "originalName": "arkit-min.png",
+    "size": 5027,
+    "ext": ".png",
+    "width": 168,
+    "height": 75
+  },
+  "c5afdcf559d7485bae2517a8c753f61fab06683c89f2362d7ae0e67239f6aaf1": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Luxonpay-mobile.png",
+    "originalName": "Luxonpay-mobile.png",
+    "size": 15518,
+    "ext": ".png",
+    "width": 350,
+    "height": 270
+  },
+  "5f38339eb11db7bed9679a8813810e99ef08ecc9c1f19dab3c8fb60f13f94d47": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Luxon-pay-desktop.png",
+    "originalName": "Luxon-pay-desktop.png",
+    "size": 107531,
+    "ext": ".png",
+    "width": 1000,
+    "height": 980
+  },
+  "79df9149eb0193d51574197a799520a5ea3a25e59f2effb335b1254fcfeb175c": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/Group-1052509.png",
+    "originalName": "Group-1052509.png",
+    "size": 4652,
+    "ext": ".png",
+    "width": 423,
+    "height": 72
+  },
+  "06712f71d54c56c991dc5038d4a961632b7da312694f72a33e76bf15c0ad2035": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/plus500-mobile.png",
+    "originalName": "plus500-mobile.png",
+    "size": 13821,
+    "ext": ".png",
+    "width": 350,
+    "height": 270
+  },
+  "567fcc20ca317fa011db1bef1eaa3db93c6f7c3d3bbbb933f09f981e144972f0": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Plus500-desktop.png",
+    "originalName": "Plus500-desktop.png",
+    "size": 61987,
+    "ext": ".png",
+    "width": 1000,
+    "height": 980
+  },
+  "796e769d637a25604d0ce862b10eea9164fb7da631fa2d897889547a846838c1": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/image-160.png",
+    "originalName": "image-160.png",
+    "size": 4423,
+    "ext": ".png",
+    "width": 222,
+    "height": 55
+  },
+  "02ca5fb5901b9ea28a5944f9b1676d854b46b3478e74e2fdc06b62e79b42c01d": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/altshuler-min.png",
+    "originalName": "altshuler-min.png",
+    "size": 7555,
+    "ext": ".png",
+    "width": 373,
+    "height": 80
+  },
+  "d2327b7ac4a02be9973c8ca4af97591ff53f63c112728445d6bf2c04271bad08": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Splitit-desktop.png",
+    "originalName": "Splitit-desktop.png",
+    "size": 42088,
+    "ext": ".png",
+    "width": 1000,
+    "height": 980
+  },
+  "3bb0f380dc3dd4fa89310f18ea4a08d30dbd27042aa2b46e5194e4a7b92505e4": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Splitit-mobile.png",
+    "originalName": "Splitit-mobile.png",
+    "size": 9212,
+    "ext": ".png",
+    "width": 350,
+    "height": 270
+  },
+  "7b811e4b9953a4ef4b3caae573098e689191af15fb621741981f6273e2401d48": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/image-161-e1747320305589.png",
+    "originalName": "image-161-e1747320305589.png",
+    "size": 11460,
+    "ext": ".png",
+    "width": 342,
+    "height": 107
+  },
+  "7937d147ad70a4836849099a91edffa11382432cb52d10b735e90c730bb6a2ea": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/IBI-desktop.png",
+    "originalName": "IBI-desktop.png",
+    "size": 75456,
+    "ext": ".png",
+    "width": 1000,
+    "height": 980
+  },
+  "9e0a2a446a4f4d824d9cfc52c996f32df7a9703218b262c19dde8e352199ad74": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/IBI-mobile.png",
+    "originalName": "IBI-mobile.png",
+    "size": 17695,
+    "ext": ".png",
+    "width": 350,
+    "height": 270
+  },
+  "d495a288923fe0f9d6025488dc480ad10b6d96f4381c77a9dd3166d37cb5e1d5": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/image-45.png",
+    "originalName": "image-45.png",
+    "size": 13596,
+    "ext": ".png",
+    "width": 281,
+    "height": 195
+  },
+  "4946be733f257216552e603d5f0a56f2763c1f128571764971c96107560e7e4e": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Altshuler-mobile.png",
+    "originalName": "Altshuler-mobile.png",
+    "size": 16220,
+    "ext": ".png",
+    "width": 350,
+    "height": 270
+  },
+  "00dd545dd89916f23a392c9d893bc52e099e017f5a1fb3901c1cec46d5f08ed9": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Altshuler-desktop.png",
+    "originalName": "Altshuler-desktop.png",
+    "size": 122596,
+    "ext": ".png",
+    "width": 1000,
+    "height": 980
+  },
+  "78e64d2b50b8a91e1139c646efad0fc66526afc9c0564b1c8bcef15d4c0ddb45": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/images/caryelomidmobl.svg",
+    "originalName": "caryelomidmobl.svg",
+    "size": 641,
+    "ext": ".svg"
+  },
+  "7fff3cec08868f47cc0b3368998a71a2931687a361cb320e9a5997a13ccf2837": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/images/caryelomidmobr.svg",
+    "originalName": "caryelomidmobr.svg",
+    "size": 645,
+    "ext": ".svg"
+  },
+  "bde5bd21cd63d3689f6cbecf4479c0ce40193ab865dc65d9a58c3d92e34ecf3d": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/career_g_2.png",
+    "originalName": "career_g_2.png",
+    "size": 321846,
+    "ext": ".png",
+    "width": 383,
+    "height": 383
+  },
+  "c86b476f5580d94382a8b92df62db3e6376c5941419c42a59bb1130cc2bd910e": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/career_g_3.png",
+    "originalName": "career_g_3.png",
+    "size": 144617,
+    "ext": ".png",
+    "width": 256,
+    "height": 256
+  },
+  "0b35ab9a5626c7a3c9b6ee7086aa65babab840190935c8f07847618b16b81e21": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/career_g_1.png",
+    "originalName": "career_g_1.png",
+    "size": 232104,
+    "ext": ".png",
+    "width": 249,
+    "height": 453
+  },
+  "602b4d9233ac759110a38b259027bf6ef5b03fcff0fca393d72eb517c592aa2d": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/career_g_6.png",
+    "originalName": "career_g_6.png",
+    "size": 265438,
+    "ext": ".png",
+    "width": 326,
+    "height": 407
+  },
+  "b4a57b597e29d7af4adf807148abbc37482b8438de0a2cf975c50aee57977357": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/career_g_4.png",
+    "originalName": "career_g_4.png",
+    "size": 267889,
+    "ext": ".png",
+    "width": 339,
+    "height": 339
+  },
+  "efef594d86ec60bd744de9e2b270b203a99d917b4a21dec2509a3b12be9041a2": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/career_g_8.png",
+    "originalName": "career_g_8.png",
+    "size": 150701,
+    "ext": ".png",
+    "width": 237,
+    "height": 285
+  },
+  "26a7eccbd52ac0bb56900ce55cb3ceb8c268a42979141e0330ff7c589abc3e3d": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/career_g_7.png",
+    "originalName": "career_g_7.png",
+    "size": 142556,
+    "ext": ".png",
+    "width": 230,
+    "height": 285
+  },
+  "595e58dad68bd45d7948dd0b6a65b2f899e23544da937c224d9759e0233e58f6": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/career_g_9.png",
+    "originalName": "career_g_9.png",
+    "size": 651065,
+    "ext": ".png",
+    "width": 697,
+    "height": 383
+  },
+  "ec9339a83cc874a54a1550fe8d9194e7790932d3cdd6ee1ceaf5e61d65080017": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/career_g_10.png",
+    "originalName": "career_g_10.png",
+    "size": 185637,
+    "ext": ".png",
+    "width": 284,
+    "height": 285
+  },
+  "268bdd7cab2b572dea9dec4cdbcc5991e96a4256277077787c9a22297d07271b": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/career_g_5.png",
+    "originalName": "career_g_5.png",
+    "size": 378026,
+    "ext": ".png",
+    "width": 570,
+    "height": 285
+  },
+  "4d702c39d32a8bb46cad6d37afd3177be9d94ec62ed094beaf0b09550b46f5e7": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/images/carplus.svg",
+    "originalName": "carplus.svg",
+    "size": 311,
+    "ext": ".svg"
+  },
+  "1b7c65a057a2d629da7f5ce93221526d23938dee09142ce469781527501d9c9d": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/images/carminus.svg",
+    "originalName": "carminus.svg",
+    "size": 204,
+    "ext": ".svg"
+  },
+  "5d9d101ce2859a2386bec6e38f81899b30479d787fc2c78d3f865c357f5521bc": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/images/career_gridimage_bg.svg",
+    "originalName": "career_gridimage_bg.svg",
+    "size": 2766,
+    "ext": ".svg"
+  },
+  "68b28440ca75c3a41a489fa1155d12a93af3740730610209ad42726242011ce4": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/jfrog-min.png",
+    "originalName": "jfrog-min.png",
+    "size": 5848,
+    "ext": ".png",
+    "width": 244,
+    "height": 73
+  },
+  "993c98603fc4e8c731c0dca8bd9b1c2ca94e871521bf4e8ad49443f5ae5164d1": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Jfrog-mobile.png",
+    "originalName": "Jfrog-mobile.png",
+    "size": 14017,
+    "ext": ".png",
+    "width": 350,
+    "height": 270
+  },
+  "842550d71e182302695b8654ca3805ea01d499dfb7b2b9e6ac993d9181d7956b": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/adam-milo-desktop.png",
+    "originalName": "adam-milo-desktop.png",
+    "size": 56874,
+    "ext": ".png",
+    "width": 1000,
+    "height": 980
+  },
+  "26e8c09418fb3e252306145b2df3c220f27cda37015a5f47fe3ca768ce9fca40": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/adam-milo-mobile.png",
+    "originalName": "adam-milo-mobile.png",
+    "size": 10025,
+    "ext": ".png",
+    "width": 350,
+    "height": 270
+  },
+  "9687ea8f1038673142559fc8619f08d6bdf157b1cfcbeca00c063b52207651e3": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Jfrog-desktop.png",
+    "originalName": "Jfrog-desktop.png",
+    "size": 83475,
+    "ext": ".png",
+    "width": 1000,
+    "height": 980
+  },
+  "6975a13ab5994ae47be2b9fb7d6e231f867bc14cde0af270ae4c464a5232a808": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/adam-milo-min.png",
+    "originalName": "adam-milo-min.png",
+    "size": 7123,
+    "ext": ".png",
+    "width": 266,
+    "height": 88
+  },
+  "0fe076b540a551e727f08c044ef699bdd16090add244c333f83b4bbdcc657490": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Percepto-Desktop.png",
+    "originalName": "Percepto-Desktop.png",
+    "size": 132934,
+    "ext": ".png",
+    "width": 1000,
+    "height": 980
+  },
+  "ba9fbdc1187be1d287ce637b6ba2080cf81ce97c0a499243aa8ffc252562bab5": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/percepto-min.png",
+    "originalName": "percepto-min.png",
+    "size": 5901,
+    "ext": ".png",
+    "width": 284,
+    "height": 71
+  },
+  "01a615123c69bfa736ea933aa2ed0b58413b88c7957d5da3d5cffe5ed3ee6f02": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Comax-Desktop-1.png",
+    "originalName": "Comax-Desktop-1.png",
+    "size": 81667,
+    "ext": ".png",
+    "width": 1000,
+    "height": 980
+  },
+  "7643006fb3514498a23d92c634d121a8980f24107382bccf41ff3e8823ccd50e": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Percepto-Mobile.png",
+    "originalName": "Percepto-Mobile.png",
+    "size": 19886,
+    "ext": ".png",
+    "width": 350,
+    "height": 270
+  },
+  "1cd5f4ec3914aa86514674b8c7609ba7173ba17ab4fc3268e2e77aae5a8f5465": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Comax-Mobile.png",
+    "originalName": "Comax-Mobile.png",
+    "size": 13302,
+    "ext": ".png",
+    "width": 350,
+    "height": 270
+  },
+  "c0efdddae7b0348b05612e529b21e60c3accee7d16d14b6fd6fd6a3241c512e0": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Comax-min.png",
+    "originalName": "Comax-min.png",
+    "size": 5217,
+    "ext": ".png",
+    "width": 257,
+    "height": 76
+  },
+  "3572e48fa87c6943b37f0982536482e89667a8671755d0321e27e5b362534623": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Solaredge-Desktop.png",
+    "originalName": "Solaredge-Desktop.png",
+    "size": 161151,
+    "ext": ".png",
+    "width": 1001,
+    "height": 980
+  },
+  "51ddb80462e54e5952a48734d054e7c0dfa6bc9987a82e236d5fefee14ccea0a": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Solaredge-Mobile.png",
+    "originalName": "Solaredge-Mobile.png",
+    "size": 20283,
+    "ext": ".png",
+    "width": 351,
+    "height": 270
+  },
+  "a358f0457d2eec25c2d35c17c3a7095dadb15d044cd5ce7da3835a8bd5a94432": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Frame-2147224210.png",
+    "originalName": "Frame-2147224210.png",
+    "size": 74119,
+    "ext": ".png",
+    "width": 1278,
+    "height": 660
+  },
+  "c33b81d898902ede346f5531f2d26484bf6972f652f1b8787ea79c2b33c7e75b": {
+    "originalUrl": "https://pitango-ux-prod.s3.eu-central-1.amazonaws.com/wp-content/uploads/2021/02/08142157/Agtitask-2-1024x576.png",
+    "originalName": "Agtitask-2-1024x576.png",
+    "size": 284818,
+    "ext": ".png",
+    "width": 1024,
+    "height": 576
+  },
+  "0e52d2aa43f4d4b1688ac48629db6e4d092affead559e6af555cc75f7e7680ea": {
+    "originalUrl": "https://pitango-ux-prod.s3.eu-central-1.amazonaws.com/wp-content/uploads/2021/02/08142153/Agtitask-4-1024x576.png",
+    "originalName": "Agtitask-4-1024x576.png",
+    "size": 320447,
+    "ext": ".png",
+    "width": 1024,
+    "height": 576
+  },
+  "20a8744f91397f0038027934a371cf41961b0c43c0e10b1b679029dafabf35e0": {
+    "originalUrl": "https://pitango-ux-prod.s3.eu-central-1.amazonaws.com/wp-content/uploads/2021/02/08142152/Agtitask-5-1024x576.png",
+    "originalName": "Agtitask-5-1024x576.png",
+    "size": 291945,
+    "ext": ".png",
+    "width": 1024,
+    "height": 576
+  },
+  "1949011495fb35fd054fe9dc6b05d2ec74796266b04bcef6ebffced959c15da4": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Intel-Desktop.png",
+    "originalName": "Intel-Desktop.png",
+    "size": 142615,
+    "ext": ".png",
+    "width": 1000,
+    "height": 980
+  },
+  "3bda1efc763fbbb214462abd966e0fcb0493f5832e6a26c5416aa2bad312de63": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Intel-mobile.png",
+    "originalName": "Intel-mobile.png",
+    "size": 20873,
+    "ext": ".png",
+    "width": 350,
+    "height": 270
+  },
+  "d299e0b3a881dde7086d716f98bc30a7004a8130137806a80ef66667cd1a5f95": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/intel-min.png",
+    "originalName": "intel-min.png",
+    "size": 4945,
+    "ext": ".png",
+    "width": 134,
+    "height": 94
+  },
+  "232daef01512e78c90cd1a889bc111454d430126fc09dc7f5b3b19c6d0d27d34": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Altshuler-mobile-1.png",
+    "originalName": "Altshuler-mobile-1.png",
+    "size": 15735,
+    "ext": ".png",
+    "width": 350,
+    "height": 270
+  },
+  "c22ff6cbe24823d079f2bcd1bb8ab0d3532d04f282335547487f826c0e2124a9": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/altshuler-desktop1.png",
+    "originalName": "altshuler-desktop1.png",
+    "size": 73259,
+    "ext": ".png",
+    "width": 1000,
+    "height": 980
+  },
+  "e2bd71ead1cf92e5429af2f5bbbfc4013dba5551dc5eda639cf3858af43a42d4": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/melingo-desktop1.png",
+    "originalName": "melingo-desktop1.png",
+    "size": 72153,
+    "ext": ".png",
+    "width": 1000,
+    "height": 980
+  },
+  "004d454989407bb54ff4da00940a73b3be32d727ecbd0a356c625ebc99e813ad": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/melingo-mobile1.png",
+    "originalName": "melingo-mobile1.png",
+    "size": 12477,
+    "ext": ".png",
+    "width": 350,
+    "height": 270
+  },
+  "2dcaca816e28cfe8541f0f89e114bcd866efc25dc0b48384fa55fe305d3502e9": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/all-jobs-desktop-1.png",
+    "originalName": "all-jobs-desktop-1.png",
+    "size": 168724,
+    "ext": ".png",
+    "width": 1000,
+    "height": 980
+  },
+  "f88a20fc22f120a8cb0af7a7d32a9948f7a02c8996c3bfa2890ec2ac34d423be": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/all-jobs-mobile-1.png",
+    "originalName": "all-jobs-mobile-1.png",
+    "size": 24480,
+    "ext": ".png",
+    "width": 350,
+    "height": 270
+  },
+  "3307db165c1600d67e303cf348bf1b68cb9070e9f80be2835cefae03de806f5a": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/all-jobs-min.png",
+    "originalName": "all-jobs-min.png",
+    "size": 5582,
+    "ext": ".png",
+    "width": 213,
+    "height": 76
+  },
+  "c516b51d39f03e7d2ea259584f67765bb587d8dcb90fed7579fe5027bdbc7536": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Skideal-desktop-1.png",
+    "originalName": "Skideal-desktop-1.png",
+    "size": 98314,
+    "ext": ".png",
+    "width": 1000,
+    "height": 980
+  },
+  "fc6c58e4f5ec24c9a8db8058dc847f8f65c81998600ca3de11fdd64b0502309a": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Skideal-mobile-1.png",
+    "originalName": "Skideal-mobile-1.png",
+    "size": 11914,
+    "ext": ".png",
+    "width": 350,
+    "height": 270
+  },
+  "85c0fefddc1252c4a54a7eb3d08673649f847f92961ee7965872417c7b35256c": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/skideal-min.png",
+    "originalName": "skideal-min.png",
+    "size": 5369,
+    "ext": ".png",
+    "width": 141,
+    "height": 73
+  },
+  "488eb124589563d3fbe05651f10504386b6813b2b5c2045c3a2e2e3841e231a2": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Passport-card-mobile-1-1.png",
+    "originalName": "Passport-card-mobile-1-1.png",
+    "size": 6630,
+    "ext": ".png",
+    "width": 350,
+    "height": 270
+  },
+  "9dd5419b57cab2d4b103153c407ad61ea333e3703f1ad8f465f3fad18a0a6fcb": {
+    "originalUrl": "https://pitango-ux-prod.s3.eu-central-1.amazonaws.com/wp-content/uploads/2021/02/27142107/babyTV-7-1024x480.jpg",
+    "originalName": "babyTV-7-1024x480.jpg",
+    "size": 80162,
+    "ext": ".jpg",
+    "width": 1024,
+    "height": 480
+  },
+  "a0d35bcfd36d33afa20b7401ce1570461d6a8b31b6cdbd159f9d7ee070f57bb2": {
+    "originalUrl": "https://pitango-ux-prod.s3.eu-central-1.amazonaws.com/wp-content/uploads/2023/03/04090203/3-34-1024x480.jpg",
+    "originalName": "3-34-1024x480.jpg",
+    "size": 122866,
+    "ext": ".jpg",
+    "width": 1024,
+    "height": 480
+  },
+  "88d70ac4270a280c6f407a86fcb698dd39d9dc0acd566248c83dc5ef26cddb70": {
+    "originalUrl": "https://pitango-ux-prod.s3.eu-central-1.amazonaws.com/wp-content/uploads/2021/03/29071552/3-2-1024x480.jpg",
+    "originalName": "3-2-1024x480.jpg",
+    "size": 56623,
+    "ext": ".jpg",
+    "width": 1024,
+    "height": 480
+  },
+  "189d5b89dae4db0850a436d0c0fc8494e27baa2fd8e5bedee3b4fca9d1f09331": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Frame-2147224206.png",
+    "originalName": "Frame-2147224206.png",
+    "size": 58550,
+    "ext": ".png",
+    "width": 1278,
+    "height": 660
+  },
+  "e311a8fca937332a5a61337f48eb6b4e6dfe088d8665e4e052e104101c4d1fd7": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Natiral-Intelligence-Mobile.png",
+    "originalName": "Natiral-Intelligence-Mobile.png",
+    "size": 5966,
+    "ext": ".png",
+    "width": 350,
+    "height": 270
+  },
+  "f4e336f2eda365baa8b55a3e3a146803b6eab78392182bb2532518f45af85b2f": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Natiral-Intelligence-Desktop.png",
+    "originalName": "Natiral-Intelligence-Desktop.png",
+    "size": 33244,
+    "ext": ".png",
+    "width": 1000,
+    "height": 980
+  },
+  "bb522e973a8b85d980e783378cb97c508f3db991862b1b22b19aaefadc9d5c9e": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Iron-Source-Desktop.png",
+    "originalName": "Iron-Source-Desktop.png",
+    "size": 35704,
+    "ext": ".png",
+    "width": 1000,
+    "height": 980
+  },
+  "5574a18ef216e81b82580f433cfee7c052613565991cdbebfa28884ae3d50144": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/natural.png",
+    "originalName": "natural.png",
+    "size": 4529,
+    "ext": ".png",
+    "width": 264,
+    "height": 72
+  },
+  "8e4547225d75e084c7591373e2facb5dbea536f2ffce3dd1672609d6175f8a3d": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Iron-Source-Mobile.png",
+    "originalName": "Iron-Source-Mobile.png",
+    "size": 7339,
+    "ext": ".png",
+    "width": 350,
+    "height": 270
+  },
+  "324f20f5e1ddd8df9056f39f97a919f98e34a2cc71a29c2e37a8f043a733b23b": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/ironsource-min.png",
+    "originalName": "ironsource-min.png",
+    "size": 4313,
+    "ext": ".png",
+    "width": 259,
+    "height": 65
+  },
+  "a3218473dd98b23d7ef42e728d85d0cb91a59cd979fc66ed301f51459be58828": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Jfrog-desktop-1.png",
+    "originalName": "Jfrog-desktop-1.png",
+    "size": 80395,
+    "ext": ".png",
+    "width": 1001,
+    "height": 980
+  },
+  "45adc388b4a415747ee5679c016b5ef3e229cd59965355f7abec4ad70548fc63": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Jfrog-mobile-1.png",
+    "originalName": "Jfrog-mobile-1.png",
+    "size": 14055,
+    "ext": ".png",
+    "width": 351,
+    "height": 270
+  },
+  "eb7c5a5dd7189f904c7da29a50e057c1bee9345278e72465566043e3113869d0": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Taboola-desktop.png",
+    "originalName": "Taboola-desktop.png",
+    "size": 43354,
+    "ext": ".png",
+    "width": 1037,
+    "height": 1016
+  },
+  "8a7813e596e165f6f6e02ebd53aba8f36d367bf22b818a253e7257c61c5e597e": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Taboola-mobile.png",
+    "originalName": "Taboola-mobile.png",
+    "size": 5604,
+    "ext": ".png",
+    "width": 350,
+    "height": 270
+  },
+  "49ba3da1010f26b42ddd5444d346ee4d6c2d72216e0f6b7bb41530bedf4bd146": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/taboola-min.png",
+    "originalName": "taboola-min.png",
+    "size": 4116,
+    "ext": ".png",
+    "width": 203,
+    "height": 60
+  },
+  "51b3f932964e7df886f958900304475c4f356a060c195ce1af3850906d7d33c6": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/electreon-min.png",
+    "originalName": "electreon-min.png",
+    "size": 2120,
+    "ext": ".png",
+    "width": 292,
+    "height": 48
+  },
+  "8fd64ac7946bc774195b9f7a9ed4491de022eb6a7dcebd070ced9cca4f45b97d": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Electreon-Mobile.png",
+    "originalName": "Electreon-Mobile.png",
+    "size": 8999,
+    "ext": ".png",
+    "width": 350,
+    "height": 270
+  },
+  "e4edb1fac44b53cfd6d0fa1322ffc0437924aee0c8929b666d8685abc05e2340": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Electreon-Desktop.png",
+    "originalName": "Electreon-Desktop.png",
+    "size": 53042,
+    "ext": ".png",
+    "width": 1000,
+    "height": 980
+  },
+  "991fdba35ecf570e5a356c64d6a42bce6cd8314b6dffa0684e08579b62538ae6": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/WalkMe-Deskop.png",
+    "originalName": "WalkMe-Deskop.png",
+    "size": 55132,
+    "ext": ".png",
+    "width": 1000,
+    "height": 980
+  },
+  "6bc074ee53ed928352bc9c813dde0ee3da6f46a1cb1a3e4d633098151e2b9ddc": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/WalkMe-Mobile.png",
+    "originalName": "WalkMe-Mobile.png",
+    "size": 9498,
+    "ext": ".png",
+    "width": 350,
+    "height": 270
+  },
+  "72f1dda56e716c944673b2493d879b79b62e84754079bccddd8a7f5aa838ead6": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/walkme-min.png",
+    "originalName": "walkme-min.png",
+    "size": 3859,
+    "ext": ".png",
+    "width": 177,
+    "height": 60
+  },
+  "5514d021a7a4aed30d344859b206f9412f8798a529f3d864cebead80be66d311": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/Temp2-2.jpg",
+    "originalName": "Temp2-2.jpg",
+    "size": 39755,
+    "ext": ".jpg",
+    "width": 1278,
+    "height": 660
+  },
+  "8c731102f3a0b09d78bdf959ab4ee7cbbce9db8813a83af2ada7986e124d6fc7": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Playtika-desktop-1-1.png",
+    "originalName": "Playtika-desktop-1-1.png",
+    "size": 66810,
+    "ext": ".png",
+    "width": 1000,
+    "height": 980
+  },
+  "ca0d201edaf23cd5b1859ebfff5c5dd868a1e4f0de57f8b772b20e29ac220b76": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/playtika-min.png",
+    "originalName": "playtika-min.png",
+    "size": 4304,
+    "ext": ".png",
+    "width": 252,
+    "height": 82
+  },
+  "ff02d239fa8fa5d40d9e5590a4400912f5b4742886bb98c3161f61bb5ac8ef04": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Playtika-mobile-1.png",
+    "originalName": "Playtika-mobile-1.png",
+    "size": 10331,
+    "ext": ".png",
+    "width": 350,
+    "height": 270
+  },
+  "843a08c1b07eda1e2d4e2b1d65606f261758dfa61d60f56b63a08a292ecd407f": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Juxta-desktop.png",
+    "originalName": "Juxta-desktop.png",
+    "size": 72351,
+    "ext": ".png",
+    "width": 1000,
+    "height": 980
+  },
+  "23b7ac1707bb735aee42d28dda63525ce27f6c4452e54ce9aaa34b0a54f52cef": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Juxta-mobile.png",
+    "originalName": "Juxta-mobile.png",
+    "size": 11582,
+    "ext": ".png",
+    "width": 350,
+    "height": 270
+  },
+  "5f414b69315467336de46faf4e2bbcfc77d22e97f9a4f1f48274a5174c15bed3": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Juxta-logo.png",
+    "originalName": "Juxta-logo.png",
+    "size": 3174,
+    "ext": ".png",
+    "width": 451,
+    "height": 100
+  },
+  "871223b64d5045abb274953cffece837e1403ab3795d93bfca092c8495a67fed": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Layer-x-desktop.png",
+    "originalName": "Layer-x-desktop.png",
+    "size": 35620,
+    "ext": ".png",
+    "width": 1000,
+    "height": 980
+  },
+  "e36a7f894dab7eaae4c9b53689aeb779998743f485a2f1e917abb3e294f09d6c": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/Layer-x-mobile.png",
+    "originalName": "Layer-x-mobile.png",
+    "size": 8072,
+    "ext": ".png",
+    "width": 350,
+    "height": 270
+  },
+  "672c710d514b158ed00ec3ca24d03482a8896955af9beedcba9707a4a6b93a87": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/layerx-min.png",
+    "originalName": "layerx-min.png",
+    "size": 4316,
+    "ext": ".png",
+    "width": 202,
+    "height": 55
+  },
+  "2cf680383878d607d9d3a8667dc8d54239250b608c19561d8cc8f51842890445": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/melingo-desktop-1-1.png",
+    "originalName": "melingo-desktop-1-1.png",
+    "size": 62694,
+    "ext": ".png",
+    "width": 1000,
+    "height": 980
+  },
+  "aa2b4f21833726e151f09b919dbf37e707542d5bbda91af1c64612fe2dc4e104": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/melingo-mobile-1-1.png",
+    "originalName": "melingo-mobile-1-1.png",
+    "size": 10256,
+    "ext": ".png",
+    "width": 350,
+    "height": 270
+  },
+  "7240fc664f2be15bc4efa0cfdbdf2d00546536c15c91c7ffc0543d640406d8ab": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/PlainID-logo.png",
+    "originalName": "PlainID-logo.png",
+    "size": 13650,
+    "ext": ".png",
+    "width": 451,
+    "height": 100
+  },
+  "a61b9830576664d024b30b3ba95179a6c7b2dc1b9e103252676d409a2c936e64": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/plain-id-mobile.png",
+    "originalName": "plain-id-mobile.png",
+    "size": 12143,
+    "ext": ".png",
+    "width": 350,
+    "height": 270
+  },
+  "123ef559f93d7014519e24d703d3580be549aefa15f63faa1ae31ebaec865bfe": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/plain-id-desktop.png",
+    "originalName": "plain-id-desktop.png",
+    "size": 118346,
+    "ext": ".png",
+    "width": 1000,
+    "height": 980
+  },
+  "195383647d904300355e4a0d91f93741b4ea386fbe510c76fbc8f19cb6538fb4": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/05/Temp-2.jpg",
+    "originalName": "Temp-2.jpg",
+    "size": 111572,
+    "ext": ".jpg",
+    "width": 1278,
+    "height": 660
+  },
+  "5b7f6b5bf22cf55243d501cbde09250e28b204704f65edbe3f82fd38f967b6e1": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/images/techtop1.svg",
+    "originalName": "techtop1.svg",
+    "size": 726,
+    "ext": ".svg"
+  },
+  "6c135e8da17eaaeea4e1880303b8332ab622c7e13faae801c4a5ec34c1a6efbd": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/images/techtop2.svg",
+    "originalName": "techtop2.svg",
+    "size": 727,
+    "ext": ".svg"
+  },
+  "c6bf756d69350cac353a6c2bb98fe79c23d60538305c6f6245ede3f6dfeec29e": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/techmid4.png",
+    "originalName": "techmid4.png",
+    "size": 577861,
+    "ext": ".png",
+    "width": 1027,
+    "height": 865
+  },
+  "c4a62d3f64117b8b0daf63857759653b059e10aaf47169bf81e0ac9adabbea7c": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/images/bluemidline.png",
+    "originalName": "bluemidline.png",
+    "size": 26176,
+    "ext": ".png",
+    "width": 706,
+    "height": 707
+  },
+  "4f0673e5d9b2b90a1cd3b8bbbf7e415ae00b23236ab44ee3cc7fab3241347010": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/tmid1.svg",
+    "originalName": "tmid1.svg",
+    "size": 1688,
+    "ext": ".svg"
+  },
+  "2fa22f03b84b4fab39db98d6fa183042006aaf199993f96902c23e8b10a136df": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/techmid3.png",
+    "originalName": "techmid3.png",
+    "size": 316971,
+    "ext": ".png",
+    "width": 1110,
+    "height": 1098
+  },
+  "f6674228c165070d213c5e6f6aaf1fbfe27d1b24785b7b4074bf959ff43dc63d": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/tmid2.svg",
+    "originalName": "tmid2.svg",
+    "size": 6715,
+    "ext": ".svg"
+  },
+  "2e5ddaf37cabdc74587a2e234375bf77ed79f54d0286054f4dbcdbb83f1f743b": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/tmid3.svg",
+    "originalName": "tmid3.svg",
+    "size": 3591,
+    "ext": ".svg"
+  },
+  "d21ea270ffa4f64db3ff6f5a8d30e5da9b25cd89e6360db824aa33654c43f179": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/tmid4.svg",
+    "originalName": "tmid4.svg",
+    "size": 1716,
+    "ext": ".svg"
+  },
+  "723663a68b2b8f9d15d62c2a0dbf4019aaf5165f022b038fd9b2996346675141": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/tmid5.svg",
+    "originalName": "tmid5.svg",
+    "size": 2402,
+    "ext": ".svg"
+  },
+  "ab22945cb4d8673f7e6ed8fc6a655ec5a95cc3871b3d5edd12f98fe1df6e03ed": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/tmid6.svg",
+    "originalName": "tmid6.svg",
+    "size": 20859,
+    "ext": ".svg"
+  },
+  "f823c8cc6422c84dad73c32061dcfa14db48a74fe740407784a4cf22d9f0b6b1": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/tmid7.svg",
+    "originalName": "tmid7.svg",
+    "size": 4488,
+    "ext": ".svg"
+  },
+  "db27c2ade5044083ab059f1bea813d280df3e5e8c78a4663f3f7fc412d5e7c3b": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/images/typearow.png",
+    "originalName": "typearow.png",
+    "size": 3373,
+    "ext": ".png",
+    "width": 187,
+    "height": 118
+  },
+  "4eeabdc0fda7c2449ea086b3a7ab88f02ec7c6fc3ce0a4095cc2664f1357b1b1": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/images/frontarow2.png",
+    "originalName": "frontarow2.png",
+    "size": 4136,
+    "ext": ".png",
+    "width": 183,
+    "height": 262
+  },
+  "503eadd1c18363418fa40fb09171e665f5fc7a700a0810a77a1fe9969994f504": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/images/frontarow.png",
+    "originalName": "frontarow.png",
+    "size": 3638,
+    "ext": ".png",
+    "width": 202,
+    "height": 184
+  },
+  "e89622adb56d5b2bb8507039bd0fc1c6f68806d7d827e848e28e0729e9502b65": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/images/cloudarow.png",
+    "originalName": "cloudarow.png",
+    "size": 2191,
+    "ext": ".png",
+    "width": 150,
+    "height": 71
+  },
+  "899d234d83d8bde0c743d2fc450b98829c1618a177ba308d775e03c4943cab72": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/techmid2new.png",
+    "originalName": "techmid2new.png",
+    "size": 4655947,
+    "ext": ".png",
+    "width": 2325,
+    "height": 2530
+  },
+  "224b8a288dcda4c1e222a846433e910f5cfd55d7235beee57e79e9d93b7769e8": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/06/tmid8.svg",
+    "originalName": "tmid8.svg",
+    "size": 3092,
+    "ext": ".svg"
+  },
+  "634caec3cea8ec1f10af62c38980455bee936bf2574e460a67952b3fe7143280": {
+    "originalUrl": "https://triolla.io/wp-content/uploads/2025/07/Frame-2147224193.png",
+    "originalName": "Frame-2147224193.png",
+    "size": 19686412,
+    "ext": ".png",
+    "width": 6075,
+    "height": 4455
+  },
+  "b92767a35aca6b66a5d77881cd71bfbd368eefe54042487477e755fc5bbacc3e": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/images/oursteakblue.svg",
+    "originalName": "oursteakblue.svg",
+    "size": 618,
+    "ext": ".svg"
+  },
+  "fc62194510415fc86ac4233015dcf6b12d491bc61180590db85519eee26d4203": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/images/bigribbon.svg",
+    "originalName": "bigribbon.svg",
+    "size": 2391661,
+    "ext": ".svg"
+  },
+  "708a8602adc477decdddaef0b13953ddf72eb24efa445fbb14284167eb9aae74": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/fonts/CoreNaraeProW01-Pro.eot",
+    "originalName": "CoreNaraeProW01-Pro.eot",
+    "size": 57190,
+    "ext": ".eot"
+  },
+  "ae1a09b07a5a172a85a6da842ac8f9766f5999807d6dff58037ea55219f44e09": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/fonts/CoreNaraeProW01-Pro.woff2",
+    "originalName": "CoreNaraeProW01-Pro.woff2",
+    "size": 25652,
+    "ext": ".woff2"
+  },
+  "efd8405c6da0ffd0c55028a6de1fc74c4620408d8032c024247e297423e2a17f": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/fonts/CoreNaraeProW01-Pro.woff",
+    "originalName": "CoreNaraeProW01-Pro.woff",
+    "size": 31008,
+    "ext": ".woff"
+  },
+  "132ba9ed537ef5c5d6c3df698849088651ac94bb808d31ac28b1f1093d6bc011": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/fonts/CoreNaraeProW01-Pro.ttf",
+    "originalName": "CoreNaraeProW01-Pro.ttf",
+    "size": 56972,
+    "ext": ".ttf"
+  },
+  "8df1834c37c4fda660a07b26657175ce5140b62345126ac0ed86a617b870eb3d": {
+    "originalUrl": "https://triolla.io/wp-content/themes/triolla/fonts/CoreNaraeProW01-Pro.svg",
+    "originalName": "CoreNaraeProW01-Pro.svg",
+    "size": 247910,
+    "ext": ".svg"
+  }
+}
