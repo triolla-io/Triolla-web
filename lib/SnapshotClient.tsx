@@ -234,41 +234,20 @@ function SnapshotClientImpl({ entry, bodyHtml, widgetProps }: Props) {
     const _isRocketLazyLoader = (src: string): boolean =>
       src.includes("RocketLazyLoadScripts");
 
-    // Third-party tracking deferred until first user interaction — mirrors
-    // WPRocket's rocketlazyloadscript behaviour on the live site. Without this,
-    // Lighthouse (no interaction) fires GTM → LinkedIn/Google Ads/HubSpot cookies
-    // and the deprecated AttributionReporting API, tanking Best Practices.
+    // Third-party tracking scripts are skipped entirely on the snapshot.
+    // The snapshot is an SEO mirror — the live site already fires these pixels.
+    // Loading them here: (a) tanks Best Practices via third-party cookies + deprecated APIs,
+    // (b) double-counts analytics, (c) adds ~2s to page load with no benefit.
     const _TRACKING = /googletagmanager\.com|snap\.licdn|px\.ads\.linkedin|connect\.facebook\.net|js\.hs-scripts|js\.hsforms|assets\.calendly|static\.hotjar|js\.clarity\.ms|googleadservices|doubleclick\.net|ahrefs|hsadspixel|hubspot|\/cache\/min\/1\/\d+\.js/i;
 
-    let _deferred: Array<() => void> = [];
-    let _deferFired = false;
-    const _fireDeferredTracking = () => {
-      if (_deferFired) return;
-      _deferFired = true;
-      _deferred.forEach((fn) => fn());
-      _deferred = [];
-    };
-    const _INTERACTION = ["mousedown", "touchstart", "keydown", "scroll", "wheel"] as const;
-    for (const ev of _INTERACTION) {
-      // isRocket:true bypasses WPRocket's addEventListener interception so our
-      // deferred-tracking listener actually registers on the real window event.
-      window.addEventListener(ev, _fireDeferredTracking, { passive: true, capture: true, once: true, isRocket: true } as AddEventListenerOptions);
-    }
-
     const inlineByPosition = new Map<number, string[]>();
-    const _deferredInline = new Map<number, string[]>();
     for (const s of entry.inlineScripts) {
       if (_looksLikeJson(s.code)) continue;
       if (_isRocketLazyLoader(s.code)) continue;
-      if (_TRACKING.test(s.code)) {
-        const arr = _deferredInline.get(s.position) ?? [];
-        arr.push(s.code);
-        _deferredInline.set(s.position, arr);
-      } else {
-        const arr = inlineByPosition.get(s.position) ?? [];
-        arr.push(s.code);
-        inlineByPosition.set(s.position, arr);
-      }
+      if (_TRACKING.test(s.code)) continue;
+      const arr = inlineByPosition.get(s.position) ?? [];
+      arr.push(s.code);
+      inlineByPosition.set(s.position, arr);
     }
 
     const _execInline = (code: string) => {
@@ -279,27 +258,26 @@ function SnapshotClientImpl({ entry, bodyHtml, widgetProps }: Props) {
 
     const _runInlineAt = (pos: number) => {
       for (const code of inlineByPosition.get(pos) ?? []) _execInline(code);
-      for (const code of _deferredInline.get(pos) ?? []) {
-        _deferred.push(() => _execInline(code));
-      }
     };
-
-    const _loadScript = (src: string): Promise<void> =>
-      new Promise<void>((resolve) => {
-        const script = document.createElement("script");
-        script.src = src;
-        script.onload = () => {
-          const jq = (window as unknown as { jQuery?: unknown }).jQuery;
-          if (jq) (window as unknown as { $: unknown }).$ = jq;
-          if (entry.gsapHook && /ScrollTrigger\.min\.js/i.test(src)) _registerGsap();
-          resolve();
-        };
-        script.onerror = () => resolve();
-        document.body.appendChild(script);
-      });
 
     const loadScriptsSequentially = async () => {
       installSnapshotPluginStubs();
+
+      // Kick off parallel downloads for all scripts before executing any.
+      // Browser will fetch all simultaneously; execution order is still
+      // enforced by the sequential loop below. This turns N×RTT into 1×RTT
+      // for the download phase (e.g. 31 scripts × 150ms → ~150ms total download).
+      for (const src of entry.js) {
+        if (_TRACKING.test(src)) continue;
+        if (document.querySelector(`link[rel="preload"][href="${src}"]`)) continue;
+        if (document.querySelector(`script[src="${src}"]`)) continue;
+        const link = document.createElement("link");
+        link.rel = "preload";
+        link.as = "script";
+        link.href = src;
+        document.head.appendChild(link);
+      }
+
       for (let i = 0; i < entry.js.length; i++) {
         _runInlineAt(i);
         const src = entry.js[i];
@@ -309,10 +287,7 @@ function SnapshotClientImpl({ entry, bodyHtml, widgetProps }: Props) {
           continue;
         }
 
-        if (_TRACKING.test(src)) {
-          _deferred.push(() => _loadScript(src));
-          continue;
-        }
+        if (_TRACKING.test(src)) continue;
 
         await new Promise<void>((resolve) => {
           const script = document.createElement("script");
@@ -423,13 +398,17 @@ function SnapshotClientImpl({ entry, bodyHtml, widgetProps }: Props) {
       // Signal any code waiting for WP Rocket's pipeline to complete.
       try { window.dispatchEvent(new Event("rocket-allScriptsLoaded")); } catch (_) {}
 
-      // 4. Add .loaded class after configured delay (triggers CSS reveal animations)
+      // 4. Add .loaded class — capped at 300ms so preloaded scripts (which now
+      //    finish much faster) don't force an artificially long blank period.
+      //    The original 800ms was sized for sequential download; parallel preloading
+      //    makes that unnecessary. 300ms still gives animation libs (WOW, GSAP) one
+      //    full frame to measure layout before .loaded triggers their reveals.
       setTimeout(() => {
         document.body.classList.add("loaded");
         // Fire a synthetic scroll so scroll-based .show checks run for above-fold
         // elements that would never receive a scroll event otherwise.
         try { window.dispatchEvent(new Event("scroll")); } catch (_) {}
-      }, entry.loadedDelayMs ?? 800);
+      }, Math.min(entry.loadedDelayMs ?? 300, 300));
 
       // 5. Scroll-reveal fallback — two mechanisms in parallel:
       //
@@ -535,7 +514,7 @@ function SnapshotClientImpl({ entry, bodyHtml, widgetProps }: Props) {
           el.addEventListener("pointercancel", finish, { passive: true });
           el.addEventListener("pointerleave", finish, { passive: true });
         });
-      }, (entry.loadedDelayMs ?? 800) + 200);
+      }, Math.min(entry.loadedDelayMs ?? 300, 300) + 200);
 
       // 7. owlCarousel mobile-resize fix.
       //

@@ -9,6 +9,27 @@ const DEFAULT_LOCALE = process.env.SITE_DEFAULT_LOCALE ?? "en";
 const RTL_LOCALES = new Set(["ar", "fa", "he", "ur"]);
 const IS_RTL = RTL_LOCALES.has(DEFAULT_LOCALE.toLowerCase());
 
+// Pre-hydration visibility fix.
+//
+// Static HTML is served with the theme's CSS already parsed, so rules like
+// `.portfolio_text h1 { opacity:0 }` and `.wow { visibility:hidden }` take
+// effect immediately — before React hydrates and adds `.show` to every element.
+// This creates a flash of invisible content (FOIC) that lasts until
+// useLayoutEffect fires (~100–400ms after first paint).
+//
+// Fix: while body lacks `.loaded` (set by SnapshotClient after scripts run),
+// force all snapshot content to be fully visible. Once `.loaded` lands, this
+// rule becomes inert and the theme's .show / .animated CSS takes over — by
+// which point flushSnapshotVisibility has already added .show everywhere.
+//
+// WOW.js keeps `visibility:hidden` until `.animated` is added on scroll; since
+// snapshots don't animate on scroll we override that globally too.
+const PRE_HYDRATION_FIX = `
+body:not(.loaded) [data-snapshot-client],
+body:not(.loaded) [data-snapshot-client] *{opacity:1!important;visibility:visible!important}
+.wow{visibility:visible!important}
+`;
+
 // Scrollbar styling from the real site — these rules only appear in some per-page CSS
 // bundles so they'd be missing on most pages without this global injection.
 const SCROLLBAR_FIX = `
@@ -177,6 +198,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           as="image"
           href={IS_RTL ? "/wp-content/uploads/2025/05/menuimg.jpg" : "/wp-content/uploads/2025/06/menu-image2.png"}
         />
+        {/* eslint-disable-next-line react/no-danger */}
+        <style dangerouslySetInnerHTML={{ __html: PRE_HYDRATION_FIX }} />
         {/* eslint-disable-next-line react/no-danger */}
         <style dangerouslySetInnerHTML={{ __html: NAV_DROPDOWN_FIX }} />
         {/* eslint-disable-next-line react/no-danger */}

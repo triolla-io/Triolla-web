@@ -6,12 +6,31 @@ import { join } from "path";
 // doesn't actually call getEntry/getAllSlugs at runtime.
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 let _registryCache: any[] | null = null;
+// O(1) lookup index: "<slug>|<locale>" → entry, built once alongside _registryCache.
+let _registryMap: Map<string, SnapshotEntry> | null = null;
+
 function _loadRegistry(): SnapshotEntry[] {
   if (_registryCache) return _registryCache as SnapshotEntry[];
   _registryCache = JSON.parse(
     readFileSync(join(process.cwd(), "lib", "snapshotRegistry.json"), "utf-8"),
   );
+  // Build the Map at the same time so getEntry() never scans the array.
+  _registryMap = new Map<string, SnapshotEntry>();
+  for (const e of _registryCache as SnapshotEntry[]) {
+    _registryMap.set(`${e.slug}|${e.locale}`, e);
+    // Also store a locale-agnostic key so slug-only lookups still work.
+    if (!_registryMap.has(`${e.slug}|`)) _registryMap.set(`${e.slug}|`, e);
+  }
   return _registryCache as SnapshotEntry[];
+}
+
+function _mapLookup(slug: string, locale: string): SnapshotEntry | null {
+  if (!_registryMap) _loadRegistry();
+  return (
+    _registryMap!.get(`${slug}|${locale}`) ??
+    _registryMap!.get(`${slug}|`) ??
+    null
+  );
 }
 
 export interface SnapshotHeadMeta {
@@ -90,22 +109,14 @@ function _getDomainPrefix(): string {
 }
 
 export function getEntry(slug: string, locale: string): SnapshotEntry | null {
-  const registry = _loadRegistry();
-  // Exact match
-  const exact =
-    registry.find((e) => e.slug === slug && e.locale === locale) ??
-    registry.find((e) => e.slug === slug);
+  // O(1) map lookup — no array scan.
+  const exact = _mapLookup(slug, locale);
   if (exact) return exact;
 
   // Fallback: try with domain prefix (e.g. "home" → "triolla-io-home")
   const domainPrefix = _getDomainPrefix();
   if (domainPrefix) {
-    const prefixed = `${domainPrefix}${slug}`;
-    return (
-      registry.find((e) => e.slug === prefixed && e.locale === locale) ??
-      registry.find((e) => e.slug === prefixed) ??
-      null
-    );
+    return _mapLookup(`${domainPrefix}${slug}`, locale);
   }
 
   return null;

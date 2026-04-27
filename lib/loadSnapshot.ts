@@ -1,9 +1,10 @@
 import "server-only";
 import { notFound } from "next/navigation";
 import { readFile } from "fs/promises";
+import { unstable_cache } from "next/cache";
 import path from "path";
 import { readDrafts } from "./draftStore";
-import { normalizeFragmentHtml } from "./normalizeFragmentHtml";
+import { normalizeFragmentHtml, patchImageAttributes } from "./normalizeFragmentHtml";
 import { applyPatches } from "./patches";
 import { getEntry, type SnapshotEntry } from "./snapshotRegistry";
 
@@ -26,6 +27,19 @@ export type LoadedSnapshot = {
   widgetProps: Record<string, { type: string; props: unknown }> | null;
 };
 
+// Cache the expensive part: disk read + HTML normalization.
+// Keyed by fragment path so a re-extract (new fragment filename) busts the cache.
+// Editor mode bypasses this cache so draft patches are always applied fresh.
+const _readFragment = unstable_cache(
+  async (fragmentPath: string) => {
+    const raw = await readFile(fragmentPath, "utf-8");
+    const normalized = normalizeFragmentHtml(raw);
+    return patchImageAttributes(normalized);
+  },
+  ["snapshot-fragment"],
+  { revalidate: false },
+);
+
 export async function loadSnapshot(
   slug: string,
   locale: string,
@@ -35,9 +49,12 @@ export async function loadSnapshot(
 
   try {
     const fragmentPath = path.join(process.cwd(), "public", entry.fragment);
-    let bodyHtml = await readFile(fragmentPath, "utf-8");
+
+    let patchedHtml: string;
+    let lcpImageUrl: string | null | undefined;
 
     if (EDITOR_ENABLED) {
+      let bodyHtml = await readFile(fragmentPath, "utf-8");
       try {
         const patches = await readDrafts(slug, locale);
         if (patches.length > 0) {
@@ -47,11 +64,22 @@ export async function loadSnapshot(
       } catch (e) {
         console.error("[loadSnapshot] draft patches failed", slug, locale, e);
       }
+      const normalized = normalizeFragmentHtml(bodyHtml);
+      ({ html: patchedHtml, lcpImageUrl } = patchImageAttributes(normalized));
+    } else {
+      ({ html: patchedHtml, lcpImageUrl } = await _readFragment(fragmentPath));
     }
 
     const widgetProps = await readWidgetProps(slug, locale);
 
-    return { entry, bodyHtml: normalizeFragmentHtml(bodyHtml), widgetProps };
+    // Augment entry with a detected LCP image preload when the registry doesn't
+    // already supply one. This lets the page emit a <link rel="preload"> in the
+    // SSR <head> so the browser starts the download before React hydrates.
+    const augmentedEntry = lcpImageUrl && !entry.imagePreloads?.length
+      ? { ...entry, imagePreloads: [{ href: lcpImageUrl }] }
+      : entry;
+
+    return { entry: augmentedEntry, bodyHtml: patchedHtml, widgetProps };
   } catch {
     notFound();
   }

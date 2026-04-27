@@ -138,20 +138,22 @@ const nextConfig: NextConfig = {
         ],
       },
     {
-      source: "/assets/_cas/:path*",
-      headers: [
-        {
-          key: "Cache-Control",
-          value: "public, max-age=31536000, immutable",
-        },
-      ],
-    },
-    {
       source: "/assets/:path*",
       headers: [
         {
           key: "Cache-Control",
           value: "public, max-age=604800, stale-while-revalidate=86400",
+        },
+      ],
+    },
+    {
+      // Must come AFTER /assets/:path* so it overrides Cache-Control for CAS files.
+      // CAS filenames are SHA-256 hashes so content never changes — safe to cache forever.
+      source: "/assets/_cas/:path*",
+      headers: [
+        {
+          key: "Cache-Control",
+          value: "public, max-age=31536000, immutable",
         },
       ],
     },
