@@ -37,19 +37,56 @@ export default function SnapshotScripts({ entry }: Props) {
       const t = src.trimStart();
       return t.startsWith("{") || t.startsWith("[");
     };
-    const inlineByPosition = new Map<number, string[]>();
-    for (const s of entry.inlineScripts) {
-      if (looksLikeJson(s.code)) continue;
-      const arr = inlineByPosition.get(s.position) ?? [];
-      arr.push(s.code);
-      inlineByPosition.set(s.position, arr);
+
+    // Third-party tracking domains deferred until first user interaction,
+    // mirroring WPRocket's rocketlazyloadscript behaviour on the real site.
+    // Without this, Lighthouse (no interaction) fires GTM → LinkedIn/Google Ads
+    // cookies + deprecated AttributionReporting API → Best Practices tanks.
+    const DEFERRED_PATTERN = /googletagmanager\.com|snap\.licdn|px\.ads\.linkedin|connect\.facebook\.net|js\.hs-scripts|js\.hsforms|assets\.calendly|static\.hotjar|js\.clarity\.ms|googleadservices|doubleclick\.net|ahrefs/i;
+
+    const isDeferred = (code: string) => DEFERRED_PATTERN.test(code);
+
+    let deferredCallbacks: Array<() => void> = [];
+    let deferFired = false;
+
+    const fireDeferredOnInteraction = () => {
+      if (deferFired) return;
+      deferFired = true;
+      for (const cb of deferredCallbacks) cb();
+      deferredCallbacks = [];
+      const events = ["mousedown", "touchstart", "keydown", "scroll", "wheel"] as const;
+      for (const e of events) window.removeEventListener(e, fireDeferredOnInteraction, { capture: true });
+    };
+    const INTERACTION_EVENTS = ["mousedown", "touchstart", "keydown", "scroll", "wheel"] as const;
+    for (const e of INTERACTION_EVENTS) {
+      window.addEventListener(e, fireDeferredOnInteraction, { passive: true, capture: true, once: true });
     }
 
+    const inlineByPosition = new Map<number, string[]>();
+    const deferredInlineByPosition = new Map<number, string[]>();
+    for (const s of entry.inlineScripts) {
+      if (looksLikeJson(s.code)) continue;
+      if (isDeferred(s.code)) {
+        const arr = deferredInlineByPosition.get(s.position) ?? [];
+        arr.push(s.code);
+        deferredInlineByPosition.set(s.position, arr);
+      } else {
+        const arr = inlineByPosition.get(s.position) ?? [];
+        arr.push(s.code);
+        inlineByPosition.set(s.position, arr);
+      }
+    }
+
+    const execInline = (code: string) => {
+      const el = document.createElement("script");
+      el.textContent = code;
+      document.body.appendChild(el);
+    };
+
     const runInlineAt = (pos: number) => {
-      for (const code of inlineByPosition.get(pos) ?? []) {
-        const el = document.createElement("script");
-        el.textContent = code;
-        document.body.appendChild(el);
+      for (const code of inlineByPosition.get(pos) ?? []) execInline(code);
+      for (const code of deferredInlineByPosition.get(pos) ?? []) {
+        deferredCallbacks.push(() => execInline(code));
       }
     };
 
@@ -66,6 +103,19 @@ export default function SnapshotScripts({ entry }: Props) {
       }
     };
 
+    const loadScript = (src: string): Promise<void> =>
+      new Promise<void>((resolve) => {
+        const script = document.createElement("script");
+        script.src = src;
+        script.onload = () => {
+          reEstablishJQuery();
+          if (entry.gsapHook && /ScrollTrigger\.min\.js/i.test(src)) registerGsap();
+          resolve();
+        };
+        script.onerror = () => resolve();
+        document.body.appendChild(script);
+      });
+
     const loadScriptsSequentially = async () => {
       for (let i = 0; i < entry.js.length; i++) {
         runInlineAt(i);
@@ -73,25 +123,16 @@ export default function SnapshotScripts({ entry }: Props) {
 
         if (document.querySelector(`script[src="${src}"]`)) {
           reEstablishJQuery();
-          if (entry.gsapHook && /ScrollTrigger\.min\.js/i.test(src)) {
-            registerGsap();
-          }
+          if (entry.gsapHook && /ScrollTrigger\.min\.js/i.test(src)) registerGsap();
           continue;
         }
 
-        await new Promise<void>((resolve) => {
-          const script = document.createElement("script");
-          script.src = src;
-          script.onload = () => {
-            reEstablishJQuery();
-            if (entry.gsapHook && /ScrollTrigger\.min\.js/i.test(src)) {
-              registerGsap();
-            }
-            resolve();
-          };
-          script.onerror = () => resolve();
-          document.body.appendChild(script);
-        });
+        if (DEFERRED_PATTERN.test(src)) {
+          deferredCallbacks.push(() => loadScript(src));
+          continue;
+        }
+
+        await loadScript(src);
       }
 
       runInlineAt(entry.js.length);
