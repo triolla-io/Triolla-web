@@ -107,7 +107,7 @@ const NAV_DROPDOWN_FIX = `
   .nav-dropdown-portal>li>ul>li:last-child{margin-bottom:0}
   .nav-dropdown-portal>li>ul>li>a{
     font-size:20px;color:#000;font-family:SFProText,-apple-system,BlinkMacSystemFont,sans-serif;
-    font-weight:510;line-height:41px;padding:0;display:block;text-decoration:none;
+    font-weight:510;line-height:41px;padding:0;display:block;text-decoration:none;white-space:nowrap;
   }
   .nav-dropdown-portal>li>ul>li>a:hover{color:#3088ef}
 }
@@ -121,11 +121,6 @@ const NAV_DROPDOWN_FIX = `
 // the dropdown opens, so it always sits exactly below the nav pill regardless
 // of viewport size or scroll state.
 const NAV_HOVER_SCRIPT = `(function(){
-  function log(msg,data,hyp){
-    fetch('/api/dbg/',{method:'POST',headers:{'Content-Type':'application/json'},
-    body:JSON.stringify({sessionId:'1accee',location:'layout.tsx:NAV_HOVER_SCRIPT',message:msg,data:data,hypothesisId:hyp,timestamp:Date.now()})}).catch(function(){});
-  }
-
   function init(){
     if(window.innerWidth<1200)return;
     var bigmenu=document.querySelector('.header_menu ul.menu>li.bigmenu');
@@ -135,7 +130,7 @@ const NAV_HOVER_SCRIPT = `(function(){
     document.body.appendChild(panel);
     panel.classList.add('nav-dropdown-portal');
 
-    var t,logged=false;
+    var t;
     var W=843;
     function leftNudge(){
       return window.innerWidth<=1365?202:333;
@@ -154,18 +149,6 @@ const NAV_HOVER_SCRIPT = `(function(){
       clearTimeout(t);
       place();
       panel.classList.add('open');
-      if(!logged){
-        logged=true;
-        log('portal 1:1 place()',{
-          leftNudge:leftNudge(),
-          innerWidth: window.innerWidth,
-          rect: {l:Math.round(bigmenu.getBoundingClientRect().left),t:Math.round(bigmenu.getBoundingClientRect().top)},
-          panel: {l:panel.style.left,t:panel.style.top},
-          panelBgImage: window.getComputedStyle(panel).backgroundImage,
-          openTransition: window.getComputedStyle(panel).transitionDuration,
-          hideDelayMs: 80
-        },'PERF');
-      }
     }
     function hide(){t=setTimeout(function(){panel.classList.remove('open');},80);}
     function onMove(){if(panel.classList.contains('open'))place();}

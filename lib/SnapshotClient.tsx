@@ -120,34 +120,6 @@ function SnapshotClientImpl({ entry, bodyHtml, widgetProps }: Props) {
   /** Bumps on popstate and bfcache pageshow so the one-shot script pipeline re-runs when JS state survives without a remount. */
   const [historyBust, setHistoryBust] = useState(0);
 
-  // #region agent log
-  const sendDbg = (message: string, data: Record<string, unknown>, hypothesisId: string) => {
-    fetch("http://127.0.0.1:7603/ingest/59b84e23-fb2a-455e-81f4-e2462708c27b", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "X-Debug-Session-Id": "1accee",
-      },
-      body: JSON.stringify({
-        sessionId: "1accee",
-        location: "SnapshotClient.tsx:SnapshotClientImpl",
-        message,
-        data: { ...data, historyBust, pathname, slug: entry.slug },
-        timestamp: Date.now(),
-        hypothesisId,
-        runId: "back-nav-verify",
-      }),
-    }).catch(() => {});
-  };
-  useEffect(() => {
-    sendDbg("impl mount", { remountKey: `${entry.slug}::${entry.locale}` }, "H2");
-  }, []);
-  useEffect(() => {
-    if (historyBust > 0) {
-      sendDbg("historyBust tick (pipeline will re-run)", { historyBust }, "H3");
-    }
-  }, [historyBust]);
-  // #endregion
 
   // Synchronous: home h1 (and other opacity:0 → .show) must not wait on the
   // one-shot script pipeline — it can be skipped (injectedRef) on client nav/back.
@@ -262,22 +234,69 @@ function SnapshotClientImpl({ entry, bodyHtml, widgetProps }: Props) {
     const _isRocketLazyLoader = (src: string): boolean =>
       src.includes("RocketLazyLoadScripts");
 
+    // Third-party tracking deferred until first user interaction — mirrors
+    // WPRocket's rocketlazyloadscript behaviour on the live site. Without this,
+    // Lighthouse (no interaction) fires GTM → LinkedIn/Google Ads/HubSpot cookies
+    // and the deprecated AttributionReporting API, tanking Best Practices.
+    const _TRACKING = /googletagmanager\.com|snap\.licdn|px\.ads\.linkedin|connect\.facebook\.net|js\.hs-scripts|js\.hsforms|assets\.calendly|static\.hotjar|js\.clarity\.ms|googleadservices|doubleclick\.net|ahrefs|hsadspixel|hubspot|\/cache\/min\/1\/\d+\.js/i;
+
+    let _deferred: Array<() => void> = [];
+    let _deferFired = false;
+    const _fireDeferredTracking = () => {
+      if (_deferFired) return;
+      _deferFired = true;
+      _deferred.forEach((fn) => fn());
+      _deferred = [];
+    };
+    const _INTERACTION = ["mousedown", "touchstart", "keydown", "scroll", "wheel"] as const;
+    for (const ev of _INTERACTION) {
+      // isRocket:true bypasses WPRocket's addEventListener interception so our
+      // deferred-tracking listener actually registers on the real window event.
+      window.addEventListener(ev, _fireDeferredTracking, { passive: true, capture: true, once: true, isRocket: true } as AddEventListenerOptions);
+    }
+
     const inlineByPosition = new Map<number, string[]>();
+    const _deferredInline = new Map<number, string[]>();
     for (const s of entry.inlineScripts) {
       if (_looksLikeJson(s.code)) continue;
       if (_isRocketLazyLoader(s.code)) continue;
-      const arr = inlineByPosition.get(s.position) ?? [];
-      arr.push(s.code);
-      inlineByPosition.set(s.position, arr);
+      if (_TRACKING.test(s.code)) {
+        const arr = _deferredInline.get(s.position) ?? [];
+        arr.push(s.code);
+        _deferredInline.set(s.position, arr);
+      } else {
+        const arr = inlineByPosition.get(s.position) ?? [];
+        arr.push(s.code);
+        inlineByPosition.set(s.position, arr);
+      }
     }
 
+    const _execInline = (code: string) => {
+      const el = document.createElement("script");
+      el.textContent = code;
+      document.body.appendChild(el);
+    };
+
     const _runInlineAt = (pos: number) => {
-      for (const code of inlineByPosition.get(pos) ?? []) {
-        const el = document.createElement("script");
-        el.textContent = code;
-        document.body.appendChild(el);
+      for (const code of inlineByPosition.get(pos) ?? []) _execInline(code);
+      for (const code of _deferredInline.get(pos) ?? []) {
+        _deferred.push(() => _execInline(code));
       }
     };
+
+    const _loadScript = (src: string): Promise<void> =>
+      new Promise<void>((resolve) => {
+        const script = document.createElement("script");
+        script.src = src;
+        script.onload = () => {
+          const jq = (window as unknown as { jQuery?: unknown }).jQuery;
+          if (jq) (window as unknown as { $: unknown }).$ = jq;
+          if (entry.gsapHook && /ScrollTrigger\.min\.js/i.test(src)) _registerGsap();
+          resolve();
+        };
+        script.onerror = () => resolve();
+        document.body.appendChild(script);
+      });
 
     const loadScriptsSequentially = async () => {
       installSnapshotPluginStubs();
@@ -286,9 +305,12 @@ function SnapshotClientImpl({ entry, bodyHtml, widgetProps }: Props) {
         const src = entry.js[i];
 
         if (document.querySelector(`script[src="${src}"]`)) {
-          if (entry.gsapHook && /ScrollTrigger\.min\.js/i.test(src)) {
-            _registerGsap();
-          }
+          if (entry.gsapHook && /ScrollTrigger\.min\.js/i.test(src)) _registerGsap();
+          continue;
+        }
+
+        if (_TRACKING.test(src)) {
+          _deferred.push(() => _loadScript(src));
           continue;
         }
 
@@ -547,24 +569,6 @@ function SnapshotClientImpl({ entry, bodyHtml, widgetProps }: Props) {
   useEffect(() => {
     const onPageShow = (e: PageTransitionEvent) => {
       if (e.persisted) {
-        // #region agent log
-        fetch("http://127.0.0.1:7603/ingest/59b84e23-fb2a-455e-81f4-e2462708c27b", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            "X-Debug-Session-Id": "1accee",
-          },
-          body: JSON.stringify({
-            sessionId: "1accee",
-            location: "SnapshotClient.tsx:pageshow",
-            message: "bfcache pageshow (persisted)",
-            data: { pathname, slug: entry.slug },
-            timestamp: Date.now(),
-            hypothesisId: "H3",
-            runId: "back-nav-verify",
-          }),
-        }).catch(() => {});
-        // #endregion
         injectedRef.current = false;
         setHistoryBust((n) => n + 1);
         requestAnimationFrame(() => replayPostSnapshotPaint());
