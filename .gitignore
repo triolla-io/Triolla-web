@@ -35,3 +35,6 @@ scripts/_he-snap.mjs
 
 # snapshot pipeline artifacts (build-time QA outputs, not runtime)
 .pipeline/
+
+# lighthouse audit reports (per-machine, large)
+.lighthouse/

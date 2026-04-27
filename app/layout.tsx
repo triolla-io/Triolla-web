@@ -1,4 +1,5 @@
-import type { Metadata, ReactNode } from "react";
+import type { ReactNode } from "react";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   robots: { index: false, follow: false },
@@ -30,7 +31,10 @@ const SCROLLBAR_FIX = `
 //    (or −202px at viewport ≤ 1365px) — same as theme absolute offsets.
 // ─────────────────────────────────────────────────────────────────────────────
 const NAV_DROPDOWN_FIX = `
+/* Hide the portaled panel on every viewport — desktop block below re-enables it */
+.nav-dropdown-portal{display:none!important}
 @media only screen and (min-width:1200px){
+  .nav-dropdown-portal{display:block!important}
   .header{z-index:100!important}
   .header_menu .bigmenu>ul{display:none}
 
@@ -123,6 +127,7 @@ const NAV_HOVER_SCRIPT = `(function(){
   }
 
   function init(){
+    if(window.innerWidth<1200)return;
     var bigmenu=document.querySelector('.header_menu ul.menu>li.bigmenu');
     var panel=bigmenu&&bigmenu.querySelector(':scope>ul');
     if(!bigmenu||!panel)return;
@@ -171,10 +176,12 @@ const NAV_HOVER_SCRIPT = `(function(){
     window.addEventListener('resize',onMove,{passive:true});
     window.addEventListener('scroll',onMove,{passive:true});
   }
-  if(document.querySelector('.header_menu ul.menu>li.bigmenu')){init();}
-  else{var mo=new MutationObserver(function(){
-    if(document.querySelector('.header_menu ul.menu>li.bigmenu')){mo.disconnect();init();}
-  });mo.observe(document.body||document.documentElement,{childList:true,subtree:true});}
+  if(window.innerWidth>=1200){
+    if(document.querySelector('.header_menu ul.menu>li.bigmenu')){init();}
+    else{var mo=new MutationObserver(function(){
+      if(document.querySelector('.header_menu ul.menu>li.bigmenu')){mo.disconnect();init();}
+    });mo.observe(document.body||document.documentElement,{childList:true,subtree:true});}
+  }
 })();`;
 
 export default function RootLayout({ children }: { children: ReactNode }) {

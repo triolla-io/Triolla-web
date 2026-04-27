@@ -9,7 +9,9 @@
     "lint": "next lint",
     "verify:hebrew-routes": "node scripts/verify-hebrew-routes.mjs",
     "register:hebrew-fragments": "node scripts/register-orphan-he-fragments.mjs",
-    "ingest:hebrew-orphans": "node scripts/ingest-hebrew-orphans.mjs"
+    "ingest:hebrew-orphans": "node scripts/ingest-hebrew-orphans.mjs",
+    "seo:audit": "node scripts/seo-loop.mjs --once",
+    "seo:loop": "node scripts/seo-loop.mjs"
   },
   "dependencies": {
     "@tiptap/extension-color": "^3.22.4",
@@ -34,6 +36,8 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "chrome-launcher": "^1.2.1",
+    "lighthouse": "^12.8.2",
     "pixelmatch": "^7.1.0",
     "playwright": "^1.59.1",
     "pngjs": "^7.0.0",

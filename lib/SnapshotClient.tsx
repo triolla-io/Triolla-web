@@ -316,6 +316,77 @@ function SnapshotClientImpl({ entry, bodyHtml, widgetProps }: Props) {
     };
 
     loadScriptsSequentially().then(() => {
+      // 3a. Gravity Forms snapshot shim.
+      //
+      //     gravityforms.min.js expects a live WordPress backend for AJAX
+      //     submission and accesses gf_global.number_formats[id].isNumber on
+      //     every input change — both crash in the snapshot environment.
+      //
+      //     Fix 1: patch number_formats so index access never returns undefined.
+      //     Fix 2: define gform.submission.handleButtonClick to intercept the
+      //             submit button onclick, collect the form fields, and POST the
+      //             payload to /api/contact — replacing the form on success.
+      try {
+        type GfGlobal = { number_formats?: Record<string | number, unknown> };
+        const gfg = (window as unknown as { gf_global?: GfGlobal }).gf_global;
+        if (gfg && Array.isArray(gfg.number_formats)) {
+          gfg.number_formats = new Proxy(gfg.number_formats as unknown as Record<string | number, unknown>, {
+            get(target, key: string | symbol) {
+              const k = key as string | number;
+              return k in target ? target[k] : { isNumber: false, isPrice: false };
+            },
+          });
+        }
+      } catch (_) {}
+
+      try {
+        type GformNS = { submission?: { handleButtonClick?: (btn: HTMLElement) => void } };
+        const w = window as unknown as { gform?: GformNS };
+        if (!w.gform) w.gform = {};
+        if (!w.gform.submission?.handleButtonClick) {
+          if (!w.gform.submission) w.gform.submission = {};
+          w.gform.submission.handleButtonClick = function (btn: HTMLElement) {
+            const form = btn.closest("form") as HTMLFormElement | null;
+            if (!form) return;
+
+            const data = new FormData(form);
+            const payload: Record<string, unknown> = {};
+            // Skip Gravity Forms internal hidden fields and the honeypot
+            const GF_INTERNAL = /^(gform_|is_submit_|gf_|state_gforms|_gf_|input_13$)/;
+            data.forEach((val, key) => {
+              if (!GF_INTERNAL.test(key)) payload[key] = val;
+            });
+
+            const wrapper = form.closest(".gform_wrapper") as HTMLElement | null;
+            if (wrapper) {
+              const submitBtn = form.querySelector<HTMLInputElement>("[type=submit]");
+              if (submitBtn) submitBtn.disabled = true;
+            }
+
+            fetch("/api/contact", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify(payload),
+            })
+              .then((r) => {
+                if (r.ok && wrapper) {
+                  wrapper.innerHTML =
+                    '<div class="gform_confirmation_wrapper"><div class="gform_confirmation_message">Thanks — we\'ll be in touch soon!</div></div>';
+                } else if (!r.ok && wrapper) {
+                  const submitBtn = form.querySelector<HTMLInputElement>("[type=submit]");
+                  if (submitBtn) submitBtn.disabled = false;
+                }
+              })
+              .catch(() => {
+                if (wrapper) {
+                  const submitBtn = form.querySelector<HTMLInputElement>("[type=submit]");
+                  if (submitBtn) submitBtn.disabled = false;
+                }
+              });
+          };
+        }
+      } catch (_) {}
+
       // 3. Replay lifecycle events that scripts missed because they were
       //    injected dynamically after those events already fired.
       //
