@@ -1,4 +1,8 @@
-import type { ReactNode } from "react";
+import type { Metadata, ReactNode } from "react";
+
+export const metadata: Metadata = {
+  robots: { index: false, follow: false },
+};
 
 const DEFAULT_LOCALE = process.env.SITE_DEFAULT_LOCALE ?? "en";
 const RTL_LOCALES = new Set(["ar", "fa", "he", "ur"]);
