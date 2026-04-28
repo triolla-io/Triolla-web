@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import type { Metadata } from "next";
+import NavigationProgress from "@/components/NavigationProgress";
 
 export const metadata: Metadata = {
   robots: { index: false, follow: false },
@@ -29,6 +30,25 @@ body:not(.loaded) [data-snapshot-client],
 body:not(.loaded) [data-snapshot-client] *{opacity:1!important;visibility:visible!important}
 .wow{visibility:visible!important}
 `;
+
+// Scroll performance optimization for sticky header + book-a-call button.
+// Removed contain:layout because it breaks button animation sync with header collapse.
+const SCROLL_PERF_FIX = `
+.header,header{will-change:transform;transform:translateZ(0);z-index:100!important}
+.header_book,.hmobbutlftb,.foo_book{will-change:none;transform:translateZ(0);z-index:80;transition:none!important}
+.header_menu ul.menu{will-change:none;z-index:99}
+`;
+
+// Critical ticker CSS — prevents the vertical-list flash before the CAS bundle loads.
+// Targets only .company_triker (the WordPress element class) so it never conflicts
+// with jctkr's own .jctkr-wrapper/.jctkr-initialized classes or other elements.
+// No !important — jctkr can override freely once its CSS arrives.
+const TICKER_FIX = `
+.company_triker{overflow:hidden;position:relative}
+.company_triker ul{position:relative;white-space:nowrap;list-style:none;padding:0;margin:0}
+.company_triker ul li{display:inline-block}
+`;
+
 
 // Scrollbar styling from the real site — these rules only appear in some per-page CSS
 // bundles so they'd be missing on most pages without this global injection.
@@ -128,7 +148,7 @@ const NAV_DROPDOWN_FIX = `
   .nav-dropdown-portal>li>ul>li:last-child{margin-bottom:0}
   .nav-dropdown-portal>li>ul>li>a{
     font-size:20px;color:#000;font-family:SFProText,-apple-system,BlinkMacSystemFont,sans-serif;
-    font-weight:510;line-height:41px;padding:0;display:block;text-decoration:none;white-space:nowrap;
+    font-weight:400;line-height:41px;padding:0;display:block;text-decoration:none;white-space:nowrap;
   }
   .nav-dropdown-portal>li>ul>li>a:hover{color:#3088ef}
 }
@@ -141,6 +161,35 @@ const NAV_DROPDOWN_FIX = `
 // panel to document.body (portal pattern) and position it with JS each time
 // the dropdown opens, so it always sits exactly below the nav pill regardless
 // of viewport size or scroll state.
+// Patch jctkr to never re-initialize elements that already carry
+// .jctkr-initialized (i.e. the snapshot HTML). Runs before any WordPress JS
+// so the patch is in place when jQuery.fn.jctkr is first defined.
+const JCTKR_PATCH = `(function(){
+  function patch($){
+    if(!$ || !$.fn || !$.fn.jctkr || $.fn.__jctkrPatched)return;
+    var orig=$.fn.jctkr;
+    $.fn.jctkr=function(){
+      var args=arguments;
+      return this.each(function(){
+        if(this.classList&&this.classList.contains('jctkr-initialized'))return;
+        orig.apply($(this),args);
+      });
+    };
+    $.fn.__jctkrPatched=true;
+  }
+  // Patch immediately if jQuery is already loaded, then re-patch on every
+  // script load so it catches the moment jctkr.js is first evaluated.
+  patch(window.jQuery||window.$);
+  var _orig=document.createElement.bind(document);
+  document.createElement=function(tag){
+    var el=_orig(tag);
+    if(tag.toLowerCase()==='script'){
+      el.addEventListener('load',function(){patch(window.jQuery||window.$);},true);
+    }
+    return el;
+  };
+})();`;
+
 const NAV_HOVER_SCRIPT = `(function(){
   function init(){
     if(window.innerWidth<1200)return;
@@ -198,15 +247,42 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           as="image"
           href={IS_RTL ? "/wp-content/uploads/2025/05/menuimg.jpg" : "/wp-content/uploads/2025/06/menu-image2.png"}
         />
+        {/* Prefetch top-nav pages so clicks feel instant. */}
+        <link rel="prefetch" href="/about-us/" />
+        <link rel="prefetch" href="/services/" />
+        <link rel="prefetch" href="/blog/" />
+        <link rel="prefetch" href="/contact-us/" />
+        <link rel="prefetch" href="/technology/" />
+        {/* Preload critical SFProText fonts — regular + medium are used for all body text.
+            Without preload the browser discovers these only after parsing the CSS bundle,
+            adding a full extra round-trip before any text can render. */}
+        <link rel="preload" as="font" type="font/woff2" crossOrigin="anonymous"
+          href="/assets/_cas/76b54f15f034f86867ca1ce49d0c357f0b634a004102df3b38e7bd6a60f82bdc.woff2" />
+        <link rel="preload" as="font" type="font/woff2" crossOrigin="anonymous"
+          href="/assets/_cas/5440436a2364a491ee9c38eba1e8c2c3c69bedba857b2ee8bec0c12f0e24d2fc.woff2" />
+        {/* Preconnect to font servers — speeds up font delivery and reduces FOUT. */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://use.typekit.net" crossOrigin="anonymous" />
+        {/* Fallback system fonts while custom fonts load — prevents color/layout shift. */}
+        {/* eslint-disable-next-line react/no-danger */}
+        <style dangerouslySetInnerHTML={{ __html: `html,body{font-family:system-ui,-apple-system,'Segoe UI','Helvetica Neue',sans-serif;color:#333}a{color:#0066cc}` }} />
         {/* eslint-disable-next-line react/no-danger */}
         <style dangerouslySetInnerHTML={{ __html: PRE_HYDRATION_FIX }} />
+        {/* eslint-disable-next-line react/no-danger */}
+        <style dangerouslySetInnerHTML={{ __html: SCROLL_PERF_FIX }} />
+        {/* eslint-disable-next-line react/no-danger */}
+        <style dangerouslySetInnerHTML={{ __html: TICKER_FIX }} />
         {/* eslint-disable-next-line react/no-danger */}
         <style dangerouslySetInnerHTML={{ __html: NAV_DROPDOWN_FIX }} />
         {/* eslint-disable-next-line react/no-danger */}
         <style dangerouslySetInnerHTML={{ __html: SCROLLBAR_FIX }} />
       </head>
       <body>
+        <NavigationProgress />
         {children}
+        {/* eslint-disable-next-line react/no-danger */}
+        <script dangerouslySetInnerHTML={{ __html: JCTKR_PATCH }} />
         {/* eslint-disable-next-line react/no-danger */}
         <script dangerouslySetInnerHTML={{ __html: NAV_HOVER_SCRIPT }} />
       </body>

@@ -211,6 +211,35 @@ function SnapshotClientImpl({ entry, bodyHtml, widgetProps }: Props) {
       document.head.appendChild(link);
     }
 
+    // 1b. Ticker FOUC guard.
+    //
+    // jctkr re-runs when synthetic load/DOMContentLoaded events fire below.
+    // During re-initialization it removes .jctkr-initialized, resets <ul>
+    // inline styles and li display, causing a vertical-list flash for 1-3 s.
+    //
+    // Fix: watch each .jctkr-initialized element with a MutationObserver.
+    // The moment the class is removed (re-init starts) we hide the element.
+    // The moment the class comes back (re-init done) we reveal it instantly.
+    // No fixed timeouts — reveal is exactly synchronized with jctkr finishing.
+    if (typeof MutationObserver !== "undefined") {
+      document.querySelectorAll<HTMLElement>(".jctkr-initialized").forEach((el) => {
+        const mo = new MutationObserver(() => {
+          if (!el.classList.contains("jctkr-initialized")) {
+            el.style.visibility = "hidden";
+            const mo2 = new MutationObserver(() => {
+              if (el.classList.contains("jctkr-initialized")) {
+                mo2.disconnect();
+                el.style.visibility = "";
+              }
+            });
+            mo2.observe(el, { attributes: true, attributeFilter: ["class"] });
+            mo.disconnect();
+          }
+        });
+        mo.observe(el, { attributes: true, attributeFilter: ["class"] });
+      });
+    }
+
     // 2. Inject JS scripts sequentially — each script waits for the previous to load.
     //
     // Group inline scripts by position into an array-per-position map.
@@ -238,7 +267,8 @@ function SnapshotClientImpl({ entry, bodyHtml, widgetProps }: Props) {
     // The snapshot is an SEO mirror — the live site already fires these pixels.
     // Loading them here: (a) tanks Best Practices via third-party cookies + deprecated APIs,
     // (b) double-counts analytics, (c) adds ~2s to page load with no benefit.
-    const _TRACKING = /googletagmanager\.com|snap\.licdn|px\.ads\.linkedin|connect\.facebook\.net|js\.hs-scripts|js\.hsforms|assets\.calendly|static\.hotjar|js\.clarity\.ms|googleadservices|doubleclick\.net|ahrefs|hsadspixel|hubspot|\/cache\/min\/1\/\d+\.js/i;
+    // NOTE: assets.calendly is NOT tracking — it's the booking widget, kept enabled.
+    const _TRACKING = /googletagmanager\.com|snap\.licdn|px\.ads\.linkedin|connect\.facebook\.net|js\.hs-scripts|js\.hsforms|static\.hotjar|js\.clarity\.ms|googleadservices|doubleclick\.net|ahrefs|hsadspixel|hubspot|\/cache\/min\/1\/\d+\.js/i;
 
     const inlineByPosition = new Map<number, string[]>();
     for (const s of entry.inlineScripts) {
