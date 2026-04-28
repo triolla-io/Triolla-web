@@ -28,6 +28,8 @@ const IS_RTL = RTL_LOCALES.has(DEFAULT_LOCALE.toLowerCase());
 const PRE_HYDRATION_FIX = `
 body:not(.loaded) [data-snapshot-client],
 body:not(.loaded) [data-snapshot-client] *{opacity:1!important;visibility:visible!important}
+body:not(.loaded) [data-snapshot-client] .hover-text,
+body:not(.loaded) [data-snapshot-client] .button-overlay{opacity:0!important;visibility:hidden!important}
 .wow{visibility:visible!important}
 `;
 
@@ -148,8 +150,10 @@ const NAV_DROPDOWN_FIX = `
   .nav-dropdown-portal>li>ul>li:last-child{margin-bottom:0}
   .nav-dropdown-portal>li>ul>li>a{
     font-size:20px;color:#000;font-family:SFProText,-apple-system,BlinkMacSystemFont,sans-serif;
-    font-weight:400;line-height:41px;padding:0;display:block;text-decoration:none;white-space:nowrap;
+    font-weight:510;line-height:41px;padding:0;display:block;text-decoration:none;white-space:nowrap;
   }
+  html[dir="rtl"] .nav-dropdown-portal>li>ul>li>a,
+  .rtl .nav-dropdown-portal>li>ul>li>a{font-weight:400}
   .nav-dropdown-portal>li>ul>li>a:hover{color:#3088ef}
 }
 `;
