@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import type { Metadata } from "next";
 import NavigationProgress from "@/components/NavigationProgress";
+import AccessibilityFix from "@/components/AccessibilityFix";
 
 export const metadata: Metadata = {
   robots: { index: false, follow: false },
@@ -38,18 +39,17 @@ body:not(.loaded) [data-snapshot-client] .portfolio_text .arbackbut{bottom:0!imp
 `;
 
 // HEADER_OFFSET_FIX
-// Default: collapse the 46px gap the theme reserves for the ticker (most pages have no ticker).
-// Exception: when .headerticker IS in the DOM (home page rebrand banner), use the sibling
-// selector to push the header below it instead of overlapping it.
-// Also ensure the ticker stacks above the header — SCROLL_PERF_FIX raises .header to
-// z-index:100 for performance, which would otherwise bury the ticker (z:99 in theme CSS).
+// Raise the ticker above the header: SCROLL_PERF_FIX bumps .header to z-index:100 for
+// GPU compositing — without this override .headerticker (z:99 in theme CSS) would be
+// buried on Vercel where render-blocking <link> stylesheets apply before JS runs.
+// NOTE: do NOT set top:0!important on .header — CSS !important from a stylesheet beats
+// JS inline styles (element.style.top), which would prevent the CAS bundle from
+// positioning the header below the ticker.
 // Also pin .portfolio_text at top:0 — all.js fires a jQuery parallax handler on the
 // synthetic window.scroll that SnapshotClient dispatches, computing top=ractWeb.top/8
 // (~33px at scroll=0) and applying it as an inline style. On the real site this handler
 // only runs when the user actually scrolls, so the initial position is never shifted.
 const HEADER_OFFSET_FIX = `
-.header{top:0!important}
-.headerticker + .header{top:46px!important}
 .headerticker{z-index:101!important}
 .portfolio_text{top:0!important}
 `;
@@ -364,6 +364,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       </head>
       <body>
         <NavigationProgress />
+        <AccessibilityFix />
         {children}
         {/* eslint-disable-next-line react/no-danger */}
         <script dangerouslySetInnerHTML={{ __html: JCTKR_PATCH }} />

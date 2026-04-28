@@ -495,6 +495,12 @@ function SnapshotClientImpl({ entry, bodyHtml, widgetProps }: Props) {
       //    This works in addition to — not instead of — owl's built-in drag,
       //    so desktop mouse-drag still works through owl's own handlers.
       setTimeout(() => {
+        // Label owl nav buttons — owl.js injects them with no text content.
+        document.querySelectorAll<HTMLElement>("button.owl-prev, button.owl-next").forEach((btn) => {
+          if (btn.getAttribute("aria-label")) return;
+          btn.setAttribute("aria-label", btn.classList.contains("owl-prev") ? "Previous slide" : "Next slide");
+        });
+
         const $ = (window as unknown as { jQuery?: JQueryStatic }).jQuery;
         if (!$) return;
         const $carousels = $(".owl-carousel.owl-loaded");
