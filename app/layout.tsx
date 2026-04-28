@@ -30,6 +30,10 @@ body:not(.loaded) [data-snapshot-client],
 body:not(.loaded) [data-snapshot-client] *{opacity:1!important;visibility:visible!important}
 body:not(.loaded) [data-snapshot-client] .hover-text,
 body:not(.loaded) [data-snapshot-client] .button-overlay{opacity:0!important;visibility:hidden!important}
+body:not(.loaded) [data-snapshot-client] .portfolio_text h1,
+body:not(.loaded) [data-snapshot-client] .portfolio_text h4,
+body:not(.loaded) [data-snapshot-client] .portfolio_text .postfolio_banner_but,
+body:not(.loaded) [data-snapshot-client] .portfolio_text .arbackbut{bottom:0!important}
 .wow{visibility:visible!important}
 `;
 
@@ -51,6 +55,17 @@ const TICKER_FIX = `
 .company_triker ul li{display:inline-block}
 `;
 
+// Image quality optimization.
+const IMAGE_QUALITY_FIX = `
+[data-snapshot-client] img{
+  image-rendering:auto;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  backface-visibility:hidden;
+  -webkit-backface-visibility:hidden
+}
+[data-snapshot-client] img[width][height]{max-width:100%;height:auto}
+`;
 
 // Scrollbar styling from the real site — these rules only appear in some per-page CSS
 // bundles so they'd be missing on most pages without this global injection.
@@ -277,6 +292,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <style dangerouslySetInnerHTML={{ __html: SCROLL_PERF_FIX }} />
         {/* eslint-disable-next-line react/no-danger */}
         <style dangerouslySetInnerHTML={{ __html: TICKER_FIX }} />
+        {/* eslint-disable-next-line react/no-danger */}
+        <style dangerouslySetInnerHTML={{ __html: IMAGE_QUALITY_FIX }} />
         {/* eslint-disable-next-line react/no-danger */}
         <style dangerouslySetInnerHTML={{ __html: NAV_DROPDOWN_FIX }} />
         {/* eslint-disable-next-line react/no-danger */}

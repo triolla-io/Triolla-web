@@ -23,7 +23,7 @@ const FRAGMENTS_DIR = path.join(ROOT, "public", "fragments");
 const args = process.argv.slice(2);
 const DRY_RUN = args.includes("--dry-run");
 const MIN_BYTES = parseInt(args.find(a => a.startsWith("--min-bytes="))?.split("=")[1] ?? "30720"); // 30 KB default
-const QUALITY = parseInt(args.find(a => a.startsWith("--quality="))?.split("=")[1] ?? "82");
+const QUALITY = parseInt(args.find(a => a.startsWith("--quality="))?.split("=")[1] ?? "88");
 
 console.log(`[webp] DRY_RUN=${DRY_RUN} MIN_BYTES=${MIN_BYTES} QUALITY=${QUALITY}`);
 
