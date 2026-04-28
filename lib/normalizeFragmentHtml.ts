@@ -80,7 +80,20 @@ export function patchImageAttributes(html: string): {
   let lcpImageUrl: string | null = null;
 
   const patched = html.replace(/<img\b[^>]*\/?>/gi, (tag) => {
+    const alreadyHighPriority = /\bfetchpriority\s*=\s*["']high["']/i.test(tag);
     const decorative = isDecorativeImage(tag);
+
+    // An image that already carries fetchpriority="high" in the source HTML is
+    // the original site's LCP candidate — don't add loading="lazy" to it (that
+    // would conflict with the priority hint and delay the fetch).
+    if (alreadyHighPriority && !lcpFound) {
+      lcpFound = true;
+      lcpImageUrl = getAttr(tag, "src");
+      if (!hasAttr(tag, "decoding")) {
+        tag = addAttr(tag, "decoding", "async");
+      }
+      return tag;
+    }
 
     if (!decorative && !lcpFound) {
       // First content image → LCP candidate
@@ -95,8 +108,10 @@ export function patchImageAttributes(html: string): {
       return tag;
     }
 
-    // All other images: lazy-load + async decode
-    if (!hasAttr(tag, "loading")) {
+    // All other images: lazy-load + async decode.
+    // Skip loading="lazy" on any remaining image that already has fetchpriority="high"
+    // (multiple above-fold priority images can exist; don't penalise them).
+    if (!hasAttr(tag, "loading") && !alreadyHighPriority) {
       tag = addAttr(tag, "loading", "lazy");
     }
     if (!hasAttr(tag, "decoding")) {

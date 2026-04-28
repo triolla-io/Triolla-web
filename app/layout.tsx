@@ -37,13 +37,20 @@ body:not(.loaded) [data-snapshot-client] .portfolio_text .arbackbut{bottom:0!imp
 .wow{visibility:visible!important}
 `;
 
-// No headerticker in snapshot — zero out the 46px top offset that was reserved for it.
+// HEADER_OFFSET_FIX
+// Default: collapse the 46px gap the theme reserves for the ticker (most pages have no ticker).
+// Exception: when .headerticker IS in the DOM (home page rebrand banner), use the sibling
+// selector to push the header below it instead of overlapping it.
+// Also ensure the ticker stacks above the header — SCROLL_PERF_FIX raises .header to
+// z-index:100 for performance, which would otherwise bury the ticker (z:99 in theme CSS).
 // Also pin .portfolio_text at top:0 — all.js fires a jQuery parallax handler on the
 // synthetic window.scroll that SnapshotClient dispatches, computing top=ractWeb.top/8
 // (~33px at scroll=0) and applying it as an inline style. On the real site this handler
 // only runs when the user actually scrolls, so the initial position is never shifted.
 const HEADER_OFFSET_FIX = `
 .header{top:0!important}
+.headerticker + .header{top:46px!important}
+.headerticker{z-index:101!important}
 .portfolio_text{top:0!important}
 `;
 
@@ -63,6 +70,27 @@ const TICKER_FIX = `
 .company_triker{overflow:hidden;position:relative}
 .company_triker ul{position:relative;white-space:nowrap;list-style:none;padding:0;margin:0}
 .company_triker ul li{display:inline-block}
+`;
+
+// Portfolio section CLS fix.
+//
+// The theme animates portfolio items via bottom:-100px→0 (protfolio_img) and
+// bottom:-30px→0 (protolio_log/txt/tags/gallery/con) using transitions triggered
+// by the .show class. These bottom offsets are measured by Lighthouse as layout
+// shifts (CLS ~0.4) because the elements visually jump when .show is added
+// after hydration — even though PRE_HYDRATION_FIX already forces opacity:1.
+//
+// Fix: force bottom:0 + skip transitions for all animated portfolio descendants.
+// Using [data-snapshot-client] prefix for higher specificity than the theme's
+// plain class selectors (theme uses !important on some rules, so we need the
+// attribute selector to win the cascade).
+const PORTFOLIO_CLS_FIX = `
+[data-snapshot-client] .protfolio_img,
+[data-snapshot-client] .protfolio_con,
+[data-snapshot-client] .protolio_log,
+[data-snapshot-client] .protolio_txt,
+[data-snapshot-client] .protolio_tags,
+[data-snapshot-client] .protolio_gallery{bottom:0!important;opacity:1!important;transition:none!important}
 `;
 
 // Reserve height for owl carousels before owl.js measures them.
@@ -321,6 +349,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <style dangerouslySetInnerHTML={{ __html: HEADER_OFFSET_FIX }} />
         {/* eslint-disable-next-line react/no-danger */}
         <style dangerouslySetInnerHTML={{ __html: TICKER_FIX }} />
+        {/* eslint-disable-next-line react/no-danger */}
+        <style dangerouslySetInnerHTML={{ __html: PORTFOLIO_CLS_FIX }} />
         {/* eslint-disable-next-line react/no-danger */}
         <style dangerouslySetInnerHTML={{ __html: OWL_CLS_FIX }} />
         {/* eslint-disable-next-line react/no-danger */}
