@@ -54,6 +54,15 @@ export default function AccessibilityFix() {
       }
     }
 
+    // Label any role="button" elements still missing an accessible name
+    document.querySelectorAll('[data-snapshot-client] [role="button"]').forEach((btn) => {
+      if (btn.getAttribute("aria-label")) return;
+      const text = btn.textContent?.trim();
+      if (!text || text === "test") {
+        btn.setAttribute("aria-label", "Toggle submenu");
+      }
+    });
+
     // Add labels to form inputs that are missing them
     document.querySelectorAll("[data-snapshot-client] input, [data-snapshot-client] textarea, [data-snapshot-client] select").forEach((field) => {
       if (field.getAttribute("aria-label") || field.closest("label")) return;

@@ -67,6 +67,16 @@ const IMAGE_QUALITY_FIX = `
 [data-snapshot-client] img[width][height]{max-width:100%;height:auto}
 `;
 
+// Color contrast fix — ensures WPML language switcher text and animated .show
+// spans meet WCAG AA (4.5:1). The mobile header uses a light background so
+// wpml-ls-display gets a very dark color; the dark footer overrides that to
+// near-white so the language labels remain readable.
+const CONTRAST_FIX = `
+.wpml-ls-display{color:#1a1a1a!important}
+.footlangmenu .wpml-ls-display,
+.footer_bot_socail .wpml-ls-display{color:#e8e8e8!important}
+`;
+
 // Scrollbar styling from the real site — these rules only appear in some per-page CSS
 // bundles so they'd be missing on most pages without this global injection.
 const SCROLLBAR_FIX = `
@@ -298,6 +308,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <style dangerouslySetInnerHTML={{ __html: NAV_DROPDOWN_FIX }} />
         {/* eslint-disable-next-line react/no-danger */}
         <style dangerouslySetInnerHTML={{ __html: SCROLLBAR_FIX }} />
+        {/* eslint-disable-next-line react/no-danger */}
+        <style dangerouslySetInnerHTML={{ __html: CONTRAST_FIX }} />
       </head>
       <body>
         <NavigationProgress />

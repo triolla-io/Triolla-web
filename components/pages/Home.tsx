@@ -23,7 +23,7 @@ export default function Home() {
             <span className={"marrow"} href={"Javascript:void(0);"}></span>
             <ul className={"sub-menu"}>
               <li id={"menu-item-1094"} className={"menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1094"}>
-                <a role={"button"} tabIndex={"0"}>
+                <a role={"button"} tabIndex={"0"} aria-label={"Toggle Portfolio Industries submenu"}>
                   {"test"}
                 </a>
                 <span className={"marrow"} href={"Javascript:void(0);"}></span>
@@ -67,7 +67,7 @@ export default function Home() {
                 </ul>
               </li>
               <li id={"menu-item-1101"} className={"menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1101"}>
-                <a role={"button"} tabIndex={"0"}>
+                <a role={"button"} tabIndex={"0"} aria-label={"Toggle Portfolio Tech submenu"}>
                   {"test"}
                 </a>
                 <span className={"marrow"} href={"Javascript:void(0);"}></span>
@@ -187,7 +187,7 @@ export default function Home() {
               <span className={"marrow"} href={"Javascript:void(0);"}></span>
               <ul className={"sub-menu"}>
                 <li className={"menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1094"}>
-                  <a role={"button"} tabIndex={"0"}>
+                  <a role={"button"} tabIndex={"0"} aria-label={"Toggle Portfolio Industries submenu"}>
                     {"test"}
                   </a>
                   <span className={"marrow"} href={"Javascript:void(0);"}></span>
@@ -231,7 +231,7 @@ export default function Home() {
                   </ul>
                 </li>
                 <li className={"menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1101"}>
-                  <a role={"button"} tabIndex={"0"}>
+                  <a role={"button"} tabIndex={"0"} aria-label={"Toggle Portfolio Tech submenu"}>
                     {"test"}
                   </a>
                   <span className={"marrow"} href={"Javascript:void(0);"}></span>
@@ -946,7 +946,7 @@ export default function Home() {
           <div className={"port_faq_sec"}>
             <div className={"port_faq_box faq-1 wow fadeInUp"} data-wow-duration={"0.5s"} data-wow-delay={"0.5s"}>
               <div className={"faqtitle"}>
-                <a role={"button"} tabIndex={"0"}>
+                <a role={"button"} tabIndex={"0"} aria-label={"How much does UX/UI design cost?"}>
                   <span className={"faq_img"}>
                     <Image width={"50"} height={"50"} src={"/assets/_cas/b4f76030e607c49ea327bdadd2a8af13703806d99d11344c8df2b4261ba2b2e5.png"} alt={""} />
                   </span>
@@ -968,7 +968,7 @@ export default function Home() {
             </div>
             <div className={"port_faq_box faq-2 wow fadeInUp"} data-wow-duration={"0.5s"} data-wow-delay={"0.5s"}>
               <div className={"faqtitle"}>
-                <a role={"button"} tabIndex={"0"}>
+                <a role={"button"} tabIndex={"0"} aria-label={"How long does the UX/UI design process take?"}>
                   <span className={"faq_img"}>
                     <Image width={"50"} height={"50"} src={"/assets/_cas/ede14bdc07a876ed008a4a7e84463b986087680a934ac556e8df159917a728db.png"} alt={""} />
                   </span>
@@ -990,7 +990,7 @@ export default function Home() {
             </div>
             <div className={"port_faq_box faq-3 wow fadeInUp"} data-wow-duration={"0.5s"} data-wow-delay={"0.5s"}>
               <div className={"faqtitle"}>
-                <a role={"button"} tabIndex={"0"}>
+                <a role={"button"} tabIndex={"0"} aria-label={"What does the workflow with a UX/UI studio include?"}>
                   <span className={"faq_img"}>
                     <Image width={"50"} height={"50"} src={"/assets/_cas/a4b042ce0df35c6735103eff834ab2a7ebdec7e26004003423622192646dd18a.png"} alt={""} />
                   </span>
@@ -1012,7 +1012,7 @@ export default function Home() {
             </div>
             <div className={"port_faq_box faq-4 wow fadeInUp"} data-wow-duration={"0.5s"} data-wow-delay={"0.5s"}>
               <div className={"faqtitle"}>
-                <a role={"button"} tabIndex={"0"}>
+                <a role={"button"} tabIndex={"0"} aria-label={"What’s the difference between UX design and UI design?"}>
                   <span className={"faq_img"}>
                     <Image width={"50"} height={"50"} src={"/assets/_cas/a2d3a38156057344dc32e478d71180185949eb35cb19efb7f26cb14ecbc418bd.png"} alt={""} />
                   </span>
@@ -1034,7 +1034,7 @@ export default function Home() {
             </div>
             <div className={"port_faq_box faq-5 wow fadeInUp"} data-wow-duration={"0.5s"} data-wow-delay={"0.5s"}>
               <div className={"faqtitle"}>
-                <a role={"button"} tabIndex={"0"}>
+                <a role={"button"} tabIndex={"0"} aria-label={"What are the main stages in a UX/UI design project?"}>
                   <span className={"faq_img"}>
                     <Image width={"50"} height={"50"} src={"/assets/_cas/3db72174c6801b4c463b4d7b49cba7472426b946ddb86a06d32d26ced92b4e97.png"} alt={""} />
                   </span>
@@ -1056,7 +1056,7 @@ export default function Home() {
             </div>
             <div className={"port_faq_box faq-6 wow fadeInUp"} data-wow-duration={"0.5s"} data-wow-delay={"0.5s"}>
               <div className={"faqtitle"}>
-                <a role={"button"} tabIndex={"0"}>
+                <a role={"button"} tabIndex={"0"} aria-label={"What does the user research process look like in a UX project?"}>
                   <span className={"faq_img"}>
                     <Image width={"50"} height={"50"} src={"/assets/_cas/14c4b97b073f44a7ac8ff3aca7f5790c2c3e0f18a3c865b0f2f798162a691e74.png"} alt={""} />
                   </span>
@@ -1078,7 +1078,7 @@ export default function Home() {
             </div>
             <div className={"port_faq_box faq-7 wow fadeInUp"} data-wow-duration={"0.5s"} data-wow-delay={"0.5s"}>
               <div className={"faqtitle"}>
-                <a role={"button"} tabIndex={"0"}>
+                <a role={"button"} tabIndex={"0"} aria-label={"Do you work with startups, large companies, and small businesses?"}>
                   <span className={"faq_img"}>
                     <Image width={"50"} height={"50"} src={"/assets/_cas/5b1811d11840370492e74bcdc239ab4de1e589eac7d479c8add8e0ac31474e64.png"} alt={""} />
                   </span>
@@ -1100,7 +1100,7 @@ export default function Home() {
             </div>
             <div className={"port_faq_box faq-8 wow fadeInUp"} data-wow-duration={"0.5s"} data-wow-delay={"0.5s"}>
               <div className={"faqtitle"}>
-                <a role={"button"} tabIndex={"0"}>
+                <a role={"button"} tabIndex={"0"} aria-label={"Can I see examples of your previous projects?"}>
                   <span className={"faq_img"}>
                     <Image width={"200"} height={"200"} src={"/assets/_cas/17ee25ebf1589d73fded870af0abe7dd13a145c620310db592260e422ab77a9f.png"} alt={""} />
                   </span>
@@ -1122,7 +1122,7 @@ export default function Home() {
             </div>
             <div className={"port_faq_box faq-9 wow fadeInUp"} data-wow-duration={"0.5s"} data-wow-delay={"0.5s"}>
               <div className={"faqtitle"}>
-                <a role={"button"} tabIndex={"0"}>
+                <a role={"button"} tabIndex={"0"} aria-label={"Do you support the development process or only the design?"}>
                   <span className={"faq_img"}>
                     <Image width={"200"} height={"200"} src={"/assets/_cas/2f860cb954ae35aa69d5ad9bd316614fecac371dac3c050562d4dff5cd6d94ed.png"} alt={""} />
                   </span>
