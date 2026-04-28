@@ -7,12 +7,15 @@ import widgetProps from "@/lib/widgetProps/triolla-io-home-en.json";
 
 export default function Home() {
   return (
-    <>\n<div>
-      <Image fetchPriority={"high"} width={"79"} height={"38"} className={"logoimg"} alt={"Triolla"} src={"/assets/_cas/f96f51ee771353cd92b1cce5c9ddc9a3eab76177a074e650d32df124317b37f9.png"} priority />
-      <span>
-        {"Formally Pitangoux"}
-      </span>
-    </div>
+    <>\n<div className={"header"}>
+      <div className={"header_wrap"}>
+        <div className={"header_in cf"}>
+          <div className={"logo"}>
+            <Image fetchPriority={"high"} width={"79"} height={"38"} className={"logoimg"} alt={"Triolla"} src={"/assets/_cas/f96f51ee771353cd92b1cce5c9ddc9a3eab76177a074e650d32df124317b37f9.png"} priority />
+            <span>
+              {"Formally Pitangoux"}
+            </span>
+          </div>
     <div className={"header_menu"}>
       <div className={"menu-header-menu-container"}>
         <ul id={"menu-header-menu"} className={"menu"}>
@@ -170,6 +173,9 @@ export default function Home() {
         </a>
       </div>
       <div className={"clr"}></div>
+    </div>
+        </div>
+      </div>
     </div>
     <div className={"hmenumob"}>
       <div className={"hmenumobclose"}>

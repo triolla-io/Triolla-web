@@ -37,6 +37,16 @@ body:not(.loaded) [data-snapshot-client] .portfolio_text .arbackbut{bottom:0!imp
 .wow{visibility:visible!important}
 `;
 
+// No headerticker in snapshot — zero out the 46px top offset that was reserved for it.
+// Also pin .portfolio_text at top:0 — all.js fires a jQuery parallax handler on the
+// synthetic window.scroll that SnapshotClient dispatches, computing top=ractWeb.top/8
+// (~33px at scroll=0) and applying it as an inline style. On the real site this handler
+// only runs when the user actually scrolls, so the initial position is never shifted.
+const HEADER_OFFSET_FIX = `
+.header{top:0!important}
+.portfolio_text{top:0!important}
+`;
+
 // Scroll performance optimization for sticky header + book-a-call button.
 // Removed contain:layout because it breaks button animation sync with header collapse.
 const SCROLL_PERF_FIX = `
@@ -53,6 +63,13 @@ const TICKER_FIX = `
 .company_triker{overflow:hidden;position:relative}
 .company_triker ul{position:relative;white-space:nowrap;list-style:none;padding:0;margin:0}
 .company_triker ul li{display:inline-block}
+`;
+
+// Reserve height for owl carousels before owl.js measures them.
+// Without this the container collapses to 0 then jumps when items are measured → high CLS.
+const OWL_CLS_FIX = `
+.owl-carousel:not(.owl-loaded){min-height:200px;overflow:hidden}
+.owl-carousel .owl-item img{max-width:100%;height:auto}
 `;
 
 // Image quality optimization.
@@ -301,7 +318,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         {/* eslint-disable-next-line react/no-danger */}
         <style dangerouslySetInnerHTML={{ __html: SCROLL_PERF_FIX }} />
         {/* eslint-disable-next-line react/no-danger */}
+        <style dangerouslySetInnerHTML={{ __html: HEADER_OFFSET_FIX }} />
+        {/* eslint-disable-next-line react/no-danger */}
         <style dangerouslySetInnerHTML={{ __html: TICKER_FIX }} />
+        {/* eslint-disable-next-line react/no-danger */}
+        <style dangerouslySetInnerHTML={{ __html: OWL_CLS_FIX }} />
         {/* eslint-disable-next-line react/no-danger */}
         <style dangerouslySetInnerHTML={{ __html: IMAGE_QUALITY_FIX }} />
         {/* eslint-disable-next-line react/no-danger */}

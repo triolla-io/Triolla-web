@@ -49,6 +49,13 @@ export default async function HeHeD7AaD7A0D790D799D7A9D799D79eD795D7A9Page() {
           fetchPriority="high"
         />
       ))}
+      {/* SSR JS preloads — browser starts fetching scripts during HTML parse, not after hydration */}
+      {entry.js
+        .filter((src) => !/googletagmanager|facebook\.net|hotjar|clarity\.ms|hubspot|hs-scripts|\/\d{7,}\.js/i.test(src))
+        .slice(0, 5)
+        .map((href) => (
+          <link key={href} rel="preload" as="script" href={href} />
+        ))}
       {/* SSR snapshot CSS so downloads start during HTML parse — big LCP win. */}
       {entry.css.map((href) => (
         <link key={href} rel="stylesheet" href={href} />

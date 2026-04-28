@@ -57,10 +57,33 @@ export default function AccessibilityFix() {
     // Label any role="button" elements still missing an accessible name
     document.querySelectorAll('[data-snapshot-client] [role="button"]').forEach((btn) => {
       if (btn.getAttribute("aria-label")) return;
+
+      // FAQ toggles: extract question text from .faq_quest
+      const questSpan = btn.querySelector(".faq_quest");
+      if (questSpan?.textContent?.trim()) {
+        btn.setAttribute("aria-label", questSpan.textContent.trim());
+        return;
+      }
+
+      // Hover-swap CTAs: use .default-text (the non-animated copy)
+      const defaultText = btn.querySelector(".default-text");
+      if (defaultText?.textContent?.trim()) {
+        btn.setAttribute("aria-label", defaultText.textContent.trim());
+        return;
+      }
+
       const text = btn.textContent?.trim();
       if (!text || text === "test") {
         btn.setAttribute("aria-label", "Toggle submenu");
       }
+    });
+
+    // Fix owl carousel navigation buttons — injected by owl.js with no text content.
+    // They exist in the pre-rendered HTML fragment so useEffect finds them at mount time.
+    document.querySelectorAll<HTMLElement>(
+      "[data-snapshot-client] button.owl-prev:not([aria-label]), [data-snapshot-client] button.owl-next:not([aria-label])"
+    ).forEach((btn) => {
+      btn.setAttribute("aria-label", btn.classList.contains("owl-prev") ? "Previous slide" : "Next slide");
     });
 
     // Add labels to form inputs that are missing them

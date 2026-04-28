@@ -64,6 +64,13 @@ export default async function HeCatchAllPage({ params }: PageProps) {
           fetchPriority="high"
         />
       ))}
+      {/* SSR JS preloads — browser starts fetching scripts during HTML parse, not after hydration */}
+      {entry.js
+        .filter((src) => !/googletagmanager|facebook\.net|hotjar|clarity\.ms|hubspot|hs-scripts|\/\d{7,}\.js/i.test(src))
+        .slice(0, 5)
+        .map((href) => (
+          <link key={href} rel="preload" as="script" href={href} />
+        ))}
       {entry.css.map((href) => (
         <link key={href} rel="stylesheet" href={href} />
       ))}
