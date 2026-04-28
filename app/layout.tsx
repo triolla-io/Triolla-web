@@ -122,16 +122,6 @@ const CONTRAST_FIX = `
 .footer_bot_socail .wpml-ls-display{color:#e8e8e8!important}
 `;
 
-// Scrollbar styling from the real site — these rules only appear in some per-page CSS
-// bundles so they'd be missing on most pages without this global injection.
-const SCROLLBAR_FIX = `
-::-webkit-scrollbar-track{-webkit-box-shadow:inset 0 0 6px rgba(255,255,255,.5);background-color:transparent;border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px;overflow:hidden}
-::-webkit-scrollbar{width:16px;padding:5px;background-clip:content-box;background-color:transparent;border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px;overflow:hidden}
-::-webkit-scrollbar-thumb{background:rgba(0,0,0,.1);width:6px;border:5px solid #fff;padding:0;background-clip:content-box;border-radius:8px;-moz-border-radius:8px;-webkit-border-radius:8px}
-::-webkit-scrollbar{width:6px;padding:0;-webkit-box-shadow:none;box-shadow:none}
-::-webkit-scrollbar-track{background:0 0}
-::-webkit-scrollbar-thumb{border:none;background:rgba(0,0,0,.6)}
-`;
 
 // NAV_DROPDOWN_FIX
 // ─────────────────────────────────────────────────────────────────────────────
@@ -357,8 +347,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <style dangerouslySetInnerHTML={{ __html: IMAGE_QUALITY_FIX }} />
         {/* eslint-disable-next-line react/no-danger */}
         <style dangerouslySetInnerHTML={{ __html: NAV_DROPDOWN_FIX }} />
-        {/* eslint-disable-next-line react/no-danger */}
-        <style dangerouslySetInnerHTML={{ __html: SCROLLBAR_FIX }} />
         {/* eslint-disable-next-line react/no-danger */}
         <style dangerouslySetInnerHTML={{ __html: CONTRAST_FIX }} />
       </head>
