@@ -110,6 +110,11 @@ const IMAGE_QUALITY_FIX = `
   -webkit-backface-visibility:hidden
 }
 [data-snapshot-client] img[width][height]{max-width:100%;height:auto}
+@media only screen and (max-width:1023px){
+  [data-snapshot-client] .portfolio_jump_1 img[width][height],
+  [data-snapshot-client] .portfolio_jump_2 img[width][height],
+  [data-snapshot-client] .portfolio_jump_3 img[width][height]{height:35px;width:auto}
+}
 `;
 
 // Color contrast fix — ensures WPML language switcher text and animated .show

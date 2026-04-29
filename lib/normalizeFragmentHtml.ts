@@ -83,12 +83,15 @@ export function patchImageAttributes(html: string): {
     const alreadyHighPriority = /\bfetchpriority\s*=\s*["']high["']/i.test(tag);
     const decorative = isDecorativeImage(tag);
 
-    // An image that already carries fetchpriority="high" in the source HTML is
-    // the original site's LCP candidate — don't add loading="lazy" to it (that
-    // would conflict with the priority hint and delay the fetch).
-    if (alreadyHighPriority && !lcpFound) {
-      lcpFound = true;
-      lcpImageUrl = getAttr(tag, "src");
+    // Preserve any fetchpriority="high" the source HTML already carries (the
+    // original site's priority hint). Only treat it as the LCP candidate when
+    // the image is also non-decorative — a logo tagged fetchpriority="high"
+    // must not consume the LCP slot and cause real hero images to be lazy-loaded.
+    if (alreadyHighPriority) {
+      if (!decorative && !lcpFound) {
+        lcpFound = true;
+        lcpImageUrl = getAttr(tag, "src");
+      }
       if (!hasAttr(tag, "decoding")) {
         tag = addAttr(tag, "decoding", "async");
       }
