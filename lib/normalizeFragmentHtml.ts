@@ -8,6 +8,8 @@
  * - Anchors without href get href="#" so Lighthouse `crawlable-anchors` passes.
  * - External CDN images that 30x-loop (pitangoux.com) are rewritten to a 1px gif
  *   data URI so `errors-in-console` doesn't fire ERR_TOO_MANY_REDIRECTS.
+ * - srcset entries pointing to /wp-content/uploads/ (not captured in CAS) are stripped
+ *   so 404 network errors don't fail the Lighthouse Best Practices audit.
  */
 export function normalizeFragmentHtml(bodyHtml: string): string {
   let s = bodyHtml.replace(/\r\n/g, "\n");
@@ -32,6 +34,20 @@ export function normalizeFragmentHtml(bodyHtml: string): string {
     /(?:https?:)?\/\/(?:assets|www)?\.?pitangoux\.com\/[^"'\s)]+/gi,
     TRANSPARENT_GIF,
   );
+
+  // Strip /wp-content/uploads/ entries from srcset attributes — the snapshot
+  // captures the primary src as a CAS WebP but leaves higher-resolution
+  // srcset candidates pointing at the original WP upload paths, which 404 on
+  // Vercel and trigger `errors-in-console` in Lighthouse Best Practices.
+  // Each srcset candidate has the form "url descriptor" (e.g. "…png 1024w").
+  s = s.replace(/srcset="([^"]*)"/gi, (_m, val: string) => {
+    const cleaned = val
+      .split(",")
+      .map((c) => c.trim())
+      .filter((c) => !/\/wp-content\/uploads\//i.test(c))
+      .join(", ");
+    return cleaned ? `srcset="${cleaned}"` : "";
+  });
 
   return s;
 }
