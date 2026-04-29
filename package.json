@@ -11,7 +11,8 @@
     "register:hebrew-fragments": "node scripts/register-orphan-he-fragments.mjs",
     "ingest:hebrew-orphans": "node scripts/ingest-hebrew-orphans.mjs",
     "seo:audit": "node scripts/seo-loop.mjs --once",
-    "seo:loop": "node scripts/seo-loop.mjs"
+    "seo:loop": "node scripts/seo-loop.mjs",
+    "lh:audit": "node scripts/lighthouse-suite.mjs --once"
   },
   "dependencies": {
     "@tiptap/extension-color": "^3.22.4",

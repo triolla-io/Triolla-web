@@ -48,9 +48,19 @@ export function snapshotMetadata(slug: string, locale: string): Metadata {
 
   const robotsMeta = head.metaTags.find((t) => t.name === "robots")?.content;
 
+  // Description fallback chain — Lighthouse SEO audit requires a non-empty
+  // description meta tag. Many blog posts only have og:description; fall back
+  // to that, then twitter, then derive a synthesized description from the
+  // title + site name so every page has something searchable.
+  const description =
+    head.metaTags.find((t) => t.name === "description")?.content ||
+    head.metaTags.find((t) => t.property === "og:description")?.content ||
+    head.metaTags.find((t) => t.name === "twitter:description")?.content ||
+    `${head.title} — Triolla UX/UI design insights and case studies.`;
+
   return {
     title: head.title,
-    description: head.metaTags.find((t) => t.name === "description")?.content,
+    description,
     ...(robotsMeta ? { robots: robotsMeta } : {}),
     openGraph: {
       title: ogTitle,
