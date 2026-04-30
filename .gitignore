@@ -38,3 +38,4 @@ scripts/_he-snap.mjs
 
 # lighthouse audit reports (per-machine, large)
 .lighthouse/
+repomix-output.xml

@@ -10,8 +10,20 @@ import {
   heSegmentsToPathname,
   matchHebrewRegistryPath,
 } from "@/lib/snapshotRegistry";
+import CmsPage, { buildCmsMetadata } from "@/components/cms/CmsPage";
+import { isValidSlug, localeExists, type CmsKind } from "@/lib/cms/contentStore";
 
 type PageProps = { params: Promise<{ segments: string[] }> };
+
+function resolveCms(segments: string[]): { kind: CmsKind; slug: string } | null {
+  if (segments.length === 1 && isValidSlug(segments[0])) {
+    return { kind: "page", slug: segments[0] };
+  }
+  if (segments.length === 2 && segments[0] === "blog" && isValidSlug(segments[1])) {
+    return { kind: "blog", slug: segments[1] };
+  }
+  return null;
+}
 
 export function generateStaticParams() {
   const claimed = getFilesystemHePagePaths();
@@ -22,6 +34,10 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { segments } = await params;
+  const cms = resolveCms(segments);
+  if (cms && (await localeExists(cms.kind, cms.slug, "he"))) {
+    return (await buildCmsMetadata(cms.kind, cms.slug, "he")) ?? {};
+  }
   const entry = matchHebrewRegistryPath(heSegmentsToPathname(segments));
   if (!entry) return {};
   return snapshotMetadata(entry.slug, entry.locale);
@@ -29,6 +45,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function HeCatchAllPage({ params }: PageProps) {
   const { segments } = await params;
+  const cms = resolveCms(segments);
+  if (cms && (await localeExists(cms.kind, cms.slug, "he"))) {
+    return <CmsPage kind={cms.kind} slug={cms.slug} locale="he" />;
+  }
   const entry = matchHebrewRegistryPath(heSegmentsToPathname(segments));
   if (!entry) notFound();
 

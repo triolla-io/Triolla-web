@@ -11,6 +11,17 @@ const ORIGIN = "";
 const nextConfig: NextConfig = {
   output: "standalone",
 
+  // CMS content under /content is read at runtime via fs by the dynamic
+  // catch-all routes and the /admin editor. Force the standalone tracer to
+  // include it so it ships with the build (belt-and-suspenders alongside
+  // the explicit COPY in Dockerfile).
+  outputFileTracingIncludes: {
+    "/[...slug]": ["./content/**/*"],
+    "/he/[...segments]": ["./content/**/*"],
+    "/admin/**": ["./content/**/*"],
+    "/api/cms/**": ["./content/**/*"],
+  },
+
   // Pin Turbopack's workspace root to THIS directory so it doesn't walk up
   // and inherit files from a parent Next.js project when the generated output
   // lives inside another workspace.

@@ -1,0 +1,10 @@
+.cms-section {
+  padding: 64px 24px;
+  max-width: 960px;
+  margin: 0 auto;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+}
+.cms-section h1 {
+  font-size: 36px;
+  margin: 0 0 16px;
+}

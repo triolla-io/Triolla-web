@@ -127,6 +127,31 @@ const CONTRAST_FIX = `
 .footer_bot_socail .wpml-ls-display{color:#e8e8e8!important}
 `;
 
+const FAQ_FIX = `
+.active .faqdetail{display:block!important}
+.faqtitle button{display:flex;align-items:center;position:relative;font-size:36px;line-height:100%;letter-spacing:0;text-align:start;vertical-align:middle;color:#fff;padding:32px 40px 34px 0;background:transparent;border:none;width:100%;cursor:pointer;font-family:inherit}
+.faqtitle button:after{position:absolute;content:'';top:44px;right:0;background:url(/assets/_cas/42c7a5166e9e9d5f0cda10d19e63e28aadb782f7e15e27c8d18d4fa85b51efdf.svg) center center no-repeat;background-size:cover;width:32px;height:32px;transition:.3s;-webkit-transition:.3s;z-index:1}
+.active .faqtitle button:after{position:absolute;content:'';top:44px;right:0;background:url(/assets/_cas/06ac6e2d861b3db17bc93519b72f3544124937ef2ab15699c884a5642d4a0f0f.svg) center center no-repeat;background-size:cover;width:28px;height:4px;transition:.3s;-webkit-transition:.3s;z-index:1}
+.faqtitle button span.faq_quest{float:left;width:calc(100% - 50px);display:block;padding-left:61px;padding-top:7px}
+.faqtitle button span.faq_img{width:50px;float:left;display:block}
+.faqtitle button span.faq_img img{width:50px;height:50px;object-fit:cover;border-radius:50%}
+html[dir="rtl"] .faqtitle button{text-align:right;padding:32px 0 34px 40px;display:flex;flex-direction:row-reverse}
+html[dir="rtl"] .faqtitle button:after{left:0;right:auto}
+html[dir="rtl"] .active .faqtitle button:after{left:0;right:auto}
+html[dir="rtl"] .faqtitle button span.faq_quest{float:right;padding-left:0;padding-right:61px}
+html[dir="rtl"] .faqtitle button span.faq_img{float:right}
+@media only screen and (max-width:1023px){.faqtitle button{font-size:24px}}
+@media only screen and (max-width:767px){
+  .faqtitle button{padding:14px 24px 16px 0;font-size:16px;line-height:100%}
+  html[dir="rtl"] .faqtitle button{padding:14px 0 16px 24px}
+  .faqtitle button span.faq_img{width:28px}
+  .faqtitle button span.faq_img img{width:28px;height:28px}
+  .faqtitle button span.faq_quest{width:calc(100% - 28px);padding:0 0 0 20px}
+  html[dir="rtl"] .faqtitle button span.faq_quest{padding:0 20px 0 0}
+  .faqtitle button:after{width:16px;height:16px;top:50%;margin-top:-8px}
+  .active .faqtitle button:after{width:16px;height:2px}
+}`;
+
 
 // NAV_DROPDOWN_FIX
 // ─────────────────────────────────────────────────────────────────────────────
@@ -354,6 +379,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <style dangerouslySetInnerHTML={{ __html: NAV_DROPDOWN_FIX }} />
         {/* eslint-disable-next-line react/no-danger */}
         <style dangerouslySetInnerHTML={{ __html: CONTRAST_FIX }} />
+        {/* eslint-disable-next-line react/no-danger */}
+        <style dangerouslySetInnerHTML={{ __html: FAQ_FIX }} />
       </head>
       <body>
         <NavigationProgress />

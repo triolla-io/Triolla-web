@@ -43,11 +43,13 @@ function EditorShellInner({
   locale,
   dir,
   children,
+  adminBarHeight = 0,
 }: {
   slug: string;
   locale: string;
   dir: "ltr" | "rtl";
   children: React.ReactNode;
+  adminBarHeight?: number;
 }) {
   const enabled = process.env.NEXT_PUBLIC_EDITOR_ENABLED === "true";
   const searchParams = useSearchParams();
@@ -72,7 +74,7 @@ function EditorShellInner({
   const refreshPatches = useCallback(async () => {
     if (!enabled) return;
     try {
-      const r = await fetch(`/api/edits?slug=${encodeURIComponent(slug)}&locale=${encodeURIComponent(locale)}`);
+      const r = await fetch(`/api/edits/?slug=${encodeURIComponent(slug)}&locale=${encodeURIComponent(locale)}`);
       if (!r.ok) return;
       const d = (await r.json()) as { patches?: Patch[] };
       setPatches(Array.isArray(d.patches) ? d.patches : []);
@@ -173,10 +175,11 @@ function EditorShellInner({
             changeCount={patches.length}
             slug={slug}
             locale={locale}
+            adminBarHeight={adminBarHeight}
           />
         </div>
       )}
-      <div style={{ paddingTop: showChrome ? 48 : 0 }}>{children}</div>
+      <div style={{ paddingTop: showChrome ? adminBarHeight + 48 : 0 }}>{children}</div>
       {showChrome && editMode && <HoverOverlay root={root} active={editMode} />}
       {tiptapTarget && (
         <TiptapEditor
@@ -215,15 +218,17 @@ export function EditorShell({
   locale,
   dir,
   children,
+  adminBarHeight = 0,
 }: {
   slug: string;
   locale: string;
   dir: "ltr" | "rtl";
   children: React.ReactNode;
+  adminBarHeight?: number;
 }) {
   return (
     <Suspense fallback={children}>
-      <EditorShellInner slug={slug} locale={locale} dir={dir}>
+      <EditorShellInner slug={slug} locale={locale} dir={dir} adminBarHeight={adminBarHeight}>
         {children}
       </EditorShellInner>
     </Suspense>

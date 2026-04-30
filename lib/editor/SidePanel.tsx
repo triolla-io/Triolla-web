@@ -56,7 +56,7 @@ export function SidePanel({ mode, root, slug, locale, onClose, onSaved, toast }:
   }
 
   const postPatch = async (patch: Patch) => {
-    const res = await fetch("/api/edits", {
+    const res = await fetch("/api/edits/", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ slug, locale, patch }),
