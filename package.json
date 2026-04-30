@@ -15,6 +15,7 @@
     "lh:audit": "node scripts/lighthouse-suite.mjs --once"
   },
   "dependencies": {
+    "@floating-ui/dom": "^1.7.6",
     "@tiptap/extension-color": "^3.22.4",
     "@tiptap/extension-highlight": "^3.22.4",
     "@tiptap/extension-link": "^3.22.4",
