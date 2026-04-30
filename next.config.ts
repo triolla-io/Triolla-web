@@ -113,7 +113,6 @@ const nextConfig: NextConfig = {
       "worker-src 'self' blob:",
       "manifest-src 'self'",
       "frame-src 'self' https:",
-      "upgrade-insecure-requests",
     ].join("; ");
 
     // Trusted Types is advisory for now — reporting-only so snapshot JS that
