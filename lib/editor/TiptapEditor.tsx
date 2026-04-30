@@ -88,7 +88,14 @@ export function TiptapEditor({
   const save = useCallback(async () => {
     if (!editor) return;
     const raw = editor.getHTML();
-    const value = sanitizeEditorHtml(raw);
+    let value = sanitizeEditorHtml(raw);
+    // Tiptap always wraps output in <p>. For block-level targets (H1, LI, etc.)
+    // that means <h1><p>…</p></h1> — invalid HTML. Unwrap the single <p> shell.
+    const BLOCK_TAGS = new Set(["H1","H2","H3","H4","H5","H6","P","LI","BLOCKQUOTE","TD","TH"]);
+    if (BLOCK_TAGS.has(target.tagName)) {
+      const stripped = value.replace(/^<p>([\s\S]*?)<\/p>$/, "$1").trim();
+      if (!stripped.includes("</p>")) value = stripped;
+    }
     const fp = contentFingerprint(originalHtmlRef.current);
     const patch: Patch = {
       id: crypto.randomUUID(),
