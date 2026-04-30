@@ -9,6 +9,8 @@ const DEFAULT_LOCALE = "en";
 const ORIGIN = "";
 
 const nextConfig: NextConfig = {
+  output: "standalone",
+
   // Pin Turbopack's workspace root to THIS directory so it doesn't walk up
   // and inherit files from a parent Next.js project when the generated output
   // lives inside another workspace.

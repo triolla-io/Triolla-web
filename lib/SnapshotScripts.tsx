@@ -42,7 +42,7 @@ export default function SnapshotScripts({ entry }: Props) {
     // mirroring WPRocket's rocketlazyloadscript behaviour on the real site.
     // Without this, Lighthouse (no interaction) fires GTM → LinkedIn/Google Ads
     // cookies + deprecated AttributionReporting API → Best Practices tanks.
-    const DEFERRED_PATTERN = /googletagmanager\.com|snap\.licdn|px\.ads\.linkedin|connect\.facebook\.net|js\.hs-scripts|js\.hsforms|assets\.calendly|static\.hotjar|js\.clarity\.ms|googleadservices|doubleclick\.net|ahrefs|hsadspixel|hs-banner|hubspot|\/cache\/min\/1\/\d+\.js/i;
+    const DEFERRED_PATTERN = /googletagmanager\.com|snap\.licdn|px\.ads\.linkedin|connect\.facebook\.net|js\.hs-scripts|js\.hsforms|assets\.calendly|static\.hotjar|js\.clarity\.ms|googleadservices|doubleclick\.net|ahrefs|hsadspixel|hs-banner|hubspot|\/cache\/min\/1\/\d+\.js|wp-rocket\/assets\/js\/lazyload|themes\/triolla\/js\/all\.js|gsap.*ScrollTrigger|ScrollTrigger.*gsap/i;
 
     const isDeferred = (code: string) => DEFERRED_PATTERN.test(code);
 
