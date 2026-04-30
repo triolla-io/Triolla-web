@@ -8,7 +8,8 @@ import widgetProps from "@/lib/widgetProps/triolla-io-about-us-en.json";
 
 export default function AboutUs() {
   return (
-    <>\n<div>
+    <>
+<div>
       <Image width={"79"} height={"38"} className={"logoimg"} alt={"Triolla"} src={"/assets/_cas/f96f51ee771353cd92b1cce5c9ddc9a3eab76177a074e650d32df124317b37f9.png"} priority />
       <span>
         {"Formally Pitangoux"}
@@ -2164,7 +2165,7 @@ export default function AboutUs() {
           </div>
         </div>
       </div>
-    </div>\n    </>
+    </div>
+    </>
   );
 }
-</a>

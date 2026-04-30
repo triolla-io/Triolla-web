@@ -1889,7 +1889,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-    </div>\n    </>
+    </div>
+    </>
   );
 }
-</a>

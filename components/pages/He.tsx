@@ -8,7 +8,8 @@ import widgetProps from "@/lib/widgetProps/triolla-io-he-he.json";
 
 export default function He() {
   return (
-    <>\n<div>
+    <>
+<div>
       <li id={"menu-item-1861"} className={"menu-item menu-item-type-custom menu-item-object-custom menu-item-1861"}>
         <Link href={"/he/about/"}>
           {"אודותינו"}
@@ -1799,7 +1800,7 @@ export default function He() {
           </div>
         </div>
       </div>
-    </div>\n    </>
+    </div>
+    </>
   );
 }
-</a>
