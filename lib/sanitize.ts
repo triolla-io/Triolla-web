@@ -1,4 +1,4 @@
-import createDOMPurify from "isomorphic-dompurify";
+import DOMPurify from "isomorphic-dompurify";
 
 let hooksInstalled = false;
 
@@ -51,12 +51,10 @@ function sanitizeStyleValue(style: string): string {
   return out.join("; ");
 }
 
-const purify = createDOMPurify();
-
 function ensureHooks() {
   if (hooksInstalled) return;
   hooksInstalled = true;
-  purify.addHook("uponSanitizeAttribute", (_node, data) => {
+  DOMPurify.addHook("uponSanitizeAttribute", (_node, data) => {
     if (data.attrName !== "style") return;
     const clean = sanitizeStyleValue(data.attrValue);
     if (!clean) {
@@ -65,7 +63,7 @@ function ensureHooks() {
     }
     data.attrValue = clean;
   });
-  purify.addHook("afterSanitizeAttributes", (node) => {
+  DOMPurify.addHook("afterSanitizeAttributes", (node) => {
     if (String(node.tagName).toLowerCase() === "a") {
       const href = (node as { getAttribute?: (n: string) => string | null }).getAttribute?.("href");
       if (href && /^\s*javascript:/i.test(href)) {
@@ -77,7 +75,7 @@ function ensureHooks() {
 
 export function sanitizeEditorHtml(dirty: string): string {
   ensureHooks();
-  return purify.sanitize(dirty, {
+  return DOMPurify.sanitize(dirty, {
     ALLOWED_TAGS,
     ALLOWED_ATTR,
     KEEP_CONTENT: false,
