@@ -1,5 +1,6 @@
 import { Color, TextStyle } from "@tiptap/extension-text-style";
 import { Extension } from "@tiptap/core";
+import type { ChainedCommands } from "@tiptap/core";
 import Highlight from "@tiptap/extension-highlight";
 import Link from "@tiptap/extension-link";
 import TextAlign from "@tiptap/extension-text-align";
@@ -32,15 +33,12 @@ const FontSize = Extension.create({
     return {
       setFontSize:
         (fontSize: string) =>
-        ({ chain }: { chain: () => ReturnType<typeof chain> }) =>
-          (chain() as ReturnType<typeof chain>).setMark("textStyle", { fontSize }).run(),
+        ({ chain }: { chain: () => ChainedCommands }) =>
+          chain().setMark("textStyle", { fontSize }).run(),
       unsetFontSize:
         () =>
-        ({ chain }: { chain: () => ReturnType<typeof chain> }) =>
-          (chain() as ReturnType<typeof chain>)
-            .setMark("textStyle", { fontSize: null })
-            .removeEmptyTextStyle()
-            .run(),
+        ({ chain }: { chain: () => ChainedCommands }) =>
+          chain().setMark("textStyle", { fontSize: null }).removeEmptyTextStyle().run(),
     };
   },
 });
