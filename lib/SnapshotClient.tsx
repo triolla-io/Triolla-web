@@ -423,6 +423,16 @@ function SnapshotClientImpl({ entry, bodyHtml, widgetProps }: Props) {
       //    These events have already fired by the time Next.js mounts this
       //    component, so dynamically-injected scripts never see them.
       //    Dispatching synthetic events here re-triggers those handlers.
+      // Fix FAQ accordion: the original jQuery handler is missing e.preventDefault(),
+      // so clicking <a href="#"> inside .faqtitle causes Next.js to re-run the script
+      // pipeline (via onPop). A capturing listener stops the navigation while letting
+      // the jQuery bubble handler run normally.
+      try {
+        document.querySelectorAll<HTMLAnchorElement>('.faqtitle a').forEach((el) => {
+          el.addEventListener('click', (e) => e.preventDefault(), { capture: true });
+        });
+      } catch (_) {}
+
       try { document.dispatchEvent(new Event("DOMContentLoaded")); } catch (_) {}
       try { window.dispatchEvent(new Event("load")); } catch (_) {}
       // Signal any code waiting for WP Rocket's pipeline to complete.

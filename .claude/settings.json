@@ -45,11 +45,16 @@
       "Bash(curl -si -X POST http://localhost:3000/api/edits/ -H 'Content-Type: application/json' -d '{\"slug\":\"triolla-io-home\",\"locale\":\"en\",\"patch\":{\"id\":\"550e8400-e29b-41d4-a716-446655440001\",\"selector\":\"h1\",\"op\":\"setText\",\"value\":\"test\",\"fingerprint\":\"abc\",\"updatedAt\":1234567890}}')",
       "Bash(curl -sI \"http://x106xlt963cwdkoofvs2xc5c.178.104.133.110.sslip.io/\")",
       "Bash(git commit *)",
-      "Bash(node -e \"const sk = require\\('/Users/ariell/Desktop/triolla-snapshot/output/triolla.io/node_modules/@tiptap/starter-kit'\\); console.log\\(Object.keys\\(sk\\)\\)\")"
+      "Bash(node -e \"const sk = require\\('/Users/ariell/Desktop/triolla-snapshot/output/triolla.io/node_modules/@tiptap/starter-kit'\\); console.log\\(Object.keys\\(sk\\)\\)\")",
+      "Bash(ps -p 28663 -o pid,command)",
+      "Bash(git config *)",
+      "Bash(kill 28663)",
+      "Bash(grep -E \"\\\\.ts$|\\\\.tsx$\")"
     ],
     "additionalDirectories": [
       "/Users/ariell/Desktop/triolla-snapshot/output/triolla.io/app/[[...slug]]",
-      "/Users/ariell/Desktop/triolla-snapshot/output/triolla.io/app/(page-editor)/admin/page-editor"
+      "/Users/ariell/Desktop/triolla-snapshot/output/triolla.io/app/(page-editor)/admin/page-editor",
+      "/Users/ariell/Desktop/triolla-snapshot/output/triolla.io/public/assets/_cas"
     ]
   }
 }
