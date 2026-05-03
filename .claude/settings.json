@@ -49,7 +49,8 @@
       "Bash(ps -p 28663 -o pid,command)",
       "Bash(git config *)",
       "Bash(kill 28663)",
-      "Bash(grep -E \"\\\\.ts$|\\\\.tsx$\")"
+      "Bash(grep -E \"\\\\.ts$|\\\\.tsx$\")",
+      "Bash(grep -o \".\\\\{0,300\\\\}port_faq.\\\\{0,300\\\\}\" /Users/ariell/Desktop/triolla-snapshot/output/triolla.io/public/assets/_cas/1ab71297c03e28dfe582e73e6b956c0f43a13083385753257354745f1ba8f96e.css)"
     ],
     "additionalDirectories": [
       "/Users/ariell/Desktop/triolla-snapshot/output/triolla.io/app/[[...slug]]",

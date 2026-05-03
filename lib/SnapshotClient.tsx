@@ -78,8 +78,42 @@ function replayPostSnapshotPaint(): void {
   announceSnapshotToLegacyScripts();
 }
 
+function patchGfNumberFormats(): void {
+  try {
+    type GfGlobal = { number_formats?: Record<string | number, unknown> };
+    const w = window as unknown as { gf_global?: GfGlobal };
+    if (!w.gf_global) w.gf_global = {};
+    const gfg = w.gf_global;
+    gfg.number_formats = new Proxy((gfg.number_formats ?? {}) as Record<string | number, unknown>, {
+      get(target, key: string | symbol) {
+        const k = key as string | number;
+        return k in target ? target[k] : { isNumber: false, isPrice: false };
+      },
+    });
+  } catch (_) {}
+}
+
+function installGfGlobalInterceptor(): void {
+  try {
+    type GfGlobal = { number_formats?: Record<string | number, unknown> };
+    const w = window as unknown as { gf_global?: GfGlobal };
+    let _val = w.gf_global;
+    Object.defineProperty(w, "gf_global", {
+      configurable: true,
+      get() { return _val; },
+      set(v: GfGlobal) {
+        _val = v;
+        // Re-patch immediately after GF overwrites gf_global
+        if (_val && typeof _val === "object") patchGfNumberFormats();
+      },
+    });
+  } catch (_) {}
+}
+
 function installSnapshotPluginStubs(): void {
   const w = window as Window;
+  installGfGlobalInterceptor();
+  patchGfNumberFormats();
   if (typeof w.gform_theme_config !== "undefined") return;
   w.gform_theme_config = {
     common: {
@@ -299,6 +333,7 @@ function SnapshotClientImpl({ entry, bodyHtml, widgetProps }: Props) {
       // for the download phase (e.g. 31 scripts × 150ms → ~150ms total download).
       for (const src of entry.js) {
         if (_TRACKING.test(src)) continue;
+        if (/gravityforms\.min\.js/i.test(src)) continue;
         if (document.querySelector(`link[rel="preload"][href="${src}"]`)) continue;
         if (document.querySelector(`script[src="${src}"]`)) continue;
         const link = document.createElement("link");
@@ -318,6 +353,8 @@ function SnapshotClientImpl({ entry, bodyHtml, widgetProps }: Props) {
         }
 
         if (_TRACKING.test(src)) continue;
+        // GF validation JS crashes in snapshot env — submit is handled by our shim
+        if (/gravityforms\.min\.js/i.test(src)) continue;
 
         await new Promise<void>((resolve) => {
           const script = document.createElement("script");
@@ -353,18 +390,7 @@ function SnapshotClientImpl({ entry, bodyHtml, widgetProps }: Props) {
       //     Fix 2: define gform.submission.handleButtonClick to intercept the
       //             submit button onclick, collect the form fields, and POST the
       //             payload to /api/contact — replacing the form on success.
-      try {
-        type GfGlobal = { number_formats?: Record<string | number, unknown> };
-        const gfg = (window as unknown as { gf_global?: GfGlobal }).gf_global;
-        if (gfg && Array.isArray(gfg.number_formats)) {
-          gfg.number_formats = new Proxy(gfg.number_formats as unknown as Record<string | number, unknown>, {
-            get(target, key: string | symbol) {
-              const k = key as string | number;
-              return k in target ? target[k] : { isNumber: false, isPrice: false };
-            },
-          });
-        }
-      } catch (_) {}
+      patchGfNumberFormats();
 
       try {
         type GformNS = { submission?: { handleButtonClick?: (btn: HTMLElement) => void } };
@@ -609,6 +635,7 @@ function SnapshotClientImpl({ entry, bodyHtml, widgetProps }: Props) {
       data-snapshot-client
       className={entry.dir === "rtl" ? "rtl" : undefined}
       dangerouslySetInnerHTML={{ __html: bodyHtml }}
+      suppressHydrationWarning
     />
   );
 }
