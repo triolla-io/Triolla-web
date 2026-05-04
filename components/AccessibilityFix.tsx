@@ -36,8 +36,41 @@ export default function AccessibilityFix() {
       if (altText) img.setAttribute("alt", altText);
     });
 
-    // Ensure proper heading hierarchy — convert skipped heading levels
-    // e.g., <h1><h3> → <h1><h2>
+    // Mark images redundant when their alt text duplicates adjacent visible text.
+    // Screen readers would read the text twice — make the image decorative instead.
+    document.querySelectorAll<HTMLImageElement>("[data-snapshot-client] img[alt]").forEach((img) => {
+      const alt = img.getAttribute("alt")?.trim();
+      if (!alt) return;
+      // Check parent link text (image inside <a> with same visible text)
+      const parentLink = img.closest("a");
+      if (parentLink) {
+        const linkText = Array.from(parentLink.childNodes)
+          .filter((n) => n.nodeType === Node.TEXT_NODE)
+          .map((n) => n.textContent?.trim())
+          .join(" ")
+          .trim();
+        if (linkText && linkText.toLowerCase() === alt.toLowerCase()) {
+          img.setAttribute("alt", "");
+          img.setAttribute("aria-hidden", "true");
+          return;
+        }
+      }
+      // Check sibling heading/span text in same container
+      const container = img.parentElement;
+      if (container) {
+        const siblingText = Array.from(container.querySelectorAll("h1,h2,h3,h4,h5,h6,span,p"))
+          .map((el) => el.textContent?.trim())
+          .find((t) => t && t.toLowerCase() === alt.toLowerCase());
+        if (siblingText) {
+          img.setAttribute("alt", "");
+          img.setAttribute("aria-hidden", "true");
+        }
+      }
+    });
+
+    // Fix heading hierarchy by replacing skipped-level heading elements with correct-level tags.
+    // aria-level attribute alone is insufficient — axe-core's heading-order rule checks the native
+    // tag level. Actual DOM element replacement is required for Lighthouse to pass.
     const headings = Array.from(
       document.querySelectorAll("[data-snapshot-client] h1, [data-snapshot-client] h2, [data-snapshot-client] h3, [data-snapshot-client] h4, [data-snapshot-client] h5, [data-snapshot-client] h6")
     );
@@ -45,9 +78,13 @@ export default function AccessibilityFix() {
     for (const h of headings) {
       const level = parseInt(h.tagName[1]);
       if (level - lastLevel > 1) {
-        const corrected = lastLevel + 1;
-        h.setAttribute("role", "heading");
-        h.setAttribute("aria-level", String(corrected));
+        const corrected = Math.min(lastLevel + 1, 6);
+        const replacement = document.createElement(`h${corrected}`);
+        for (const attr of Array.from(h.attributes)) {
+          replacement.setAttribute(attr.name, attr.value);
+        }
+        while (h.firstChild) replacement.appendChild(h.firstChild);
+        h.parentNode?.replaceChild(replacement, h);
         lastLevel = corrected;
       } else {
         lastLevel = level;
@@ -117,10 +154,11 @@ export default function AccessibilityFix() {
     });
   }, []);
 
-  // Second pass: runs after owl.js initializes (owl.js fires after body gets 'loaded' class at ~800ms).
+  // Second pass: runs as soon as owl.js initializes any carousel (adds 'owl-loaded' class).
   // owl.js injects <div> children directly into <ul class="owl-carousel"> and wraps <li> items in
   // <div class="owl-item">, making them invalid list structure. Suppress with role="presentation".
-  // Also re-labels owl prev/next buttons which owl.js recreates, wiping labels from the first pass.
+  // Also labels owl dot/prev/next buttons which owl.js injects with no accessible text.
+  // Uses owl-loaded class as the trigger — fires much earlier than body.loaded (~800ms).
   useEffect(() => {
     const applyPostOwlFixes = () => {
       // Suppress invalid list structure: <ul> with <div> children injected by owl.js
@@ -130,18 +168,26 @@ export default function AccessibilityFix() {
         ul.setAttribute("role", "presentation");
       });
 
-      // Suppress "li not in ul": owl.js moves <li> inside <div class="owl-item">
+      // Suppress "li not in ul": owl.js wraps each <li> in <div class="owl-item">
+      // making the li's parent a div, not ul. Add role="presentation" to suppress the error.
       document.querySelectorAll<HTMLElement>(
-        "[data-snapshot-client] .owl-item > li"
+        "[data-snapshot-client] .owl-item > li, [data-snapshot-client] .owl-item li"
       ).forEach((li) => {
         li.setAttribute("role", "presentation");
       });
 
-      // Re-label owl nav buttons — owl.js recreates them after the first pass runs
+      // Label owl prev/next nav buttons — owl.js injects them with no accessible text
       document.querySelectorAll<HTMLElement>(
         "[data-snapshot-client] button.owl-prev:not([aria-label]), [data-snapshot-client] button.owl-next:not([aria-label])"
       ).forEach((btn) => {
         btn.setAttribute("aria-label", btn.classList.contains("owl-prev") ? "Previous slide" : "Next slide");
+      });
+
+      // Label owl dot buttons (pagination indicators) — injected by owl.js with no text or label
+      document.querySelectorAll<HTMLElement>(
+        "[data-snapshot-client] button.owl-dot:not([aria-label])"
+      ).forEach((btn, i) => {
+        btn.setAttribute("aria-label", `Go to slide ${i + 1}`);
       });
 
       // Re-check any remaining unlabeled buttons after owl.js DOM changes
@@ -156,18 +202,54 @@ export default function AccessibilityFix() {
       });
     };
 
-    if (document.body.classList.contains("loaded")) {
-      applyPostOwlFixes();
-    } else {
-      const observer = new MutationObserver(() => {
+    // Watch for owl-loaded class being added to any carousel — fires when owl.js finishes init,
+    // much earlier than body.loaded. Fall back to body.loaded if no carousels on this page.
+    const carousels = Array.from(
+      document.querySelectorAll<HTMLElement>("[data-snapshot-client] .owl-carousel")
+    );
+
+    if (carousels.length === 0) {
+      // No carousels — still run for non-owl button fixes after body.loaded
+      if (document.body.classList.contains("loaded")) {
+        applyPostOwlFixes();
+        return;
+      }
+      const bodyObserver = new MutationObserver(() => {
         if (document.body.classList.contains("loaded")) {
-          observer.disconnect();
-          setTimeout(applyPostOwlFixes, 100);
+          bodyObserver.disconnect();
+          applyPostOwlFixes();
         }
       });
-      observer.observe(document.body, { attributes: true, attributeFilter: ["class"] });
-      return () => observer.disconnect();
+      bodyObserver.observe(document.body, { attributes: true, attributeFilter: ["class"] });
+      return () => bodyObserver.disconnect();
     }
+
+    // Carousels exist — check if already initialized
+    const allLoaded = carousels.every((c) => c.classList.contains("owl-loaded"));
+    if (allLoaded) {
+      applyPostOwlFixes();
+      return;
+    }
+
+    // Watch for owl-loaded being added; also set a hard fallback at 2s
+    let done = false;
+    const finish = () => {
+      if (done) return;
+      done = true;
+      carouselObserver.disconnect();
+      applyPostOwlFixes();
+    };
+    const carouselObserver = new MutationObserver(() => {
+      if (carousels.some((c) => c.classList.contains("owl-loaded"))) finish();
+    });
+    for (const c of carousels) {
+      carouselObserver.observe(c, { attributes: true, attributeFilter: ["class"] });
+    }
+    const fallback = setTimeout(finish, 2000);
+    return () => {
+      carouselObserver.disconnect();
+      clearTimeout(fallback);
+    };
   }, []);
 
   return null;
