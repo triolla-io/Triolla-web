@@ -324,9 +324,9 @@ export default function He() {
                       </span>
                     </div>
                     <div className={"abthrebottxt"}>
-                      <h5>
+                      <h4>
                         {"תיכנון מוצר חדש"}
-                      </h5>
+                      </h4>
                       <p>
                         {"תיכנון ופיתוח"}
                         <br />
@@ -345,9 +345,9 @@ export default function He() {
                       </span>
                     </div>
                     <div className={"abthrebottxt"}>
-                      <h5>
+                      <h4>
                         {"שיפור מוצר קיים"}
-                      </h5>
+                      </h4>
                       <p>
                         {"שידרוג, עיצוב מחדש והפכו את המוצר שלכם למוביל בקטגוריה"}
                       </p>
@@ -364,9 +364,9 @@ export default function He() {
                       </span>
                     </div>
                     <div className={"abthrebottxt"}>
-                      <h5>
+                      <h4>
                         {"צעדים ראשונים עבור סטארט-אפים"}
-                      </h5>
+                      </h4>
                       <p>
                         {"קחו את החזון שלכם "}
                         <br />
@@ -385,9 +385,9 @@ export default function He() {
                       </span>
                     </div>
                     <div className={"abthrebottxt"}>
-                      <h5>
+                      <h4>
                         {"ייעוץ מוצרי"}
-                      </h5>
+                      </h4>
                       <p>
                         {"האץ את תהליך התכנון"}
                         <br />
@@ -408,9 +408,9 @@ export default function He() {
                       </span>
                     </div>
                     <div className={"abthrebottxt"}>
-                      <h5>
+                      <h4>
                         {"תיכנון מוצר חדש"}
-                      </h5>
+                      </h4>
                       <p>
                         {"תיכנון ופיתוח"}
                         <br />
@@ -429,9 +429,9 @@ export default function He() {
                       </span>
                     </div>
                     <div className={"abthrebottxt"}>
-                      <h5>
+                      <h4>
                         {"שיפור מוצר קיים"}
-                      </h5>
+                      </h4>
                       <p>
                         {"שידרוג, עיצוב מחדש והפכו את המוצר שלכם למוביל בקטגוריה"}
                       </p>
@@ -448,9 +448,9 @@ export default function He() {
                       </span>
                     </div>
                     <div className={"abthrebottxt"}>
-                      <h5>
+                      <h4>
                         {"צעדים ראשונים עבור סטארט-אפים"}
-                      </h5>
+                      </h4>
                       <p>
                         {"קחו את החזון שלכם "}
                         <br />
@@ -469,9 +469,9 @@ export default function He() {
                       </span>
                     </div>
                     <div className={"abthrebottxt"}>
-                      <h5>
+                      <h4>
                         {"ייעוץ מוצרי"}
-                      </h5>
+                      </h4>
                       <p>
                         {"האץ את תהליך התכנון"}
                         <br />

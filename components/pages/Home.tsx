@@ -13,7 +13,7 @@ export default function Home() {
       <div className={"header_wrap"}>
         <div className={"header_in cf"}>
           <div className={"logo"}>
-            <Image fetchPriority={"high"} width={"79"} height={"38"} className={"logoimg"} alt={"Triolla"} src={"/assets/_cas/f96f51ee771353cd92b1cce5c9ddc9a3eab76177a074e650d32df124317b37f9.png"} priority />
+            <Image fetchPriority={"high"} width={"79"} height={"38"} className={"logoimg"} alt={"Triolla"} src={"/assets/_cas/6e6dd0ca854f9a87ae7b3c8c28268d078ee93faf84427270bc2aba1019d78836.png"} priority />
             <span>
               {"Formally Pitangoux"}
             </span>
@@ -139,7 +139,7 @@ export default function Home() {
       </div>
     </div>
     <div className={"menutoggle"}>
-      <a role={"button"} tabIndex={"0"} aria-label={"Open link"}>
+      <a role={"button"} tabIndex={"0"} aria-label={"Open menu"}>
         <img width={"29"} height={"25"} className={"one"} alt={""} src={"/assets/_cas/f242f92bc1304f3ed302c7f5058ebaaf0b5b04e11f1d6fd1ec03d878c3502735.svg"} />
         <img width={"36"} height={"24"} className={"two"} alt={""} src={"/assets/_cas/f4c06dfe46ebc1aa4e5f140433e84544500fe4bf67abda9594f870a542c5dc13.svg"} />
       </a>
@@ -181,7 +181,7 @@ export default function Home() {
     </div>
     <div className={"hmenumob"}>
       <div className={"hmenumobclose"}>
-        <a role={"button"} tabIndex={"0"} aria-label={"Open link"}>
+        <a role={"button"} tabIndex={"0"} aria-label={"Close menu"}>
           <img width={"27"} height={"27"} alt={""} src={"/assets/_cas/3078356e5fa0f91d8012f53a13f699480b77a85cc873e7d364bd3576fadb6215.svg"} />
         </a>
       </div>
@@ -450,11 +450,11 @@ export default function Home() {
                       </span>
                     </div>
                     <div className={"abthrebottxt"}>
-                      <h5>
+                      <h4>
                         {"Design a"}
                         <br />
                         {" new product"}
-                      </h5>
+                      </h4>
                       <p>
                         {"Design and develop an"}
                         <br />
@@ -473,9 +473,9 @@ export default function Home() {
                       </span>
                     </div>
                     <div className={"abthrebottxt"}>
-                      <h5>
+                      <h4>
                         {"Improve an existing product"}
-                      </h5>
+                      </h4>
                       <p>
                         {"Upgrade and redesign your product to become a category leader"}
                       </p>
@@ -492,9 +492,9 @@ export default function Home() {
                       </span>
                     </div>
                     <div className={"abthrebottxt"}>
-                      <h5>
+                      <h4>
                         {"First Steps for Start-ups"}
-                      </h5>
+                      </h4>
                       <p>
                         {"Take your vision from"}
                         <br />
@@ -513,9 +513,9 @@ export default function Home() {
                       </span>
                     </div>
                     <div className={"abthrebottxt"}>
-                      <h5>
+                      <h4>
                         {"Product consulting"}
-                      </h5>
+                      </h4>
                       <p>
                         {"Accelerate your strategic"}
                         <br />
@@ -536,11 +536,11 @@ export default function Home() {
                       </span>
                     </div>
                     <div className={"abthrebottxt"}>
-                      <h5>
+                      <h4>
                         {"Design a"}
                         <br />
                         {" new product"}
-                      </h5>
+                      </h4>
                       <p>
                         {"Design and develop an"}
                         <br />
@@ -559,9 +559,9 @@ export default function Home() {
                       </span>
                     </div>
                     <div className={"abthrebottxt"}>
-                      <h5>
+                      <h4>
                         {"Improve an existing product"}
-                      </h5>
+                      </h4>
                       <p>
                         {"Upgrade and redesign your product to become a category leader"}
                       </p>
@@ -578,9 +578,9 @@ export default function Home() {
                       </span>
                     </div>
                     <div className={"abthrebottxt"}>
-                      <h5>
+                      <h4>
                         {"First Steps for Start-ups"}
-                      </h5>
+                      </h4>
                       <p>
                         {"Take your vision from"}
                         <br />
@@ -599,9 +599,9 @@ export default function Home() {
                       </span>
                     </div>
                     <div className={"abthrebottxt"}>
-                      <h5>
+                      <h4>
                         {"Product consulting"}
-                      </h5>
+                      </h4>
                       <p>
                         {"Accelerate your strategic"}
                         <br />

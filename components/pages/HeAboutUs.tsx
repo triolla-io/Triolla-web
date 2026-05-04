@@ -524,9 +524,9 @@ export default function HeAboutUs() {
                       </span>
                     </div>
                     <div className={"abthrebottxt"}>
-                      <h5>
+                      <h4>
                         {"אפיון מוצר חדש"}
-                      </h5>
+                      </h4>
                       <p>
                         {"תכנן ופיתוח מוצר מוביל בתעשייה"}
                       </p>
@@ -544,9 +544,9 @@ export default function HeAboutUs() {
                       </span>
                     </div>
                     <div className={"abthrebottxt"}>
-                      <h5>
+                      <h4>
                         {"שיפור מוצר קיים"}
-                      </h5>
+                      </h4>
                       <p>
                         {"שדרג, עצב מחדש והפכו את המוצר שלכם למוביל בקטגוריה"}
                       </p>
@@ -564,9 +564,9 @@ export default function HeAboutUs() {
                       </span>
                     </div>
                     <div className={"abthrebottxt"}>
-                      <h5>
+                      <h4>
                         {"צעדים ראשונים עבור סטארט-אפים"}
-                      </h5>
+                      </h4>
                       <p>
                         {"קחו את החזון שלכם מהקונספט ועד להשקה"}
                       </p>
@@ -584,9 +584,9 @@ export default function HeAboutUs() {
                       </span>
                     </div>
                     <div className={"abthrebottxt"}>
-                      <h5>
+                      <h4>
                         {"ייעוץ מוצרי"}
-                      </h5>
+                      </h4>
                       <p>
                         {"האץ את תהליך התכנון האסטרטגי שלך"}
                       </p>
@@ -606,9 +606,9 @@ export default function HeAboutUs() {
                       </span>
                     </div>
                     <div className={"abthrebottxt"}>
-                      <h5>
+                      <h4>
                         {"אפיון מוצר חדש"}
-                      </h5>
+                      </h4>
                       <p>
                         {"תכנן ופיתוח מוצר מוביל בתעשייה"}
                       </p>
@@ -626,9 +626,9 @@ export default function HeAboutUs() {
                       </span>
                     </div>
                     <div className={"abthrebottxt"}>
-                      <h5>
+                      <h4>
                         {"שיפור מוצר קיים"}
-                      </h5>
+                      </h4>
                       <p>
                         {"שדרג, עצב מחדש והפכו את המוצר שלכם למוביל בקטגוריה"}
                       </p>
@@ -646,9 +646,9 @@ export default function HeAboutUs() {
                       </span>
                     </div>
                     <div className={"abthrebottxt"}>
-                      <h5>
+                      <h4>
                         {"צעדים ראשונים עבור סטארט-אפים"}
-                      </h5>
+                      </h4>
                       <p>
                         {"קחו את החזון שלכם מהקונספט ועד להשקה"}
                       </p>
@@ -666,9 +666,9 @@ export default function HeAboutUs() {
                       </span>
                     </div>
                     <div className={"abthrebottxt"}>
-                      <h5>
+                      <h4>
                         {"ייעוץ מוצרי"}
-                      </h5>
+                      </h4>
                       <p>
                         {"האץ את תהליך התכנון האסטרטגי שלך"}
                       </p>

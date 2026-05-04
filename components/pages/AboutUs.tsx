@@ -10,7 +10,7 @@ export default function AboutUs() {
   return (
     <>
 <div>
-      <Image width={"79"} height={"38"} className={"logoimg"} alt={"Triolla"} src={"/assets/_cas/f96f51ee771353cd92b1cce5c9ddc9a3eab76177a074e650d32df124317b37f9.png"} priority />
+      <Image width={"79"} height={"38"} className={"logoimg"} alt={"Triolla"} src={"/assets/_cas/6e6dd0ca854f9a87ae7b3c8c28268d078ee93faf84427270bc2aba1019d78836.png"} priority />
       <span>
         {"Formally Pitangoux"}
       </span>
@@ -641,11 +641,11 @@ export default function AboutUs() {
                       </span>
                     </div>
                     <div className={"abthrebottxt"}>
-                      <h5>
+                      <h4>
                         {"Design a"}
                         <br />
                         {" new product"}
-                      </h5>
+                      </h4>
                       <p>
                         {"Design and develop an"}
                         <br />
@@ -665,9 +665,9 @@ export default function AboutUs() {
                       </span>
                     </div>
                     <div className={"abthrebottxt"}>
-                      <h5>
+                      <h4>
                         {"Improve an existing product"}
-                      </h5>
+                      </h4>
                       <p>
                         {"Upgrade, redesign and turn your product into a category leader"}
                       </p>
@@ -685,9 +685,9 @@ export default function AboutUs() {
                       </span>
                     </div>
                     <div className={"abthrebottxt"}>
-                      <h5>
+                      <h4>
                         {"First Steps for Start-ups"}
-                      </h5>
+                      </h4>
                       <p>
                         {"Take your vision from"}
                         <br />
@@ -707,9 +707,9 @@ export default function AboutUs() {
                       </span>
                     </div>
                     <div className={"abthrebottxt"}>
-                      <h5>
+                      <h4>
                         {"Product consulting"}
-                      </h5>
+                      </h4>
                       <p>
                         {"Accelerate your strategic"}
                         <br />
@@ -731,11 +731,11 @@ export default function AboutUs() {
                       </span>
                     </div>
                     <div className={"abthrebottxt"}>
-                      <h5>
+                      <h4>
                         {"Design a"}
                         <br />
                         {" new product"}
-                      </h5>
+                      </h4>
                       <p>
                         {"Design and develop an"}
                         <br />
@@ -755,9 +755,9 @@ export default function AboutUs() {
                       </span>
                     </div>
                     <div className={"abthrebottxt"}>
-                      <h5>
+                      <h4>
                         {"Improve an existing product"}
-                      </h5>
+                      </h4>
                       <p>
                         {"Upgrade, redesign and turn your product into a category leader"}
                       </p>
@@ -775,9 +775,9 @@ export default function AboutUs() {
                       </span>
                     </div>
                     <div className={"abthrebottxt"}>
-                      <h5>
+                      <h4>
                         {"First Steps for Start-ups"}
-                      </h5>
+                      </h4>
                       <p>
                         {"Take your vision from"}
                         <br />
@@ -797,9 +797,9 @@ export default function AboutUs() {
                       </span>
                     </div>
                     <div className={"abthrebottxt"}>
-                      <h5>
+                      <h4>
                         {"Product consulting"}
-                      </h5>
+                      </h4>
                       <p>
                         {"Accelerate your strategic"}
                         <br />

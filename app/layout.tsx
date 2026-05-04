@@ -127,6 +127,14 @@ const CONTRAST_FIX = `
 .footer_bot_socail .wpml-ls-display{color:#e8e8e8!important}
 `;
 
+// Heading-order a11y fix: source theme used <h5> after <h3> (skipped <h4>),
+// which Lighthouse flags. JSX is now <h4>; mirror the original .abthrebottxt h5
+// rules onto h4 so visuals are unchanged.
+const HEADING_ORDER_FIX = `
+.abthrebottxt h4{color:#e7ebf0;font-size:38px;line-height:42px;font-family:'Almoni ML v5 AAA',Helvetica,sans-serif;font-weight:700;margin:0 0 5px;text-transform:capitalize}
+@media only screen and (max-width:1023px){.abthrebottxt h4{font-size:23px;line-height:25px}}
+`;
+
 const FAQ_FIX = `
 .active .faqdetail{display:block!important}
 .port_faq_box{opacity:0;transform:translateY(28px);transition:opacity 0.5s ease,transform 0.5s ease}
@@ -504,6 +512,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <style dangerouslySetInnerHTML={{ __html: NAV_DROPDOWN_FIX }} />
         {/* eslint-disable-next-line react/no-danger */}
         <style dangerouslySetInnerHTML={{ __html: CONTRAST_FIX }} />
+        {/* eslint-disable-next-line react/no-danger */}
+        <style dangerouslySetInnerHTML={{ __html: HEADING_ORDER_FIX }} />
         {/* eslint-disable-next-line react/no-danger */}
         <style dangerouslySetInnerHTML={{ __html: FAQ_FIX }} />
       </head>
