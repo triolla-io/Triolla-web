@@ -86,6 +86,17 @@ export default function AccessibilityFix() {
       btn.setAttribute("aria-label", btn.classList.contains("owl-prev") ? "Previous slide" : "Next slide");
     });
 
+    // Fix native <button> elements missing accessible text (not covered by role="button" loop above)
+    document.querySelectorAll<HTMLElement>(
+      "[data-snapshot-client] button:not([aria-label]):not([aria-labelledby])"
+    ).forEach((btn) => {
+      if (btn.textContent?.trim()) return;
+      const questSpan = btn.querySelector(".faq_quest");
+      if (questSpan?.textContent?.trim()) {
+        btn.setAttribute("aria-label", questSpan.textContent.trim());
+      }
+    });
+
     // Add labels to form inputs that are missing them
     document.querySelectorAll("[data-snapshot-client] input, [data-snapshot-client] textarea, [data-snapshot-client] select").forEach((field) => {
       if (field.getAttribute("aria-label") || field.closest("label")) return;
@@ -104,6 +115,59 @@ export default function AccessibilityFix() {
         field.setAttribute("aria-label", label.trim());
       }
     });
+  }, []);
+
+  // Second pass: runs after owl.js initializes (owl.js fires after body gets 'loaded' class at ~800ms).
+  // owl.js injects <div> children directly into <ul class="owl-carousel"> and wraps <li> items in
+  // <div class="owl-item">, making them invalid list structure. Suppress with role="presentation".
+  // Also re-labels owl prev/next buttons which owl.js recreates, wiping labels from the first pass.
+  useEffect(() => {
+    const applyPostOwlFixes = () => {
+      // Suppress invalid list structure: <ul> with <div> children injected by owl.js
+      document.querySelectorAll<HTMLElement>(
+        "[data-snapshot-client] ul.owl-carousel"
+      ).forEach((ul) => {
+        ul.setAttribute("role", "presentation");
+      });
+
+      // Suppress "li not in ul": owl.js moves <li> inside <div class="owl-item">
+      document.querySelectorAll<HTMLElement>(
+        "[data-snapshot-client] .owl-item > li"
+      ).forEach((li) => {
+        li.setAttribute("role", "presentation");
+      });
+
+      // Re-label owl nav buttons — owl.js recreates them after the first pass runs
+      document.querySelectorAll<HTMLElement>(
+        "[data-snapshot-client] button.owl-prev:not([aria-label]), [data-snapshot-client] button.owl-next:not([aria-label])"
+      ).forEach((btn) => {
+        btn.setAttribute("aria-label", btn.classList.contains("owl-prev") ? "Previous slide" : "Next slide");
+      });
+
+      // Re-check any remaining unlabeled buttons after owl.js DOM changes
+      document.querySelectorAll<HTMLElement>(
+        "[data-snapshot-client] button:not([aria-label]):not([aria-labelledby])"
+      ).forEach((btn) => {
+        if (btn.textContent?.trim()) return;
+        const questSpan = btn.querySelector(".faq_quest");
+        if (questSpan?.textContent?.trim()) {
+          btn.setAttribute("aria-label", questSpan.textContent.trim());
+        }
+      });
+    };
+
+    if (document.body.classList.contains("loaded")) {
+      applyPostOwlFixes();
+    } else {
+      const observer = new MutationObserver(() => {
+        if (document.body.classList.contains("loaded")) {
+          observer.disconnect();
+          setTimeout(applyPostOwlFixes, 100);
+        }
+      });
+      observer.observe(document.body, { attributes: true, attributeFilter: ["class"] });
+      return () => observer.disconnect();
+    }
   }, []);
 
   return null;
