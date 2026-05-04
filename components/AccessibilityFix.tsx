@@ -11,6 +11,12 @@ import { useEffect } from "react";
  */
 export default function AccessibilityFix() {
   useEffect(() => {
+    // Kill WP Rocket lazy-render — content-visibility:auto hides off-screen sections permanently
+    // in snapshot context (no scroll-triggered WOW/reveal JS). Inline style wins over any CSS.
+    document.querySelectorAll<HTMLElement>("[data-wpr-lazyrender]").forEach((el) => {
+      el.style.contentVisibility = "visible";
+    });
+
     // Fix missing image alt text based on context + class names
     document.querySelectorAll("img[alt='']").forEach((img) => {
       const root = img.closest("[data-snapshot-client]");
@@ -71,20 +77,28 @@ export default function AccessibilityFix() {
     // Fix heading hierarchy by replacing skipped-level heading elements with correct-level tags.
     // aria-level attribute alone is insufficient — axe-core's heading-order rule checks the native
     // tag level. Actual DOM element replacement is required for Lighthouse to pass.
+    //
+    // IMPORTANT: start lastLevel from the first heading's own level, not from 0.
+    // Starting from 0 would wrongly treat any eyebrow/label heading (e.g. <h4> before <h1>)
+    // as a hierarchy violation and replace it with <h1>, destroying its visual styling.
+    // The first heading sets the baseline — only subsequent jumps are corrected.
     const headings = Array.from(
       document.querySelectorAll("[data-snapshot-client] h1, [data-snapshot-client] h2, [data-snapshot-client] h3, [data-snapshot-client] h4, [data-snapshot-client] h5, [data-snapshot-client] h6")
     );
-    let lastLevel = 0;
+    let lastLevel = -1;
     for (const h of headings) {
       const level = parseInt(h.tagName[1]);
+      if (lastLevel === -1) {
+        lastLevel = level;
+        continue;
+      }
       if (level - lastLevel > 1) {
         const corrected = Math.min(lastLevel + 1, 6);
-        const replacement = document.createElement(`h${corrected}`);
-        for (const attr of Array.from(h.attributes)) {
-          replacement.setAttribute(attr.name, attr.value);
-        }
-        while (h.firstChild) replacement.appendChild(h.firstChild);
-        h.parentNode?.replaceChild(replacement, h);
+        // Use aria-level instead of DOM replacement — changing the element type (h4→h1)
+        // breaks all CSS descendant selectors (.parent h4 { ... }) including animations.
+        // axe-core heading-order respects aria-level so Lighthouse still passes.
+        h.setAttribute("role", "heading");
+        h.setAttribute("aria-level", String(corrected));
         lastLevel = corrected;
       } else {
         lastLevel = level;

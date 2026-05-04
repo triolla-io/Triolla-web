@@ -1,12 +1,15 @@
 import path from "path";
 import type { NextConfig } from "next";
+import { withPayload } from "@payloadcms/next/withPayload";
 
 // Populated by engine/scaffold_nextjs.py — do not edit manually
 const LOCALES: string[] = ["en","he"];
 const DEFAULT_LOCALE = "en";
 
-// All CMS JS assets are downloaded locally into public/. No proxy needed.
-const ORIGIN = "";
+// Proxy origin for WP asset paths not yet downloaded to local CAS.
+// Set PROXY_ORIGIN=https://triolla.io in .env.local to load WP JS/CSS via CDN in dev.
+// Production: leave unset if CDN serves WP assets directly; set if not.
+const ORIGIN = process.env.PROXY_ORIGIN || "";
 
 const nextConfig: NextConfig = {
   output: "standalone",
@@ -182,4 +185,4 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default nextConfig;
+export default withPayload(nextConfig, { devBundleServerPackages: false });

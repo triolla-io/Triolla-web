@@ -135,18 +135,18 @@ const HEADING_ORDER_FIX = `
 @media only screen and (max-width:1023px){.abthrebottxt h4{font-size:23px;line-height:25px}}
 `;
 
+// WP Rocket lazy-render override.
+// CAS CSS contains [data-wpr-lazyrender]{content-visibility:auto} from the original WP page.
+// content-visibility:auto skips rendering off-screen children — opacity/transform transitions
+// never fire for sections below the fold (FAQ, why-us, etc.) because the browser doesn't
+// compute styles for them. Override to visible so all sections render normally.
+const LAZY_RENDER_FIX = `
+[data-wpr-lazyrender]{content-visibility:visible!important}
+`;
+
 const FAQ_FIX = `
 .active .faqdetail{display:block!important}
-.port_faq_box{opacity:0;transform:translateY(28px);transition:opacity 0.5s ease,transform 0.5s ease}
-.port_faq_sec.faq-revealed .port_faq_box:nth-child(1){opacity:1;transform:none;transition-delay:0.1s}
-.port_faq_sec.faq-revealed .port_faq_box:nth-child(2){opacity:1;transform:none;transition-delay:0.2s}
-.port_faq_sec.faq-revealed .port_faq_box:nth-child(3){opacity:1;transform:none;transition-delay:0.3s}
-.port_faq_sec.faq-revealed .port_faq_box:nth-child(4){opacity:1;transform:none;transition-delay:0.4s}
-.port_faq_sec.faq-revealed .port_faq_box:nth-child(5){opacity:1;transform:none;transition-delay:0.5s}
-.port_faq_sec.faq-revealed .port_faq_box:nth-child(6){opacity:1;transform:none;transition-delay:0.6s}
-.port_faq_sec.faq-revealed .port_faq_box:nth-child(7){opacity:1;transform:none;transition-delay:0.7s}
-.port_faq_sec.faq-revealed .port_faq_box:nth-child(8){opacity:1;transform:none;transition-delay:0.8s}
-.port_faq_sec.faq-revealed .port_faq_box:nth-child(9){opacity:1;transform:none;transition-delay:0.9s}
+.port_faq_top p{opacity:1!important;bottom:0!important}
 .faqtitle a{display:flex;align-items:center;position:relative;font-size:36px;line-height:100%;letter-spacing:0;text-align:start;vertical-align:middle;color:#fff;padding:32px 40px 34px 0;background:transparent;border:none;width:100%;cursor:pointer;font-family:inherit;text-decoration:none}
 .faqtitle a:after{position:absolute;content:'';top:44px;right:0;background:url(/assets/_cas/42c7a5166e9e9d5f0cda10d19e63e28aadb782f7e15e27c8d18d4fa85b51efdf.svg) center center no-repeat;background-size:cover;width:32px;height:32px;transition:.3s;-webkit-transition:.3s;z-index:1}
 .active .faqtitle a:after{position:absolute;content:'';top:44px;right:0;background:url(/assets/_cas/06ac6e2d861b3db17bc93519b72f3544124937ef2ab15699c884a5642d4a0f0f.svg) center center no-repeat;background-size:cover;width:28px;height:4px;transition:.3s;-webkit-transition:.3s;z-index:1}
@@ -514,6 +514,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <style dangerouslySetInnerHTML={{ __html: CONTRAST_FIX }} />
         {/* eslint-disable-next-line react/no-danger */}
         <style dangerouslySetInnerHTML={{ __html: HEADING_ORDER_FIX }} />
+        {/* eslint-disable-next-line react/no-danger */}
+        <style dangerouslySetInnerHTML={{ __html: LAZY_RENDER_FIX }} />
         {/* eslint-disable-next-line react/no-danger */}
         <style dangerouslySetInnerHTML={{ __html: FAQ_FIX }} />
       </head>

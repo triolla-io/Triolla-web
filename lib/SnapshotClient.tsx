@@ -112,10 +112,90 @@ function installGfGlobalInterceptor(): void {
   } catch (_) {}
 }
 
+const _IMG_REVEAL_STYLE_ID = "snap-img-reveal-styles";
+const _SKIP_ANCESTOR_SELECTORS = ["header", "nav", ".header_menu", ".hmenumob", ".site-header"];
+
+function installImageRevealObserver(root: HTMLElement | null): void {
+  if (!root || typeof IntersectionObserver === "undefined") return;
+
+  if (!document.getElementById(_IMG_REVEAL_STYLE_ID)) {
+    const style = document.createElement("style");
+    style.id = _IMG_REVEAL_STYLE_ID;
+    style.textContent = `
+      img.snap-img-reveal {
+        opacity: 0 !important;
+        transform: translateY(40px) !important;
+        transition: opacity 0.65s cubic-bezier(0.22,1,0.36,1), transform 0.65s cubic-bezier(0.22,1,0.36,1) !important;
+        will-change: opacity, transform;
+      }
+      img.snap-img-reveal.snap-img-visible {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+      }
+    `;
+    document.head.appendChild(style);
+  }
+
+  const images = Array.from(root.querySelectorAll<HTMLImageElement>("img"));
+  const toAnimate = images.filter((img) => {
+    if (img.classList.contains("snap-img-reveal")) return false;
+    for (const sel of _SKIP_ANCESTOR_SELECTORS) {
+      if (img.closest(sel)) return false;
+    }
+    const w = img.getAttribute("width");
+    const h = img.getAttribute("height");
+    if (w && h && Number(w) < 80 && Number(h) < 80) return false;
+    return true;
+  });
+
+  if (toAnimate.length === 0) return;
+
+  const io = new IntersectionObserver(
+    (entries) => {
+      for (const e of entries) {
+        if (!e.isIntersecting) continue;
+        (e.target as HTMLImageElement).classList.add("snap-img-visible");
+        io.unobserve(e.target);
+      }
+    },
+    { threshold: 0.08, rootMargin: "0px 0px -20px 0px" }
+  );
+
+  for (const img of toAnimate) {
+    img.classList.add("snap-img-reveal");
+    io.observe(img);
+  }
+}
+
+function installWowObserver(root: HTMLElement): void {
+  if (typeof IntersectionObserver === "undefined") return;
+  const wowEls = Array.from(root.querySelectorAll<HTMLElement>(".wow:not(.animated)"));
+  if (wowEls.length === 0) return;
+  const io = new IntersectionObserver(
+    (entries) => {
+      for (const e of entries) {
+        if (!e.isIntersecting) continue;
+        e.target.classList.add("animated");
+        io.unobserve(e.target);
+      }
+    },
+    { threshold: 0.1 }
+  );
+  for (const el of wowEls) io.observe(el);
+}
+
 function installSnapshotPluginStubs(): void {
   const w = window as Window;
   installGfGlobalInterceptor();
   patchGfNumberFormats();
+  // Stub WOW.js — theme scripts call new WOW().init() which re-scans .wow elements
+  // and re-applies .animated, causing animations to fire multiple times. Replace with
+  // a no-op; our installWowObserver handles the single-fire viewport reveal instead.
+  if (!(w as unknown as Record<string, unknown>).WOW) {
+    (w as unknown as Record<string, unknown>).WOW = function WOWStub() {
+      return { init: function() {} };
+    };
+  }
   if (typeof w.gform_theme_config !== "undefined") return;
   w.gform_theme_config = {
     common: {
@@ -164,10 +244,12 @@ function SnapshotClientImpl({ entry, bodyHtml, widgetProps }: Props) {
   // so this effect can skip; MutationObserver (below) covers that case.
   const routeKey = `${pathname}::${entry.slug}::${entry.locale}::${entry.loadOrderSha}`;
   useLayoutEffect(() => {
+    const root = getSnapshotClientRoot() ?? rootRef.current;
     const run = () => {
       flushSnapshotVisibility(getSnapshotClientRoot() ?? rootRef.current);
     };
     run();
+    installImageRevealObserver(root);
     queueMicrotask(run);
     requestAnimationFrame(() => {
       requestAnimationFrame(run);
@@ -593,6 +675,7 @@ function SnapshotClientImpl({ entry, bodyHtml, widgetProps }: Props) {
       const snapshotRoot = document.querySelector("[data-snapshot-client]") as HTMLElement | null;
       if (snapshotRoot) {
         flushSnapshotVisibility(snapshotRoot);
+        installWowObserver(snapshotRoot);
         _fireScroll();
 
         // IO keeps adding .show for any elements injected after this point and keeps
