@@ -18,6 +18,8 @@ type JQueryLike = {
   data(key: string): unknown;
   each(cb: (this: HTMLElement, i: number, el: HTMLElement) => void): JQueryLike;
   trigger(eventName: string): JQueryLike;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  [key: string]: any;
 };
 type JQueryStatic = ((selector: string | HTMLElement) => JQueryLike) & {
   fn?: { owlCarousel?: unknown };
@@ -449,14 +451,114 @@ function SnapshotClientImpl({ entry, bodyHtml, widgetProps }: Props) {
       //    These events have already fired by the time Next.js mounts this
       //    component, so dynamically-injected scripts never see them.
       //    Dispatching synthetic events here re-triggers those handlers.
-      // Fix FAQ accordion: the original jQuery handler is missing e.preventDefault(),
-      // so clicking <a href="#"> inside .faqtitle causes Next.js to re-run the script
-      // pipeline (via onPop). A capturing listener stops the navigation while letting
-      // the jQuery bubble handler run normally.
+      // FAQ accordion: pure-JS delegated handler — no jQuery dependency.
+      // CSS sets .faqdetail { display: none }; we toggle inline style directly.
+      // Guard prevents duplicate listeners across effect re-runs.
       try {
-        document.querySelectorAll<HTMLAnchorElement>('.faqtitle a').forEach((el) => {
-          el.addEventListener('click', (e) => e.preventDefault(), { capture: true });
-        });
+        const w = window as unknown as { __faqSnapshotBound?: boolean };
+        if (!w.__faqSnapshotBound) {
+          w.__faqSnapshotBound = true;
+          const _faqStyle = document.createElement('style');
+          _faqStyle.textContent = '.faqtitle a { outline: none !important; }';
+          document.head.appendChild(_faqStyle);
+          document.addEventListener('click', (e: MouseEvent) => {
+            const anchor = (e.target as HTMLElement).closest?.('.faqtitle a');
+            if (!anchor) return;
+            e.preventDefault();
+            e.stopPropagation(); // block jQuery's element-level handler from also toggling
+            const faqTitle = (anchor as HTMLElement).parentElement; // .faqtitle
+            const faqBox = faqTitle?.parentElement;                 // .port_faq_box
+            const faqDetail = faqTitle?.nextElementSibling as HTMLElement | null; // .faqdetail
+            if (!faqBox || !faqDetail) return;
+            const isOpen = faqBox.classList.contains('active');
+            // Close all open items
+            document.querySelectorAll<HTMLElement>('.port_faq_box.active').forEach((box) => {
+              box.classList.remove('active');
+              const d = box.querySelector<HTMLElement>(':scope > .faqdetail');
+              if (d) d.style.display = 'none';
+            });
+            // Open clicked item if it was closed
+            if (!isOpen) {
+              faqBox.classList.add('active');
+              faqDetail.style.display = 'block';
+            }
+          }, true);
+        }
+      } catch (_) {}
+
+      // Header nav dropdown — CSS hides `.header_menu li.bigmenu > ul` via
+      // opacity:0; pointer-events:none. The original WP/theme JS sets inline
+      // styles on click to reveal it, but never clears them — so the dropdown
+      // stays open and stacks across re-clicks. Manage open/close ourselves:
+      //  - click on a .bigmenu trigger toggles the dropdown
+      //  - outside-click clears any open dropdown
+      try {
+        const w3 = window as unknown as { __navMenuSnapshotBound?: boolean };
+        if (!w3.__navMenuSnapshotBound) {
+          w3.__navMenuSnapshotBound = true;
+          const TRIGGER_SEL = '.header_menu li.bigmenu, .hmenumob li.bigmenu';
+
+          const showDropdown = (li: HTMLElement) => {
+            const sub = li.querySelector<HTMLElement>(':scope > ul');
+            if (!sub) return;
+            sub.style.opacity = '1';
+            sub.style.pointerEvents = 'auto';
+            sub.style.visibility = 'visible';
+            li.classList.add('snapshot-menu-open');
+          };
+          const hideDropdown = (li: HTMLElement) => {
+            const sub = li.querySelector<HTMLElement>(':scope > ul');
+            if (sub) {
+              sub.style.opacity = '';
+              sub.style.pointerEvents = '';
+              sub.style.visibility = '';
+            }
+            li.classList.remove('snapshot-menu-open');
+          };
+          const closeAll = (except?: HTMLElement | null) => {
+            document.querySelectorAll<HTMLElement>('.snapshot-menu-open').forEach((li) => {
+              if (except && li === except) return;
+              hideDropdown(li);
+            });
+          };
+
+          document.addEventListener('click', (e: MouseEvent) => {
+            const target = e.target as HTMLElement;
+            const li = target.closest?.(TRIGGER_SEL) as HTMLElement | null;
+            if (!li) {
+              closeAll();
+              return;
+            }
+            // Click landed inside an already-open dropdown's submenu links —
+            // don't toggle, let the link navigate.
+            // Only toggle when the click is on the li's own <a> or .marrow,
+            // not on a nested submenu link.
+            const trigger = target.closest?.('a, .marrow') as HTMLElement | null;
+            if (!trigger || trigger.parentElement !== li) return;
+            e.preventDefault();
+            e.stopPropagation();
+            const isOpen = li.classList.contains('snapshot-menu-open');
+            closeAll(li);
+            if (isOpen) hideDropdown(li);
+            else showDropdown(li);
+          }, true);
+        }
+      } catch (_) {}
+
+      // Ticker close button — hide .headerticker when .tickclose is clicked.
+      try {
+        const w2 = window as unknown as { __tickcloseSnapshotBound?: boolean };
+        if (!w2.__tickcloseSnapshotBound) {
+          w2.__tickcloseSnapshotBound = true;
+          document.addEventListener('click', (e: MouseEvent) => {
+            const btn = (e.target as HTMLElement).closest?.('.tickclose');
+            if (!btn) return;
+            e.preventDefault();
+            e.stopPropagation();
+            const ticker = (btn as HTMLElement).closest?.('.headerticker') as HTMLElement | null;
+            if (ticker) ticker.style.display = 'none';
+          }, true);
+        }
       } catch (_) {}
 
       try { document.dispatchEvent(new Event("DOMContentLoaded")); } catch (_) {}

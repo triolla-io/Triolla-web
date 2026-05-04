@@ -2,6 +2,7 @@
 // @ts-nocheck
 import Link from "next/link";
 import FaqBox from "@/components/FaqBox";
+import FaqReveal from "@/components/FaqReveal";
 import Image from "next/image";
 import WidgetContactForm from "@/components/widgets/ContactForm";
 import widgetProps from "@/lib/widgetProps/triolla-io-home-en.json";
@@ -951,6 +952,7 @@ export default function Home() {
             </p>
           </div>
           <div className={"port_faq_sec"}>
+            <FaqReveal />
             <FaqBox className={"port_faq_box faq-1 wow fadeInUp"} data-wow-duration={"0.5s"} data-wow-delay={"0.1s"}>
               <div className={"faqtitle"}>
                 <a role={"button"} tabIndex={0} aria-label={"How much does UX/UI design cost?"}>
