@@ -4,7 +4,7 @@ import RawHtmlBlock from './blocks/RawHtmlBlock'
 import RichTextBlock from './blocks/RichTextBlock'
 
 type Block =
-  | { blockType: 'hero'; headline: string; sub?: string | null; image?: unknown; ctaLabel?: string | null; ctaHref?: string | null; variant?: string | null }
+  | { blockType: 'hero'; headline: string; sub?: string | null; image?: unknown; ctaLabel?: string | null; ctaHref?: string | null; variant?: 'default' | 'services' | 'portfolio' | 'blog' | null }
   | { blockType: 'cta'; headline: string; sub?: string | null; buttonLabel: string; buttonHref: string }
   | { blockType: 'rawHtml'; html: string }
   | { blockType: 'richText'; content: unknown }

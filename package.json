@@ -13,8 +13,8 @@
     "seo:audit": "node scripts/seo-loop.mjs --once",
     "seo:loop": "node scripts/seo-loop.mjs",
     "lh:audit": "node scripts/lighthouse-suite.mjs --once",
-    "migrate:blog": "bash -c 'set -a && source .env.local && set +a && npx tsx scripts/migrate-snapshot-to-payload.ts'",
-    "migrate:blog:dry": "bash -c 'set -a && source .env.local && set +a && npx tsx scripts/migrate-snapshot-to-payload.ts --dry-run'"
+    "migrate:blog": "npx tsx scripts/migrate-snapshot-to-payload.ts",
+    "migrate:blog:dry": "npx tsx scripts/migrate-snapshot-to-payload.ts --dry-run"
   },
   "dependencies": {
     "@auth/core": "^0.41.2",

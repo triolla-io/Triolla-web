@@ -1,5 +1,6 @@
 import Image from 'next/image'
-import type { Media } from '@/payload-types'
+
+type Media = { url?: string | null; alt?: string | null; width?: number | null; height?: number | null }
 
 type Props = {
   headline: string
