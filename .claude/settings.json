@@ -52,7 +52,11 @@
       "Bash(grep -E \"\\\\.ts$|\\\\.tsx$\")",
       "Bash(grep -o \".\\\\{0,300\\\\}port_faq.\\\\{0,300\\\\}\" /Users/ariell/Desktop/triolla-snapshot/output/triolla.io/public/assets/_cas/1ab71297c03e28dfe582e73e6b956c0f43a13083385753257354745f1ba8f96e.css)",
       "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); [print\\(k,':',v\\) for k,v in d.get\\('scripts',{}\\).items\\(\\)]\")",
-      "Bash(Read /Users/ariellunenfeld/Triolla-web/next.config.ts)"
+      "Bash(Read /Users/ariellunenfeld/Triolla-web/next.config.ts)",
+      "Bash(grep -v \"-1-\")",
+      "Bash(grep -l \"path.*:.*\\\\\"/$\\\\\"\" /Users/ariellunenfeld/Triolla-web/lib/snapshotRegistry.json)",
+      "Bash(awk '/\"slug\": \"triolla-io-home\"/,/\"loadOrderSha\"/' /Users/ariellunenfeld/Triolla-web/lib/snapshotRegistry.json)",
+      "Bash(awk '/\"slug\": \"triolla-io-technology\"/,/\"loadOrderSha\"/' /Users/ariellunenfeld/Triolla-web/lib/snapshotRegistry.json)"
     ],
     "additionalDirectories": [
       "/Users/ariell/Desktop/triolla-snapshot/output/triolla.io/app/[[...slug]]",

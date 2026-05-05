@@ -1137,48 +1137,12 @@ function SnapshotClientImpl({ entry, bodyHtml, widgetProps }: Props) {
         }
       } catch (_) {}
 
-      // Header scroll-up reveal fix.
-      // all.js's scroll handler animates the nav back open with four chained
-      // gsap.to() calls that all use overwrite:true. The width tween on
-      // navLinkWrap kills the multi-target {scale:1, opacity:1} tween (they
-      // share a target, and GSAP kills the whole multi-target tween), so the
-      // header_menu / header_whatsapp / header_book stay invisible
-      // (opacity:0, scale:0.6) after scrolling back up. Re-apply the missing
-      // animation with overwrite:false, registered after all.js's listener so
-      // it fires last and isn't overwritten.
-      try {
-        const wHdr = window as unknown as { __headerCollapseFix?: boolean; gsap?: _GsapAPI };
-        if (!wHdr.__headerCollapseFix) {
-          wHdr.__headerCollapseFix = true;
-          // all.js attaches its scroll listener inside a 300ms setTimeout after
-          // DOMContentLoaded — wait a bit longer so we register after it.
-          setTimeout(() => {
-            let lastY = window.pageYOffset || 0;
-            let pending = false;
-            window.addEventListener('scroll', () => {
-              const y = window.pageYOffset || 0;
-              if (window.innerWidth > 1200 && y < lastY && !document.body.classList.contains('trio-nav-compact') && !pending) {
-                pending = true;
-                requestAnimationFrame(() => {
-                  pending = false;
-                  const els = [
-                    document.querySelector('.header_menu'),
-                    document.querySelector('.header_whatsapp'),
-                    document.querySelector('.header_book'),
-                  ].filter(Boolean) as Element[];
-                  if (els.length && wHdr.gsap) {
-                    // x:0 also resets translateX — without it GSAP preserves
-                    // translateX(-30px) from the compact-state tween and book
-                    // a call ends up shifted left from its natural position.
-                    wHdr.gsap.to(els, { duration: 0.38, x: 0, scale: 1, opacity: 1, ease: 'power2.out', overwrite: false });
-                  }
-                });
-              }
-              lastY = Math.max(0, y);
-            }, { passive: true });
-          }, 400);
-        }
-      } catch (_) {}
+      // Header scroll-up reveal: previously fixed via a GSAP fallback handler,
+      // but our CSS transitions in STICKY_NAV_FIX (layout.tsx) now own this
+      // animation. The GSAP fallback was creating cross-page inconsistency
+      // because GSAP loaded at different times on home (from preloaded CAS
+      // bundles) vs other pages (from WP paths), so the override sometimes
+      // fired and sometimes didn't. Pure CSS is uniform across all pages.
 
       try { document.dispatchEvent(new Event("DOMContentLoaded")); } catch (_) {}
       try { window.dispatchEvent(new Event("load")); } catch (_) {}
