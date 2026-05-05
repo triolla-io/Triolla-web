@@ -9,7 +9,7 @@ RUN --mount=type=cache,id=triolla-npm,target=/root/.npm \
     npm ci --ignore-scripts
 COPY . .
 RUN --mount=type=cache,id=triolla-node-modules,target=/app/node_modules \
-    npm run build
+    NODE_OPTIONS="--max-old-space-size=4096" npm run build
 
 # Stage 2: production runner (standalone — no node_modules needed)
 FROM base AS runner
