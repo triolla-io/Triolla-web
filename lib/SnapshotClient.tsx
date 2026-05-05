@@ -1157,7 +1157,7 @@ function SnapshotClientImpl({ entry, bodyHtml, widgetProps }: Props) {
             let pending = false;
             window.addEventListener('scroll', () => {
               const y = window.pageYOffset || 0;
-              if (window.innerWidth > 1200 && y < lastY && !pending) {
+              if (window.innerWidth > 1200 && y < lastY && !document.body.classList.contains('sticky') && !pending) {
                 pending = true;
                 requestAnimationFrame(() => {
                   pending = false;

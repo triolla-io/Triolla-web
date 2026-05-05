@@ -99,45 +99,41 @@ const STICKY_NAV_FIX = `
   will-change:width,top,background-color;
 }
 
-/* Collapsing elements: opacity + transform + width-margin (so they take 0 layout
-   space when faded out, letting Contact Us flow to the right edge of the pill). */
+/* Collapsing elements: opacity + transform + max-width (NOT width — width
+   can't transition to/from auto, leaving elements stuck at 0 on scroll-up).
+   max-width transitions cleanly between 0 and the generous default 1000px. */
 .header_menu,
 .header .header_right .header_book,
 .header .header_right .header_whatsapp{
   transition:
     opacity .5s cubic-bezier(.4,0,.2,1),
     transform .55s cubic-bezier(.4,0,.2,1),
-    width .55s cubic-bezier(.4,0,.2,1),
-    margin .55s cubic-bezier(.4,0,.2,1),
-    padding .55s cubic-bezier(.4,0,.2,1) !important;
+    max-width .55s cubic-bezier(.4,0,.2,1),
+    margin .55s cubic-bezier(.4,0,.2,1) !important;
   overflow:hidden;
+  max-width:1000px; /* generous default — never constrains real content size */
 }
 
-/* Sticky-state targets: collapse to width 0, slide toward center. */
-.sticky .header .header_menu,
-.sticky .header .header_right .header_book,
-.sticky .header .header_right .header_whatsapp{
+/* Compact-state: use .trio-nav-compact (toggled by NAV_DIRECTION_SCRIPT based on
+   SCROLL DIRECTION) instead of WP's .sticky (position-based — only flips off near
+   the top of page). This way menu/book/whatsapp reappear AS SOON as you scroll up. */
+.trio-nav-compact .header .header_menu,
+.trio-nav-compact .header .header_right .header_book,
+.trio-nav-compact .header .header_right .header_whatsapp{
   display:block !important;
   opacity:0 !important;
   pointer-events:none !important;
-  width:0 !important;
-  margin:0 !important;
-  padding:0 !important;
+  max-width:0 !important;
+  margin-left:0 !important;
+  margin-right:0 !important;
 }
 
-/* Per-element converging transforms — each slides toward the visual center. */
-.sticky .header .header_menu{
-  transform:translateX(50px) scale(.85) !important;     /* menu sits left → slides right */
-}
-.sticky .header .header_right .header_book{
-  transform:translateX(-30px) scale(.85) !important;    /* book sits right → slides left */
-}
-.sticky .header .header_right .header_whatsapp{
-  transform:scale(.5) !important;                       /* whatsapp sits middle → shrinks in place */
-}
+/* Per-element converging transforms. */
+.trio-nav-compact .header .header_menu{transform:translateX(50px) scale(.85) !important}
+.trio-nav-compact .header .header_right .header_book{transform:translateX(-30px) scale(.85) !important}
+.trio-nav-compact .header .header_right .header_whatsapp{transform:scale(.5) !important}
 
-/* Belt-and-suspenders: keep contact us comfortably inside the pill. */
-.sticky .header .header_right{
+.trio-nav-compact .header .header_right{
   padding-right:0 !important;
   margin-right:0 !important;
 }
@@ -153,6 +149,59 @@ const NAV_CLICK_FIX = `
 .header_menu ul.menu li>a,.header_menu ul.menu li>span{position:relative;z-index:102}
 .nav-dropdown-portal:not(.open){pointer-events:none!important}
 `;
+
+// NAV_DIRECTION_SCRIPT
+// Toggles .trio-nav-compact on body based on SCROLL DIRECTION (not position)
+// so the nav buttons reappear AS SOON as the user scrolls up — not only when
+// they reach the top. Includes a 15px accumulated-distance threshold so
+// micro-scrolls don't flip state, and a 550ms cooldown so the CSS transition
+// always completes before the next flip is allowed.
+const NAV_DIRECTION_SCRIPT = `(function(){
+  var lastY = window.scrollY || 0;
+  var accDelta = 0;
+  var lastDir = 0;
+  var cooldownUntil = 0;
+  var ticking = false;
+  var THRESHOLD = 15;
+  var COOLDOWN_MS = 550;
+  function tick(){
+    var y = window.scrollY || 0;
+    var body = document.body;
+    var now = performance.now();
+    if (now < cooldownUntil) { lastY = y; ticking = false; return; }
+    if (y <= 30) {
+      if (body.classList.contains('trio-nav-compact')) {
+        body.classList.remove('trio-nav-compact');
+        cooldownUntil = now + COOLDOWN_MS;
+        accDelta = 0;
+      }
+    } else {
+      var delta = y - lastY;
+      if (delta !== 0) {
+        var dir = delta > 0 ? 1 : -1;
+        if (dir !== lastDir) { accDelta = 0; lastDir = dir; }
+        accDelta += Math.abs(delta);
+        if (accDelta >= THRESHOLD) {
+          var isCompact = body.classList.contains('trio-nav-compact');
+          if (dir > 0 && y > 50 && !isCompact) {
+            body.classList.add('trio-nav-compact');
+            cooldownUntil = now + COOLDOWN_MS;
+            accDelta = 0;
+          } else if (dir < 0 && isCompact) {
+            body.classList.remove('trio-nav-compact');
+            cooldownUntil = now + COOLDOWN_MS;
+            accDelta = 0;
+          }
+        }
+      }
+    }
+    lastY = y;
+    ticking = false;
+  }
+  window.addEventListener('scroll', function(){
+    if (!ticking) { requestAnimationFrame(tick); ticking = true; }
+  }, { passive: true });
+})();`;
 
 // DESIGN_PROCESS_FIX
 // The WP `.enter-y` CSS animation runs in parallel with our new GSAP-driven
@@ -451,7 +500,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               "name": "Triolla",
               "alternateName": ["Triolla Studio", "Triolla UX", "טריאולה", "טריאולה סטודיו", "טריאולה עיצוב מוצר"],
               "url": "https://triolla.io",
-              "logo": { "@type": "ImageObject", "url": "https://triolla.io/wp-content/uploads/2024/01/triolla-logo.svg" },
+              "logo": { "@type": "ImageObject", "url": "https://triolla.io/wp-content/uploads/2025/05/triolla.svg" },
               "description": "Triolla is Israel's leading product UX/UI design studio, specializing in UX/UI design and AI product design for startups and hi-tech companies in technology, cyber, medtech, fintech, gaming, and AI.",
               "description_he": "טריאולה היא חברת עיצוב המוצר המובילה בישראל. מתמחים בעיצוב UX/UI ועיצוב מוצרי AI לסטארט-אפים וחברות היי-טק בתחומי הטכנולוגיה, סייבר, רפואה, פינטק, גיימינג ובינה מלאכותית.",
               "foundingDate": "2012",
@@ -604,6 +653,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         {children}
         {/* eslint-disable-next-line react/no-danger */}
         <script dangerouslySetInnerHTML={{ __html: JCTKR_PATCH }} />
+        {/* eslint-disable-next-line react/no-danger */}
+        <script dangerouslySetInnerHTML={{ __html: NAV_DIRECTION_SCRIPT }} />
       </body>
     </html>
   );
