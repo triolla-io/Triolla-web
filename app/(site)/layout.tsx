@@ -52,14 +52,9 @@ const HEADER_OFFSET_FIX = `
 .portfolio_text{top:0!important}
 `;
 
-// STICKY_CONTACT_FIX
-// In sticky, the WP CSS hides whatsapp + book — we explicitly do it via inline
-// CSS too (belt-and-suspenders against async CAS load). The Contact Us slide is
-// now driven by GSAP scrub in installSmoothStickyNav (starts from scroll 0 instead
-// of waiting for the .sticky class to land).
-const STICKY_CONTACT_FIX = `
-.sticky .header .header_right .header_whatsapp,.sticky .header .header_right .header_book{display:none!important;visibility:hidden!important}
-`;
+// STICKY_CONTACT_FIX is now merged into STICKY_NAV_FIX (single source of truth
+// for sticky transitions).
+const STICKY_CONTACT_FIX = ``;
 
 // Scroll performance optimization for sticky header + book-a-call button.
 // Removed contain:layout because it breaks button animation sync with header collapse.
@@ -85,13 +80,67 @@ const SCROLL_PERF_FIX = `
 //   2. GPU hints (will-change) for width / top / background-color.
 //   3. Default border-radius:50px so the pill shape is always pre-rendered
 //      (no border-radius animation needed mid-scroll).
+// STICKY_NAV_FIX
+// Pure CSS sticky animation. WP toggles `.sticky` on body; our CSS handles the
+// rest. The hide-out animation collapses the menu/book/whatsapp elements
+// inward toward the center while shrinking to width:0, so the contact us
+// button can naturally flow to the pill's right edge as those elements vanish.
 const STICKY_NAV_FIX = `
 .header,header{
-  transition:none!important;
-  will-change:width,top,background-color;
+  transition:
+    width .55s cubic-bezier(.4,0,.2,1),
+    max-width .55s cubic-bezier(.4,0,.2,1),
+    background .55s cubic-bezier(.4,0,.2,1),
+    background-color .55s cubic-bezier(.4,0,.2,1),
+    top .55s cubic-bezier(.4,0,.2,1),
+    padding .55s cubic-bezier(.4,0,.2,1),
+    border-radius .55s cubic-bezier(.4,0,.2,1) !important;
   border-radius:50px;
+  will-change:width,top,background-color;
 }
-.header_menu{will-change:opacity}
+
+/* Collapsing elements: opacity + transform + width-margin (so they take 0 layout
+   space when faded out, letting Contact Us flow to the right edge of the pill). */
+.header_menu,
+.header .header_right .header_book,
+.header .header_right .header_whatsapp{
+  transition:
+    opacity .5s cubic-bezier(.4,0,.2,1),
+    transform .55s cubic-bezier(.4,0,.2,1),
+    width .55s cubic-bezier(.4,0,.2,1),
+    margin .55s cubic-bezier(.4,0,.2,1),
+    padding .55s cubic-bezier(.4,0,.2,1) !important;
+  overflow:hidden;
+}
+
+/* Sticky-state targets: collapse to width 0, slide toward center. */
+.sticky .header .header_menu,
+.sticky .header .header_right .header_book,
+.sticky .header .header_right .header_whatsapp{
+  display:block !important;
+  opacity:0 !important;
+  pointer-events:none !important;
+  width:0 !important;
+  margin:0 !important;
+  padding:0 !important;
+}
+
+/* Per-element converging transforms — each slides toward the visual center. */
+.sticky .header .header_menu{
+  transform:translateX(50px) scale(.85) !important;     /* menu sits left → slides right */
+}
+.sticky .header .header_right .header_book{
+  transform:translateX(-30px) scale(.85) !important;    /* book sits right → slides left */
+}
+.sticky .header .header_right .header_whatsapp{
+  transform:scale(.5) !important;                       /* whatsapp sits middle → shrinks in place */
+}
+
+/* Belt-and-suspenders: keep contact us comfortably inside the pill. */
+.sticky .header .header_right{
+  padding-right:0 !important;
+  margin-right:0 !important;
+}
 `;
 
 // NAV_CLICK_FIX
@@ -369,53 +418,6 @@ const JCTKR_PATCH = `(function(){
   };
 })();`;
 
-const NAV_HOVER_SCRIPT = `(function(){
-  function init(){
-    if(window.innerWidth<1200)return;
-    var bigmenu=document.querySelector('.header_menu ul.menu>li.bigmenu');
-    var panel=bigmenu&&bigmenu.querySelector(':scope>ul');
-    if(!bigmenu||!panel)return;
-
-    document.body.appendChild(panel);
-    panel.classList.add('nav-dropdown-portal');
-
-    var t;
-    var W=843;
-    function leftNudge(){
-      return window.innerWidth<=1365?202:333;
-    }
-    function place(){
-      var r=bigmenu.getBoundingClientRect();
-      var n=leftNudge();
-      var l=r.left-n;
-      l=Math.max(8,Math.min(l,window.innerWidth-W-8));
-      panel.style.left=l+'px';
-      panel.style.top=(r.top+68)+'px';
-      panel.style.right='auto';
-      panel.style.transform='none';
-    }
-    function show(){
-      clearTimeout(t);
-      place();
-      panel.classList.add('open');
-    }
-    function hide(){t=setTimeout(function(){panel.classList.remove('open');},80);}
-    function onMove(){if(panel.classList.contains('open'))place();}
-    bigmenu.addEventListener('mouseenter',show);
-    bigmenu.addEventListener('mouseleave',hide);
-    panel.addEventListener('mouseenter',show);
-    panel.addEventListener('mouseleave',hide);
-    window.addEventListener('resize',onMove,{passive:true});
-    window.addEventListener('scroll',onMove,{passive:true});
-  }
-  if(window.innerWidth>=1200){
-    if(document.querySelector('.header_menu ul.menu>li.bigmenu')){init();}
-    else{var mo=new MutationObserver(function(){
-      if(document.querySelector('.header_menu ul.menu>li.bigmenu')){mo.disconnect();init();}
-    });mo.observe(document.body||document.documentElement,{childList:true,subtree:true});}
-  }
-})();`;
-
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang={DEFAULT_LOCALE} dir={IS_RTL ? "rtl" : "ltr"}>
@@ -602,8 +604,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         {children}
         {/* eslint-disable-next-line react/no-danger */}
         <script dangerouslySetInnerHTML={{ __html: JCTKR_PATCH }} />
-        {/* eslint-disable-next-line react/no-danger */}
-        <script dangerouslySetInnerHTML={{ __html: NAV_HOVER_SCRIPT }} />
       </body>
     </html>
   );

@@ -454,89 +454,6 @@ function installSmoothTicker(_slug: string): void {
 }
 
 /**
- * outcrowd.io-style discrete state transition for the sticky nav.
- *
- * Instead of scrubbing the animation against scroll position (which always feels
- * asymmetric — opens fine, closes weird, or vice versa), we toggle between two
- * fixed states with the SAME smooth 0.55s ease-in-out tween in both directions:
- *
- *   • State A (top of page, scrollY < 50): full width, default top, transparent.
- *   • State B (scrolled past 50px): 500px black pill, top:16px.
- *
- * Crossing the threshold scroll-down → smooth tween to compact.
- * Crossing the threshold scroll-up → identical smooth tween back to full.
- * Both directions feel identical — no "boom" on either side.
- */
-function installSmoothStickyNav(_slug: string): void {
-  if (typeof window === "undefined") return;
-
-  const w = window as unknown as {
-    gsap?: _GsapAPI;
-    ScrollTrigger?: _ScrollTriggerAPI & { create: (vars: Record<string, unknown>) => _ScrollTriggerInstance };
-    __trioStickyNav?: { trigger?: _ScrollTriggerInstance; tween?: _GsapTween };
-  };
-  const gsap = w.gsap;
-  const ScrollTrigger = w.ScrollTrigger;
-  if (!gsap || !ScrollTrigger) return;
-
-  if (typeof matchMedia !== "undefined" && matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-
-  // Cleanup prior install.
-  if (w.__trioStickyNav) {
-    try {
-      w.__trioStickyNav.trigger?.kill();
-      w.__trioStickyNav.tween?.kill();
-    } catch (_) {}
-    w.__trioStickyNav = undefined;
-  }
-
-  const header = document.querySelector<HTMLElement>(".header");
-  if (!header) return;
-
-  // Snapshot default state from computed style (viewport-dependent top).
-  const cs = getComputedStyle(header);
-  const defaultTop = cs.top && cs.top !== "auto" ? cs.top : "87px";
-  const defaultBg = "rgba(0,0,0,0)";
-  const defaultWidth = "100%";
-
-  const compactWidth = "min(500px, calc(100% - 32px))";
-  const compactTop = "16px";
-  const compactBg = "#000000";
-
-  let currentTween: _GsapTween | null = null;
-  let isCompact = false;
-
-  const animateTo = (toCompact: boolean) => {
-    if (toCompact === isCompact) return;
-    isCompact = toCompact;
-    if (currentTween) {
-      try { currentTween.kill(); } catch (_) {}
-    }
-    currentTween = gsap.to(header, {
-      width: toCompact ? compactWidth : defaultWidth,
-      top: toCompact ? compactTop : defaultTop,
-      backgroundColor: toCompact ? compactBg : defaultBg,
-      duration: 0.55,
-      ease: "power3.inOut",
-      overwrite: "auto",
-    });
-    if (w.__trioStickyNav) w.__trioStickyNav.tween = currentTween;
-  };
-
-  // Single threshold trigger — fires `onEnter` (scroll past 50px) and
-  // `onLeaveBack` (scroll back up past 50px). Identical animation in both directions.
-  const trigger = ScrollTrigger.create({
-    trigger: document.body,
-    start: 50,
-    end: "max",
-    onEnter: () => animateTo(true),
-    onLeaveBack: () => animateTo(false),
-  });
-
-  w.__trioStickyNav = { trigger };
-}
-
-/**
  * "Our Clients" section reveal — heading stagger + 12 logos popping in with
  * random stagger from `back.out`. Targets `.portfolio_global` (any page that has it).
  */
@@ -1122,6 +1039,29 @@ function SnapshotClientImpl({ entry, bodyHtml, widgetProps }: Props) {
         }
       } catch (_) {}
 
+      // Career page job collapsibles: .carjlft a toggles .carjdet inside .carlistjdiv.
+      // flushSnapshotVisibility adds .show to every element, which can override the
+      // theme's display:none on .carjdet. We inject a style to keep them hidden and
+      // reveal them only when .carlistjdiv.active is set.
+      try {
+        const wc = window as unknown as { __careerCollapseSnapshotBound?: boolean };
+        if (!wc.__careerCollapseSnapshotBound) {
+          wc.__careerCollapseSnapshotBound = true;
+          const _carStyle = document.createElement('style');
+          _carStyle.textContent = '.carjdet { display: none !important; } .carlistjdiv.active .carjdet { display: block !important; }';
+          document.head.appendChild(_carStyle);
+          document.addEventListener('click', (e: MouseEvent) => {
+            const anchor = (e.target as HTMLElement).closest?.('.carjlft a');
+            if (!anchor) return;
+            e.preventDefault();
+            e.stopPropagation();
+            const carlistjdiv = (anchor as HTMLElement).closest?.('.carlistjdiv') as HTMLElement | null;
+            if (!carlistjdiv) return;
+            carlistjdiv.classList.toggle('active');
+          }, true);
+        }
+      } catch (_) {}
+
       // Header nav dropdown — CSS hides `.header_menu li.bigmenu > ul` via
       // opacity:0; pointer-events:none. The original WP/theme JS sets inline
       // styles on click to reveal it, but never clears them — so the dropdown
@@ -1400,8 +1340,9 @@ function SnapshotClientImpl({ entry, bodyHtml, widgetProps }: Props) {
       // 10. Smooth GPU ticker (replaces jctkr's `left` animation with `transform`).
       installSmoothTicker(entry.slug);
 
-      // 11. JS-driven smooth sticky nav (replaces choppy CSS transitions).
-      installSmoothStickyNav(entry.slug);
+      // 11. Sticky nav now uses pure CSS transitions in STICKY_NAV_FIX —
+      //     WP's existing scroll handler toggles `.sticky` on body, our CSS
+      //     handles the smooth morph. No JS needed.
 
       // 12. "Our Clients" stagger reveal (any page with .portfolio_global).
       installClientsAnimation(entry.slug);
