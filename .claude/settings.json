@@ -56,7 +56,18 @@
       "Bash(grep -v \"-1-\")",
       "Bash(grep -l \"path.*:.*\\\\\"/$\\\\\"\" /Users/ariellunenfeld/Triolla-web/lib/snapshotRegistry.json)",
       "Bash(awk '/\"slug\": \"triolla-io-home\"/,/\"loadOrderSha\"/' /Users/ariellunenfeld/Triolla-web/lib/snapshotRegistry.json)",
-      "Bash(awk '/\"slug\": \"triolla-io-technology\"/,/\"loadOrderSha\"/' /Users/ariellunenfeld/Triolla-web/lib/snapshotRegistry.json)"
+      "Bash(awk '/\"slug\": \"triolla-io-technology\"/,/\"loadOrderSha\"/' /Users/ariellunenfeld/Triolla-web/lib/snapshotRegistry.json)",
+      "Bash(grep -oE '\\\\.sticky[^{]*\\\\{[^}]*\\\\}|\\\\.header[a-z_ ,>:.]*\\\\{[^}]{0,200}\\\\}' /Users/ariellunenfeld/Triolla-web/public/assets/_cas/1caf67e0c75f3110766451e4886c34db87b716d54075c888002a691377ea1804.css)",
+      "Bash(grep -oE 'gsap\\\\.to[^;]{0,300}' /Users/ariellunenfeld/Triolla-web/public/wp-content/cache/min/1/wp-content/themes/triolla/js/all.js)",
+      "Bash(grep -oE '[a-zA-Z_]{5,20}\\\\.to\\\\\\([^,]{1,40}header_\\(menu|book|whatsapp\\)' /Users/ariellunenfeld/Triolla-web/public/wp-content/cache/min/1/wp-content/themes/triolla/js/all.js)",
+      "Bash(grep -oE 'function[^{]{0,80}\\\\{[^}]{0,200}sticky[^}]{0,100}\\\\}' /Users/ariellunenfeld/Triolla-web/public/wp-content/cache/min/1/wp-content/themes/triolla/js/all.js)",
+      "Bash(grep -oE '\\\\.to\\\\\\([^\\)]{0,50}\\\\.header_\\(menu|book|whatsapp\\)[^\\)]{0,100}\\\\\\)' /Users/ariellunenfeld/Triolla-web/public/wp-content/cache/min/1/wp-content/themes/triolla/js/all.js)",
+      "Bash(grep -oE 'navHeader[^;]{0,500}' /Users/ariellunenfeld/Triolla-web/public/wp-content/cache/min/1/wp-content/themes/triolla/js/all.js)",
+      "Bash(grep -oE 'navHeader[^}]{0,1500}\\\\}' /Users/ariellunenfeld/Triolla-web/public/wp-content/cache/min/1/wp-content/themes/triolla/js/all.js)",
+      "Bash(grep -oE 'navHeader[^}]{2000,4000}' /Users/ariellunenfeld/Triolla-web/public/wp-content/cache/min/1/wp-content/themes/triolla/js/all.js)",
+      "Bash(awk -v RS='' 'BEGIN{IGNORECASE=1} /navHeader=document/' /Users/ariellunenfeld/Triolla-web/public/wp-content/cache/min/1/wp-content/themes/triolla/js/all.js)",
+      "Bash(grep -oE '[a-z]\\\\\\(\\\\\\)[^\\(\\)]{0,30}\\\\{const navLinkWrap[^}]{0,3000}' /Users/ariellunenfeld/Triolla-web/public/wp-content/cache/min/1/wp-content/themes/triolla/js/all.js)",
+      "Bash(awk 'BEGIN{RS=\"\"} /navLinkWrap/ { idx=index\\($0,\"const navLinkWrap\"\\); if\\(idx>0\\) print substr\\($0, idx, 3500\\) }' /Users/ariellunenfeld/Triolla-web/public/wp-content/cache/min/1/wp-content/themes/triolla/js/all.js)"
     ],
     "additionalDirectories": [
       "/Users/ariell/Desktop/triolla-snapshot/output/triolla.io/app/[[...slug]]",

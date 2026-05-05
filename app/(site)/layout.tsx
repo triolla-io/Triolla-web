@@ -114,6 +114,16 @@ const STICKY_NAV_FIX = `
   max-width:1000px; /* generous default — never constrains real content size */
 }
 
+/* MINIMAL scroll-up restore: when our .trio-nav-compact is OFF, undo only WP's
+   display:none so the elements reappear. Don't touch header width/background —
+   pill geometry stays under WP's .sticky control (matches home page behavior).
+   Desktop only — mobile nav has a different layout so these rules don't apply. */
+@media only screen and (min-width:1200px){
+  .sticky:not(.trio-nav-compact) .header .header_menu{display:revert !important;transform:none !important}
+  .sticky:not(.trio-nav-compact) .header .header_right .header_book,
+  .sticky:not(.trio-nav-compact) .header .header_right .header_whatsapp{display:revert !important}
+}
+
 /* WP's .sticky controls the pill geometry (width / background / top) — we don't
    override that. Our .trio-nav-compact only controls the converging collapse of
    menu / book / whatsapp INSIDE the pill. The two layers cooperate. */
@@ -136,6 +146,30 @@ const STICKY_NAV_FIX = `
   padding-right:0 !important;
   margin-right:0 !important;
 }
+
+/* Mobile: kill all scroll animation side-effects — keep WP's original header. */
+@media only screen and (max-width:1199px){
+  /* CAS JS sets width:550px as inline style; !important beats inline styles. */
+  .header,header{
+    width:100%!important;
+    max-width:100%!important;
+    border-radius:0!important;
+    transition:none!important;
+  }
+  /* .trio-nav-compact forces display:block on elements WP hides on mobile,
+     causing them to take up layout space (invisible but present) → header grows.
+     Revert all three back to whatever WP's cascade says. */
+  .trio-nav-compact .header .header_menu,
+  .trio-nav-compact .header .header_right .header_book,
+  .trio-nav-compact .header .header_right .header_whatsapp{
+    display:revert!important;
+    opacity:revert!important;
+    transform:none!important;
+    max-width:revert!important;
+    pointer-events:revert!important;
+    margin:revert!important;
+  }
+}
 `;
 
 // NAV_CLICK_FIX
@@ -156,6 +190,7 @@ const NAV_CLICK_FIX = `
 // micro-scrolls don't flip state, and a 550ms cooldown so the CSS transition
 // always completes before the next flip is allowed.
 const NAV_DIRECTION_SCRIPT = `(function(){
+  if (window.innerWidth < 1200) return;
   var lastY = window.scrollY || 0;
   var accDeltaDown = 0;
   var cooldownDownUntil = 0;
