@@ -157,43 +157,49 @@ const NAV_CLICK_FIX = `
 // always completes before the next flip is allowed.
 const NAV_DIRECTION_SCRIPT = `(function(){
   var lastY = window.scrollY || 0;
-  var accDelta = 0;
-  var lastDir = 0;
-  var cooldownUntil = 0;
+  var accDeltaDown = 0;
+  var cooldownDownUntil = 0;
   var ticking = false;
-  var THRESHOLD = 15;
-  var COOLDOWN_MS = 550;
+  var DOWN_THRESHOLD = 15;
+  var COOLDOWN_DOWN_MS = 550;
   function tick(){
     var y = window.scrollY || 0;
     var body = document.body;
     var now = performance.now();
-    if (now < cooldownUntil) { lastY = y; ticking = false; return; }
+    var delta = y - lastY;
+    var isCompact = body.classList.contains('trio-nav-compact');
+
+    // Near top: always open (instant).
     if (y <= 30) {
-      if (body.classList.contains('trio-nav-compact')) {
-        body.classList.remove('trio-nav-compact');
-        cooldownUntil = now + COOLDOWN_MS;
-        accDelta = 0;
-      }
-    } else {
-      var delta = y - lastY;
-      if (delta !== 0) {
-        var dir = delta > 0 ? 1 : -1;
-        if (dir !== lastDir) { accDelta = 0; lastDir = dir; }
-        accDelta += Math.abs(delta);
-        if (accDelta >= THRESHOLD) {
-          var isCompact = body.classList.contains('trio-nav-compact');
-          if (dir > 0 && y > 50 && !isCompact) {
-            body.classList.add('trio-nav-compact');
-            cooldownUntil = now + COOLDOWN_MS;
-            accDelta = 0;
-          } else if (dir < 0 && isCompact) {
-            body.classList.remove('trio-nav-compact');
-            cooldownUntil = now + COOLDOWN_MS;
-            accDelta = 0;
-          }
-        }
+      if (isCompact) body.classList.remove('trio-nav-compact');
+      accDeltaDown = 0;
+      lastY = y;
+      ticking = false;
+      return;
+    }
+
+    // ANY upward scroll opens IMMEDIATELY — no threshold, no cooldown.
+    if (delta < 0) {
+      if (isCompact) body.classList.remove('trio-nav-compact');
+      accDeltaDown = 0;
+      cooldownDownUntil = 0;
+      lastY = y;
+      ticking = false;
+      return;
+    }
+
+    // Downward scroll keeps safeguards (15px commit + 550ms cooldown) so
+    // micro-scrolls don't accidentally trigger close.
+    if (delta > 0 && y > 50 && !isCompact) {
+      if (now < cooldownDownUntil) { lastY = y; ticking = false; return; }
+      accDeltaDown += delta;
+      if (accDeltaDown >= DOWN_THRESHOLD) {
+        body.classList.add('trio-nav-compact');
+        cooldownDownUntil = now + COOLDOWN_DOWN_MS;
+        accDeltaDown = 0;
       }
     }
+
     lastY = y;
     ticking = false;
   }
