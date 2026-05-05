@@ -17,6 +17,16 @@ export function normalizeFragmentHtml(bodyHtml: string): string {
   s = s.replace(/<Br\s*\/?\s*>/gi, "<br>");
   s = s.replace(/<br\s*\/>/gi, "<br>");
 
+  // Swap visual positions of Book a Call ↔ Contact Us in the right-side trio.
+  // Source order [contact, whatsapp, book] → with float:right → visual L→R [book, whatsapp, contact].
+  // We want visual L→R [contact, whatsapp, book], which requires source order [book, whatsapp, contact].
+  // Doing it server-side avoids the post-load flash from a JS swap.
+  s = s.replace(
+    /(<div class="header_right">[\s\S]*?)(<div class="header_contact">[\s\S]*?<\/div>\s*)([\s\S]*?)(<div class="header_book">[\s\S]*?<\/div>)/,
+    (_m, prefix: string, contactBlock: string, between: string, bookBlock: string) =>
+      `${prefix}${bookBlock}${between}${contactBlock}`,
+  );
+
   // Crawlable anchors: <a class="show"> with no href fails Lighthouse SEO.
   // Add href="#" only when the anchor truly has no href attribute.
   s = s.replace(/<a\b([^>]*)>/gi, (_m, attrs) => {

@@ -3,9 +3,7 @@ import type { Metadata } from "next";
 import NavigationProgress from "@/components/NavigationProgress";
 import AccessibilityFix from "@/components/AccessibilityFix";
 
-export const metadata: Metadata = {
-  robots: { index: false, follow: false },
-};
+export const metadata: Metadata = {};
 
 const DEFAULT_LOCALE = process.env.SITE_DEFAULT_LOCALE ?? "en";
 const RTL_LOCALES = new Set(["ar", "fa", "he", "ur"]);
@@ -79,19 +77,21 @@ const SCROLL_PERF_FIX = `
 //      visual change. Without this, the WP rules would snap the header to its
 //      sticky values when the body class lands, fighting the GSAP scrub tween.
 //      We tag the header with .gsap-driven via JS at install time.
+// STICKY_NAV_FIX
+// The original .header morphs from full-width into a 500px black pill as you
+// scroll, driven by a single GSAP scrub tween in installSmoothStickyNav.
+// CSS responsibilities:
+//   1. Disable the WP `transition:.3s` so GSAP fully owns timing.
+//   2. GPU hints (will-change) for width / top / background-color.
+//   3. Default border-radius:50px so the pill shape is always pre-rendered
+//      (no border-radius animation needed mid-scroll).
 const STICKY_NAV_FIX = `
 .header,header{
   transition:none!important;
-  will-change:width,top,background-color,border-radius;
+  will-change:width,top,background-color;
   border-radius:50px;
 }
-.header_menu{will-change:transform,opacity}
-/* Cancel WP sticky visual snaps — GSAP scrub now drives everything. */
-.sticky .header.gsap-driven{
-  width:auto;
-  background:initial;
-  top:auto;
-}
+.header_menu{will-change:opacity}
 `;
 
 // NAV_CLICK_FIX
@@ -340,11 +340,6 @@ const NAV_DROPDOWN_FIX = `
 
 // Portal-based dropdown script.
 //
-// .header_menu gets transform:scale(1) from the header JS, making it a CSS
-// containing block for position:fixed. To escape that, we move the dropdown
-// panel to document.body (portal pattern) and position it with JS each time
-// the dropdown opens, so it always sits exactly below the nav pill regardless
-// of viewport size or scroll state.
 // Patch jctkr to never re-initialize elements that already carry
 // .jctkr-initialized (i.e. the snapshot HTML). Runs before any WordPress JS
 // so the patch is in place when jQuery.fn.jctkr is first defined.

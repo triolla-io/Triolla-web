@@ -454,127 +454,86 @@ function installSmoothTicker(_slug: string): void {
 }
 
 /**
- * JS-driven smooth sticky nav. CSS transitions caused per-property desync
- * (width = layout, background = paint, top = layout — all finished at different
- * times = "stairs" feel). We disable the WP `.sticky .header` CSS visual changes
- * entirely (via inline-style overrides) and drive every visual property through
- * a single GSAP timeline tied to scroll position with scrub for buttery flow.
+ * outcrowd.io-style discrete state transition for the sticky nav.
+ *
+ * Instead of scrubbing the animation against scroll position (which always feels
+ * asymmetric — opens fine, closes weird, or vice versa), we toggle between two
+ * fixed states with the SAME smooth 0.55s ease-in-out tween in both directions:
+ *
+ *   • State A (top of page, scrollY < 50): full width, default top, transparent.
+ *   • State B (scrolled past 50px): 500px black pill, top:16px.
+ *
+ * Crossing the threshold scroll-down → smooth tween to compact.
+ * Crossing the threshold scroll-up → identical smooth tween back to full.
+ * Both directions feel identical — no "boom" on either side.
  */
 function installSmoothStickyNav(_slug: string): void {
   if (typeof window === "undefined") return;
 
   const w = window as unknown as {
     gsap?: _GsapAPI;
-    ScrollTrigger?: _ScrollTriggerAPI;
-    __trioStickyNav?: { tweens: _GsapTween[]; swappedRight?: HTMLElement; swappedNodes?: Node[] };
+    ScrollTrigger?: _ScrollTriggerAPI & { create: (vars: Record<string, unknown>) => _ScrollTriggerInstance };
+    __trioStickyNav?: { trigger?: _ScrollTriggerInstance; tween?: _GsapTween };
   };
   const gsap = w.gsap;
-  if (!gsap || !w.ScrollTrigger) return;
+  const ScrollTrigger = w.ScrollTrigger;
+  if (!gsap || !ScrollTrigger) return;
 
   if (typeof matchMedia !== "undefined" && matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
-  // Cleanup prior install (route change / history bust).
+  // Cleanup prior install.
   if (w.__trioStickyNav) {
-    try { w.__trioStickyNav.tweens.forEach((t) => t.kill()); } catch (_) {}
-    // Restore original DOM order if we swapped.
-    if (w.__trioStickyNav.swappedRight && w.__trioStickyNav.swappedNodes) {
-      try {
-        const right = w.__trioStickyNav.swappedRight;
-        right.innerHTML = "";
-        for (const n of w.__trioStickyNav.swappedNodes) right.appendChild(n);
-      } catch (_) {}
-    }
+    try {
+      w.__trioStickyNav.trigger?.kill();
+      w.__trioStickyNav.tween?.kill();
+    } catch (_) {}
     w.__trioStickyNav = undefined;
   }
 
   const header = document.querySelector<HTMLElement>(".header");
   if (!header) return;
 
-  // Mark the header so STICKY_NAV_FIX's `.gsap-driven` overrides activate —
-  // they cancel WP's `.sticky .header { width:500px ... }` snap so our scrub
-  // tween is the only source of visual change.
-  header.classList.add("gsap-driven");
-
-  // Swap DOM positions of Book a Call and Contact Us inside .header_right.
-  // Before: [contact, whatsapp, book] → with float:right, visual L→R = [book, whatsapp, contact]
-  // After:  [book, whatsapp, contact] → with float:right, visual L→R = [contact, whatsapp, book]
-  // Capture the original order so cleanup can restore it on remount.
-  let swappedNodes: Node[] | undefined;
-  let swappedRight: HTMLElement | undefined;
-  const right = header.querySelector<HTMLElement>(".header_right");
-  if (right) {
-    const contact = right.querySelector<HTMLElement>(".header_contact");
-    const book = right.querySelector<HTMLElement>(".header_book");
-    if (contact && book && right.contains(contact) && right.contains(book)) {
-      swappedNodes = Array.from(right.childNodes).map((n) => n.cloneNode(true));
-      swappedRight = right;
-      // Move book to first child, contact to last child.
-      right.insertBefore(book, right.firstChild);
-      right.appendChild(contact);
-    }
-  }
-
-  // Snapshot the default (non-sticky) computed values from a freshly-mounted page.
-  // These become our scroll-tied animation FROM state.
+  // Snapshot default state from computed style (viewport-dependent top).
   const cs = getComputedStyle(header);
   const defaultTop = cs.top && cs.top !== "auto" ? cs.top : "87px";
-  const defaultWidth = cs.width || "100%";
-  const defaultBg = cs.backgroundColor || "rgba(0,0,0,0)";
+  const defaultBg = "rgba(0,0,0,0)";
+  const defaultWidth = "100%";
 
-  // Scroll-tied scrub animation. As the user scrolls 0 → 120px, the header
-  // morphs continuously from full-width transparent into a 500px black pill.
-  // `scrub: 0.4` adds a 0.4s lag for buttery, lerped feel.
-  // Top stays at 16px when fully sticky — keeps a margin from viewport top
-  // (instead of pill jamming flat against the edge).
-  const headerTween = gsap.fromTo(header,
-    {
-      top: defaultTop,
-      width: defaultWidth,
-      backgroundColor: defaultBg,
-      borderRadius: "50px",
-      paddingTop: cs.paddingTop || "27px",
-      paddingBottom: cs.paddingBottom || "18px",
-    },
-    {
-      top: "16px",
-      width: "500px",
-      backgroundColor: "#000000",
-      borderRadius: "50px",
-      paddingTop: "12px",
-      paddingBottom: "12px",
-      ease: "none",
-      scrollTrigger: {
-        trigger: document.body,
-        start: 0,
-        end: 120,
-        scrub: 0.4,
-      },
+  const compactWidth = "min(500px, calc(100% - 32px))";
+  const compactTop = "16px";
+  const compactBg = "#000000";
+
+  let currentTween: _GsapTween | null = null;
+  let isCompact = false;
+
+  const animateTo = (toCompact: boolean) => {
+    if (toCompact === isCompact) return;
+    isCompact = toCompact;
+    if (currentTween) {
+      try { currentTween.kill(); } catch (_) {}
     }
-  );
+    currentTween = gsap.to(header, {
+      width: toCompact ? compactWidth : defaultWidth,
+      top: toCompact ? compactTop : defaultTop,
+      backgroundColor: toCompact ? compactBg : defaultBg,
+      duration: 0.55,
+      ease: "power3.inOut",
+      overwrite: "auto",
+    });
+    if (w.__trioStickyNav) w.__trioStickyNav.tween = currentTween;
+  };
 
-  // Slide Contact Us toward the pill's right edge as scroll begins.
-  // Tied to the same scrub so it moves continuously with scroll, not as a
-  // discrete snap when .sticky lands.
-  const tweens: _GsapTween[] = [headerTween];
-  const contactNode = header.querySelector<HTMLElement>(".header_contact");
-  if (contactNode) {
-    const contactTween = gsap.fromTo(contactNode,
-      { x: 0 },
-      {
-        x: 8,
-        ease: "none",
-        scrollTrigger: {
-          trigger: document.body,
-          start: 0,
-          end: 120,
-          scrub: 0.4,
-        },
-      }
-    );
-    tweens.push(contactTween);
-  }
+  // Single threshold trigger — fires `onEnter` (scroll past 50px) and
+  // `onLeaveBack` (scroll back up past 50px). Identical animation in both directions.
+  const trigger = ScrollTrigger.create({
+    trigger: document.body,
+    start: 50,
+    end: "max",
+    onEnter: () => animateTo(true),
+    onLeaveBack: () => animateTo(false),
+  });
 
-  w.__trioStickyNav = { tweens, swappedRight, swappedNodes };
+  w.__trioStickyNav = { trigger };
 }
 
 /**
@@ -708,6 +667,70 @@ function installDesignProcessAnimation(_slug: string): void {
   w.__trioDesignProcessAnim = { tweens };
 }
 
+function installNavDropdownPortal(): void {
+  if (typeof window === "undefined" || window.innerWidth < 1200) return;
+
+  const w = window as unknown as { __trioNavDropdown?: { bigmenu: Element; cleanup: () => void } };
+
+  const bigmenu = document.querySelector<HTMLElement>(".header_menu ul.menu>li.bigmenu");
+  if (!bigmenu) return;
+
+  // Already initialized for this exact bigmenu element — skip (same-route re-render)
+  if (w.__trioNavDropdown?.bigmenu === bigmenu) return;
+
+  // Cleanup prior install (navigation → new bigmenu element)
+  if (w.__trioNavDropdown) {
+    try { w.__trioNavDropdown.cleanup(); } catch (_) {}
+    w.__trioNavDropdown = undefined;
+  }
+
+  // Remove any stale portaled panel left over from the previous page
+  document.querySelectorAll<HTMLElement>(".nav-dropdown-portal").forEach((el) => el.remove());
+
+  const panel = bigmenu.querySelector<HTMLElement>(":scope>ul");
+  if (!panel) return;
+
+  document.body.appendChild(panel);
+  panel.classList.add("nav-dropdown-portal");
+
+  let t: ReturnType<typeof setTimeout> | undefined;
+  const W = 843;
+  const leftNudge = () => (window.innerWidth <= 1365 ? 202 : 333);
+  const place = () => {
+    const r = bigmenu.getBoundingClientRect();
+    const n = leftNudge();
+    let l = r.left - n;
+    l = Math.max(8, Math.min(l, window.innerWidth - W - 8));
+    panel.style.left = l + "px";
+    panel.style.top = (r.top + 68) + "px";
+    panel.style.right = "auto";
+    panel.style.transform = "none";
+  };
+  const show = () => { clearTimeout(t); place(); panel.classList.add("open"); };
+  const hide = () => { t = setTimeout(() => panel.classList.remove("open"), 80); };
+  const onMove = () => { if (panel.classList.contains("open")) place(); };
+
+  bigmenu.addEventListener("mouseenter", show);
+  bigmenu.addEventListener("mouseleave", hide);
+  panel.addEventListener("mouseenter", show);
+  panel.addEventListener("mouseleave", hide);
+  window.addEventListener("resize", onMove, { passive: true });
+  window.addEventListener("scroll", onMove, { passive: true });
+
+  w.__trioNavDropdown = {
+    bigmenu,
+    cleanup: () => {
+      clearTimeout(t);
+      bigmenu.removeEventListener("mouseenter", show);
+      bigmenu.removeEventListener("mouseleave", hide);
+      panel.removeEventListener("mouseenter", show);
+      panel.removeEventListener("mouseleave", hide);
+      window.removeEventListener("resize", onMove);
+      window.removeEventListener("scroll", onMove);
+    },
+  };
+}
+
 function installSnapshotPluginStubs(): void {
   const w = window as Window;
   installGfGlobalInterceptor();
@@ -824,6 +847,13 @@ function SnapshotClientImpl({ entry, bodyHtml, widgetProps }: Props) {
 
     if (injectedRef.current) return;
     injectedRef.current = true;
+
+    // Re-portal the desktop nav dropdown on every navigation.
+    // NAV_HOVER_SCRIPT in layout.tsx only ran on the initial hard load; SPA
+    // navigation replaces the snapshot HTML (new bigmenu element) without
+    // re-executing that script, so the portal must be rebuilt here.
+    installNavDropdownPortal();
+
     installSnapshotPluginStubs();
 
     // Hydrate any ``data-react-widget`` marker found in the injected HTML.
