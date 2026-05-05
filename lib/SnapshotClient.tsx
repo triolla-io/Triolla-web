@@ -113,7 +113,7 @@ function installGfGlobalInterceptor(): void {
 }
 
 const _IMG_REVEAL_STYLE_ID = "snap-img-reveal-styles";
-const _SKIP_ANCESTOR_SELECTORS = ["header", "nav", ".header_menu", ".hmenumob", ".site-header", ".hometopimages"];
+const _SKIP_ANCESTOR_SELECTORS = ["header", "nav", ".header_menu", ".hmenumob", ".site-header", ".hometopimages", ".portfolio_main"];
 
 function installImageRevealObserver(root: HTMLElement | null): void {
   if (!root || typeof IntersectionObserver === "undefined") return;
@@ -197,6 +197,7 @@ type _GsapAPI = {
   utils: { toArray: <T = Element>(sel: string | Element) => T[] };
   killTweensOf: (target: Element | string) => void;
   to: (target: Element | string | Element[], vars: Record<string, unknown>) => _GsapTween;
+  from: (target: Element | string | Element[], vars: Record<string, unknown>) => _GsapTween;
   set: (target: Element | string | Element[], vars: Record<string, unknown>) => void;
   quickTo: (target: Element, prop: string, vars: Record<string, unknown>) => _GsapQuickTo;
 };
@@ -302,6 +303,137 @@ function installHeroSmoothAnimations(slug: string): void {
   });
 
   w.__trioHeroAnims = { tweens, onMove };
+}
+
+/**
+ * Alternating slide-in + scale + content stagger for `.portfolio_main .protfolio_img`
+ * case-study cards and their `.protfolio_con` content. Runs on every page; pages
+ * without case studies are a no-op (no matching elements).
+ * Idempotent: previous run is killed via `window.__trioCaseAnims`.
+ */
+function installCaseStudyAnimations(_slug: string): void {
+  if (typeof window === "undefined") return;
+
+  const w = window as unknown as {
+    gsap?: _GsapAPI;
+    ScrollTrigger?: _ScrollTriggerAPI;
+    __trioCaseAnims?: { tweens: _GsapTween[] };
+  };
+  const gsap = w.gsap;
+  if (!gsap || !w.ScrollTrigger) return;
+
+  if (typeof matchMedia !== "undefined" && matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+  if (w.__trioCaseAnims) {
+    try { w.__trioCaseAnims.tweens.forEach((t) => t.kill()); } catch (_) {}
+    w.__trioCaseAnims = undefined;
+  }
+
+  const tweens: _GsapTween[] = [];
+  const cards = Array.from(document.querySelectorAll<HTMLElement>(".portfolio_main .protfolio_img"));
+
+  cards.forEach((imgEl, idx) => {
+    const fromLeft = idx % 2 === 0;
+    gsap.set(imgEl, { x: fromLeft ? -90 : 90, scale: 0.94, opacity: 0 });
+    const tw = gsap.to(imgEl, {
+      x: 0,
+      scale: 1,
+      opacity: 1,
+      duration: 1.2,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: imgEl,
+        start: "top 85%",
+        toggleActions: "play none none reverse",
+      },
+    });
+    tweens.push(tw);
+
+    // Content block (logo + bold + paragraph + tags) usually sits as a sibling .protfolio_con.
+    const row = imgEl.parentElement;
+    const conEl = row?.querySelector<HTMLElement>(".protfolio_con");
+    if (conEl) {
+      const children = Array.from(conEl.querySelectorAll<HTMLElement>(".protolio_log, .protolio_txt, .protolio_tags"));
+      if (children.length) {
+        const ctw = gsap.from(children, {
+          y: 35,
+          opacity: 0,
+          stagger: 0.12,
+          duration: 0.85,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: conEl,
+            start: "top 85%",
+            toggleActions: "play none none reverse",
+          },
+        });
+        tweens.push(ctw);
+      }
+    }
+  });
+
+  w.__trioCaseAnims = { tweens };
+}
+
+/**
+ * Smooth GPU-accelerated company ticker: kill jctkr's `left`-property animation
+ * and run a seamless infinite `transform: translateX` tween instead. Pause on hover.
+ */
+function installSmoothTicker(_slug: string): void {
+  if (typeof window === "undefined") return;
+
+  const w = window as unknown as {
+    gsap?: _GsapAPI;
+    __trioTickerAnim?: { tween: _GsapTween; onEnter?: () => void; onLeave?: () => void; el?: Element };
+  };
+  const gsap = w.gsap;
+  if (!gsap) return;
+
+  if (typeof matchMedia !== "undefined" && matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+  if (w.__trioTickerAnim) {
+    try {
+      w.__trioTickerAnim.tween.kill();
+      if (w.__trioTickerAnim.el && w.__trioTickerAnim.onEnter) {
+        w.__trioTickerAnim.el.removeEventListener("mouseenter", w.__trioTickerAnim.onEnter);
+      }
+      if (w.__trioTickerAnim.el && w.__trioTickerAnim.onLeave) {
+        w.__trioTickerAnim.el.removeEventListener("mouseleave", w.__trioTickerAnim.onLeave);
+      }
+    } catch (_) {}
+    w.__trioTickerAnim = undefined;
+  }
+
+  const wrapper = document.querySelector<HTMLElement>(".company_triker");
+  const ul = wrapper?.querySelector<HTMLElement>("ul");
+  if (!wrapper || !ul) return;
+
+  // jctkr already cloned the items + computed total width on the inline style.
+  // We measure scrollWidth to be safe even if jctkr's inline width was cleared.
+  const totalWidth = ul.scrollWidth || parseFloat(ul.style.width || "0");
+  if (!totalWidth || totalWidth < 200) return;
+
+  // Half-width = one full set of original items (the other half is jctkr's clones).
+  // Looping by exactly half makes the clones replace the originals seamlessly.
+  const halfWidth = totalWidth / 2;
+
+  // Reset jctkr's left, take over with transform.
+  gsap.set(ul, { left: 0, x: 0 });
+
+  type _GsapTweenWithControls = _GsapTween & { pause?: () => void; play?: () => void };
+  const tween = gsap.to(ul, {
+    x: -halfWidth,
+    duration: Math.max(40, halfWidth / 60), // ~60px/sec — adjust feel
+    ease: "none",
+    repeat: -1,
+  }) as _GsapTweenWithControls;
+
+  const onEnter = () => { try { tween.pause?.(); } catch (_) {} };
+  const onLeave = () => { try { tween.play?.(); } catch (_) {} };
+  wrapper.addEventListener("mouseenter", onEnter);
+  wrapper.addEventListener("mouseleave", onLeave);
+
+  w.__trioTickerAnim = { tween, onEnter, onLeave, el: wrapper };
 }
 
 function installSnapshotPluginStubs(): void {
@@ -959,6 +1091,12 @@ function SnapshotClientImpl({ entry, bodyHtml, widgetProps }: Props) {
       // Runs after the WP snapshot's parallax script has registered its ScrollTriggers, so we
       // can kill the mechanical scrub:true tweens and replace them with scrub:1.2 lag.
       installHeroSmoothAnimations(entry.slug);
+
+      // 9. Cyber-security case-study slide-in + content stagger.
+      installCaseStudyAnimations(entry.slug);
+
+      // 10. Smooth GPU ticker (replaces jctkr's `left` animation with `transform`).
+      installSmoothTicker(entry.slug);
     });
 
     return () => {

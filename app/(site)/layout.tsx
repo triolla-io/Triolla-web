@@ -121,13 +121,26 @@ const TICKER_FIX = `
 // Using [data-snapshot-client] prefix for higher specificity than the theme's
 // plain class selectors (theme uses !important on some rules, so we need the
 // attribute selector to win the cascade).
+// Keep CLS prevention (bottom:0 + transition:none) but DROP opacity:1!important so
+// GSAP can animate opacity for the cyber-security case-study reveal. PRE_HYDRATION_FIX
+// already forces opacity:1 while body lacks .loaded, so removing it here is safe.
 const PORTFOLIO_CLS_FIX = `
 [data-snapshot-client] .protfolio_img,
 [data-snapshot-client] .protfolio_con,
 [data-snapshot-client] .protolio_log,
 [data-snapshot-client] .protolio_txt,
 [data-snapshot-client] .protolio_tags,
-[data-snapshot-client] .protolio_gallery{bottom:0!important;opacity:1!important;transition:none!important}
+[data-snapshot-client] .protolio_gallery{bottom:0!important;transition:none!important}
+`;
+
+// COMPANY_TICKER_FIX
+// jctkr's jQuery-based `left` property animation is mechanical and triggers layout
+// every frame. SnapshotClient.installSmoothTicker takes over with a GSAP `transform:
+// translateX` tween. This rule pins `left:0` so jctkr's interval-driven `style.left`
+// updates can't drag the ul off-position while our transform tween runs.
+const COMPANY_TICKER_FIX = `
+.company_triker{overflow:hidden}
+.company_triker ul{left:0!important;will-change:transform}
 `;
 
 // Reserve height for owl carousels before owl.js measures them.
@@ -553,6 +566,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <style dangerouslySetInnerHTML={{ __html: TICKER_FIX }} />
         {/* eslint-disable-next-line react/no-danger */}
         <style dangerouslySetInnerHTML={{ __html: PORTFOLIO_CLS_FIX }} />
+        {/* eslint-disable-next-line react/no-danger */}
+        <style dangerouslySetInnerHTML={{ __html: COMPANY_TICKER_FIX }} />
         {/* eslint-disable-next-line react/no-danger */}
         <style dangerouslySetInnerHTML={{ __html: OWL_CLS_FIX }} />
         {/* eslint-disable-next-line react/no-danger */}
