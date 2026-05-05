@@ -332,8 +332,13 @@ function installCaseStudyAnimations(_slug: string): void {
   const tweens: _GsapTween[] = [];
   const cards = Array.from(document.querySelectorAll<HTMLElement>(".portfolio_main .protfolio_img"));
 
+  // RTL flips the visual layout — what was on the left in LTR is on the right in
+  // Hebrew/Arabic, so the slide-from-side direction must mirror.
+  const isRtl = document.documentElement.dir === "rtl" || document.documentElement.lang?.startsWith("he") || document.documentElement.lang?.startsWith("ar");
+
   cards.forEach((imgEl, idx) => {
-    const fromLeft = idx % 2 === 0;
+    const fromLeftLtr = idx % 2 === 0;
+    const fromLeft = isRtl ? !fromLeftLtr : fromLeftLtr;
     gsap.set(imgEl, { x: fromLeft ? -90 : 90, scale: 0.94, opacity: 0 });
     const tw = gsap.to(imgEl, {
       x: 0,
@@ -417,12 +422,19 @@ function installSmoothTicker(_slug: string): void {
   // Looping by exactly half makes the clones replace the originals seamlessly.
   const halfWidth = totalWidth / 2;
 
+  // RTL pages scroll the opposite direction so the ticker reads naturally
+  // (left → right matches Hebrew/Arabic eye flow).
+  const isRtl = document.documentElement.dir === "rtl" || document.documentElement.lang?.startsWith("he") || document.documentElement.lang?.startsWith("ar");
+  // Start position: in RTL begin at -halfWidth so the visible items emerge from the left edge.
+  const startX = isRtl ? -halfWidth : 0;
+  const endX = isRtl ? 0 : -halfWidth;
+
   // Reset jctkr's left, take over with transform.
-  gsap.set(ul, { left: 0, x: 0 });
+  gsap.set(ul, { left: 0, x: startX });
 
   type _GsapTweenWithControls = _GsapTween & { pause?: () => void; play?: () => void };
   const tween = gsap.to(ul, {
-    x: -halfWidth,
+    x: endX,
     duration: Math.max(40, halfWidth / 60), // ~60px/sec — adjust feel
     ease: "none",
     repeat: -1,
