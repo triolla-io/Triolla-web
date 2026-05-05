@@ -14,6 +14,15 @@
 import path from 'path'
 import { fileURLToPath } from 'url'
 import fs from 'fs'
+
+// Load .env.local (tsx doesn't do this automatically)
+try {
+  const envPath = path.resolve(process.cwd(), '.env.local')
+  fs.readFileSync(envPath, 'utf-8').split('\n').forEach((line) => {
+    const m = line.match(/^([^#=][^=]*)=(.*)$/)
+    if (m && !process.env[m[1].trim()]) process.env[m[1].trim()] = m[2].trim()
+  })
+} catch {}
 import * as cheerio from 'cheerio'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))

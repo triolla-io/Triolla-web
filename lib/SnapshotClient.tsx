@@ -142,9 +142,8 @@ function installImageRevealObserver(root: HTMLElement | null): void {
     for (const sel of _SKIP_ANCESTOR_SELECTORS) {
       if (img.closest(sel)) return false;
     }
-    const w = img.getAttribute("width");
     const h = img.getAttribute("height");
-    if (w && h && Number(w) < 80 && Number(h) < 80) return false;
+    if (h && Number(h) < 100) return false;
     return true;
   });
 
