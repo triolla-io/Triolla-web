@@ -1,6 +1,5 @@
 import path from "path";
 import type { NextConfig } from "next";
-import { withPayload } from "@payloadcms/next/withPayload";
 
 // Populated by engine/scaffold_nextjs.py — do not edit manually
 const LOCALES: string[] = ["en","he"];
@@ -185,4 +184,4 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default withPayload(nextConfig, { devBundleServerPackages: false });
+export default nextConfig;
