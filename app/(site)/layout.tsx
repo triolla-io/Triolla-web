@@ -114,9 +114,9 @@ const STICKY_NAV_FIX = `
   max-width:1000px; /* generous default — never constrains real content size */
 }
 
-/* Compact-state: use .trio-nav-compact (toggled by NAV_DIRECTION_SCRIPT based on
-   SCROLL DIRECTION) instead of WP's .sticky (position-based — only flips off near
-   the top of page). This way menu/book/whatsapp reappear AS SOON as you scroll up. */
+/* WP's .sticky controls the pill geometry (width / background / top) — we don't
+   override that. Our .trio-nav-compact only controls the converging collapse of
+   menu / book / whatsapp INSIDE the pill. The two layers cooperate. */
 .trio-nav-compact .header .header_menu,
 .trio-nav-compact .header .header_right .header_book,
 .trio-nav-compact .header .header_right .header_whatsapp{
@@ -128,7 +128,6 @@ const STICKY_NAV_FIX = `
   margin-right:0 !important;
 }
 
-/* Per-element converging transforms. */
 .trio-nav-compact .header .header_menu{transform:translateX(50px) scale(.85) !important}
 .trio-nav-compact .header .header_right .header_book{transform:translateX(-30px) scale(.85) !important}
 .trio-nav-compact .header .header_right .header_whatsapp{transform:scale(.5) !important}
