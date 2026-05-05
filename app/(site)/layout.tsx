@@ -55,20 +55,12 @@ const HEADER_OFFSET_FIX = `
 `;
 
 // STICKY_CONTACT_FIX
-// When .sticky lands on body the .header collapses to a 500px black pill and hides
-// .header_book / .header_whatsapp (via WP CSS display:none). .header_contact is the
-// only remaining right-side element — slide it snug against the pill's right edge.
-//
-// Transition direction matters:
-//   ENTERING sticky → smooth 0.45s slide right (transition on the .sticky rule).
-//   EXITING sticky  → instant reset (transition:0s on the base rule) so Contact Us
-//                     is back in its normal position BEFORE WhatsApp reappears,
-//                     preventing them from overlapping during the transition.
+// In sticky, the WP CSS hides whatsapp + book — we explicitly do it via inline
+// CSS too (belt-and-suspenders against async CAS load). The Contact Us slide is
+// now driven by GSAP scrub in installSmoothStickyNav (starts from scroll 0 instead
+// of waiting for the .sticky class to land).
 const STICKY_CONTACT_FIX = `
 .sticky .header .header_right .header_whatsapp,.sticky .header .header_right .header_book{display:none!important;visibility:hidden!important}
-.header_contact{transition:transform 0s}
-.sticky .header .header_contact{transform:translateX(6px);transition:transform .4s cubic-bezier(.22,1,.36,1)}
-@media only screen and (min-width:1200px){.sticky .header .header_contact{transform:translateX(8px)}}
 `;
 
 // Scroll performance optimization for sticky header + book-a-call button.
@@ -80,23 +72,45 @@ const SCROLL_PERF_FIX = `
 `;
 
 // STICKY_NAV_FIX
-// The WP CSS has `transition:.3s` (linear ease) on .header — the pill collapse feels
-// mechanical. Override with a spring-like cubic-bezier across all properties that
-// change on sticky: width (100% → 500px), background (#000), border-radius, top.
+// Two responsibilities:
+//   1. Disable CSS transitions on .header so GSAP fully owns timing.
+//   2. Neutralize WP's `.sticky .header { width:500px; background:#000; top:0 }`
+//      using `:not(.gsap-driven)` so our GSAP scrub tween is the ONLY source of
+//      visual change. Without this, the WP rules would snap the header to its
+//      sticky values when the body class lands, fighting the GSAP scrub tween.
+//      We tag the header with .gsap-driven via JS at install time.
 const STICKY_NAV_FIX = `
 .header,header{
-  transition:
-    width .52s cubic-bezier(.22,1,.36,1),
-    max-width .52s cubic-bezier(.22,1,.36,1),
-    background .52s cubic-bezier(.22,1,.36,1),
-    background-color .52s cubic-bezier(.22,1,.36,1),
-    border-radius .52s cubic-bezier(.22,1,.36,1),
-    box-shadow .52s cubic-bezier(.22,1,.36,1),
-    top .52s cubic-bezier(.22,1,.36,1),
-    padding .52s cubic-bezier(.22,1,.36,1) !important;
+  transition:none!important;
+  will-change:width,top,background-color,border-radius;
+  border-radius:50px;
 }
-.header_menu{transition:transform .45s cubic-bezier(.22,1,.36,1),opacity .35s ease !important}
-.sticky .header_menu{opacity:0}
+.header_menu{will-change:transform,opacity}
+/* Cancel WP sticky visual snaps — GSAP scrub now drives everything. */
+.sticky .header.gsap-driven{
+  width:auto;
+  background:initial;
+  top:auto;
+}
+`;
+
+// NAV_CLICK_FIX
+// Belt-and-suspenders so the top-nav menu links are always clickable, even on
+// portfolio pages where the .headerticker (z:101) or .portfolio_text could
+// stack above the .header (z:100). Bumps menu links to z:102 and confines
+// ticker height so it can't visually grow into the menu area.
+const NAV_CLICK_FIX = `
+.headerticker{max-height:48px;overflow:hidden}
+.header_menu ul.menu li>a,.header_menu ul.menu li>span{position:relative;z-index:102}
+.nav-dropdown-portal:not(.open){pointer-events:none!important}
+`;
+
+// DESIGN_PROCESS_FIX
+// The WP `.enter-y` CSS animation runs in parallel with our new GSAP-driven
+// reveal — they fight for opacity/transform. Disable the WP animation; let
+// installDesignProcessAnimation own the entrance.
+const DESIGN_PROCESS_FIX = `
+[data-snapshot-client] .unique_design .enter-y{animation:none!important;opacity:1}
 `;
 
 // Critical ticker CSS — prevents the vertical-list flash before the CAS bundle loads.
@@ -558,6 +572,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <style dangerouslySetInnerHTML={{ __html: SCROLL_PERF_FIX }} />
         {/* eslint-disable-next-line react/no-danger */}
         <style dangerouslySetInnerHTML={{ __html: STICKY_NAV_FIX }} />
+        {/* eslint-disable-next-line react/no-danger */}
+        <style dangerouslySetInnerHTML={{ __html: NAV_CLICK_FIX }} />
+        {/* eslint-disable-next-line react/no-danger */}
+        <style dangerouslySetInnerHTML={{ __html: DESIGN_PROCESS_FIX }} />
         {/* eslint-disable-next-line react/no-danger */}
         <style dangerouslySetInnerHTML={{ __html: HEADER_OFFSET_FIX }} />
         {/* eslint-disable-next-line react/no-danger */}

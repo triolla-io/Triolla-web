@@ -198,6 +198,7 @@ type _GsapAPI = {
   killTweensOf: (target: Element | string) => void;
   to: (target: Element | string | Element[], vars: Record<string, unknown>) => _GsapTween;
   from: (target: Element | string | Element[], vars: Record<string, unknown>) => _GsapTween;
+  fromTo: (target: Element | string | Element[], fromVars: Record<string, unknown>, toVars: Record<string, unknown>) => _GsapTween;
   set: (target: Element | string | Element[], vars: Record<string, unknown>) => void;
   quickTo: (target: Element, prop: string, vars: Record<string, unknown>) => _GsapQuickTo;
 };
@@ -446,6 +447,256 @@ function installSmoothTicker(_slug: string): void {
   wrapper.addEventListener("mouseleave", onLeave);
 
   w.__trioTickerAnim = { tween, onEnter, onLeave, el: wrapper };
+}
+
+/**
+ * JS-driven smooth sticky nav. CSS transitions caused per-property desync
+ * (width = layout, background = paint, top = layout — all finished at different
+ * times = "stairs" feel). We disable the WP `.sticky .header` CSS visual changes
+ * entirely (via inline-style overrides) and drive every visual property through
+ * a single GSAP timeline tied to scroll position with scrub for buttery flow.
+ */
+function installSmoothStickyNav(_slug: string): void {
+  if (typeof window === "undefined") return;
+
+  const w = window as unknown as {
+    gsap?: _GsapAPI;
+    ScrollTrigger?: _ScrollTriggerAPI;
+    __trioStickyNav?: { tweens: _GsapTween[]; swappedRight?: HTMLElement; swappedNodes?: Node[] };
+  };
+  const gsap = w.gsap;
+  if (!gsap || !w.ScrollTrigger) return;
+
+  if (typeof matchMedia !== "undefined" && matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+  // Cleanup prior install (route change / history bust).
+  if (w.__trioStickyNav) {
+    try { w.__trioStickyNav.tweens.forEach((t) => t.kill()); } catch (_) {}
+    // Restore original DOM order if we swapped.
+    if (w.__trioStickyNav.swappedRight && w.__trioStickyNav.swappedNodes) {
+      try {
+        const right = w.__trioStickyNav.swappedRight;
+        right.innerHTML = "";
+        for (const n of w.__trioStickyNav.swappedNodes) right.appendChild(n);
+      } catch (_) {}
+    }
+    w.__trioStickyNav = undefined;
+  }
+
+  const header = document.querySelector<HTMLElement>(".header");
+  if (!header) return;
+
+  // Mark the header so STICKY_NAV_FIX's `.gsap-driven` overrides activate —
+  // they cancel WP's `.sticky .header { width:500px ... }` snap so our scrub
+  // tween is the only source of visual change.
+  header.classList.add("gsap-driven");
+
+  // Swap DOM positions of Book a Call and Contact Us inside .header_right.
+  // Before: [contact, whatsapp, book] → with float:right, visual L→R = [book, whatsapp, contact]
+  // After:  [book, whatsapp, contact] → with float:right, visual L→R = [contact, whatsapp, book]
+  // Capture the original order so cleanup can restore it on remount.
+  let swappedNodes: Node[] | undefined;
+  let swappedRight: HTMLElement | undefined;
+  const right = header.querySelector<HTMLElement>(".header_right");
+  if (right) {
+    const contact = right.querySelector<HTMLElement>(".header_contact");
+    const book = right.querySelector<HTMLElement>(".header_book");
+    if (contact && book && right.contains(contact) && right.contains(book)) {
+      swappedNodes = Array.from(right.childNodes).map((n) => n.cloneNode(true));
+      swappedRight = right;
+      // Move book to first child, contact to last child.
+      right.insertBefore(book, right.firstChild);
+      right.appendChild(contact);
+    }
+  }
+
+  // Snapshot the default (non-sticky) computed values from a freshly-mounted page.
+  // These become our scroll-tied animation FROM state.
+  const cs = getComputedStyle(header);
+  const defaultTop = cs.top && cs.top !== "auto" ? cs.top : "87px";
+  const defaultWidth = cs.width || "100%";
+  const defaultBg = cs.backgroundColor || "rgba(0,0,0,0)";
+
+  // Scroll-tied scrub animation. As the user scrolls 0 → 120px, the header
+  // morphs continuously from full-width transparent into a 500px black pill.
+  // `scrub: 0.4` adds a 0.4s lag for buttery, lerped feel.
+  // Top stays at 16px when fully sticky — keeps a margin from viewport top
+  // (instead of pill jamming flat against the edge).
+  const headerTween = gsap.fromTo(header,
+    {
+      top: defaultTop,
+      width: defaultWidth,
+      backgroundColor: defaultBg,
+      borderRadius: "50px",
+      paddingTop: cs.paddingTop || "27px",
+      paddingBottom: cs.paddingBottom || "18px",
+    },
+    {
+      top: "16px",
+      width: "500px",
+      backgroundColor: "#000000",
+      borderRadius: "50px",
+      paddingTop: "12px",
+      paddingBottom: "12px",
+      ease: "none",
+      scrollTrigger: {
+        trigger: document.body,
+        start: 0,
+        end: 120,
+        scrub: 0.4,
+      },
+    }
+  );
+
+  // Slide Contact Us toward the pill's right edge as scroll begins.
+  // Tied to the same scrub so it moves continuously with scroll, not as a
+  // discrete snap when .sticky lands.
+  const tweens: _GsapTween[] = [headerTween];
+  const contactNode = header.querySelector<HTMLElement>(".header_contact");
+  if (contactNode) {
+    const contactTween = gsap.fromTo(contactNode,
+      { x: 0 },
+      {
+        x: 8,
+        ease: "none",
+        scrollTrigger: {
+          trigger: document.body,
+          start: 0,
+          end: 120,
+          scrub: 0.4,
+        },
+      }
+    );
+    tweens.push(contactTween);
+  }
+
+  w.__trioStickyNav = { tweens, swappedRight, swappedNodes };
+}
+
+/**
+ * "Our Clients" section reveal — heading stagger + 12 logos popping in with
+ * random stagger from `back.out`. Targets `.portfolio_global` (any page that has it).
+ */
+function installClientsAnimation(_slug: string): void {
+  if (typeof window === "undefined") return;
+  const w = window as unknown as { gsap?: _GsapAPI; ScrollTrigger?: _ScrollTriggerAPI; __trioClientsAnim?: { tweens: _GsapTween[] } };
+  const gsap = w.gsap;
+  if (!gsap || !w.ScrollTrigger) return;
+  if (typeof matchMedia !== "undefined" && matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+  if (w.__trioClientsAnim) {
+    try { w.__trioClientsAnim.tweens.forEach((t) => t.kill()); } catch (_) {}
+    w.__trioClientsAnim = undefined;
+  }
+
+  const section = document.querySelector<HTMLElement>(".portfolio_global");
+  if (!section) return;
+
+  const tweens: _GsapTween[] = [];
+
+  // WP CSS sets `.global_con h2, h3 { opacity:0; bottom:-30px }` and only reveals
+  // them when `.global_con.show` is added. We need explicit fromTo to animate
+  // OVER those CSS rules (inline `opacity:1` beats stylesheet `opacity:0`).
+  const heading = Array.from(section.querySelectorAll<HTMLElement>(".global_con .global_wrap > h2, .global_con .global_wrap > h3, .global_con .global_wrap > .global_but"));
+  if (heading.length) {
+    tweens.push(gsap.fromTo(heading,
+      { y: 40, opacity: 0 },
+      {
+        y: 0, opacity: 1, bottom: 0,
+        stagger: 0.12,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: { trigger: section, start: "top 85%", toggleActions: "play none none reverse" },
+      }
+    ));
+  }
+
+  const logos = Array.from(section.querySelectorAll<HTMLElement>(".g_logo"));
+  if (logos.length) {
+    tweens.push(gsap.fromTo(logos,
+      { scale: 0.7, opacity: 0, y: 20 },
+      {
+        scale: 1, opacity: 1, y: 0,
+        stagger: { each: 0.04, from: "random" },
+        duration: 0.6,
+        ease: "back.out(1.4)",
+        scrollTrigger: { trigger: section, start: "top 80%", toggleActions: "play none none reverse" },
+      }
+    ));
+  }
+
+  w.__trioClientsAnim = { tweens };
+}
+
+/**
+ * "Our unique Design Process" reveal — heading rises, each step climbs +
+ * scales in with stagger. Targets `.unique_design`. WP `.enter-y` CSS
+ * animation is neutralized via `DESIGN_PROCESS_FIX` in layout.tsx.
+ */
+function installDesignProcessAnimation(_slug: string): void {
+  if (typeof window === "undefined") return;
+  const w = window as unknown as { gsap?: _GsapAPI; ScrollTrigger?: _ScrollTriggerAPI; __trioDesignProcessAnim?: { tweens: _GsapTween[] } };
+  const gsap = w.gsap;
+  if (!gsap || !w.ScrollTrigger) return;
+  if (typeof matchMedia !== "undefined" && matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+  if (w.__trioDesignProcessAnim) {
+    try { w.__trioDesignProcessAnim.tweens.forEach((t) => t.kill()); } catch (_) {}
+    w.__trioDesignProcessAnim = undefined;
+  }
+
+  const section = document.querySelector<HTMLElement>(".unique_design");
+  if (!section) return;
+
+  const tweens: _GsapTween[] = [];
+
+  // Heading wrapper `.top_design_text` contains the h3 + p block. Animate the wrapper
+  // and the heading together for a clean rise.
+  const headingBlock = section.querySelector<HTMLElement>(".top_design_text");
+  if (headingBlock) {
+    tweens.push(gsap.fromTo(headingBlock,
+      { y: 50, opacity: 0 },
+      {
+        y: 0, opacity: 1,
+        duration: 0.85,
+        ease: "power3.out",
+        scrollTrigger: { trigger: section, start: "top 85%", toggleActions: "play none none reverse" },
+      }
+    ));
+  }
+
+  // Steps (the "dots" + labels). DESIGN_PROCESS_FIX disables the WP `.enter-y`
+  // animation, but the underlying CSS still leaves them at the keyframe's start
+  // state (opacity:0). Use fromTo with explicit opacity:1 end so they appear.
+  const steps = Array.from(section.querySelectorAll<HTMLElement>(".design_bullets.desktopbullets li.enter-y"));
+  if (steps.length) {
+    tweens.push(gsap.fromTo(steps,
+      { y: 60, opacity: 0, scale: 0.92 },
+      {
+        y: 0, opacity: 1, scale: 1,
+        stagger: 0.15,
+        duration: 0.7,
+        ease: "power3.out",
+        scrollTrigger: { trigger: section, start: "top 75%", toggleActions: "play none none reverse" },
+      }
+    ));
+  }
+
+  // Decorative line connecting the steps — fade it in alongside the first step.
+  const designLine = section.querySelector<HTMLElement>(".design_line");
+  if (designLine) {
+    tweens.push(gsap.fromTo(designLine,
+      { scaleX: 0, opacity: 0, transformOrigin: "left center" },
+      {
+        scaleX: 1, opacity: 1,
+        duration: 1.1,
+        ease: "power2.out",
+        scrollTrigger: { trigger: section, start: "top 80%", toggleActions: "play none none reverse" },
+      }
+    ));
+  }
+
+  w.__trioDesignProcessAnim = { tweens };
 }
 
 function installSnapshotPluginStubs(): void {
@@ -1104,11 +1355,20 @@ function SnapshotClientImpl({ entry, bodyHtml, widgetProps }: Props) {
       // can kill the mechanical scrub:true tweens and replace them with scrub:1.2 lag.
       installHeroSmoothAnimations(entry.slug);
 
-      // 9. Cyber-security case-study slide-in + content stagger.
+      // 9. Case-study slide-in + content stagger (any page with .protfolio_img).
       installCaseStudyAnimations(entry.slug);
 
       // 10. Smooth GPU ticker (replaces jctkr's `left` animation with `transform`).
       installSmoothTicker(entry.slug);
+
+      // 11. JS-driven smooth sticky nav (replaces choppy CSS transitions).
+      installSmoothStickyNav(entry.slug);
+
+      // 12. "Our Clients" stagger reveal (any page with .portfolio_global).
+      installClientsAnimation(entry.slug);
+
+      // 13. "Our unique Design Process" stagger reveal (any page with .unique_design).
+      installDesignProcessAnimation(entry.slug);
     });
 
     return () => {
