@@ -185,12 +185,6 @@ function installWowObserver(root: HTMLElement): void {
   for (const el of wowEls) io.observe(el);
 }
 
-/**
- * Home-only enhancement: replace the WP snapshot's mechanical scroll parallax
- * (scrub:true, ease:none) on the .hometopimages collage with a smoother
- * outcrowd.io-style stack — lag-based scrub, cursor parallax with depth, and
- * subtle ambient float. Idempotent; cleans up the previous run on re-entry.
- */
 type _GsapTween = { kill: () => void };
 type _GsapQuickTo = (value: number) => void;
 type _GsapAPI = {
@@ -205,105 +199,8 @@ type _GsapAPI = {
 type _ScrollTriggerInstance = { kill: () => void; trigger?: Element | null; vars?: { trigger?: Element | null } };
 type _ScrollTriggerAPI = { getAll: () => _ScrollTriggerInstance[] };
 
-function installHeroSmoothAnimations(slug: string): void {
-  if (slug !== "triolla-io-home") return;
-  if (typeof window === "undefined") return;
-
-  const w = window as unknown as {
-    gsap?: _GsapAPI;
-    ScrollTrigger?: _ScrollTriggerAPI;
-    __trioHeroAnims?: { tweens: _GsapTween[]; onMove?: (e: MouseEvent) => void };
-  };
-  const gsap = w.gsap;
-  const ScrollTrigger = w.ScrollTrigger;
-  if (!gsap || !ScrollTrigger) return;
-
-  if (typeof matchMedia !== "undefined" && matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-
-  // Cleanup prior install (route change / history bust) so we never double up.
-  if (w.__trioHeroAnims) {
-    try {
-      w.__trioHeroAnims.tweens.forEach((t) => t.kill());
-      if (w.__trioHeroAnims.onMove) window.removeEventListener("mousemove", w.__trioHeroAnims.onMove);
-    } catch (_) {}
-    w.__trioHeroAnims = undefined;
-  }
-
-  const tweens: _GsapTween[] = [];
-
-  // 1. Smoothed scroll parallax — kill the original WP tweens, replace with scrub:1.2 lag.
-  const heroContainer = document.querySelector(".hometopimages") as HTMLElement | null;
-  const heroImgs = Array.from(
-    document.querySelectorAll<HTMLImageElement>(".hometopimages .grid__item-img img"),
-  );
-  if (heroContainer && heroImgs.length) {
-    ScrollTrigger.getAll().forEach((st) => {
-      const trig = (st.trigger as Element | null | undefined) ?? (st.vars?.trigger as Element | null | undefined);
-      if (trig && typeof (trig as Element).matches === "function" && (trig as Element).matches(".hometopimages .grid__item-img img, .hometopimages img")) {
-        try { st.kill(); } catch (_) {}
-      }
-    });
-    heroImgs.forEach((img, i) => {
-      gsap.killTweensOf(img);
-      const speed = parseFloat(img.getAttribute("data-speed") ?? "-3") || -3;
-      // Per-image multiplier: 48–78px range (every 4th image repeats the cycle).
-      // Gives each card a different depth so the collage feels layered, not flat.
-      const mult = 48 + (i % 4) * 10;
-      const tw = gsap.to(img, {
-        y: speed * mult,
-        ease: "none",
-        scrollTrigger: {
-          trigger: heroContainer,
-          start: "top bottom",
-          end: "bottom top",
-          scrub: 0.7,
-        },
-      });
-      tweens.push(tw);
-    });
-  }
-
-  // 2. Cursor-driven parallax — X-only per card, desktop / non-touch only.
-  // No Y cursor movement — different Y depths per card would cause vertical overlap.
-  // No GSAP 3D transforms on the container (causes Tween.resetTo infinite recursion
-  // when the same element has active scroll scrub tweens on its children).
-  const isTouch = typeof matchMedia !== "undefined" && matchMedia("(hover: none), (pointer: coarse)").matches;
-  const isWide = window.innerWidth >= 1024;
-  let onMove: ((e: MouseEvent) => void) | undefined;
-  if (!isTouch && isWide) {
-    const cards = Array.from(document.querySelectorAll<HTMLElement>(".hometopimages .hometopimage"));
-    if (cards.length) {
-      const xQuick = cards.map((el) => gsap.quickTo(el, "x", { duration: 1.1, ease: "power3.out" }));
-      // Per-card X depth (8..22 px) — pseudo-random but deterministic by index.
-      const depths = cards.map((_, i) => 8 + ((i * 37) % 15));
-      onMove = (e: MouseEvent) => {
-        const cx = window.innerWidth / 2;
-        const dx = (e.clientX - cx) / cx;   // -1 .. +1
-        for (let i = 0; i < cards.length; i++) {
-          xQuick[i](dx * depths[i]);
-        }
-      };
-      window.addEventListener("mousemove", onMove, { passive: true });
-    }
-  }
-
-  // 3. Ambient float — alternating phase so adjacent cards don't drift into each other.
-  // Even-indexed float up first, odd float down first — keeps relative distances stable.
-  const ambientTargets = Array.from(document.querySelectorAll<HTMLElement>(".hometopimages .grid__item-img"));
-  ambientTargets.forEach((el, i) => {
-    const dir = i % 2 === 0 ? "+=3" : "-=3";
-    const tw = gsap.to(el, {
-      y: dir,
-      duration: 3.2 + (i * 0.3),
-      delay: i * 0.18,
-      ease: "sine.inOut",
-      yoyo: true,
-      repeat: -1,
-    });
-    tweens.push(tw);
-  });
-
-  w.__trioHeroAnims = { tweens, onMove };
+function installHeroSmoothAnimations(_slug: string): void {
+  // Reverted — original WP GSAP animations handle the hero collage.
 }
 
 /**
@@ -1160,6 +1057,26 @@ function SnapshotClientImpl({ entry, bodyHtml, widgetProps }: Props) {
         }
       } catch (_) {}
 
+      // Footer accordion (mobile): .footer_menu_col h3 toggles its sibling div.
+      // CSS hides h3+div on mobile; WP jQuery wired this up, but doesn't run here.
+      try {
+        const wf = window as unknown as { __footerAccordionSnapshotBound?: boolean };
+        if (!wf.__footerAccordionSnapshotBound) {
+          wf.__footerAccordionSnapshotBound = true;
+          document.addEventListener('click', (e: MouseEvent) => {
+            const h3 = (e.target as HTMLElement).closest?.('.footer_menu_col h3') as HTMLElement | null;
+            if (!h3) return;
+            const col = h3.closest('.footer_menu_col') as HTMLElement | null;
+            if (!col) return;
+            const content = h3.nextElementSibling as HTMLElement | null;
+            if (!content) return;
+            const isOpen = col.classList.contains('footer-col-open');
+            col.classList.toggle('footer-col-open', !isOpen);
+            content.style.display = isOpen ? 'none' : 'block';
+          }, true);
+        }
+      } catch (_) {}
+
       // Header scroll-up reveal: previously fixed via a GSAP fallback handler,
       // but our CSS transitions in STICKY_NAV_FIX (layout.tsx) now own this
       // animation. The GSAP fallback was creating cross-page inconsistency
@@ -1319,9 +1236,6 @@ function SnapshotClientImpl({ entry, bodyHtml, widgetProps }: Props) {
         window.addEventListener("resize", handleOwlResize, { passive: true });
       }
 
-      // 8. Home-page hero smoothing (outcrowd.io-style scroll + cursor parallax + ambient float).
-      // Runs after the WP snapshot's parallax script has registered its ScrollTriggers, so we
-      // can kill the mechanical scrub:true tweens and replace them with scrub:1.2 lag.
       installHeroSmoothAnimations(entry.slug);
 
       // 9. Case-study slide-in + content stagger (any page with .protfolio_img).

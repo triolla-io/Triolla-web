@@ -90,12 +90,30 @@
       "Bash(git -C /Users/ariellunenfeld/Triolla-web show 62a0acd3 --name-only)",
       "Bash(git -C /Users/ariellunenfeld/Triolla-web show 62a0acd3 -- public/fragments/triolla-io-home-en-body.html)",
       "Bash(git -C /Users/ariellunenfeld/Triolla-web log --all --oneline -- \"public/fragments/triolla-io-home-en-body.html\")",
-      "Bash(git -C /Users/ariellunenfeld/Triolla-web show HEAD~10:\"public/fragments/triolla-io-home-en-body.html\")"
+      "Bash(git -C /Users/ariellunenfeld/Triolla-web show HEAD~10:\"public/fragments/triolla-io-home-en-body.html\")",
+      "Bash(git -C /Users/ariellunenfeld/Triolla-web show 78a083fa:\"public/fragments/triolla-io-home-en-body.html\")",
+      "Bash(python3 -c ' *)",
+      "Bash(python3)",
+      "WebFetch(domain:triolla.io)",
+      "Bash(curl -s https://triolla.io/)",
+      "Bash(perl -ne 'while \\(/\\\\.grid__item[^}]*}/g\\) { print $&, \"\\\\n\" }')",
+      "Bash(curl -s https://triolla.io/wp-content/themes/triolla/)",
+      "Bash(curl -s https://triolla.io/wp-content/themes/triolla/style.css)",
+      "Bash(sed -n '/<style id=\"wpr-usedcss\">/,/<\\\\/style>/p')",
+      "Read(//tmp/**)",
+      "Read(//private/tmp/**)",
+      "Bash(curl -sL https://triolla.io/wp-content/themes/triolla/css/style.css)",
+      "Bash(curl -sL https://triolla.io/wp-content/cache/min/1/wp-content/themes/triolla/css/style.css)",
+      "Bash(xargs -I {} bash -c 'echo \"=== File: {} ===\" && grep \"\\\\.hometopimage\\\\|\\\\.grid__item\" {} | head -10')",
+      "Bash(grep -v \"^$\")",
+      "Bash(grep -o '\\\\.grid__item[^,}\\\\s]*\\\\s*{[^}]*}' /tmp/triolla_live.html)",
+      "Bash(perl -ne 's/\\([{}]\\)/\\\\n$1\\\\n/g; print' /tmp/triolla_live.html)"
     ],
     "additionalDirectories": [
       "/Users/ariell/Desktop/triolla-snapshot/output/triolla.io/app/[[...slug]]",
       "/Users/ariell/Desktop/triolla-snapshot/output/triolla.io/app/(page-editor)/admin/page-editor",
-      "/Users/ariell/Desktop/triolla-snapshot/output/triolla.io/public/assets/_cas"
+      "/Users/ariell/Desktop/triolla-snapshot/output/triolla.io/public/assets/_cas",
+      "/tmp"
     ]
   }
 }

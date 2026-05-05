@@ -114,14 +114,14 @@ const STICKY_NAV_FIX = `
   max-width:1000px; /* generous default — never constrains real content size */
 }
 
-/* MINIMAL scroll-up restore: when our .trio-nav-compact is OFF, undo only WP's
-   display:none so the elements reappear. Don't touch header width/background —
-   pill geometry stays under WP's .sticky control (matches home page behavior).
-   Desktop only — mobile nav has a different layout so these rules don't apply. */
+/* Scroll-up restore: when .trio-nav-compact is OFF, undo WP's display:none and
+   any residual transform. body:not(.trio-nav-compact) fires on ALL pages
+   regardless of whether WP's .sticky JS runs (home/about-us only).
+   Desktop only — mobile nav uses .hmenumob. */
 @media only screen and (min-width:1200px){
-  .sticky:not(.trio-nav-compact) .header .header_menu{display:revert !important;transform:none !important}
-  .sticky:not(.trio-nav-compact) .header .header_right .header_book,
-  .sticky:not(.trio-nav-compact) .header .header_right .header_whatsapp{display:revert !important}
+  body:not(.trio-nav-compact) .header .header_menu{display:revert !important;transform:none !important}
+  body:not(.trio-nav-compact) .header .header_right .header_book,
+  body:not(.trio-nav-compact) .header .header_right .header_whatsapp{display:revert !important;transform:none !important}
 }
 
 /* WP's .sticky controls the pill geometry (width / background / top) — we don't
@@ -147,14 +147,29 @@ const STICKY_NAV_FIX = `
   margin-right:0 !important;
 }
 
+/* Pill geometry on ALL pages — driven by .trio-nav-compact (our JS, runs everywhere),
+   not WP's .sticky (only runs on 4/282 pages with locally-cached CAS JS). */
+@media only screen and (min-width:1200px){
+  .trio-nav-compact .header,.trio-nav-compact header{
+    width:500px !important;
+    top:0 !important;
+  }
+}
+
 /* Mobile: kill all scroll animation side-effects — keep WP's original header. */
 @media only screen and (max-width:1199px){
-  /* CAS JS sets width:550px as inline style; !important beats inline styles. */
+  /* CAS JS sets width:550px as inline style; !important beats inline styles.
+     Also reset left/right/margin so WP's margin:0 auto + max-width:1069px
+     can't leave the header off-center or oversized on tablet. */
   .header,header{
     width:100%!important;
     max-width:100%!important;
     border-radius:0!important;
     transition:none!important;
+    left:0!important;
+    right:0!important;
+    margin-left:0!important;
+    margin-right:0!important;
   }
   /* .trio-nav-compact forces display:block on elements WP hides on mobile,
      causing them to take up layout space (invisible but present) → header grows.
@@ -380,6 +395,14 @@ html[dir="rtl"] .faqtitle a span.faq_img{float:right}
   .active .faqtitle a:after{width:16px;height:2px}
 }`;
 
+
+const FOOTER_ACCORDION_FIX = `
+@media only screen and (max-width:1023px){
+  .footer_menu_col h3{cursor:pointer;user-select:none}
+  .footer_menu_col h3+div{display:none}
+  .footer_menu_col.footer-col-open h3+div{display:block!important}
+}
+`;
 
 // NAV_DROPDOWN_FIX
 // ─────────────────────────────────────────────────────────────────────────────
@@ -686,6 +709,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <style dangerouslySetInnerHTML={{ __html: LAZY_RENDER_FIX }} />
         {/* eslint-disable-next-line react/no-danger */}
         <style dangerouslySetInnerHTML={{ __html: FAQ_FIX }} />
+        {/* eslint-disable-next-line react/no-danger */}
+        <style dangerouslySetInnerHTML={{ __html: FOOTER_ACCORDION_FIX }} />
       </head>
       <body>
         <NavigationProgress />
