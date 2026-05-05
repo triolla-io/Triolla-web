@@ -1121,6 +1121,29 @@ function SnapshotClientImpl({ entry, bodyHtml, widgetProps }: Props) {
         }
       } catch (_) {}
 
+      // Mobile side-nav close button — remove mbodyact when .hmenumobclose is clicked.
+      try {
+        const wm = window as unknown as { __mobNavSnapshotBound?: boolean };
+        if (!wm.__mobNavSnapshotBound) {
+          wm.__mobNavSnapshotBound = true;
+          document.addEventListener('click', (e: MouseEvent) => {
+            const btn = (e.target as HTMLElement).closest?.('.hmenumobclose');
+            if (!btn) return;
+            e.preventDefault();
+            e.stopPropagation();
+            document.body.classList.remove('mbodyact');
+          }, true);
+          // Also ensure the hamburger toggle works.
+          document.addEventListener('click', (e: MouseEvent) => {
+            const btn = (e.target as HTMLElement).closest?.('.menutoggle');
+            if (!btn) return;
+            e.preventDefault();
+            e.stopPropagation();
+            document.body.classList.toggle('mbodyact');
+          }, true);
+        }
+      } catch (_) {}
+
       // Ticker close button — hide .headerticker when .tickclose is clicked.
       try {
         const w2 = window as unknown as { __tickcloseSnapshotBound?: boolean };
