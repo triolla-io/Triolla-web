@@ -54,12 +54,49 @@ const HEADER_OFFSET_FIX = `
 .portfolio_text{top:0!important}
 `;
 
+// STICKY_CONTACT_FIX
+// When .sticky lands on body the .header collapses to a 500px black pill and hides
+// .header_book / .header_whatsapp (via WP CSS display:none). .header_contact is the
+// only remaining right-side element — slide it snug against the pill's right edge.
+//
+// Transition direction matters:
+//   ENTERING sticky → smooth 0.45s slide right (transition on the .sticky rule).
+//   EXITING sticky  → instant reset (transition:0s on the base rule) so Contact Us
+//                     is back in its normal position BEFORE WhatsApp reappears,
+//                     preventing them from overlapping during the transition.
+const STICKY_CONTACT_FIX = `
+.sticky .header .header_right .header_whatsapp,.sticky .header .header_right .header_book{display:none!important;visibility:hidden!important}
+.header_contact{transition:transform 0s}
+.sticky .header .header_contact{transform:translateX(6px);transition:transform .4s cubic-bezier(.22,1,.36,1)}
+@media only screen and (min-width:1200px){.sticky .header .header_contact{transform:translateX(8px)}}
+`;
+
 // Scroll performance optimization for sticky header + book-a-call button.
 // Removed contain:layout because it breaks button animation sync with header collapse.
 const SCROLL_PERF_FIX = `
 .header,header{will-change:transform;transform:translateZ(0);z-index:100!important}
 .header_book,.hmobbutlftb,.foo_book{will-change:none;transform:translateZ(0);z-index:80;transition:none!important}
 .header_menu ul.menu{will-change:none;z-index:99}
+`;
+
+// STICKY_NAV_FIX
+// The WP CSS has `transition:.3s` (linear ease) on .header — the pill collapse feels
+// mechanical. Override with a spring-like cubic-bezier across all properties that
+// change on sticky: width (100% → 500px), background (#000), border-radius, top.
+const STICKY_NAV_FIX = `
+.header,header{
+  transition:
+    width .52s cubic-bezier(.22,1,.36,1),
+    max-width .52s cubic-bezier(.22,1,.36,1),
+    background .52s cubic-bezier(.22,1,.36,1),
+    background-color .52s cubic-bezier(.22,1,.36,1),
+    border-radius .52s cubic-bezier(.22,1,.36,1),
+    box-shadow .52s cubic-bezier(.22,1,.36,1),
+    top .52s cubic-bezier(.22,1,.36,1),
+    padding .52s cubic-bezier(.22,1,.36,1) !important;
+}
+.header_menu{transition:transform .45s cubic-bezier(.22,1,.36,1),opacity .35s ease !important}
+.sticky .header_menu{opacity:0}
 `;
 
 // Critical ticker CSS — prevents the vertical-list flash before the CAS bundle loads.
@@ -147,6 +184,14 @@ const LAZY_RENDER_FIX = `
 const FAQ_FIX = `
 .active .faqdetail{display:block!important}
 .port_faq_top p{opacity:1!important;bottom:0!important}
+@keyframes trioFaqReveal{from{opacity:0;transform:translateY(-22px)}to{opacity:1;transform:translateY(0)}}
+.port_faq_box.animated{animation:trioFaqReveal .55s cubic-bezier(.22,1,.36,1) both!important}
+.port_faq_box.faq-1.animated{animation-delay:0s!important}
+.port_faq_box.faq-2.animated{animation-delay:.07s!important}
+.port_faq_box.faq-3.animated{animation-delay:.14s!important}
+.port_faq_box.faq-4.animated{animation-delay:.21s!important}
+.port_faq_box.faq-5.animated{animation-delay:.28s!important}
+.port_faq_box.faq-6.animated{animation-delay:.35s!important}
 .faqtitle a{display:flex;align-items:center;position:relative;font-size:36px;line-height:100%;letter-spacing:0;text-align:start;vertical-align:middle;color:#fff;padding:32px 40px 34px 0;background:transparent;border:none;width:100%;cursor:pointer;font-family:inherit;text-decoration:none}
 .faqtitle a:after{position:absolute;content:'';top:44px;right:0;background:url(/assets/_cas/42c7a5166e9e9d5f0cda10d19e63e28aadb782f7e15e27c8d18d4fa85b51efdf.svg) center center no-repeat;background-size:cover;width:32px;height:32px;transition:.3s;-webkit-transition:.3s;z-index:1}
 .active .faqtitle a:after{position:absolute;content:'';top:44px;right:0;background:url(/assets/_cas/06ac6e2d861b3db17bc93519b72f3544124937ef2ab15699c884a5642d4a0f0f.svg) center center no-repeat;background-size:cover;width:28px;height:4px;transition:.3s;-webkit-transition:.3s;z-index:1}
@@ -499,7 +544,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         {/* eslint-disable-next-line react/no-danger */}
         <style dangerouslySetInnerHTML={{ __html: SCROLL_PERF_FIX }} />
         {/* eslint-disable-next-line react/no-danger */}
+        <style dangerouslySetInnerHTML={{ __html: STICKY_NAV_FIX }} />
+        {/* eslint-disable-next-line react/no-danger */}
         <style dangerouslySetInnerHTML={{ __html: HEADER_OFFSET_FIX }} />
+        {/* eslint-disable-next-line react/no-danger */}
+        <style dangerouslySetInnerHTML={{ __html: STICKY_CONTACT_FIX }} />
         {/* eslint-disable-next-line react/no-danger */}
         <style dangerouslySetInnerHTML={{ __html: TICKER_FIX }} />
         {/* eslint-disable-next-line react/no-danger */}
