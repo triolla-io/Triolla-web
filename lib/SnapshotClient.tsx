@@ -340,19 +340,22 @@ function installCaseStudyAnimations(_slug: string): void {
   cards.forEach((imgEl, idx) => {
     const fromLeftLtr = idx % 2 === 0;
     const fromLeft = isRtl ? !fromLeftLtr : fromLeftLtr;
-    gsap.set(imgEl, { x: fromLeft ? -90 : 90, scale: 0.94, opacity: 0 });
-    const tw = gsap.to(imgEl, {
-      x: 0,
-      scale: 1,
-      opacity: 1,
-      duration: 1.2,
-      ease: "power3.out",
-      scrollTrigger: {
-        trigger: imgEl,
-        start: "top 85%",
-        toggleActions: "play none none reverse",
-      },
-    });
+    const tw = gsap.fromTo(imgEl,
+      { x: fromLeft ? -90 : 90, scale: 0.94, opacity: 0 },
+      {
+        x: 0,
+        scale: 1,
+        opacity: 1,
+        duration: 1.2,
+        ease: "power3.out",
+        immediateRender: false,
+        scrollTrigger: {
+          trigger: imgEl,
+          start: "top 85%",
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
     tweens.push(tw);
 
     // Content block (logo + bold + paragraph + tags) usually sits as a sibling .protfolio_con.
@@ -367,6 +370,7 @@ function installCaseStudyAnimations(_slug: string): void {
           stagger: 0.12,
           duration: 0.85,
           ease: "power2.out",
+          immediateRender: false,
           scrollTrigger: {
             trigger: conEl,
             start: "top 85%",
@@ -606,6 +610,7 @@ function installClientsAnimation(_slug: string): void {
         stagger: 0.12,
         duration: 0.8,
         ease: "power3.out",
+        immediateRender: false,
         scrollTrigger: { trigger: section, start: "top 85%", toggleActions: "play none none reverse" },
       }
     ));
@@ -620,6 +625,7 @@ function installClientsAnimation(_slug: string): void {
         stagger: { each: 0.04, from: "random" },
         duration: 0.6,
         ease: "back.out(1.4)",
+        immediateRender: false,
         scrollTrigger: { trigger: section, start: "top 80%", toggleActions: "play none none reverse" },
       }
     ));
@@ -660,6 +666,7 @@ function installDesignProcessAnimation(_slug: string): void {
         y: 0, opacity: 1,
         duration: 0.85,
         ease: "power3.out",
+        immediateRender: false,
         scrollTrigger: { trigger: section, start: "top 85%", toggleActions: "play none none reverse" },
       }
     ));
@@ -677,6 +684,7 @@ function installDesignProcessAnimation(_slug: string): void {
         stagger: 0.15,
         duration: 0.7,
         ease: "power3.out",
+        immediateRender: false,
         scrollTrigger: { trigger: section, start: "top 75%", toggleActions: "play none none reverse" },
       }
     ));
@@ -691,6 +699,7 @@ function installDesignProcessAnimation(_slug: string): void {
         scaleX: 1, opacity: 1,
         duration: 1.1,
         ease: "power2.out",
+        immediateRender: false,
         scrollTrigger: { trigger: section, start: "top 80%", toggleActions: "play none none reverse" },
       }
     ));
