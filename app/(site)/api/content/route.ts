@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { readFile } from "fs/promises";
 import path from "path";
-import { getEntry, getDefaultLocale } from "../../../lib/snapshotRegistry";
+import { getEntry, getDefaultLocale } from "../../../../lib/snapshotRegistry";
 
 /**
  * Content API — returns structured page data for LLM consumption.
